@@ -16,16 +16,17 @@ xmlns="http://www.w3.org/TR/REC-html40" xmlns:ns0="http://macVmlSchemaUri">
  <o:DocumentProperties>
   <o:Author>Ran Ding</o:Author>
   <o:LastAuthor>Ran Ding</o:LastAuthor>
-  <o:Revision>4</o:Revision>
-  <o:TotalTime>0</o:TotalTime>
+  <o:Revision>25</o:Revision>
+  <o:TotalTime>36</o:TotalTime>
+  <o:LastPrinted>2019-07-02T01:47:00Z</o:LastPrinted>
   <o:Created>2019-02-12T18:51:00Z</o:Created>
-  <o:LastSaved>2019-02-12T22:32:00Z</o:LastSaved>
+  <o:LastSaved>2019-07-02T02:55:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>882</o:Words>
-  <o:Characters>5029</o:Characters>
-  <o:Lines>41</o:Lines>
-  <o:Paragraphs>11</o:Paragraphs>
-  <o:CharactersWithSpaces>5900</o:CharactersWithSpaces>
+  <o:Words>828</o:Words>
+  <o:Characters>5859</o:Characters>
+  <o:Lines>48</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>6674</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -36,9 +37,7 @@ xmlns="http://www.w3.org/TR/REC-html40" xmlns:ns0="http://macVmlSchemaUri">
 <link rel=colorSchemeMapping href="Resume_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:SpellingState>Clean</w:SpellingState>
-  <w:GrammarState>Clean</w:GrammarState>
-  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackMoves/>
   <w:TrackFormatting/>
   <w:ValidateAgainstSchemas/>
   <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
@@ -69,7 +68,7 @@ xmlns="http://www.w3.org/TR/REC-html40" xmlns:ns0="http://macVmlSchemaUri">
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
-  LatentStyleCount="375">
+  LatentStyleCount="376">
   <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
   <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
   <w:LsdException Locked="false" Priority="9" SemiHidden="true"
@@ -642,6 +641,8 @@ xmlns="http://www.w3.org/TR/REC-html40" xmlns:ns0="http://macVmlSchemaUri">
    Name="Hashtag"/>
   <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
    Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
  </w:LatentStyles>
 </xml><![endif]-->
 <style>
@@ -687,7 +688,15 @@ div.html-content, div.html-content *, div.note-editable * {
 	mso-font-charset:0;
 	mso-generic-font-family:roman;
 	mso-font-pitch:variable;
-	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:DengXian;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
 @font-face
 	{font-family:"Roboto Condensed";
 	panose-1:0 0 0 0 0 0 0 0 0 0;
@@ -697,6 +706,13 @@ div.html-content, div.html-content *, div.note-editable * {
 	mso-font-format:other;
 	mso-font-pitch:auto;
 	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610612033 953122042 22 0 262159 0;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{mso-style-unhide:no;
@@ -708,7 +724,7 @@ div.html-content, div.html-content *, div.note-editable * {
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;}
 p
 	{mso-style-noshow:yes;
@@ -721,7 +737,78 @@ p
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:normal;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:normal;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:normal;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:DengXian;
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:normal;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;}
 p.msonormal0, li.msonormal0, div.msonormal0
 	{mso-style-name:msonormal;
@@ -736,7 +823,7 @@ p.msonormal0, li.msonormal0, div.msonormal0
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;}
 p.title, li.title, div.title
 	{mso-style-name:title;
@@ -755,7 +842,7 @@ p.title, li.title, div.title
 	mso-padding-alt:0in 0in 2.0pt 0in;
 	font-size:15.5pt;
 	font-family:"Roboto Condensed",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;
 	mso-bidi-font-family:Arial;
 	text-transform:uppercase;
@@ -771,7 +858,7 @@ p.sub-title, li.sub-title, div.sub-title
 	mso-pagination:widow-orphan;
 	font-size:14.5pt;
 	font-family:"Roboto Condensed",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;
 	mso-bidi-font-family:Arial;
 	font-weight:bold;}
@@ -788,7 +875,7 @@ p.last-child, li.last-child, div.last-child
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;}
 p.sub-where, li.sub-where, div.sub-where
 	{mso-style-name:sub-where;
@@ -801,7 +888,7 @@ p.sub-where, li.sub-where, div.sub-where
 	mso-pagination:widow-orphan;
 	font-size:13.0pt;
 	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;}
 p.sub-dates, li.sub-dates, div.sub-dates
 	{mso-style-name:sub-dates;
@@ -816,7 +903,7 @@ p.sub-dates, li.sub-dates, div.sub-dates
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;
 	color:#555555;}
 p.person, li.person, div.person
@@ -830,7 +917,7 @@ p.person, li.person, div.person
 	mso-pagination:widow-orphan;
 	font-size:48.0pt;
 	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;}
 p.jobtitle, li.jobtitle, div.jobtitle
 	{mso-style-name:jobtitle;
@@ -843,7 +930,7 @@ p.jobtitle, li.jobtitle, div.jobtitle
 	mso-pagination:widow-orphan;
 	font-size:14.5pt;
 	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;}
 p.location, li.location, div.location
 	{mso-style-name:location;
@@ -856,7 +943,7 @@ p.location, li.location, div.location
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Times New Roman",serif;
-	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-font-family:DengXian;
 	mso-fareast-theme-font:minor-fareast;
 	color:#555555;}
 span.company
@@ -864,12 +951,9 @@ span.company
 	mso-style-unhide:no;
 	color:#555555;
 	font-weight:bold;}
-span.SpellE
-	{mso-style-name:"";
-	mso-spl-e:yes;}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
+span.lt-line-clampline
+	{mso-style-name:lt-line-clamp__line;
+	mso-style-unhide:no;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -962,84 +1046,75 @@ div.WordSection1
 	mso-ansi-font-size:10.0pt;
 	font-family:Wingdings;}
 @list l1
-	{mso-list-id:881290334;
-	mso-list-template-ids:1182555968;}
+	{mso-list-id:588513616;
+	mso-list-type:hybrid;
+	mso-list-template-ids:961695698 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
 @list l1:level1
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
-	mso-level-tab-stop:.5in;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
 	font-family:Symbol;}
 @list l1:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
-	mso-level-tab-stop:1.0in;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:"Courier New";
-	mso-bidi-font-family:"Times New Roman";}
+	font-family:"Courier New";}
 @list l1:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
-	mso-level-tab-stop:1.5in;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
 	font-family:Wingdings;}
 @list l1:level4
 	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:2.0in;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
+	font-family:Symbol;}
 @list l1:level5
 	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:2.5in;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
+	font-family:"Courier New";}
 @list l1:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
-	mso-level-tab-stop:3.0in;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
 	font-family:Wingdings;}
 @list l1:level7
 	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:3.5in;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
+	font-family:Symbol;}
 @list l1:level8
 	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:4.0in;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
+	font-family:"Courier New";}
 @list l1:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
-	mso-level-tab-stop:4.5in;
+	mso-level-tab-stop:none;
 	mso-level-number-position:left;
 	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
 	font-family:Wingdings;}
 @list l2
-	{mso-list-id:975111491;
-	mso-list-template-ids:264280218;}
+	{mso-list-id:881290334;
+	mso-list-template-ids:1182555968;}
 @list l2:level1
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
@@ -1114,8 +1189,8 @@ div.WordSection1
 	mso-ansi-font-size:10.0pt;
 	font-family:Wingdings;}
 @list l3
-	{mso-list-id:1091900460;
-	mso-list-template-ids:865116464;}
+	{mso-list-id:975111491;
+	mso-list-template-ids:264280218;}
 @list l3:level1
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
@@ -1190,8 +1265,8 @@ div.WordSection1
 	mso-ansi-font-size:10.0pt;
 	font-family:Wingdings;}
 @list l4
-	{mso-list-id:1626234472;
-	mso-list-template-ids:-5351576;}
+	{mso-list-id:1091900460;
+	mso-list-template-ids:865116464;}
 @list l4:level1
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
@@ -1266,8 +1341,8 @@ div.WordSection1
 	mso-ansi-font-size:10.0pt;
 	font-family:Wingdings;}
 @list l5
-	{mso-list-id:1850215978;
-	mso-list-template-ids:153112812;}
+	{mso-list-id:1626234472;
+	mso-list-template-ids:-5351576;}
 @list l5:level1
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
@@ -1342,8 +1417,8 @@ div.WordSection1
 	mso-ansi-font-size:10.0pt;
 	font-family:Wingdings;}
 @list l6
-	{mso-list-id:2123450645;
-	mso-list-template-ids:-732530530;}
+	{mso-list-id:1850215978;
+	mso-list-template-ids:153112812;}
 @list l6:level1
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
@@ -1410,6 +1485,82 @@ div.WordSection1
 	mso-ansi-font-size:10.0pt;
 	font-family:Wingdings;}
 @list l6:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:2123450645;
+	mso-list-template-ids:-732530530;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l7:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l7:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l7:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:4.5in;
@@ -1504,28 +1655,28 @@ deployment. With a get-it-done, on-time spirit, and years of experience
 implementing and adapting technically sophisticated online web applications.<o:p></o:p></span></p>
 
 <p style='background:white'><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-color:black'>Currently I'm specialized in responsive web application such as
-Angular 7 with .NET Core in Microservice Architecture with Docker, also I am
-participating with Azure and Mobile Programming.<o:p></o:p></span></p>
+color:black'>With track records of designing, developing and delivering fast
+and reliable products, I enjoy improving the productivity of customers and
+teammates, so we all deliver more business values on time with least stress.<o:p></o:p></span></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l2 level1 lfo1;tab-stops:list .5in;background:white'><span
+     l3 level1 lfo1;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Adept at overseeing all phases of software development
      lifecycle, from design and documentation to implementation.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l2 level1 lfo1;tab-stops:list .5in;background:white'><span
+     l3 level1 lfo1;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Exceptional experience working in fast-paced,
      deadline-oriented environments.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l2 level1 lfo1;tab-stops:list .5in;background:white'><span
+     l3 level1 lfo1;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Strong team leader with extensive background managing
      and training junior employees.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l2 level1 lfo1;tab-stops:list .5in;background:white'><span
+     l3 level1 lfo1;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Ability to quickly learn new concepts and technologies.
      and analyze Complex Technical Information.<o:p></o:p></span></li>
@@ -1553,39 +1704,32 @@ color:black'>Skills<o:p></o:p></span></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l3 level1 lfo2;tab-stops:list .5in;background:white'><span
+     l4 level1 lfo2;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Programming <span class=SpellE>Languge</span>:
-     C#/Typescript/<span class=SpellE>Javascript</span>/Java/VB/Python, etc.<o:p></o:p></span></li>
+     "Times New Roman"'>Programming Languge:
+     C#/Typescript/Javascript/Java/Scala/VB/Python, etc.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l3 level1 lfo2;tab-stops:list .5in;background:white'><span
+     l4 level1 lfo2;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Frontend: Angular 7/<span class=SpellE>VueJs</span>/<span
-     class=SpellE>RxJs</span>/<span class=SpellE>Ngrx</span>/<span
-     class=SpellE>GraphQL</span>, <span class=SpellE>JQuery</span>/Ajax/Bootstrap/Html5/<span
-     class=SpellE>Css</span>/<span class=SpellE>Scss</span>, <span
-     class=SpellE>Nativescript</span>/Ionic,&nbsp;Json/<span class=SpellE>Xaml</span>/Razor,
-     etc.<o:p></o:p></span></li>
+     "Times New Roman"'>Frontend: Angular 7/VueJs/RxJs/Ngrx/GraphQL,
+     JQuery/Ajax/Bootstrap/Html5/Css/Scss,
+     Nativescript/Ionic,&nbsp;Json/Xaml/Razor, etc.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l3 level1 lfo2;tab-stops:list .5in;background:white'><span
+     l4 level1 lfo2;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Backend: Asp.Net Core Web API/Web Form/<span
-     class=SpellE>SignalR</span>/.Net MVC/Node.js/<span class=SpellE>NestJS</span>,
-     Entity Framework Core/<span class=SpellE>Serilog</span>/Ado.net/<span
-     class=SpellE>Linq</span>/OData/Polly/RabbitMQ/<span class=SpellE>Serilog</span>,
-     Xamarin, etc.<o:p></o:p></span></li>
+     "Times New Roman"'>Backend: Asp.Net Core Web API/
+     SignalR/RabbitMQ/Autofac/RestEase/Web Form/MVC/Node.js/NestJS, Entity
+     Framework Core/Serilog/Ado.net/Linq/OData/Polly, etc.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l3 level1 lfo2;tab-stops:list .5in;background:white'><span
+     l4 level1 lfo2;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Database: MS <span class=SpellE>Sql</span>
-     Server/MySQL/Redis/Azure Storage/Firebase/Mongo/<span class=SpellE>Sqlite</span>,
-     etc.<o:p></o:p></span></li>
+     "Times New Roman"'>Database: MS Sql Server/MySQL/Redis/Azure
+     Storage/Mongo/Sqlite, etc.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l3 level1 lfo2;tab-stops:list .5in;background:white'><span
+     l4 level1 lfo2;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Other: Jira/Bitbucket/Git/TFS/<span class=SpellE>Github</span>/Azure
-     App Service, <span class=SpellE>Npm</span>/<span class=SpellE>Nuget</span>/Webpack/<span
-     class=SpellE>AngularCLI</span>, <span class=SpellE>Sql</span>
+     "Times New Roman"'>Other: Jira/Bitbucket/Git/TFS/Github/Azure App
+     Service/Spark, Npm/Nuget/Webpack/AngularCLI, Sql
      Profiler/Redgate/Postman/Crystal Report, SSIS/SSRS Reporting Service, IIS,
      etc.<o:p></o:p></span></li>
 </ul>
@@ -1611,6 +1755,61 @@ color:black'>Work Experience<o:p></o:p></span></p>
 <div style='margin-bottom:9.6pt' sr-r-id=3c1 sr-r-category=experience>
 
 <p class=sub-title style='background:white'><span style='font-size:12.0pt;
+color:black'>Senior Software Developer (Azure Innovation - Fulltime)<o:p></o:p></span></p>
+
+<p class=sub-where style='background:white'><span sr-r-fld=where><span
+class=company><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>McKesson
+Corporation</span></span></span><span style='font-size:11.0pt;font-family:"Arial",sans-serif;
+color:black'>, <span sr-r-fld=location>Atlanta, GA</span><o:p></o:p></span></p>
+
+<p class=sub-dates style='background:white'><span sr-r-fld=fromMonth><span
+style='font-size:10.0pt;font-family:"Arial",sans-serif'>May</span> <span
+sr-r-fld=fromYear>2019 &#8211; <span sr-r-fld=toMonth>Current</span><o:p></o:p></p>
+
+</span>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:12.0pt;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-indent:-.25in;mso-list:l1 level1 lfo3;background:
+white'><![if !supportLists]><span style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>&middot;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:black'>Continuing with docker
+container, message broker (RabbitMQ), DI/IOC(Autofac), Signal R, API
+Gateway(RestEase), Service Discovery(Consul) and Load balancing(Fabio) following
+CQRS pattern.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-indent:-.25in;mso-list:l1 level1 lfo3;background:
+white'><![if !supportLists]><span style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>&middot;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:black'>Research and design in
+Azure development with Event Hub, Databricks, Spark/Scala, Apache Parquet and
+Storage blob.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:12.0pt;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-indent:-.25in;mso-list:l1 level1 lfo3;background:
+white'><![if !supportLists]><span style='font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>&middot;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:black'>Research and
+participated in Azure development with Service Fabric, Redis and File&nbsp;</span><span
+style='color:black;mso-color-alt:windowtext'>Storage.&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:12.0pt;mso-margin-bottom-alt:
+auto;mso-add-space:auto;text-indent:-.25in;mso-list:l1 level1 lfo3;background:
+white'><![if !supportLists]><span style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>&middot;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:black'>Key technologies:
+C#/.Net Core Web API/Redis/Mongo/Azure Event Hub/Event Grid/Service
+Fabric/GoAnywhere, Databricks/Spark/Scala, Azure Data Studio, Docker, etc<o:p></o:p></span></p>
+
+<p class=sub-title style='background:white'><span style='font-size:12.0pt;
 color:black'>Senior Software Developer (.Net Full Stack - Fulltime)<o:p></o:p></span></p>
 
 <p class=sub-where style='background:white'><span sr-r-fld=where><span
@@ -1619,55 +1818,52 @@ Corporation</span></span></span><span style='font-size:11.0pt;font-family:"Arial
 color:black'>, <span sr-r-fld=location>Atlanta, GA</span><o:p></o:p></span></p>
 
 <p class=sub-dates style='background:white'><span sr-r-fld=fromMonth><span
-style='font-size:10.0pt;font-family:"Arial",sans-serif'>Jul</span> <span
-sr-r-fld=fromYear>2018</span> &#8211; <span sr-r-fld=toMonth>Current</span><o:p></o:p></p>
+style='font-size:10.0pt;font-family:"Arial",sans-serif'>Dec</span> <span
+sr-r-fld=fromYear>2017 &#8211; <span sr-r-fld=toMonth>May 2019<o:p></o:p></p>
 
 </span>
 
 <div sr-r-fld=html>
 
+<p class=MsoListParagraph style='margin-top:12.0pt;mso-margin-bottom-alt:auto;
+mso-add-space:auto;text-indent:-.25in;mso-list:l6 level1 lfo4;tab-stops:list .5in;
+background:white'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:black'><span style='mso-list:Ignore'>&middot;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";color:black'>Leverage and design with
+current service architecture into distributed micro services with docker
+container, message broker (RabbitMQ), DI/IOC(Autofac), Signal R, Service
+Discovery(Consul), Load balancing(Fabio) and API Gateway(RestEase) following
+CQRS pattern<o:p></o:p></span></p>
+
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l5 level1 lfo3;tab-stops:list .5in;background:white'><span
+     l6 level1 lfo4;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Lead and build new enterprise level SPA from scratch by
-     using Angular 7/<span class=SpellE>Rxjs</span>/<span class=SpellE>Ngrx</span>/<span
-     class=SpellE>GraphQL</span>, Bootstrap and <span class=SpellE>JQuery</span>
-     as front end, design new real-time data chart in <span class=SpellE>websocket</span>.<o:p></o:p></span></li>
+     using Angular 7/Rxjs/Ngrx/GraphQL, Bootstrap and JQuery as front end,
+     design new real-time data chart in websocket.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l5 level1 lfo3;tab-stops:list .5in;background:white'><span
+     l6 level1 lfo4;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Lead and build new enterprise level Restful Services in
-     .Net Core&nbsp;Web API with <span class=SpellE>EntityFramework</span> <span
-     class=GramE>Core(</span>Database-first) in multiply layer with DI pattern,
-     implement middleware components such as Logging, Global Error Handler and
-     JWT Auth, etc.<o:p></o:p></span></li>
+     "Times New Roman"'>Lead and build new enterprise level Restful Services
+     from scratch in .Net Core&nbsp;Web API with EntityFramework Core
+     (Database-first) in multiply layer with DI pattern, implement middleware
+     components such as Logging, Global Error Handler and JWT Auth, etc.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l5 level1 lfo3;tab-stops:list .5in;background:white'><span
+     l6 level1 lfo4;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Research and leverage current service architecture into
-     DDD-oriented microservices with docker container and&nbsp;message-broker.<o:p></o:p></span></li>
+     "Times New Roman"'>Collaborate with QA, product owner and scrum master to
+     understand prioritize needs and produce high quality software changes,
+     responsible for interview new hires and mentor junior developer.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l5 level1 lfo3;tab-stops:list .5in;background:white'><span
-     style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Participated in Azure application Service Fabric in
-     cloud programming with Redis and Azure Storage.<o:p></o:p></span></li>
- <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l5 level1 lfo3;tab-stops:list .5in;background:white'><span
-     style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Collaborate with developers, QA, product owner and
-     scrum master to understand prioritize needs and produce high quality
-     software changes.<o:p></o:p></span></li>
- <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l5 level1 lfo3;tab-stops:list .5in;background:white'><span
+     l6 level1 lfo4;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Key technologies: C#/.Net Core Web API/Entity Framework
-     Core/<span class=SpellE>SignalR</span>/OData/Polly/RabbitMQ/<span
-     class=SpellE>Serilog</span>, Angular 7/<span class=SpellE>Rxjs</span>/<span
-     class=SpellE>Ngrx</span>/<span class=SpellE>GraphQL</span>/WebSocket/Bootstrap/Html5/<span
-     class=SpellE>JQuery</span>, SQL Server 2017/Azure DB/Redis,
-     Jira/Bitbucket/Git/TFS, <span class=SpellE>dockerhub</span> <span
-     class=SpellE>etc</span><o:p></o:p></span></li>
+     Core/SignalR/OData/Polly/RabbitMQ/Autofac/RestEase/Serilog, Angular
+     7/Rxjs/Ngrx/GraphQL/WebSocket/Bootstrap/Html5/JQuery, SQL Server
+     2017/Azure DB/Redis, Jira/Bitbucket/Git/TFS, docker hub etc<o:p></o:p></span></li>
 </ul>
 
 </div>
@@ -1686,8 +1882,7 @@ color:black'>, <span sr-r-fld=location>Atlanta, GA</span><o:p></o:p></span></p>
 
 <p class=sub-dates style='background:white'><span sr-r-fld=fromMonth><span
 style='font-size:10.0pt;font-family:"Arial",sans-serif'>Oct</span> <span
-sr-r-fld=fromYear>2015</span> &#8211; <span sr-r-fld=toMonth>Jun</span> <span
-sr-r-fld=toYear>2018</span><o:p></o:p></p>
+sr-r-fld=fromYear>2015</span> &#8211; <span sr-r-fld=toMonth>Nov <span sr-r-fld=toYear>2017<o:p></o:p></p>
 
 </span>
 
@@ -1695,42 +1890,39 @@ sr-r-fld=toYear>2018</span><o:p></o:p></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l1 level1 lfo4;tab-stops:list .5in;background:white'><span
+     l2 level1 lfo5;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Act as full stack developer for delivering <span
-     class=SpellE>enterprice</span> level Asp.Net SaaS web application to
-     healthcare entities by involving in Agile and scrum development process.<o:p></o:p></span></li>
+     "Times New Roman"'>Act as full stack developer for delivering enterprise
+     level Asp.Net SaaS web application to healthcare entities by involving in
+     Agile and scrum development process.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l1 level1 lfo4;tab-stops:list .5in;background:white'><span
+     l2 level1 lfo5;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Lead and build responsive design MVVM forms from
-     scratch by using Vue, Bootstrap, <span class=SpellE>javascript</span>/jQuery,
-     etc. The ability to learn, analysis and integrate third party API/tool
-     quickly.<o:p></o:p></span></li>
+     scratch by using Vue, Bootstrap, javascript/jQuery, etc. The ability to
+     learn, analysis and integrate third party API/tool quickly.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l1 level1 lfo4;tab-stops:list .5in;background:white'><span
+     l2 level1 lfo5;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Develop Restful Service in Web API 2 in .Net 4.5,
-     maintain and enrich the legacy Asp.net webform app, C# backend data integration
-     application with Ado.Net to improve for the internal portal to view the
-     status of services, schedulers and monitors.<o:p></o:p></span></li>
+     "Times New Roman"'>Maintain and enrich the legacy Asp.net webform app, C#
+     backend data integration application with Ado.Net to improve for the
+     internal portal to view the status of services, schedulers and monitors.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l1 level1 lfo4;tab-stops:list .5in;background:white'><span
+     l2 level1 lfo5;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Work on high-volume, large-scale(&gt;5TB) databases
-     with writing complex store procedure, optimizing data access and improving
-     database performance.<o:p></o:p></span></li>
+     "Times New Roman"'>Work on high-volume, large-scale(&gt;7TB) databases
+     with writing/debugging complex store procedure, optimizing data access and
+     improving database performance.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l1 level1 lfo4;tab-stops:list .5in;background:white'><span
+     l2 level1 lfo5;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Knowledgeable in Healthcare (340B program)/EDI
      transform business workflow.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l1 level1 lfo4;tab-stops:list .5in;background:white'><span
+     l2 level1 lfo5;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Key technologies: C#/.Net 4.5/.Net Web API/Ado.Net,
-     Vue/Bootstrap/Html5, SQL Server 2017, Jira/Bitbucket/Git/TFS <span
-     class=SpellE>etc</span><o:p></o:p></span></li>
+     Vue/Bootstrap/Html5, SQL Server 2017, Jira/Bitbucket/Git/TFS etc<o:p></o:p></span></li>
 </ul>
 
 </div>
@@ -1740,7 +1932,7 @@ sr-r-fld=toYear>2018</span><o:p></o:p></p>
 <div style='margin-bottom:9.6pt' sr-r-id=3c3 sr-r-category=experience>
 
 <p class=sub-title style='background:white'><span style='font-size:12.0pt;
-color:black'>Software <span class=GramE>Engineer(</span>.Net and Java - Fulltime)<o:p></o:p></span></p>
+color:black'>Software Engineer (.Net and Java - Fulltime)<o:p></o:p></span></p>
 
 <p class=sub-where style='background:white'><span sr-r-fld=where><span
 class=company><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Ravello
@@ -1759,35 +1951,32 @@ sr-r-fld=toYear>2015</span><o:p></o:p></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l0 level1 lfo5;tab-stops:list .5in;background:white'><span
+     l0 level1 lfo6;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Developed enterprise level Claims/Policy/Billing web
-     applications by using ASP.NET(Webform)/<span class=GramE>Java(</span>Spring)
-     for leading insurance provider.<o:p></o:p></span></li>
+     applications by using ASP.NET(Webform)/Java (Spring) for leading insurance
+     provider.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l0 level1 lfo5;tab-stops:list .5in;background:white'><span
+     l0 level1 lfo6;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Upgraded legacy application by integrating <span
-     class=GramE>AngularJS(</span>1.2) and Bootstrap 2 with <span class=SpellE>JQuery</span>/Ajax
-     to SPA.<o:p></o:p></span></li>
+     "Times New Roman"'>Upgraded legacy application by integrating AngularJS
+     (1.2) and Bootstrap 2 with JQuery/Ajax to SPA.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l0 level1 lfo5;tab-stops:list .5in;background:white'><span
+     l0 level1 lfo6;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Drove continual improvement to system architecture by
-     refactoring old legacy <span class=SpellE><span class=GramE>code.Fix</span></span>
-     and improve the compatibility issue between different browsers.<o:p></o:p></span></li>
+     refactoring old legacy code.Fix and improve the compatibility issue
+     between different browsers.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l0 level1 lfo5;tab-stops:list .5in;background:white'><span
+     l0 level1 lfo6;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Troubleshot and resolved bugs all over
-     frontend/backend/<span class=SpellE>sql</span> server to ensure optimized
-     product environment.<o:p></o:p></span></li>
+     frontend/backend/SQL server to ensure optimized product environment.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l0 level1 lfo5;tab-stops:list .5in;background:white'><span
+     l0 level1 lfo6;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Key technologies: C#/VB/Asp.Net Webform/.Net MVC
-     3/Spring MVC/AngularJS/Bootstrap/<span class=SpellE>Javascript</span>/<span
-     class=SpellE>JQuery</span>/Ajax/SQL Server 2008R2<o:p></o:p></span></li>
+     3/Spring MVC/AngularJS/Bootstrap/JavaScript/jQuery/Ajax/SQL Server 2008R2<o:p></o:p></span></li>
 </ul>
 
 </div>
@@ -1797,13 +1986,14 @@ sr-r-fld=toYear>2015</span><o:p></o:p></p>
 <div style='margin-bottom:9.6pt' sr-r-id=3c4 sr-r-category=experience>
 
 <p class=sub-title style='background:white'><span style='font-size:12.0pt;
-color:black'>Software <span class=GramE>Developer(</span>.Net Silverlight - Volunteer)<o:p></o:p></span></p>
+color:black'>Software Developer (.Net Silverlight - Volunteer)<o:p></o:p></span></p>
 
 <p class=sub-where style='background:white'><span sr-r-fld=where><span
 class=company><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Leap
 American LLC</span></span></span><span style='font-size:11.0pt;font-family:
-"Arial",sans-serif;color:black'>, <span class=SpellE><span sr-r-fld=location><span
-class=GramE>Mason,OH</span></span></span><o:p></o:p></span></p>
+"Arial",sans-serif;color:black'>, <span sr-r-fld=location>Mason, OH<o:p></o:p></span></p>
+
+</span>
 
 <p class=sub-dates style='background:white'><span sr-r-fld=fromMonth><span
 style='font-size:10.0pt;font-family:"Arial",sans-serif'>Sep</span> <span
@@ -1816,19 +2006,19 @@ sr-r-fld=toYear>2013</span><o:p></o:p></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l6 level1 lfo6;tab-stops:list .5in;background:white'><span
+     l7 level1 lfo7;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Design and build user-friendly music recommendation web
      application&nbsp;by using C#/.net Silverlight 5.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l6 level1 lfo6;tab-stops:list .5in;background:white'><span
+     l7 level1 lfo7;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Worked in Ado.Net to manage data model and schema,
      writing store procedure to implement the data transaction from database
      level.<o:p></o:p></span></li>
 </ul>
 
-<p style='margin-left:.5in;text-indent:-.25in;mso-list:l6 level1 lfo6;
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo7;
 tab-stops:list .5in;background:white'><![if !supportLists]><span
 style='font-size:10.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
 mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>&middot;<span
@@ -1839,11 +2029,10 @@ architectural integrity and product quality.<o:p></o:p></span></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l6 level1 lfo6;tab-stops:list .5in;background:white'><span
+     l7 level1 lfo7;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
-     "Times New Roman"'>Key Technologies: C#/.Net Silverlight 5/XAML/IIS 7.5/<span
-     class=SpellE>Javascript</span>/<span class=SpellE>JQuery</span>/AJAX, .Net
-     music player&nbsp;<o:p></o:p></span></li>
+     "Times New Roman"'>Key Technologies: C#/.Net Silverlight 5/XAML/IIS
+     7.5/JavaScript/jQuery/AJAX, .Net music player&nbsp;<o:p></o:p></span></li>
 </ul>
 
 </div>
@@ -1853,14 +2042,13 @@ architectural integrity and product quality.<o:p></o:p></span></p>
 <div style='margin-bottom:9.6pt' sr-r-id=3c5 sr-r-category=experience>
 
 <p class=sub-title style='background:white'><span style='font-size:12.0pt;
-color:black'>C++ <span class=GramE>Developer(</span>QT - Intern)<o:p></o:p></span></p>
+color:black'>C++ Developer(QT - Intern)<o:p></o:p></span></p>
 
 <p class=sub-where style='background:white'><span sr-r-fld=where><span
-class=SpellE><span class=company><span style='font-size:11.0pt;font-family:
-"Arial",sans-serif'>Guodian</span></span></span><span class=company><span
-style='font-size:11.0pt;font-family:"Arial",sans-serif'> Nanjing Automation
-Co., Ltd.</span></span></span><span style='font-size:11.0pt;font-family:"Arial",sans-serif;
-color:black'>, <span sr-r-fld=location>Nanjing, Jiangsu, China</span><o:p></o:p></span></p>
+class=company><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Guodian
+Nanjing Automation Co., Ltd.</span></span></span><span style='font-size:11.0pt;
+font-family:"Arial",sans-serif;color:black'>, <span sr-r-fld=location>Nanjing,
+Jiangsu, China</span><o:p></o:p></span></p>
 
 <p class=sub-dates style='background:white'><span sr-r-fld=fromMonth><span
 style='font-size:10.0pt;font-family:"Arial",sans-serif'>Feb</span> <span
@@ -1873,18 +2061,18 @@ sr-r-fld=toYear>2010</span><o:p></o:p></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l4 level1 lfo7;tab-stops:list .5in;background:white'><span
+     l5 level1 lfo8;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Implemented using C++/QT and compile among multiple
      types of operating systems to develop a real-time communication embedded
      system.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l4 level1 lfo7;tab-stops:list .5in;background:white'><span
+     l5 level1 lfo8;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Collaborated with the team well and capable of handling
      complicated social relationship.<o:p></o:p></span></li>
  <li class=MsoNormal style='color:black;mso-margin-bottom-alt:auto;mso-list:
-     l4 level1 lfo7;tab-stops:list .5in;background:white'><span
+     l5 level1 lfo8;tab-stops:list .5in;background:white'><span
      style='font-size:10.0pt;font-family:"Arial",sans-serif;mso-fareast-font-family:
      "Times New Roman"'>Worked closely with Lead engineer to ensure product
      quality and documentation.<o:p></o:p></span></li>
@@ -1917,7 +2105,8 @@ color:black'>Master of Science (M.S) / Computer Science <o:p></o:p></span></p>
 
 <p class=sub-where style='background:white'><span sr-r-fld=where><span
 style='font-size:11.0pt;font-family:"Arial",sans-serif;color:black'>University
-of Dayton</span>, <span sr-r-fld=location>Dayton, OH</span><o:p></o:p></p>
+of Dayton</span><span style='color:black;mso-color-alt:windowtext'>, <span
+sr-r-fld=location>Dayton, OH</span></span><o:p></o:p></p>
 
 </span>
 
@@ -1936,7 +2125,8 @@ color:black'>Bachelor of Science (B.S) / Computer Software Engineering<o:p></o:p
 
 <p class=sub-where style='background:white'><span sr-r-fld=where><span
 style='font-size:11.0pt;font-family:"Arial",sans-serif;color:black'>Nanjing
-University</span>, <span sr-r-fld=location>Nanjing, Jiangsu, China</span><o:p></o:p></p>
+University</span><span style='color:black;mso-color-alt:windowtext'>, <span
+sr-r-fld=location>Nanjing, Jiangsu, China</span></span><o:p></o:p></p>
 
 </span>
 
@@ -1967,8 +2157,7 @@ color:black'>Events and Award<o:p></o:p></span></p>
 <div sr-r-fld=html>
 
 <p style='background:white'><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-color:black'>- <span class=SpellE><b>NgAtlanta</b></span><b> 2019 Conference
-and Workshop</b><o:p></o:p></span></p>
+color:black'>- <b>NgAtlanta 2019 Conference and Workshop</b><o:p></o:p></span></p>
 
 <p style='background:white'><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
 color:black'>-&nbsp;<b>Employee of the Month</b><o:p></o:p></span></p>
@@ -1990,8 +2179,9 @@ color:black'>&nbsp; Macro Helix IT Department&nbsp; &nbsp;Feb 2016<o:p></o:p></s
 
 </div>
 
-</div>
+</span></div>
 
+</span></span></span></span>
 </body>
 
 </html>
