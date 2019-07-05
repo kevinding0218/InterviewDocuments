@@ -95,7 +95,7 @@ docker images
 ```
 docker run nextdoor.services.identity (or ImageID)
 ```
-- Create docker settings file
+- Create docker settings file for RabbitMQ config
 	- Create a new file `appsettings.docker.json`
 	- Copy settings of `RabbitMQ` and change hostnames to be **host.docker.internal**
 - Declare environment variables in DockerFile
@@ -112,6 +112,6 @@ ENV ASPNETCORE_URLS http://*:5000
 docker build .
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUwODcxNzg3LDgxNTMyNzk3OSwxMDU0Mz
-kyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbLTIxMDg3MTU0MDAsODE1MzI3OTc5LDEwNT
+QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
