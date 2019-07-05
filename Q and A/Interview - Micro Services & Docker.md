@@ -95,7 +95,9 @@ docker images
 ```
 docker run nextdoor.services.identity (or ImageID)
 ```
+- Create docker settings file
+	- Create a new file `appsetti
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0Mzg4MjMyMiw4MTUzMjc5NzksMTA1ND
+eyJoaXN0b3J5IjpbLTM5MzI3NzI5NCw4MTUzMjc5NzksMTA1ND
 M5MjQ1MCwtMTU1NDgwODIxNV19
 -->
