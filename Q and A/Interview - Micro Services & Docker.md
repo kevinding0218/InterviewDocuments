@@ -69,9 +69,9 @@
 ```DOCKER
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
-
+- Provide published files with `COPY` to source destination
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MzgyOTc0NCw4MTUzMjc5NzksMTA1ND
+eyJoaXN0b3J5IjpbMTI2MTQ2OTExNCw4MTUzMjc5NzksMTA1ND
 M5MjQ1MCwtMTU1NDgwODIxNV19
 -->
