@@ -57,9 +57,10 @@
 
 
 ## Docker
-### How I used to work
+### How I used to work without Docker
 - when docker and container are not such popular, we had issue that once we finish some application and want to maintain this, in order to make it maintainable, I have to create a snapshot of the virtual machine, and that snapshot contains all my current infrastructure, all applications had to be part of whole system and each application had to be exact version because of dependency and for one day, it bumps and had some breaking changes, once you upgrade this, your application will be broken because inside we would have some errors that we need to resolve. 
-- The typical way is to create the whole snapshot of the virtual machine and then 
+- The typical way is to create the whole snapshot of the virtual machine and then when you want to change something, you had to change the whole virtual machine which was kind of slow because virtual machine is slow and not efficient.
+- An
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4OTE4OTMwMF19
+eyJoaXN0b3J5IjpbMTAyNTE5ODEzXX0=
 -->
