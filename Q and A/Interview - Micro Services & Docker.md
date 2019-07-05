@@ -133,9 +133,21 @@ docker rm (Name of the Container` or first few characters of the container ID)
 ```
 ### Docker MultiStage File
 - To create a pipeline like a build service on your own using the docker, to define different steps to do different things.
-- 
+```DOCKER
+FROM mcr.microsoft.com/dotnet/core/sdk AS build
+WORKDIR /app
+COPY . .
+RUN dotnet publish src/DShop.Services.Discounts -c Release -o out
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+WORKDIR /app
+COPY --from=build /app/src/DShop.Services.Discounts/out .
+ENV ASPNETCORE_URLS http://*:5000
+ENV ASPNETCORE_ENVIRONMENT docker
+ENTRYPOINT dotnet DShop.Services.Discounts.dll
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODYzMjcyNTQsNjE4ODYyMjE2LDUyOT
-kxNDMyMCwtMTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5
-LDEwNTQzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbMTIyMDU5OTMyMCw2MTg4NjIyMTYsNTI5OT
+E0MzIwLC0xMDI3MTg3MzIyLDQzMzUzOTM0Miw4MTUzMjc5Nzks
+MTA1NDM5MjQ1MCwtMTU1NDgwODIxNV19
 -->
