@@ -107,6 +107,7 @@ ENV ASPNETCORE_URLS http://*:5000
 # Previously if you don't use EXPOSE, you couldn't reach your container even within the private docker network from the other container, but now don't have to do it since your container will be available in a private local network
 #EXPOSE 5000
 ```
+- 
 - Rebuild our image
 ```DOCKER
 docker build -t nextdoor.services.identity .
@@ -117,6 +118,7 @@ docker run -p 5010:5000 nextdoor.services.identity:latest
 ```
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjcxODczMjIsNDMzNTM5MzQyLDgxNT
-MyNzk3OSwxMDU0MzkyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbLTkwMjU5NTAwNywtMTAyNzE4NzMyMiw0Mz
+M1MzkzNDIsODE1MzI3OTc5LDEwNTQzOTI0NTAsLTE1NTQ4MDgy
+MTVdfQ==
 -->
