@@ -96,8 +96,9 @@ docker images
 docker run nextdoor.services.identity (or ImageID)
 ```
 - Create docker settings file
-	- Create a new file `appsetti
+	- Create a new file `appsettings.docker.json`
+	- Copy settings of `RabbitMQ` and change hostnames to be **host.docker.int
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MzI3NzI5NCw4MTUzMjc5NzksMTA1ND
+eyJoaXN0b3J5IjpbLTU3NjU2OTA4MCw4MTUzMjc5NzksMTA1ND
 M5MjQ1MCwtMTU1NDgwODIxNV19
 -->
