@@ -119,7 +119,7 @@ docker build -t nextdoor.services.identity .
 ```
 - Re-run the docker image and specify 5010 as public port and 5000 as private port
 ```DOCKER
-docker run -p 5010:5000 nextdoor.services.identity:latest
+docker run -p 5010:5000 --name identity --rm nextdoor.services.identity:latest
 ```
 #### Kill the container
 - Stop the running container
@@ -149,7 +149,8 @@ ENV ASPNETCORE_ENVIRONMENT docker
 ENTRYPOINT dotnet DShop.Services.Discounts.dll
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkyNzY4MjksMTQ2OTc4OTQ3MSw2MTg4Nj
-IyMTYsNTI5OTE0MzIwLC0xMDI3MTg3MzIyLDQzMzUzOTM0Miw4
-MTUzMjc5NzksMTA1NDM5MjQ1MCwtMTU1NDgwODIxNV19
+eyJoaXN0b3J5IjpbMTIyNjI1ODE5MSwzOTI3NjgyOSwxNDY5Nz
+g5NDcxLDYxODg2MjIxNiw1Mjk5MTQzMjAsLTEwMjcxODczMjIs
+NDMzNTM5MzQyLDgxNTMyNzk3OSwxMDU0MzkyNDUwLC0xNTU0OD
+A4MjE1XX0=
 -->
