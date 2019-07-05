@@ -57,3 +57,8 @@
 
 
 ## Docker
+### How I used to work
+- when docker and container are not such popular, we had issue that once we finish some application and you
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzQwNzYyOTAwXX0=
+-->
