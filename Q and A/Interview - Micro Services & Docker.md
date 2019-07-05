@@ -134,7 +134,7 @@ docker rm (Name of the Container` or first few characters of the container ID)
 ### Docker MultiStage File
 - To create a pipeline like a build service on your own using the docker, to define different steps to do different things.
 	- The first thing here is that I want to use this SDK image and call it `build`, and I want to put my files into this working directory called app, I will copy all these files in a discount directory which is a src , and run `dotnet publish` command with the releass flag.
-	- Second step is to use aspnetcore runtime and in `COPY` command `from`, within which I can specify that I want to use the output from my previous step which is `build` in above case,  And because I have the `out` working directory 
+	- Second step is to use aspnetcore runtime and in `COPY` command `from`, within which I can specify that I want to use the output from my previous step which is `build` in above case,  And because I have the `out` working directory of published file in my last step, so I can  copy things from that `out` directory.
 ```DOCKER
 FROM mcr.microsoft.com/dotnet/core/sdk AS build
 WORKDIR /app
@@ -149,7 +149,7 @@ ENV ASPNETCORE_ENVIRONMENT docker
 ENTRYPOINT dotnet DShop.Services.Discounts.dll
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg2MTA3ODExLDYxODg2MjIxNiw1Mjk5MT
-QzMjAsLTEwMjcxODczMjIsNDMzNTM5MzQyLDgxNTMyNzk3OSwx
-MDU0MzkyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbMTk1NTgwMzA3Niw2MTg4NjIyMTYsNTI5OT
+E0MzIwLC0xMDI3MTg3MzIyLDQzMzUzOTM0Miw4MTUzMjc5Nzks
+MTA1NDM5MjQ1MCwtMTU1NDgwODIxNV19
 -->
