@@ -102,10 +102,11 @@ docker run nextdoor.services.identity (or ImageID)
 ```
 # Load appsettings.docker.json
 ENV ASPNETCORE_ENVIRONMENT docker
+# You can use same port for different containers because each container had their own IP address 
 ENV ASPNETCORE_URLS http://*:5000
 #EXPOSE 5000
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjA1NzgwMzksODE1MzI3OTc5LDEwNT
-QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbMTAyNTQ1Nzk3NSw4MTUzMjc5NzksMTA1ND
+M5MjQ1MCwtMTU1NDgwODIxNV19
 -->
