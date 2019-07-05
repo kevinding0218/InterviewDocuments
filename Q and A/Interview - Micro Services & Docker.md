@@ -158,10 +158,14 @@ docker run -p 5010:5000 --name identity --rm -it --network nextdoor-network next
 docker inspect nextdoor-network
 ```
 ### Send image to dockerhub
-- 
+- Create a new repository in dockerhub
+- run command
+```
+docker tag identity username/nextdoor.services.identity
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MDM3NDA3NiwxMjcyNjE5NTY0LDM5Mj
-c2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2LDUyOTkxNDMyMCwt
-MTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5LDEwNTQzOT
-I0NTAsLTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbLTIwMDk2Nzg3OTIsLTk5MDM3NDA3NiwxMj
+cyNjE5NTY0LDM5Mjc2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2
+LDUyOTkxNDMyMCwtMTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1Mz
+I3OTc5LDEwNTQzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
