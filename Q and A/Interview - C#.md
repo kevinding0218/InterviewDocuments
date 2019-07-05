@@ -197,7 +197,7 @@
          }
          return temp;
 	}
-	// Using yield
+	// Using yield (don't need to create temp storage)
 	static IEnumerable<int> FilterWithYield()
 	{
         foreach (int i in MyList)
@@ -420,3 +420,6 @@ In the above example:
 – The `+ (plus) sign` after the 1st sequence means the string must include one or more of those characters  
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjAzMDkzODc2Nl19
+-->
