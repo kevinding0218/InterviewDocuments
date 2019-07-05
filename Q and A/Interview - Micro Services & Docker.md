@@ -148,9 +148,14 @@ ENV ASPNETCORE_URLS http://*:5000
 ENV ASPNETCORE_ENVIRONMENT docker
 ENTRYPOINT dotnet DShop.Services.Discounts.dll
 ```
+### Include container in specific network
+- Suppose we've already had a container named `nextdoor-network` which holds up some services like redis/rabbitMQ/mongo
+```
+docker run -p 5010:5000 --name identity --rm -it --network nextdoor-network nextdoor.
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MjYxOTU2NCwzOTI3NjgyOSwxNDY5Nz
-g5NDcxLDYxODg2MjIxNiw1Mjk5MTQzMjAsLTEwMjcxODczMjIs
-NDMzNTM5MzQyLDgxNTMyNzk3OSwxMDU0MzkyNDUwLC0xNTU0OD
-A4MjE1XX0=
+eyJoaXN0b3J5IjpbMTg3MzQxNTI0NywxMjcyNjE5NTY0LDM5Mj
+c2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2LDUyOTkxNDMyMCwt
+MTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5LDEwNTQzOT
+I0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
