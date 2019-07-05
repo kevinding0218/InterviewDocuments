@@ -70,8 +70,10 @@
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
 - Provide published files with `COPY` to source destination
-
+```
+COPY ./bin/docker .
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MTQ2OTExNCw4MTUzMjc5NzksMTA1ND
-M5MjQ1MCwtMTU1NDgwODIxNV19
+eyJoaXN0b3J5IjpbMjA1NzczNDA0LDgxNTMyNzk3OSwxMDU0Mz
+kyNDUwLC0xNTU0ODA4MjE1XX0=
 -->
