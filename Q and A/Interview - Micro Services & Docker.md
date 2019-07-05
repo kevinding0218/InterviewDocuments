@@ -61,6 +61,8 @@
 - when docker and container are not such popular, we had issue that once we finish some application and want to maintain this, in order to make it maintainable, I have to create a snapshot of the virtual machine, and that snapshot contains all my current infrastructure, all applications had to be part of whole system and each application had to be exact version because of dependency and for one day, it bumps and had some breaking changes, once you upgrade this, your application will be broken because inside we would have some errors that we need to resolve. 
 - The typical way is to create the whole snapshot of the virtual machine and then when you want to change something, you had to change the whole virtual machine which was kind of slow because virtual machine is slow and not efficient.
 - Another scenario is one had to install everything every dependency with proper version on his local machine, sometime it led issue that things works on one machine but not another.
+### Why using Docker
+- Docker containers are isolated, but share OS and where appropriate, bins/libraries, result is fast deployment, much less overhead, easier migration, faster restart.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbMTA1NDM5MjQ1MCwtMTU1NDgwODIxNV19
 -->
