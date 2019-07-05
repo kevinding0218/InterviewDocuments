@@ -65,9 +65,12 @@
 - Docker containers are isolated, but share OS and where appropriate, bins/libraries, result is fast deployment, much less overhead, easier migration, faster restart.
 - You will use your system kernel and you'll be able to very quickly deploy your applications reusing your local operating system, and these applications will think like they're in their own environment.
 ### Dockerfile
-
+- Base layer
+```DOCKER
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNDcwNDQ2LDgxNTMyNzk3OSwxMDU0Mz
-kyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbMTg2ODk0ODE0Myw4MTUzMjc5NzksMTA1ND
+M5MjQ1MCwtMTU1NDgwODIxNV19
 -->
