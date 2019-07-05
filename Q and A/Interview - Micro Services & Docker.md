@@ -109,9 +109,9 @@ ENV ASPNETCORE_URLS http://*:5000
 ```
 - Rebuild our image
 ```
-docker build .
+docker build -t nextdoor.services.identity .
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDg3MTU0MDAsODE1MzI3OTc5LDEwNT
-QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbNzg3MTUzMjY2LDgxNTMyNzk3OSwxMDU0Mz
+kyNDUwLC0xNTU0ODA4MjE1XX0=
 -->
