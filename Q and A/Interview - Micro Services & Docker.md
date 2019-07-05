@@ -78,7 +78,8 @@ COPY ./bin/docker .
 ```
 ENTRYPOINT dotnet NextDoor.Services.Identity.dll
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNTcyMjgxMiw4MTUzMjc5NzksMTA1ND
-M5MjQ1MCwtMTU1NDgwODIxNV19
+eyJoaXN0b3J5IjpbLTExNjE5NDQzNDIsODE1MzI3OTc5LDEwNT
+QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
