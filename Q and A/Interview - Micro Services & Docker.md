@@ -139,14 +139,14 @@ docker rm (Name of the Container` or first few characters of the container ID)
 FROM mcr.microsoft.com/dotnet/core/sdk AS build
 WORKDIR /app
 COPY . .
-RUN dotnet publish src/DShop.Services.Discounts -c Release -o out
+RUN dotnet publish src/NextDoor.Services.Identity -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 WORKDIR /app
-COPY --from=build /app/src/DShop.Services.Discounts/out .
+COPY --from=build /app/src/NextDoor.Services.Identity/out .
 ENV ASPNETCORE_URLS http://*:5000
 ENV ASPNETCORE_ENVIRONMENT docker
-ENTRYPOINT dotnet DShop.Services.Discounts.dll
+ENTRYPOINT dotnet NextDoor.Services.Identity.dll
 ```
 ### Include container in specific network
 - Suppose we've already had a container named `nextdoor-network` which holds up some services like redis/rabbitMQ/mongo
@@ -154,7 +154,7 @@ ENTRYPOINT dotnet DShop.Services.Discounts.dll
 docker run -p 5010:5000 --name identity --rm -it --network nextdoor-network nextdoor.services.identity:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNDkzNTIzNCwxMjcyNjE5NTY0LDM5Mj
+eyJoaXN0b3J5IjpbLTgwNzk0ODMxOSwxMjcyNjE5NTY0LDM5Mj
 c2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2LDUyOTkxNDMyMCwt
 MTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5LDEwNTQzOT
 I0NTAsLTE1NTQ4MDgyMTVdfQ==
