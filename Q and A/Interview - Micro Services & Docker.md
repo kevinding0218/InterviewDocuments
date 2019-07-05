@@ -104,9 +104,10 @@ docker run nextdoor.services.identity (or ImageID)
 ENV ASPNETCORE_ENVIRONMENT docker
 # You can use same port for different containers because each container had their own IP address 
 ENV ASPNETCORE_URLS http://*:5000
+# Previously if you don't use EXPOSE, you couldn't reach your container even within the private docker network from the other container, but now don't have to do it
 #EXPOSE 5000
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNTQ1Nzk3NSw4MTUzMjc5NzksMTA1ND
-M5MjQ1MCwtMTU1NDgwODIxNV19
+eyJoaXN0b3J5IjpbLTE5Njk3MzUyNTIsODE1MzI3OTc5LDEwNT
+QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
