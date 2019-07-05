@@ -80,11 +80,11 @@ ENTRYPOINT dotnet NextDoor.Services.Identity.dll
 ```
 ### Local Deployment
 - publish our application into bin/docker
-```DOCKER
+```BASH
 dotnet publish -c Release -o bin/docker
 ``` 
 - Build Docker Image
-```DOCKER
+```BASH
 docker build -t nextdoor.services.identity .
 ```
 - Check created images
@@ -117,6 +117,6 @@ docker run -p 5010:5000 nextdoor.services.identity:latest
 ```
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMzNTM5MzQyLDgxNTMyNzk3OSwxMDU0Mz
-kyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbMTc2NjA3ODc1OCw0MzM1MzkzNDIsODE1Mz
+I3OTc5LDEwNTQzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
