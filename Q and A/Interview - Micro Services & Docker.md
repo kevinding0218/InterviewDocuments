@@ -79,6 +79,7 @@ COPY ./bin/docker .
 ENTRYPOINT dotnet NextDoor.Services.Identity.dll
 ```
 ### Local Deployment
+#### First Try
 - publish our application into bin/docker
 ```BASH
 dotnet publish -c Release -o bin/docker
@@ -95,6 +96,7 @@ docker images
 ```BASH
 docker run nextdoor.services.identity (or ImageID)
 ```
+#### Second Try
 - Create docker settings file for RabbitMQ config
 	- Create a new file `appsettings.docker.json`
 	- Copy settings of `RabbitMQ` and change hostnames to be **host.docker.internal**
@@ -121,7 +123,7 @@ docker run -p 5010:5000 nextdoor.services.identity:latest
 ```
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MTA3OTMwMiwtMTAyNzE4NzMyMiw0Mz
-M1MzkzNDIsODE1MzI3OTc5LDEwNTQzOTI0NTAsLTE1NTQ4MDgy
-MTVdfQ==
+eyJoaXN0b3J5IjpbNTI5OTE0MzIwLC0xMDI3MTg3MzIyLDQzMz
+UzOTM0Miw4MTUzMjc5NzksMTA1NDM5MjQ1MCwtMTU1NDgwODIx
+NV19
 -->
