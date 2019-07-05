@@ -151,10 +151,10 @@ ENTRYPOINT dotnet DShop.Services.Discounts.dll
 ### Include container in specific network
 - Suppose we've already had a container named `nextdoor-network` which holds up some services like redis/rabbitMQ/mongo
 ```
-docker run -p 5010:5000 --name identity --rm -it --network nextdoor-network nextdoor.
+docker run -p 5010:5000 --name identity --rm -it --network nextdoor-network nextdoor.services.identity:latest
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MzQxNTI0NywxMjcyNjE5NTY0LDM5Mj
+eyJoaXN0b3J5IjpbMjAzNDkzNTIzNCwxMjcyNjE5NTY0LDM5Mj
 c2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2LDUyOTkxNDMyMCwt
 MTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5LDEwNTQzOT
 I0NTAsLTE1NTQ4MDgyMTVdfQ==
