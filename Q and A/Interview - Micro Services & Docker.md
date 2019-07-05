@@ -74,7 +74,11 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 # COPY  FROM bin/docker to here
 COPY ./bin/docker .
 ```
+- Specify Entry Point
+```
+ENTRYPOINT dotnet NextDoor.Services.Identity.dll
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3Nzc2MDE0Nyw4MTUzMjc5NzksMTA1ND
+eyJoaXN0b3J5IjpbMjAyNTcyMjgxMiw4MTUzMjc5NzksMTA1ND
 M5MjQ1MCwtMTU1NDgwODIxNV19
 -->
