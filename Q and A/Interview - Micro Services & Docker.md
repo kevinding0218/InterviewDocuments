@@ -132,9 +132,10 @@ docker stop (Name of the Container` or first few characters of the container ID)
 docker rm (Name of the Container` or first few characters of the container ID)
 ```
 ### Docker MultiStage File
+- To create a pipeline like a build service on your own using the docker, to define different steps to do different things.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NTQwMTI1LDYxODg2MjIxNiw1Mjk5MT
-QzMjAsLTEwMjcxODczMjIsNDMzNTM5MzQyLDgxNTMyNzk3OSwx
-MDU0MzkyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbLTIwODYzMjcyNTQsNjE4ODYyMjE2LDUyOT
+kxNDMyMCwtMTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5
+LDEwNTQzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
