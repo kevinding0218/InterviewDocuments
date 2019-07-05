@@ -75,7 +75,7 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 COPY ./bin/docker .
 ```
 - Specify Entry Point
-```
+```DOCKER
 ENTRYPOINT dotnet NextDoor.Services.Identity.dll
 ```
 ### Local Deployment
@@ -117,6 +117,6 @@ docker run -p 5010:5000 nextdoor.services.identity:latest
 ```
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NjA3ODc1OCw0MzM1MzkzNDIsODE1Mz
-I3OTc5LDEwNTQzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbLTEwMjcxODczMjIsNDMzNTM5MzQyLDgxNT
+MyNzk3OSwxMDU0MzkyNDUwLC0xNTU0ODA4MjE1XX0=
 -->
