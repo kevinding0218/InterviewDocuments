@@ -88,18 +88,18 @@ dotnet publish -c Release -o bin/docker
 docker build -t nextdoor.services.identity .
 ```
 - Check created images
-```DOCKER
+```BASH
 docker images
 ```
 - Run the image
-```
+```BASH
 docker run nextdoor.services.identity (or ImageID)
 ```
 - Create docker settings file for RabbitMQ config
 	- Create a new file `appsettings.docker.json`
 	- Copy settings of `RabbitMQ` and change hostnames to be **host.docker.internal**
 - Declare environment variables in DockerFile
-```
+```DOCKER
 # Load appsettings.docker.json
 ENV ASPNETCORE_ENVIRONMENT docker
 # You can use same port for different containers because each container had their own IP address 
@@ -108,15 +108,15 @@ ENV ASPNETCORE_URLS http://*:5000
 #EXPOSE 5000
 ```
 - Rebuild our image
-```
+```DOCKER
 docker build -t nextdoor.services.identity .
 ```
 - Re-run the docker image and specify 5010 as public port and 5000 as private port
-```
+```DOCKER
 docker run -p 5010:5000 nextdoor.services.identity:latest
 ```
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzY3MjQ0MjYsODE1MzI3OTc5LDEwNT
-QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbNDMzNTM5MzQyLDgxNTMyNzk3OSwxMDU0Mz
+kyNDUwLC0xNTU0ODA4MjE1XX0=
 -->
