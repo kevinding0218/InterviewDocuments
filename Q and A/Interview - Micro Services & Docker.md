@@ -161,10 +161,10 @@ docker inspect nextdoor-network
 - Create a new repository in dockerhub
 - run command
 ```
-docker tag identity username/nextdoor.services.identity
+docker tag {imageName} {username}/{repository_name}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDk2Nzg3OTIsLTk5MDM3NDA3NiwxMj
+eyJoaXN0b3J5IjpbLTE3NzcyMjM0ODUsLTk5MDM3NDA3NiwxMj
 cyNjE5NTY0LDM5Mjc2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2
 LDUyOTkxNDMyMCwtMTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1Mz
 I3OTc5LDEwNTQzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
