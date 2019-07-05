@@ -84,10 +84,15 @@ ENTRYPOINT dotnet NextDoor.Services.Identity.dll
 dotnet publish -c Release -o bin/docker
 ``` 
 - Build Docker Image
-- ``
-- docker build -t nextdoor.services.identity .
-- ```
+```DOCKER
+docker build -t nextdoor.services.identity .
+```
+- Check created images
+```DOCKER
+docker images
+```
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg3OTk5NDk4LDgxNTMyNzk3OSwxMDU0Mz
-kyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbLTkzMzM1OTE1Myw4MTUzMjc5NzksMTA1ND
+M5MjQ1MCwtMTU1NDgwODIxNV19
 -->
