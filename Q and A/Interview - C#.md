@@ -181,6 +181,7 @@
 - Yield keyword helps us to do deferred execution 
 	- It helps to provide custom iteration without creating temp collections.  
 	- It helps to do state-full iteration
+	- yield return a single object as part of the `IEnumerable<Type>` which is the return of  the function, using yield could get rid of a temp list storage.
 	- A `yield return` statement can't be located in a try-catch block. A `yield return` statement can be located in the try block of a try-finally statement.
 	e.g:
 ```
@@ -421,5 +422,5 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMDkzODc2Nl19
+eyJoaXN0b3J5IjpbODk2MTU0NTQ2LDIwMzA5Mzg3NjZdfQ==
 -->
