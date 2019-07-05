@@ -164,9 +164,12 @@ docker inspect nextdoor-network
 docker tag {imageName} {username}/{repository_name}
 docker push {username}/{repository_name}
 ```
+### docker compose (yml)
+- a tool which you can define the images in container and run those services in single command
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyOTE4OTY4MCwtOTkwMzc0MDc2LDEyNz
-I2MTk1NjQsMzkyNzY4MjksMTQ2OTc4OTQ3MSw2MTg4NjIyMTYs
-NTI5OTE0MzIwLC0xMDI3MTg3MzIyLDQzMzUzOTM0Miw4MTUzMj
-c5NzksMTA1NDM5MjQ1MCwtMTU1NDgwODIxNV19
+eyJoaXN0b3J5IjpbLTE4MzgzODE0MjksMTIyOTE4OTY4MCwtOT
+kwMzc0MDc2LDEyNzI2MTk1NjQsMzkyNzY4MjksMTQ2OTc4OTQ3
+MSw2MTg4NjIyMTYsNTI5OTE0MzIwLC0xMDI3MTg3MzIyLDQzMz
+UzOTM0Miw4MTUzMjc5NzksMTA1NDM5MjQ1MCwtMTU1NDgwODIx
+NV19
 -->
