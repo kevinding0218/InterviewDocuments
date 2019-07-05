@@ -63,6 +63,9 @@
 - Another scenario is one had to install everything every dependency with proper version on his local machine, sometime it led issue that things works on one machine but not another.
 ### Why using Docker
 - Docker containers are isolated, but share OS and where appropriate, bins/libraries, result is fast deployment, much less overhead, easier migration, faster restart.
+- You will use your system kernel and you'll be able to very quickly deploy your applications reusing your local operating system, and these applications will think like they're in their own environment.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NDM5MjQ1MCwtMTU1NDgwODIxNV19
+eyJoaXN0b3J5IjpbODE1MzI3OTc5LDEwNTQzOTI0NTAsLTE1NT
+Q4MDgyMTVdfQ==
 -->
