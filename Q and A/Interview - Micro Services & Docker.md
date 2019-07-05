@@ -102,8 +102,9 @@ docker run nextdoor.services.identity (or ImageID)
 ```
 ENV ASPNETCORE_ENVIRONMENT docker
 ENV ASPNETCORE_URLS http://*:5000
+#EXPOSE 5000
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MDE5NDg0Niw4MTUzMjc5NzksMTA1ND
-M5MjQ1MCwtMTU1NDgwODIxNV19
+eyJoaXN0b3J5IjpbNjg2Njk3NjQwLDgxNTMyNzk3OSwxMDU0Mz
+kyNDUwLC0xNTU0ODA4MjE1XX0=
 -->
