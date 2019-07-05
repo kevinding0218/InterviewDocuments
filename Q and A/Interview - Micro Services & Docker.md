@@ -111,8 +111,12 @@ ENV ASPNETCORE_URLS http://*:5000
 ```
 docker build -t nextdoor.services.identity .
 ```
+- Re-run the docker image and specify 5010 as public port and 5000 as private port
+```
+docker run -p 5010:5000 nextdoor.services.identity:latest
+```
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjM2NzEzMTUsODE1MzI3OTc5LDEwNT
+eyJoaXN0b3J5IjpbLTIxMzY3MjQ0MjYsODE1MzI3OTc5LDEwNT
 QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
