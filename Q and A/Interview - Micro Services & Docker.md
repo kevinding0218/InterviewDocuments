@@ -78,8 +78,11 @@ COPY ./bin/docker .
 ```
 ENTRYPOINT dotnet NextDoor.Services.Identity.dll
 ```
-
+### Local Deployment
+```
+dotnet publish -c Release -o bin/docker
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjE5NDQzNDIsODE1MzI3OTc5LDEwNT
+eyJoaXN0b3J5IjpbLTIxMzE5NjE5NjUsODE1MzI3OTc5LDEwNT
 QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
