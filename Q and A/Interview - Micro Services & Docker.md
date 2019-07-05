@@ -125,14 +125,14 @@ docker run -p 5010:5000 nextdoor.services.identity:latest
 - Stop the running container
 ```
 docker ps
-docker stop `Name of the Container` or first few characters of the container ID
+docker stop (Name of the Container` or first few characters of the container ID)
 ```
 - Remove the container
 ```
-docke
+docker rm (Name of the Container` or first few characters of the container ID)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTMyNTc0ODAsNTI5OTE0MzIwLC0xMD
-I3MTg3MzIyLDQzMzUzOTM0Miw4MTUzMjc5NzksMTA1NDM5MjQ1
-MCwtMTU1NDgwODIxNV19
+eyJoaXN0b3J5IjpbNjE4ODYyMjE2LDUyOTkxNDMyMCwtMTAyNz
+E4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5LDEwNTQzOTI0NTAs
+LTE1NTQ4MDgyMTVdfQ==
 -->
