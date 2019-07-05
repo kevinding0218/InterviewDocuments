@@ -101,9 +101,9 @@ docker run nextdoor.services.identity (or ImageID)
 - Declare environment variables in DockerFile
 ```
 ENV ASPNETCORE_ENVIRONMENT docker
-ENV ASPNETCORE_URLS http://*
+ENV ASPNETCORE_URLS http://*:5000
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzc5MDMxNTcsODE1MzI3OTc5LDEwNT
-QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbLTU1MDE5NDg0Niw4MTUzMjc5NzksMTA1ND
+M5MjQ1MCwtMTU1NDgwODIxNV19
 -->
