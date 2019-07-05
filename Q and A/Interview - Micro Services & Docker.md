@@ -91,8 +91,11 @@ docker build -t nextdoor.services.identity .
 ```DOCKER
 docker images
 ```
-- 
+- Run the image
+```
+docker run nextdoor.services.identity
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMzM1OTE1Myw4MTUzMjc5NzksMTA1ND
+eyJoaXN0b3J5IjpbLTk4NzU5NTA1OCw4MTUzMjc5NzksMTA1ND
 M5MjQ1MCwtMTU1NDgwODIxNV19
 -->
