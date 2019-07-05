@@ -131,8 +131,10 @@ docker stop (Name of the Container` or first few characters of the container ID)
 ```
 docker rm (Name of the Container` or first few characters of the container ID)
 ```
+### Docker MultiStage File
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE4ODYyMjE2LDUyOTkxNDMyMCwtMTAyNz
-E4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5LDEwNTQzOTI0NTAs
-LTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbMTY5NTQwMTI1LDYxODg2MjIxNiw1Mjk5MT
+QzMjAsLTEwMjcxODczMjIsNDMzNTM5MzQyLDgxNTMyNzk3OSwx
+MDU0MzkyNDUwLC0xNTU0ODA4MjE1XX0=
 -->
