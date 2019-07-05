@@ -100,11 +100,12 @@ docker run nextdoor.services.identity (or ImageID)
 	- Copy settings of `RabbitMQ` and change hostnames to be **host.docker.internal**
 - Declare environment variables in DockerFile
 ```
+# Load appsettings.docker.json
 ENV ASPNETCORE_ENVIRONMENT docker
 ENV ASPNETCORE_URLS http://*:5000
 #EXPOSE 5000
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg2Njk3NjQwLDgxNTMyNzk3OSwxMDU0Mz
-kyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbLTEwMjA1NzgwMzksODE1MzI3OTc5LDEwNT
+QzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
