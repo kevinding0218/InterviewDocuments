@@ -117,7 +117,7 @@ dotnet publish -c Release -o bin/docker
 ```DOCKER
 docker build -t nextdoor.services.identity .
 ```
-- Re-run the docker image and specify 5010 as public port and 5000 as private port
+- Re-run the docker image and specify 5010 as public port and 5000 as private port, --rm as remove container once it stops
 ```DOCKER
 docker run -p 5010:5000 --name identity --rm nextdoor.services.identity:latest
 ```
@@ -149,7 +149,7 @@ ENV ASPNETCORE_ENVIRONMENT docker
 ENTRYPOINT dotnet DShop.Services.Discounts.dll
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNjI1ODE5MSwzOTI3NjgyOSwxNDY5Nz
+eyJoaXN0b3J5IjpbMTI3MjYxOTU2NCwzOTI3NjgyOSwxNDY5Nz
 g5NDcxLDYxODg2MjIxNiw1Mjk5MTQzMjAsLTEwMjcxODczMjIs
 NDMzNTM5MzQyLDgxNTMyNzk3OSwxMDU0MzkyNDUwLC0xNTU0OD
 A4MjE1XX0=
