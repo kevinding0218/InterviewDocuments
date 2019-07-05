@@ -85,9 +85,9 @@ dotnet publish -c Release -o bin/docker
 ``` 
 - Build Docker Image
 - ``
-- docker build -t
+- docker build -t nextdoor.services.identity .
 - ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNzc1NzYzNSw4MTUzMjc5NzksMTA1ND
-M5MjQ1MCwtMTU1NDgwODIxNV19
+eyJoaXN0b3J5IjpbOTg3OTk5NDk4LDgxNTMyNzk3OSwxMDU0Mz
+kyNDUwLC0xNTU0ODA4MjE1XX0=
 -->
