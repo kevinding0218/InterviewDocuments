@@ -121,9 +121,13 @@ docker build -t nextdoor.services.identity .
 ```DOCKER
 docker run -p 5010:5000 nextdoor.services.identity:latest
 ```
-- 
+#### Kill the container
+```
+docker ps
+docker stop `Name of the Container` or first few characters of the container ID
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI5OTE0MzIwLC0xMDI3MTg3MzIyLDQzMz
-UzOTM0Miw4MTUzMjc5NzksMTA1NDM5MjQ1MCwtMTU1NDgwODIx
-NV19
+eyJoaXN0b3J5IjpbNzU1MjIyNTE1LDUyOTkxNDMyMCwtMTAyNz
+E4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5LDEwNTQzOTI0NTAs
+LTE1NTQ4MDgyMTVdfQ==
 -->
