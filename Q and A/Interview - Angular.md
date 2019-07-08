@@ -375,7 +375,19 @@ There are mainly three kinds of directives.
 	}
 	```
 ### How to track Url Parameters
-- 
+- Inject ActivatedRoute
+- Using Snapshot
+	- Using the snapshot is, as the name suggests, a one-time event. A typical use case is to get the parameter when the component loads.
+	- This strategy will not work if the parameter changes within the same component. More explicitly, changing from `animals/dog` to `animals/cat` will not destroy and initialize the `AnimalComponent`, so the `ngOnInit` method doesn’t get called a second time.
+```typescript
+ngOnInit() {
+	this.animal = this.route.snapshot.paramMap.get("animal")
+}
+```
+- Using Subscription
+	- Using the subscription is the same as any other subscription. If there is a change then the observable’s value will get pushed to the callback function.
+	- This strategy is only useful if the URL parameter(s) are changing within the current route.
+	- 
 ### How do you define routes?
 - A router must be configured with a list of route definitions. 
 - You configures the router with routes via the `RouterModule.forRoot()` method, and adds the result to the AppModule's `imports` array.
@@ -1391,5 +1403,5 @@ class GiantList {
 3.  Improved payload size
 4.  Improved template type checking
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIyNjk4OTk0XX0=
+eyJoaXN0b3J5IjpbNzQ2NTExODFdfQ==
 -->
