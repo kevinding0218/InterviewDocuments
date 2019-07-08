@@ -387,7 +387,14 @@ ngOnInit() {
 - Using Subscription
 	- Using the subscription is the same as any other subscription. If there is a change then the observable’s value will get pushed to the callback function.
 	- This strategy is only useful if the URL parameter(s) are changing within the current route.
-	- 
+	- there’s [no need to unsubscribe](https://stackoverflow.com/a/41359138/2573621) from the `paramMap`. The `ActivatedRoute`dies with the routed component and so the subscription dies with it.
+```typescript
+ngOnInit() {
+	this.route.paramMap.subscribe(params => {
+		this.animal = params.get("animal")
+	})
+}
+```
 ### How do you define routes?
 - A router must be configured with a list of route definitions. 
 - You configures the router with routes via the `RouterModule.forRoot()` method, and adds the result to the AppModule's `imports` array.
@@ -1403,5 +1410,5 @@ class GiantList {
 3.  Improved payload size
 4.  Improved template type checking
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ2NTExODFdfQ==
+eyJoaXN0b3J5IjpbMTE4NjE3Mzg2OV19
 -->
