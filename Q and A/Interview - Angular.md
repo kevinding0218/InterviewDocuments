@@ -418,7 +418,8 @@ import { switchMap } from "rxjs/operators" // RxJS v6
 	)
 }
 ```
-	- Use with Http REQ
+	- Use with Http Request
+	- I’m making an HTTP request within the `paramMap`subscription.I hope we all know that HTTP requests are relatively expensive. If I’m spamming parameter changes, I will want to cancel any previous requests. In this case, using `switchMap` will do just that and therefore improve performance.
 ```typescript
 this.data = this.route.paramMap.pipe(
 	switchMap(params => {
@@ -1442,5 +1443,5 @@ class GiantList {
 3.  Improved payload size
 4.  Improved template type checking
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTAxNTIyOTFdfQ==
+eyJoaXN0b3J5IjpbLTE5MDA0MDk1MDBdfQ==
 -->
