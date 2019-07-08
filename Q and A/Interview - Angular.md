@@ -406,7 +406,18 @@ ngOnInit() {
 }
 ```
 - Using switchMap
-	- `swit
+	- `switchMap` basically cancels a request as a new one comes in.
+	- For example, if I subscribe to the `paramMap` and I start spamming changes to the route parameters, `switchMap` will cancel any pending requests and pick up the new request.
+```typescript
+import { switchMap } from "rxjs/operators" // RxJS v6
+	ngOnInit() {
+		this.route.paramMap.pipe(
+		switchMap(params => {
+			this.animal = params.get("animal")
+		})
+	)
+}
+```
 ### How do you define routes?
 - A router must be configured with a list of route definitions. 
 - You configures the router with routes via the `RouterModule.forRoot()` method, and adds the result to the AppModule's `imports` array.
@@ -1422,5 +1433,5 @@ class GiantList {
 3.  Improved payload size
 4.  Improved template type checking
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Nzg4MDQ5MzZdfQ==
+eyJoaXN0b3J5IjpbLTk1OTI5NzM3Nl19
 -->
