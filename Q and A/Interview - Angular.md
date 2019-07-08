@@ -418,6 +418,15 @@ import { switchMap } from "rxjs/operators" // RxJS v6
 	)
 }
 ```
+	- Use with Http REQ
+```typescript
+this.data = this.route.paramMap.pipe(
+	switchMap(params => {
+		const id = +params.get("id")
+			return this.service.getData(id) // http request
+		})
+	)
+```
 ### How do you define routes?
 - A router must be configured with a list of route definitions. 
 - You configures the router with routes via the `RouterModule.forRoot()` method, and adds the result to the AppModule's `imports` array.
@@ -1433,5 +1442,5 @@ class GiantList {
 3.  Improved payload size
 4.  Improved template type checking
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1OTI5NzM3Nl19
+eyJoaXN0b3J5IjpbLTE3MTAxNTIyOTFdfQ==
 -->
