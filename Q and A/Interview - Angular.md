@@ -374,6 +374,8 @@ There are mainly three kinds of directives.
 	  }
 	}
 	```
+### How to track Url Parameters
+- 
 ### How do you define routes?
 - A router must be configured with a list of route definitions. 
 - You configures the router with routes via the `RouterModule.forRoot()` method, and adds the result to the AppModule's `imports` array.
@@ -1388,3 +1390,6 @@ class GiantList {
 2.  Faster re-build time
 3.  Improved payload size
 4.  Improved template type checking
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzIyNjk4OTk0XX0=
+-->
