@@ -28,6 +28,7 @@
   * [What is router outlet?](#what-is-router-outlet-)
   * [eager, lazy and preloading](#eager--lazy-and-preloading)
   * [What is activated route?](#what-is-activated-route-)
+  * [How to track Url Parameters](#how-to-track-url-parameters)
   * [How do you define routes?](#how-do-you-define-routes-)
   * [What is the purpose of Wildcard route?](#what-is-the-purpose-of-wildcard-route-)
 - [Compilation](#compilation)
@@ -1442,5 +1443,5 @@ class GiantList {
 3.  Improved payload size
 4.  Improved template type checking
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1Nzc4NTAzNl19
+eyJoaXN0b3J5IjpbNjA5MTczMzYyXX0=
 -->
