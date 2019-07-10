@@ -283,9 +283,10 @@ person.score();
 ### Hashing is one way, can't be undone
 - The concept between hashing is that it can't be undone. It is a one way operation, and there is no way to go from the hash to the original contents.
 ## What happens when type url in browser and enter
-
+- The browser checks the cache for a DNS record to find the corresponding IP address of your url
+	- 
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDIyODkyOV19
+eyJoaXN0b3J5IjpbLTIwODIyMjUzNDhdfQ==
 -->
