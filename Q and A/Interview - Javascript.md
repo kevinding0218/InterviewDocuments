@@ -289,9 +289,11 @@ person.score();
 	- First, it checks the browser cache. The browser maintains a repository of DNS records for a fixed duration for websites you have previously visited.
 	- Second, the browser checks the OS cache. If it is not found in the browser cache, the browser would make a system call
 	- Third, it checks the router cache. If it’s not found on your computer, the browser would communicate with the router that maintains its’ own cache of DNS records.
+	- Fourth, it checks the ISP (Internet Service Provider) cache. If all steps fail, the browser would move on to the ISP. Your ISP maintains its’ own DNS server which includes a cache of DNS records which the browser would check with the last hope of finding your requested URL.
+- If the requested URL is not in the cache, ISP’s DNS server initiates a DNS query to find the IP address of the server that hosts maps.google.com.
 	- 
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY5ODg4NzYwXX0=
+eyJoaXN0b3J5IjpbMTQ5OTM2OTY0N119
 -->
