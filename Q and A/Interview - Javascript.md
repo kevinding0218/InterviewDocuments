@@ -283,22 +283,22 @@ person.score();
 ### Hashing is one way, can't be undone
 - The concept between hashing is that it can't be undone. It is a one way operation, and there is no way to go from the hash to the original contents.
 ## What happens when type url in browser and enter
-- The browser checks the cache for a DNS record to find the corresponding IP address of your url
+- The **browser checks the cache for a DNS record** to find the corresponding IP address of your url
 	- DNS(Domain Name System) is a database that maintains the name of the website (URL) and the particular IP address it links to. Every single URL on the internet has a unique IP address assigned to it.
-	- You can easily access a website by typing the correct IP address, but it is easier to remember the name of the website using an URL and let DNS do the work for us with mapping it to the correct IP.
-	- First, it checks the browser cache. The browser maintains a repository of DNS records for a fixed duration for websites you have previously visited.
-	- Second, the browser checks the OS cache. If it is not found in the browser cache, the browser would make a system call
-	- Third, it checks the router cache. If it’s not found on your computer, the browser would communicate with the router that maintains its’ own cache of DNS records.
-	- Fourth, it checks the ISP (Internet Service Provider) cache. If all steps fail, the browser would move on to the ISP. Your ISP maintains its’ own DNS server which includes a cache of DNS records which the browser would check with the last hope of finding your requested URL.
-- If the requested URL is not in the cache, ISP’s DNS server initiates a DNS query to find the IP address of the server that hosts maps.google.com.
-- Browser initiates a TCP connection with the server.
+	- You can easily access a website by typing the correct IP address, but **it is easier to remember the name of the website using an URL and let DNS do the work for us** with mapping it to the correct IP.
+	- First, it checks the **browser cache**. The browser maintains a repository of DNS records for a fixed duration for websites you have previously visited.
+	- Second, the browser checks the **OS cache**. If it is not found in the browser cache, the browser would make a system call
+	- Third, it checks the **router cache**. If it’s not found on your computer, the browser would communicate with the router that maintains its’ own cache of DNS records.
+	- Fourth, it checks the **ISP (Internet Service Provider) cache**. If all steps fail, the browser would move on to the ISP. Your ISP maintains its’ own DNS server which includes a cache of DNS records which the browser would check with the last hope of finding your requested URL.
+- If the requested URL is not in the cache, **ISP’s DNS server initiates a DNS query to find the IP address of the server** that hosts maps.google.com.
+- Browser **initiates a TCP connection** with the server.
 	- In order to transfer data packets between your computer(client) and the server, it is important to have a TCP connection established. 
-	- This connection is established using a process called the TCP/IP three-way handshake. This is a three step process where the client and the server exchange SYN(synchronize) and ACK(acknowledge) messages to establish a connection.
+	- This connection is established using a process called the **TCP/IP three-way handshake**. This is a three step process where the client and the server exchange SYN(synchronize) and ACK(acknowledge) messages to establish a connection.
 		- Client machine sends a SYN packet to the server over the internet asking if it is open for new connections.
 		- If the server has open ports that can accept and initiate new connections, it’ll respond with an ACKnowledgment of the SYN packet using a SYN/ACK packet.
 		- The client will receive the SYN/ACK packet from the server and will acknowledge it by sending an ACK packet.
 		- Then a TCP connection is established for data transmission
-- The browser sends an HTTP request to the web server
+- The **browser sends an HTTP request** to the web server
 	- The browser will send a GET request asking for maps.google.com web page. 
 	- If you’re entering credentials or submitting a form this could be a POST request. 
 	- This request will also contain additional information such as browser identification (_User-Agent_ header), types of requests that it will accept (_Accept_ header), and connection headers asking it to keep the TCP connection alive for additional requests. 
@@ -311,5 +311,5 @@ person.score();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYxNDEzODZdfQ==
+eyJoaXN0b3J5IjpbLTEwNzg4NDg2MzBdfQ==
 -->
