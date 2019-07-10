@@ -282,6 +282,10 @@ person.score();
 - The idea is that you transfer encrypted information, and the receiever can then decrypt it and read the contents.
 ### Hashing is one way, can't be undone
 - The concept between hashing is that it can't be undone. It is a one way operation, and there is no way to go from the hash to the original contents.
+## What happens when type url in browser and enter
 
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTI2NDIyODkyOV19
+-->
