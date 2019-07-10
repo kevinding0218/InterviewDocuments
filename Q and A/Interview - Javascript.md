@@ -283,6 +283,39 @@ person.score();
 - The idea is that you transfer encrypted information, and the receiever can then decrypt it and read the contents.
 ### Hashing is one way, can't be undone
 - The concept between hashing is that it can't be undone. It is a one way operation, and there is no way to go from the hash to the original contents.
+## Implement publish and subscribe
+```javascript
+var events = (function(){
+  var topics = {};
+  var hOP = topics.hasOwnProperty;
+
+  return {
+    subscribe: function(topic, listener) {
+      // Create the topic's object if not yet created
+      if(!hOP.call(topics, topic)) topics[topic] = [];
+
+      // Add the listener to queue
+      var index = topics[topic].push(listener) -1;
+
+      // Provide handle back for removal of topic
+      return {
+        remove: function() {
+          delete topics[topic][index];
+        }
+      };
+    },
+    publish: function(topic, info) {
+      // If the topic doesn't exist, or there's no listeners in queue, just leave
+      if(!hOP.call(topics, topic)) return;
+
+      // Cycle through topics queue, fire!
+      topics[topic].forEach(function(item) {
+      		item(info != undefined ? info : {});
+      });
+    }
+  };
+})();
+```
 ## What happens when type url in browser and enter
 - The **browser checks the cache for a DNS record** to find the corresponding IP address of your url
 	- DNS(Domain Name System) is a database that maintains the name of the website (URL) and the particular IP address it links to. Every single URL on the internet has a unique IP address assigned to it.
@@ -312,5 +345,5 @@ person.score();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MDM1MTc1M119
+eyJoaXN0b3J5IjpbLTEyNzE3Mjg0MF19
 -->
