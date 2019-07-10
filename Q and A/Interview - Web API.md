@@ -2,6 +2,8 @@
   * [What is REST?](#what-is-rest-)
   * [REST constraints](#rest-constraints)
   * [compare REST vs SOAP](#compare-rest-vs-soap)
+  * [Difference between GET and POST](#difference-between-get-and-post)
+  * [Difference between POST, PUT and PATCH](#difference-between-post-put-and-patch)
 - [Serialization](#serialization)
   * [Can you serialize hashtable and Why?](#can-you-serialize-hashtable-and-why-)
 - [Asp.net web api](#aspnet-web-api)
@@ -749,7 +751,7 @@ Each filter type is executed at a different stage in the filter pipeline:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODgwMjU3NDIsMTc2ODQ3NjYxMSw5ND
+eyJoaXN0b3J5IjpbLTIwNzk2MzU3MzksMTc2ODQ3NjYxMSw5ND
 U1NTg2NjUsLTc4MjcwMjM3NSwxMTY4OTgyNDQsLTE5OTAwMzA0
 NzVdfQ==
 -->
