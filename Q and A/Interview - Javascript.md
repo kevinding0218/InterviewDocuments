@@ -284,9 +284,14 @@ person.score();
 - The concept between hashing is that it can't be undone. It is a one way operation, and there is no way to go from the hash to the original contents.
 ## What happens when type url in browser and enter
 - The browser checks the cache for a DNS record to find the corresponding IP address of your url
+	- DNS(Domain Name System) is a database that maintains the name of the website (URL) and the particular IP address it links to. Every single URL on the internet has a unique IP address assigned to it.
+	- You can easily access a website by typing the correct IP address, but it is easier to remember the name of the website using an URL and let DNS do the work for us with mapping it to the correct IP.
+	- First, it checks the browser cache. The browser maintains a repository of DNS records for a fixed duration for websites you have previously visited.
+	- Second, the browser checks the OS cache. If it is not found in the browser cache, the browser would make a system call
+	- Third, it checks the router cache. If it’s not found on your computer, the browser would communicate with the router that maintains its’ own cache of DNS records.
 	- 
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODIyMjUzNDhdfQ==
+eyJoaXN0b3J5IjpbMjY5ODg4NzYwXX0=
 -->
