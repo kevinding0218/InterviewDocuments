@@ -67,8 +67,8 @@
 - A single is a web application which only load a single page to the browser.
 	- It's different than server rending page which is using the concept of dynamical overloading the content of the page.
 ### How did SPA work
-	- When the application launches and browser send the first request to sever, will response with a index.html, this is the only time the response will return a HTML file.
-	- Later on, javascript will control the index.html page, all continuing call will only return JSON data, application will use the JSON data to refresh the page content, but page itself will never be loading again,the browser will take the job to handle transfer data to HTML, most SPA framework generates HTML by a template in browser.
+- When the application launches and browser send the first request to sever, will response with a index.html, this is the only time the response will return a HTML file.
+- Later on, javascript will control the index.html page, all continuing call will only return JSON data, application will use the JSON data to refresh the page content, but page itself will never be loading again,the browser will take the job to handle transfer data to HTML, most SPA framework generates HTML by a template in browser.
 ### What is difference between traditional web app
 	- In Traditional web app, every time when there is request to server, server will load the entire HTML page, client side will receive the HTML page and refresh it.
 		- Client (Initial Request) --> Server (HTML Response) --> Client (Form Post Request) --> Server(HTML Response)
@@ -1443,5 +1443,5 @@ class GiantList {
 3.  Improved payload size
 4.  Improved template type checking
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA5MTczMzYyXX0=
+eyJoaXN0b3J5IjpbNTA0NzEwMDY2LDYwOTE3MzM2Ml19
 -->
