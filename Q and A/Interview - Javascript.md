@@ -316,6 +316,22 @@ var events = (function(){
   };
 })();
 ```
+- Publishing to a topic:
+```javascript
+events.publish('/page/load', {
+	url: '/some/url/path' // any argument
+});
+```
+- subscribing to said topic in order to be notified of events
+```javascript
+var subscription = events.subscribe('/page/load', function(obj) {
+	// Do something now that the event has occurred
+});
+```
+- unsubscribe
+```javascript
+subscription.remove();
+```
 ## What happens when type url in browser and enter
 - The **browser checks the cache for a DNS record** to find the corresponding IP address of your url
 	- DNS(Domain Name System) is a database that maintains the name of the website (URL) and the particular IP address it links to. Every single URL on the internet has a unique IP address assigned to it.
@@ -345,5 +361,5 @@ var events = (function(){
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzE3Mjg0MF19
+eyJoaXN0b3J5IjpbLTIxMzcwOTk1OTBdfQ==
 -->
