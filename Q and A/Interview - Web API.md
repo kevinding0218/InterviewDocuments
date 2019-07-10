@@ -83,6 +83,7 @@
 |history|param will be saved in browser history|will not save|
 |data length restriction|max 2048(not true depend on browser/server limitation)|no restriction|
 |security|worse because data is part of url, don't use when send password|safer because data will not be saved in browser history or web server log|
+## Difference between POST and PUT
 
 
 ## Serialization
@@ -746,5 +747,5 @@ Each filter type is executed at a different stage in the filter pipeline:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MjcwNTY4MSwtMTk5MDAzMDQ3NV19
+eyJoaXN0b3J5IjpbMTE2ODk4MjQ0LC0xOTkwMDMwNDc1XX0=
 -->
