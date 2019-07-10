@@ -69,11 +69,13 @@
 	- we deploy the APIs in server A, and store data on server B and authenticate requests in server C.
 ### compare REST vs SOAP
 1.  The SOAP is an XML based protocol whereas REST is not a protocol but it is an architectural pattern i.e. resource-based architecture.
-3.  SOAP has specifications for both stateless and state-full implementation whereas REST is completely stateless.
-4.  SOAP enforces message format as XML whereas REST does not enforce message format as XML, JSON or text.
-5.  The SOAP message consists of an envelope which includes SOAP headers and body to store the actual information we want to send whereas REST uses the HTTP build-in headers (with a variety of media-types) to store the information and uses the HTTP GET, POST, PUT and DELETE methods to perform CRUD operations.
-6.  SOAP uses interfaces and named operations to expose the service whereas to expose resources (service) REST uses URI and methods like (GET, PUT, POST, DELETE).
-7.  SOAP Performance is slow as compared to REST.
+2.  SOAP has specifications for both stateless and state-full implementation whereas REST is completely stateless.
+3.  SOAP enforces message format as XML whereas REST does not enforce message format as XML, JSON or text.
+4.  The SOAP message consists of an envelope which includes SOAP headers and body to store the actual information we want to send whereas REST uses the HTTP build-in headers (with a variety of media-types) to store the information and uses the HTTP GET, POST, PUT and DELETE methods to perform CRUD operations.
+5.  SOAP uses interfaces and named operations to expose the service whereas to expose resources (service) REST uses URI and methods like (GET, PUT, POST, DELETE).
+6.  SOAP Performance is slow as compared to REST.
+## Difference between GET and POST
+
 ## Serialization
 ### Can you serialize hashtable and Why?
 - **No**, You **can’t** Serialize Hash table.Because, the .NET Framework does **not allow serialization** of any object that implements the `IDictionary` interface
@@ -734,3 +736,6 @@ Each filter type is executed at a different stage in the filter pipeline:
 		- Hide the form using CSS.
 
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTc2OTYxODUyM119
+-->
