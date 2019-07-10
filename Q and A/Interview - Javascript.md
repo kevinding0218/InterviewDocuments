@@ -299,17 +299,17 @@ person.score();
 		- The client will receive the SYN/ACK packet from the server and will acknowledge it by sending an ACK packet.
 		- Then a TCP connection is established for data transmission
 - The **browser sends an HTTP request** to the web server
-	- The browser will send a GET request asking for maps.google.com web page. 
-	- If you’re entering credentials or submitting a form this could be a POST request. 
+	- The browser will send a **GET** request asking for maps.google.com web page. 
+	- If you’re entering credentials or submitting a form this could be a **POST** request. 
 	- This request will also contain additional information such as browser identification (_User-Agent_ header), types of requests that it will accept (_Accept_ header), and connection headers asking it to keep the TCP connection alive for additional requests. 
 	- It will also pass information taken from cookies the browser has in store for this domain.
 - The server handles the request and sends back a response.
 	- it will assemble a response in a particular format (JSON, XML, HTML).
-- The server sends out an HTTP response
+- The **server sends out an HTTP response**
 	- The server response contains the web page you requested as well as the status code, compression type (_Content-Encoding)_, how to cache the page (_Cache-Control_), any cookies to set, privacy information, etc.
-- The browser displays the HTML content (for HTML responses which is the most common)
+- The **browser displays the HTML content** (for HTML responses which is the most common)
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzg4NDg2MzBdfQ==
+eyJoaXN0b3J5IjpbLTYyNDY0MDc1OF19
 -->
