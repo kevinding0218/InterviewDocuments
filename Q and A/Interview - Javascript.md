@@ -21,6 +21,7 @@
 - [difference between encryption and hashing](#difference-between-encryption-and-hashing)
   * [Encryption is two way](#encryption-is-two-way)
   * [Hashing is one way, can't be undone](#hashing-is-one-way--can-t-be-undone)
+- [What happens when type url in browser and enter](#what-happens-when-type-url-in-browser-and-enter)
 
 ## difference between call, apply, and bind
 - At a very high level, call and apply execute a function immediately. Bind returns a new function.
@@ -311,5 +312,5 @@ person.score();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNDY0MDc1OF19
+eyJoaXN0b3J5IjpbMTI0MDM1MTc1M119
 -->
