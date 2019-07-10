@@ -83,9 +83,9 @@
 |history|param will be saved in browser history|will not save|
 |data length restriction|max 2048(not true depend on browser/server limitation)|no restriction|
 |security|worse because data is part of url, don't use when send password|safer because data will not be saved in browser history or web server log|
-## Difference between POST and PUT
-|POST|PUT|
-|--|--|
+## Difference between POST, PUT and PATCH
+|POST|PUT|PATCH|
+|--|--|--|
 | Used for creating(POST /questions) | Used fro creating and updating(PUT /questions/{question-id}) |
 |`POST` is NOT idempotent. So if you retry the request N times, you will end up having N resources with N different URIs created on server.|`PUT` method is [idempotent](https://restfulapi.net/idempotent-rest-apis/). So if you send retry a request multiple times, that should be equivalent to single request modification.|
 
@@ -751,6 +751,6 @@ Each filter type is executed at a different stage in the filter pipeline:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ1NTU4NjY1LC03ODI3MDIzNzUsMTE2OD
-k4MjQ0LC0xOTkwMDMwNDc1XX0=
+eyJoaXN0b3J5IjpbMTc2ODQ3NjYxMSw5NDU1NTg2NjUsLTc4Mj
+cwMjM3NSwxMTY4OTgyNDQsLTE5OTAwMzA0NzVdfQ==
 -->
