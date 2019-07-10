@@ -75,8 +75,8 @@
 - Single Application App
 	- Client (Initial Request) --> Server (HTML Response) --> Client (AJAX Request) --> Server (JSON Response)
 ### Advantage and Disadvantage
-	- **Advantage**: Client won't have to send any HTML to server which saves lots of time and resource,faster data refresh and less network resource because of less HTML tag, typically only one HTML, one CSS and one Javascript package will be used when construct SPA, these static content could be hosted by any server like NgInx, Apache, etc
-	- **Disadvantage**: It cannot be imported into search engine index, because it doesn't have other HTML tag other than the initial index.html, 
+- **Advantage**: Client won't have to send any HTML to server which saves lots of time and resource,faster data refresh and less network resource because of less HTML tag, typically only one HTML, one CSS and one Javascript package will be used when construct SPA, these static content could be hosted by any server like NgInx, Apache, etc
+- **Disadvantage**: It cannot be imported into search engine index, because it doesn't have other HTML tag other than the initial index.html, 
 ### What are the key components of Angular
 1.  **Component:**  These are the basic building blocks of angular application to control HTML views.
 2.  **Modules:**  An angular module is set of angular basic building blocks like component, directives, services etc. An application is divided into logical pieces and each piece of code is called as "module" which perform a single task.
@@ -1443,5 +1443,5 @@ class GiantList {
 3.  Improved payload size
 4.  Improved template type checking
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTI4ODAzMjAsNjA5MTczMzYyXX0=
+eyJoaXN0b3J5IjpbLTYyMDM3MTIwLDYwOTE3MzM2Ml19
 -->
