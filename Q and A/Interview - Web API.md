@@ -84,7 +84,10 @@
 |data length restriction|max 2048(not true depend on browser/server limitation)|no restriction|
 |security|worse because data is part of url, don't use when send password|safer because data will not be saved in browser history or web server log|
 ## Difference between POST and PUT
-- it's the server side 
+|POST|PUT|
+|--|--|
+| Used for creating | Used fro crea  |
+
 
 ## Serialization
 ### Can you serialize hashtable and Why?
@@ -747,6 +750,6 @@ Each filter type is executed at a different stage in the filter pipeline:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MjcwMjM3NSwxMTY4OTgyNDQsLTE5OT
-AwMzA0NzVdfQ==
+eyJoaXN0b3J5IjpbMTYxNDc5NDc5OSwtNzgyNzAyMzc1LDExNj
+g5ODI0NCwtMTk5MDAzMDQ3NV19
 -->
