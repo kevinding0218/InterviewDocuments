@@ -75,9 +75,11 @@
 5.  SOAP uses interfaces and named operations to expose the service whereas to expose resources (service) REST uses URI and methods like (GET, PUT, POST, DELETE).
 6.  SOAP Performance is slow as compared to REST.
 ## Difference between GET and POST
-- GET: is generally used to get data from the web server. A GET request is generally issued,
-	- 
-- POST
+|| GET | POST |
+|--|--|--|
+|back or refresh click|no harm|data will be resend(browser will inform)|
+|bookmark|cannot be 
+
 ## Serialization
 ### Can you serialize hashtable and Why?
 - **No**, You **can’t** Serialize Hash table.Because, the .NET Framework does **not allow serialization** of any object that implements the `IDictionary` interface
@@ -739,5 +741,6 @@ Each filter type is executed at a different stage in the filter pipeline:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTAwMzA0NzVdfQ==
+eyJoaXN0b3J5IjpbLTIxNDQ1MTkxMjksLTE5OTAwMzA0NzVdfQ
+==
 -->
