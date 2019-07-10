@@ -291,9 +291,13 @@ person.score();
 	- Third, it checks the router cache. If it’s not found on your computer, the browser would communicate with the router that maintains its’ own cache of DNS records.
 	- Fourth, it checks the ISP (Internet Service Provider) cache. If all steps fail, the browser would move on to the ISP. Your ISP maintains its’ own DNS server which includes a cache of DNS records which the browser would check with the last hope of finding your requested URL.
 - If the requested URL is not in the cache, ISP’s DNS server initiates a DNS query to find the IP address of the server that hosts maps.google.com.
+- Browser initiates a TCP connection with the server.
+	- In order to transfer data packets between your computer(client) and the server, it is important to have a TCP connection established. 
+	- This connection is established using a process called the TCP/IP three-way handshake. This is a three step process where the client and the server exchange SYN(synchronize) and ACK(acknowledge) messages to establish a connection.
+	- Client machine sends a SYN packet to the server over the internet asking if it is open for new connections.
 	- 
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5OTM2OTY0N119
+eyJoaXN0b3J5IjpbOTIwMTMxNTI4XX0=
 -->
