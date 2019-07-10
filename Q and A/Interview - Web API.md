@@ -86,7 +86,8 @@
 ## Difference between POST and PUT
 |POST|PUT|
 |--|--|
-| Used for creating | Used fro crea  |
+| Used for creating(POST /questions) | Used fro creating and updating(PUT /questions/{question-id}) |
+
 
 
 ## Serialization
@@ -750,6 +751,6 @@ Each filter type is executed at a different stage in the filter pipeline:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNDc5NDc5OSwtNzgyNzAyMzc1LDExNj
-g5ODI0NCwtMTk5MDAzMDQ3NV19
+eyJoaXN0b3J5IjpbLTExOTg4Njk4MzQsLTc4MjcwMjM3NSwxMT
+Y4OTgyNDQsLTE5OTAwMzA0NzVdfQ==
 -->
