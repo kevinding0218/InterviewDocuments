@@ -52,10 +52,10 @@
 		```
 - Bind is used to return a function that can invoke at a later time.
 	- For example
-	```
-	var eatThenSomething = favFood.bind(bob)
-	eatThenSomething('gobble', 'nap') //It's time to gobble spaghetti! Then nap.
-	```
+		```
+		var eatThenSomething = favFood.bind(bob)
+		eatThenSomething('gobble', 'nap') //It's time to gobble spaghetti! Then nap.
+		```
 ## Javacript types
 - Javascript has **5 data types** that are passed by **_value_**: `Boolean`, `null`, `undefined`, `String`, and `Number`. We’ll call these **primitive types**.
 - Javascript has **3 data types** that are passed by **_reference_**: `Array`, `Function`, and `Object`. These are all technically Objects, so we’ll refer to them collectively as **Objects**.
@@ -354,5 +354,5 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU4NjcyNTgxXX0=
+eyJoaXN0b3J5IjpbMTIwMTQwNTE3M119
 -->
