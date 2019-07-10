@@ -70,10 +70,10 @@
 - When the application launches and browser send the first request to sever, will response with a index.html, this is the only time the response will return a HTML file.
 - Later on, javascript will control the index.html page, all continuing call will only return JSON data, application will use the JSON data to refresh the page content, but page itself will never be loading again, the browser will take the job to handle transfer data to HTML, most SPA framework generates HTML by a template in browser.
 ### What is difference between traditional web app
-	- In Traditional web app, every time when there is request to server, server will load the entire HTML page, client side will receive the HTML page and refresh it.
-		- Client (Initial Request) --> Server (HTML Response) --> Client (Form Post Request) --> Server(HTML Response)
-	- Single Application App
-		- Client (Initial Request) --> Server (HTML Response) --> Client (AJAX Request) --> Server (JSON Response)
+- In Traditional web app, every time when there is request to server, server will load the entire HTML page, client side will receive the HTML page and refresh it.
+	- Client (Initial Request) --> Server (HTML Response) --> Client (Form Post Request) --> Server(HTML Response)
+- Single Application App
+	- Client (Initial Request) --> Server (HTML Response) --> Client (AJAX Request) --> Server (JSON Response)
 ### Advantage and Disadvantage
 	- **Advantage**: Client won't have to send any HTML to server which saves lots of time and resource,faster data refresh and less network resource because of less HTML tag, typically only one HTML, one CSS and one Javascript package will be used when construct SPA, these static content could be hosted by any server like NgInx, Apache, etc
 	- **Disadvantage**: It cannot be imported into search engine index, because it doesn't have other HTML tag other than the initial index.html, 
@@ -1443,5 +1443,5 @@ class GiantList {
 3.  Improved payload size
 4.  Improved template type checking
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMxNjM5NzYwLDYwOTE3MzM2Ml19
+eyJoaXN0b3J5IjpbLTEwNTI4ODAzMjAsNjA5MTczMzYyXX0=
 -->
