@@ -33,28 +33,21 @@
 	var john = {
 	  favoriteFood: 'pizza'
 	}
-
 	var bob = {
 	  favoriteFood: 'spaghetti'
 	}
-
 	var favFood = function(eatAction, afterEatAction) {
 	  console.log('It\'s time to ' + eatAction + ' ' + this.favoriteFood + '! Then ' + afterEatAction + '.')
 	}
-
 	bob.favFood('scarf down', 'sleep')
 	// bob.favFood is not a function...
 	// Results in error, favFood is not a method on bob
 	// In order to user this method for bob, I need to use call or apply
-
 	favFood.call(bob, 'scarf down', 'sleep') //It's time to scarf down spaghetti! Then sleep.
-
 	favFood.apply(john, ['scarf down', 'sleep']) //It's time to scarf down pizza! Then sleep.
-
 	favFood.call(john, ['scarf down', 'sleep']) //It's time to scarf down,sleep pizza! Then undefined.
 	// Notice this is not what we want, but doesn't hard error out.
 	// On the other hand...
-
 	favFood.apply(bob, 'scarf down', 'sleep') //Uncaught TypeError... hard error
 	```
 - Bind is used to return a function that can invoke at a later time.
@@ -361,5 +354,5 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUxNDA3MDQ3XX0=
+eyJoaXN0b3J5IjpbLTI2OTAxMzYzNV19
 -->
