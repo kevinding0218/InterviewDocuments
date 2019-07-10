@@ -1,4 +1,4 @@
-﻿- [difference between call, apply, and bind](#difference-between-call--apply--and-bind)
+﻿- [difference between call apply and bind](#difference-between-call-apply-and-bind)
 - [Javacript types](#javacript-types)
 - [difference between var, let and const](#difference-between-var--let-and-const)
   * [var](#var)
@@ -23,7 +23,7 @@
   * [Hashing is one way, can't be undone](#hashing-is-one-way--can-t-be-undone)
 - [What happens when type url in browser and enter](#what-happens-when-type-url-in-browser-and-enter)
 
-## difference between call, apply, and bind
+## Difference between call apply and bind
 - At a very high level, call and apply execute a function immediately. Bind returns a new function.
 - Call and apply are very similar in that they allow you to invoke a function.
 	- call takes arguments one by one 
@@ -361,5 +361,5 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzcwOTk1OTBdfQ==
+eyJoaXN0b3J5IjpbLTEyNTkxMjc5MDBdfQ==
 -->
