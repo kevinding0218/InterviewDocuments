@@ -304,9 +304,12 @@ person.score();
 	- This request will also contain additional information such as browser identification (_User-Agent_ header), types of requests that it will accept (_Accept_ header), and connection headers asking it to keep the TCP connection alive for additional requests. 
 	- It will also pass information taken from cookies the browser has in store for this domain.
 - The server handles the request and sends back a response.
-- 
+	- it will assemble a response in a particular format (JSON, XML, HTML).
+- The server sends out an HTTP response
+	- The server response contains the web page you requested as well as the status code, compression type (_Content-Encoding)_, how to cache the page (_Cache-Control_), any cookies to set, privacy information, etc.
+- The browser displays the HTML content (for HTML responses which is the most common)
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzUyMTg1MDddfQ==
+eyJoaXN0b3J5IjpbODYxNDEzODZdfQ==
 -->
