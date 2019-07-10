@@ -1,4 +1,4 @@
-﻿- [difference between call apply and bind](#difference-between-call-apply-and-bind)
+﻿- [Difference between call apply and bind](#difference-between-call-apply-and-bind)
 - [Javacript types](#javacript-types)
 - [difference between var, let and const](#difference-between-var--let-and-const)
   * [var](#var)
@@ -361,5 +361,5 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTkxMjc5MDBdfQ==
+eyJoaXN0b3J5IjpbMTQ5NzA0Njk4MF19
 -->
