@@ -88,8 +88,6 @@
 |--|--|--|
 | **creates a child resource** at a _server defined_ URL(POST /questions) | **creates/replaces the resource** in its entirety at the _client defined_ URL(PUT /questions/{question-id}) |**updates  _part_  of the resource** at that client defined URL|
 |`POST` is NOT idempotent. So if you retry the request N times, you will end up having N resources with N different URIs created on server.|`PUT` method is [idempotent](https://restfulapi.net/idempotent-rest-apis/). So if you send retry a request multiple times, that should be equivalent to single request modification.|`PATCH` is same as PUT as NOT idempotent|
-
-
 ## Serialization
 ### Can you serialize hashtable and Why?
 - **No**, You **can’t** Serialize Hash table.Because, the .NET Framework does **not allow serialization** of any object that implements the `IDictionary` interface
@@ -751,7 +749,7 @@ Each filter type is executed at a different stage in the filter pipeline:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NTM0MTQ2MiwxNzY4NDc2NjExLDk0NT
-U1ODY2NSwtNzgyNzAyMzc1LDExNjg5ODI0NCwtMTk5MDAzMDQ3
-NV19
+eyJoaXN0b3J5IjpbLTE4ODgwMjU3NDIsMTc2ODQ3NjYxMSw5ND
+U1NTg2NjUsLTc4MjcwMjM3NSwxMTY4OTgyNDQsLTE5OTAwMzA0
+NzVdfQ==
 -->
