@@ -78,7 +78,11 @@
 || GET | POST |
 |--|--|--|
 |back or refresh click|no harm|data will be resend(browser will inform)|
-|bookmark|cannot be 
+|bookmark|can|cannot|
+|cache|can|cannot|
+|history|param will be saved in browser history|will not save|
+|data length restriction|max 2048(not true depend on browser limitation)|no restriction|
+
 
 ## Serialization
 ### Can you serialize hashtable and Why?
@@ -741,6 +745,5 @@ Each filter type is executed at a different stage in the filter pipeline:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDQ1MTkxMjksLTE5OTAwMzA0NzVdfQ
-==
+eyJoaXN0b3J5IjpbMTc1MTc4MzgxMSwtMTk5MDAzMDQ3NV19
 -->
