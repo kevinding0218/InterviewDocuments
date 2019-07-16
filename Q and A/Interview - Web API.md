@@ -71,11 +71,11 @@
 	- we deploy the APIs in server A, and store data on server B and authenticate requests in server C.
 ### compare REST vs SOAP
 1.  The SOAP is an XML based protocol whereas REST is not a protocol but it is an architectural pattern i.e. resource-based architecture.
-2.  SOAP has specifications for both stateless and state-full implementation whereas REST is completely stateless.
-3.  SOAP enforces message format as XML whereas REST does not enforce message format as XML, JSON or text.
-4.  The SOAP message consists of an envelope which includes SOAP headers and body to store the actual information we want to send whereas REST uses the HTTP build-in headers (with a variety of media-types) to store the information and uses the HTTP GET, POST, PUT and DELETE methods to perform CRUD operations.
-5.  SOAP uses interfaces and named operations to expose the service whereas to expose resources (service) REST uses URI and methods like (GET, PUT, POST, DELETE).
-6.  SOAP Performance is slow as compared to REST.
+23.  SOAP has specifications for both stateless and state-full implementation whereas REST is completely stateless.
+34.  SOAP enforces message format as XML whereas REST does not enforce message format as XML, JSON or text.
+45.  The SOAP message consists of an envelope which includes SOAP headers and body to store the actual information we want to send whereas REST uses the HTTP build-in headers (with a variety of media-types) to store the information and uses the HTTP GET, POST, PUT and DELETE methods to perform CRUD operations.
+56.  SOAP uses interfaces and named operations to expose the service whereas to expose resources (service) REST uses URI and methods like (GET, PUT, POST, DELETE).
+67.  SOAP Performance is slow as compared to REST.
 ## Difference between GET and POST
 || GET | POST |
 |--|--|--|
@@ -751,7 +751,7 @@ Each filter type is executed at a different stage in the filter pipeline:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzk2MzU3MzksMTc2ODQ3NjYxMSw5ND
-U1NTg2NjUsLTc4MjcwMjM3NSwxMTY4OTgyNDQsLTE5OTAwMzA0
-NzVdfQ==
+eyJoaXN0b3J5IjpbMjM4NTQ0MzA4LC0yMDc5NjM1NzM5LDE3Nj
+g0NzY2MTEsOTQ1NTU4NjY1LC03ODI3MDIzNzUsMTE2ODk4MjQ0
+LC0xOTkwMDMwNDc1XX0=
 -->
