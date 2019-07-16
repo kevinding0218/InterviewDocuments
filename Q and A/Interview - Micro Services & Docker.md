@@ -166,10 +166,13 @@ docker push {username}/{repository_name}
 ```
 ### docker compose (yml)
 - a tool which you can define the images in container and run those services in single command
+### docker start vs docker run
+- **docker run**: create a new container of an image, and execute the container. You can create N clones of the same image. The command is:  `docker run IMAGE_ID`  **and not**  `docker run CONTAINER_ID`
+- **docker start**: Launch a container previously stopped. For example, if you had stopped a database with the command  `docker stop CONTAINER_ID`, you can relaunch the same container with the command  `docker start CONTAINER_ID`, and the data and settings will be the same.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzgzODE0MjksMTIyOTE4OTY4MCwtOT
-kwMzc0MDc2LDEyNzI2MTk1NjQsMzkyNzY4MjksMTQ2OTc4OTQ3
-MSw2MTg4NjIyMTYsNTI5OTE0MzIwLC0xMDI3MTg3MzIyLDQzMz
-UzOTM0Miw4MTUzMjc5NzksMTA1NDM5MjQ1MCwtMTU1NDgwODIx
-NV19
+eyJoaXN0b3J5IjpbLTEwNDA0Njk0OCwtMTgzODM4MTQyOSwxMj
+I5MTg5NjgwLC05OTAzNzQwNzYsMTI3MjYxOTU2NCwzOTI3Njgy
+OSwxNDY5Nzg5NDcxLDYxODg2MjIxNiw1Mjk5MTQzMjAsLTEwMj
+cxODczMjIsNDMzNTM5MzQyLDgxNTMyNzk3OSwxMDU0MzkyNDUw
+LC0xNTU0ODA4MjE1XX0=
 -->
