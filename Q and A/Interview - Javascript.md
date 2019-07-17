@@ -26,8 +26,8 @@
 ## Ddifference between call, apply, and bind
 - At a very high level, **call and apply execute a function immediately. Bind returns a new function**.
 - Call and apply are very similar in that they allow you to invoke a function.
-	- **CALL call takes arguments one by one** 
-	- **APPLY apply takes in arguments as an array**. Remember A for apply, A for array.
+	- **CALL takes arguments one by one** 
+	- **APPLY takes in arguments as an array**. Remember A for apply, A for array.
 	- For example
 		```javascript
 		var john = {
@@ -361,5 +361,5 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzU4MjYxNzYsMTIwMTQwNTE3M119
+eyJoaXN0b3J5IjpbMTIyNTA2MjcwMiwxMjAxNDA1MTczXX0=
 -->
