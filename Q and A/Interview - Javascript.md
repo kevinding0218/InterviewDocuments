@@ -23,7 +23,7 @@
   * [Hashing is one way, can't be undone](#hashing-is-one-way--can-t-be-undone)
 - [What happens when type url in browser and enter](#what-happens-when-type-url-in-browser-and-enter)
 
-## Ddifference between call, apply, and bind
+## Difference between call, apply, and bind
 - At a very high level, **call and apply execute a function immediately. Bind returns a new function**.
 - Call and apply are very similar in that they allow you to invoke a function.
 	- **CALL takes arguments one by one** 
@@ -361,5 +361,5 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNTA2MjcwMiwxMjAxNDA1MTczXX0=
+eyJoaXN0b3J5IjpbMjU3OTI1NzY4LDEyMDE0MDUxNzNdfQ==
 -->
