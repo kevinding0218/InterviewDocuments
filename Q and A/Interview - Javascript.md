@@ -331,6 +331,11 @@ var subscription = events.subscribe('/page/load', function(obj) {
 - unsubscribe
 ```javascript
 subscription.remove();
+
+```
+- unsubscribe
+```
+
 ```
 ## What happens when type url in browser and enter
 - The **browser checks the cache for a DNS record** to find the corresponding IP address of your url
@@ -361,5 +366,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU3OTI1NzY4LDEyMDE0MDUxNzNdfQ==
+eyJoaXN0b3J5IjpbMTU3MTgzMjMzNiwyNTc5MjU3NjgsMTIwMT
+QwNTE3M119
 -->
