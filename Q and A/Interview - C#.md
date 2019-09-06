@@ -343,7 +343,7 @@ System.GC.Collect ( ) method.
 ## Array vs ArrayList vs List vs LinkedList
 - **Array**: strong type with **fixed length**, particular type of int, String or Object, no type casting required. Can store primitives.
 - **ArrayList**: **dynamic** in increase or decrease the size. Can store all datatype value, cannot store premitives.
-- **List** is basically backed by an array which is usually bigger than the current number of items. The elements are put in an array, and **a new array is created when the old one runs out of space.** This is fast for access by index, but slow at removing or inserting elements within the list or at the start.
+- **List** is basically backed by an array which is usually bigger than the current number of items. The elements are put in an array, and **a new array is created when the old one runs out of space.** This is fast for access by index, but slow at removing or inserting elements within the list or at the start. List is not **thread-safe**, so avoid using list in Task.WhenAll() with async functions, use ConcurrentBag instead.
 - **LinkedList**: is a doubly-linked list - each node knows its previous entry and its next one. This is fast for inserting after/before a particular node (or the head/tail), but slow at access by index. LinkedList<T> will usually take more memory than List<T> because it needs space for all those next/previous references - and the data will probably have less locality of reference, as each node is a separate object.
 ## Dictionary vs Hashtable
 - **Dictionary** 
