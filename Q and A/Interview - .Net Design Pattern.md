@@ -164,6 +164,7 @@
 - For greater isolation, you can physically **separate the read data from the write data**.
 	- For example, the **write database** might be **relational**, while the **read database** is a **document database**.
 	- If separate read and write databases are used, they must be **kept in sync.** Typically this is accomplished by **having the write model publish an event whenever it updates the database. Updating the database and publishing the event must occur in a single transaction.**
+![](https://picasaweb.google.com/100999654516552807104/6743769515214917649#6743769515776092418 "CQRS_Write")
 ### Benefit
 -   **Independent scaling**. CQRS allows the read and write workloads to scale independently, and may result in fewer lock contentions.
 -   **Optimized data schemas**. The read side can use a schema that is optimized for queries, while the write side uses a schema that is optimized for updates.
@@ -506,3 +507,6 @@ Then, we create a **static method** that *provides the instance of the singleton
 ### D: Dependency Inversion Principle (DIP)
 - High-level modules should not depend on low-level modules. Both should depend on abstractions.
 - Refer to DI
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTY5OTQ3ODA1M119
+-->
