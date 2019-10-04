@@ -187,52 +187,59 @@
 - We create a **static variable** that will hold the **instance of the class**.
 Then, we create a **static method** that *provides the instance of the singleton class*. This method checks if an instance of the singleton class is available. It creates an instance, if its not available; Otherwise, it returns the available instance.
 ### 1st version
+```C#
+	public class Singleton1st
+    {
+        private static Singleton1st _instance;
+        private Singleton1st() { }
+        // call with Singleton.GetInstance().AnyMethod
+        public static Singleton1st GetInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new Singleton1st();
+            }
+            return _instance;
+        }
+        // call with Singleton.Instance.AnyMethod
+        public static Singleton1st Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new Singleton1st();
+                }
+                return _instance;
+            }
+        }
+    }
 	```
-	public class Singleton  {
-		private  static  Singleton _instance;
-		private  Singleton()  {}
-		// call with Singleton.GetInstance().AnyMethod
-		public  static  Singleton GetInstance(){
-			if(_instance  ==  null){
-				_instance  =  new  Singleton();
-			}
-			return  _instance;
-		}
-		or
-		// call with Singleton.Instance.AnyMethod
-		public  static  Singleton Instance{
-			get{
-				 if(_instance  ==  null){
-					_instance  =  new Singleton();
-				 }
-				return  _instance;
-			}
-		}
-	}
-	```
+
 #### Pros and Cons
 - **Pros**: Working Singleton for Single-Threaded Model
 - **Cons**: Not Thread-safe (cannot be used in concurrent system)
+
 ### 2nd version	
-	```
-	public class SimpleThreadSafeSingleton {
-		private static SimpleThreadSafeSingleton _instance = null:
-		private static readonly object padlock = new object();
-		
-		SimpleThreadSafeSingleton() {}
-		
-		public static SimpleThreadSafeSingleton Instance
-		{
-			get {
-				lock(padlock)
-				{
-					if (_instance = null)
-						_instance = new SimpleThreadSafeSingleton();
-					return _instance;
-				}
-			}
-		}
-	}
+	```C#
+	public class Singleton2nd
+    {
+        private static Singleton2nd _instance = null;
+        private static readonly object padlock = new object();
+        Singleton2nd() { }
+        public static Singleton2nd Instance
+        {
+            get
+            {
+                lock (padlock)
+                {
+                    if (_instance == null)
+                        _instance = new Singleton2nd();
+                    return _instance;
+                }
+            }
+        }
+    }
 	```
 #### Pros and Cons
 - **Pros**: This implementation is thread-safe. The thread takes out a lock on a shared object, and then checks whether or not the instance has been created before creating the instance. This takes care of the memory barrier issue (as locking makes sure that all reads occur logically after the lock acquire, and unlocking makes sure that all writes occur logically before the lock release) and ensures that only one thread will create an instance (as only one thread can be in that part of the code at a time - by the time the second thread enters it,the first thread will have created the instance, so the expression will evaluate to false)
@@ -510,5 +517,5 @@ Then, we create a **static method** that *provides the instance of the singleton
 - High-level modules should not depend on low-level modules. Both should depend on abstractions.
 - Refer to DI
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MTE5NDUxMl19
+eyJoaXN0b3J5IjpbMTA0MzczMDEyLC00ODExOTQ1MTJdfQ==
 -->
