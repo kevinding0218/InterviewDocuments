@@ -214,14 +214,13 @@ Then, we create a **static method** that *provides the instance of the singleton
             }
         }
     }
-	```
-
+```
 #### Pros and Cons
 - **Pros**: Working Singleton for Single-Threaded Model
 - **Cons**: Not Thread-safe (cannot be used in concurrent system)
 
 ### 2nd version	
-	```C#
+```C#
 	public class Singleton2nd
     {
         private static Singleton2nd _instance = null;
@@ -240,66 +239,50 @@ Then, we create a **static method** that *provides the instance of the singleton
             }
         }
     }
-	```
+```
 #### Pros and Cons
 - **Pros**: This implementation is thread-safe. The thread takes out a lock on a shared object, and then checks whether or not the instance has been created before creating the instance. This takes care of the memory barrier issue (as locking makes sure that all reads occur logically after the lock acquire, and unlocking makes sure that all writes occur logically before the lock release) and ensures that only one thread will create an instance (as only one thread can be in that part of the code at a time - by the time the second thread enters it,the first thread will have created the instance, so the expression will evaluate to false)
 - **Cons**: performance suffers as a lock is acquired every time the instance is requested.
 ### 3rd version	
-	```
-	public sealed class Singleton
-    	{
-    		private static readonly Singleton instance = new Singleton();
-
-    		// Explicit static constructor to tell C# compiler
-    		// not to mark type as beforefieldinit
-		static Singleton()
-		{
-		}
-
-		private Singleton() {}
-
-		public static Singleton Instance
-		{
-		    get
-		    {
-		    	return instance;
-		    }
-		}
-    	}
-	```
+```
+	public sealed class Singleton3rd
+    {
+        // Explicit static constructor to tell C# compiler
+        // not to mark type as beforefieldinit
+        static Singleton3rd() { }
+        private Singleton3rd() { }
+        public static Singleton3rd Instance { get; } = new Singleton3rd();
+    }
+```
 #### Use of static constructor
 - **Pros**: static constructors in C# are specified to execute only when an instance of the class is created or a static member is referenced, and to execute only once per AppDomain. Given that this check for the type being newly constructed needs to be executed whatever else happens, it will be faster than adding extra checking as in the previous examples.
 - **Cons**: It's not as lazy as the other implementations. In particular, if you have static members other than Instance, the first reference to those members will involve creating the instance. This is corrected in the next implementation.
 ### 4th version	
-	```
-	public sealed class Singleton
-    	{
-    		private Singleton() {}
+```C#
+public sealed class Singleton4th
+    {
+        private Singleton4th() { }
+        public static Singleton4th Instance { get { return Nested.instance; } }
+        private class Nested
+        {
+            // Explicit static constructor to tell C# compiler
+            // not to mark type as beforefieldinit
+            static Nested() { }
 
-    		public static Singleton Instance { get { return Nested.instance; } }
-
-    		private class Nested
-		{
-		    // Explicit static constructor to tell C# compiler
-		    // not to mark type as beforefieldinit
-		    static Nested() {}
-
-		    internal static readonly Singleton instance = new Singleton();
-		}
-    	}
-	```
+            internal static readonly Singleton4th instance = new Singleton4th();
+        }
+    }
+```
 - **Pros**:  instantiation is triggered by the first reference to the static member of the nested class, which only occurs in Instance. This means the implementation is fully lazy, but has all the performance benefits of the previous ones. Note that although nested classes have access to the enclosing class's private members, the reverse is not true, hence the need for instance to be internal here
 ### 5th version	
-	```
-	public sealed class Singleton
-    	{
-    		private static readonly Lazy<Singleton> lazy = new Lazy<Singleton>(() => new Singleton());
-	
-            	public static Singleton Instance { get { return lazy.Value; } }
-
-            	private Singleton(){ }
-        }
-	```
+```C#
+public sealed class Singleton5th
+    {
+        private static readonly Lazy<Singleton5th> lazy = new Lazy<Singleton5th>(() => new Singleton5th());
+        public static Singleton5th Instance { get { return lazy.Value; } }
+        private Singleton5th() { }
+    }
+```
 #### Using .Net 4's Lazy<T> type
 - If you're using .NET 4 (or higher), you can use the System.Lazy<T> type to make the laziness really simple
 - All you need to do is pass a delegate to the constructor which calls the Singleton constructor - which is done most easily with a lambda expression.
@@ -517,5 +500,5 @@ Then, we create a **static method** that *provides the instance of the singleton
 - High-level modules should not depend on low-level modules. Both should depend on abstractions.
 - Refer to DI
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MzczMDEyLC00ODExOTQ1MTJdfQ==
+eyJoaXN0b3J5IjpbMTQ3ODk2ODQ3NywtNDgxMTk0NTEyXX0=
 -->
