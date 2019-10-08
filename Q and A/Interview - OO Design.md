@@ -219,7 +219,10 @@ Yes, if you want the abstract method to be invoked automatically whenever an ins
 	- Dynamic memory, variables memory allocated at run time
 	- variables can be resized.
 	- relatively slower access
-	- objects created on heap are visible to all threqad
+	- objects created on heap are visible to all threads
 	- Garbage collector only collo
 ![enter image description here](https://www.csharpstar.com/wp-content/uploads/2016/05/Stack_Heap.jpg)
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwMDg2MDcxNDldfQ==
+-->
