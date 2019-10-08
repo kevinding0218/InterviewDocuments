@@ -187,26 +187,35 @@
 - We create a **static variable** that will hold the **instance of the class**.
 Then, we create a **static method** that *provides the instance of the singleton class*. This method checks if an instance of the singleton class is available. It creates an instance, if its not available; Otherwise, it returns the available instance.
 ### 1st version
-```C#
+	```C#
 	public class Singleton1st
     {
-        private static Singleton1st _instance;
-        private Singleton1st() { }
-        // call with Singleton.GetInstance().AnyMethod
-        public static Singleton1st GetInstance()
+          {
+		private  static  Singleton1st _instance;
+        		private  Singleton1st() { }
+        ()  {}
+		// call with Singleton.GetInstance().AnyMethod
+        		public  static  Singleton1st GetInstance()
         {
-            if (_instance == null)
             {
-                _instance = new Singleton1st();
+			if (_instance  ==  null)
+            {
+                {
+				_instance = =  new  Singleton1st();
             }
-            return _instance;
+            			}
+			return  _instance;
         }
-        // call with Singleton.Instance.AnyMethod
-        public static Singleton1st Instance
+        		}
+		or
+		// call with Singleton.Instance.AnyMethod
+        		public  static  Singleton1st Instance
         {
             get
             {
-                if (_instance == null)
+               {
+			get{
+				 if (_instance  ==  null)
                 {
                     _instance = new Singleton1st();
                 }
@@ -233,7 +242,8 @@ Then, we create a **static method** that *provides the instance of the singleton
                 lock (padlock)
                 {
                     if (_instance == null)
-                        _instance = new Singleton2nd();
+                        _instance ={
+					_instance  =  new Singleton2nd();
                     return _instance;
                 }
             }
@@ -281,8 +291,12 @@ public sealed class Singleton5th
         private static readonly Lazy<Singleton5th> lazy = new Lazy<Singleton5th>(() => new Singleton5th());
         public static Singleton5th Instance { get { return lazy.Value; } }
         private Singleton5th() { }
-    }
-```
+    				 }
+				return  _instance;
+			}
+		}
+	}
+	```
 #### Using .Net 4's Lazy<T> type
 - If you're using .NET 4 (or higher), you can use the System.Lazy<T> type to make the laziness really simple
 - All you need to do is pass a delegate to the constructor which calls the Singleton constructor - which is done most easily with a lambda expression.
@@ -500,5 +514,6 @@ public sealed class Singleton5th
 - High-level modules should not depend on low-level modules. Both should depend on abstractions.
 - Refer to DI
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3ODk2ODQ3NywtNDgxMTk0NTEyXX0=
+eyJoaXN0b3J5IjpbLTkxMTQ3MzM1MSwxNDc4OTY4NDc3LC00OD
+ExOTQ1MTJdfQ==
 -->
