@@ -196,14 +196,14 @@ Then, we create a **static method** that *provides the instance of the singleton
         ()  {}
 		// call with Singleton.GetInstance().AnyMethod
         		public  static  Singleton1st GetInstance()
-        {
-            {
-			if (_instance  ==  null)
-            {
-                {
-				_instance = =  new  Singleton1st();
-            }
-            			}
+		        {
+		            {
+					if (_instance  ==  null)
+		            {
+		                {
+						_instance = =  new  Singleton1st();
+		            }
+            	}
 			return  _instance;
         }
         		}
@@ -514,6 +514,6 @@ public sealed class Singleton5th
 - High-level modules should not depend on low-level modules. Both should depend on abstractions.
 - Refer to DI
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMzg3Njg1NSwtOTExNDczMzUxLDE0Nz
+eyJoaXN0b3J5IjpbLTIwMzEwNTI3MSwtOTExNDczMzUxLDE0Nz
 g5Njg0NzcsLTQ4MTE5NDUxMl19
 -->
