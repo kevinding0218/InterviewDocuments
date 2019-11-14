@@ -748,10 +748,36 @@ Each filter type is executed at a different stage in the filter pipeline:
 		- Run a script that automatically submits the form.
 		- Send the form submission as an AJAX request.
 		- Hide the form using CSS.
+## HttpStatusCode
+```
+OK = 200,
+Created = 201,
+Accepted = 202,
+NoContent = 204,
+PartialContent = 206,
+MultipleChoices = 300,
+Redirect = 302
+UseProxy = 305,
+BadRequest = 400
+Unauthorized = 401
+PaymentRequired = 402
+Forbidden = 403
+NotFound = 404
+MethodNotAllowed = 405
+RequestTimeout = 408
+Conflict = 409
+LengthRequired = 411
+InternalServerError = 500
+NotImplemented = 501
+BadGateway = 502
+ServiceUnavailable = 503
+GatewayTimeout = 504
+HttpVersionNotSupported = 505
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM4NTQ0MzA4LC0yMDc5NjM1NzM5LDE3Nj
-g0NzY2MTEsOTQ1NTU4NjY1LC03ODI3MDIzNzUsMTE2ODk4MjQ0
-LC0xOTkwMDMwNDc1XX0=
+eyJoaXN0b3J5IjpbNzczMzg0MzMsMjM4NTQ0MzA4LC0yMDc5Nj
+M1NzM5LDE3Njg0NzY2MTEsOTQ1NTU4NjY1LC03ODI3MDIzNzUs
+MTE2ODk4MjQ0LC0xOTkwMDMwNDc1XX0=
 -->
