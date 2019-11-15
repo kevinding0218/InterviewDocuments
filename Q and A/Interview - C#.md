@@ -419,6 +419,7 @@ UseParams(1, 2, 3, 4);
 		- For example, assume that you have in memory a `Customer` object that has an `Orders` property that contains a large array of `Order` objects that, to be initialized, requires a database connection. If the user never asks to display the Orders or use the data in a computation, then there is no reason to use system memory or computing cycles to create it. By using `Lazy<Orders>` to declare the `Orders` object for lazy initialization, you can avoid wasting system resources when the object is not used.
 	- When you have an object that is expensive to create, and you want to defer its creation until after other expensive operations have been completed. 			
 		- For example, assume that your program loads several object instances when it starts, but only some of them are required immediately. You can improve the startup performance of the program by deferring initialization of the objects that are not required until the required objects have been created.
+- By default, [Lazy<T>](https://docs.microsoft.com/en-us/dotnet/api/system.lazy-1) objects are thread-safe. That is, if the constructor does not specify the kind of thread safety, the [Lazy<T>](https://docs.microsoft.com/en-us/dotnet/api/system.lazy-1) objects it creates are thread-safe.
 ## Write a Regular expression to validate email address?
 ```
 ^[a-zA – Z0 – 9. _%+-]+@[a-zA – Z0-9 . _%+-]+\.[a-zA-Z]{2,4}$  
@@ -429,6 +430,6 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMDM0MjY1MSwtNDA4NDAyMjMyLDg5Nj
-E1NDU0NiwyMDMwOTM4NzY2XX0=
+eyJoaXN0b3J5IjpbMzc3ODY2Mjk1LC00MDg0MDIyMzIsODk2MT
+U0NTQ2LDIwMzA5Mzg3NjZdfQ==
 -->
