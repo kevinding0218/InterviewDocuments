@@ -176,6 +176,8 @@
 	CancellationToken token = cts.Token;
 	cts.Cancel(); //cancel the operation.
 	```
+## Concurrency vs Parallelism
+### 
 ## Yield keyword
 ### Definition
 - Yield keyword helps us to do deferred execution 
@@ -430,6 +432,6 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc3ODY2Mjk1LC00MDg0MDIyMzIsODk2MT
-U0NTQ2LDIwMzA5Mzg3NjZdfQ==
+eyJoaXN0b3J5IjpbMTQ5ODgzNTEzNCwzNzc4NjYyOTUsLTQwOD
+QwMjIzMiw4OTYxNTQ1NDYsMjAzMDkzODc2Nl19
 -->
