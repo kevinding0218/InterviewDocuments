@@ -179,7 +179,10 @@
 ## Thread vs Task vs Process
 
 ## Concurrency vs Parallelism
-### 
+- Concurrency means, essentially, that task A and task B both need to happen independently of each other, and A starts running, and then B starts before A is finished.
+- There are various different ways of accomplishing concurrency. One of them is parallelism--having multiple CPUs working on the different tasks at the same time
+- But that's not the only way. Another is by _task switching,_ which works like this: Task A works up to a certain point, then the CPU working on it stops and switches over to task B, works on it for a while, and then switches back to task A
+- If the time slices are small enough, it may appear to the user that both things are being run in parallel, even though they're actually being processed in serial by a multitasking CPU.
 ## Yield keyword
 ### Definition
 - Yield keyword helps us to do deferred execution 
@@ -434,6 +437,6 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgwNzY4NzY4LDM3Nzg2NjI5NSwtNDA4ND
+eyJoaXN0b3J5IjpbNzQ1ODQxOTEwLDM3Nzg2NjI5NSwtNDA4ND
 AyMjMyLDg5NjE1NDU0NiwyMDMwOTM4NzY2XX0=
 -->
