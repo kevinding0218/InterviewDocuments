@@ -304,7 +304,7 @@ private static void Method1()
 - "using" statement is to **ensure** that the object is **disposed** as soon as it goes out of scope, and it doesn't require explicit code to ensure that this happens.
 - e.g. when the SomeType class implements **IDisposable**. File Stream, Email server.
 ## Garbage collection
-- Garbage collection is used to prevent memory leaks during execution of programs.
+- Garbage collection serves as an automatic memory manager and is used to prevent memory leaks during execution of programs.
 ### Which method is used to enforce garbage collection in .NET
 ```
 System.GC.Collect ( ) method.
@@ -422,5 +422,6 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk2MTU0NTQ2LDIwMzA5Mzg3NjZdfQ==
+eyJoaXN0b3J5IjpbLTQwODQwMjIzMiw4OTYxNTQ1NDYsMjAzMD
+kzODc2Nl19
 -->
