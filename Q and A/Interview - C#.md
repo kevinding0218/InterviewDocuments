@@ -176,6 +176,8 @@
 	CancellationToken token = cts.Token;
 	cts.Cancel(); //cancel the operation.
 	```
+## Thread vs Task vs Process
+
 ## Concurrency vs Parallelism
 ### 
 ## Yield keyword
@@ -432,6 +434,6 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5ODgzNTEzNCwzNzc4NjYyOTUsLTQwOD
-QwMjIzMiw4OTYxNTQ1NDYsMjAzMDkzODc2Nl19
+eyJoaXN0b3J5IjpbMzgwNzY4NzY4LDM3Nzg2NjI5NSwtNDA4ND
+AyMjMyLDg5NjE1NDU0NiwyMDMwOTM4NzY2XX0=
 -->
