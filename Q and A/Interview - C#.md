@@ -412,6 +412,11 @@ UseParams(1, 2, 3, 4);
 ## What is the difference between string and String in C# ?
 - String stands for System.String and it is a .NET Framework type. string is an alias in the C# language for System.String. 
 - Both of them are compiled to System.String in IL (Intermediate Language), so there is no difference.
+## Lazy Initializtion
+- Lazy initialization_ of an object means that its creation is deferred until it is first used.
+- Lazy initialization is primarily used to improve performance, avoid wasteful computation, and reduce program memory requirements
+	- When you have an object that is expensive to create, and the program might not use it. For example, assume that you have in memory a `Customer` object that has an `Orders` property that contains a large array of `Order` objects that, to be initialized, requires a database connection. If the user never asks to display the Orders or use the data in a computation, then there is no reason to use system memory or computing cycles to create it. By using `Lazy<Orders>` to declare the `Orders` object for lazy initialization, you can avoid wasting system resources when the object is not used.
+	- When you have an object that is expensive to create, and you want to defer its creation until after other expensive operations have been completed. For example, assume that your program loads several object instances when it starts, but only some of them are required immediately. You can improve the startup performance of the program by deferring initialization of the objects that are not required until the required objects have been created.
 ## Write a Regular expression to validate email address?
 ```
 ^[a-zA – Z0 – 9. _%+-]+@[a-zA – Z0-9 . _%+-]+\.[a-zA-Z]{2,4}$  
@@ -422,6 +427,6 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwODQwMjIzMiw4OTYxNTQ1NDYsMjAzMD
-kzODc2Nl19
+eyJoaXN0b3J5IjpbNjU1NjUyMTQxLC00MDg0MDIyMzIsODk2MT
+U0NTQ2LDIwMzA5Mzg3NjZdfQ==
 -->
