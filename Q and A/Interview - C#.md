@@ -177,7 +177,12 @@
 	cts.Cancel(); //cancel the operation.
 	```
 ## Thread vs Task vs Process
-
+1.  The Thread class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows. A [Task](http://msdn.microsoft.com/en-us/library/vstudio/system.threading.tasks.task) represents some asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
+2.  The task can return a result. There is no direct mechanism to return the result from a thread.
+3.  Task supports cancellation through the use of cancellation tokens. But Thread doesn't.
+4.  A task can have multiple processes happening at the same time. Threads can only have one task running at a time.
+5.  We can easily implement Asynchronous using ’async’ and ‘await’ keywords.
+6.  A new Thread()is not dealing with Thread pool thread, whereas Task does use thread pool thread.
 ## Concurrency vs Parallelism
 - Concurrency means, essentially, that task A and task B both need to happen independently of each other, and A starts running, and then B starts before A is finished.
 - There are various different ways of accomplishing concurrency. One of them is parallelism--having multiple CPUs working on the different tasks at the same time
@@ -437,6 +442,6 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ1ODQxOTEwLDM3Nzg2NjI5NSwtNDA4ND
-AyMjMyLDg5NjE1NDU0NiwyMDMwOTM4NzY2XX0=
+eyJoaXN0b3J5IjpbMTE0MTYwODkyNywzNzc4NjYyOTUsLTQwOD
+QwMjIzMiw4OTYxNTQ1NDYsMjAzMDkzODc2Nl19
 -->
