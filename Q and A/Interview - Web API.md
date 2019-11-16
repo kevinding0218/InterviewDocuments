@@ -93,6 +93,7 @@
 
 - **PUT** request always contains a full resource. This is necessary because, a necessary quality of PUT requests is idempotence — the quality of producing the same result even if the same request is made multiple times
 - **PUT** requests are particularly useful for major updates.
+- **PATCH** is not idempotent, failed requests are not automatically re-attempted on the network, if a PATCH request is made to a non-existent url, it should simply fail without creating a new resource unlike PUT, which would create a new one using the payload.
 - **PATCH** is used to make minor updates to resources and it’s not required to be idempotent
 ## Serialization
 ### Can you serialize hashtable and Why?
@@ -781,7 +782,7 @@ HttpVersionNotSupported = 505
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTk0MTkxMCw3NzMzODQzMywyMzg1ND
+eyJoaXN0b3J5IjpbLTU0MDI4NzI1Miw3NzMzODQzMywyMzg1ND
 QzMDgsLTIwNzk2MzU3MzksMTc2ODQ3NjYxMSw5NDU1NTg2NjUs
 LTc4MjcwMjM3NSwxMTY4OTgyNDQsLTE5OTAwMzA0NzVdfQ==
 -->
