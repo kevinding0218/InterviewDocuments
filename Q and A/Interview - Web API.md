@@ -92,6 +92,8 @@
 |`POST` is NOT idempotent. So if you retry the request N times, you will end up having N resources with N different URIs created on server.|`PUT` method is [idempotent](https://restfulapi.net/idempotent-rest-apis/). So if you send retry a request multiple times, that should be equivalent to single request modification.|`PATCH` is same as PUT as NOT idempotent|
 
 - **PUT** request always contains a full resource. This is necessary because, a necessary quality of PUT requests is idempotence — the quality of producing the same result even if the same request is made multiple times
+- **PUT** requests are particularly useful for major updates.
+- **PATCH** is used to make minor updates to resources and it’s not required to be idempotent
 ## Serialization
 ### Can you serialize hashtable and Why?
 - **No**, You **can’t** Serialize Hash table.Because, the .NET Framework does **not allow serialization** of any object that implements the `IDictionary` interface
@@ -779,7 +781,7 @@ HttpVersionNotSupported = 505
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTIyNTk0NTEsNzczMzg0MzMsMjM4NT
-Q0MzA4LC0yMDc5NjM1NzM5LDE3Njg0NzY2MTEsOTQ1NTU4NjY1
-LC03ODI3MDIzNzUsMTE2ODk4MjQ0LC0xOTkwMDMwNDc1XX0=
+eyJoaXN0b3J5IjpbLTEzNTk0MTkxMCw3NzMzODQzMywyMzg1ND
+QzMDgsLTIwNzk2MzU3MzksMTc2ODQ3NjYxMSw5NDU1NTg2NjUs
+LTc4MjcwMjM3NSwxMTY4OTgyNDQsLTE5OTAwMzA0NzVdfQ==
 -->
