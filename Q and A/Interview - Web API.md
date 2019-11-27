@@ -617,10 +617,14 @@ Each filter type is executed at a different stage in the filter pipeline:
 - 5XX: Unexpected error/Internal server error
 ## .Net Core Dependency Injection
 ### [**.Net Core self dependency injection lifetime types**](https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/):
-1. **AddSingleton** - creates a single instance throughout the application. It creates the instance for the first time and reuses the same object in the all calls.
+1. **AddSingleton**
+- Objects are the same for every request during the application lifetime
+- creates a single instance throughout the application. It creates the instance for the first time and reuses the same object in the all calls.
 	- **Autofac -> InstancePerDependency()**
 		- A unique instance will be returned from each object request.
-2. **AddTransient** - created each time they are requested, a new instance is provided to every controller and every service. This lifetime works best for lightweight, stateless services.
+2. **AddTransient** 
+- Objects are different. One new instance is provided to every controller and every service
+- created each time they are requested, a new instance is provided to every controller and every service. This lifetime works best for lightweight, stateless services.
 	- **Autofac -> InstancePerLifetimeScope()**
 		- A component with per-lifetime scope will have at most a single instance per nested lifetime scope.
 		- This is useful for objects specific to a single unit of work that may need to nest additional logical units of work. Each nested lifetime scope will get a new instance of the registered dependency.
@@ -628,7 +632,9 @@ Each filter type is executed at a different stage in the filter pipeline:
 	- **Autofac -> InstancePerRequest()**
 		- Application types like ASP.NET Core naturally lend themselves to “request” type semantics. You have the ability to have a sort of “singleton per request.”
 		- Instance per request builds on top of instance per matching lifetime scope by providing a well-known lifetime scope tag, a registration convenience method, and integration for common application types. Behind the scenes, though, it’s still just instance per matching lifetime scope.
-3. **AddScoped** - same within a request, but different across different requests lifetime services are created once per request within the scope. It is equivalent to Singleton in the current scope.
+3. **AddScoped** 
+- Objects are same through the request
+- same within a request, but different across different requests lifetime services are created once per request within the scope. It is equivalent to Singleton in the current scope.
 	- **Autofac -> SingleInstance()**
 		- One instance is returned from all requests in the root and all nested scopes
 	> eg. in MVC it creates 1 instance per each http request but uses the same instance in the other calls within the same web request.
@@ -782,7 +788,8 @@ HttpVersionNotSupported = 505
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NDkzNDI5Miw3NzMzODQzMywyMzg1ND
-QzMDgsLTIwNzk2MzU3MzksMTc2ODQ3NjYxMSw5NDU1NTg2NjUs
-LTc4MjcwMjM3NSwxMTY4OTgyNDQsLTE5OTAwMzA0NzVdfQ==
+eyJoaXN0b3J5IjpbMjA2MTI2NzAxOSwtNDc0OTM0MjkyLDc3Mz
+M4NDMzLDIzODU0NDMwOCwtMjA3OTYzNTczOSwxNzY4NDc2NjEx
+LDk0NTU1ODY2NSwtNzgyNzAyMzc1LDExNjg5ODI0NCwtMTk5MD
+AzMDQ3NV19
 -->
