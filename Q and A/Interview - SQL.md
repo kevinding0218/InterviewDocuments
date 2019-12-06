@@ -183,7 +183,10 @@ ROW_NUMBER() OVER(Partition By value,…) order by clause()
 
 PARTITION BY Clause
 
-When you specify a column or set of columns with PARTITION BY clause then it will divide the result set into record partitions and then finally ranking functions are applied to each record partition separately and the rank will restart from 1 for each record partition separately.
+When you specify a column or set of columns with PARTITION BY clause then it will divide the result set into record partitions and then finally ranking functions are applied to each record partition separately and the rank will restart from 1 for each record partition separately﻿
+
+
+> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwOTA1Mzg5NF19
+eyJoaXN0b3J5IjpbNTIyODM2NzA1LC01MDkwNTM4OTRdfQ==
 -->
