@@ -34,20 +34,20 @@
 		  favoriteFood: 'pizza'
 		}
 		
-	var bob = {
+		var bob = {
 		  favoriteFood: 'spaghetti'
 		}
-	
-	var favFood = function(eatAction, afterEatAction) {
+		
+		var favFood = function(eatAction, afterEatAction) {
 		  console.log('It\'s time to ' + eatAction + ' ' + this.favoriteFood + '! Then ' + afterEatAction + '.')
 		}
+		
+		bob.favFood('scarf down', 'sleep')
+			// bob.favFood is not a function...
+			// Results in error, favFood is not a method on bob
+			// In order to user this method for bob, I need to use call or apply
 	
-	bob.favFood('scarf down', 'sleep')
-		// bob.favFood is not a function...
-		// Results in error, favFood is not a method on bob
-		// In order to user this method for bob, I need to use call or apply
-	
-	favFood.call(bob, 'scarf down', 'sleep') //It's time to scarf down spaghetti! Then sleep.
+		favFood.call(bob, 'scarf down', 'sleep') //It's time to scarf down spaghetti! Then sleep.
 
 		favFood.apply(john, ['scarf down', 'sleep']) //It's time to scarf down pizza! Then sleep.
 
@@ -457,7 +457,7 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMzIyMDE1MCwtMjEzNzcwMjUyNiw4MD
-MyMDc0ODUsLTEyNDE2ODI4MSwxNTcxODMyMzM2LDI1NzkyNTc2
-OCwxMjAxNDA1MTczXX0=
+eyJoaXN0b3J5IjpbLTEyNTQ0NjU3NzQsLTIxMzc3MDI1MjYsOD
+AzMjA3NDg1LC0xMjQxNjgyODEsMTU3MTgzMjMzNiwyNTc5MjU3
+NjgsMTIwMTQwNTE3M119
 -->
