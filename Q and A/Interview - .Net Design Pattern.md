@@ -275,7 +275,7 @@ public sealed class Singleton5th
 			}
 		}
 	}
-	```
+```
 #### Using .Net 4's Lazy<T> type
 - If you're using .NET 4 (or higher), you can use the System.Lazy<T> type to make the laziness really simple
 - All you need to do is pass a delegate to the constructor which calls the Singleton constructor - which is done most easily with a lambda expression.
@@ -493,6 +493,7 @@ public sealed class Singleton5th
 - High-level modules should not depend on low-level modules. Both should depend on abstractions.
 - Refer to DI
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTkxNzM3NjIsMTg2MzgyNzI0NiwtOT
-ExNDczMzUxLDE0Nzg5Njg0NzcsLTQ4MTE5NDUxMl19
+eyJoaXN0b3J5IjpbMzkxNjYxODYyLC0xMjE5MTczNzYyLDE4Nj
+M4MjcyNDYsLTkxMTQ3MzM1MSwxNDc4OTY4NDc3LC00ODExOTQ1
+MTJdfQ==
 -->
