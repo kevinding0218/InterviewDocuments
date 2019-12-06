@@ -281,6 +281,12 @@ function watchTutorialPromise() {
 		}
 	})
 }
+
+watchTutorialPromise().then((message) => {
+	console.log('Success: ' + message);
+}).catch(error) => {
+	console.log(error.name + ' ' + error.message
+})
 ```
 ### Event loop
 - event loop is responsible for how this asynchronous behavior happens.
@@ -429,6 +435,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjExNTEyNzQsMTU3MTgzMjMzNiwyNT
-c5MjU3NjgsMTIwMTQwNTE3M119
+eyJoaXN0b3J5IjpbLTEyNDE2ODI4MSwxNTcxODMyMzM2LDI1Nz
+kyNTc2OCwxMjAxNDA1MTczXX0=
 -->
