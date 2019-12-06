@@ -221,6 +221,7 @@
 		- In our callback function we can use an `if()`statement to determine if our request was successful or not, and then act upon the new data accordingly.
 ### promise
 - promise is great when you need to do something that's going to take a long  time in the background, e.g: download an image from server
+- cleaner way of replacing ES5 callback and to avoid callback hell
 ```javascript
 let p = new Promise((resolve, reject) => {
 	let a = 1 + 1;
@@ -456,6 +457,7 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAzMjA3NDg1LC0xMjQxNjgyODEsMTU3MT
-gzMjMzNiwyNTc5MjU3NjgsMTIwMTQwNTE3M119
+eyJoaXN0b3J5IjpbLTIxMzc3MDI1MjYsODAzMjA3NDg1LC0xMj
+QxNjgyODEsMTU3MTgzMjMzNiwyNTc5MjU3NjgsMTIwMTQwNTE3
+M119
 -->
