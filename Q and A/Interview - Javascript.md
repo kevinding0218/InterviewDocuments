@@ -56,7 +56,7 @@
 		// On the other hand...
 	
 		favFood.apply(bob, 'scarf down', 'sleep') //Uncaught TypeError... hard error
-		```
+```
 - Bind is used to return a function that can invoke at a later time.
 	- For example
 		```
@@ -68,7 +68,7 @@
 - Javascript has **3 data types** that are passed by **_reference_**: `Array`, `Function`, and `Object`. These are all technically Objects, so we’ll refer to them collectively as **Objects**.
 	- **Variables** that are assigned a **non-primitive value** are given a **_reference_** to that value. That **reference points to the object’s location in memory**. The **variables don’t actually contain the value**.
 	- When a reference type value, an object, is copied to another variable using `=`, the address of that value is what’s actually copied over as if it were a primitive.**Objects are copied by reference** instead of by value.
-- 
+- Primitive type are saved on stack while it can be access faster but have memory limitation, reference
 ## difference between var, let and const
 ### var
 - _var_ can be reassigned and updated
@@ -457,7 +457,7 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NTcyODA0MiwtMjEzNzcwMjUyNiw4MD
+eyJoaXN0b3J5IjpbLTczOTI0NDcxMCwtMjEzNzcwMjUyNiw4MD
 MyMDc0ODUsLTEyNDE2ODI4MSwxNTcxODMyMzM2LDI1NzkyNTc2
 OCwxMjAxNDA1MTczXX0=
 -->
