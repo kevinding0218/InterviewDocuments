@@ -238,7 +238,22 @@ p.then((message) => {
 });
 
 // vs callback
-const userLeft = fal
+const userLeft = false
+const userWatchingCatMeme = false
+
+function watchTutorialCallback(callback, errorcallback) {
+	if (userLeft) {
+		errorCallback({
+			name: 'User Left',
+			message: ':('
+		})
+	} else if (userWatchingCatMeme) {
+		errorCallback({
+			name: 'User Watching Cat Mme',
+			message: 'W'
+		})
+	}
+}
 ```
 ### Event loop
 - event loop is responsible for how this asynchronous behavior happens.
@@ -387,6 +402,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkyMTE2MzMzLDE1NzE4MzIzMzYsMjU3OT
-I1NzY4LDEyMDE0MDUxNzNdfQ==
+eyJoaXN0b3J5IjpbMjAwODk3MjA2NCwxNTcxODMyMzM2LDI1Nz
+kyNTc2OCwxMjAxNDA1MTczXX0=
 -->
