@@ -250,10 +250,18 @@ function watchTutorialCallback(callback, errorcallback) {
 	} else if (userWatchingCatMeme) {
 		errorCallback({
 			name: 'User Watching Cat Mme',
-			message: 'W'
+			message: 'WebDevSimplified < Cat'
 		})
+	} else {
+		callback('Thumbs up and Subscribe')
 	}
 }
+
+watchTutorialCallback((message) => {
+	console.log('Success: ' + message);
+}, (error) => {
+	console.log(error.name + ' ' + error.message
+})
 ```
 ### Event loop
 - event loop is responsible for how this asynchronous behavior happens.
@@ -402,6 +410,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwODk3MjA2NCwxNTcxODMyMzM2LDI1Nz
+eyJoaXN0b3J5IjpbLTgxODMxMTIwNSwxNTcxODMyMzM2LDI1Nz
 kyNTc2OCwxMjAxNDA1MTczXX0=
 -->
