@@ -265,20 +265,21 @@ watchTutorialCallback((message) => {
 
 // Using Promise
 function watchTutorialPromise() {
-	return new Promise(()
-	if (userLeft) {
-		errorCallback({
-			name: 'User Left',
-			message: ':('
-		})
-	} else if (userWatchingCatMeme) {
-		errorCallback({
-			name: 'User Watching Cat Mme',
-			message: 'WebDevSimplified < Cat'
-		})
-	} else {
-		callback('Thumbs up and Subscribe')
-	}
+	return new Promise((resolve, reject) => {
+		if (userLeft) {
+			reject({
+				name: 'User Left',
+				message: ':('
+			})
+		} else if (userWatchingCatMeme) {
+			reject({
+				name: 'User Watching Cat Mme',
+				message: 'WebDevSimplified < Cat'
+			})
+		} else {
+			resolve('Thumbs up and Subscribe')
+		}
+	})
 }
 ```
 ### Event loop
@@ -428,6 +429,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzgwNDkyOTIsMTU3MTgzMjMzNiwyNT
+eyJoaXN0b3J5IjpbLTE4MjExNTEyNzQsMTU3MTgzMjMzNiwyNT
 c5MjU3NjgsMTIwMTQwNTE3M119
 -->
