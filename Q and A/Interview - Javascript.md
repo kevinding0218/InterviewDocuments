@@ -29,11 +29,11 @@
 	- **CALL takes arguments one by one** 
 	- **APPLY takes in arguments as an array**. Remember A for apply, A for array.
 	- For example
-		```javascript
+```javascript
 		var john = {
 		  favoriteFood: 'pizza'
 		}
-	
+		
 	var bob = {
 		  favoriteFood: 'spaghetti'
 		}
@@ -457,7 +457,7 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzc3MDI1MjYsODAzMjA3NDg1LC0xMj
-QxNjgyODEsMTU3MTgzMjMzNiwyNTc5MjU3NjgsMTIwMTQwNTE3
-M119
+eyJoaXN0b3J5IjpbLTcxMzIyMDE1MCwtMjEzNzcwMjUyNiw4MD
+MyMDc0ODUsLTEyNDE2ODI4MSwxNTcxODMyMzM2LDI1NzkyNTc2
+OCwxMjAxNDA1MTczXX0=
 -->
