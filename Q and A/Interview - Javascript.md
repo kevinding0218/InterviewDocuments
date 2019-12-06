@@ -75,7 +75,11 @@ var Person = {
 }
 
 // var SecondPerson = Person;
-var SecondPerson = Object.assign(p
+var SecondPerson = Object.assign(Person);
+
+var hobbies = ['Sport', 'Reading'];
+// var newHobbies = hobbies;
+var newHobbies = hobbies.slice();
 ```
 ## difference between var, let and const
 ### var
@@ -465,7 +469,7 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MTE3NDIwNywtMjEzNzcwMjUyNiw4MD
-MyMDc0ODUsLTEyNDE2ODI4MSwxNTcxODMyMzM2LDI1NzkyNTc2
-OCwxMjAxNDA1MTczXX0=
+eyJoaXN0b3J5IjpbLTU3NDM3MDcyLC0yMTM3NzAyNTI2LDgwMz
+IwNzQ4NSwtMTI0MTY4MjgxLDE1NzE4MzIzMzYsMjU3OTI1NzY4
+LDEyMDE0MDUxNzNdfQ==
 -->
