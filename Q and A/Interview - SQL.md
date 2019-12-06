@@ -171,7 +171,7 @@ What are cursors? Explain different types of cursors. What are the disadvantages
 
 Because a cursor is an actual object inside the database engine, there is a little overhead involved in creating the cursor and destroying it. Also, a majority of cursor operations occur in tempdb, so a heavily used tempdb will be even more overloaded with the use of cursors.
 
-CTE
+**CTE**
 
 CTE is a temporary result set, that can be referenced within a SELECT, INSERT, UPDATE or DELETE statement that immediately follows the CTE.
 
@@ -185,5 +185,5 @@ PARTITION BY Clause
 
 When you specify a column or set of columns with PARTITION BY clause then it will divide the result set into record partitions and then finally ranking functions are applied to each record partition separately and the rank will restart from 1 for each record partition separately.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODg1NTEyMzhdfQ==
+eyJoaXN0b3J5IjpbLTUwOTA1Mzg5NF19
 -->
