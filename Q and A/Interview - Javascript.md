@@ -220,6 +220,7 @@
 		- Once Twitter responds, our callback function is invoked. Twitter will either send an `err` (error) object or a `response` object back to us. 
 		- In our callback function we can use an `if()`statement to determine if our request was successful or not, and then act upon the new data accordingly.
 ### promise
+- 
 ```javascript
 let p = new Promise((resolve, reject) => {
 	let a = 1 + 1;
@@ -231,8 +232,10 @@ let p = new Promise((resolve, reject) => {
 });
 
 p.then((message) => {
-	console.log('This is in the then 
-})
+	console.log('This is in the then ' + message);
+}).catch((message) => {
+	console.log('This is in the catch ' + message);
+});
 ```
 ### Event loop
 - event loop is responsible for how this asynchronous behavior happens.
@@ -381,6 +384,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDM2ODIzMTksMTU3MTgzMjMzNiwyNT
-c5MjU3NjgsMTIwMTQwNTE3M119
+eyJoaXN0b3J5IjpbNTgzNzM1MjI3LDE1NzE4MzIzMzYsMjU3OT
+I1NzY4LDEyMDE0MDUxNzNdfQ==
 -->
