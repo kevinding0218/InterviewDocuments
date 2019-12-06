@@ -300,8 +300,13 @@ const recordVideoThree = new Promise((resolve, reject) => {
 })
 
 // Parellel
-Promise.all([recordVideoOne,recordVideoTwo,recordVideoThree]).then((message) => {
-	console.
+Promise.all([recordVideoOne,recordVideoTwo,recordVideoThree]).then((messages) => {
+	console.log(messages);	//message is an array
+})
+
+// Race
+Promise.race([recordVideoOne,recordVideoTwo,recordVideoThree]).then((message) => {
+	console.log(message);	//single first returned message
 })
 ```
 ### Event loop
@@ -451,6 +456,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MTE0MTE5MiwtMTI0MTY4MjgxLDE1Nz
-E4MzIzMzYsMjU3OTI1NzY4LDEyMDE0MDUxNzNdfQ==
+eyJoaXN0b3J5IjpbODAzMjA3NDg1LC0xMjQxNjgyODEsMTU3MT
+gzMjMzNiwyNTc5MjU3NjgsMTIwMTQwNTE3M119
 -->
