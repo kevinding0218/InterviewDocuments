@@ -68,7 +68,14 @@
 - Javascript has **3 data types** that are passed by **_reference_**: `Array`, `Function`, and `Object`. These are all technically Objects, so we’ll refer to them collectively as **Objects**.
 	- **Variables** that are assigned a **non-primitive value** are given a **_reference_** to that value. That **reference points to the object’s location in memory**. The **variables don’t actually contain the value**.
 	- When a reference type value, an object, is copied to another variable using `=`, the address of that value is what’s actually copied over as if it were a primitive.**Objects are copied by reference** instead of by value.
-- Primitive type are saved on stack while it can be access faster but have memory limitation, reference
+- Primitive type are saved on stack while it can be access faster but have memory limitation, reference type are saved on heap while it might be slower but have more space, saved on stack means that primitive value could reference the position of pointer, saved on heap means that reference value only got a reference of the pointer.
+```
+var Person = {
+	age: 15,
+	name: 'Mike'
+}
+
+```
 ## difference between var, let and const
 ### var
 - _var_ can be reassigned and updated
@@ -457,7 +464,7 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczOTI0NDcxMCwtMjEzNzcwMjUyNiw4MD
+eyJoaXN0b3J5IjpbLTQ2NTQ3MTg4NCwtMjEzNzcwMjUyNiw4MD
 MyMDc0ODUsLTEyNDE2ODI4MSwxNTcxODMyMzM2LDI1NzkyNTc2
 OCwxMjAxNDA1MTczXX0=
 -->
