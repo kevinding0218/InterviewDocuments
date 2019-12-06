@@ -219,6 +219,8 @@
 		- We don’t know if our API request is going to be successful or not so after sending our parameters to search/tweets via a get request, we wait. 
 		- Once Twitter responds, our callback function is invoked. Twitter will either send an `err` (error) object or a `response` object back to us. 
 		- In our callback function we can use an `if()`statement to determine if our request was successful or not, and then act upon the new data accordingly.
+### promise
+- 
 ### Event loop
 - event loop is responsible for how this asynchronous behavior happens.
 ### Javascript is single thread
@@ -366,6 +368,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MTgzMjMzNiwyNTc5MjU3NjgsMTIwMT
-QwNTE3M119
+eyJoaXN0b3J5IjpbLTE5Njg4NDg4MDUsMTU3MTgzMjMzNiwyNT
+c5MjU3NjgsMTIwMTQwNTE3M119
 -->
