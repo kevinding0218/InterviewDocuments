@@ -288,7 +288,21 @@ watchTutorialPromise().then((message) => {
 	console.log(error.name + ' ' + error.message
 })
 
-// parellel vs AS
+// parellel vs ASAP
+const recordVideoOne = new Promise((resolve, reject) => {
+	resolve('Video 1 Recorded')
+})
+const recordVideoTwo = new Promise((resolve, reject) => {
+	resolve('Video 3 Recorded')
+})
+const recordVideoThree = new Promise((resolve, reject) => {
+	resolve('Video 3 Recorded')
+})
+
+// Parellel
+Promise.all([recordVideoOne,recordVideoTwo,recordVideoThree]).then((message) => {
+	console.
+})
 ```
 ### Event loop
 - event loop is responsible for how this asynchronous behavior happens.
@@ -437,6 +451,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMjk2NDY1OSwtMTI0MTY4MjgxLDE1Nz
+eyJoaXN0b3J5IjpbLTI5MTE0MTE5MiwtMTI0MTY4MjgxLDE1Nz
 E4MzIzMzYsMjU3OTI1NzY4LDEyMDE0MDUxNzNdfQ==
 -->
