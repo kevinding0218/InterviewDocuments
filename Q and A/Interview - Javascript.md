@@ -55,7 +55,7 @@
 		// Notice this is not what we want, but doesn't hard error out.
 		// On the other hand...
 	
-	favFood.apply(bob, 'scarf down', 'sleep') //Uncaught TypeError... hard error
+		favFood.apply(bob, 'scarf down', 'sleep') //Uncaught TypeError... hard error
 		```
 - Bind is used to return a function that can invoke at a later time.
 	- For example
@@ -457,7 +457,7 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTQ0NjU3NzQsLTIxMzc3MDI1MjYsOD
-AzMjA3NDg1LC0xMjQxNjgyODEsMTU3MTgzMjMzNiwyNTc5MjU3
-NjgsMTIwMTQwNTE3M119
+eyJoaXN0b3J5IjpbMTI3NTcyODA0MiwtMjEzNzcwMjUyNiw4MD
+MyMDc0ODUsLTEyNDE2ODI4MSwxNTcxODMyMzM2LDI1NzkyNTc2
+OCwxMjAxNDA1MTczXX0=
 -->
