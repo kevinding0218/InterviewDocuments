@@ -222,8 +222,17 @@
 ### promise
 ```javascript
 let p = new Promise((resolve, reject) => {
-	le
+	let a = 1 + 1;
+	if (a == 2) {
+		resolve('Success');
+	} else {
+		reject('Failed');
+	}
 });
+
+p.then((message) => {
+	console.log('This is in the then 
+})
 ```
 ### Event loop
 - event loop is responsible for how this asynchronous behavior happens.
@@ -372,6 +381,6 @@ subscription.remove();
 [Jqeury related 1](https://www.toptal.com/jquery/interview-questions)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjg0MzI3NiwxNTcxODMyMzM2LDI1Nz
-kyNTc2OCwxMjAxNDA1MTczXX0=
+eyJoaXN0b3J5IjpbLTEwMDM2ODIzMTksMTU3MTgzMjMzNiwyNT
+c5MjU3NjgsMTIwMTQwNTE3M119
 -->
