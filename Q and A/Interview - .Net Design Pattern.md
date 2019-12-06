@@ -38,11 +38,11 @@
  
 ## Repositor-Pattern
 ### Definition
-	- Mediates between the domain and data mapping layers, acting like an **in-memory collection** of domain objects.
+- Mediates between the domain and data mapping layers, acting like an **in-memory collection** of domain objects.
 ### Benefit
-	- Minimizes the duplicate query logic
-	- Decouples your application from persistence frameworks ( a new ORM every 2 years)
-	-  Promotes test ability
+- Minimizes the duplicate query logic
+- Decouples your application from persistence frameworks ( a new ORM every 2 years)
+-  Promotes test ability
 ## Ioc-DI-SL
 ### Ioc vs DI vs SL
 - **Dependency Injection** (DI) and **Service Locator** (SL) are the ways of Implementing **Inversion Of Control** (IOC)
@@ -493,6 +493,6 @@ public sealed class Singleton5th
 - High-level modules should not depend on low-level modules. Both should depend on abstractions.
 - Refer to DI
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMTgzMzI5OCwxODYzODI3MjQ2LC05MT
-E0NzMzNTEsMTQ3ODk2ODQ3NywtNDgxMTk0NTEyXX0=
+eyJoaXN0b3J5IjpbLTEyMTkxNzM3NjIsMTg2MzgyNzI0NiwtOT
+ExNDczMzUxLDE0Nzg5Njg0NzcsLTQ4MTE5NDUxMl19
 -->
