@@ -45,9 +45,9 @@
 	-  Promotes test ability
 ## Ioc-DI-SL
 ### Ioc vs DI vs SL
-	- **Dependency Injection** (DI) and **Service Locator** (SL) are the ways of Implementing **Inversion Of Control** (IOC)
+- **Dependency Injection** (DI) and **Service Locator** (SL) are the ways of Implementing **Inversion Of Control** (IOC)
 ### DI Definition
-	- refers to a specific form of decoupling software modules, **helps us to develop loosely couple code by ensuring that high-level modules depend on abstractions rather than concrete implementations of lower-level modules and make unit testing easier for mocking**
+- refers to a specific form of decoupling software modules, **helps us to develop loosely couple code by ensuring that high-level modules depend on abstractions rather than concrete implementations of lower-level modules and make unit testing easier for mocking**
 	- **Principle**: High-level modules should not depend on low-level modules. Both should depend on abstractions.
 	- Constructor injection/Property(Setter) injection/Method injection
 #### Benefit of DI
@@ -493,6 +493,6 @@ public sealed class Singleton5th
 - High-level modules should not depend on low-level modules. Both should depend on abstractions.
 - Refer to DI
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MzgyNzI0NiwtOTExNDczMzUxLDE0Nz
-g5Njg0NzcsLTQ4MTE5NDUxMl19
+eyJoaXN0b3J5IjpbLTkyMTgzMzI5OCwxODYzODI3MjQ2LC05MT
+E0NzMzNTEsMTQ3ODk2ODQ3NywtNDgxMTk0NTEyXX0=
 -->
