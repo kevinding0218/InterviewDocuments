@@ -617,9 +617,8 @@ Each filter type is executed at a different stage in the filter pipeline:
 - 5XX: Unexpected error/Internal server error
 ## .Net Core Dependency Injection
 ### [**.Net Core self dependency injection lifetime types**](https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/):
-1. **AddSingleton**
-- Objects are the same for every request during the application lifetime
-- creates a single instance throughout the application. It creates the instance for the first time and reuses the same object in the all calls.
+1. **AddSingleton**- Objects are the same for every request during the application lifetime
+ - creates a single instance throughout the application. It creates the instance for the first time and reuses the same object in the all calls.
 	- **Autofac -> InstancePerDependency()**
 		- A unique instance will be returned from each object request.
 2. **AddTransient** 
@@ -788,8 +787,8 @@ HttpVersionNotSupported = 505
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MTI2NzAxOSwtNDc0OTM0MjkyLDc3Mz
-M4NDMzLDIzODU0NDMwOCwtMjA3OTYzNTczOSwxNzY4NDc2NjEx
-LDk0NTU1ODY2NSwtNzgyNzAyMzc1LDExNjg5ODI0NCwtMTk5MD
-AzMDQ3NV19
+eyJoaXN0b3J5IjpbLTczNDE1MDk0OSwyMDYxMjY3MDE5LC00Nz
+Q5MzQyOTIsNzczMzg0MzMsMjM4NTQ0MzA4LC0yMDc5NjM1NzM5
+LDE3Njg0NzY2MTEsOTQ1NTU4NjY1LC03ODI3MDIzNzUsMTE2OD
+k4MjQ0LC0xOTkwMDMwNDc1XX0=
 -->
