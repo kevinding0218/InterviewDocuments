@@ -1,7 +1,5 @@
+### What is virtual DOM
 
-
-
-> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNjU0MzY5MjE2XX0=
 -->
