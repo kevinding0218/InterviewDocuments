@@ -4,6 +4,21 @@
 - E.g, when you click a button, React actually kind of recreates the virtual DOM in a second time and it recreates the way that would look like after this state change, it will then compare the new virtual DOM to the old virtual DOM, if there is no difference, actual DOM never gets touched but if there is change, it will only render the part which gets affected.
 - It's fast because it uses the virtual DOM for comparison instead of the actual DOM which would have been slow to begin with, and then when it has to re-render something, it only renders the part which changed and not everything
 - Development tools --> Rendering tab, enable paint flashing where you could see which part of the DOM gets affected and updated
+### Props
+- Changes in `props` will trigger React to re-render your components and potentially update the DOM in the browser
+- `props` allow you to pass data from a parent (wrapping) component to a child (embedded) component.
+- E.g:
+```
+1.  const posts =  ()  =>  {
+2.  return  (
+3.  <div>
+4.  <Post title="My first Post"  />
+</div>
+);
+}
+```
+### State
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbLTMwNTY5OTc2OSwxNTM3NzI1OTQxLDY1ND
+M2OTIxNl19
 -->
