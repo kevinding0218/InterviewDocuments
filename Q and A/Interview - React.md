@@ -8,17 +8,28 @@
 - Changes in `props` will trigger React to re-render your components and potentially update the DOM in the browser
 - `props` allow you to pass data from a parent (wrapping) component to a child (embedded) component.
 - E.g:
+	- **AllPosts Component:**
+		```javascript
+		const posts =  ()  =>  {
+			return  (
+			<div>
+				<Post title="My first Post"  />
+			</div>
+			);
+		}
+		```
+- **Post Component:**
 ```
-1.  const posts =  ()  =>  {
-2.  return  (
-3.  <div>
-4.  <Post title="My first Post"  />
+1.  const post =  (props)  =>  {
+return  (
+<div>
+<h1>{props.title}</h1>
 </div>
 );
 }
 ```
 ### State
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNTY5OTc2OSwxNTM3NzI1OTQxLDY1ND
-M2OTIxNl19
+eyJoaXN0b3J5IjpbLTIxMDQwMDYwMDksMTUzNzcyNTk0MSw2NT
+QzNjkyMTZdfQ==
 -->
