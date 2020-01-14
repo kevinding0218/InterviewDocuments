@@ -18,18 +18,36 @@
 			);
 		}
 		```
-- **Post Component:**
-```
-1.  const post =  (props)  =>  {
-return  (
-<div>
-<h1>{props.title}</h1>
-</div>
-);
+	- **Post Component:**
+		```javascript
+		const post =  (props)  =>  {
+			return  (
+				<div>
+					<h1>{props.title}</h1>
+				</div>
+			);
+		}
+		```
+### State
+- Whilst props allow you to pass data down the component tree (and hence trigger an UI update), state is used to change the component, well, state from within. Changes to state also trigger an UI update.
+- E.g:
+	- **NewPost Component:**
+```javascript
+class  NewPost  extends  Component  {  
+	// state can only be accessed in class-based components!
+	state =  {
+		counter:  1
+	};
+
+	render ()  {  
+	// Needs to be implemented in class-based components! Needs to return some JSX!
+	return  (
+		<div>{this.state.counter}</div>
+	);
+}
 }
 ```
-### State
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDQwMDYwMDksMTUzNzcyNTk0MSw2NT
-QzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbMTU4NzY4OTQyNCwxNTM3NzI1OTQxLDY1ND
+M2OTIxNl19
 -->
