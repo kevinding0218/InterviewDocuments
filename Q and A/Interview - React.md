@@ -55,13 +55,13 @@ class  NewPost  extends  Component  {
 	- 1) Your current state value 
 	- 2) A function that allows us to update this state such that React is aware of if and will re-render this component
 - useState('anything'): Any data of your choice, can be an object, an array, a string etc!
-- setSomeState('new state'): Mutate state & trigger re-render, Replaces old state (NO automatic merging)!
+- setSomeState('new state'): Mutate state & trigger re-render, Replaces old state (NO automatic merging)! It means whenever you update state, you have to manually make sure including all old state data
 - e.g
 ```javascript
 const [someState, setSomeState] = useState('anything')
 const someFunction = () => { setSomeState('new state') }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNz
-cyNTk0MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbNzU5NTgwNjc5LDcyMzkxMDcwNywyMDc1OT
+gwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
 -->
