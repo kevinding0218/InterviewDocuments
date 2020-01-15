@@ -50,15 +50,18 @@ class  NewPost  extends  Component  {
 	}
 }
 ```
-### Hooks
+### Hooks (Available in React versions >16.8)
 - useState() returns an array with exactly two elements: 
 	- 1) Your current state value 
 	- 2) A function that allows us to update this state such that React is aware of if and will re-render this component
+- useState('anything'): Any data of your choice, can be an object, an array, a string etc!
+- setSomeState('new state'): Mutate state & trigger re-render, Replaces old state (NO automatic merging)!
 - e.g
 ```javascript
 const [someState, setSomeState] = useState('anything')
+const someFunction = () => { setSomeState('new state') }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NTQ2NDY3MiwyMDc1OTgwNjQ5LDE1Mz
-c3MjU5NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNz
+cyNTk0MSw2NTQzNjkyMTZdfQ==
 -->
