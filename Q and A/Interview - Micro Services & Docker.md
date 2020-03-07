@@ -93,17 +93,19 @@
 ### What's an RPC?
 - An RPC is a Remote Procedure Call.
 - In your client code, it looks like you're just calling a function directly on the server
-```
-// Client Code (any language)
-{code}
-...
-server.CreateUser(user)
-...
-{code}
-// Server Code (any language)
-// function creating users
-def CreateUser(User user) {...}
-```
+	```
+	// Client Code (any language)
+	{code}
+	...
+	server.CreateUser(user)
+	...
+	{code}
+
+	// Server Code (any language)
+	// function creating users
+	def CreateUser(User user) {...}
+	```
+### Protocol Buffers
 
 
 ## Docker
@@ -220,9 +222,9 @@ docker push {username}/{repository_name}
 - **docker run**: create a new container of an image, and execute the container. You can create N clones of the same image. The command is:  `docker run IMAGE_ID`  **and not**  `docker run CONTAINER_ID`
 - **docker start**: Launch a container previously stopped. For example, if you had stopped a database with the command  `docker stop CONTAINER_ID`, you can relaunch the same container with the command  `docker start CONTAINER_ID`, and the data and settings will be the same.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxODY3MTQwNywtMTA0MDQ2OTQ4LC0xOD
-M4MzgxNDI5LDEyMjkxODk2ODAsLTk5MDM3NDA3NiwxMjcyNjE5
-NTY0LDM5Mjc2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2LDUyOT
-kxNDMyMCwtMTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5
-LDEwNTQzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
+eyJoaXN0b3J5IjpbNDE4NzA3NjY1LC0xMDQwNDY5NDgsLTE4Mz
+gzODE0MjksMTIyOTE4OTY4MCwtOTkwMzc0MDc2LDEyNzI2MTk1
+NjQsMzkyNzY4MjksMTQ2OTc4OTQ3MSw2MTg4NjIyMTYsNTI5OT
+E0MzIwLC0xMDI3MTg3MzIyLDQzMzUzOTM0Miw4MTUzMjc5Nzks
+MTA1NDM5MjQ1MCwtMTU1NDgwODIxNV19
 -->
