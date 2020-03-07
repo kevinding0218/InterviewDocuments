@@ -84,7 +84,11 @@
 	- Too much data or too little data
 - How about latency?
 - How about scalability to 1000s of clients?
-- How 
+- How about load balancing?
+- How about interoperability with many language?
+- How about authentication, monitoring and logging?
+### What's gRPC?
+- it al
 
 
 ## Docker
@@ -201,7 +205,7 @@ docker push {username}/{repository_name}
 - **docker run**: create a new container of an image, and execute the container. You can create N clones of the same image. The command is:  `docker run IMAGE_ID`  **and not**  `docker run CONTAINER_ID`
 - **docker start**: Launch a container previously stopped. For example, if you had stopped a database with the command  `docker stop CONTAINER_ID`, you can relaunch the same container with the command  `docker start CONTAINER_ID`, and the data and settings will be the same.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDY2NzY4NzIsLTEwNDA0Njk0OCwtMT
+eyJoaXN0b3J5IjpbLTIwNjk1MDQyMTksLTEwNDA0Njk0OCwtMT
 gzODM4MTQyOSwxMjI5MTg5NjgwLC05OTAzNzQwNzYsMTI3MjYx
 OTU2NCwzOTI3NjgyOSwxNDY5Nzg5NDcxLDYxODg2MjIxNiw1Mj
 k5MTQzMjAsLTEwMjcxODczMjIsNDMzNTM5MzQyLDgxNTMyNzk3
