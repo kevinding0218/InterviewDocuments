@@ -56,7 +56,7 @@
 			- Faster APIs (as it's not sync and doesn't need to wait for response)
 			- Decoupled Services (Service A, B & C are independent)
 			- Works even when services are down
-			- No need for service discovery ( 
+			- No need for service discovery (Service 1 doesn't need to know the protocol of Service A, B or C, all it has to know is the address of distributed queue/queue or topic name)
 ### Deal with large amount of data
 - **Steaming**
 	- Let's imagine the 100 MB file is received by the service A which transfers it to service B, which, in turn, uses service C to do the actual parsing of the proprietary format.
@@ -182,7 +182,7 @@ docker push {username}/{repository_name}
 - **docker run**: create a new container of an image, and execute the container. You can create N clones of the same image. The command is:  `docker run IMAGE_ID`  **and not**  `docker run CONTAINER_ID`
 - **docker start**: Launch a container previously stopped. For example, if you had stopped a database with the command  `docker stop CONTAINER_ID`, you can relaunch the same container with the command  `docker start CONTAINER_ID`, and the data and settings will be the same.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMzEwMzkyNSwtMTA0MDQ2OTQ4LC0xOD
+eyJoaXN0b3J5IjpbLTE2NjkyMjA0MSwtMTA0MDQ2OTQ4LC0xOD
 M4MzgxNDI5LDEyMjkxODk2ODAsLTk5MDM3NDA3NiwxMjcyNjE5
 NTY0LDM5Mjc2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2LDUyOT
 kxNDMyMCwtMTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5
