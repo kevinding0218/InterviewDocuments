@@ -90,7 +90,9 @@
 ### What's gRPC?
 - at higher level, it allows you to define REQUEST and RESPONSE for RPC(Remote Procedure Calls) and handles all the rest for you
 - on top of it, it's modern, fast and efficient, build on top of HTTP/2, low latency, supports streaming, language independent, and make it super easy to plug in authentication, load balancing, logging and monitoring
-- 
+### What's an RPC?
+- An RPC is a Remote Procedure Call.
+- In your client code, it looks like you're just calling a function directly on the server
 
 
 ## Docker
@@ -207,7 +209,7 @@ docker push {username}/{repository_name}
 - **docker run**: create a new container of an image, and execute the container. You can create N clones of the same image. The command is:  `docker run IMAGE_ID`  **and not**  `docker run CONTAINER_ID`
 - **docker start**: Launch a container previously stopped. For example, if you had stopped a database with the command  `docker stop CONTAINER_ID`, you can relaunch the same container with the command  `docker start CONTAINER_ID`, and the data and settings will be the same.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MzMxMDU1MywtMTA0MDQ2OTQ4LC0xOD
+eyJoaXN0b3J5IjpbMTU2OTI3ODA0NSwtMTA0MDQ2OTQ4LC0xOD
 M4MzgxNDI5LDEyMjkxODk2ODAsLTk5MDM3NDA3NiwxMjcyNjE5
 NTY0LDM5Mjc2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2LDUyOT
 kxNDMyMCwtMTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5
