@@ -46,7 +46,8 @@
 - CQRS
 - SignalR
 #### Communication between Micro Service
-- Syncroniz
+- Synchronous communication:
+	- Client -> API Gateway  -> Service 1 -> Service 2 - Service 1 -> 
 ### Deal with large amount of data
 - **Steaming**
 	- Let's imagine the 100 MB file is received by the service A which transfers it to service B, which, in turn, uses service C to do the actual parsing of the proprietary format.
@@ -172,7 +173,7 @@ docker push {username}/{repository_name}
 - **docker run**: create a new container of an image, and execute the container. You can create N clones of the same image. The command is:  `docker run IMAGE_ID`  **and not**  `docker run CONTAINER_ID`
 - **docker start**: Launch a container previously stopped. For example, if you had stopped a database with the command  `docker stop CONTAINER_ID`, you can relaunch the same container with the command  `docker start CONTAINER_ID`, and the data and settings will be the same.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzYzOTQzOSwtMTA0MDQ2OTQ4LC0xOD
+eyJoaXN0b3J5IjpbMTE1NTE2NzczNSwtMTA0MDQ2OTQ4LC0xOD
 M4MzgxNDI5LDEyMjkxODk2ODAsLTk5MDM3NDA3NiwxMjcyNjE5
 NTY0LDM5Mjc2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2LDUyOT
 kxNDMyMCwtMTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5
