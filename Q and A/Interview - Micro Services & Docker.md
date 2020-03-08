@@ -106,6 +106,7 @@
 	def CreateUser(User user) {...}
 	```
 ### Protocol Buffers
+- extensible mechanism for serializing structured data and defined RPC as contract, think XML, but smaller, faster, and simpler.
 ```
 //example.proto
 syntax = "proto3";
@@ -238,9 +239,9 @@ docker push {username}/{repository_name}
 - **docker run**: create a new container of an image, and execute the container. You can create N clones of the same image. The command is:  `docker run IMAGE_ID`  **and not**  `docker run CONTAINER_ID`
 - **docker start**: Launch a container previously stopped. For example, if you had stopped a database with the command  `docker stop CONTAINER_ID`, you can relaunch the same container with the command  `docker start CONTAINER_ID`, and the data and settings will be the same.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzkzOTYxNTMsLTEwNDA0Njk0OCwtMT
-gzODM4MTQyOSwxMjI5MTg5NjgwLC05OTAzNzQwNzYsMTI3MjYx
-OTU2NCwzOTI3NjgyOSwxNDY5Nzg5NDcxLDYxODg2MjIxNiw1Mj
-k5MTQzMjAsLTEwMjcxODczMjIsNDMzNTM5MzQyLDgxNTMyNzk3
-OSwxMDU0MzkyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbLTU3MDU3NzEzMCwtMTA0MDQ2OTQ4LC0xOD
+M4MzgxNDI5LDEyMjkxODk2ODAsLTk5MDM3NDA3NiwxMjcyNjE5
+NTY0LDM5Mjc2ODI5LDE0Njk3ODk0NzEsNjE4ODYyMjE2LDUyOT
+kxNDMyMCwtMTAyNzE4NzMyMiw0MzM1MzkzNDIsODE1MzI3OTc5
+LDEwNTQzOTI0NTAsLTE1NTQ4MDgyMTVdfQ==
 -->
