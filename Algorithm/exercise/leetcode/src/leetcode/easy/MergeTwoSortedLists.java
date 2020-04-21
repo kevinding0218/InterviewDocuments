@@ -16,7 +16,7 @@ public class MergeTwoSortedLists {
    * 
    *
    */
-  public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+  public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
     // step 1 (important!): for List question,
     // declare a dummy/head of init value
     // declare a cur which is the copy of the init head node
