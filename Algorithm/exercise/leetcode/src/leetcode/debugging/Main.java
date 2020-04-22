@@ -4,7 +4,8 @@ import leetcode.medium.*;
 
 public class Main {
 	public static void main (String[] args) { 
-		LongestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("abcaabcdb");
+		// LongestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("abcaabcdb");
+		LongestPalindromicSubstring.longestPalindrome("cbbd");
 	}
 	
 }
