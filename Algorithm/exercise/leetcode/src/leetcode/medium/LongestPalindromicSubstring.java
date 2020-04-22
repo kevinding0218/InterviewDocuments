@@ -34,21 +34,22 @@ public class LongestPalindromicSubstring {
 			if (s == null || s.length() < 2) return s;
 			// step 1.5 (optional!): if s equals exactly same as its reverse, then s itself would be the longest palindromic
 			if (s == new StringBuilder(s).reverse().toString()) return s;
-			// step 2 (important!): consider all possible center from begining as current single character
-			// and between current character + 1
+			// step 2 (important!): consider all possible center from begining in two cases as 
+			// 1) as [current]
+			// 2) between [current]|[current+1]
 			// here ignore head and tail because we're working on case where string length from 3
 			for (int i = 1; i < s.length() - 1; i++) {
-				// all possible as current single character
+				// all possible as [current]
 				helper(s, i, i);
-				// all possible for middle as current character and its next character
+				// all possible for middle as between [current]|[current+1]
 				helper(s, i, i + 1);
 			}
 			return res;
 	}
 	private static void helper(String s, int left, int right) {
 		// step 3 (important!): expand from `middle` 
-		// which would be either itself (left == right)
-		// or the center in between [itself][itself+1]
+		// which would be either current (left == right)
+		// or the center in between [current]|[current+1]
 		while (left == right || (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right))) {
 				left--;
 				right++;
