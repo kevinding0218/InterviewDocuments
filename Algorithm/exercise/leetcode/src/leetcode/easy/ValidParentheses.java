@@ -7,7 +7,8 @@ import java.util.Stack;
  */
 public class ValidParentheses {
   /**
-   * LC 20. Valid Parentheses Given a string containing just the characters '(',
+   * LC 20. Valid Parentheses (Uber)
+   * Given a string containing just the characters '(', 
    * ')', '{', '}', '[' and ']', determine if the input string is valid.
    * 
    * The brackets must close in the correct order, "()" and "()[]{}" are all valid
