@@ -3,8 +3,13 @@ package leetcode.easy;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.OptionalInt;
 import java.util.Set;
+import java.util.stream.Collectors;
 
+/**
+ * Created by Ran on Apr 26, 2020.
+ */
 public class SwapForEqualSum {
     /**
      * Swap For Equal Sum (Vmware)
@@ -26,12 +31,12 @@ public class SwapForEqualSum {
      * @param target
      * @return
      */
-    public static int[] SwapForEqualSum(int[] arr1, int[] arr2) {
+    public static int[] swapForEqualSum(int[] arr1, int[] arr2) {
         int[] res = new int[]{};
         // step 1: error boundry check
         if ((arr1 == null && arr2 == null) ||
             (arr1 == null && arr2.length == 1) ||
-            (arr1.length == 1 && arr2 == null)
+            (arr1.length == 1 && arr2 == null))
         {
             return res;
         }
@@ -57,13 +62,12 @@ public class SwapForEqualSum {
          }
          
          int diff = totalSum / 2 - sum1;
-         Set<Integer> possibleMatchInSum2 = new HashSet<>();
-         possibleMatchInSum2 = Arrays.stream(arr1).map(ele -> ele - diff).Collectors.collect(Collectors.toSet());
+         Set<Integer> possibleMatchInSum2 = Arrays.stream(arr1).map(ele -> new Integer(ele - diff)).collect(Collectors.toSet());
          // possibleMatchInSum2: [2, 10, 6, 8]
          // we need to find if any of the number in possibleMatchInSum2 would existed in arr 2
          // if found, we just return the [found and found + diff] 
          // which would be the one from arr 1(because arr1 put value as element - diff)
-         Integer swapInArr2 = Arrays.stream(arr2).findFirst(el -> possibleMatchInSum2.contains(el));
-         return swapInArr2 == null ? res : new int[]{found + diff, found};
+         OptionalInt swapInArr2 = Arrays.stream(arr2).filter(el -> possibleMatchInSum2.contains(el)).findFirst();
+         return swapInArr2 == null ? res : new int[]{swapInArr2.getAsInt() + diff, swapInArr2.getAsInt()};
     }
 }
