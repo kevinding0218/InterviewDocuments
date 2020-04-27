@@ -1,8 +1,6 @@
 package leetcode.easy;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.OptionalInt;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -62,7 +60,7 @@ public class SwapForEqualSum {
          }
          
          int diff = totalSum / 2 - sum1;
-         Set<Integer> possibleMatchInSum2 = Arrays.stream(arr1).map(ele -> new Integer(ele - diff)).collect(Collectors.toSet());
+         Set<Integer> possibleMatchInSum2 = Arrays.stream(arr1).boxed().map(ele ->ele - diff).collect(Collectors.toSet());
          // possibleMatchInSum2: [2, 10, 6, 8]
          // we need to find if any of the number in possibleMatchInSum2 would existed in arr 2
          // if found, we just return the [found and found + diff] 
