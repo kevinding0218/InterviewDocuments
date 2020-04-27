@@ -27,7 +27,7 @@ public class SwapForEqualSum {
      * @return
      */
     public static int[] SwapForEqualSum(int[] arr1, int[] arr2) {
-        int[] res = new int[]{0, 0};
+        int[] res = new int[]{};
         // step 1: error boundry check
         if ((arr1 == null && arr2 == null) ||
             (arr1 == null && arr2.length == 1) ||
@@ -63,11 +63,7 @@ public class SwapForEqualSum {
          // we need to find if any of the number in possibleMatchInSum2 would existed in arr 2
          // if found, we just return the [found and found + diff] 
          // which would be the one from arr 1(because arr1 put value as element - diff)
-         for (Integer found : arr2) {
-             if (possibleMatchInSum2.contains(found)) {
-                 return new int[]{found + diff, found};
-             }
-         }
-         return res;
+         Integer swapInArr2 = Arrays.stream(arr2).findFirst(el -> possibleMatchInSum2.contains(el));
+         return swapInArr2 == null ? res : new int[]{found + diff, found};
     }
 }
