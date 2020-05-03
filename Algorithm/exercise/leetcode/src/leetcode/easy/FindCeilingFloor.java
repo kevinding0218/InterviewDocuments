@@ -52,6 +52,8 @@ public class FindCeilingFloor {
     * if root.val > k, 1. either root.val is the ceil OR
                         2. a smaller node with node.val >= k in the left subtree
                           then that node is the ceil
+    * if root == null, should return Integer.MIN_VALUE (or -1) because we would like to return to previous node
+    *
     * e.g:
     *      2              A
     *    1   6          B   C
@@ -65,10 +67,10 @@ public class FindCeilingFloor {
       - 3) findCeiling(D, 5)
            3 < 5 return findCeiling(null, 5)
       - 4) findCeiling(null, 5)
-           return -1 as result of findCeiling(null, 5)
-      - reverse back 3) so that in findCeiling(D, 5) return -1 as result of findCeiling(D, 5)
-      - reverse back 2) so that in findCeiling(C, 5) ceil = findCeiling(D, 5) = -1, so we return C = 6 as result of findCeiling(C, 5)
-      - reverse back 1) so that in findCeiling(A, 5) return C = 6 as result of findCeiling(A, 5)
+           return MIN as result of findCeiling(null, 5)
+      - reverse back 3) so that in findCeiling(D, 5), and we just return findFloor(null, 5) -> MIN
+      - reverse back 2) so that in findCeiling(C, 5), we know current ceil = result of findFloor(D, 5) = MIN, so we return (MIN >= 5 ? MIN : C) C = 6
+      - reverse back 1) so that in findCeiling(A, 5), and we just return findFloor(C, 5) -> 6
       - return 6
       @param root
     * @param k
@@ -77,7 +79,7 @@ public class FindCeilingFloor {
    private static int findCeiling(TreeNode root, int k) {
       // Base case
       if (root == null)
-        return -1;
+        return Integer.MIN_VALUE;
       
       // we found equal value
       if (root.getVal() == k)
@@ -104,6 +106,8 @@ public class FindCeilingFloor {
     * if root.val < k, 1. either root.val is the floor OR
                        2. a greater node with node.val <= k in the right subtree
                           then that node is the ceil
+    * if root == null, then return Max Value because we want to retrive back to previous node/step
+    *
     * e.g:
     *      2              A
     *    1   6          B   C
@@ -117,20 +121,20 @@ public class FindCeilingFloor {
       - 3) findFloor(D, 5)
            3 < 5 floor = findFloor(null, 5), return findFloor(null, 5) <= k ? floor : D
       - 4) findFloor(null, 5)
-           return -1 as result of findFloor(null, 5)
-      - reverse back 3) so that in findFloor(D, 5), floor = findFloor(null, 5) = -1, so we return -1 as result of findFloor(D, 5)
-      - reverse back 2) so that in findFloor(C, 5) return findFloor(D, 5) -> return -1 as result of findFloor(C, 5)
-      - reverse back 1) so that in findFloor(A, 5) floor = findFloor(C, 5) = -1  <= 5, so we return -1 as result of findFloor(A, 5)
-      - return -1
+           return MAX as result of findFloor(null, 5)
+      - reverse back 3) so that in findFloor(D, 5), we know current floor = result of findFloor(null, 5) = MAX, so we return (MAX <= 5 ? MAX : D) D = 3
+      - reverse back 2) so that in findFloor(C, 5), and we just return findFloor(D, 5) -> 3
+      - reverse back 1) so that in findFloor(A, 5), we know current floor = result of findFloor(C, 5) = 3, so we return (3 <= 5 ? 3 : A)
+      - return 3
     *
     * @param root
     * @param k
     * @return
     */
    private static int findFloor(TreeNode root, int k) {
-      // Base case
+      // Base case Important!, should return MAX here so that we could go back to previous node and compare
       if (root == null) {
-        return -1;
+        return Integer.MAX_VALUE;
       }
 
       // We found equal value
