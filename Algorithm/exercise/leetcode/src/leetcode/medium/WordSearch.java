@@ -50,11 +50,14 @@ public class WordSearch {
     // boundry check for word iterator
     if (start >= word.length()) return true;
     // boundry check for matrix iterator
-    if (i < 0 || i >= board.length || j < 0 || j >= board[0].length) return false;
+    if (i < 0 || i >= board.length || j < 0 || j >= board[0].length || board[i][j] == '#') return false;
     // when we find board[i][j] equals to start character of word, 
     // keep loop through its four direction for matching next character
     if (board[i][j] == word.charAt(start++)) {
         char c = board[i][j];
+        // when we find board[i][j] equals to start character of word, 
+        // we mark current board[i][j] of '#' so that next time when dfs meet at '#', 
+        // just return because it's already been visited and it's a loop
         board[i][j] = '#';
         // what if question only allows top -> bottom, left -> right?
         // remove exist(board, i - 1, j, word, start) || exist(board, i, j - 1, word, start)
