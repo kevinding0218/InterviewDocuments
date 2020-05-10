@@ -6,6 +6,7 @@ package leetcode.medium;
 public class UniquePathGrid {
     /**
      * LC. 62  Unique Paths (Microsoft)
+     * https://www.hackerearth.com/practice/notes/dynamic-programming-problems-involving-grids/
      * You 2 integers n and m representing an n by m grid, 
      * determine the number of ways you can get from 
      * the top-left to the bottom-right of the matrix y going only right or down.
@@ -25,6 +26,29 @@ public class UniquePathGrid {
 
      */
 
+    /**
+     * To reach a cell (i,j), one must first reach either the cell (i-1,j) or the cell (i,j-1) and then move one step down 
+     * or to the right respectively to reach cell (i,j). 
+     * 
+     * After convincing yourself that this problem indeed satisfies the optimal sub-structure and overlapping subproblems properties, 
+     * we try to formulate a bottom-up dynamic programming solution.
+     * 
+     * We first need to identify the states on which the solution will depend. To find the number of ways to reach to a position, 
+     * what are the variables on which my answer depends? 
+     * Here, we need the row and column number to uniquely identify a position.
+     * 
+     * let NumWays(i,j) be the number of ways to reach position (i,j). 
+     * As stated above, number of ways to reach cell (i,j) will be equal to the sum of number of ways of reaching (i-1,j) 
+     * and number of ways of reaching (i,j-1). 
+     * 
+     * Thus, we have our recurrence relation as :
+     * numWays(i,j) = numWays(i-1,j) + numWays(i,j-1)
+     * 
+     * The base case, as in the previous question, 
+     * are the topmost row and leftmost column. 
+     * Here, each cell in topmost row can be visited in only one way, i.e. from the left cell.
+     */
+    
      // time : O(n * m) space : (n * m)
     public int uniquePathsI(int m, int n) {
         int[][] res = new int[m][n];
@@ -44,28 +68,6 @@ public class UniquePathGrid {
 
     // time : O(n * m) space : O(n)
     public int uniquePathsII(int m, int n) {
-        /**
-         * To reach a cell (i,j), one must first reach either the cell (i-1,j) or the cell (i,j-1) and then move one step down 
-         * or to the right respectively to reach cell (i,j). 
-         * 
-         * After convincing yourself that this problem indeed satisfies the optimal sub-structure and overlapping subproblems properties, 
-         * we try to formulate a bottom-up dynamic programming solution.
-         * 
-         * We first need to identify the states on which the solution will depend. To find the number of ways to reach to a position, 
-         * what are the variables on which my answer depends? 
-         * Here, we need the row and column number to uniquely identify a position.
-         * 
-         * let NumWays(i,j) be the number of ways to reach position (i,j). 
-         * As stated above, number of ways to reach cell (i,j) will be equal to the sum of number of ways of reaching (i-1,j) 
-         * and number of ways of reaching (i,j-1). 
-         * 
-         * Thus, we have our recurrence relation as :
-         * numWays(i,j) = numWays(i-1,j) + numWays(i,j-1)
-         * 
-         * The base case, as in the previous question, 
-         * are the topmost row and leftmost column. 
-         * Here, each cell in topmost row can be visited in only one way, i.e. from the left cell.
-         */
         int[] res = new int[n];
         res[0] = 1;
         for (int i = 0; i < m; i++) {
