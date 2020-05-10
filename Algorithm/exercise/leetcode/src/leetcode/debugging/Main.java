@@ -13,8 +13,9 @@ public class Main {
 		// LongestPalindromicSubstring.longestPalindrome('cbbd');
 		// SortThreeUniqueNumbers.sortThreeUniqueNumbers(new int[]{2,0,2,1,1,0});
 		// FindCeilingFloor.findCeilingFloor(BuildBST(), 5);
-		List<String> result = WordSearchII.findWords(
-			buildBoard(), new String[]{"oath","pea","eat","rain"});
+		// List<String> result = WordSearchII.findWords(
+		// 	buildBoard(), new String[]{"oath","pea","eat","rain"});
+		int ways = UniquePathGrid.uniquePathsII(4,3);
 	}
 
 	private static char[][] buildBoard() {

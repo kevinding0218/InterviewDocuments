@@ -50,7 +50,36 @@ public class UniquePathGrid {
      */
     
      // time : O(n * m) space : (n * m)
-    public int uniquePathsI(int m, int n) {
+    public static int uniquePathsI(int m, int n) {/**
+        * m = 4, n = 3
+        * [
+        *  *   *   *   *
+        *  *   *   *   *
+        *  *   *   *   *
+        * ]
+        * -->
+        * [        i ->
+        *   0  0   1   2   3
+              ----------------
+        *   1 |1   1   1   1
+        *j  2 |1   *   *   *
+        *|  3 |1   *   *   *
+        * ]
+        *
+        * i = 1    j                                                    # of ways from (0,0) -> (i,j) = res[i][j]
+        *          1       res[1][1]=res[0][1]+res[1][0] = 1 + 1 = 2    (0,0) -> (1,1) = res[1][1] = 2
+        *          2       res[1][2]=res[0][2]+res[1][1] = 1 + 2 = 3    (0,0) -> (1,2) = res[1][2] = 3
+
+        * i = 2    j
+        *          1       res[2][1]=res[1][1]+res[2][0] = 2 + 1 = 3    (0,0) -> (2,1) = res[2][1] = 3
+        *          2       res[2][2]=res[1][2]+res[2][1] = 3 + 3 = 6    (0,0) -> (2,2) = res[2][2] = 6
+
+        * i = 3    j
+        *          1       res[3][1]=res[2][1]+res[3][0] = 3 + 1 = 4    (0,0) -> (3,1) = res[3][1] = 4
+        *          2       res[3][2]=res[2][2]+res[3][1] = 6 + 4 = 10   (0,0) -> (3,2) = res[3][2] = 10
+        *
+        * return res[4-1][3-1]=res[3][2]=10
+        */
         int[][] res = new int[m][n];
         for (int i = 0; i < m; i++) {
             res[i][0] = 1;
@@ -67,7 +96,39 @@ public class UniquePathGrid {
     }
 
     // time : O(n * m) space : O(n)
-    public int uniquePathsII(int m, int n) {
+    public static int uniquePathsII(int m, int n) {
+        /**
+         * m = 4, n = 3
+         * [
+         *  *   *   *   *
+         *  *   *   *   *
+         *  *   *   *   *
+         * ]
+         * -->
+        * [    i ->
+        *      0   1   2   3
+              ----------------
+        *   0 |*   *   *   *
+        *j  1 |*   *   *   *
+        *|  2 |*   *   *   *
+        * ]
+         * i = 0    j                                               res = int[3] = [1,0,0]  # of ways from (0,0) -> (i,j) = res[j]
+         *          1       res[1]=res[1]+res[0] = 0 + 1 = 1        [1,1,0]                 (0,0) -> (0,1) = res[0] = 1
+         *          2       res[2]=res[2]+res[1] = 0 + 1 = 1        [1,1,1]                 (0,0) -> (0,2) = res[1] = 1
+         * 
+         * i = 1    j
+         *          1       res[1]=res[1]+res[0] = 1 + 1 = 2        [1,2,1]                 (0,0) -> (1,1) = res[1] = 2
+         *          2       res[2]=res[2]+res[1] = 1 + 2 = 3        [1,2,3]                 (0,0) -> (1,2) = res[2] = 3
+         * 
+         * i = 2    j
+         *          1       res[1]=res[1]+res[0] = 2 + 1 = 3        [1,3,3]                 (0,0) -> (2,1) = res[1] = 3
+         *          2       res[2]=res[2]+res[1] = 3 + 3 = 6        [1,3,6]                 (0,0) -> (2,2) = res[2] = 6
+         * 
+         * i = 3    j
+         *          1       res[1]=res[1]+res[0] = 3 + 1 = 4        [1,4,6]                 (0,0) -> (3,1) = res[1] = 4
+         *          2       res[2]=res[2]+res[1] = 6 + 4 = 10       [1,4,10]                (0,0) -> (3,2) = res[2] = 10
+         * return res[3-1]=res[2] = 10
+         */
         int[] res = new int[n];
         res[0] = 1;
         for (int i = 0; i < m; i++) {
@@ -87,7 +148,7 @@ public class UniquePathGrid {
      * @param n
      * @return
      */
-    public int uniquePathsIII(int m, int n) {
+    public static int uniquePathsIII(int m, int n) {
         int count = m + n - 2;
         int k = m - 1;
         double res = 1;
