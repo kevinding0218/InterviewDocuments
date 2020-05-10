@@ -1,16 +1,29 @@
 package leetcode.debugging;
 
+import java.util.List;
+
 import leetcode.easy.FindCeilingFloor;
+import leetcode.hard.WordSearchII;
 import leetcode.medium.*;
 import leetcode.utils.TreeNode;
 
 public class Main {
 	public static void main (String[] args) { 
-		// LongestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("abcaabcdb");
-		// LongestPalindromicSubstring.longestPalindrome("cbbd");
+		// LongestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring('abcaabcdb');
+		// LongestPalindromicSubstring.longestPalindrome('cbbd');
 		// SortThreeUniqueNumbers.sortThreeUniqueNumbers(new int[]{2,0,2,1,1,0});
-		var root = BuildBST();
-		FindCeilingFloor.findCeilingFloor(root, 5);
+		// FindCeilingFloor.findCeilingFloor(BuildBST(), 5);
+		List<String> result = WordSearchII.findWords(
+			buildBoard(), new String[]{"oath","pea","eat","rain"});
+	}
+
+	private static char[][] buildBoard() {
+		return new char[][]{
+			new char[]{'o','a','a','n'},
+			new char[]{'e','t','a','e'},
+			new char[]{'i','h','k','r'},
+			new char[]{'i','f','l','v'}
+		};
 	}
 
 	private static TreeNode BuildBST() {
