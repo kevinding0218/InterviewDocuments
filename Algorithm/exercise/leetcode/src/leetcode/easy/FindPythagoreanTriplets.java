@@ -14,7 +14,7 @@ public class FindPythagoreanTriplets {
     Example:
     Input: [3, 5, 12, 5, 13]
     Output: True
-    Here, 52 + 122 = 132.
+    Here, 5^ + 12^ = 13^
 
    * @param nums
    * @return
@@ -51,8 +51,6 @@ public class FindPythagoreanTriplets {
     } 
 
     // If we reach here, then no triplet found 
-    return false; 
-
     return false;
   }
 }
