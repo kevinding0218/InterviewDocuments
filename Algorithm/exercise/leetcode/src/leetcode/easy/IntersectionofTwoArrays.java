@@ -55,6 +55,7 @@ public class IntersectionofTwoArrays {
         }
         int k = 0;
         int[] res = new int[set.size()];
+        // Convert map into result array
         for (Integer num : set) {
             res[k++] = num;
         }
@@ -80,6 +81,7 @@ public class IntersectionofTwoArrays {
         }
         int k = 0;
         int[] res = new int[ret.size()];
+        // Convert map into result array
         for (Integer num : ret) {
             res[k++] = num;
         }
