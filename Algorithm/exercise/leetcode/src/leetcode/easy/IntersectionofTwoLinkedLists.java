@@ -28,7 +28,7 @@ public class IntersectionofTwoLinkedLists {
 
     /**
      *
-    Two pinters:
+    Two pointers keep loop until intersection:
      - Maintain two pointers pA and pB initialized at the head of A and B, respectively. 
        Then let them both traverse through the lists, one node at a time.
      - When pA reaches the end of a list, then redirect it to the head of B (yes, B, that's right.); 
@@ -75,7 +75,7 @@ public class IntersectionofTwoLinkedLists {
 
     /**
      * For example, the following two linked lists:
-
+     - Length difference and find starting point of intersection
      - Store the size of ListA and ListB as len1 and len2. 
      - Then I reset the pointers to headA and headB and find the difference between len1 and len2, 
        and then let the pointer of the longer list proceed by the difference between len1 and len2. 
