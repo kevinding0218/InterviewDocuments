@@ -38,7 +38,7 @@ public class IntersectionofTwoArraysII {
      */
 
     // HashMap, time : O(n), space : O(n);
-    public static int[] intersect(int[] nums1, int[] nums2) {
+    public static int[] intersectI(int[] nums1, int[] nums2) {
         HashMap<Integer, Integer> map = new HashMap<>();
         List<Integer> ret = new ArrayList<>();
         // Store number and its count of appearance of nums1 into map
@@ -70,7 +70,7 @@ public class IntersectionofTwoArraysII {
     }
 
      // Arrays.sort time : O(nlogn) space : O(n);
-    public static int[] intersect2(int[] nums1, int[] nums2) {
+    public static int[] intersectII(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
         Arrays.sort(nums2);
         /**
