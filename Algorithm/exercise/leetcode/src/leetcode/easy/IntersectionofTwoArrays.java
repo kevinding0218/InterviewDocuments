@@ -24,6 +24,10 @@ public class IntersectionofTwoArrays {
 
         Each element in the result must be unique.
         The result can be in any order.
+
+        What if the given array is already sorted? How would you optimize your algorithm? // Check 2nd solution
+        What if nums1's size is small compared to nums2's size? Which algorithm is better? // HashMap
+        What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
      */
 
     // Arrays.sort time : O(nlogn) space : O(n);
