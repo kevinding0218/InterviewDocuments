@@ -3,7 +3,7 @@ package leetcode.medium;
 import leetcode.utils.ListNode;
 
 /**
- * Created by Ran on May 14, 2020.
+ * Created by Ran on May 13, 2020.
  */
 public class RemoveNthFromEndLinkedList {
     /**
