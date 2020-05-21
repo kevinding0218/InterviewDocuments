@@ -32,7 +32,7 @@ public class MaximumProductofThreeNumbers {
     Arrays.sort(nums);
     return Math.max(nums[nums.length - 1] * nums[nums.length - 2] * nums[nums.length - 3], 
       nums[0] * nums[1] * nums[nums.length - 1]);
-  }
+   }
 
    // time : O(n) space : O(1)
    public int maximumProduct2(int[] nums) {
@@ -60,5 +60,5 @@ public class MaximumProductofThreeNumbers {
         }
     }
     return Math.max(min1 * min2 * max1, max1 * max2 * max3);
-}
+   }
 }
