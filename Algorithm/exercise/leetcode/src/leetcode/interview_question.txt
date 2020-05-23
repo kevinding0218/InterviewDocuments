@@ -1,0 +1,54 @@
+Microsoft
+5/18
+edu
+281
+atlanta
+839
+150
+54
+merge 2 sorted array
+fix BST
+138
+545 closewise print BST left edge, leave and right edge
+tic tac toe check winner m*n
+132 sliding window
+456
+design video website
+442
+
+
+Facebook
+29+
+
+Amazon
+200
+topological sortedtictactac
+car bid system
+link -> stack
+273
+110
+endian transform
+
+Vmware
+merge two strings AAA, BBBBBB -> ABABABBBB
+array check index that sum(left of index) = sum(right of index), not include index
+linked list, delete all nodes val = value
+structure memory range
+multithreading -> no lock, incremenet global counter 10000, max or min, race condition
+287
+57
+7 threads, 2 threds call write to increment global counter, 5 threads call read to output, add lock and condition variable to make sure concurrency
+151
+126
+127
+OOD airport
+54
+146 best first cache
+
+Douyin
+interleaving of two arrays [1,2,3,3,4,4] and [8,0,3,4,4,5] -> [3,4,4]
+78
+7
+find max increment subarray inside array
+
+
