@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class SpiralOrderMatrix {
   /**
-   * LC. 54 Spiral Matrix (Amazon)
+   * LC. 54 Spiral Matrix (Amazon, Microsoft) **
    * 
    * Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
 
