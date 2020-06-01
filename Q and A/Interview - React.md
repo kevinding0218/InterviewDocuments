@@ -158,7 +158,7 @@ refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shoul
 2. React.PureComponent
 - you can use  `React.PureComponent`  instead of writing your own  `shouldComponentUpdate`. 
 - It only does a shallow comparison, so you can’t use it if the props or state may have been mutated in a way that a shallow comparison would miss.
-- This can be a problem with more complex data structures. For example, let’s say you want a  `ListOfWords`  component to render a comma-separated list of words, with a parent  `WordAdder`  component that lets you click a button to add a word to the list. This code does  _not_  work correctly:
+- This can be a problem with more complex data structures. For example,
 ```
 class ListOfWords extends React.PureComponent {
   render() {
@@ -235,7 +235,7 @@ function updateColorMap(colormap) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OT
-U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
-LDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTE5NzI1MjExODgsMjcxMTM5OTM1LC0xMj
+Y2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0
+OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
