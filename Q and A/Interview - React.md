@@ -282,11 +282,11 @@ class ErrorBoundary extends React.Component {
 ### Best Lifecycle Method for making API calls
 - componentDidMount: to make sure your component is finished rendering which means your DOM is ready
 ### React Pattern
-- context-api pattern: when you want to pass props into a deeply nested component, context API allows you to access this props 
+- context-api pattern: Context lets us pass a value deep into the component tree without explicitly threading it through every component.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzA5OTgyMTcsLTEyODIwMjg2MDAsLT
-E5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2
-MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OS
-wxNTM3NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTIwODc5MTAyNzYsLTIxMzA5OTgyMTcsLT
+EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
+MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
+csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
