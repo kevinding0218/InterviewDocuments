@@ -192,12 +192,15 @@ class WordAdder extends React.Component {
   }
 }
 ```
+- The problem is that `PureComponent` will do a simple comparison between the old and new values of `this.props.words`. Since this code mutates the `words` array in the `handleClick` method of `WordAdder`, the old and new values of `this.props.words` will compare as equal, even though the actual words in the array have changed. The `ListOfWords` will thus not update even though it has new words that should be rendered.
+- How to fix this ? See below
 4. React.memo
 
 
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MDc5ODI0NiwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbLTg0NjQ0MjM4MiwtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
