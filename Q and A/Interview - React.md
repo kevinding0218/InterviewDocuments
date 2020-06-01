@@ -155,7 +155,7 @@ componentDidUpdate(prevProps) {
 ### How to prevent components from re-rendering
 refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action)
 1. shouldComponentUpdate(nextProps, nextState)
-2. React.PureComponent
+2. [`React.PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent)
 - you can use  `React.PureComponent`  instead of writing your own  `shouldComponentUpdate`. 
 - It only does a shallow comparison, so you can’t use it if the props or state may have been mutated in a way that a shallow comparison would miss.
 - This can be a problem with more complex data structures. For example,
@@ -195,8 +195,8 @@ class WordAdder extends React.Component {
 - How to fix this ? See below
 - Only extend `PureComponent` when you expect to have simple props and state, or use [`forceUpdate()`](https://reactjs.org/docs/react-component.html#forceupdate) when you know deep data structures have changed. Or, consider using [immutable objects](https://facebook.github.io/immutable-js/) to facilitate fast comparisons of nested data.
 3. React.memo
-- Works for functional component or presentational component
-- 
+- `React.memo` is a [higher order component](https://reactjs.org/docs/higher-order-components.html). It’s similar to [`React.PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent) but for function components instead of classes.
+- `React.memo` only checks for prop changes. If your function component wrapped in `React.memo` has a [`useState`](https://reactjs.org/docs/hooks-state.html) or [`useContext`](https://reactjs.org/docs/hooks-reference.html#usecontext) Hook in its implementation, it will still rerender when state or context change.
 ### The Power Of Immutating Data
 1. The simplest way to avoid this problem is to avoid mutating values that you are using as props or state. For example, the  `handleClick`  method above could be rewritten using  `concat`  as:
 ```
@@ -237,7 +237,7 @@ function updateColorMap(colormap) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MDExODg0OSwyNzExMzk5MzUsLTEyNj
-YwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5
-LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTE3MDE1OTM4MjcsMjcxMTM5OTM1LC0xMj
+Y2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0
+OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
