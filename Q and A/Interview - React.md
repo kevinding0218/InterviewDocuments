@@ -68,7 +68,7 @@ const someFunction = () => { setSomeState('new state') }
 1. constructor
 	- only place to set initial state by using `this.state = {};`
 	- after this you have to use this.setState to change state
-2. static getDerivedStateFromProps
+2. static getDerivedStateFromProps(nextProps, prevState)
 - this method is actually static
 - it runs right after constructor
 - it has role in initial render and also re-render face
@@ -80,7 +80,7 @@ const someFunction = () => { setSomeState('new state') }
 4. componentDidMount
 - notify that `DOM` is ready now, e.g: if you're using a third-party chart component, you need to have the DOM ready before component uses it
 #### re-render
-1. static getDerivedStateFromProps
+1. static getDerivedStateFromProps(nextProps, prevState)
 - does the same thing as intial render
 2. shouldComponentUpdate
 - make a decision if this component really needs to be updated or not
@@ -91,7 +91,7 @@ const someFunction = () => { setSomeState('new state') }
 - This method can be used when there is delay between if you render a component and in its next phase, if user does something in between like scoll or change size of the window, then you need to remember where the scroll was before so you can do something after the render.
 6. componentDidUpdate
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMDU0MzAzNiwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbLTIzNzc5NzYyOCwtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
