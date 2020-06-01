@@ -66,12 +66,17 @@ const someFunction = () => { setSomeState('new state') }
 - Class component
 1. constructor
 	- only place to set initial state by using `this.state = {};`
+	- after this you have to use this.setState to change state
 2. static getDerivedStateFromProps
-3. render
-4. componentDidMount
-5. 
+- this method is actually static
+- it runs right after constructor
+- it has role in initial render and also re-render face
+- jo
+4. render
+5. componentDidMount
+6. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MDkzMTAwNSwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbLTQ3NzY2OTk3NCwtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
