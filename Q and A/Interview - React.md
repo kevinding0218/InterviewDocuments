@@ -253,13 +253,13 @@ function updateColorMap(colormap) {
 - E.g
 ```
 <ErrorBoundaryComponent>
-    <M
+    <MyComp />
 </ErrorBoundaryComponent>
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTE3OTEwLC0xNDc1NDEzMzk5LDI3MT
+eyJoaXN0b3J5IjpbODQ3NjI3MzYzLC0xNDc1NDEzMzk5LDI3MT
 EzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3
 LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
 -->
