@@ -197,6 +197,21 @@ class WordAdder extends React.Component {
 3. React.memo
 - `React.memo` is a [higher order component](https://reactjs.org/docs/higher-order-components.html). It’s similar to [`React.PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent) but for function components instead of classes.
 - `React.memo` only checks for prop changes. If your function component wrapped in `React.memo` has a [`useState`](https://reactjs.org/docs/hooks-state.html) or [`useContext`](https://reactjs.org/docs/hooks-reference.html#usecontext) Hook in its implementation, it will still rerender when state or context change.
+- Unlike the [`shouldComponentUpdate()`](https://reactjs.org/docs/react-component.html#shouldcomponentupdate) method on class components, the `areEqual` function returns `true` if the props are equal and `false` if the props are not equal. This is the inverse from `shouldComponentUpdate`.
+- E.g
+```
+function MyComponent(props) {
+  /* render using props */
+}
+function areEqual(prevProps, nextProps) {
+  /*
+  return true if passing nextProps to render would return
+  the same result as passing prevProps to render,
+  otherwise return false
+  */
+}
+export default React.memo(MyComponent, areEqual);
+```
 ### The Power Of Immutating Data
 1. The simplest way to avoid this problem is to avoid mutating values that you are using as props or state. For example, the  `handleClick`  method above could be rewritten using  `concat`  as:
 ```
@@ -237,7 +252,7 @@ function updateColorMap(colormap) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDE1OTM4MjcsMjcxMTM5OTM1LC0xMj
+eyJoaXN0b3J5IjpbLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMj
 Y2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0
 OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
