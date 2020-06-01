@@ -248,11 +248,18 @@ function updateColorMap(colormap) {
   return {...colormap, right: 'blue'};
 }
 ```
-
+### Explain Error Boundaries
+- Create an ErrorBoundaryComponent and wrap with your component
+- E.g
+```
+<ErrorBoundaryComponent>
+    <M
+</ErrorBoundaryComponent>
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMj
-Y2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0
-OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTEyMTE3OTEwLC0xNDc1NDEzMzk5LDI3MT
+EzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3
+LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
 -->
