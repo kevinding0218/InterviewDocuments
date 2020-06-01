@@ -104,14 +104,14 @@ If you just want to compute some derived data, either:
 #### class method vs class property
 `render()` is a class method, but any function declared is actually a class property, 
 #### arrow function
-- Allows you to access class property via `this` keyword inside arrow function.
+- Allows you to access class property via `this` keyword inside arrow function, arrow function doesn't have its own `this`, it automatically takes `this` from its immediate parent which is `class` here
 - E.g, In React you could have onClick handles which is not actually a class method but a class property, if you have a function inside a function where you have the `this` keyword, `this` key word belongs to inner function but not the class outside, arrow function doesn't have its own `this`, it automatically takes `this` from its immediate parent which is `class` here
 - Alternative way to bind this method back to class inside the constructor 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NzgzMjk0NSwtMTI2NjAyMzA3MCw3NT
-k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
-MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbNzU1NTUzMTYwLC0xMjY2MDIzMDcwLDc1OT
+U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
+LDY1NDM2OTIxNl19
 -->
