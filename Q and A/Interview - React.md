@@ -74,6 +74,10 @@ const someFunction = () => { setSomeState('new state') }
 - it has role in initial render and also re-render face
 - it tries to get the derived state from the change in props that it would return the `newState` if there is change in state or `null` if there is no change in state
 - Why it's a static method? static method will prevent user to access `this` keyword directly inside the method, because static method is actually class method, not instance method
+- in the vast majority of cases  **you don't need  `getDerivedStateFromProps`  at all**.
+If you just want to compute some derived data, either:
+1.  Do it right inside  `render`
+2.  Or, if re-calculating it is expensive, use a memoization helper like  `memoize-one`.
 3. render
 - only method that's mandatory to have
 - you cannot set state here, otherwise you would go an infinite loop
@@ -91,7 +95,7 @@ const someFunction = () => { setSomeState('new state') }
 - This method can be used when there is delay between if you render a component and in its next phase, if user does something in between like scoll or change size of the window, then you need to remember where the scroll was before so you can do something after the render.
 6. componentDidUpdate
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNzc5NzYyOCwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbLTMxOTMzMDg5MywtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
