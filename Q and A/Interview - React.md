@@ -309,10 +309,11 @@ class ThemedButton extends React.Component {
     return <Button theme={this.context} />;  }
 }
 ```
-- **render props**: 
+- **render props**: using children as functions, inside the class component you have other components as functions
+- pre
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDUyODQ4MDUsLTIxMzA5OTgyMTcsLT
-EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
-MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
-csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbMTk5NTU0MTY5OSwtMjEzMDk5ODIxNywtMT
+I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
+Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
+wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
 -->
