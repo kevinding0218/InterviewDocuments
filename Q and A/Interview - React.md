@@ -109,6 +109,28 @@ shouldComponentUpdate(nextProps, nextState) {
 4. getSnapshotBeforeUpdate(prevProps, prevState)
 - pre commit phase, render doesn't mean it has rendered, `mount` really happens after this method (replace for componentWillUpdate)
 - This method can be used when there is delay between if you render a component and in its next phase, if user does something in between like scoll or change size of the window, then you need to remember where the scroll was before so you can do something after the render.
+- E.g
+```
+getSnapshotBeforeUpdate(prevProps, prevState) {
+    // Are we adding new items to the list?
+    // Capture the scroll position so we can adjust scroll later.
+    if (prevProps.list.length < this.props.list.length) {
+      const list = this.listRef.current;
+      return list.scrollHeight - list.scrollTop;
+    }
+    return null;
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    // If we have a snapshot value, we've just added new items.
+    // Adjust scroll so these new items don't push the old ones out of view.
+    // (snapshot here is the value returned from getSnapshotBeforeUpdate)
+    if (snapshot !== null) {
+      const list = this.listRef.current;
+      list.scrollTop = list.scrollHeight - snapshot;
+    }
+  }
+```
 5. componentDidUpdate(prevProps, prevState, snapshot)
 - similar as componentDidMount
 - E.g
@@ -137,7 +159,7 @@ refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shoul
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDQyOTgxODgsLTEyNjYwMjMwNzAsNz
-U5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5
-NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbMjUwNTUyNDA2LC0xMjY2MDIzMDcwLDc1OT
+U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
+LDY1NDM2OTIxNl19
 -->
