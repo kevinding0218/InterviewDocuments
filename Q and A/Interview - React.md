@@ -195,12 +195,47 @@ class WordAdder extends React.Component {
 - The problem is that `PureComponent` will do a simple comparison between the old and new values of `this.props.words`. Since this code mutates the `words` array in the `handleClick` method of `WordAdder`, the old and new values of `this.props.words` will compare as equal, even though the actual words in the array have changed. The `ListOfWords` will thus not update even though it has new words that should be rendered.
 - How to fix this ? See below
 4. React.memo
-
+### The Power Of Immutating Data
+1. The simplest way to avoid this problem is to avoid mutating values that you are using as props or state. For example, the  `handleClick`  method above could be rewritten using  `concat`  as:
+```
+handleClick() {
+  this.setState(state => ({
+    words: state.words.concat(['marklar'])
+  }));
+}
+```
+2. ES6 supports a  [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)  for arrays which can make this easier. If you’re using Create React App, this syntax is available by default.
+```
+handleClick() {
+  this.setState(state => ({
+    words: [...state.words, 'marklar'],
+  }));
+};
+```
+3. You can also rewrite code that mutates objects to avoid mutation, in a similar way. For example, let’s say we have an object named  `colormap`  and we want to write a function that changes  `colormap.right`  to be  `'blue'`. We could write:
+```
+function updateColorMap(colormap) {
+  colormap.right = 'blue';
+}
+```
+4. To write this without mutating the original object, we can use  [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)  method:
+```
+function updateColorMap(colormap) {
+  return Object.assign({}, colormap, {right: 'blue'});
+}
+```
+`updateColorMap`  now returns a new object, rather than mutating the old one.  `Object.assign`  is in ES6 and requires a polyfill.
+5. There is a JavaScript proposal to add  [object spread properties](https://github.com/sebmarkbage/ecmascript-rest-spread)  to make it easier to update objects without mutation as well:
+```
+function updateColorMap(colormap) {
+  return {...colormap, right: 'blue'};
+}
+```
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NjQ0MjM4MiwtMTI2NjAyMzA3MCw3NT
-k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
-MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OT
+U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
+LDY1NDM2OTIxNl19
 -->
