@@ -279,12 +279,13 @@ class ErrorBoundary extends React.Component {
 	-   Asynchronous code (e.g.  `setTimeout`  or  `requestAnimationFrame`  callbacks)
 	-   Server side rendering
 	-   Errors thrown in the error boundary itself (rather than its children)
-
+### Best Lifecycle Method for making API calls
+- componentDidMount: to make sure your DOM is ready
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLT
-E0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4
-MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLD
-Y1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbODE2OTQ3ODg1LC0xMjgyMDI4NjAwLC0xOT
+A3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAy
+MzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMT
+UzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
 -->
