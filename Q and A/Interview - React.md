@@ -155,11 +155,14 @@ componentDidUpdate(prevProps) {
 ### How to prevent components from re-rendering
 refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action)
 1. shouldComponentUpdate(nextProps, nextState)
+2. React.PureComponent
+- 
+4. React.memo
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUwNTUyNDA2LC0xMjY2MDIzMDcwLDc1OT
-U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
-LDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbNzc3MzMyNDYsLTEyNjYwMjMwNzAsNzU5NT
+gwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEs
+NjU0MzY5MjE2XX0=
 -->
