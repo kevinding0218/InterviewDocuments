@@ -92,6 +92,18 @@ If you just want to compute some derived data, either:
 2. shouldComponentUpdate(nextProps, nextState)
 - make a decision if this component really needs to be updated or not by returning `true` or `false`
 - e.g, whenever setState will trigger re-render, but it could be setting the same state again, there might not be need to re-render
+- E.g
+```
+shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.color !== nextProps.color) {
+      return true;
+    }
+    if (this.state.count !== nextState.count) {
+      return true;
+    }
+    return false;
+  }
+```
 3. render
 4. getSnapshotBeforeUpdate
 - pre commit phase, render doesn't mean it has rendered, `mount` really happens after this method (replace for componentWillUpdate)
@@ -108,12 +120,13 @@ If you just want to compute some derived data, either:
 - E.g, In React you could have onClick handles which is not actually a class method but a class property, if you have a function inside a function where you have the `this` keyword, `this` key word belongs to inner function but not the class outside, arrow function doesn't have its own `this`, it automatically takes `this` from its immediate parent which is `class` here
 - Alternative way to bind this method back to class inside the constructor 
 ### How to prevent components from re-rendering
+refer: [https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action)
 1. shouldComponentUpdate(nextProps, nextState)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MjM1ODIxNCwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbLTI5NjgyNzMyMSwtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
