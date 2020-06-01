@@ -62,7 +62,8 @@ class  NewPost  extends  Component  {
 const [someState, setSomeState] = useState('anything')
 const someFunction = () => { setSomeState('new state') }
 ```
-### Lifecycle Methods render
+### Lifecycle Methods 
+#### render
 - Class component
 1. constructor
 	- only place to set initial state by using `this.state = {};`
@@ -77,9 +78,11 @@ const someFunction = () => { setSomeState('new state') }
 - only method that's mandatory to have
 - you cannot set state here, otherwise you would go an infinite loop
 4. componentDidMount
-- notify that `DOM` is ready now, 
+- notify that `DOM` is ready now, e.g: if you're using a third-party chart component, you need to have the DOM ready before component uses it
+#### re-render
+sta
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NTU1ODUxMCwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbMTA4MjQwMDIyNSwtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
