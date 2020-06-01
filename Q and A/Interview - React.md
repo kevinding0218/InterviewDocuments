@@ -80,12 +80,12 @@ const someFunction = () => { setSomeState('new state') }
 - static method will prevent user to access `this` keyword directly inside the method, because static method is actually class method, not instance method
 - in the vast majority of cases  **you don't need  `getDerivedStateFromProps`  at all**.
 If you just want to compute some derived data, either:
-3.  Do it right inside  `render`
-4.  Or, if re-calculating it is expensive, use a memoization helper like  `memoize-one`.
-6. render
+	- Do it right inside  `render`
+	-  Or, if re-calculating it is expensive, use a memoization helper like  `memoize-one`.
+3. render
 - only method that's mandatory to have
 - you cannot set state here, otherwise you would go an infinite loop
-7. componentDidMount
+4. componentDidMount
 - notify that `DOM` is ready now, e.g: if you're using a third-party chart component, you need to have the DOM ready before component uses it
 #### re-render
 1. static getDerivedStateFromProps(nextProps, prevState)
@@ -106,7 +106,7 @@ shouldComponentUpdate(nextProps, nextState) {
   }
 ```
 3. render
-4. getSnapshotBeforeUpdate
+4. getSnapshotBeforeUpdate(prevProps, prevState)
 - pre commit phase, render doesn't mean it has rendered, `mount` really happens after this method (replace for componentWillUpdate)
 - This method can be used when there is delay between if you render a component and in its next phase, if user does something in between like scoll or change size of the window, then you need to remember where the scroll was before so you can do something after the render.
 5. componentDidUpdate(prevProps, prevState, snapshot)
@@ -137,7 +137,7 @@ refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shoul
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NDczMTM1MywtMTI2NjAyMzA3MCw3NT
-k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
-MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbLTExMDQyOTgxODgsLTEyNjYwMjMwNzAsNz
+U5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5
+NDEsNjU0MzY5MjE2XX0=
 -->
