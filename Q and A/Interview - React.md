@@ -315,9 +315,11 @@ class ThemedButton extends React.Component {
 - The decision has to be made based on the project itself, e.g if your project needs to be completed within 6 months while there might be a huge change of version in any front-end framework
 - Angular is easy to configure but hard to use, they come as a huge package 
 - Use of Javascript 
+### What is css-in-js pattern
+- “CSS-in-JS” refers to a pattern where CSS is composed using JavaScript instead of defined in external files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTIxMDI4NDIsLTIxMzA5OTgyMTcsLT
-EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
-MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
-csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbMTQ1NzE0NzM1NiwtMjEzMDk5ODIxNywtMT
+I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
+Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
+wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
 -->
