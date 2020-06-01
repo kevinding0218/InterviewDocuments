@@ -120,13 +120,13 @@ shouldComponentUpdate(nextProps, nextState) {
 - E.g, In React you could have onClick handles which is not actually a class method but a class property, if you have a function inside a function where you have the `this` keyword, `this` key word belongs to inner function but not the class outside, arrow function doesn't have its own `this`, it automatically takes `this` from its immediate parent which is `class` here
 - Alternative way to bind this method back to class inside the constructor 
 ### How to prevent components from re-rendering
-refer: [https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action)
+refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action)
 1. shouldComponentUpdate(nextProps, nextState)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NjgyNzMyMSwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbLTU0NDM3NDc1MSwtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
