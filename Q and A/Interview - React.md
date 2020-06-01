@@ -71,16 +71,17 @@ const someFunction = () => { setSomeState('new state') }
 **When you want to access  `this.props`  in constructor.**, Note that passing or not passing `props` to `super` has **no effect** on later uses of `this.props` outside `constructor`. That is `render`, `shouldComponentUpdate`, or event handlers **always** have access to it.
 	- only place to set initial state by using `this.state = {};`
 	- after this you have to use this.setState to change state
-3. static getDerivedStateFromProps(nextProps, prevState)
+2. static getDerivedStateFromProps(nextProps, prevState) - (rarely used) 
 - this method is actually static
 - it runs right after constructor
 - it has role in initial render and also re-render face
 - it tries to get the derived state from the change in props that it would return the `newState` if there is change in state or `null` if there is no change in state
-- Why it's a static method? static method will prevent user to access `this` keyword directly inside the method, because static method is actually class method, not instance method
+##### Why it's a static method? 
+- static method will prevent user to access `this` keyword directly inside the method, because static method is actually class method, not instance method
 - in the vast majority of cases  **you don't need  `getDerivedStateFromProps`  at all**.
 If you just want to compute some derived data, either:
-4.  Do it right inside  `render`
-5.  Or, if re-calculating it is expensive, use a memoization helper like  `memoize-one`.
+3.  Do it right inside  `render`
+4.  Or, if re-calculating it is expensive, use a memoization helper like  `memoize-one`.
 6. render
 - only method that's mandatory to have
 - you cannot set state here, otherwise you would go an infinite loop
@@ -88,7 +89,7 @@ If you just want to compute some derived data, either:
 - notify that `DOM` is ready now, e.g: if you're using a third-party chart component, you need to have the DOM ready before component uses it
 #### re-render
 1. static getDerivedStateFromProps(nextProps, prevState)
-- does the same thing as intial render
+- (rarely used) does the same thing as intial render
 2. shouldComponentUpdate(nextProps, nextState)
 - make a decision if this component really needs to be updated or not by returning `true` or `false`
 - e.g, whenever setState will trigger re-render, but it could be setting the same state again, there might not be need to re-render
@@ -136,7 +137,7 @@ refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shoul
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0OTg3NDgwMCwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbMTA3NDczMTM1MywtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
