@@ -100,9 +100,13 @@ If you just want to compute some derived data, either:
 - similar as componentDidMount
 6. componentWillUnmout
 - do something before it unmount
+### Why do we use arrow function in react?
+In React you could have onClick handles which is not actually a class method but a class property, 
+#### class method vs class property
+`render()` is a class method, 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzQ5MzI4OTIsLTEyNjYwMjMwNzAsNz
-U5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5
-NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTk3Njg2MjE3NSwtMTI2NjAyMzA3MCw3NT
+k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
+MSw2NTQzNjkyMTZdfQ==
 -->
