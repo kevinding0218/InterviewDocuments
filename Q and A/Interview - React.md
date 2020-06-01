@@ -101,12 +101,15 @@ If you just want to compute some derived data, either:
 6. componentWillUnmout
 - do something before it unmount
 ### Why do we use arrow function in react?
-In React you could have onClick handles which is not actually a class method but a class property, 
 #### class method vs class property
-`render()` is a class method, 
+`render()` is a class method, but any function declared is actually a class property, 
+#### arrow function
+In React you could have onClick handles which is not actually a class method but a class property, 
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3Njg2MjE3NSwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbMTU3NzA1MzY0OCwtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
