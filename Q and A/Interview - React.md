@@ -256,14 +256,30 @@ function updateColorMap(colormap) {
 - Create an ErrorBoundaryComponent and wrap with your component
 - E.g
 ```
-<ErrorBoundaryComponent>
-    <MyComp />
-</ErrorBoundaryComponent>
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {    // Update state so the next render will show the fallback UI.    return { hasError: true };  }
+  componentDidCatch(error, errorInfo) {    // You can also log the error to an error reporting service    logErrorToMyService(error, errorInfo);  }
+  render() {
+    if (this.state.hasError) {      // You can render any custom fallback UI      return <h1>Something went wrong.</h1>;    }
+    return this.props.children; 
+  }
+}
+
+```
+<ErrorBoundary>
+  <MyWidget />
+</ErrorBoundary>
+```
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0OTgxODU5NSwtMTQ3NTQxMzM5OSwyNz
-ExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcw
-NywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTE3NTQyMzYxNTAsLTE0NzU0MTMzOTksMj
+cxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3
+MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
