@@ -312,10 +312,12 @@ class ThemedButton extends React.Component {
 - **render props**: using children as functions, inside the class component you have other components as functions
 - **presentational component pattern**: 
 ### Why would you use react
-- The decision has to be made based on the project itself, e.g if your project needs to be completed within 6 months while there might be a huge change of version in any front-end 
+- The decision has to be made based on the project itself, e.g if your project needs to be completed within 6 months while there might be a huge change of version in any front-end framework
+- Angular is easy to configure but hard to use, they come as a huge package 
+- Use of Javascript 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0OTk4NTE3NCwtMjEzMDk5ODIxNywtMT
-I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
-Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
-wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTE0OTIxMDI4NDIsLTIxMzA5OTgyMTcsLT
+EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
+MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
+csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
