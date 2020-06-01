@@ -430,8 +430,9 @@ e.g
 private void CheckType(T auto) where T:class, ICar
 {
     typeof(T) to check T during compile time
-    auto.GetType() to check auto instance during run time
-    auto is 
+    T.GetType() or T is ICar will throw error 
+    auto.GetType().Equals(ICar) to check auto instance during run time
+    auto is ICar to check on auto instance during run time
 }
 ```
 ## What is the difference between string and String in C# ?
@@ -455,7 +456,7 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA4MDk1NTU3LDExNDE2MDg5MjcsMzc3OD
-Y2Mjk1LC00MDg0MDIyMzIsODk2MTU0NTQ2LDIwMzA5Mzg3NjZd
-fQ==
+eyJoaXN0b3J5IjpbMTk5NDYxNzQ0NSwxMTQxNjA4OTI3LDM3Nz
+g2NjI5NSwtNDA4NDAyMjMyLDg5NjE1NDU0NiwyMDMwOTM4NzY2
+XX0=
 -->
