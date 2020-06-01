@@ -249,6 +249,10 @@ function updateColorMap(colormap) {
 }
 ```
 ### Explain Error Boundaries
+- Error boundaries are React components that **catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI** instead of the component tree that crashed
+- A class component becomes an error boundary if it defines either (or both) of the lifecycle methods [`static getDerivedStateFromError()`](https://reactjs.org/docs/react-component.html#static-getderivedstatefromerror) or [`componentDidCatch()`](https://reactjs.org/docs/react-component.html#componentdidcatch). 
+	- Use `static getDerivedStateFromError()` to render a fallback UI after an error has been thrown. 
+	- Use `componentDidCatch()` to log error information.
 - Create an ErrorBoundaryComponent and wrap with your component
 - E.g
 ```
@@ -259,7 +263,7 @@ function updateColorMap(colormap) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ3NjI3MzYzLC0xNDc1NDEzMzk5LDI3MT
-EzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3
-LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbLTc0OTgxODU5NSwtMTQ3NTQxMzM5OSwyNz
+ExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcw
+NywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
 -->
