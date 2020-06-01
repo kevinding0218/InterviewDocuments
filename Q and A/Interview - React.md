@@ -269,17 +269,15 @@ class ErrorBoundary extends React.Component {
     return this.props.children; 
   }
 }
-
-```
+// ToUseIt
 <ErrorBoundary>
   <MyWidget />
 </ErrorBoundary>
 ```
-```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTQyMzYxNTAsLTE0NzU0MTMzOTksMj
+eyJoaXN0b3J5IjpbLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMj
 cxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3
 MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
