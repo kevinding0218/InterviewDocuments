@@ -68,7 +68,7 @@ const someFunction = () => { setSomeState('new state') }
 1. constructor(props)
     - call `super(props);`
     - `super()` vs `super(props)`: only one reason when one needs to pass  `props`  to  `super()`:
-**When you want to access  `this.props`  in constructor.**
+**When you want to access  `this.props`  in constructor.**, Note that passing or not passing `props` to `super` has **no effect** on later uses of `this.props` outside `constructor`. That is `render`, `shouldComponentUpdate`, or event handlers **always** have access to it.
 	- only place to set initial state by using `this.state = {};`
 	- after this you have to use this.setState to change state
 3. static getDerivedStateFromProps(nextProps, prevState)
@@ -98,7 +98,7 @@ If you just want to compute some derived data, either:
 - This method can be used when there is delay between if you render a component and in its next phase, if user does something in between like scoll or change size of the window, then you need to remember where the scroll was before so you can do something after the render.
 6. componentDidUpdate
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwMjQ0Mzc0LC0xMjY2MDIzMDcwLDc1OT
+eyJoaXN0b3J5IjpbMjIzMzc0NzIxLC0xMjY2MDIzMDcwLDc1OT
 U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
 LDY1NDM2OTIxNl19
 -->
