@@ -110,6 +110,15 @@ shouldComponentUpdate(nextProps, nextState) {
 - This method can be used when there is delay between if you render a component and in its next phase, if user does something in between like scoll or change size of the window, then you need to remember where the scroll was before so you can do something after the render.
 5. componentDidUpdate(prevProps, prevState, snapshot)
 - similar as componentDidMount
+- E.g
+```
+componentDidUpdate(prevProps) {
+  // Typical usage (don't forget to compare props):
+  if (this.props.userID !== prevProps.userID) {
+    this.fetchData(this.props.userID);
+  }
+}
+```
 6. componentWillUnmout
 - do something before it unmount
 ### Why do we use arrow function in react?
@@ -126,7 +135,7 @@ refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shoul
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg0Mzc3MDkzLC0xMjY2MDIzMDcwLDc1OT
-U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
-LDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbMTYwMTYzNjc3OCwtMTI2NjAyMzA3MCw3NT
+k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
+MSw2NTQzNjkyMTZdfQ==
 -->
