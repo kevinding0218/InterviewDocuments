@@ -87,10 +87,11 @@ const someFunction = () => { setSomeState('new state') }
 - e.g, whenever setState will trigger re-render, but it could be setting the same state again, there might not be need to re-render
 3. render
 4. getSnapshotBeforeUpdate
-- pre commit phase, render doesn't mean it has rendered, `mount` really happens after this method
+- pre commit phase, render doesn't mean it has rendered, `mount` really happens after this method (replace for componentWillUpdate)
+- This method can be used when there is delay between if you render a component and 
 6. componentDidUpdate
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM0OTkzOTgzLC0xMjY2MDIzMDcwLDc1OT
+eyJoaXN0b3J5IjpbLTkzMDMxOTg3LC0xMjY2MDIzMDcwLDc1OT
 U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
 LDY1NDM2OTIxNl19
 -->
