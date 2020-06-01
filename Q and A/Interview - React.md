@@ -192,9 +192,11 @@ class WordAdder extends React.Component {
   }
 }
 ```
-- The problem is that `PureComponent` will do a simple comparison between the old and new values of `this.props.words`. Since this code mutates the `words` array in the `handleClick` method of `WordAdder`, the old and new values of `this.props.words` will compare as equal, even though the actual words in the array have changed. The `ListOfWords` will thus not update even though it has new words that should be rendered.
 - How to fix this ? See below
-4. React.memo
+- Only extend `PureComponent` when you expect to have simple props and state, or use [`forceUpdate()`](https://reactjs.org/docs/react-component.html#forceupdate) when you know deep data structures have changed. Or, consider using [immutable objects](https://facebook.github.io/immutable-js/) to facilitate fast comparisons of nested data.
+3. React.memo
+- Works for functional component or presentational component
+- 
 ### The Power Of Immutating Data
 1. The simplest way to avoid this problem is to avoid mutating values that you are using as props or state. For example, the  `handleClick`  method above could be rewritten using  `concat`  as:
 ```
@@ -235,7 +237,7 @@ function updateColorMap(colormap) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzI1MjExODgsMjcxMTM5OTM1LC0xMj
-Y2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0
-OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTk4MDExODg0OSwyNzExMzk5MzUsLTEyNj
+YwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5
+LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
 -->
