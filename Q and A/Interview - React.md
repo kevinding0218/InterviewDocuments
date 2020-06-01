@@ -90,7 +90,7 @@ If you just want to compute some derived data, either:
 1. static getDerivedStateFromProps(nextProps, prevState)
 - does the same thing as intial render
 2. shouldComponentUpdate(nextProps, nextState)
-- make a decision if this component really needs to be updated or not
+- make a decision if this component really needs to be updated or not by returning `true` or `false`
 - e.g, whenever setState will trigger re-render, but it could be setting the same state again, there might not be need to re-render
 3. render
 4. getSnapshotBeforeUpdate
@@ -113,7 +113,7 @@ If you just want to compute some derived data, either:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjc1NTg4ODEsLTEyNjYwMjMwNzAsNz
-U5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5
-NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTY0MjM1ODIxNCwtMTI2NjAyMzA3MCw3NT
+k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
+MSw2NTQzNjkyMTZdfQ==
 -->
