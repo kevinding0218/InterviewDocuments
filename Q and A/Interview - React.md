@@ -156,13 +156,48 @@ componentDidUpdate(prevProps) {
 refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action)
 1. shouldComponentUpdate(nextProps, nextState)
 2. React.PureComponent
-- 
+- you can use  `React.PureComponent`  instead of writing your own  `shouldComponentUpdate`. 
+- It only does a shallow comparison, so you can’t use it if the props or state may have been mutated in a way that a shallow comparison would miss.
+- This can be a problem with more complex data structures. For example, let’s say you want a  `ListOfWords`  component to render a comma-separated list of words, with a parent  `WordAdder`  component that lets you click a button to add a word to the list. This code does  _not_  work correctly:
+```
+class ListOfWords extends React.PureComponent {
+  render() {
+    return <div>{this.props.words.join(',')}</div>;
+  }
+}
+
+class WordAdder extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      words: ['marklar']
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    // This section is bad style and causes a bug
+    const words = this.state.words;
+    words.push('marklar');
+    this.setState({words: words});
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleClick} />
+        <ListOfWords words={this.state.words} />
+      </div>
+    );
+  }
+}
+```
 4. React.memo
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc3MzMyNDYsLTEyNjYwMjMwNzAsNzU5NT
-gwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEs
-NjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbMTE1MDc5ODI0NiwtMTI2NjAyMzA3MCw3NT
+k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
+MSw2NTQzNjkyMTZdfQ==
 -->
