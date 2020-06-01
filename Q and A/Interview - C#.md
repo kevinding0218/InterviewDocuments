@@ -421,6 +421,7 @@ UseParams(1, 2, 3, 4);
 	- e.g: MethodName(string @string, int @params)
 ## Convert.ToString VS ToString
 - Convert.ToString() handles null and return empty string, while ToString() doesn’t, and throws a NULL Reference exception.
+## typeof, 
 ## What is the difference between string and String in C# ?
 - String stands for System.String and it is a .NET Framework type. string is an alias in the C# language for System.String. 
 - Both of them are compiled to System.String in IL (Intermediate Language), so there is no difference.
@@ -442,6 +443,7 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0MTYwODkyNywzNzc4NjYyOTUsLTQwOD
-QwMjIzMiw4OTYxNTQ1NDYsMjAzMDkzODc2Nl19
+eyJoaXN0b3J5IjpbMjA2MDk5ODEwNCwxMTQxNjA4OTI3LDM3Nz
+g2NjI5NSwtNDA4NDAyMjMyLDg5NjE1NDU0NiwyMDMwOTM4NzY2
+XX0=
 -->
