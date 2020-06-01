@@ -62,8 +62,10 @@ class  NewPost  extends  Component  {
 const [someState, setSomeState] = useState('anything')
 const someFunction = () => { setSomeState('new state') }
 ```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMz
-kxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2
-XX0=
+eyJoaXN0b3J5IjpbNjc5ODU3NDcwLC0xMjY2MDIzMDcwLDc1OT
+U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
+LDY1NDM2OTIxNl19
 -->
