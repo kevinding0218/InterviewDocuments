@@ -88,10 +88,10 @@ const someFunction = () => { setSomeState('new state') }
 3. render
 4. getSnapshotBeforeUpdate
 - pre commit phase, render doesn't mean it has rendered, `mount` really happens after this method (replace for componentWillUpdate)
-- This method can be used when there is delay between if you render a component and 
+- This method can be used when there is delay between if you render a component and in its next phase, if user does something in between like scoll or change size of the window, then you need to remember where the scroll was before so you can do something after the render.
 6. componentDidUpdate
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMDMxOTg3LC0xMjY2MDIzMDcwLDc1OT
-U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
-LDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTgyMDU0MzAzNiwtMTI2NjAyMzA3MCw3NT
+k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
+MSw2NTQzNjkyMTZdfQ==
 -->
