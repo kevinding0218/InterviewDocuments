@@ -120,7 +120,8 @@ componentDidUpdate(prevProps) {
 }
 ```
 6. componentWillUnmout
-- do something before it unmount
+- `componentWillUnmount()` is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in `componentDidMount()`.
+- You **should not call  `setState()`** in `componentWillUnmount()` because the component will never be re-rendered. Once a component instance is unmounted, it will never be mounted again.
 ### Why do we use arrow function in react?
 #### class method vs class property
 - `render()` is a class method, but any function declared is actually a class property, 
@@ -135,7 +136,7 @@ refer: [Official Doc](https://reactjs.org/docs/optimizing-performance.html#shoul
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMTYzNjc3OCwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbMTQ0OTg3NDgwMCwtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
