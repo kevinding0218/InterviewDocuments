@@ -81,13 +81,15 @@ const someFunction = () => { setSomeState('new state') }
 - notify that `DOM` is ready now, e.g: if you're using a third-party chart component, you need to have the DOM ready before component uses it
 #### re-render
 1. static getDerivedStateFromProps
-- does the same thing as intial
-3. shouldComponentUpdate
+- does the same thing as intial render
+2. shouldComponentUpdate
+- make a decision if this component really needs to be updated or not
+- e.g, whenever setState will trigger re-render, but it could be setting the same state again, there might not be 
 4. render
 5. getSnapshotBeforeUpdate
 6. componentDidUpdate
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDAyOTg3NDIsLTEyNjYwMjMwNzAsNz
-U5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5
-NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbNTc3NTQ0MjcsLTEyNjYwMjMwNzAsNzU5NT
+gwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEs
+NjU0MzY5MjE2XX0=
 -->
