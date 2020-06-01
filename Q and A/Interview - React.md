@@ -317,10 +317,11 @@ class ThemedButton extends React.Component {
 - Use of Javascript 
 ### What is css-in-js pattern
 - “CSS-in-JS” refers to a pattern where CSS is composed using JavaScript instead of defined in external files.
+- You can do inline css which you can conditional render without polluting other parts
 - a good starting point is to define your styles in a separate  `*.css`  file as usual and refer to them using  [`className`](https://reactjs.org/docs/dom-elements.html#classname).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzA4ODExMDcsLTIxMzA5OTgyMTcsLT
-EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
-MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
-csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMj
+gyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEz
+OTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3LD
+IwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
 -->
