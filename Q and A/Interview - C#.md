@@ -426,15 +426,15 @@ UseParams(1, 2, 3, 4);
 -   `GetType`  gets the runtime type of an instance.
 -   `is`  returns true if an instance is in the inheritance tree.
 e.g
-```
-private void CheckType(T auto) where T:class, ICar
-{
-    typeof(T) to check T during compile time
-    T.GetType() or T is ICar will throw error 
-    auto.GetType().Equals(ICar) to check auto instance during run time
-    auto is ICar to check on auto instance during run time
-}
-```
+	```
+	private void CheckType(T auto) where T:class, ICar
+	{
+	    typeof(T) to check T during compile time
+	    T.GetType() or T is ICar will throw error because these two method are targetting instance not type parameter
+	    auto.GetType().Equals(ICar) to check auto instance during run time
+	    auto is ICar to check on auto instance during run time
+	}
+	```
 ## What is the difference between string and String in C# ?
 - String stands for System.String and it is a .NET Framework type. string is an alias in the C# language for System.String. 
 - Both of them are compiled to System.String in IL (Intermediate Language), so there is no difference.
@@ -456,7 +456,7 @@ In the above example:
 – Next the pattern matches `@`  
 – Then the pattern matches another letter one or more times followed by a . and then between two to four letters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NDYxNzQ0NSwxMTQxNjA4OTI3LDM3Nz
+eyJoaXN0b3J5IjpbMTIxNTM2Nzc2NywxMTQxNjA4OTI3LDM3Nz
 g2NjI5NSwtNDA4NDAyMjMyLDg5NjE1NDU0NiwyMDMwOTM4NzY2
 XX0=
 -->
