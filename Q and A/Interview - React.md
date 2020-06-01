@@ -282,10 +282,36 @@ class ErrorBoundary extends React.Component {
 ### Best Lifecycle Method for making API calls
 - componentDidMount: to make sure your component is finished rendering which means your DOM is ready
 ### React Pattern
-- context-api pattern: Context lets us pass a value deep into the component tree without explicitly threading it through every component.
+- **context-api pattern**: Context lets us pass a value deep into the component tree without explicitly threading it through every component.
+- E.g
+```
+// Create a context for the current theme (with "light" as the default).const ThemeContext = React.createContext('light');
+class App extends React.Component {
+  render() {
+    // Use a Provider to pass the current theme to the tree below.    // Any component can read it, no matter how deep it is.    // In this example, we're passing "dark" as the current value.    return (
+      <ThemeContext.Provider value="dark">        <Toolbar />
+      </ThemeContext.Provider>
+    );
+  }
+}
 
+// A component in the middle doesn't have to// pass the theme down explicitly anymore.function Toolbar() {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+class ThemedButton extends React.Component {
+  // Assign a contextType to read the current theme context.  // React will find the closest theme Provider above and use its value.  // In this example, the current theme is "dark".  static contextType = ThemeContext;
+  render() {
+    return <Button theme={this.context} />;  }
+}
+```
+- **render props**: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODc5MTAyNzYsLTIxMzA5OTgyMTcsLT
+eyJoaXN0b3J5IjpbLTE4MDUyODQ4MDUsLTIxMzA5OTgyMTcsLT
 EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
 MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
 csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
