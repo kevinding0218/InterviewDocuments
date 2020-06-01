@@ -96,9 +96,13 @@ If you just want to compute some derived data, either:
 4. getSnapshotBeforeUpdate
 - pre commit phase, render doesn't mean it has rendered, `mount` really happens after this method (replace for componentWillUpdate)
 - This method can be used when there is delay between if you render a component and in its next phase, if user does something in between like scoll or change size of the window, then you need to remember where the scroll was before so you can do something after the render.
-6. componentDidUpdate
+5. componentDidUpdate
+- similar as componentDidMount
+6. componentWillUnmout
+- do something before it unmount
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIzMzc0NzIxLC0xMjY2MDIzMDcwLDc1OT
-U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
-LDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTE3MzQ5MzI4OTIsLTEyNjYwMjMwNzAsNz
+U5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5
+NDEsNjU0MzY5MjE2XX0=
 -->
