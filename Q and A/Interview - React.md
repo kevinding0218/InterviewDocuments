@@ -62,10 +62,16 @@ class  NewPost  extends  Component  {
 const [someState, setSomeState] = useState('anything')
 const someFunction = () => { setSomeState('new state') }
 ```
-
-
+### Lifecycle Methods render
+- Class component
+1. constructor
+	- only place to set initial state by using `this.state = {};`
+2. static getDerivedStateFromProps
+3. render
+4. componentDidMount
+5. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc5ODU3NDcwLC0xMjY2MDIzMDcwLDc1OT
-U4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQx
-LDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbMTk3MDkzMTAwNSwtMTI2NjAyMzA3MCw3NT
+k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
+MSw2NTQzNjkyMTZdfQ==
 -->
