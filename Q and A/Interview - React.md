@@ -274,19 +274,17 @@ class ErrorBoundary extends React.Component {
   <MyWidget />
 </ErrorBoundary>
 ```
-- Note
+- Note: Error boundaries do  **not**  catch errors for:
+	-   Event handlers ([learn more](https://reactjs.org/docs/error-boundaries.html#how-about-event-handlers)): use `try..catch` inside itself
+	-   Asynchronous code (e.g.  `setTimeout`  or  `requestAnimationFrame`  callbacks)
+	-   Server side rendering
+	-   Errors thrown in the error boundary itself (rather than its children)
 
-Error boundaries do  **not**  catch errors for:
-
--   Event handlers ([learn more](https://reactjs.org/docs/error-boundaries.html#how-about-event-handlers))
--   Asynchronous code (e.g.  `setTimeout`  or  `requestAnimationFrame`  callbacks)
--   Server side rendering
--   Errors thrown in the error boundary itself (rather than its children)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0ODI3NTA1NiwtMTkwNzMwNjU0NSwtMT
-Q3NTQxMzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgw
-Njc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNj
-U0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLT
+E0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4
+MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLD
+Y1NDM2OTIxNl19
 -->
