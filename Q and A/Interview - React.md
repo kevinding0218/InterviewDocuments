@@ -89,7 +89,7 @@ If you just want to compute some derived data, either:
 #### re-render
 1. static getDerivedStateFromProps(nextProps, prevState)
 - does the same thing as intial render
-2. shouldComponentUpdate
+2. shouldComponentUpdate(nextProps, nextState)
 - make a decision if this component really needs to be updated or not
 - e.g, whenever setState will trigger re-render, but it could be setting the same state again, there might not be need to re-render
 3. render
@@ -107,11 +107,13 @@ If you just want to compute some derived data, either:
 - Allows you to access class property via `this` keyword inside arrow function, arrow function doesn't have its own `this`, it automatically takes `this` from its immediate parent which is `class` here
 - E.g, In React you could have onClick handles which is not actually a class method but a class property, if you have a function inside a function where you have the `this` keyword, `this` key word belongs to inner function but not the class outside, arrow function doesn't have its own `this`, it automatically takes `this` from its immediate parent which is `class` here
 - Alternative way to bind this method back to class inside the constructor 
+### How to prevent components from re-rendering
+1. shouldComponentUpdate(nextProps, nextState)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwODk2MDIyOSwtMTI2NjAyMzA3MCw3NT
-k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
-MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbLTE5Mjc1NTg4ODEsLTEyNjYwMjMwNzAsNz
+U5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5
+NDEsNjU0MzY5MjE2XX0=
 -->
