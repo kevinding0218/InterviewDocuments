@@ -74,11 +74,12 @@ const someFunction = () => { setSomeState('new state') }
 - it tries to get the derived state from the change in props that it would return the `newState` if there is change in state or `null` if there is no change in state
 - Why it's a static method? static method will prevent user to access `this` keyword directly inside the method, because static method is actually class method, not instance method
 3. render
-- 
-5. componentDidMount
-6. 
+- only method that's mandatory to have
+- you cannot set state here, otherwise you would go an infinite loop
+4. componentDidMount
+- notify that `DOM` is ready now, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjkzMzA3NCwtMTI2NjAyMzA3MCw3NT
+eyJoaXN0b3J5IjpbLTc3NTU1ODUxMCwtMTI2NjAyMzA3MCw3NT
 k1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0
 MSw2NTQzNjkyMTZdfQ==
 -->
