@@ -281,11 +281,12 @@ class ErrorBoundary extends React.Component {
 	-   Errors thrown in the error boundary itself (rather than its children)
 ### Best Lifecycle Method for making API calls
 - componentDidMount: to make sure your component is finished rendering which means your DOM is ready
-
+### React Pattern
+- context-api pattern: when you want to pass props into a deeply nested component, context API allows you to access this props 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE4NjU2Mjg4LC0xMjgyMDI4NjAwLC0xOT
-A3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAy
-MzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMT
-UzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMzA5OTgyMTcsLTEyODIwMjg2MDAsLT
+E5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2
+MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OS
+wxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
