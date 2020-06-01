@@ -310,10 +310,10 @@ class ThemedButton extends React.Component {
 }
 ```
 - **render props**: using children as functions, inside the class component you have other components as functions
-- pre
+- **presentational component pattern**: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NTU0MTY5OSwtMjEzMDk5ODIxNywtMT
-I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
-Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
-wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTExMzE0ODQxMzgsLTIxMzA5OTgyMTcsLT
+EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
+MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
+csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
