@@ -319,9 +319,13 @@ class ThemedButton extends React.Component {
 - “CSS-in-JS” refers to a pattern where CSS is composed using JavaScript instead of defined in external files.
 - You can do inline css which you can conditional render without polluting other parts
 - a good starting point is to define your styles in a separate  `*.css`  file as usual and refer to them using  [`className`](https://reactjs.org/docs/dom-elements.html#classname).
+### What is react hooks
+- Hooks are functions that lets you "hook into" React state and lifecycle features from function component
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMj
-gyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEz
-OTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3LD
-IwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbNzY1MDkwMjI1LDU4ODQ5MjYxNiwtMjEzMD
+k5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQx
+MzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LD
+cyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5
+MjE2XX0=
 -->
