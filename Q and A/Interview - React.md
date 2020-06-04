@@ -333,14 +333,15 @@ class ThemedButton extends React.Component {
 ### Map lifecycle class methods to lifecyle hooks
 - Stage of lifecycle
 	- initial render
-		- getDerivedStateFromProps => useEffect(() => {}, [prop1, prop2])
-			
+		- `getDerivedStateFromProps` => `useEffect(() => {}, [prop1, prop2])`
+			- foreach prop, you could have separate `useEffect`
+		- `componentDidMount` => `useEffect(() => {}, ())`
 	- updates
 	- unmount
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY4NTg3NDcxLDU4ODQ5MjYxNiwtMjEzMD
-k5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQx
-MzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LD
-cyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5
-MjE2XX0=
+eyJoaXN0b3J5IjpbLTEwNjExNTM0MDEsNTg4NDkyNjE2LC0yMT
+MwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1
+NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2Nz
+ksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQz
+NjkyMTZdfQ==
 -->
