@@ -341,13 +341,14 @@ class ThemedButton extends React.Component {
 		- `getDerivedStateFromProps` => `useEffect(() => {}, [prop1, prop2])`
 		- `shouldComponentUpdate()` => `useMemo()`
 		- `componentDidUpdate` => `useEffect(() => {})`
-			- no array defined means it'll only run once
+			- no array defined means it'll only run when updates, not on initial render
 		- `getSnapshotBeforeUpdate` => custom Hook to hold previous state
 	- unmount
+		- `useEffect(() => {})`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NzA0MjI2NSw1ODg0OTI2MTYsLTIxMz
-A5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0
-MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OS
-w3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2
-OTIxNl19
+eyJoaXN0b3J5IjpbLTE1MDY4MTE2NDIsNTg4NDkyNjE2LC0yMT
+MwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1
+NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2Nz
+ksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQz
+NjkyMTZdfQ==
 -->
