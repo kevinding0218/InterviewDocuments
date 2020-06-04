@@ -346,8 +346,9 @@ class ThemedButton extends React.Component {
 			- if any state defined inside the array argument, means only run that `useEffect` when the defined state gets changed
 		- `getSnapshotBeforeUpdate` => custom Hook to hold previous state
 	- unmount
-		- `useEffect(() => {return () => {//cleanup code}}, [])`
+		- `useEffect(() => { // some code; return () => {// cleanup code}}, [])`
 			- instead of executing a function, returns a function which would do the clean up job
+			- **clean up** will be executed before **some code**
 - error boundary (not available for hooks)
 	- getDerivedStateFromError()
 	- componentDidCatch()
@@ -362,9 +363,10 @@ class ThemedButton extends React.Component {
 - useDebugValue
 ###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MTk2MzI1OSwtNDU2Nzk5MjE4LC01NT
-Y2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMjgyMDI4
-NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOTkzNS
-wtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIwNzU5
-ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbLTk3OTczNjg4MiwxOTkxOTYzMjU5LC00NT
+Y3OTkyMTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMzA5OTgy
+MTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOT
+ksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5
+MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl
+19
 -->
