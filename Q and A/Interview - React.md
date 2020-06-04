@@ -336,14 +336,17 @@ class ThemedButton extends React.Component {
 		- `getDerivedStateFromProps` => `useEffect(() => {}, [prop1, prop2])`
 			- foreach prop, you could have separate `useEffect`
 		- `componentDidMount` => `useEffect(() => {}, ())`
-			- if provided empty array, this would run every time, which means initial render and also update, but componentDidMount only run once at first time
+			- if provided empty array, this would run every time, which means initial render and also update, but `componentDidMount` only run once at first time
 	- updates
-		- getDerivedStateFromProps => ``
+		- `getDerivedStateFromProps` => `useEffect(() => {}, [prop1, prop2])`
+		- `shouldComponentUpdate()` => `useMemo()`
+		- `componentDidUpdate` => `useEffect(() => {}, ())`
+		- `getSnapshotBeforeUpdate` => custom Hook to hold previous state
 	- unmount
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MjE4MjE2Miw1ODg0OTI2MTYsLTIxMz
-A5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0
-MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OS
-w3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2
-OTIxNl19
+eyJoaXN0b3J5IjpbNTcwMDE3MjI1LDU4ODQ5MjYxNiwtMjEzMD
+k5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQx
+MzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LD
+cyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5
+MjE2XX0=
 -->
