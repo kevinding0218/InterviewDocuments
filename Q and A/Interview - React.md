@@ -349,10 +349,13 @@ class ThemedButton extends React.Component {
 - error boundary (not available for hooks)
 	- getDerivedStateFromError()
 	- componentDidCatch()
+### how to upgrade class project to hooks project
+- update react, react-dom version
+- update code on route at a time
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQxNTQ2Nzg1LDU4ODQ5MjYxNiwtMjEzMD
-k5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQx
-MzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LD
-cyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5
-MjE2XX0=
+eyJoaXN0b3J5IjpbLTExMzc0MDIwMzEsNTg4NDkyNjE2LC0yMT
+MwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1
+NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2Nz
+ksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQz
+NjkyMTZdfQ==
 -->
