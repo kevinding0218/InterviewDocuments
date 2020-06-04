@@ -331,11 +331,16 @@ class ThemedButton extends React.Component {
 - don't call hooks inside loops, conditions, or nested functions
 - call hooks from react components or custom hooks
 ### Map lifecycle class methods to lifecyle hooks
-- 
+- Stage of lifecycle
+	- initial render
+		- getDerivedStateFromProps => useEffect(() => {}, [prop1, prop2])
+			
+	- updates
+	- unmount
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyOTcwMDUzNSw1ODg0OTI2MTYsLTIxMz
-A5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0
-MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OS
-w3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2
-OTIxNl19
+eyJoaXN0b3J5IjpbOTY4NTg3NDcxLDU4ODQ5MjYxNiwtMjEzMD
+k5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQx
+MzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LD
+cyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5
+MjE2XX0=
 -->
