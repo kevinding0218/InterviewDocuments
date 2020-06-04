@@ -326,11 +326,16 @@ class ThemedButton extends React.Component {
 - no more complex lifecycle methods
 - simpler code, no more mapStateToProps, mapDispatchToProps with redux
 - hooking into component is much easier
-### 
+### Rules of react hooks
+- only call hooks at the top level
+- don't call hooks inside loops, conditions, or nested functions
+- call hooks from react components or custom hooks
+### Map lifecycle class methods to lifecyle hooks
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM2MDk0NDI1LDU4ODQ5MjYxNiwtMjEzMD
-k5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQx
-MzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LD
-cyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5
-MjE2XX0=
+eyJoaXN0b3J5IjpbLTIyOTcwMDUzNSw1ODg0OTI2MTYsLTIxMz
+A5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0
+MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OS
+w3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2
+OTIxNl19
 -->
