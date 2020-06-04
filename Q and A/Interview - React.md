@@ -404,8 +404,13 @@ const [state, setState] = useState(() => {
   return initialState;
 });
 ```
-#### 
-### useRef and forwardRef
+#### useEffect
+- Check knowledge before about second argument
+- Unlike `componentDidMount` and `componentDidUpdate`, the function passed to `useEffect` fires **after** layout and paint, during a deferred event. This makes it suitable for the many common side effects, like setting up subscriptions and event handlers, because most types of work shouldn’t block the browser from updating the screen.
+- Although  `useEffect`  is deferred until after the browser has painted, it’s guaranteed to fire before any new renders. React will always flush a previous render’s effects before starting a new update.
+#### useContext
+
+#### useRef and forwardRef
 - Code example
 ```
 // Input.js
@@ -465,11 +470,10 @@ const memorizedComp = useMemo(() => {return <ChildComponent />}, [currentCompPro
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzI0Nzg1NjUsMjA1MzQxOTM1MSwtND
-gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
-MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
-0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
-MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
-A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
-
+eyJoaXN0b3J5IjpbMTkwNzI1MDEzMSwyMDUzNDE5MzUxLC00OD
+A4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYzMjU5LC00NTY3OTky
+MTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLT
+EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
+MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
+csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
