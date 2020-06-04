@@ -346,13 +346,13 @@ class ThemedButton extends React.Component {
 	- unmount
 		- `useEffect(() => {return () => {//cleanup code}}, [])`
 			- instead of executing a function, returns a function which would do the clean up job
-- error boundary
+- error boundary (not available for hooks)
 	- getDerivedStateFromError()
 	- componentDidCatch()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDAxMTAwNzUsNTg4NDkyNjE2LC0yMT
-MwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1
-NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2Nz
-ksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQz
-NjkyMTZdfQ==
+eyJoaXN0b3J5IjpbMjQxNTQ2Nzg1LDU4ODQ5MjYxNiwtMjEzMD
+k5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQx
+MzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LD
+cyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5
+MjE2XX0=
 -->
