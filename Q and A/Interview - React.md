@@ -600,12 +600,34 @@ function useFriendStatus(friendID) {  const [isOnline, setIsOnline] = useState(n
 ```
 - The purpose of our `useFriendStatus` Hook is to subscribe us to a friend’s status. This is why it takes `friendID` as an argument, and returns whether this friend is online
 #### Using a Custom Hook
--
+- In the beginning, our stated goal was to remove the duplicated logic from the `FriendStatus` and `FriendListItem` components. Both of them want to know whether a friend is online.
+```
+function FriendStatus(props) {
+  const isOnline = useFriendStatus(props.friend.id);
+  if (isOnline === null) {
+    return 'Loading...';
+  }
+  return isOnline ? 'Online' : 'Offline';
+}
+```
+
+```
+function FriendListItem(props) {
+  const isOnline = useFriendStatus(props.friend.id);
+  return (
+    <li style={{ color: isOnline ? 'green' : 'black' }}>
+      {props.friend.name}
+    </li>
+  );
+```
+- All we did was to extract some common code between two functions into a separate function. **Custom Hooks are a convention that naturally follows from the design of Hooks, rather than a React feature.**
+- **Do I have to name my custom Hooks starting with “`use`”?** Please do. This convention is very important. Without it
+- **Do two components using the same Hook share state?** No. Custom Hooks are a mechanism to reuse _stateful logic_ (such as setting up a subscription and remembering the current value), but every time you use a custom Hook, all state and effects inside of it are fully isolated.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NTg4NzMxLDIwNTM0MTkzNTEsLTQ4MD
-g1NTk3OCwtOTc5NzM2ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIx
-OCwtNTU2NjIzNTg3LDU4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMT
-I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
-Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
-wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbMTM1OTc0NzgxMiwyMDUzNDE5MzUxLC00OD
+A4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYzMjU5LC00NTY3OTky
+MTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLT
+EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
+MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
+csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
