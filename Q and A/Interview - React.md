@@ -408,6 +408,8 @@ const [state, setState] = useState(() => {
 - Check knowledge before about second argument
 - Unlike `componentDidMount` and `componentDidUpdate`, the function passed to `useEffect` fires **after** layout and paint, during a deferred event. This makes it suitable for the many common side effects, like setting up subscriptions and event handlers, because most types of work shouldn’t block the browser from updating the screen.
 - Although  `useEffect`  is deferred until after the browser has painted, it’s guaranteed to fire before any new renders. React will always flush a previous render’s effects before starting a new update.
+- **Why did we return a function from our effect?**  This is the optional cleanup mechanism for effects. Every effect may return a function that cleans up after it. This lets us keep the logic for adding and removing subscriptions close to each other. They’re part of the same effect!
+- **When exactly does React clean up an effect?**  React performs the cleanup when the component unmounts. However, as we learned earlier, effects run for every render and not just once. This is why React  _also_  cleans up effects from the previous render before running the effects next time.
 #### useContext
 ```
 const value = useContext(MyContext);
@@ -576,10 +578,11 @@ function useFriendStatus(friendID) {
 ### Custom Hook
 [Document]([https://reactjs.org/docs/hooks-custom.html](https://reactjs.org/docs/hooks-custom.html))
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI5MDA3NzEzLDIwNTM0MTkzNTEsLTQ4MD
-g1NTk3OCwtOTc5NzM2ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIx
-OCwtNTU2NjIzNTg3LDU4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMT
-I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
-Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
-wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTExMDk0NTU5ODMsMjA1MzQxOTM1MSwtND
+gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
+MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
+0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
+MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
+A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+
 -->
