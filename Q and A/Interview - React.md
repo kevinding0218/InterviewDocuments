@@ -361,6 +361,18 @@ class ThemedButton extends React.Component {
 - `console.log` or `debugger` statement
 - react developer tool(chome plugin)
 - useDebugValue
+### Hook API
+#### useState
+```
+const [state, setState] = useState(initialState);
+```
+- Returns a stateful value, and a function to update it.
+- During the initial render, the returned state (`state`) is the same as the value passed as the first argument (`initialState`).
+- The  `setState`  function is used to update the state. It accepts a new state value and enqueues a re-render of the component.
+```
+setState(newState);
+```
+- During subsequent re-renders, the first value returned by `useState` will always be the most recent state after applying updates.
 ### useRef and forwardRef
 - Code example
 ```
@@ -421,10 +433,11 @@ const memorizedComp = useMemo(() => {return <ChildComponent />}, [currentCompPro
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MzQxOTM1MSwtNDgwODU1OTc4LC05Nz
-k3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5MjE4LC01NTY2MjM1
-ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMjgyMDI4NjAwLC
-0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOTkzNSwtMTI2
-NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2ND
-ksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+eyJoaXN0b3J5IjpbLTE0ODk5MDEzODksMjA1MzQxOTM1MSwtND
+gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
+MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
+0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
+MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
+A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+
 -->
