@@ -560,9 +560,22 @@ FancyInput = forwardRef(FancyInput);
 - The signature is identical to  `useEffect`, but it fires synchronously after all DOM mutations. Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside  `useLayoutEffect`  will be flushed synchronously, before the browser has a chance to paint.
 - Prefer the standard  `useEffect`  when possible to avoid blocking visual updates.
 #### useDebugValue
+```
+useDebugValue(value)
+```
+- `useDebugValue`  can be used to display a label for custom hooks in React DevTools.
+- For example, consider the  `useFriendStatus`  custom Hook described in  [“Building Your Own Hooks”](https://reactjs.org/docs/hooks-custom.html):
+```
+function useFriendStatus(friendID) {
+  const [isOnline, setIsOnline] = useState(null);
+  // ...
+  // Show a label in DevTools next to this Hook  // e.g. "FriendStatus: Online"  useDebugValue(isOnline ? 'Online' : 'Offline');
+  return isOnline;
+}
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTk4NDUyOTMsMjA1MzQxOTM1MSwtND
+eyJoaXN0b3J5IjpbLTEzNTczNzM3NjcsMjA1MzQxOTM1MSwtND
 gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
 MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
 0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
