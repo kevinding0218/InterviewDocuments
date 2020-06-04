@@ -321,9 +321,14 @@ class ThemedButton extends React.Component {
 - a good starting point is to define your styles in a separate  `*.css`  file as usual and refer to them using  [`className`](https://reactjs.org/docs/dom-elements.html#classname).
 ### What is react hooks
 - Hooks are functions that lets you "hook into" React state and lifecycle features from function component
-- 
+### Why use react hooks
+- different way of doing the same thing
+- no more complex lifecycle methods
+- simpler code, no more mapStateToProps, mapDispatchToProps with redux
+- hooking into component is much easier
+### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY1MDkwMjI1LDU4ODQ5MjYxNiwtMjEzMD
+eyJoaXN0b3J5IjpbODM2MDk0NDI1LDU4ODQ5MjYxNiwtMjEzMD
 k5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQx
 MzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LD
 cyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5
