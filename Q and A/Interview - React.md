@@ -623,8 +623,9 @@ function FriendListItem(props) {
 - All we did was to extract some common code between two functions into a separate function. **Custom Hooks are a convention that naturally follows from the design of Hooks, rather than a React feature.**
 - **Do I have to name my custom Hooks starting with “`use`”?** Please do. This convention is very important. Without it
 - **Do two components using the same Hook share state?** No. Custom Hooks are a mechanism to reuse _stateful logic_ (such as setting up a subscription and remembering the current value), but every time you use a custom Hook, all state and effects inside of it are fully isolated.
+- **How does a custom Hook get isolated state?**  Each  _call_  to a Hook gets isolated state. Because we call  `useFriendStatus`  directly, from React’s point of view our component just calls  `useState`  and  `useEffect`. And as we  [learned](https://reactjs.org/docs/hooks-state.html#tip-using-multiple-state-variables)  [earlier](https://reactjs.org/docs/hooks-effect.html#tip-use-multiple-effects-to-separate-concerns), we can call  `useState`  and  `useEffect`  many times in one component, and they will be completely independent.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1OTc0NzgxMiwyMDUzNDE5MzUxLC00OD
+eyJoaXN0b3J5IjpbMTI5NDEwNzg4NiwyMDUzNDE5MzUxLC00OD
 A4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYzMjU5LC00NTY3OTky
 MTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLT
 EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
