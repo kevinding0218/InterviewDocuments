@@ -500,6 +500,15 @@ const memoizedCallback = useCallback(
 - Returns a  [memoized](https://en.wikipedia.org/wiki/Memoization)  callback.
 - Pass an inline callback and an array of dependencies.  `useCallback`  will return a memoized version of the callback that only changes if one of the dependencies has changed. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders (e.g.  `shouldComponentUpdate`).
 - `useCallback(fn, deps)`  is equivalent to  `useMemo(() => fn, deps)`.
+#### useMemo
+```
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+```
+- Returns a  [memoized](https://en.wikipedia.org/wiki/Memoization)  value.
+- Pass a “create” function and an array of dependencies.  `useMemo`  will only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.
+- It could also return a sub component depends on specific variable changes
+```
+const memorizedComp = useMemo(() => {return <ChildComponent />}, [currentCompProperty]);
 #### useRef and forwardRef
 - Code example
 ```
@@ -548,22 +557,16 @@ function App() {
   );
 }
 ```
-### useMemo
-```
-const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
-```
-- Returns a  [memoized](https://en.wikipedia.org/wiki/Memoization)  value.
-- Pass a “create” function and an array of dependencies.  `useMemo`  will only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.
-- It could also return a sub component depends on specific variable changes
-```
-const memorizedComp = useMemo(() => {return <ChildComponent />}, [currentCompProperty]);
+
+
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MDE0NjczOSwyMDUzNDE5MzUxLC00OD
-A4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYzMjU5LC00NTY3OTky
-MTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLT
-EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
-MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
-csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTE5MTY3OTkwMzAsMjA1MzQxOTM1MSwtND
+gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
+MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
+0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
+MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
+A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+
 -->
