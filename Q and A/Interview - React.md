@@ -549,7 +549,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Input type="text" onKeyDown={firstKeyDown} ref={firstNameRef} placeholder="enter first name" />
+        <Input type="text" onKeyDown={firstKeyDown} ref={firstNameRef} placeholder="enter first 
+name" />
         <Input type="text" onKeyDown={lastKeyDown} ref={lastNameRef} placeholder="enter last name" />
         <button onKeyDown={submitKeyDown} ref={submitRef}>Submit</button>
       </header>
@@ -562,7 +563,7 @@ function App() {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTY3OTkwMzAsMjA1MzQxOTM1MSwtND
+eyJoaXN0b3J5IjpbLTExMDc2MTUwNzYsMjA1MzQxOTM1MSwtND
 gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
 MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
 0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
