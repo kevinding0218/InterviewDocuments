@@ -481,6 +481,25 @@ function Counter() {
   );
 }
 ```
+- Specifying the initial state
+	- There are two different ways to initialize  `useReducer`  state. You may choose either one depending on the use case. The simplest way is to pass the initial state as a second argument:
+```
+  const [state, dispatch] = useReducer(
+    reducer,
+    {count: initialCount}  );
+```
+#### useCallback
+```
+const memoizedCallback = useCallback(
+  () => {
+    doSomething(a, b);
+  },
+  [a, b],
+);
+```
+- Returns a  [memoized](https://en.wikipedia.org/wiki/Memoization)  callback.
+- Pass an inline callback and an array of dependencies.  `useCallback`  will return a memoized version of the callback that only changes if one of the dependencies has changed. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders (e.g.  `shouldComponentUpdate`).
+- `useCallback(fn, deps)`  is equivalent to  `useMemo(() => fn, deps)`.
 #### useRef and forwardRef
 - Code example
 ```
@@ -541,11 +560,10 @@ const memorizedComp = useMemo(() => {return <ChildComponent />}, [currentCompPro
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDA1MTY0NjMsMjA1MzQxOTM1MSwtND
-gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
-MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
-0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
-MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
-A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
-
+eyJoaXN0b3J5IjpbMTc0MDE0NjczOSwyMDUzNDE5MzUxLC00OD
+A4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYzMjU5LC00NTY3OTky
+MTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLT
+EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
+MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
+csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
 -->
