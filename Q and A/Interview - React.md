@@ -366,28 +366,13 @@ class ThemedButton extends React.Component {
 ```
 // Input.js
 function Input({ type, onKeyDown, placeholder }, ref) {
-
-return (
-
-<input
-
-ref={ref}
-
-type={type}
-
-onKeyDown={onKeyDown}
-
-placeholder={placeholder}
-
-/>
-
-);
-
+	return (
+		<input ref={ref} type={type} onKeyDown={onKeyDown} placeholder={placeholder}/>
+	);
 }
-
 const forwaredInput = React.forwardRef(Input);
-
 export default forwaredInput;
+
 // App.js
 function App() {
   const firstNameRef = useRef(null);
@@ -416,28 +401,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Input
-          type="text"
-          onKeyDown={firstKeyDown}
-          ref={firstNameRef}
-          placeholder="enter first name"
-        />
-        <Input
-          type="text"
-          onKeyDown={lastKeyDown}
-          ref={lastNameRef}
-          placeholder="enter last name"
-        />
-        <button onKeyDown={submitKeyDown} ref={submitRef}>
-          Submit
-        </button>
+        <Input type="text" onKeyDown={firstKeyDown} ref={firstNameRef} placeholder="enter first name" />
+        <Input type="text" onKeyDown={lastKeyDown} ref={lastNameRef} placeholder="enter last name" />
+        <button onKeyDown={submitKeyDown} ref={submitRef}>Submit</button>
       </header>
     </div>
   );
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0Njg2MzM0MCwtOTc5NzM2ODgyLDE5OT
+eyJoaXN0b3J5IjpbLTQ4MDg1NTk3OCwtOTc5NzM2ODgyLDE5OT
 E5NjMyNTksLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LDU4ODQ5MjYx
 NiwtMjEzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NS
 wtMTQ3NTQxMzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5
