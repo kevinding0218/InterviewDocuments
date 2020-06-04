@@ -356,9 +356,11 @@ class ThemedButton extends React.Component {
 - `lifecycle event` => `useEffect`
 ### how to debug hooks
 - `console.log` or `debugger` statement
-- react developer to
+- react developer tool(chome plugin)
+- useDebugValue
+###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MzA0ODcwOSw1ODg0OTI2MTYsLTIxMz
+eyJoaXN0b3J5IjpbLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMz
 A5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0
 MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OS
 w3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2
