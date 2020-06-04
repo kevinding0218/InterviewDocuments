@@ -409,6 +409,51 @@ const [state, setState] = useState(() => {
 - Unlike `componentDidMount` and `componentDidUpdate`, the function passed to `useEffect` fires **after** layout and paint, during a deferred event. This makes it suitable for the many common side effects, like setting up subscriptions and event handlers, because most types of work shouldn’t block the browser from updating the screen.
 - Although  `useEffect`  is deferred until after the browser has painted, it’s guaranteed to fire before any new renders. React will always flush a previous render’s effects before starting a new update.
 #### useContext
+```
+const value = useContext(MyContext);
+```
+- Accepts a context object (the value returned from  `React.createContext`) and returns the current context value for that context. The current context value is determined by the  `value`  prop of the nearest  `<MyContext.Provider>`  above the calling component in the tree.
+- When the nearest  `<MyContext.Provider>`  above the component updates, this Hook will trigger a rerender with the latest context  `value`  passed to that  `MyContext`  provider. Even if an ancestor uses  [`React.memo`](https://reactjs.org/docs/react-api.html#reactmemo)  or  [`shouldComponentUpdate`](https://reactjs.org/docs/react-component.html#shouldcomponentupdate), a rerender will still happen starting at the component itself using  `useContext`.
+- A component calling `useContext` will always re-render when the context value changes. If re-rendering the component is expensive, you can [optimize it by using memoization](https://github.com/facebook/react/issues/15156#issuecomment-474590693).
+- Example
+```
+const themes = {
+  light: {
+    foreground: "#000000",
+    background: "#eeeeee"
+  },
+  dark: {
+    foreground: "#ffffff",
+    background: "#222222"
+  }
+};
+
+const ThemeContext = React.createContext(themes.light);
+
+function App() {
+  return (
+    <ThemeContext.Provider value={themes.dark}>
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+
+function Toolbar(props) {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+function ThemedButton() {
+  const theme = useContext(ThemeContext);  return (    <button style={{ background: theme.background, color: theme.foreground }}>      I am styled by theme context!    </button>  );
+}
+```
+#### useReducer
+```
+const [state, dispatch] = useReducer(reducer, initialArg, init);
+```
 
 #### useRef and forwardRef
 - Code example
@@ -470,10 +515,10 @@ const memorizedComp = useMemo(() => {return <ChildComponent />}, [currentCompPro
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNzI1MDEzMSwyMDUzNDE5MzUxLC00OD
-A4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYzMjU5LC00NTY3OTky
-MTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLT
-EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
-MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
-csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbODgxMzI0NzExLDIwNTM0MTkzNTEsLTQ4MD
+g1NTk3OCwtOTc5NzM2ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIx
+OCwtNTU2NjIzNTg3LDU4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMT
+I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
+Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
+wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
 -->
