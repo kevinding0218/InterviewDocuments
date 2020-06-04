@@ -509,61 +509,31 @@ const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 - It could also return a sub component depends on specific variable changes
 ```
 const memorizedComp = useMemo(() => {return <ChildComponent />}, [currentCompProperty]);
-#### useRef and forwardRef
-- Code example
 ```
-// Input.js
-function Input({ type, onKeyDown, placeholder }, ref) {
-	return (
-		<input ref={ref} type={type} onKeyDown={onKeyDown} placeholder={placeholder}/>
-	);
-}
-const forwaredInput = React.forwardRef(Input);
-export default forwaredInput;
-
-// App.js
-function App() {
-  const firstNameRef = useRef(null);
-  const lastNameRef = useRef(null);
-  const submitRef = useRef(null);
-
-  useEffect(() => {
-    firstNameRef.current.focus();
-  }, []);
-
-  function firstKeyDown(e) {
-    if (e.key === "Enter") {
-      lastNameRef.current.focus();
-    }
-  }
-
-  function lastKeyDown(e) {
-    if (e.key === "Enter") {
-      submitRef.current.focus();
-    }
-  }
-
-  function submitKeyDown() {
-    alert("form submitted");
-  }
+#### useRef and forwardRef
+```
+const refContainer = useRef(initialValue);
+```
+- `useRef`  returns a mutable ref object whose  `.current`  property is initialized to the passed argument (`initialValue`). The returned object will persist for the full lifetime of the component.
+- A common use case is to access a child imperatively:
+```
+function TextInputWithFocusButton() {
+  const inputEl = useRef(null);
+  const onButtonClick = () => {
+    // `current` points to the mounted text input element
+    inputEl.current.focus();
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <Input type="text" onKeyDown={firstKeyDown} ref={firstNameRef} placeholder="enter first 
-name" />
-        <Input type="text" onKeyDown={lastKeyDown} ref={lastNameRef} placeholder="enter last name" />
-        <button onKeyDown={submitKeyDown} ref={submitRef}>Submit</button>
-      </header>
-    </div>
+    <>
+      <input ref={inputEl} type="text" />
+      <button onClick={onButtonClick}>Focus the input</button>
+    </>
   );
 }
 ```
 
-
-```
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDc2MTUwNzYsMjA1MzQxOTM1MSwtND
+eyJoaXN0b3J5IjpbLTE4NzI1Mjk1MTIsMjA1MzQxOTM1MSwtND
 gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
 MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
 0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
