@@ -388,6 +388,23 @@ function Counter({initialCount}) {
   );
 }
 ```
+- Note: Unlike the  `setState`  method found in class components,  `useState`  does not automatically merge update objects. You can replicate this behavior by combining the function updater form with object spread syntax:
+```
+setState(prevState => {
+  // Object.assign would also work
+  return {...prevState, ...updatedValues};
+});
+```
+- Lazy initial state
+	- The  `initialState`  argument is the state used during the initial render. In subsequent renders, it is disregarded. If the initial state is the result of an expensive computation, you may provide a function instead, which will be executed only on the initial render:
+
+```
+const [state, setState] = useState(() => {
+  const initialState = someExpensiveComputation(props);
+  return initialState;
+});
+```
+#### 
 ### useRef and forwardRef
 - Code example
 ```
@@ -448,10 +465,11 @@ const memorizedComp = useMemo(() => {return <ChildComponent />}, [currentCompPro
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNzI5NDU1NSwyMDUzNDE5MzUxLC00OD
-A4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYzMjU5LC00NTY3OTky
-MTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLT
-EyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOTksMjcx
-MTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MD
-csMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTEwMzI0Nzg1NjUsMjA1MzQxOTM1MSwtND
+gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
+MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
+0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
+MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
+A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+
 -->
