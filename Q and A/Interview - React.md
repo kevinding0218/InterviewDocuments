@@ -576,14 +576,36 @@ function useFriendStatus(friendID) {
 }
 ```
 ### [Custom Hook]([https://reactjs.org/docs/hooks-custom.html](https://reactjs.org/docs/hooks-custom.html))
+#### Extracting a Custom Hook
 - When we want to share logic between two JavaScript functions, we extract it to a third function. Both components and Hooks are functions, so this works for them too!
 - **A custom Hook is a JavaScript function whose name starts with ”`use`” and that may call other Hooks.**  For example,  `useFriendStatus`  below is our first custom Hook
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzE5OTI0NjgsMjA1MzQxOTM1MSwtND
-gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
-MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
-0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
-MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
-A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+```
+import { useState, useEffect } from 'react';
 
+function useFriendStatus(friendID) {  const [isOnline, setIsOnline] = useState(null);
+
+  useEffect(() => {
+    function handleStatusChange(status) {
+      setIsOnline(status.isOnline);
+    }
+
+    ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
+    return () => {
+      ChatAPI.unsubscribeFromFriendStatus(friendID, handleStatusChange);
+    };
+  });
+
+  return isOnline;
+}
+```
+- The purpose of our `useFriendStatus` Hook is to subscribe us to a friend’s status. This is why it takes `friendID` as an argument, and returns whether this friend is online
+#### Using a Custom Hook
+-
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTc4NTg4NzMxLDIwNTM0MTkzNTEsLTQ4MD
+g1NTk3OCwtOTc5NzM2ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIx
+OCwtNTU2NjIzNTg3LDU4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMT
+I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
+Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
+wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
 -->
