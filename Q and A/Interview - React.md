@@ -361,12 +361,86 @@ class ThemedButton extends React.Component {
 - `console.log` or `debugger` statement
 - react developer tool(chome plugin)
 - useDebugValue
-###
+### useRef and forwardRef
+- Code example
+```
+// Input.js
+function Input({ type, onKeyDown, placeholder }, ref) {
+
+return (
+
+<input
+
+ref={ref}
+
+type={type}
+
+onKeyDown={onKeyDown}
+
+placeholder={placeholder}
+
+/>
+
+);
+
+}
+
+const forwaredInput = React.forwardRef(Input);
+
+export default forwaredInput;
+// App.js
+function App() {
+  const firstNameRef = useRef(null);
+  const lastNameRef = useRef(null);
+  const submitRef = useRef(null);
+
+  useEffect(() => {
+    firstNameRef.current.focus();
+  }, []);
+
+  function firstKeyDown(e) {
+    if (e.key === "Enter") {
+      lastNameRef.current.focus();
+    }
+  }
+
+  function lastKeyDown(e) {
+    if (e.key === "Enter") {
+      submitRef.current.focus();
+    }
+  }
+
+  function submitKeyDown() {
+    alert("form submitted");
+  }
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Input
+          type="text"
+          onKeyDown={firstKeyDown}
+          ref={firstNameRef}
+          placeholder="enter first name"
+        />
+        <Input
+          type="text"
+          onKeyDown={lastKeyDown}
+          ref={lastNameRef}
+          placeholder="enter last name"
+        />
+        <button onKeyDown={submitKeyDown} ref={submitRef}>
+          Submit
+        </button>
+      </header>
+    </div>
+  );
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3OTczNjg4MiwxOTkxOTYzMjU5LC00NT
-Y3OTkyMTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLTIxMzA5OTgy
-MTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0MTMzOT
-ksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OSw3MjM5
-MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2OTIxNl
-19
+eyJoaXN0b3J5IjpbMTI0Njg2MzM0MCwtOTc5NzM2ODgyLDE5OT
+E5NjMyNTksLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LDU4ODQ5MjYx
+NiwtMjEzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NS
+wtMTQ3NTQxMzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5
+NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5ND
+EsNjU0MzY5MjE2XX0=
 -->
