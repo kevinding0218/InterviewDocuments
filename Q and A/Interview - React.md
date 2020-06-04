@@ -454,7 +454,33 @@ function ThemedButton() {
 ```
 const [state, dispatch] = useReducer(reducer, initialArg, init);
 ```
+- An alternative to [`useState`](https://reactjs.org/docs/hooks-reference.html#usestate). Accepts a reducer of type `(state, action) => newState`, and returns the current state paired with a `dispatch` method
+- `useReducer` is usually preferable to `useState` when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. `useReducer` also lets you optimize performance for components that trigger deep updates because [you can pass  `dispatch`  down instead of callbacks](https://reactjs.org/docs/hooks-faq.html#how-to-avoid-passing-callbacks-down).
+```
+const initialState = {count: 0};
 
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return {count: state.count + 1};
+    case 'decrement':
+      return {count: state.count - 1};
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <>
+      Count: {state.count}
+      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+    </>
+  );
+}
+```
 #### useRef and forwardRef
 - Code example
 ```
@@ -515,10 +541,11 @@ const memorizedComp = useMemo(() => {return <ChildComponent />}, [currentCompPro
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgxMzI0NzExLDIwNTM0MTkzNTEsLTQ4MD
-g1NTk3OCwtOTc5NzM2ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIx
-OCwtNTU2NjIzNTg3LDU4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMT
-I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
-Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
-wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTE1NDA1MTY0NjMsMjA1MzQxOTM1MSwtND
+gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
+MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
+0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
+MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
+A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+
 -->
