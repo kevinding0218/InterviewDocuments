@@ -337,6 +337,7 @@ class ThemedButton extends React.Component {
 			- foreach prop, you could have separate `useEffect`
 		- `componentDidMount` => `useEffect(() => {}, [])`
 			- if provided empty array, this would run only one time after initial render
+			- if no array argument provided, this would run at initial mount as well as every update
 	- updates
 		- `getDerivedStateFromProps` => `useEffect(() => {}, [prop1, prop2])`
 		- `shouldComponentUpdate()` => `useMemo()`
@@ -360,9 +361,9 @@ class ThemedButton extends React.Component {
 - useDebugValue
 ###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDYwMTEzMTQsLTU1NjYyMzU4Nyw1OD
-g0OTI2MTYsLTIxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDcz
-MDY1NDUsLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMD
-cwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3
-NzI1OTQxLDY1NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LDU4OD
+Q5MjYxNiwtMjEzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMw
+NjU0NSwtMTQ3NTQxMzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNz
+AsNzU5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3
+MjU5NDEsNjU0MzY5MjE2XX0=
 -->
