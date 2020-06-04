@@ -352,10 +352,15 @@ class ThemedButton extends React.Component {
 ### how to upgrade class project to hooks project
 - update react, react-dom version
 - update code on route at a time
+- `this.state` => `useState`
+- `lifecycle event` => `useEffect`
+### how to debug hooks
+- `console.log` or `debugger` statement
+- react developer to
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzc0MDIwMzEsNTg4NDkyNjE2LC0yMT
-MwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1
-NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2Nz
-ksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQz
-NjkyMTZdfQ==
+eyJoaXN0b3J5IjpbLTg2MzA0ODcwOSw1ODg0OTI2MTYsLTIxMz
+A5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0NzU0
+MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MDY3OS
+w3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1NDM2
+OTIxNl19
 -->
