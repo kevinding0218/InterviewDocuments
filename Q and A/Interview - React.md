@@ -542,12 +542,31 @@ function TextInputWithFocusButton() {
 ```
 useImperativeHandle(ref, createHandle, [deps])
 ```
+- `useImperativeHandle`  customizes the instance value that is exposed to parent components when using  `ref`. As always, imperative code using refs should be avoided in most cases.  `useImperativeHandle`  should be used with  [`forwardRef`](https://reactjs.org/docs/react-api.html#reactforwardref):
+```
+function FancyInput(props, ref) {
+  const inputRef = useRef();
+  useImperativeHandle(ref, () => ({
+    focus: () => {
+      inputRef.current.focus();
+    }
+  }));
+  return <input ref={inputRef} ... />;
+}
+FancyInput = forwardRef(FancyInput);
+```
+- In this example, a parent component that renders  `<FancyInput ref={inputRef} />`  would be able to call  `inputRef.current.focus()`.
+#### useLayoutEffect
+- The signature is identical to  `useEffect`, but it fires synchronously after all DOM mutations. Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside  `useLayoutEffect`  will be flushed synchronously, before the browser has a chance to paint.
+- Prefer the standard  `useEffect`  when possible to avoid blocking visual updates.
+#### useDebugValue
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI1NTQyMTE5LDIwNTM0MTkzNTEsLTQ4MD
-g1NTk3OCwtOTc5NzM2ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIx
-OCwtNTU2NjIzNTg3LDU4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMT
-I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
-Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
-wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbLTE5MTk4NDUyOTMsMjA1MzQxOTM1MSwtND
+gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
+MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
+0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
+MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
+A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
+
 -->
