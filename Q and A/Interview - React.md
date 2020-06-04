@@ -531,13 +531,23 @@ function TextInputWithFocusButton() {
   );
 }
 ```
+- Essentially, `useRef` is like a “box” that can hold a mutable value in its `.current` property.
+- You might be familiar with refs primarily as a way to [access the DOM](https://reactjs.org/docs/refs-and-the-dom.html). If you pass a ref object to React with `<div ref={myRef} />`, React will set its `.current` property to the corresponding DOM node whenever that node changes.
+- However,  `useRef()`  is useful for more than the  `ref`  attribute. It’s  [handy for keeping any mutable value around](https://reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables)  similar to how you’d use instance fields in classes.
+- This works because  `useRef()`  creates a plain JavaScript object. The only difference between  `useRef()`  and creating a  `{current: ...}`  object yourself is that  `useRef`  will give you the same ref object on every render.
+- Keep in mind that  `useRef`  _doesn’t_  notify you when its content changes. Mutating the  `.current`  property doesn’t cause a re-render. If you want to run some code when React attaches or detaches a ref to a DOM node, you may want to use a  [callback ref](https://reactjs.org/docs/hooks-faq.html#how-can-i-measure-a-dom-node)  instead.
+
+### [](https://reactjs.org/docs/hooks-reference.html#useimperativehandle)
+#### useImperativeHandle
+```
+useImperativeHandle(ref, createHandle, [deps])
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzI1Mjk1MTIsMjA1MzQxOTM1MSwtND
-gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
-MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
-0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
-MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
-A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
-
+eyJoaXN0b3J5IjpbNzI1NTQyMTE5LDIwNTM0MTkzNTEsLTQ4MD
+g1NTk3OCwtOTc5NzM2ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIx
+OCwtNTU2NjIzNTg3LDU4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMT
+I4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzEx
+Mzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNy
+wyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0MzY5MjE2XX0=
 -->
