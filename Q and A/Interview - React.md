@@ -409,11 +409,22 @@ function App() {
   );
 }
 ```
+### useMemo
+```
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+```
+- Returns a  [memoized](https://en.wikipedia.org/wiki/Memoization)  value.
+- Pass a “create” function and an array of dependencies.  `useMemo`  will only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.
+- It could also return a sub component depends on specific variable changes
+```
+const memorizedComp =
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MDg1NTk3OCwtOTc5NzM2ODgyLDE5OT
-E5NjMyNTksLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LDU4ODQ5MjYx
-NiwtMjEzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NS
-wtMTQ3NTQxMzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5
-NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5ND
-EsNjU0MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbMTY2NDI2MTYwNywtNDgwODU1OTc4LC05Nz
+k3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5MjE4LC01NTY2MjM1
+ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMjgyMDI4NjAwLC
+0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOTkzNSwtMTI2
+NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2ND
+ksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
 -->
