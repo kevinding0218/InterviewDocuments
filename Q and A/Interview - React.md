@@ -575,10 +575,11 @@ function useFriendStatus(friendID) {
   return isOnline;
 }
 ```
-### Custom Hook
-[Document]([https://reactjs.org/docs/hooks-custom.html](https://reactjs.org/docs/hooks-custom.html))
+### [Custom Hook]([https://reactjs.org/docs/hooks-custom.html](https://reactjs.org/docs/hooks-custom.html))
+- When we want to share logic between two JavaScript functions, we extract it to a third function. Both components and Hooks are functions, so this works for them too!
+- **A custom Hook is a JavaScript function whose name starts with ”`use`” and that may call other Hooks.**  For example,  `useFriendStatus`  below is our first custom Hook
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDk0NTU5ODMsMjA1MzQxOTM1MSwtND
+eyJoaXN0b3J5IjpbLTE0NzE5OTI0NjgsMjA1MzQxOTM1MSwtND
 gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
 MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
 0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
