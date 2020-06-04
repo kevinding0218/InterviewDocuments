@@ -344,9 +344,13 @@ class ThemedButton extends React.Component {
 			- no array defined means it'll only run when updates, not on initial render
 		- `getSnapshotBeforeUpdate` => custom Hook to hold previous state
 	- unmount
-		- `useEffect(() => {})`
+		- `useEffect(() => {return () => {//cleanup code}}, [])`
+			- instead of executing a function, returns a function which would do the clean up job
+- error boundary
+	- getDerivedStateFromError()
+	- componentDidCatch()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDY4MTE2NDIsNTg4NDkyNjE2LC0yMT
+eyJoaXN0b3J5IjpbLTE0MDAxMTAwNzUsNTg4NDkyNjE2LC0yMT
 MwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1
 NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2Nz
 ksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQz
