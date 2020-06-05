@@ -11,7 +11,13 @@
 	- Whereas a Constructor belongs to the object and called when we use the new operator to create an instance. 
 	- Since a constructor is not class property, it makes sense that it’s not allowed to be static.
 - Static Block/Method can’t access non-static variables
-- static methods can’t access non-static variables. Same is true for static block also.
+	- static methods can’t access non-static variables. Same is true for static block also.
+	- if we make constructor as static then it won’t be able to initialize the object variables. That will defeat the whole purpose of having a constructor for creating the object. So it is justified to have the constructor as non-static.
+	- we can’t use `this` inside a static method to refer to the object variable.
+- Static Constructor will break inheritance
+	- In Java, every class implicitly extends Object class. We can define a class hierarchy where subclass constructor calls the superclass constructor. This is done by `super()` method call.
+	- Most of the times JVM automatically calls the superclass constructor but sometimes we have to manually call them if there are multiple constructors in the superclass.
+	- 
 ## JavaEE Annotation
 #### @Path [link]([https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html))
 ```
@@ -78,6 +84,6 @@ public class SomeResource {
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NjIzNTM1NiwxMTcyNTI5MTIxLC0xMj
-M1OTk1MzA0XX0=
+eyJoaXN0b3J5IjpbODk3MzY4ODQ4LDExNzI1MjkxMjEsLTEyMz
+U5OTUzMDRdfQ==
 -->
