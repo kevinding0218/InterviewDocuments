@@ -26,6 +26,22 @@
 	- Nested classes that are declared static are simply called static nested classes. 
 	- Non-static nested classes are called inner classes.
 #### static nested class
+- Static nested classes are accessed using the enclosing class name
+- For example, to create an object for the static nested class, use this syntax:
+```
+OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();
+```
+#### inner class
+- Objects that are instances of an inner class exist within an instance of the outer class
+```
+class OuterClass {
+    ...
+    class InnerClass {
+        ...
+    }
+}
+```
+- An instance of InnerClass can exist only within an instance of OuterClass and has direct access to the methods and fields of its enclosing instance.
 - 
 ## JavaEE Annotation
 #### @Path [link]([https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html))
@@ -93,6 +109,6 @@ public class SomeResource {
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDA2NDUwMDcsLTM2MzYwMDU5NSwxMT
-cyNTI5MTIxLC0xMjM1OTk1MzA0XX0=
+eyJoaXN0b3J5IjpbLTExNjAxMjUxNDksLTEyMDA2NDUwMDcsLT
+M2MzYwMDU5NSwxMTcyNTI5MTIxLC0xMjM1OTk1MzA0XX0=
 -->
