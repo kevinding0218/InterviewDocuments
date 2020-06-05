@@ -29,7 +29,15 @@ public class UserResource {
 ```
 @Path("users/{username: [a-zA-Z][a-zA-Z_0-9]}")
 ```
-In this example the  username  variable will match only user names that begin with one uppercase or lowercase letter and zero or more alphanumeric characters and the underscore character. If a user name does not match that template, a **404 (Not Found)** response will be sent to the client.
+- In this example the  username  variable will match only user names that begin with one uppercase or lowercase letter and zero or more alphanumeric characters and the underscore character. If a user name does not match that template, a **404 (Not Found)** response will be sent to the client.
+- A URI path template has one or more variables, with each variable name surrounded by braces: { to begin the variable name and } to end it. In the preceding example, username is the variable name.
+- For example, if you want to deploy a resource that responds to the URI path template  `http://example.com/myContextRoot/resources/{name1}/{name2}/`, you must deploy the application to a Java EE server that responds to requests to the  `http://example.com/myContextRoot`  URI and then decorate your resource with the following  @Path  annotation:
+```
+@Path("/{name1}/{name2}/")
+public class SomeResource {
+	...
+}
+```
 #### @Produces
 ```
 @Produces(MediaType.APPLICATION_JSON)
@@ -49,5 +57,5 @@ In this example the  username  variable will match only user names that begin wi
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzcyODk0NDBdfQ==
+eyJoaXN0b3J5IjpbLTg0Mzg3NzEzN119
 -->
