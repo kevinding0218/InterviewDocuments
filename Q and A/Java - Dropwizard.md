@@ -42,7 +42,11 @@ class OuterClass {
 }
 ```
 - An instance of InnerClass can exist only within an instance of OuterClass and has direct access to the methods and fields of its enclosing instance.
-- 
+- To instantiate an inner class, you must first instantiate the outer class. Then, create the inner object within the outer object with this syntax
+```
+OuterClass outerObject = new OuterClass()
+OuterClass.InnerClass innerObject = outerObject.new InnerClass();
+```
 ## JavaEE Annotation
 #### @Path [link]([https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html))
 ```
@@ -109,6 +113,6 @@ public class SomeResource {
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjAxMjUxNDksLTEyMDA2NDUwMDcsLT
-M2MzYwMDU5NSwxMTcyNTI5MTIxLC0xMjM1OTk1MzA0XX0=
+eyJoaXN0b3J5IjpbMjAwNTc2MTY0MCwtMTIwMDY0NTAwNywtMz
+YzNjAwNTk1LDExNzI1MjkxMjEsLTEyMzU5OTUzMDRdfQ==
 -->
