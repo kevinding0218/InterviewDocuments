@@ -1,3 +1,11 @@
+### static initializer / static block
+- The static initializer is a `static {}` block of code inside java class, and run only one time before the constructor or main method is called.
+- is a block of code  `static { ... }`  inside any java class. and executed by virtual machine when class is called.
+- No  `return`  statements are supported.
+- No arguments are supported.
+- No  `this`  or  `super`  are supported.
+- most of the time it is used when doing database connection, API init, Logging and etc.
+- similar as static constructor in C#
 ## JavaEE Annotation
 #### @Path [link]([https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html))
 ```
@@ -64,5 +72,5 @@ public class SomeResource {
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzU5OTUzMDRdfQ==
+eyJoaXN0b3J5IjpbMTE3MjUyOTEyMSwtMTIzNTk5NTMwNF19
 -->
