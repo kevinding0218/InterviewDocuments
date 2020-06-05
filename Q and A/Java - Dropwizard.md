@@ -1,4 +1,8 @@
-## Annotation
+## JavaEE Annotation
+#### @Path [link]([https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html))
+```
+@Path("eventemail/v1")
+```
 #### @Produces
 ```
 @Produces(MediaType.APPLICATION_JSON)
@@ -18,5 +22,5 @@
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTk5MTEzMDNdfQ==
+eyJoaXN0b3J5IjpbMjEzNzA1MTc2MF19
 -->
