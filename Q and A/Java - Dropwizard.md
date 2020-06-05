@@ -6,6 +6,12 @@
 - No  `this`  or  `super`  are supported.
 - most of the time it is used when doing database connection, API init, Logging and etc.
 - similar as static constructor in C#
+#### why static constructor is not allowed
+- Static Belongs to Class, Constructor to Object
+	- Whereas a Constructor belongs to the object and called when we use the new operator to create an instance. 
+	- Since a constructor is not class property, it makes sense that it’s not allowed to be static.
+- Static Block/Method can’t access non-static variables
+- static methods can’t access non-static variables. Same is true for static block also.
 ## JavaEE Annotation
 #### @Path [link]([https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html))
 ```
@@ -72,5 +78,6 @@ public class SomeResource {
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MjUyOTEyMSwtMTIzNTk5NTMwNF19
+eyJoaXN0b3J5IjpbMTA3NjIzNTM1NiwxMTcyNTI5MTIxLC0xMj
+M1OTk1MzA0XX0=
 -->
