@@ -12,7 +12,20 @@ In this kind of example, a user is prompted to type his or her name, and then a 
 ```
 http://example.com/users/Galileo
 ```
+#### @PathParam
+- the @PathParam annotation may be used on the method parameter of a request method
+```
+@Path("/users/{username}")
+public class UserResource {
 
+    @GET
+    @Produces("text/xml")
+    public String getUser(@PathParam("username") String userName) {
+        ...
+    }
+}
+```
+- 
 #### @Produces
 ```
 @Produces(MediaType.APPLICATION_JSON)
@@ -32,5 +45,5 @@ http://example.com/users/Galileo
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3Njk0NjUxMl19
+eyJoaXN0b3J5IjpbMTY5NTczNDI3Nl19
 -->
