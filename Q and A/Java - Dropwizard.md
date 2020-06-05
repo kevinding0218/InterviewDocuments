@@ -21,6 +21,12 @@
 - Java Static Constructor Alternative
 	- If you want to initialize some  [static](https://www.journaldev.com/1365/static-keyword-in-java)  variables in the class, you can use static block. 
 	- Note that we can’t pass arguments to the static block, so if you want to initialize static variables then you can do that in the normal constructor too.
+### Nested classes
+- Nested classes are divided into two categories: **static** and **non-static**. 				
+	- Nested classes that are declared static are simply called static nested classes. 
+	- Non-static nested classes are called inner classes.
+#### static nested class
+- 
 ## JavaEE Annotation
 #### @Path [link]([https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html))
 ```
@@ -87,6 +93,6 @@ public class SomeResource {
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MzYwMDU5NSwxMTcyNTI5MTIxLC0xMj
-M1OTk1MzA0XX0=
+eyJoaXN0b3J5IjpbLTEyMDA2NDUwMDcsLTM2MzYwMDU5NSwxMT
+cyNTI5MTIxLC0xMjM1OTk1MzA0XX0=
 -->
