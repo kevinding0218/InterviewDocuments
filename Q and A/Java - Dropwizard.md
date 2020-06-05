@@ -94,6 +94,23 @@ public class SomeResource {
 	  <url-pattern>/resources/*</url-pattern>
 </servlet-mapping>
 ```
+#### @QueryParam
+- annotation to inject URI query parameter into Java method
+- Example:
+```java
+@Path("/users")
+public class UserService {
+
+	@GET
+	@Path("/query")
+	public Response getUsers(
+		@QueryParam("from") int from,
+		@QueryParam("to") int to,
+		@QueryParam("orderBy") List<String> orderBy) {
+		...
+}
+```
+- URI Pattern : “**users/query?from=100&to=200&orderBy=age&orderBy=name**”
 #### @Produces
 ```
 @Produces(MediaType.APPLICATION_JSON)
@@ -118,7 +135,7 @@ public class SomeResource {
 #### @Valid
 - Marks a property, method parameter or method return type for validation cascading.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3Mzg4NjY4MiwyMDA1NzYxNjQwLC0xMj
-AwNjQ1MDA3LC0zNjM2MDA1OTUsMTE3MjUyOTEyMSwtMTIzNTk5
-NTMwNF19
+eyJoaXN0b3J5IjpbMTIyODIxMTc4OCwxNTczODg2NjgyLDIwMD
+U3NjE2NDAsLTEyMDA2NDUwMDcsLTM2MzYwMDU5NSwxMTcyNTI5
+MTIxLC0xMjM1OTk1MzA0XX0=
 -->
