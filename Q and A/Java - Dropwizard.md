@@ -25,7 +25,11 @@ public class UserResource {
     }
 }
 ```
-- 
+- This variable may be customized by specifying a different regular expression after the variable name. For example, if a user name must consist only of lowercase and uppercase alphanumeric characters, override the default regular expression in the variable definition:
+```
+@Path("users/{username: [a-zA-Z][a-zA-Z_0-9]}")
+```
+In this example the  username  variable will match only user names that begin with one uppercase or lowercase letter and zero or more alphanumeric characters and the underscore character. If a user name does not match that template, a **404 (Not Found)** response will be sent to the client.
 #### @Produces
 ```
 @Produces(MediaType.APPLICATION_JSON)
@@ -45,5 +49,5 @@ public class UserResource {
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NTczNDI3Nl19
+eyJoaXN0b3J5IjpbLTEwMzcyODk0NDBdfQ==
 -->
