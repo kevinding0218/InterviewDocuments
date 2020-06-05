@@ -17,7 +17,10 @@
 - Static Constructor will break inheritance
 	- In Java, every class implicitly extends Object class. We can define a class hierarchy where subclass constructor calls the superclass constructor. This is done by `super()` method call.
 	- Most of the times JVM automatically calls the superclass constructor but sometimes we have to manually call them if there are multiple constructors in the superclass.
-	- 
+	- If you look at the `super()` method, it’s not static. So if the constructor becomes static, we won’t be able to use it and that will break [inheritance in java](https://www.journaldev.com/644/inheritance-java-example).
+- Java Static Constructor Alternative
+	- If you want to initialize some  [static](https://www.journaldev.com/1365/static-keyword-in-java)  variables in the class, you can use static block. 
+	- Note that we can’t pass arguments to the static block, so if you want to initialize static variables then you can do that in the normal constructor too.
 ## JavaEE Annotation
 #### @Path [link]([https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html](https://docs.oracle.com/cd/E19798-01/821-1841/6nmq2cp26/index.html))
 ```
@@ -84,6 +87,6 @@ public class SomeResource {
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk3MzY4ODQ4LDExNzI1MjkxMjEsLTEyMz
-U5OTUzMDRdfQ==
+eyJoaXN0b3J5IjpbLTM2MzYwMDU5NSwxMTcyNTI5MTIxLC0xMj
+M1OTk1MzA0XX0=
 -->
