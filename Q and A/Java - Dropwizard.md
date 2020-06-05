@@ -3,6 +3,16 @@
 ```
 @Path("eventemail/v1")
 ```
+- The @Path annotation identifies the URI path template to which the resource responds and is specified at the class or method level of a resource
+- Variables are denoted by braces ({  and  }). For example, look at the following  @Path  annotation:
+```
+@Path("/users/{username}")
+```
+In this kind of example, a user is prompted to type his or her name, and then a JAX-RS web service configured to respond to requests to this URI path template responds. For example, if the user types the user name “Galileo,” the web service responds to the following URL:
+```
+http://example.com/users/Galileo
+```
+
 #### @Produces
 ```
 @Produces(MediaType.APPLICATION_JSON)
@@ -22,5 +32,5 @@
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNzA1MTc2MF19
+eyJoaXN0b3J5IjpbMjA3Njk0NjUxMl19
 -->
