@@ -38,6 +38,13 @@ public class SomeResource {
 	...
 }
 ```
+- In this example, the URL pattern for the JAX-RS helper servlet, specified in  web.xml, is the default:
+```
+<servlet-mapping>
+	  <servlet-name>My JAX-RS Resource</servlet-name>
+	  <url-pattern>/resources/*</url-pattern>
+</servlet-mapping>
+```
 #### @Produces
 ```
 @Produces(MediaType.APPLICATION_JSON)
@@ -57,5 +64,5 @@ public class SomeResource {
 - If a resource is unable to consume the MIME type of a client request, the JAX-RS runtime sends back an HTTP 415 (“Unsupported Media Type”) error.
 - The value of  @Consumes  is an array of  String  of acceptable MIME types.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0Mzg3NzEzN119
+eyJoaXN0b3J5IjpbLTEyMzU5OTUzMDRdfQ==
 -->
