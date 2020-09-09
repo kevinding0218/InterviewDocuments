@@ -17,7 +17,9 @@ gRPC
 - Cross-platform
 - Scalable
 - Streaming
+- fast and efficient
+- strongly typed messaging
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzMTk2MzY2LC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTY1ODQxNTAxMCwtMTUwNjcxMzA1MF19
 -->
