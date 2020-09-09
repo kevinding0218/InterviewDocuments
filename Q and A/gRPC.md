@@ -1,6 +1,6 @@
 Options for Interservice Communication
-- REST: stands for representational state transfer and goes with the concept of sending resources back and forth, and manipulating those resources
-- RPC: remote procedure call, 
+- REST: stands for REpresentational State Transfer and goes with the concept of sending resources back and forth, and manipulating those resources, based on resources
+- RPC: Remote Procedure Call, based on actions or functions.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODY0NDU4NTddfQ==
+eyJoaXN0b3J5IjpbMTY5OTU1NDk3N119
 -->
