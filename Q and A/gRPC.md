@@ -2,12 +2,13 @@ Options for Interservice Communication
 - REST: stands for REpresentational State Transfer and goes with the concept of sending resources back and forth, and manipulating those resources
 	- focus on resources, e.g: `GET /employee/42`, server recognize that request, it's going to locate that resource and send it back to client if it's available.
 	- embrace with HTTP protocal, expecting a GET/POST/PUT/DELETE call
-	- loose coupling, as we've go
+	- loose coupling, as we've got the resource focus, so the server only has to expose the resources that are being asked for, and there's a relatively small well-defined set of actions that can be done on those.
 - RPC: Remote Procedure Call, 
 	- focus on actions or functions, e.g: `Employee getEmployee(42)`, server sees this call and will do some internal processing
 	- embrace programming semantics, expecting a normal function or method call
+	- tightly coupling, as client doesn't just need to know about the resour
 	- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NDc1NzAyOF19
+eyJoaXN0b3J5IjpbLTEzNDQwMjQ0MjddfQ==
 -->
