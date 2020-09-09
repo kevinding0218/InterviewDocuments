@@ -13,6 +13,11 @@ Options for Interservice Communication
 	- make things clear what actions a client can invoke on the server, and potentially makes it a lot easier to program the clients, because the server is going to accept those specific method calls which can be very clearly named.
 	- However, in order for the clients to be aware of what methods are going to be available, the server has to publish those in some way, so while RPC offers a lot more clarity about what potentially can be done, we are going to have to do a little bit more work in order to get our clients and servers talking to each other
 
+gRPC
+- Cross-platform
+- Scalable
+- Streaming
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbNDIzMTk2MzY2LC0xNTA2NzEzMDUwXX0=
 -->
