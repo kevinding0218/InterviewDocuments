@@ -10,8 +10,9 @@ Options for Interservice Communication
 	- embrace programming semantics, expecting a normal function or method call
 	- tightly coupling, as client doesn't just need to know about the resource that the server has to offer, it also needs to know about the methods that can be called, the arguments those methods need in order to function properly, and how to deal with the data that's going to be coming back from those calls
 	- binary based message, this is an advantage because binary message are typically much smaller than text based messages when sending the same datal
-	- muc
+	- make things clear what actions a client can invoke on the server, and potentially makes it a lot easier to program the clients, because the server is going to accept those specific method calls which can be very clearly named.
+	- However, in order for the clients to be aware of what methods are going to be available
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkyNzE3NDddfQ==
+eyJoaXN0b3J5IjpbNDY1MDM5MjQyXX0=
 -->
