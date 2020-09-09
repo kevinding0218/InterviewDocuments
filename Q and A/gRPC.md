@@ -11,8 +11,8 @@ Options for Interservice Communication
 	- tightly coupling, as client doesn't just need to know about the resource that the server has to offer, it also needs to know about the methods that can be called, the arguments those methods need in order to function properly, and how to deal with the data that's going to be coming back from those calls
 	- binary based message, this is an advantage because binary message are typically much smaller than text based messages when sending the same datal
 	- make things clear what actions a client can invoke on the server, and potentially makes it a lot easier to program the clients, because the server is going to accept those specific method calls which can be very clearly named.
-	- However, in order for the clients to be aware of what methods are going to be available
+	- However, in order for the clients to be aware of what methods are going to be available, the server has to publish those in some way, so while RPC offers a lot more clarity about what potentially can be done, we are going to have to do a little bit more work in order to get our clients and servers talking to each other
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY1MDM5MjQyXX0=
+eyJoaXN0b3J5IjpbLTE1MDY3MTMwNTBdfQ==
 -->
