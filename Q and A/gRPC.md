@@ -20,12 +20,14 @@
 - fast and efficient
 - strongly typed messaging
 #### Basic structure
-- Client(GeneratedCode) <--> adf <--> (Generated Code)Server
+- Client <--> Server
 	- Server: the component that having the responsibility of accepting requests, performing the processing that's required in order to honor that request, and then generate what response might be required
 	- Client: making request to server and waiting server to response back
+- Client(GeneratedCode) <--> adf <--> (Generated Code)Server
 	- gRPC doesn't expect client and server to talk directly to one another, instead it uses a message definitions that created using Protocol Buffers to generate some code
+	- Server + Generated Code: generated code that clients are going to interact with when they make requests of us
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1Mzk0ODI2NywtNjU4NDE1MDEwLC0xNT
-A2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTEwNDcxMzMzMDAsLTY1ODQxNTAxMCwtMT
+UwNjcxMzA1MF19
 -->
