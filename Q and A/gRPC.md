@@ -34,7 +34,9 @@
 1. Step 1: Define Messages: those messages are going to be defined as Protocol Buffers
 2. Step 2: Generate Source Code: use Proto C compiler to generate the client and server source code that we need in order to generate the interfaces that we're going to use Protocol Buffers to send messages back and forth.
 3. Step 3: Write Client/Server
+#### RPC Life Cycle
+1. Create Channel: this channel is going to wrap the actual wire protocol that's used in order to send the messages back and fo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc5NzM3MTE3LDE0NDI2Mjk1OTQsLTY1OD
-QxNTAxMCwtMTUwNjcxMzA1MF19
+eyJoaXN0b3J5IjpbMjExMzEyNzU1NiwxNDQyNjI5NTk0LC02NT
+g0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
 -->
