@@ -50,16 +50,16 @@
  - Google Token-Based: as a layer on top of SSL and TLS, requires Secure connection
  - Custom(OAuth2): it's language specific, so creating a custom authentication provider using Java is going to be a little bit different than Go
 #### Message Types
-- Unary message: a single request and asingle response in our procedure call.
+- Unary message: send a single request and expect a single response in our procedure call.
 	- rpc Method(RequestType) returns (ResponseType)
 	- always need a request type and response type in gRPC, even if you don't have any data in the request, you still have to send an empty request object along.
-- Server Streaming: 
+- Server Streaming: send a single request and then after the server is done, or while the server is generating its responses, it's actually going to send them back a piece at a time
 - Client Streaming:
 - Bidirectional Streaming:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDI5NDMyMzMsLTEzNTA3NTYwODksLT
-ExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEzNzUzMDUyMjYsLTIw
-NDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4ND
-E1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbMjg0MzM1ODUyLC0xMzUwNzU2MDg5LC0xMT
+A1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1MzA1MjI2LC0yMDQ2
+MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mjk1OTQsLTY1ODQxNT
+AxMCwtMTUwNjcxMzA1MF19
 -->
