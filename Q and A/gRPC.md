@@ -20,9 +20,9 @@
 - fast and efficient
 - strongly typed messaging
 #### Basic structure
-
+- Client() <-> adf <-->
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNTY0ODQxLC02NTg0MTUwMTAsLTE1MD
-Y3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbMjE0MzkzMjQ2OCwtNjU4NDE1MDEwLC0xNT
+A2NzEzMDUwXX0=
 -->
