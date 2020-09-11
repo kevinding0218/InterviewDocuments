@@ -46,12 +46,12 @@
  - Insecure communication
 	 - the client and server are by default commnicated using HTTP/1 with no special security involved, required no special handling, no custom certification needs to be generated.
  - SSL/TLS communication
-	 - using HTTP/2 by default, if gRPC recognize it's on a HTTP/2 secure connection, it's going to try and upgrade those connections to use HTTP/2, so communication speed would be fast as the benefit of HTTP/2, client will validate certificate, 
+	 - using HTTP/2 by default, if gRPC recognize it's on a HTTP/2 secure connection, it's going to try and upgrade those connections to use HTTP/2, so communication speed would be fast as the benefit of HTTP/2, client will validate certificate. So if you work with generated certifcates, you might have to do some additional work on the client in order to make sure it recognizes those server certifcates as valid.
  - Google Token-Based
  - Custom
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2ODAyNTk1MywtMTM1MDc1NjA4OSwtMT
+eyJoaXN0b3J5IjpbMjExNTY4MTc2OSwtMTM1MDc1NjA4OSwtMT
 EwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3NTMwNTIyNiwtMjA0
 NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNjI5NTk0LC02NTg0MT
 UwMTAsLTE1MDY3MTMwNTBdfQ==
