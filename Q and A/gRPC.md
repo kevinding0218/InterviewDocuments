@@ -29,9 +29,9 @@
 	- Client + Generated Code: has the responsibility of providing the tunnel that is going to be used in order to prepare the messages that we generate on the client to be sent over to the server.
 	- Since we have generated code on both sides, all of the underlying details about serializing and deserializing messages and how they get transported back and forth is really abstracted away from us
 	- Transport Protocol: in order to communicate back and forth, has the responsibility of sending and receiving the messages back and forth, it doesn't have the responsibility to understand the message that it's sending, that's what `generated code` does on both sides.
-	- Protocol Buffers are not the only transfer protocol in gRPC, the transport layer is pluggable, JSON-based or XML-based protocol or 
+	- Protocol Buffers are not the only transfer protocol in gRPC, the transport layer is pluggable, JSON-based or XML-based protocol or your own transport protocol are accepted as well.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUxOTE5OTA0LDE0NDI2Mjk1OTQsLTY1OD
+eyJoaXN0b3J5IjpbLTQxNzY5NjA1LDE0NDI2Mjk1OTQsLTY1OD
 QxNTAxMCwtMTUwNjcxMzA1MF19
 -->
