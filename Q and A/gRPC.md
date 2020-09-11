@@ -20,9 +20,11 @@
 - fast and efficient
 - strongly typed messaging
 #### Basic structure
-- Client() <-> adf <-->
+- Client() <--> adf <--> ()Server
+	- Server: the component that having the responsibility of accepting requests, performing the processing that's required in order to honor that request, and then generate what response might be required
+	- Client: making reques
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MzkzMjQ2OCwtNjU4NDE1MDEwLC0xNT
-A2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTE4NDgzNDk4NDcsLTY1ODQxNTAxMCwtMT
+UwNjcxMzA1MF19
 -->
