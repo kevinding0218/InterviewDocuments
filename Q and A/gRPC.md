@@ -60,11 +60,13 @@
 - Client Streaming RPC: send the request a piece at a time, here the server waits until the entire request is received, there is no processing going on the server until everything's done, then a single response will be sent back.
 	- e.g: uploading a file
 	-  rpc Method(stream RequestType) returns (ResponseType)
-- Bidirectional Streaming RPC: client continuing send request and server continuing send response back, this can happen in a very asynchronous 
+- Bidirectional Streaming RPC: client continuing send request and server continuing send response back, this can happen in a very asynchronous way,  
+	- rpc Method(stream RequestType) returns (stream ResponseType)
+	- e.g: Chat
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NTg3NTE3NiwtMTM1MDc1NjA4OSwtMT
-EwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3NTMwNTIyNiwtMjA0
-NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNjI5NTk0LC02NTg0MT
-UwMTAsLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbNTM5ODk2MDE2LC0xMzUwNzU2MDg5LC0xMT
+A1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1MzA1MjI2LC0yMDQ2
+MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mjk1OTQsLTY1ODQxNT
+AxMCwtMTUwNjcxMzA1MF19
 -->
