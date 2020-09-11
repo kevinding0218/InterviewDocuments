@@ -23,12 +23,13 @@
 - Client <--> Server
 	- Server: the component that having the responsibility of accepting requests, performing the processing that's required in order to honor that request, and then generate what response might be required
 	- Client: making request to server and waiting server to response back
-- Client(GeneratedCode) <--> adf <--> (Generated Code)Server
+- Client(GeneratedCode) <--> TransportProtocal <--> (Generated Code)Server
 	- gRPC doesn't expect client and server to talk directly to one another, instead it uses a message definitions that created using Protocol Buffers to generate some code
 	- Server + Generated Code: has the responsibility of clients are going to interact with when they make requests of us
-	- Client + Generated Code: has the responsibility of providing the tunnel that is going to be used in order to prepare the messages that we generate on the client to be sent over h
+	- Client + Generated Code: has the responsibility of providing the tunnel that is going to be used in order to prepare the messages that we generate on the client to be sent over to the server.
+	- Since we have generated code on both sides, all of the underlying details about serializing and deserializing messages and how they get transported back and forth is really abstracted away from us
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODg0MjM5MjQsMTQ0MjYyOTU5NCwtNj
-U4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbNDA3NTY2MTg3LDE0NDI2Mjk1OTQsLTY1OD
+QxNTAxMCwtMTUwNjcxMzA1MF19
 -->
