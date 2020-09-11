@@ -1,4 +1,4 @@
-Options for Interservice Communication
+### Options for Interservice Communication
 - REST: stands for REpresentational State Transfer and goes with the concept of sending resources back and forth, and manipulating those resources
 	- focus on resources, e.g: `GET /employee/42`, server recognize that request, it's going to locate that resource and send it back to client if it's available.
 	- embrace with HTTP protocal, expecting a GET/POST/PUT/DELETE call
@@ -13,7 +13,7 @@ Options for Interservice Communication
 	- make things clear what actions a client can invoke on the server, and potentially makes it a lot easier to program the clients, because the server is going to accept those specific method calls which can be very clearly named.
 	- However, in order for the clients to be aware of what methods are going to be available, the server has to publish those in some way, so while RPC offers a lot more clarity about what potentially can be done, we are going to have to do a little bit more work in order to get our clients and servers talking to each other
 
-gRPC
+### gRPC (inner service communication)
 - Cross-platform
 - Scalable
 - Streaming
@@ -21,5 +21,6 @@ gRPC
 - strongly typed messaging
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1ODQxNTAxMCwtMTUwNjcxMzA1MF19
+eyJoaXN0b3J5IjpbMTk0ODYyMzg1NCwtNjU4NDE1MDEwLC0xNT
+A2NzEzMDUwXX0=
 -->
