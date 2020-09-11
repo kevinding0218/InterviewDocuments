@@ -25,9 +25,10 @@
 	- Client: making request to server and waiting server to response back
 - Client(GeneratedCode) <--> adf <--> (Generated Code)Server
 	- gRPC doesn't expect client and server to talk directly to one another, instead it uses a message definitions that created using Protocol Buffers to generate some code
-	- Server + Generated Code: generated code that clients are going to interact with when they make requests of us
+	- Server + Generated Code: has the responsibility of clients are going to interact with when they make requests of us
+	- Client + Generated Code: has the responsibility of providing 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDcxMzMzMDAsLTY1ODQxNTAxMCwtMT
-UwNjcxMzA1MF19
+eyJoaXN0b3J5IjpbMTQ0MjYyOTU5NCwtNjU4NDE1MDEwLC0xNT
+A2NzEzMDUwXX0=
 -->
