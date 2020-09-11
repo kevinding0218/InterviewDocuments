@@ -44,14 +44,14 @@
 - Metadata is useful for checking `user`credentials, authentication and authorization is going to be done on the RPC request level
 #### Authentication
  - Insecure communication
-	 - the client and server are by default commnicated using HTTP/1 with no special securit
+	 - the client and server are by default commnicated using HTTP/1 with no special security involved, required no special handling, no custom certification needs to be generated.
  - SSL/TLS communication
  - Google Token-Based
  - Custom
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMyMTk4MzI3LC0xMTA1MjkzMTcyLC0xNj
-U5ODQ2NzUzLC0xMzc1MzA1MjI2LC0yMDQ2MzYxNTg1LC0xODEz
-NTA4NjQ1LDE0NDI2Mjk1OTQsLTY1ODQxNTAxMCwtMTUwNjcxMz
-A1MF19
+eyJoaXN0b3J5IjpbLTEzNTA3NTYwODksLTExMDUyOTMxNzIsLT
+E2NTk4NDY3NTMsLTEzNzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4
+MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4NDE1MDEwLC0xNTA2Nz
+EzMDUwXX0=
 -->
