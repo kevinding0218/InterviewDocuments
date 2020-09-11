@@ -62,11 +62,11 @@
 	-  rpc Method(stream RequestType) returns (ResponseType)
 - Bidirectional Streaming RPC: client continuing send request and server continuing send response back, this can happen in a very asynchronous way,  
 	- rpc Method(stream RequestType) returns (stream ResponseType)
-	- e.g: Chat
+	- e.g: Chat application
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM5ODk2MDE2LC0xMzUwNzU2MDg5LC0xMT
-A1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1MzA1MjI2LC0yMDQ2
-MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mjk1OTQsLTY1ODQxNT
-AxMCwtMTUwNjcxMzA1MF19
+eyJoaXN0b3J5IjpbLTE4NjU2ODc2NDgsLTEzNTA3NTYwODksLT
+ExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEzNzUzMDUyMjYsLTIw
+NDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4ND
+E1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
