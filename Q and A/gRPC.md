@@ -46,12 +46,13 @@
  - Insecure communication
 	 - the client and server are by default commnicated using HTTP/1 with no special security involved, required no special handling, no custom certification needs to be generated.
  - SSL/TLS communication
+	 - using HTTP/2 by default, if gRPC recognize it's on a HTTP/2 secure connection, it's going to try and upgrade 
  - Google Token-Based
  - Custom
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTA3NTYwODksLTExMDUyOTMxNzIsLT
-E2NTk4NDY3NTMsLTEzNzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4
-MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4NDE1MDEwLC0xNTA2Nz
-EzMDUwXX0=
+eyJoaXN0b3J5IjpbMTA3MjU2MDM3MywtMTM1MDc1NjA4OSwtMT
+EwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3NTMwNTIyNiwtMjA0
+NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNjI5NTk0LC02NTg0MT
+UwMTAsLTE1MDY3MTMwNTBdfQ==
 -->
