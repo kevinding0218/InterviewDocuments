@@ -1,6 +1,8 @@
 Array:
 Find: O(1)
-Insert/Delete: O(n)
+Insert/Delete: Avg ~ O(n)
+Linked List
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1OTk3NDg4Ml19
+eyJoaXN0b3J5IjpbLTUwMDM1ODExNV19
 -->
