@@ -33,8 +33,8 @@
 #### Design Cycle (3 steps)
 1. Step 1: Define Messages: those messages are going to be defined as Protocol Buffers
 2. Step 2: Generate Source Code: use Proto C compiler to generate the client and server source code that we need in order to generate the interfaces that we're going to use Protocol Buffers to send messages back and forth.
-3. Step 3: sdf
+3. Step 3: Write Client/Server
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ2NzI3NTk4LDE0NDI2Mjk1OTQsLTY1OD
+eyJoaXN0b3J5IjpbNzc5NzM3MTE3LDE0NDI2Mjk1OTQsLTY1OD
 QxNTAxMCwtMTUwNjcxMzA1MF19
 -->
