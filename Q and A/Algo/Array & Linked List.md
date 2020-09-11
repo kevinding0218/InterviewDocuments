@@ -8,11 +8,12 @@ Linked List
  - Space: O(n) 
  - Find: O(n) 
  - Insert/Delete: O(1)
-Q:
+Leetcode :
 - reverse-linked-list
 - swap-nodes-in-pairs
 - linked-list-cycle
-- reverse-nodes-
+- reverse-nodes-in-k-group
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDU5NTEzMTQsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbLTE1NjI1OTI4NzAsLTUwMDM1ODExNV19
 -->
