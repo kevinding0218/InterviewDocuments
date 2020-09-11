@@ -38,9 +38,9 @@
 1. Create Channel: this channel is going to wrap the actual wire protocol that's used in order to send the messages back and forth, create once and use through life cycle
 	- For example: if we have our server and client communicating using HTTP/2, then that channel's going to wrap a TCP connection between the client and server. 
 2. Create Client: client takes in the channel, and that client is normally provided to us
-3. Client Send Request (with optional Metadata): 
+3. Client Send Request (with optional Metadata): the client always has to initiate, the Metadata client send is data about the request but not the request itself
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzUzMDUyMjYsLTIwNDYzNjE1ODUsLT
-E4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4NDE1MDEwLC0xNTA2
-NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTEzMTEzMTQ4MjAsLTEzNzUzMDUyMjYsLT
+IwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4
+NDE1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
