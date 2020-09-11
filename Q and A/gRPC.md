@@ -43,10 +43,15 @@
 5. Send/Receive Message: when the server sends the response back.
 - Metadata is useful for checking `user`credentials, authentication and authorization is going to be done on the RPC request level
 #### Authentication
- 
+ - Insecure communication
+	 - the client and server are by default commnicated using HTTP/1 with no special securit
+ - SSL/TLS communication
+ - Google Token-Based
+ - Custom
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLT
-EzNzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0
-MjYyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbNzMyMTk4MzI3LC0xMTA1MjkzMTcyLC0xNj
+U5ODQ2NzUzLC0xMzc1MzA1MjI2LC0yMDQ2MzYxNTg1LC0xODEz
+NTA4NjQ1LDE0NDI2Mjk1OTQsLTY1ODQxNTAxMCwtMTUwNjcxMz
+A1MF19
 -->
