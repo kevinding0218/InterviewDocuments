@@ -53,13 +53,14 @@
 - Unary message: send a single request and expect a single response in our procedure call.
 	- rpc Method(RequestType) returns (ResponseType)
 	- always need a request type and response type in gRPC, even if you don't have any data in the request, you still have to send an empty request object along.
-- Server Streaming: send a single request and then after the server is done, or while the server is generating its responses, it's actually going to send them back a piece at a time
+- Server Streaming: send a single request and then after the server is done, or while the server is generating its responses, it's actually going to send them back a piece at a time, so we're streaming response back.
+	- e.g: watching a streaming video, send request like `watch video x`, then the server is going to send back a buffered stream of the video data so that client doensn't have to wait for all the video to get across at one time.
 - Client Streaming:
 - Bidirectional Streaming:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg0MzM1ODUyLC0xMzUwNzU2MDg5LC0xMT
-A1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1MzA1MjI2LC0yMDQ2
-MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mjk1OTQsLTY1ODQxNT
-AxMCwtMTUwNjcxMzA1MF19
+eyJoaXN0b3J5IjpbLTE5OTk3NzkwNzIsLTEzNTA3NTYwODksLT
+ExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEzNzUzMDUyMjYsLTIw
+NDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4ND
+E1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
