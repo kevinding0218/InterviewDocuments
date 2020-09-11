@@ -52,14 +52,14 @@
 #### Message Types
 - Unary message: a single request and asingle response in our procedure call.
 	- rpc Method(RequestType) returns (ResponseType)
-	- always need a request type and response type in gRPC, even if you don't have an
+	- always need a request type and response type in gRPC, even if you don't have any data in the request, you still have to send an empty request object along.
 - Server Streaming: 
 - Client Streaming:
 - Bidirectional Streaming:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk5MjYyOTgsLTEzNTA3NTYwODksLTExMD
-UyOTMxNzIsLTE2NTk4NDY3NTMsLTEzNzUzMDUyMjYsLTIwNDYz
-NjE1ODUsLTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4NDE1MD
-EwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTE3MDI5NDMyMzMsLTEzNTA3NTYwODksLT
+ExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEzNzUzMDUyMjYsLTIw
+NDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4ND
+E1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
