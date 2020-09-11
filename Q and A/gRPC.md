@@ -41,10 +41,10 @@
 3. Client Send Request (with optional Metadata): the client always has to initiate, the Metadata client send is data about the request but not the request object itself
 4. (optional) Server Send Metadata: it's possible but not required that server send metadata back as a pre-conversation between the client and server, this is even before the server starts processing the request.
 5. Send/Receive Message: when the server sends the response back.
-- Metadata is useful for checking user credentials
+- Metadata is useful for checking user credentials, authentication and authorization is going to be done on the RPC request level
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY2NzU5MzIsLTE2NTk4NDY3NTMsLTEzNz
-UzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0MjYy
-OTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTcwNTgxNjU0NiwtMTY1OTg0Njc1MywtMT
+M3NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQy
+NjI5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
 -->
