@@ -31,10 +31,10 @@
 	- Transport Protocol: in order to communicate back and forth, has the responsibility of sending and receiving the messages back and forth, it doesn't have the responsibility to understand the message that it's sending, that's what `generated code` does on both sides.
 	- Protocol Buffers are not the only transfer protocol in gRPC, the transport layer is pluggable, JSON-based or XML-based protocol or your own transport protocol are accepted as well.
 #### Design Cycle (3 steps)
-1. Step 1: Define Messages
-2. Step 2:  Generate Source Code
+1. Step 1: Define Messages: those messages are going to be defined as Protocol Buffers
+2. Step 2: Generate Source Code
 3. Step 3: sdf
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjcyNzk5MTcsMTQ0MjYyOTU5NCwtNj
-U4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbNzg4ODk4ODA2LDE0NDI2Mjk1OTQsLTY1OD
+QxNTAxMCwtMTUwNjcxMzA1MF19
 -->
