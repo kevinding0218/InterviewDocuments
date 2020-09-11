@@ -55,13 +55,14 @@
 	- always need a request type and response type in gRPC, even if you don't have any data in the request, you still have to send an empty request object along.
 - Server Streaming RPC: send a single request and then after the server is done, or while the server is generating its responses, it's actually going to send them back a piece at a time, so we're streaming response back.
 	- e.g: watching a streaming video, send request like `watch video x`, then the server is going to send back a buffered stream of the video data so that client doensn't have to wait for all the video to get across at one time but a chunk at a time.
-	- rpc Method(RequestType) returns (stream ResponseType), with the `stream` keyword, it means instead of sending an array of response at one time, we're send only one at a t
-- Client Streaming:
+	- rpc Method(RequestType) returns (stream ResponseType), with the `stream` keyword, it means instead of sending an array of response at one time, we're send only one at a time, which is much smaller messages across the network, and we'll continue sending more of them.
+- Client Streaming RPC: send the request a piece at a time, here the server waits until the entire request is rece
+	- e.g: uploading a file, 
 - Bidirectional Streaming:
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMzk3NjkwOSwtMTM1MDc1NjA4OSwtMT
-EwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3NTMwNTIyNiwtMjA0
-NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNjI5NTk0LC02NTg0MT
-UwMTAsLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbNDQxOTQ4NDYxLC0xMzUwNzU2MDg5LC0xMT
+A1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1MzA1MjI2LC0yMDQ2
+MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mjk1OTQsLTY1ODQxNT
+AxMCwtMTUwNjcxMzA1MF19
 -->
