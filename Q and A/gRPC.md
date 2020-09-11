@@ -19,8 +19,10 @@
 - Streaming
 - fast and efficient
 - strongly typed messaging
+#### Basic structure
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0ODYyMzg1NCwtNjU4NDE1MDEwLC0xNT
-A2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbMTYwNTY0ODQxLC02NTg0MTUwMTAsLTE1MD
+Y3MTMwNTBdfQ==
 -->
