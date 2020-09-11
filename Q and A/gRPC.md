@@ -35,8 +35,9 @@
 2. Step 2: Generate Source Code: use Proto C compiler to generate the client and server source code that we need in order to generate the interfaces that we're going to use Protocol Buffers to send messages back and forth.
 3. Step 3: Write Client/Server
 #### RPC Life Cycle
-1. Create Channel: this channel is going to wrap the actual wire protocol that's used in order to send the messages back and fo
+1. Create Channel: this channel is going to wrap the actual wire protocol that's used in order to send the messages back and forth, create once and use through life cycle
+	- For example: if we have our server and client communicating using HTTP/2, then that channel's going to wrap a TCP connection between the client and server. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMzEyNzU1NiwxNDQyNjI5NTk0LC02NT
-g0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbLTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNj
+U4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
