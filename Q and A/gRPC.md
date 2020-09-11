@@ -37,7 +37,8 @@
 #### RPC Life Cycle
 1. Create Channel: this channel is going to wrap the actual wire protocol that's used in order to send the messages back and forth, create once and use through life cycle
 	- For example: if we have our server and client communicating using HTTP/2, then that channel's going to wrap a TCP connection between the client and server. 
+2. Create Client: client takes in the channel, and that client is normally provided to us, and we're not actually going to have 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNj
-U4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMT
+Q0MjYyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
