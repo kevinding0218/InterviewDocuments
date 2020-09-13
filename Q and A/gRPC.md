@@ -137,13 +137,13 @@
 		rpc  Save (EmployeeRequest) returns (EmployeeResponse);
 		rpc  SaveAll (stream  EmployeeRequest) returns (stream  EmployeeResponse);
 	}
-	```
+	``
 - use command to generate code
 ``
 protoc pb/messages.proto --go_out=plugins=grpc:.
 ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzczMDQ5NjY0LC04MjQ0ODU3MTAsLTE4Nj
+eyJoaXN0b3J5IjpbMTAzMDQ0MDg2LC04MjQ0ODU3MTAsLTE4Nj
 U2ODc2NDgsLTEzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4
 NDY3NTMsLTEzNzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MD
 g2NDUsMTQ0MjYyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUw
