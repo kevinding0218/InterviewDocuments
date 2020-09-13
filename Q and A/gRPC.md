@@ -64,9 +64,9 @@
 	- rpc Method(stream RequestType) returns (stream ResponseType)
 	- e.g: **Chat application**
 #### Protocol Buffers
-
+- Highly optimized serializer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NDI2MTgzMywtMTg2NTY4NzY0OCwtMT
+eyJoaXN0b3J5IjpbMTUwNjM2NjM4OCwtMTg2NTY4NzY0OCwtMT
 M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
 NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
 I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
