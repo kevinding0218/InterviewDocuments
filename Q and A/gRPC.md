@@ -90,13 +90,14 @@
 		// which is what the client asks the server to do for it.
 		// the Request has to be a message type over primitive type (integer, boolean, etc) or void
 		// always have a Response of message type as well
-		rpc GetByBadgeNumber (Request) returns (Response);
+		// Unary 
+		rpc GetByBadgeNumber (Request) returns (Response); 
 	}
 	```
 - These consistent signature of request will allow compiler generated code to be consistent, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MzU0MTA4MiwtMTg2NTY4NzY0OCwtMT
-M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
-NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
-I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbNTY5MzI1Mzc1LC0xODY1Njg3NjQ4LC0xMz
+UwNzU2MDg5LC0xMTA1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1
+MzA1MjI2LC0yMDQ2MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mj
+k1OTQsLTY1ODQxNTAxMCwtMTUwNjcxMzA1MF19
 -->
