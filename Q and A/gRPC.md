@@ -92,12 +92,15 @@
 		// always have a Response of message type as well
 		// Unary rpc call: a single request and single response
 		rpc GetByBadgeNumber (Request) returns (Response); 
+		
+		rpc GetAll(Request) returns (stream Response)
 	}
 	```
 - These consistent signature of request will allow compiler generated code to be consistent, 
-- The generated code will be handling serializing and deserializing of the messages for us, we just work with those message and sending/receiving those messages as o
+- The generated code will be handling serializing and deserializing of the messages for us, we just work with those message and sending/receiving those messages as objects. 
+- We're not going to worry about serialization, gRPC is handling all communication between clients and servers for us.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MTczOTkzOCwtMTg2NTY4NzY0OCwtMT
+eyJoaXN0b3J5IjpbLTExODU3MzE4NywtMTg2NTY4NzY0OCwtMT
 M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
 NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
 I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
