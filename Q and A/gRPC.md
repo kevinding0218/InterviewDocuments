@@ -57,7 +57,7 @@
 	- e.g: watching a streaming video, send request like `watch video x`, then the server is going to send back a buffered stream of the video data so that client doensn't have to wait for all the video to get across at one time but a chunk at a time.
 	- rpc Method(RequestType) returns (stream ResponseType)
 	- with the `stream` keyword, it means instead of sending an array of response at one time, we're send only one at a time, which is much smaller messages across the network, and we'll continue sending more of them.
-- Client Streaming RPC: send the request a piece at a time, here the server waits until the entire request is received, there is no processing going on the server until everything's done, then a single response will be sent back.
+- **Client Streaming RPC**: send the request a piece at a time, here the server waits until the entire request is received, there is no processing going on the server until everything's done, then a single response will be sent back.
 	- e.g: uploading a file
 	-  rpc Method(stream RequestType) returns (ResponseType)
 - Bidirectional Streaming RPC: client continuing send request and server continuing send response back, this can happen in a very asynchronous way,  
@@ -65,8 +65,8 @@
 	- e.g: Chat application
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjU2ODc2NDgsLTEzNTA3NTYwODksLT
-ExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEzNzUzMDUyMjYsLTIw
-NDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4ND
-E1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTEyNTg3NDE0NzIsLTE4NjU2ODc2NDgsLT
+EzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEz
+NzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0Mj
+YyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
