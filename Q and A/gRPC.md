@@ -73,15 +73,15 @@
 	package user;
 	// when you generate java source code, please put it under "com.cvent.grpc"
 	option java_package = "com.cvent.grpc";
-	// message with identifiers
+	// message with identifiers to version a message over time so older clients continues working property
 	message Login {
 		string name = 1;
 		types password = 2;
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkyOTcyMTkzLC0xODY1Njg3NjQ4LC0xMz
-UwNzU2MDg5LC0xMTA1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1
-MzA1MjI2LC0yMDQ2MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mj
-k1OTQsLTY1ODQxNTAxMCwtMTUwNjcxMzA1MF19
+eyJoaXN0b3J5IjpbLTE5MjI3ODAwNDMsLTE4NjU2ODc2NDgsLT
+EzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEz
+NzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0Mj
+YyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
