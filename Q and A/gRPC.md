@@ -64,9 +64,10 @@
 	- rpc Method(stream RequestType) returns (stream ResponseType)
 	- e.g: **Chat application**
 #### Protocol Buffers
-- Highly optimized serializers and deserializers: protocol buffers separate the message definition from the data that's actually 
+- Highly optimized serializers and deserializers: protocol buffers separate the message definition from the data that's actually tranmitted.
+- We're creating a message definitino file and use that to generate source code that our clients and servers are going to take advantages of. That means we don't have to send all the structures along with every message. We just need to send some data and some small 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3Mjg5MDMwNiwtMTg2NTY4NzY0OCwtMT
+eyJoaXN0b3J5IjpbMTUzMDk2Nzk4NywtMTg2NTY4NzY0OCwtMT
 M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
 NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
 I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
