@@ -104,11 +104,44 @@
 - The generated code will be handling serializing and deserializing of the messages for us, we just work with those message and sending/receiving those messages as objects. 
 - We're not going to worry about serialization, gRPC is handling all communication between clients and servers for us.
 - e.g: messages.proto
-`
+```
+syntax = "proto3";
+message  Employee {
+	int32 id = 1;
+	int32 badgeNumber = 2;
+	string firstName = 3;
+	string lastName = 4;
+	float vacationAccrualRate = 5;
+	float vacationAccrued = 6;
+	repeated Vacation vacations = 7;
+}
+message  Vacation {
+	int32 id = 1;
+	int64 startDate = 2;
+	float duration = 3;
+	bool isCancelled = 4;
+}
+message  GetAllRequest {}
+message  GetByBadgeNumberRequest {
+	int32 badgeNumber = 1;
+}
+message  EmployeeRequest {
+	Employee employee = 1;
+}
+message  EmployeeResponse {
+	Employee employee = 1;
+}
+service  EmployeeService {
+	rpc  GetByBadgeNumber (GetByBadgeNumberRequest) returns (EmployeeResponse);
+	rpc  GetAll(GetAllRequest) returns (stream  EmployeeResponse);
+	rpc  Save (EmployeeRequest) returns (EmployeeResponse);
+	rpc  SaveAll (stream  EmployeeRequest) returns (stream  EmployeeResponse);
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTc4Mzc1MjcsLTgyNDQ4NTcxMCwtMT
-g2NTY4NzY0OCwtMTM1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1
-OTg0Njc1MywtMTM3NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMz
-UwODY0NSwxNDQyNjI5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMw
-NTBdfQ==
+eyJoaXN0b3J5IjpbMTEyMzEzODM2NywtODI0NDg1NzEwLC0xOD
+Y1Njg3NjQ4LC0xMzUwNzU2MDg5LC0xMTA1MjkzMTcyLC0xNjU5
+ODQ2NzUzLC0xMzc1MzA1MjI2LC0yMDQ2MzYxNTg1LC0xODEzNT
+A4NjQ1LDE0NDI2Mjk1OTQsLTY1ODQxNTAxMCwtMTUwNjcxMzA1
+MF19
 -->
