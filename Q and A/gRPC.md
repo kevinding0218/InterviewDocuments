@@ -93,9 +93,10 @@ service Employee {
 	rpc GetByBadgeNumber (Request) returns (Response);
 }
 ```
+- These consistent signature of request will allow compiler generated code to be consistent, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5ODYwMDQ4MCwtMTg2NTY4NzY0OCwtMT
-M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
-NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
-I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbNDk0MTEzNTkwLC0xODY1Njg3NjQ4LC0xMz
+UwNzU2MDg5LC0xMTA1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1
+MzA1MjI2LC0yMDQ2MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mj
+k1OTQsLTY1ODQxNTAxMCwtMTUwNjcxMzA1MF19
 -->
