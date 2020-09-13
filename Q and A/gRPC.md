@@ -88,12 +88,14 @@ syntax = "proto3";
 service Employee {
 	// define the rpc call that's going to be enabled
 	// which is what the client asks the server to do for it.
-	rpc GetByBadgeNumber
+	// the Request has to be a message type over primitive type (integer, boolean, etc) or void
+	// always have a Response of message type as well
+	rpc GetByBadgeNumber (Request) returns (Response);
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTE0Nzc2NDAsLTE4NjU2ODc2NDgsLT
-EzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEz
-NzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0Mj
-YyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbMjA5ODYwMDQ4MCwtMTg2NTY4NzY0OCwtMT
+M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
+NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
+I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
 -->
