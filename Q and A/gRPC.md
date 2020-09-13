@@ -96,7 +96,7 @@
 		rpc GetAll(Request) returns (stream Response)
 		// Stream from client side: break the photo file down and do a byte stream and we want to buffer that, so we're going to send a chunk at a time to the server.
 		rpc AddPhoto (stream Request) returns (Response)
-		// Stream of bi-directional: send an employee one at a time and as it saved, server sends the response back down, so client doesn't have to wait for all operations to be complete before it sends
+		// Stream of bi-directional: send an employee one at a time and as it saved, server sends the response back down, so client doesn't have to wait for all operations to be complete before it sends the next employee record.
 		rpc SaveAll (stream Request) returns (stream Response)
 	}
 	```
@@ -104,7 +104,7 @@
 - The generated code will be handling serializing and deserializing of the messages for us, we just work with those message and sending/receiving those messages as objects. 
 - We're not going to worry about serialization, gRPC is handling all communication between clients and servers for us.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2Njg1MjMxNSwtMTg2NTY4NzY0OCwtMT
+eyJoaXN0b3J5IjpbLTgyNDQ4NTcxMCwtMTg2NTY4NzY0OCwtMT
 M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
 NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
 I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
