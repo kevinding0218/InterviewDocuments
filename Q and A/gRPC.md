@@ -68,11 +68,17 @@
 - We're creating a message definitino file and use that to generate source code that our clients and servers are going to take advantages of. That means we don't have to send all the structures along with every message. We just need to send some data and some small piece of metadata in order to help the deserializer figure out which data goes with which field.
 - e.g:
 ```
-
+syntax = "proto3";
+package user;
+option java_package = "com.pluralsight.grpc";
+message Login {
+	string name = 1;
+	types password = 2;
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjMzMjYyMzMsLTE4NjU2ODc2NDgsLT
-EzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEz
-NzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0Mj
-YyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbMTQ4NDgxMjAzNiwtMTg2NTY4NzY0OCwtMT
+M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
+NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
+I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
 -->
