@@ -78,9 +78,10 @@
 		string name = 1;
 		types password = 2;
 	}
+	// Moving beyond JSON and XML with Protocol Buffers
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjI3ODAwNDMsLTE4NjU2ODc2NDgsLT
+eyJoaXN0b3J5IjpbLTE2MTg0MDI5NDEsLTE4NjU2ODc2NDgsLT
 EzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEz
 NzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0Mj
 YyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
