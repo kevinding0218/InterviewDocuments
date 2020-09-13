@@ -69,6 +69,7 @@
 - e.g:
 	```
 	syntax = "proto3";
+	// tell the protocol buffer compuler where this packages is, in relative to other packages in our protocol buffer message definitions.
 	package user;
 	// when you generate java source code, please put it under "com.cvent.grpc"
 	option java_package = "com.cvent.grpc";
@@ -78,8 +79,8 @@
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NDA0MTkyOCwtMTg2NTY4NzY0OCwtMT
-M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
-NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
-I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbLTExNTMyOTA1ODIsLTE4NjU2ODc2NDgsLT
+EzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEz
+NzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0Mj
+YyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
