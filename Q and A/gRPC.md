@@ -103,9 +103,12 @@
 - These consistent signature of request will allow compiler generated code to be consistent, 
 - The generated code will be handling serializing and deserializing of the messages for us, we just work with those message and sending/receiving those messages as objects. 
 - We're not going to worry about serialization, gRPC is handling all communication between clients and servers for us.
+- e.g: messages.proto
+`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNDQ4NTcxMCwtMTg2NTY4NzY0OCwtMT
-M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
-NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
-I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbLTExNTc4Mzc1MjcsLTgyNDQ4NTcxMCwtMT
+g2NTY4NzY0OCwtMTM1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1
+OTg0Njc1MywtMTM3NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMz
+UwODY0NSwxNDQyNjI5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMw
+NTBdfQ==
 -->
