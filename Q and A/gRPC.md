@@ -84,13 +84,16 @@
 ```
 syntax = "proto3";
 ...
+// use "service" keyword in order to define a gRPC service
 service Employee {
-	
+	// define the rpc call that's going to be enabled
+	// which is what the client asks the server to do for it.
+	rpc GetByBadgeNumber
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyOTQwODM5NCwtMTg2NTY4NzY0OCwtMT
-M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
-NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
-I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbLTIwNTE0Nzc2NDAsLTE4NjU2ODc2NDgsLT
+EzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEz
+NzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0Mj
+YyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
 -->
