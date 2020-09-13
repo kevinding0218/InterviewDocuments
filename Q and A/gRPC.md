@@ -50,23 +50,23 @@
  - Google Token-Based: as a layer on top of SSL and TLS, requires Secure connection
  - Custom(OAuth2): it's language specific, so creating a custom authentication provider using Java is going to be a little bit different than Go
 #### Message Types
-- Unary RPC: send a single request and expect a single response in our procedure call.
+- **Unary RPC:** send a single request and expect a single response in our procedure call.
 	- rpc Method(RequestType) returns (ResponseType)
 	- always need a request type and response type in gRPC, even if you don't have any data in the request, you still have to send an empty request object along.
-- Server Streaming RPC: send a single request and then after the server is done, or while the server is generating its responses, it's actually going to send them back a piece at a time, so we're streaming response back.
-	- e.g: watching a streaming video, send request like `watch video x`, then the server is going to send back a buffered stream of the video data so that client doensn't have to wait for all the video to get across at one time but a chunk at a time.
+- **Server Streaming RPC**: send a single request and then after the server is done, or while the server is generating its responses, it's actually going to send them back a piece at a time, so we're streaming response back.
+	- e.g: **watching a streaming video**, send request like `watch video x`, then the server is going to send back a buffered stream of the video data so that client doensn't have to wait for all the video to get across at one time but a chunk at a time.
 	- rpc Method(RequestType) returns (stream ResponseType)
-	- with the `stream` keyword, it means instead of sending an array of response at one time, we're send only one at a time, which is much smaller messages across the network, and we'll continue sending more of them.
+	- with the `stream` keyword, it means instead of sending an array of response at one time, **we're send only one at a time, which is much smaller messages across the network, and we'll continue sending more of them**.
 - **Client Streaming RPC**: send the request a piece at a time, here the server waits until the entire request is received, there is no processing going on the server until everything's done, then a single response will be sent back.
-	- e.g: uploading a file
+	- e.g: **uploading a file**
 	-  rpc Method(stream RequestType) returns (ResponseType)
-- Bidirectional Streaming RPC: client continuing send request and server continuing send response back, this can happen in a very asynchronous way,  
+- **Bidirectional Streaming RPC**: client continuing send request and server continuing send response back, this can happen in a very asynchronous way,  
 	- rpc Method(stream RequestType) returns (stream ResponseType)
-	- e.g: Chat application
+	- e.g: **Chat application**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTg3NDE0NzIsLTE4NjU2ODc2NDgsLT
-EzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4NDY3NTMsLTEz
-NzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MDg2NDUsMTQ0Mj
-YyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTI2MTAyODEyOCwtMTg2NTY4NzY0OCwtMT
+M1MDc1NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3
+NTMwNTIyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNj
+I5NTk0LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
 -->
