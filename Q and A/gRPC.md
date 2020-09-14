@@ -149,8 +149,16 @@
 ``
 protoc pb/messages.proto --go_out=plugins=grpc:.
 ``
+- Metadata is an array of [String][]
+	- e.g: 
+``
+md, ok := metadata.FromContext(stream.Context())
+if ok {
+	fmt.Printf("Receiving photo for badge number %v\n", md["badgenumber"][0])
+}
+``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMDAzNzE5MywxMDAwNDg0MTg5LDEwMz
+eyJoaXN0b3J5IjpbMTEyNjg1Mjg4OCwxMDAwNDg0MTg5LDEwMz
 A0NDA4NiwtODI0NDg1NzEwLC0xODY1Njg3NjQ4LC0xMzUwNzU2
 MDg5LC0xMTA1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1MzA1Mj
 I2LC0yMDQ2MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mjk1OTQs
