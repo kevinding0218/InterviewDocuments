@@ -134,6 +134,7 @@
 	service  EmployeeService {
 		rpc  GetByBadgeNumber (GetByBadgeNumberRequest) returns (EmployeeResponse);
 		rpc  GetAll(GetAllRequest) returns (stream  EmployeeResponse);
+		rpc AddPhoto (stream Request) returns (Response)
 		rpc  Save (EmployeeRequest) returns (EmployeeResponse);
 		rpc  SaveAll (stream  EmployeeRequest) returns (stream  EmployeeResponse);
 	}
@@ -143,9 +144,9 @@
 protoc pb/messages.proto --go_out=plugins=grpc:.
 ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDQ0MDg2LC04MjQ0ODU3MTAsLTE4Nj
-U2ODc2NDgsLTEzNTA3NTYwODksLTExMDUyOTMxNzIsLTE2NTk4
-NDY3NTMsLTEzNzUzMDUyMjYsLTIwNDYzNjE1ODUsLTE4MTM1MD
-g2NDUsMTQ0MjYyOTU5NCwtNjU4NDE1MDEwLC0xNTA2NzEzMDUw
-XX0=
+eyJoaXN0b3J5IjpbMTAwMDQ4NDE4OSwxMDMwNDQwODYsLTgyND
+Q4NTcxMCwtMTg2NTY4NzY0OCwtMTM1MDc1NjA4OSwtMTEwNTI5
+MzE3MiwtMTY1OTg0Njc1MywtMTM3NTMwNTIyNiwtMjA0NjM2MT
+U4NSwtMTgxMzUwODY0NSwxNDQyNjI5NTk0LC02NTg0MTUwMTAs
+LTE1MDY3MTMwNTBdfQ==
 -->
