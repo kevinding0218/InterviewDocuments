@@ -158,15 +158,15 @@ if ok {
 }
 ``
 - We also need a converter to convert a data model into message model and vice versus
-```
-func convertEmployeeToMessage
-func convertMessageToEmployee
-```
+	```
+	func convertEmployeeToMessage
+	func convertMessageToEmployee
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgwNDg4NjQ1LC0xODAwODc5NjgzLC0xMD
-kwMDUwMjAwLDEwMDA0ODQxODksMTAzMDQ0MDg2LC04MjQ0ODU3
-MTAsLTE4NjU2ODc2NDgsLTEzNTA3NTYwODksLTExMDUyOTMxNz
-IsLTE2NTk4NDY3NTMsLTEzNzUzMDUyMjYsLTIwNDYzNjE1ODUs
-LTE4MTM1MDg2NDUsMTQ0MjYyOTU5NCwtNjU4NDE1MDEwLC0xNT
-A2NzEzMDUwXX0=
+eyJoaXN0b3J5IjpbLTk1ODA2ODIxOSwtMTgwMDg3OTY4MywtMT
+A5MDA1MDIwMCwxMDAwNDg0MTg5LDEwMzA0NDA4NiwtODI0NDg1
+NzEwLC0xODY1Njg3NjQ4LC0xMzUwNzU2MDg5LC0xMTA1MjkzMT
+cyLC0xNjU5ODQ2NzUzLC0xMzc1MzA1MjI2LC0yMDQ2MzYxNTg1
+LC0xODEzNTA4NjQ1LDE0NDI2Mjk1OTQsLTY1ODQxNTAxMCwtMT
+UwNjcxMzA1MF19
 -->
