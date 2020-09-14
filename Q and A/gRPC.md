@@ -131,10 +131,16 @@
 	message  EmployeeResponse {
 		Employee employee = 1;
 	}
+	message  AddPhotoRequest {
+		bytes data = 1;
+	}
+	message  AddPhotoResponse {
+		bool isOk = 1;
+	}
 	service  EmployeeService {
 		rpc  GetByBadgeNumber (GetByBadgeNumberRequest) returns (EmployeeResponse);
 		rpc  GetAll(GetAllRequest) returns (stream  EmployeeResponse);
-		rpc AddPhoto (stream Request) returns (Response)
+		rpc  AddPhoto (stream  AddPhotoRequest) returns (AddPhotoResponse);
 		rpc  Save (EmployeeRequest) returns (EmployeeResponse);
 		rpc  SaveAll (stream  EmployeeRequest) returns (stream  EmployeeResponse);
 	}
@@ -144,9 +150,9 @@
 protoc pb/messages.proto --go_out=plugins=grpc:.
 ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMDQ4NDE4OSwxMDMwNDQwODYsLTgyND
-Q4NTcxMCwtMTg2NTY4NzY0OCwtMTM1MDc1NjA4OSwtMTEwNTI5
-MzE3MiwtMTY1OTg0Njc1MywtMTM3NTMwNTIyNiwtMjA0NjM2MT
-U4NSwtMTgxMzUwODY0NSwxNDQyNjI5NTk0LC02NTg0MTUwMTAs
-LTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbMTUxMDAzNzE5MywxMDAwNDg0MTg5LDEwMz
+A0NDA4NiwtODI0NDg1NzEwLC0xODY1Njg3NjQ4LC0xMzUwNzU2
+MDg5LC0xMTA1MjkzMTcyLC0xNjU5ODQ2NzUzLC0xMzc1MzA1Mj
+I2LC0yMDQ2MzYxNTg1LC0xODEzNTA4NjQ1LDE0NDI2Mjk1OTQs
+LTY1ODQxNTAxMCwtMTUwNjcxMzA1MF19
 -->
