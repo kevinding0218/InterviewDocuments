@@ -157,10 +157,12 @@ if ok {
 	fmt.Printf("Receiving photo for badge number %v\n", 		md["badgenumber"][0])
 }
 ``
+- We also need a converter to convert a data model into message model and vice versus
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTAwNTAyMDAsMTAwMDQ4NDE4OSwxMD
-MwNDQwODYsLTgyNDQ4NTcxMCwtMTg2NTY4NzY0OCwtMTM1MDc1
-NjA4OSwtMTEwNTI5MzE3MiwtMTY1OTg0Njc1MywtMTM3NTMwNT
-IyNiwtMjA0NjM2MTU4NSwtMTgxMzUwODY0NSwxNDQyNjI5NTk0
-LC02NTg0MTUwMTAsLTE1MDY3MTMwNTBdfQ==
+eyJoaXN0b3J5IjpbLTIxMDIxNDQzMSwtMTA5MDA1MDIwMCwxMD
+AwNDg0MTg5LDEwMzA0NDA4NiwtODI0NDg1NzEwLC0xODY1Njg3
+NjQ4LC0xMzUwNzU2MDg5LC0xMTA1MjkzMTcyLC0xNjU5ODQ2Nz
+UzLC0xMzc1MzA1MjI2LC0yMDQ2MzYxNTg1LC0xODEzNTA4NjQ1
+LDE0NDI2Mjk1OTQsLTY1ODQxNTAxMCwtMTUwNjcxMzA1MF19
 -->
