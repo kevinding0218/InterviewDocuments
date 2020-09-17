@@ -37,6 +37,7 @@
 - Provides clients the power to ask for exactly what they need and nothing more or less
 - GraphQL APIs get all the data your app needs in a single request
 - Language agnostic, plenty of client and server libraries are available
+- Increase multi-team productivity
 #### RESt vs GraphQL
 - Taken example of getting author information related to author, course, rating and topics
 - For REST
@@ -70,6 +71,6 @@
 	- Don't use HTTP spec for caching, (libraries like Apollo comes with caching options)
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTM1OTU5MywtMTA1OTI1NDM3MiwtNT
+eyJoaXN0b3J5IjpbMTQyOTI4NjU0MywtMTA1OTI1NDM3MiwtNT
 k4ODc1MDMyLDczMDk5ODExNl19
 -->
