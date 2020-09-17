@@ -5,7 +5,7 @@
 - GraphQL lets you write a query to request the exactly the data that you want ad receive the result back with just what you want
 	- Client/Mobile -> Query -> GraphQL Server -> database -> JSON object -> Client/Mobile
 - GraphQL Query:
-	- request people information from `allPeople` API and just want the name and gender, don't want other information even if it's available
+	- request only the last 3 people information from `allPeople` API and just want the name and gender, don't want other information even if it's available
 	```
 	{
 		allPeople(last: 3) {
@@ -19,6 +19,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTY1MDA5MTcsLTEwNTkyNTQzNzIsLT
-U5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTgyODU4MzQ2NSwtMTA1OTI1NDM3MiwtNT
+k4ODc1MDMyLDczMDk5ODExNl19
 -->
