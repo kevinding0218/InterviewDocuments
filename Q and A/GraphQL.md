@@ -44,8 +44,10 @@
 	- 2. we need a secondary endpoint with `/ps/author/<id>/courses` to access the courses in the library
 	- 3. we need a third endpoint with `/ps/author/<id>/rating` to access the rating
 	- 4. we need a forth endpoint with `/ps/author/<id>/topics` to access the topic covered.
+	- For GraphQL
+		- we need compose one single request in the form of a GraphQL query and ask for exac
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEwNjQ5NzYyLC0xMDU5MjU0MzcyLC01OT
-g4NzUwMzIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTExNTYyNDY5NjQsLTEwNTkyNTQzNzIsLT
+U5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
 -->
