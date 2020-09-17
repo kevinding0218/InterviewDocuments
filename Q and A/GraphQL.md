@@ -43,6 +43,7 @@
 	- **Multiple round trips** to collect the information from multiple resources
 	-  May **over fetching or under fetching** data resources, meaning we may just want one thing but there is no way to filter out the request, so end up with a whole bunch of data
 	- **Frontend** teams **rely on backend** teams heavily to deliver the APIs
+	- Caching is built into HTTP spec
 	- Example:
 	- 1. we need an endpoint with `/ps/author/<id>`, that fetches the author information for a given id
 	- 2. we need a secondary endpoint with `/ps/author/<id>/courses` to access the courses in the library
@@ -68,6 +69,6 @@
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwOTI3OTM0NiwtMTA1OTI1NDM3MiwtNT
-k4ODc1MDMyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTE1NTEzNDY0NDksLTEwNTkyNTQzNzIsLT
+U5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
 -->
