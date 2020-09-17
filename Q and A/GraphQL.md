@@ -46,8 +46,18 @@
 	- 4. we need a forth endpoint with `/ps/author/<id>/topics` to access the topic covered.
 	- **For GraphQL**
 		- we need compose one single request in the form of a GraphQL query and ask for exactly what I need.
+```
+{
+	author(id: 2100) {
+		name,
+		course { title },
+		rating,
+		topic(last: 3) {
+	}
+}
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU4NjE5MjgsLTEwNTkyNTQzNzIsLTU5OD
-g3NTAzMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTYwMzY5OTI1LC0xMDU5MjU0MzcyLC01OT
+g4NzUwMzIsNzMwOTk4MTE2XX0=
 -->
