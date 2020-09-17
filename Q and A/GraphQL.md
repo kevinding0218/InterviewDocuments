@@ -38,13 +38,14 @@
 - GraphQL APIs get all the data your app needs in a single request
 - Language agnostic, plenty of client and server libraries are available
 #### RESt vs GraphQL
-- Taken example of getting author information
+- Taken example of getting author information related to author, course, rating and topics
 - For REST
-	- we need an endpoint with `/ps/author/<id>`, that fetches the author information for a given id
-	- we also nee
-
+	- 1. we need an endpoint with `/ps/author/<id>`, that fetches the author information for a given id
+	- 2. we need a secondary endpoint with `/ps/author/<id>/courses` to access the courses in the library
+	- 3. wel need a third endpoint with `/ps/author/<id>/rating` to access the rating
+	- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTQyODQ3NDIsLTEwNTkyNTQzNzIsLT
-U5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTI5NjAwOTk0NywtMTA1OTI1NDM3MiwtNT
+k4ODc1MDMyLDczMDk5ODExNl19
 -->
