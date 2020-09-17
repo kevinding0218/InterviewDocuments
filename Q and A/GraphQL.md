@@ -38,6 +38,8 @@
 - GraphQL APIs get all the data your app needs in a single request
 - Language agnostic, plenty of client and server libraries are available
 - Increase multi-team productivity
+- Rapid product development
+- Reduced Cost, would be tested only when there is a change in the schema or if there is a french shcema. 
 #### RESt vs GraphQL
 - Taken example of getting author information related to author, course, rating and topics
 - For REST
@@ -71,6 +73,6 @@
 	- Don't use HTTP spec for caching, (libraries like Apollo comes with caching options)
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyOTI4NjU0MywtMTA1OTI1NDM3MiwtNT
+eyJoaXN0b3J5IjpbMTE0MzUxMzc5NSwtMTA1OTI1NDM3MiwtNT
 k4ODc1MDMyLDczMDk5ODExNl19
 -->
