@@ -49,7 +49,7 @@
 	- 4. we need a forth endpoint with `/ps/author/<id>/topics` to access the topic covered.
 	- **For GraphQL**
 	- **One single** request to collect the infomration by aggregation of data
-	- 
+	- Only get what you ask for, trailor made queries to your exact needs.
 	- Example:
 	- we need compose one single request in the form of a GraphQL query and ask for exactly what I need.
 	```
@@ -66,6 +66,6 @@
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNjQ3MDUzMywtMTA1OTI1NDM3MiwtNT
+eyJoaXN0b3J5IjpbMTcyNTg1NDIzMCwtMTA1OTI1NDM3MiwtNT
 k4ODc1MDMyLDczMDk5ODExNl19
 -->
