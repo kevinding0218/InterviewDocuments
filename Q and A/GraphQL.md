@@ -36,10 +36,12 @@
 ##### Advantages:
 - Provides clients the power to ask for exactly what they need and nothing more or less
 - GraphQL APIs get all the data your app needs in a single request
-- Language agnostic
+- Language agnostic, plenty of client and server libraries are available
+#### RESt vs GraphQL
+- 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ4MDY5ODkwLC0xMDU5MjU0MzcyLC01OT
-g4NzUwMzIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTk5MzAxMzU1MSwtMTA1OTI1NDM3MiwtNT
+k4ODc1MDMyLDczMDk5ODExNl19
 -->
