@@ -1,12 +1,12 @@
 #### What is GraphQL
-- a query language for your API, not a library, not a product and not a database
-- traditional way of not using GraphQL is we request the API endpint while expect to receive a massive JSON object from response
+- Is a query language for your API, not a library, not a product and not a database
+- Traditional way of not using GraphQL is we request the API endpint while expect to receive a massive JSON object from response
 	- Client -> endpoint  -> API -> database -> API -> JSON object -> Client
-- sdf
+- GraphQL lets you write a query to request the exactly the data that you want ad receive the result back with just what you want
 	- Client/Mobile -> Query -> GraphQL Server -> database -> JSON object -> Client/Mobile
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTkyNTQzNzIsLTU5ODg3NTAzMiw3Mz
-A5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbNzcyNzk2OTYxLC0xMDU5MjU0MzcyLC01OT
+g4NzUwMzIsNzMwOTk4MTE2XX0=
 -->
