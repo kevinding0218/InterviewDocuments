@@ -40,6 +40,8 @@
 #### RESt vs GraphQL
 - Taken example of getting author information related to author, course, rating and topics
 - For REST
+	- - Multiple round trips to collect the information from multip
+	- Example:
 	- 1. we need an endpoint with `/ps/author/<id>`, that fetches the author information for a given id
 	- 2. we need a secondary endpoint with `/ps/author/<id>/courses` to access the courses in the library
 	- 3. we need a third endpoint with `/ps/author/<id>/rating` to access the rating
@@ -60,6 +62,6 @@
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNDAwNTIxNywtMTA1OTI1NDM3MiwtNT
-k4ODc1MDMyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTIwOTQ0Njc4MjEsLTEwNTkyNTQzNzIsLT
+U5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
 -->
