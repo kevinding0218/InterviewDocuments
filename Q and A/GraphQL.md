@@ -33,9 +33,13 @@
 	}
 }
 ```
+##### Advantages:
+- Provides clients the power to ask for exactly what they need and nothing more or less
+- GraphQL APIs get all the data your app needs in a single request
+- Language agnostic
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMzY5Mzk1MiwtMTA1OTI1NDM3MiwtNT
-k4ODc1MDMyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMjQ4MDY5ODkwLC0xMDU5MjU0MzcyLC01OT
+g4NzUwMzIsNzMwOTk4MTE2XX0=
 -->
