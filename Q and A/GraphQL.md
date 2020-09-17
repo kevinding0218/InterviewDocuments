@@ -53,11 +53,13 @@
 		course { title },
 		rating,
 		topic(last: 3) {
+			name
+		}
 	}
 }
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMzY5OTI1LC0xMDU5MjU0MzcyLC01OT
-g4NzUwMzIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTMzNDAwNTIxNywtMTA1OTI1NDM3MiwtNT
+k4ODc1MDMyLDczMDk5ODExNl19
 -->
