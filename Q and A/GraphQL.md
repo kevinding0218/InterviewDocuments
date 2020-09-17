@@ -16,9 +16,22 @@
 		}
 	}
 	```
+- GraphQL Response:
+	- asdf
+```
+{
+	"data": {
+		"allPeople": {
+			"people": [
+				
+				]
+		}
+	}
+}
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyODU4MzQ2NSwtMTA1OTI1NDM3MiwtNT
+eyJoaXN0b3J5IjpbMTg4NDMyODE3NiwtMTA1OTI1NDM3MiwtNT
 k4ODc1MDMyLDczMDk5ODExNl19
 -->
