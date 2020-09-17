@@ -4,9 +4,20 @@
 	- Client -> endpoint  -> API -> database -> API -> JSON object -> Client
 - GraphQL lets you write a query to request the exactly the data that you want ad receive the result back with just what you want
 	- Client/Mobile -> Query -> GraphQL Server -> database -> JSON object -> Client/Mobile
+- GraphQL Query
+	```
+	{
+		allPeople(last: 3) {
+			people {
+				name
+				gender
+			}
+		}
+	}
+	```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzcyNzk2OTYxLC0xMDU5MjU0MzcyLC01OT
-g4NzUwMzIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE3MDI3NzY2MjYsLTEwNTkyNTQzNzIsLT
+U5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
 -->
