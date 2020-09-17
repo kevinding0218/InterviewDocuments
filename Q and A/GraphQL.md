@@ -23,8 +23,12 @@
 	"data": {
 		"allPeople": {
 			"people": [
-				
-				]
+				{
+					"name": "Tom",
+					"gender": "male"
+				},
+				...	
+			]
 		}
 	}
 }
@@ -32,6 +36,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NDMyODE3NiwtMTA1OTI1NDM3MiwtNT
-k4ODc1MDMyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTEyMDQ4Nzk4NzksLTEwNTkyNTQzNzIsLT
+U5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
 -->
