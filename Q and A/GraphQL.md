@@ -44,7 +44,7 @@
 	-  May **over fetching or under fetching** data resources, meaning we may just want one thing but there is no way to filter out the request, so end up with a whole bunch of data
 	- **Frontend** teams **rely on backend** teams heavily to deliver the APIs
 	- **Caching** is built into **HTTP spec**
-	- Example:
+		- Example:
 	- 1. we need an endpoint with `/ps/author/<id>`, that fetches the author information for a given id
 	- 2. we need a secondary endpoint with `/ps/author/<id>/courses` to access the courses in the library
 	- 3. we need a third endpoint with `/ps/author/<id>/rating` to access the rating
@@ -53,8 +53,8 @@
 	- **One single** request to collect the infomration by aggregation of data
 	- Only **get what you ask for**, trailor made queries to your exact needs.
 	- Frontend and backend teams can **work independently**.
-	- Example:
-	- we need compose one single request in the form of a GraphQL query and ask for exactly what I need.
+		- Example:
+		- we need compose one single request in the form of a GraphQL query and ask for exactly what I need.
 	```
 	{
 		author(id: 2100) {
@@ -70,6 +70,6 @@
 	- Don't use HTTP spec for caching, (libraries like Apollo comes with caching options)
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3ODM2NzEyMSwtMTA1OTI1NDM3MiwtNT
+eyJoaXN0b3J5IjpbLTE3MTM1OTU5MywtMTA1OTI1NDM3MiwtNT
 k4ODc1MDMyLDczMDk5ODExNl19
 -->
