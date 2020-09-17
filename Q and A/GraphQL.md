@@ -40,8 +40,8 @@
 #### RESt vs GraphQL
 - Taken example of getting author information related to author, course, rating and topics
 - For REST
-	- - **Multiple round trips** to collect the information from multiple resources
-	- 
+	- **Multiple round trips** to collect the information from multiple resources
+	-  May over fetching or under fetching data resources, meaning we may just want one thing but there is no way to filter out the request, so end up with a whole bunch of data
 	- Example:
 	- 1. we need an endpoint with `/ps/author/<id>`, that fetches the author information for a given id
 	- 2. we need a secondary endpoint with `/ps/author/<id>/courses` to access the courses in the library
@@ -66,6 +66,6 @@
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NDg1MjQsLTEwNTkyNTQzNzIsLTU5OD
-g3NTAzMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTgxNjQ3MDUzMywtMTA1OTI1NDM3MiwtNT
+k4ODc1MDMyLDczMDk5ODExNl19
 -->
