@@ -42,10 +42,10 @@
 - For REST
 	- 1. we need an endpoint with `/ps/author/<id>`, that fetches the author information for a given id
 	- 2. we need a secondary endpoint with `/ps/author/<id>/courses` to access the courses in the library
-	- 3. wel need a third endpoint with `/ps/author/<id>/rating` to access the rating
-	- 
+	- 3. we need a third endpoint with `/ps/author/<id>/rating` to access the rating
+	- 4. we need a forth endpoint with `/ps/author/<id>/topics` to access the topic covered.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NjAwOTk0NywtMTA1OTI1NDM3MiwtNT
-k4ODc1MDMyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbNzEwNjQ5NzYyLC0xMDU5MjU0MzcyLC01OT
+g4NzUwMzIsNzMwOTk4MTE2XX0=
 -->
