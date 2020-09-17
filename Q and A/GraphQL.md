@@ -42,7 +42,7 @@
 - For REST
 	- **Multiple round trips** to collect the information from multiple resources
 	-  May **over fetching or under fetching** data resources, meaning we may just want one thing but there is no way to filter out the request, so end up with a whole bunch of data
-	- Frontend teams rely heavily on backend teams to deliver the APIs
+	- **Frontend** teams **rely** heavily **on backend** teams to deliver the APIs
 	- Example:
 	- 1. we need an endpoint with `/ps/author/<id>`, that fetches the author information for a given id
 	- 2. we need a secondary endpoint with `/ps/author/<id>/courses` to access the courses in the library
@@ -51,7 +51,7 @@
 	- **For GraphQL**
 	- **One single** request to collect the infomration by aggregation of data
 	- Only **get what you ask for**, trailor made queries to your exact needs.
-	- Frontend and backend teams can work independently.
+	- Frontend and backend teams can **work independently**.
 	- Example:
 	- we need compose one single request in the form of a GraphQL query and ask for exactly what I need.
 	```
@@ -68,6 +68,6 @@
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDU2OTk5MCwtMTA1OTI1NDM3MiwtNT
+eyJoaXN0b3J5IjpbLTU2NzQ5NzU0MiwtMTA1OTI1NDM3MiwtNT
 k4ODc1MDMyLDczMDk5ODExNl19
 -->
