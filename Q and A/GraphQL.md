@@ -67,8 +67,9 @@
 		}
 	}
 	```
-
+	- Don't use HTTP spec for caching, (libraries like Apollo comes with caching options)
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY5MjI0MTc1LC0xMDU5MjU0MzcyLC01OT
-g4NzUwMzIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTc3ODM2NzEyMSwtMTA1OTI1NDM3MiwtNT
+k4ODc1MDMyLDczMDk5ODExNl19
 -->
