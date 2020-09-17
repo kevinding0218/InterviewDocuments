@@ -17,7 +17,7 @@
 	}
 	```
 - GraphQL Response:
-	- asdf
+	- response is a JSON object structured just like the request
 ```
 {
 	"data": {
@@ -36,6 +36,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDQ4Nzk4NzksLTEwNTkyNTQzNzIsLT
-U5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTgwMzY5Mzk1MiwtMTA1OTI1NDM3MiwtNT
+k4ODc1MDMyLDczMDk5ODExNl19
 -->
