@@ -243,9 +243,19 @@
 		- `/ps/author/<id>/courses`
 		- `/ps/author/<id>/rating`
 		- `/ps/author/<id>/topics`
+	- If using GraphQL, we can avoid multiple round-trip request by using one query data
+		- ``
+{
+	author (id: 2100) {
+		name
+		courses {
+		}
+	}
+}
+``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTI4NzY4NywtMTU2Njk3NTk5MywyMT
-I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
-MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
-IsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTIwNTU0MTE1NjUsLTE1NjY5NzU5OTMsMj
+EyOTE1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIy
+NTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MD
+MyLDczMDk5ODExNl19
 -->
