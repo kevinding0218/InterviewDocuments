@@ -178,9 +178,10 @@
 		query operation_name { ... }
 		```
 	- Variables
-		- Arguments to fields can be dynamic. GraphQL uses variables fo 
+		- Arguments to fields can be dynamic. GraphQL uses variables for factor dynamic values out of the query, and pass them as a separate dictionary.
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNDQyNTg0NCwtMTkxNTgyNTY1OSwtMz
+eyJoaXN0b3J5IjpbMTkyMzAwMDY3NywtMTkxNTgyNTY1OSwtMz
 MyMjUzMzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3
 NTAzMiw3MzA5OTgxMTZdfQ==
 -->
