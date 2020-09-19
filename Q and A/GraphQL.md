@@ -96,8 +96,11 @@
 			addAuthor(firstName: String, lastName: String): Author
 		}
 		```
-	- By default, each of the types can be set to null, to override the default behavior and ensure that a field cannot be null, add `!`, 
+	- By default, each of the types can be set to null, to override the default behavior and ensure that a field cannot be null, add `!`
+- Queries:
+	- https://developer.github.com/v4/explorer/
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYxMTU5MzM4LDE0MDUzMDQzMTksLTEwNT
-kyNTQzNzIsLTU5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTMzMjI1MzM5OCwxNDA1MzA0MzE5LC0xMD
+U5MjU0MzcyLC01OTg4NzUwMzIsNzMwOTk4MTE2XX0=
 -->
