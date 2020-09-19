@@ -238,10 +238,14 @@
 - Benefit of Declarative Data Fetching
 	- Avoid round-trips to fetch data
 	- No more over-fetching or under-fetching of data
-	- 
+	- If using REST, we'll need some endpoints like
+		- `/ps/author/<id>`
+		- `/ps/author/<id>/courses`
+		- `/ps/author/<id>/rating`
+		- `/ps/author/<id>/`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA3MDExMzE2LC0xNTY2OTc1OTkzLDIxMj
-kxNTczNDcsMTc2MDE1NTYyOCwtMTkxNTgyNTY1OSwtMzMyMjUz
-Mzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMi
-w3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTA1OTIxODgzNywtMTU2Njk3NTk5MywyMT
+I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
+MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
+IsNzMwOTk4MTE2XX0=
 -->
