@@ -80,7 +80,10 @@
 	- ID: unique identifier, used to re-fetch an object or as the key for a cache
 	- enum
 	- Query and Mutation types
-		- Every GraphQL service has a query type. It may or may not have a mutation type. T
+		- query represents what the client is asking for
+		- and the mutation is when client's going to add or delete data from the API
+		- both query and mutation types are the same as any other object type
+		- Every GraphQL service has a query type. It may or may not have a mutation type. They act as an entry point into the schema
 		```
 		schema {
 			query: Query
@@ -88,6 +91,6 @@
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcwNzA0NjgzLDE0MDUzMDQzMTksLTEwNT
-kyNTQzNzIsLTU5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTUwMDY5MTQyOSwxNDA1MzA0MzE5LC0xMD
+U5MjU0MzcyLC01OTg4NzUwMzIsNzMwOTk4MTE2XX0=
 -->
