@@ -127,11 +127,30 @@
 		```
 	- Alias
 		- You can't query for the same field with different arguments. Hence you need alias, they let you rename the result of a field with anything you want
-```
-
-```
+		```
+		query { 
+		  viewer { 
+		    id,
+		    firstFollwers: followers (first : 3) {
+		      nodes {
+		        id,
+		        bio
+		      }
+		    },
+		    lastFollwers: followers (last : 5) {
+		      nodes{
+		        id,
+		        bio
+		      }
+		    }
+		  }
+		}
+		```
+	- Fragments
+		- Fragments are GraphQL's reusable units, they let you build sets of fields and then include them in multiple queries.
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNzAwMDcxMSwtMTkxNTgyNTY1OSwtMz
+eyJoaXN0b3J5IjpbMTAxNjYwNzE0MiwtMTkxNTgyNTY1OSwtMz
 MyMjUzMzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3
 NTAzMiw3MzA5OTgxMTZdfQ==
 -->
