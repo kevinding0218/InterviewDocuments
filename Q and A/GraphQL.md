@@ -40,7 +40,7 @@
 - Increase multi-team productivity
 - Rapid product development
 - Reduced Cost, would be tested only when there is a change in the schema or if there is a french shcema. 
-#### RESt vs GraphQL
+#### REST vs GraphQL
 - Taken example of getting author information related to author, course, rating and topics
 - For REST
 	- **Multiple round trips** to collect the information from multiple resources
@@ -235,10 +235,13 @@
 		}
 		```
 #### Why GraphQL?
-
+- Benefit of Declarative Data Fetching
+	- Avoid round-trips to fetch data
+	- No more over-fetching or under-fetching of data
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzOTU5MzEwOSwtMTU2Njk3NTk5MywyMT
-I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
-MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
-IsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNzA3MDExMzE2LC0xNTY2OTc1OTkzLDIxMj
+kxNTczNDcsMTc2MDE1NTYyOCwtMTkxNTgyNTY1OSwtMzMyMjUz
+Mzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMi
+w3MzA5OTgxMTZdfQ==
 -->
