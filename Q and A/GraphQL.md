@@ -259,10 +259,18 @@
 ``
 	- No more over-fetching or under-fetching of data
 		- If using REST, calling `/api/user` that would return a full user object including additional field data we don't need
-		- If using GraphQL, 
+		- If using GraphQL, we can query only the data fields we need
+		- ``
+user {
+	firstName
+	lastName
+	gender
+}
+``
+- GraphQL is a strongly-typed language, and its schema s
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTI3NjI2OTgsLTE1NjY5NzU5OTMsMj
-EyOTE1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIy
-NTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MD
-MyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbNzkxNzI3NzQsLTE1NjY5NzU5OTMsMjEyOT
+E1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIyNTMz
+OTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MDMyLD
+czMDk5ODExNl19
 -->
