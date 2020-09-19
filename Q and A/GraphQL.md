@@ -89,8 +89,14 @@
 			query: Query
 			mutation: Mutation
 		}
+		type Query {
+			author_details: [Author]
+		}
+		type Mutation {
+			addAuthor(firstName: String, lastName: String): Author
+		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMDY5MTQyOSwxNDA1MzA0MzE5LC0xMD
+eyJoaXN0b3J5IjpbMTE2MDUwOTcwNywxNDA1MzA0MzE5LC0xMD
 U5MjU0MzcyLC01OTg4NzUwMzIsNzMwOTk4MTE2XX0=
 -->
