@@ -99,8 +99,21 @@
 	- By default, each of the types can be set to null, to override the default behavior and ensure that a field cannot be null, add `!`
 - Queries:
 	- https://developer.github.com/v4/explorer/
-	- 
+	- Fields
+		```
+		query { 
+		  viewer { 
+		    login,
+		    bio,
+		    id,
+		    name
+		  }
+		}
+		```
+	- Argument
+		- Every field and nested object can get its own set of arguments. This gets rid of multiple API fethe
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMjI1MzM5OCwxNDA1MzA0MzE5LC0xMD
-U5MjU0MzcyLC01OTg4NzUwMzIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTg2Mzk5MjQ3MSwtMzMyMjUzMzk4LDE0MD
+UzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMiw3MzA5OTgx
+MTZdfQ==
 -->
