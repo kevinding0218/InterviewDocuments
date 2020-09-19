@@ -204,10 +204,11 @@
 		```
 	- Mutations
 		- Mutations are used to make changes to the data (Create, Update, Delete data)
-		- GraphQL assumes side-effects after mutations and changes the dataset after a mutation
+		- GraphQL assumes side-effects after mutations and changes the dataset after every mutation
+		- While query fields are executed in parallel, mutation fields run in series, one after the other
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2OTM2NjMxNSwyMTI5MTU3MzQ3LDE3Nj
-AxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1MzM5OCwxNDA1MzA0
-MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMzIsNzMwOTk4MTE2XX
-0=
+eyJoaXN0b3J5IjpbLTE1NjY5NzU5OTMsMjEyOTE1NzM0NywxNz
+YwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIyNTMzOTgsMTQwNTMw
+NDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MDMyLDczMDk5ODExNl
+19
 -->
