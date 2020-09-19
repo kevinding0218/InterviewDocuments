@@ -288,10 +288,11 @@ user {
 	- Local State Management
 	- Pagination
 - GraphQL Server
-	- 
+	- Receives the query from the client and responds back
+	- Resolvers function is a function that resolves a value
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNzU5NDQ1OSwtMTU2Njk3NTk5MywyMT
-I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
-MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
-IsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE2MjI0ODQ5NjUsLTE1NjY5NzU5OTMsMj
+EyOTE1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIy
+NTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MD
+MyLDczMDk5ODExNl19
 -->
