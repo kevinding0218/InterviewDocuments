@@ -268,10 +268,11 @@ user {
 }
 ``
 - GraphQL is a strongly-typed language, and its schema should have types of all objects that it uses, the schema serves as a contract between client and server relies on a query language with a type system
-- 
+	- code is predicatable which is clean and maintainable
+	- frontend and backend teams work independen
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE1NjM5NTk0LC0xNTY2OTc1OTkzLDIxMj
-kxNTczNDcsMTc2MDE1NTYyOCwtMTkxNTgyNTY1OSwtMzMyMjUz
-Mzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMi
-w3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTU4OTM0NTI1OCwtMTU2Njk3NTk5MywyMT
+I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
+MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
+IsNzMwOTk4MTE2XX0=
 -->
