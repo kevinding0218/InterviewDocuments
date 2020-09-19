@@ -79,8 +79,15 @@
 	- Boolean
 	- ID: unique identifier, used to re-fetch an object or as the key for a cache
 	- enum
-	- 
+	- Query and Mutation types
+		- Every GraphQL service has a query type. It may or may not have a mutation type. T
+		```
+		schema {
+			query: Query
+			mutation: Mutation
+		}
+		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyODM5NzE3LDE0MDUzMDQzMTksLTEwNT
+eyJoaXN0b3J5IjpbODcwNzA0NjgzLDE0MDUzMDQzMTksLTEwNT
 kyNTQzNzIsLTU5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
 -->
