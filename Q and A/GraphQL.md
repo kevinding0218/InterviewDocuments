@@ -291,10 +291,11 @@ user {
 	- Receives the query from the client and responds back
 	- Schema and Resolvers function: a function that resolves a value for a type/field in the GraphQL Schema, resolvers can return objects and also can resolve values from another REST API, database or cache
 	- Network layer: the queries from client needs to be transported to the server through the network over HTTPS.
-	- GraphQL Execution Engine: responsible for pas
+	- GraphQL Execution Engine: responsible for parses query from client and validating schema and return JSON response, executes resolvers for each field
+	- Batched Resolving:  by making batch requests, we ensure that we do only one fetch to the backend. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODY0NTI0ODgsLTE1NjY5NzU5OTMsMj
-EyOTE1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIy
-NTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MD
-MyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTYyMDE5NzAsLTE1NjY5NzU5OTMsMjEyOT
+E1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIyNTMz
+OTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MDMyLD
+czMDk5ODExNl19
 -->
