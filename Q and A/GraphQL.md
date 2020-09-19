@@ -148,9 +148,32 @@
 		```
 	- Fragments
 		- Fragments are GraphQL's reusable units, they let you build sets of fields and then include them in multiple queries.
-		- 
+		```
+		query { 
+		  viewer { 
+		    id,
+		    firstFollwers: followers (first : 3) {
+		      nodes {
+		        ...userInfo
+		      }
+		    },
+		    lastFollwers: followers (last : 5) {
+		      nodes{
+		        ...userInfo
+		      }
+		    }
+		  }
+		}
+
+		fragment userInfo on User {
+		  id
+		  bio
+		  avatarUrl
+		  bioHTML
+		}
+		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNjYwNzE0MiwtMTkxNTgyNTY1OSwtMz
+eyJoaXN0b3J5IjpbMTc0OTE3NTMwNSwtMTkxNTgyNTY1OSwtMz
 MyMjUzMzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3
 NTAzMiw3MzA5OTgxMTZdfQ==
 -->
