@@ -196,9 +196,14 @@ fragment userInfo on User {
   id
   name
 }
+
+// Query Variables
+{
+  "isOwner": false
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI1MjU5NjUyLDE3NjAxNTU2MjgsLTE5MT
-U4MjU2NTksLTMzMjI1MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0
-MzcyLC01OTg4NzUwMzIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMjEyOTE1NzM0NywxNzYwMTU1NjI4LC0xOT
+E1ODI1NjU5LC0zMzIyNTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1
+NDM3MiwtNTk4ODc1MDMyLDczMDk5ODExNl19
 -->
