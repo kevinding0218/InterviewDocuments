@@ -126,9 +126,12 @@
 		}
 		```
 	- Alias
-		- You can't query for the same field with different arguments. Hence you need alias, they let you rename the result of a field with anyth
+		- You can't query for the same field with different arguments. Hence you need alias, they let you rename the result of a field with anything you want
+```
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NjQ1OTQ2MCwtMTkxNTgyNTY1OSwtMz
+eyJoaXN0b3J5IjpbMTIxNzAwMDcxMSwtMTkxNTgyNTY1OSwtMz
 MyMjUzMzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3
 NTAzMiw3MzA5OTgxMTZdfQ==
 -->
