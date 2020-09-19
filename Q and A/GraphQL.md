@@ -179,31 +179,32 @@
 		```
 	- Variables
 		- Arguments to fields can be dynamic. GraphQL uses variables for factor dynamic values out of the query, and pass them as a separate dictionary.
-```
-query viewerInfo($isOwner: Boolean!) { 
-  viewer { 
-    ...userInfo
-    starredRepositories(ownedByViewer: $isOwner, last: 5) {
-      nodes {
-        id
-        name
-      }
-    }
-  }
-}
+		```
+		query viewerInfo($isOwner: Boolean!) { 
+		  viewer { 
+		    ...userInfo
+		    starredRepositories(ownedByViewer: $isOwner, last: 5) {
+		      nodes {
+		        id
+		        name
+		      }
+		    }
+		  }
+		}
 
-fragment userInfo on User {
-  id
-  name
-}
+		fragment userInfo on User {
+		  id
+		  name
+		}
 
-// Query Variables
-{
-  "isOwner": false
-}
-```
+		// Query Variables
+		{
+		  "isOwner": false
+		}
+		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyOTE1NzM0NywxNzYwMTU1NjI4LC0xOT
-E1ODI1NjU5LC0zMzIyNTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1
-NDM3MiwtNTk4ODc1MDMyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMjAxNTQ5MDU3OSwyMTI5MTU3MzQ3LDE3Nj
+AxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1MzM5OCwxNDA1MzA0
+MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMzIsNzMwOTk4MTE2XX
+0=
 -->
