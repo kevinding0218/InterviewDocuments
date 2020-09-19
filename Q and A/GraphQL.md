@@ -174,8 +174,13 @@
 		```
 	- Operation Name
 		- A meaningful and explicit name for your operation. Think of it like a function name in a programming language
+		```
+		query operation_name { ... }
+		```
+	- Variables
+		- Arguments to fields can be dynamic. GraphQL uses variables fo 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI4NTc5MjQ1LC0xOTE1ODI1NjU5LC0zMz
-IyNTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1
-MDMyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTIwNDQyNTg0NCwtMTkxNTgyNTY1OSwtMz
+MyMjUzMzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3
+NTAzMiw3MzA5OTgxMTZdfQ==
 -->
