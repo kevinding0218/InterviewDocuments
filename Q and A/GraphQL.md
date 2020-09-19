@@ -111,9 +111,9 @@
 		}
 		```
 	- Argument
-		- Every field and nested object can get its own set of arguments. This gets rid of multiple API fethe
+		- Every field and nested object can get its own set of arguments. This gets rid of multiple API fetches.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2Mzk5MjQ3MSwtMzMyMjUzMzk4LDE0MD
-UzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMiw3MzA5OTgx
-MTZdfQ==
+eyJoaXN0b3J5IjpbLTE5MTU4MjU2NTksLTMzMjI1MzM5OCwxND
+A1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMzIsNzMwOTk4
+MTE2XX0=
 -->
