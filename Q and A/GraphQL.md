@@ -267,10 +267,11 @@ user {
 	gender
 }
 ``
-- GraphQL is a strongly-typed language, and its schema s
+- GraphQL is a strongly-typed language, and its schema should have types of all objects that it uses, the schema serves as a contract between client and server relies on a query language with a type system
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkxNzI3NzQsLTE1NjY5NzU5OTMsMjEyOT
-E1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIyNTMz
-OTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MDMyLD
-czMDk5ODExNl19
+eyJoaXN0b3J5IjpbOTE1NjM5NTk0LC0xNTY2OTc1OTkzLDIxMj
+kxNTczNDcsMTc2MDE1NTYyOCwtMTkxNTgyNTY1OSwtMzMyMjUz
+Mzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMi
+w3MzA5OTgxMTZdfQ==
 -->
