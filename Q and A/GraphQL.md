@@ -289,11 +289,12 @@ user {
 	- Pagination
 - GraphQL Server
 	- Receives the query from the client and responds back
-	- Resolvers function is a function that resolves a value for a type/field in the GraphQL Schema, resolvers can return objects and also can resolve values from another REST API, database or cache
-	- 
+	- Schema and Resolvers function: a function that resolves a value for a type/field in the GraphQL Schema, resolvers can return objects and also can resolve values from another REST API, database or cache
+	- Network layer: the queries from client needs to be transported to the server through the network over HTTPS.
+	- GraphQL Execution Engine: responsible for pas
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEwODYzOTkxLC0xNTY2OTc1OTkzLDIxMj
-kxNTczNDcsMTc2MDE1NTYyOCwtMTkxNTgyNTY1OSwtMzMyMjUz
-Mzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMi
-w3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE5ODY0NTI0ODgsLTE1NjY5NzU5OTMsMj
+EyOTE1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIy
+NTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MD
+MyLDczMDk5ODExNl19
 -->
