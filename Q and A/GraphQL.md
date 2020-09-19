@@ -276,10 +276,14 @@ user {
 	- No versioning
 	- Non-breaking changes
 #### GraphQL Ecosystem and Tools
-- Traditional REST Architecture without GraphQL
-	- Client <-> 
+- REST Architecture without GraphQL
+	- Client <-> Server <-> Database
+- REST Architecture with GraphQL
+	- Client <-> GraphQL Client <-> Server <-> GraphQL Server <-> Database
+- GraphQL Client
+	- Handles sending requests(queries) to the s
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMTg3MzE1MiwtMTU2Njk3NTk5MywyMT
+eyJoaXN0b3J5IjpbMTU4MjcxOTA2NiwtMTU2Njk3NTk5MywyMT
 I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
 MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
 IsNzMwOTk4MTE2XX0=
