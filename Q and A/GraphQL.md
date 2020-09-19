@@ -206,37 +206,37 @@
 		- Mutations are used to make changes to the data (Create, Update, Delete data)
 		- GraphQL assumes side-effects after mutations and changes the dataset after every mutation
 		- While query fields are executed in parallel, mutation fields run in series, one after the other
-```
-mutation NewStatus($input:ChangeUserStatusInput!) {
-  changeUserStatus(input:$input) {
-    clientMutationId
-    status {
-      message
-    }
-  }
-}
+		```
+		mutation NewStatus($input:ChangeUserStatusInput!) {
+		  changeUserStatus(input:$input) {
+		    clientMutationId
+		    status {
+		      message
+		    }
+		  }
+		}
 
-query viewerInfo { 
-  viewer { 
-    login
-    name
-    status {
-      id
-      message
-    }
-  }
-}
-// QUERY VARIABLES
-{
-  "input": {
-    "clientMutationId": "1010101",
-    "message": "Enjoy nowadays"
-  }
-}
-```
+		query viewerInfo { 
+		  viewer { 
+		    login
+		    name
+		    status {
+		      id
+		      message
+		    }
+		  }
+		}
+		// QUERY VARIABLES
+		{
+		  "input": {
+		    "clientMutationId": "1010101",
+		    "message": "Enjoy nowadays"
+		  }
+		}
+		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NTk3MDMzNywtMTU2Njk3NTk5MywyMT
-I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
-MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
-IsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTU2NjYwODc5LC0xNTY2OTc1OTkzLDIxMj
+kxNTczNDcsMTc2MDE1NTYyOCwtMTkxNTgyNTY1OSwtMzMyMjUz
+Mzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMi
+w3MzA5OTgxMTZdfQ==
 -->
