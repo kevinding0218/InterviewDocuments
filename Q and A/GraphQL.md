@@ -71,8 +71,16 @@
 	}
 	```
 	- Don't use HTTP spec for caching, (libraries like Apollo comes with caching options)
+#### Core Concept
+- Types
+	- Int
+	- Float
+	- String
+	- Boolean
+	- ID: unique identifier, used to re-fetch an object or as the key for a cache
+	- enum
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNT
-k4ODc1MDMyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMjEyODM5NzE3LDE0MDUzMDQzMTksLTEwNT
+kyNTQzNzIsLTU5ODg3NTAzMiw3MzA5OTgxMTZdfQ==
 -->
