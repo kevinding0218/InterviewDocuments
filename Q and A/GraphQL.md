@@ -275,9 +275,11 @@ user {
 	- GraphQL offers a lot of flexibility
 	- No versioning
 	- Non-breaking changes
+#### GraphQL Ecosystem and Tools
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzIwOTA2NTAsLTE1NjY5NzU5OTMsMj
-EyOTE1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIy
-NTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MD
-MyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTExMTQ0Njk1MSwtMTU2Njk3NTk5MywyMT
+I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
+MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
+IsNzMwOTk4MTE2XX0=
 -->
