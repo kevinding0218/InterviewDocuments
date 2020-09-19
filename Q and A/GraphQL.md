@@ -237,7 +237,6 @@
 #### Why GraphQL?
 - Benefit of Declarative Data Fetching
 	- Avoid round-trips to fetch data
-	- No more over-fetching or under-fetching of data
 	- If using REST, we'll need some endpoints like
 		- `/ps/author/<id>`
 		- `/ps/author/<id>/courses`
@@ -258,9 +257,12 @@
 	}
 }
 ``
+	- No more over-fetching or under-fetching of data
+		- If using REST, calling `/api/user` that would return a full user object including additional field data we don't need
+		- If using GraphQL, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2ODU0NDIyOCwtMTU2Njk3NTk5MywyMT
-I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
-MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
-IsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE4OTI3NjI2OTgsLTE1NjY5NzU5OTMsMj
+EyOTE1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIy
+NTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MD
+MyLDczMDk5ODExNl19
 -->
