@@ -103,9 +103,9 @@
 		```
 		query { 
 		  viewer { 
-		    login,
-		    bio,
-		    id,
+		    login
+		    bio
+		    id
 		    name
 		  }
 		}
@@ -133,13 +133,13 @@
 		    id,
 		    firstFollwers: followers (first : 3) {
 		      nodes {
-		        id,
+		        id
 		        bio
 		      }
 		    },
 		    lastFollwers: followers (last : 5) {
 		      nodes{
-		        id,
+		        id
 		        bio
 		      }
 		    }
@@ -151,12 +151,12 @@
 		```
 		query { 
 		  viewer { 
-		    id,
+		    id
 		    firstFollwers: followers (first : 3) {
 		      nodes {
 		        ...userInfo
 		      }
-		    },
+		    }
 		    lastFollwers: followers (last : 5) {
 		      nodes{
 		        ...userInfo
@@ -249,13 +249,18 @@
 	author (id: 2100) {
 		name
 		courses {
+			title
+		}
+		rating
+		topic (last: 3) {
+			name
 		}
 	}
 }
 ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTU0MTE1NjUsLTE1NjY5NzU5OTMsMj
-EyOTE1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIy
-NTMzOTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MD
-MyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTQ2ODU0NDIyOCwtMTU2Njk3NTk5MywyMT
+I5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2NTksLTMzMjI1
+MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMz
+IsNzMwOTk4MTE2XX0=
 -->
