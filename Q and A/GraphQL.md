@@ -112,8 +112,23 @@
 		```
 	- Argument
 		- Every field and nested object can get its own set of arguments. This gets rid of multiple API fetches.
+		```
+		query { 
+		  viewer {  
+		    id,
+		    followers (last:3) {
+		      nodes {
+		        id
+		        bio
+		      }
+		    }
+		  }
+		}
+		```
+	- Alias
+		- You can't query for the same field with different arguments. Hence you need alias, they let you rename the result of a field with anyth
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTU4MjU2NTksLTMzMjI1MzM5OCwxND
-A1MzA0MzE5LC0xMDU5MjU0MzcyLC01OTg4NzUwMzIsNzMwOTk4
-MTE2XX0=
+eyJoaXN0b3J5IjpbMTg0NjQ1OTQ2MCwtMTkxNTgyNTY1OSwtMz
+MyMjUzMzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3
+NTAzMiw3MzA5OTgxMTZdfQ==
 -->
