@@ -293,9 +293,10 @@ user {
 	- Network layer: the queries from client needs to be transported to the server through the network over HTTPS.
 	- GraphQL Execution Engine: responsible for parses query from client and validating schema and return JSON response, executes resolvers for each field
 	- Batched Resolving:  by making batch requests, we ensure that we do only one fetch to the backend. 
+- Database to GraphQL Server (Prisma)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMDE5NzAsLTE1NjY5NzU5OTMsMjEyOT
-E1NzM0NywxNzYwMTU1NjI4LC0xOTE1ODI1NjU5LC0zMzIyNTMz
-OTgsMTQwNTMwNDMxOSwtMTA1OTI1NDM3MiwtNTk4ODc1MDMyLD
-czMDk5ODExNl19
+eyJoaXN0b3J5IjpbODQ4Njk4MTc2LC0xNTY2OTc1OTkzLDIxMj
+kxNTczNDcsMTc2MDE1NTYyOCwtMTkxNTgyNTY1OSwtMzMyMjUz
+Mzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMi
+w3MzA5OTgxMTZdfQ==
 -->
