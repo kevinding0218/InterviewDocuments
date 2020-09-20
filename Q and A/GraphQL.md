@@ -294,8 +294,10 @@ user {
 	- GraphQL Execution Engine: responsible for parses query from client and validating schema and return JSON response, executes resolvers for each field
 	- Batched Resolving:  by making batch requests, we ensure that we do only one fetch to the backend. 
 - Database to GraphQL Server (Prisma)
+- Tools
+	- GraphiQL: an in-browser IDE for writing, validating and testing GraphQL queries
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ4Njk4MTc2LC0xNTY2OTc1OTkzLDIxMj
+eyJoaXN0b3J5IjpbNzU1ODcyNzg0LC0xNTY2OTc1OTkzLDIxMj
 kxNTczNDcsMTc2MDE1NTYyOCwtMTkxNTgyNTY1OSwtMzMyMjUz
 Mzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMi
 w3MzA5OTgxMTZdfQ==
