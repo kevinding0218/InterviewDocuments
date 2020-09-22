@@ -33,13 +33,14 @@
 	- Thread T1 continues -> create an instance of Singleton and copy the instance in the private static instance field -> thus erasing the instance that has been created by the T2
 #### How to prevent that?
 - Synchronization: Prevent a block of code to be executed by more than one thread at the same time, it will prevent the thread schedular to give the hand to a thread that wants to execute the synchronized portion of code that has already been executed by another thread
+- in Java we can do it by using the keyword **synchronized**
 	```
-		public static s Singleton getInstance() {
+		public static synchronized Singleton getInstance() {
 			if (instance == null)
 				instance = new Singleton();
 			return instance
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NDAzODU1NiwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTQyNTQwMTg0NCwtMjA4ODc0NjYxMl19
 -->
