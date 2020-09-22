@@ -20,7 +20,14 @@
 - We know that creating a thread is about doing several things at the same time, accessing data concurrently may lead to issues! For example, two different threads might be reading the same variable, the same field that defined in a Java class or the same array
 - A race condition occurs when two **different** threads are trying to **read** and **write** the **same** variable or same field at the **same** time, this read and write is called a race condition
 - "same time" does not mean the same thing on a single core and on a multi core CPU
-- 
+- For example in a singleton pattern
+	```
+	public static Singleton getInstance() {
+		if (instance == null)
+			instance = new Singleton();
+		return instance
+	```
+Thread
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NTE2NDg0NSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTg0OTYyNTYwNCwtMjA4ODc0NjYxMl19
 -->
