@@ -27,7 +27,9 @@
 			instance = new Singleton();
 		return instance
 	```
-Thread
+Thread T1 starts -> check if instance is null ? -> yes -> enters the if block -> Thread Scheduler pauses T1
+Thread T2 starts -> check if instance is null ? -> yes -> enters the if block -> creates an instance of Singleton -> Thread Scheduler pauses T2
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0OTYyNTYwNCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTkyNDc2NjkzMCwtMjA4ODc0NjYxMl19
 -->
