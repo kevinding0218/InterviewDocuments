@@ -27,9 +27,11 @@
 			instance = new Singleton();
 		return instance
 	```
-Thread T1 starts -> check if instance is null ? -> yes -> enters the if block -> Thread Scheduler pauses T1
-Thread T2 starts -> check if instance is null ? -> yes -> enters the if block -> creates an instance of Singleton and copy the instance in the private static instance field -> Thread Scheduler pauses T2
-Thread T1 continues -> create an instance of Singleton and copy the instance in the private static instance field -> thus erasing the instance that has been created by the T2
+	- Thread T1 starts -> check if instance is null ? -> yes -> enters the if block -> Thread Scheduler pauses T1
+	- Thread T2 starts -> check if instance is null ? -> yes -> enters the if block -> creates an instance of Singleton and copy the instance in the private static instance field -> Thread Scheduler pauses T2
+	- Thread T1 continues -> create an instance of Singleton and copy the instance in the private static instance field -> thus erasing the instance that has been created by the T2
+#### How to prevent that?
+- Synchronization: Prevent a block of code to be executed by more than one thread at the same time
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMTA1MjUzLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTU1MTY1OTkwNywtMjA4ODc0NjYxMl19
 -->
