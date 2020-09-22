@@ -15,7 +15,10 @@
 	- There are three reasons for the scheduler to pause a thread:
 		1. The CPU should be shared equally among thread: there might be some high priority stuffs that are taken into account to share equally the CPU as a resource
 		2. The thread is waiting for some more data: think about a thread is doing some input, output, reading or writing data to disk or to a network, we know that reading/writing to disk is a slow process, if CPU is very fast, it may pause the thread waiting for the data to be available
-		3. The thread is waiting for another thread to do something: 
+		3. The thread is waiting for another thread to do something: like to release a resource
+#### Race Condition
+- creating a thread is about doing several things at the same time.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMDI4Mzk5OCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTc4MTE3NzM1MiwtMjA4ODc0NjYxMl19
 -->
