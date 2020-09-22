@@ -41,6 +41,7 @@
 			return instance
 		}
 		```
+- How it work: synchronize means protecting this method by a fence, so that Java machine uses a **lock** object 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNTQwMTg0NCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTc0MzcyMTAxNSwtMjA4ODc0NjYxMl19
 -->
