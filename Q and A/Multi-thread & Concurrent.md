@@ -13,8 +13,9 @@
 - Who is responsible for the CPU sharing?
 	- A special element called thread scheduler
 	- There are three reasons for the scheduler to pause a thread:
-		- The CPU should be shared equally among thread: there might be some high priority stuffs that are taken into account to share equally the CPU as a resource
-		- The thread is waiting for some more data: 
+		1. The CPU should be shared equally among thread: there might be some high priority stuffs that are taken into account to share equally the CPU as a resource
+		2. The thread is waiting for some more data: think about a thread is doing some input, output, reading or writing data to disk or to a network, we know that reading/writing to disk is a slow process, if CPU is very fast, it may pause the thread waiting for the data to be available
+		3. The thread is waiting for another thread to do something: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NzQ0NzA0LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTEyMDI4Mzk5OCwtMjA4ODc0NjYxMl19
 -->
