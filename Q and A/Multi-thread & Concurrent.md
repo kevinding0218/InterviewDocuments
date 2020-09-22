@@ -18,8 +18,8 @@
 		3. The thread is waiting for another thread to do something: like to release a resource
 #### Race Condition
 - We know that creating a thread is about doing several things at the same time, accessing data concurrently may lead to issues! For example, two different threads might be reading the same variable, the same field that defined in a Java class or the same array
-- A race condition occurs w
+- A race condition occurs when two **different** threads are trying to **read** and **write** the **same** variable or same field at the **same** time, this read and write is called
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkwMTYzMDQxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTYxNzM1MzQ4MiwtMjA4ODc0NjYxMl19
 -->
