@@ -10,6 +10,10 @@
 	- Can only do one thing at a time, but task are switching very fast
 - 2nd case: CPU with Multiple Cores
 	- Can do two things at a time
+- Who is responsible for the CPU sharing?
+	- A special element called thread scheduler
+	- There are thre
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMDk4MzM5OCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE3ODg5OTIwODksLTIwODg3NDY2MTJdfQ
+==
 -->
