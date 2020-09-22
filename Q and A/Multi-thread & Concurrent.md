@@ -17,8 +17,9 @@
 		2. The thread is waiting for some more data: think about a thread is doing some input, output, reading or writing data to disk or to a network, we know that reading/writing to disk is a slow process, if CPU is very fast, it may pause the thread waiting for the data to be available
 		3. The thread is waiting for another thread to do something: like to release a resource
 #### Race Condition
-- creating a thread is about doing several things at the same time.
+- We know that creating a thread is about doing several things at the same time, accessing data concurrently may lead to issues! For example, two different threads might be reading the same variable, the same field that defined in a Java class or the same array
+- A race condition occurs w
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTE3NzM1MiwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMjkwMTYzMDQxLC0yMDg4NzQ2NjEyXX0=
 -->
