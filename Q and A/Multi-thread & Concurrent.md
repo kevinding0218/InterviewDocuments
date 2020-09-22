@@ -5,7 +5,9 @@
 - Different threads can be executed "at the same time"
 - The JVM works with several threads (GC, JIT, ...)
 #### What does "at same time" mean
-- For example, you can write a text document, while there is a background spell check running, also print the document won't let you stop writing, as 
+- For example, you can write a text document, while there is a background spell check running, also print the document won't let you stop writing, you can also send/receive email while you're printing
+- 1st case: CPU with Only One Core
+	- Can only do one thing at a time
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MzM1NjE4NywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTY0NzQ0MzkwNSwtMjA4ODc0NjYxMl19
 -->
