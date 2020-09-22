@@ -41,7 +41,7 @@
 			return instance
 		}
 		```
-- How it work: synchronize means protecting this method by a fence, so that Java machine uses a **lock** object, every object in the Java language has this key, when a thread tries to enter this protected block of code, it will make a request on this lock object, like "give me your key", if the object has the key available, it will give it to the thread, and this thread will be able to run the 
+- How it work: synchronize means protecting this method by a fence, so that Java machine uses a **lock** object, every object in the Java language has this key, when a thread tries to enter this protected block of code, it will make a request on this lock object, like "give me your key", if the object has the key available, it will give it to the thread, and this thread will be able to run the code freely. If another thread comes and make the same request, this time the lock object has **no key to give** because it already gives its key to the previous thread, the lock object has only **one single key**.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NjIwNDI4OCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMzUwMDY1MTA5LC0yMDg4NzQ2NjEyXX0=
 -->
