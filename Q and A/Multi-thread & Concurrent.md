@@ -48,10 +48,10 @@
 - If we have two instances of `Person`, lock in `getName()` of first instance won't stop another thread from trying to access `getAge()` in second instance
 - If we want to allow only one thread to access one instance, we need to our lock object to be bound on class itself
 - Using the `synchronized` keyword on a method declaration, uses an implicit lock object, which is the class object in the case of a static method or the instance object itself in the case of a non-static method
-#### Reentrant Locks and Deallocks
-- In Java, locks are reentrant, meaning when a thread holds a lock, it can enter a block synchronized on the lock it is holding
-- 
+#### Reentrant Locks and Deadlocks
+- Reentrant Locks: In Java, locks are reentrant, meaning when a thread holds a lock, it can enter a block synchronized on the lock it is holding
+- Deadlocks:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAxNTA4MDk0LDUyNDE5Nzc4LC02NTA2NT
-kyOTEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE1NTI0MDkyODMsNTI0MTk3NzgsLTY1MD
+Y1OTI5MSwtMjA4ODc0NjYxMl19
 -->
