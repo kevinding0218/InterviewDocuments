@@ -51,8 +51,9 @@
 #### Reentrant Locks and Deadlocks
 - Reentrant Locks: In Java, locks are reentrant, meaning when a thread holds a lock, it can enter a block synchronized on the lock it is holding
 - Deadlocks: is a situation where a thread T1 holds a key needed by a thread T2, and T2 also holds the key needed by T1
-- 
+	- The JVM is able to detect deadlock situation, and can log information help debug the application, unfortunately there is not much we can do if a deadlock situation occurs, besides rebooting the JVM
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1ODU4MjU4NCw1MjQxOTc3OCwtNjUwNj
+eyJoaXN0b3J5IjpbMTAwNjMyNTA1Nyw1MjQxOTc3OCwtNjUwNj
 U5MjkxLC0yMDg4NzQ2NjEyXX0=
 -->
