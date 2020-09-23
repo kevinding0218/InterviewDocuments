@@ -52,8 +52,13 @@
 - Reentrant Locks: In Java, locks are reentrant, meaning when a thread holds a lock, it can enter a block synchronized on the lock it is holding
 - Deadlocks: is a situation where a thread T1 holds a key needed by a thread T2, and T2 also holds the key needed by T1
 	- The JVM is able to detect deadlock situation, and can log information help debug the application, unfortunately there is not much we can do if a deadlock situation occurs, besides rebooting the JVM
-	- 
+#### Runnable Pattern
+- The most basic way to create thread in Java is to use Runnable Pattern
+	- First create an instance of Runnable
+	- Then pass it to the constructor of the Thread class
+	- Then call the start() method of this thread object
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNjMyNTA1Nyw1MjQxOTc3OCwtNjUwNj
-U5MjkxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE0NzQzOTYzMDQsNTI0MTk3NzgsLTY1MD
+Y1OTI5MSwtMjA4ODc0NjYxMl19
 -->
