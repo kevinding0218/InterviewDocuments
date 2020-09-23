@@ -43,8 +43,8 @@
 		```
 - How it work: synchronize means protecting this method by a fence, so that Java machine uses a **lock** object, every object in the Java language has this key, when a thread tries to enter this protected block of code, it will make a request on this lock object, like "give me your key", **if the object has the key available, it will give it to the thread, and this thread will be able to run the code freely**. If another thread comes and make the same request, this time the lock object has **no key to give** because it already gives its key to the previous thread, the lock object has only **one single key**, so this thread has to be waiting for the key to be available, at some time previous thread complete its executing and will give key to the object so that the waiting thread can now execute it. 
 #### Synchronization over multiple methods
-- Supposer we have synchronized on a class `Person` of `getName` and `getAge()`
+- Supposer we have synchronized on a class `Person` of `getName()` and `getAge()`, when a thread wants to access `getName()`, it will just take the key of the lock object which is `Person` itself, meaning at same time if another thread wants to access `getAge()`, it cannot because 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Nzc3NTc3MjEsLTY1MDY1OTI5MSwtMj
-A4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNjgxNjY5NTM1LC02NTA2NTkyOTEsLTIwOD
+g3NDY2MTJdfQ==
 -->
