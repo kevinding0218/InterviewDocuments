@@ -50,8 +50,8 @@
 - Using the `synchronized` keyword on a method declaration, uses an implicit lock object, which is the class object in the case of a static method or the instance object itself in the case of a non-static method
 #### Reentrant Locks and Deadlocks
 - Reentrant Locks: In Java, locks are reentrant, meaning when a thread holds a lock, it can enter a block synchronized on the lock it is holding
-- Deadlocks: 
+- Deadlocks: is a situation where a thread T1 holds a key needed by 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0ODg5NTM4Myw1MjQxOTc3OCwtNjUwNj
+eyJoaXN0b3J5IjpbLTk5MTExNjMyOSw1MjQxOTc3OCwtNjUwNj
 U5MjkxLC0yMDg4NzQ2NjEyXX0=
 -->
