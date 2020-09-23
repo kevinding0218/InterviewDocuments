@@ -62,8 +62,10 @@
 			String name = Thread.currentThread().getName();
 			System.out.println("I am running in thread " + name);
 		}
+		Thread thread = new Thread(runnable);
+		thread.start();
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyODEyODA0LDUyNDE5Nzc4LC02NTA2NT
-kyOTEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTQ4NjY5MjAxMCw1MjQxOTc3OCwtNjUwNj
+U5MjkxLC0yMDg4NzQ2NjEyXX0=
 -->
