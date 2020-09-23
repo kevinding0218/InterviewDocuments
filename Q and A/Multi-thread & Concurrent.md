@@ -48,7 +48,9 @@
 - If we have two instances of `Person`, lock in `getName()` of first instance won't stop another thread from trying to access `getAge()` in second instance
 - If we want to allow only one thread to access one instance, we need to our lock object to be bound on class itself
 - Using the `synchronized` keyword on a method declaration, uses an implicit lock object, which is the class object in the case of a static method or the instance object itself in the case of a non-static method
+#### Reentrant Locks and Deallocks
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNzE1OTc5OCw1MjQxOTc3OCwtNjUwNj
-U5MjkxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNzA5MzMxNDU0LDUyNDE5Nzc4LC02NTA2NT
+kyOTEsLTIwODg3NDY2MTJdfQ==
 -->
