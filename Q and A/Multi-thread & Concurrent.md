@@ -46,8 +46,8 @@
 - Supposer we have synchronized on a class `Person` of `getName()` and `getAge()`, when a thread wants to access an instance of Person `getName()`, it will just take the key of the lock object which is the current instance itself, meaning at same time if another thread wants to access same instance's `getAge()`, it cannot because same lock key is using on two methods.
 	- we might need to create two lock objects if we want synchronized in both `getName()` and `getAge()`
 - If we have two instances of `Person`, lock in `getName()` of first instance won't stop another thread from trying to access `getAge()` in second instance
-- 
+- Using the `synchronized` keyword on a method declara
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwODY0MDM2OCw1MjQxOTc3OCwtNjUwNj
-U5MjkxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNjY4MDMwNDczLDUyNDE5Nzc4LC02NTA2NT
+kyOTEsLTIwODg3NDY2MTJdfQ==
 -->
