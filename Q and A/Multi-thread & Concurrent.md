@@ -57,13 +57,13 @@
 	- First create an instance of Runnable
 	- Then pass it to the constructor of the Thread class
 	- Then call the start() method of this thread object
-```
-Runnable runnable = () -> {
-	String name = Thread.currentThread().getName();
-	System.out.println("I am running in thread " + name);
-}
-```
+		```
+		Runnable runnable = () -> {
+			String name = Thread.currentThread().getName();
+			System.out.println("I am running in thread " + name);
+		}
+		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzIyNDM5NjQsNTI0MTk3NzgsLTY1MD
-Y1OTI5MSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbOTIyODEyODA0LDUyNDE5Nzc4LC02NTA2NT
+kyOTEsLTIwODg3NDY2MTJdfQ==
 -->
