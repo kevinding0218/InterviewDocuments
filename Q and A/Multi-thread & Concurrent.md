@@ -142,7 +142,7 @@
 - The thread executing the invocation should hold the key of that object, if the thread that is executing a `wait` method does not hold the key of the object on which it is executing this method, then an exception is raised
 - Note: `wait()` and `notify()` cannot be invokved outside a synchronized block
 - Calling `wait()`
-	- will release the key held by this thread
+	- will release the key held by this thread so that other thead can access the key
 	- put that thread in a **WAIT** special state
 	- The only way to release a thread from a WAIT state is to notify it
 - Calling `notify()`
@@ -179,7 +179,7 @@ class Consumer {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMj
-I0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5
-MSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTI4NDkyNDY5LDE3NDE2MTUxNjAsLTIxMz
+c3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4
+LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
 -->
