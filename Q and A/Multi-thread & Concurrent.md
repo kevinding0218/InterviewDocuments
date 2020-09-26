@@ -179,11 +179,12 @@ class Consumer {
 ```
 #### State Diagram
 - **NEW**: when we create a thread by `Thread T = new Thread(someTask);`
-- **RUNNABLE**: once we call `T.start()`, it means that the thread scheduler is free to 
+- **RUNNABLE**: once we call `T.start()`, it means that the thread scheduler is free to give a time slice of the CPU to the thread so that this thread can execute its task
+- **TERMINATED**: once the task is completed, this thread enters the Terminated state, in which the thread scheduler knows that the thread should not be run anymore.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODkwNzA1NTEsLTE4OTE2MDg3NzksMT
-c0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2
-OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl
-19
+eyJoaXN0b3J5IjpbODcxOTEyMTA4LC0xODkxNjA4Nzc5LDE3ND
+E2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2Njky
+MDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ
+==
 -->
