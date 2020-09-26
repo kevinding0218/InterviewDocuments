@@ -147,7 +147,7 @@
 	- The only way to release a thread from a WAIT state is to notify it
 - Calling `notify()`
 	- release a thread in WAIT state and puts it in **RUNNABLE** state
-	- The **only way to release** a waiting thread
+	- The **only way to release a waiting thread**
 	- The released thread is chosen randomly
 	- There is also a `notifyAll()` method that will awake all the threads in the WAIT state.
 ```
@@ -179,7 +179,7 @@ class Consumer {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NDkyNDY5LDE3NDE2MTUxNjAsLTIxMz
-c3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4
-LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMj
+EzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3
+NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl19
 -->
