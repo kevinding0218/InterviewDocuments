@@ -164,10 +164,21 @@ class Producer {
 		}
 	}
 }
+
+class Consumer {
+	public void consume() {
+		synchronized(lock) {
+			if(isEmpty(buffer))
+				lock.wait();
+			buffer[--count] = 0;
+			lock.notifyAll();
+		}
+	}
+}
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTA0ODI5MTYsLTIyNDIxOTY4MywtND
+eyJoaXN0b3J5IjpbLTE5NzkxMTk3NjYsLTIyNDIxOTY4MywtND
 g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
 MTJdfQ==
 -->
