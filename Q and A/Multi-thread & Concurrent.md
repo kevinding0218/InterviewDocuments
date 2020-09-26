@@ -138,10 +138,11 @@
 #### Wait / Notify Pattern
 - `wait()` and `notify()` are two methods from the Object class
 - They are invoked on a given object
-- The thread executing the invocation should hold the key of that object
+- The thread executing the invocation should hold the key of that object, if the thread that is executing a `wait` method does not hold the key of the object on which it is executing this method, then an exception is raised
+- Note: `wait()` and `notify()` cannot be invokved outside a synchronized block
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU4NjEzMTMwLC0yMjQyMTk2ODMsLTQ4Nj
-Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
-XX0=
+eyJoaXN0b3J5IjpbLTEwNTA0NjQzOTQsLTIyNDIxOTY4MywtND
+g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
+MTJdfQ==
 -->
