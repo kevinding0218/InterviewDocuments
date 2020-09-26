@@ -180,14 +180,14 @@ class Consumer {
 #### STATE DIAGRAM
 - **NEW**: when we create a thread by `Thread T = new Thread(someTask);`
 - **RUNNABLE**: once we call `T.start()`, it means that the thread scheduler is free to give a time slice of the CPU to the thread so that this thread can execute its task
-	- **BLOCKED**: when the thread is blocked at the entrance of a synchronized block **because the key of a lock object is not available**, it is in a blocked state and the **thread scheduler will not try to awake this thread as long as the key is not available**.
+	- **BLOCKED**: when the thread is blocked at the entrance of a synchronized block **because the key of a lock object is not available**, it is in a blocked state and the **it can only run again wh**.
 	-  **WAITING**: using `wait()` call, in this case the thread is **parked in a waitingn list and can be awakended only by a notify call**
 	- **TIMED_WAITING**:  using a `sleep(timeout millisecond)` or `wait(timeout millisecond)` call, at the end of its timeout, the thread will be automatically modified by the system and in this case, this thread will be awakened without calling the `notify` method
 - **TERMINATED**: once the task is completed, this thread enters the Terminated state, in which the thread scheduler knows that the thread should not be run anymore.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMwMTAwOTk5LC0xODkxNjA4Nzc5LDE3ND
-E2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2Njky
-MDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTIwMzQyNjI3NTUsLTE4OTE2MDg3NzksMT
+c0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2
+OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl
+19
 -->
