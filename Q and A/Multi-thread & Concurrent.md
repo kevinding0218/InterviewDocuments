@@ -100,9 +100,16 @@ class Producer {
 		buffer[count++] = 1;
 	}
 }
+// Simple Consumer
+class Consumer {
+	public void consumer() {
+		while(isEmpty(buffer)) {}
+		buffer[--count] = 0;
+	}
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTI5NDc4MjgsLTIyNDIxOTY4MywtND
+eyJoaXN0b3J5IjpbLTE0MDQ4ODc5NzEsLTIyNDIxOTY4MywtND
 g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
 MTJdfQ==
 -->
