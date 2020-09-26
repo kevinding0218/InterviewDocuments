@@ -147,9 +147,11 @@
 - Calling `notify()`
 	- release a thread in WAIT state and puts it in **RUNNABLE** state
 	- The **only way to release** a waiting thread
+	- The released thread is chosen randomly
+	- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTAwMjEwMjcsLTIyNDIxOTY4MywtND
-g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
-MTJdfQ==
+eyJoaXN0b3J5IjpbMjA1OTExNzQ5NywtMjI0MjE5NjgzLC00OD
+Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
+Ml19
 -->
