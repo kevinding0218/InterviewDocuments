@@ -133,10 +133,9 @@
 		}
 		```
 	- What happens if the buffer is empty?
-		- The thread executing this consumer is blocked in the while loop
-		- 
+		- The thread executing this consumer with running the `isEmpty()` method inside the infinite loop will be running forever. So this thread will be blocked inside the consume method, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjI1NDE4NSwtMjI0MjE5NjgzLC00OD
+eyJoaXN0b3J5IjpbLTM1ODY5NjgyMywtMjI0MjE5NjgzLC00OD
 Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
 Ml19
 -->
