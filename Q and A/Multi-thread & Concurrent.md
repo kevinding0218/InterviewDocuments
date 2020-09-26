@@ -133,9 +133,9 @@
 		}
 		```
 	- What happens if the buffer is empty?
-		- The thread executing this consumer with running the `isEmpty()` method inside the infinite loop will be running forever. So this thread will be blocked inside the consume method, 
+		- The thread executing this consumer with running the `isEmpty()` method inside the infinite loop will be running forever. So this thread will be blocked inside the consume method, inside the synchronized block, while holding the key of the lock object.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1ODY5NjgyMywtMjI0MjE5NjgzLC00OD
+eyJoaXN0b3J5IjpbMTIyNDc5Njg5MSwtMjI0MjE5NjgzLC00OD
 Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
 Ml19
 -->
