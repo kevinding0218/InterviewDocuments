@@ -144,8 +144,10 @@
 	- will release the key held by this thread
 	- put that thread in a **WAIT** state
 	- The only way to release a thread from a WAIT state is to notify it
+- Calling `notify()`
+	- release a
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NDE5OTUxMywtMjI0MjE5NjgzLC00OD
-Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
-Ml19
+eyJoaXN0b3J5IjpbNTg1MDc0MDczLC0yMjQyMTk2ODMsLTQ4Nj
+Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
+XX0=
 -->
