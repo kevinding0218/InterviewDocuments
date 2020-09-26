@@ -157,7 +157,9 @@ class Producer {
 				// put the thread in the WAIT state if buffer is full
 				// at this time, the key held by running this method will be released and made available for the consumer
 				lock.wait();
+			// if buffer is not full, I added object into the buffer
 			buffer[count++] = 1;
+			// since I put objects in my buffer, I am going to notify all the consumers that may be in the WAIT state
 			lock.notifyAll();
 		}
 	}
@@ -165,7 +167,7 @@ class Producer {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NDkxNDA2LC0yMjQyMTk2ODMsLTQ4Nj
-Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
-XX0=
+eyJoaXN0b3J5IjpbLTE0OTA0ODI5MTYsLTIyNDIxOTY4MywtND
+g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
+MTJdfQ==
 -->
