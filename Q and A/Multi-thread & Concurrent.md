@@ -143,9 +143,9 @@
 - Calling `wait()`
 	- will release the key held by this thread
 	- put that thread in a **WAIT** state
-	- The only way to release a thread from a WAIT state is to noti
+	- The only way to release a thread from a WAIT state is to notify it
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNDM2ODc1LC0yMjQyMTk2ODMsLTQ4Nj
-Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
-XX0=
+eyJoaXN0b3J5IjpbLTY4NDE5OTUxMywtMjI0MjE5NjgzLC00OD
+Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
+Ml19
 -->
