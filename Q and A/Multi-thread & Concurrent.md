@@ -112,7 +112,7 @@
 - One way to fix things here is to synchronize the access to the array, by adding the synchronized keyword on it like `public void synchronized produce ()` or `public void synchronized consume()` , 
 	- however this will not fix our problem because synchronization can fix our race condition problem, but not if we write it like that.
 	- why? because if we write synchronized like that, it means that the object holding the key that thread will need to run the `consume/produce` method is the `consumer/producer` instance itself, what we want is to avoid a thread from running the consume method when another thread is running the produce method
-	- so we need a common synchronization object to all the instances of consumer and producer. 
+	- so we need a common synchronization object to all the instances of consumer and producer. This code will work if the lock object is the same for all the producers and consumers
 ```
 class Consumer {
 	private Object lock;
@@ -125,7 +125,7 @@ class Consumer {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzOTU5NTMzNCwtMjI0MjE5NjgzLC00OD
+eyJoaXN0b3J5IjpbMTI2MDQ4MjcwOSwtMjI0MjE5NjgzLC00OD
 Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
 Ml19
 -->
