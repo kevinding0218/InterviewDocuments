@@ -73,9 +73,15 @@
 - How to stop a thread
 	- method `stop()` should not be used and it's there for legacy, backward compatibility reasons.
 	- should use `interrupt()` method, it will not stop the thread but merely send a signal to the task the thread is running and telling it that it is time for this task to stop itself.
-	-  
+	- The code of the task should call `isInterrupted()` to terminate itself
+	```
+	Runnable task = () -> {
+		while(!Thread.currentThread().isInterrupted()) {
+		}
+	}
+	``` 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQxNjY2MzQsLTIyNDIxOTY4MywtNDg2Nj
-kyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJd
-fQ==
+eyJoaXN0b3J5IjpbLTcxNDMyNDY3MSwtMjI0MjE5NjgzLC00OD
+Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
+Ml19
 -->
