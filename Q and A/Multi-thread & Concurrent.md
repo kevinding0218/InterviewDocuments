@@ -67,7 +67,11 @@
 		```
 #### Runnable Pattern
 - How to launch a new thread
+	- Declare a runnable task
+	- Declare a thread that will allocate the runnable task
+	- Call `start()` to launch the thread and `Thread.currentThr
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyND
-E5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE0ODg3ODM0MjksLTIyNDIxOTY4MywtND
+g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
+MTJdfQ==
 -->
