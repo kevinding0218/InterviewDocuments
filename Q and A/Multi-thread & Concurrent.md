@@ -148,10 +148,11 @@
 	- release a thread in WAIT state and puts it in **RUNNABLE** state
 	- The **only way to release** a waiting thread
 	- The released thread is chosen randomly
+	- There is also a `notifyAll()` method that will awake all the threads in the WAIT state.
 	- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1OTExNzQ5NywtMjI0MjE5NjgzLC00OD
-Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
-Ml19
+eyJoaXN0b3J5IjpbOTUzNzk5NDU1LC0yMjQyMTk2ODMsLTQ4Nj
+Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
+XX0=
 -->
