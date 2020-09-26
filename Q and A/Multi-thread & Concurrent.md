@@ -87,11 +87,11 @@
 #### Producer and Consumer Pattern
 - A producer produces values in a buffer
 - A consumer consumes the values from this buffer
-- Most of the time, will have more than one producers and more than one consumers, and they all will be executed in their own thread.
+- Most of the time, will have more than one producers and more than one consumers, and they all will be **executed in their own thread**, which means these buffers will be shared among all the threads, maybe the object of a race condition if I do not properly synchronize my code.
 - Be careful, the buffer can be empty or full, if it's empty then consumer cannot consume any value and if it's full, then producer cannot write any values in it.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mzc5NDkwNzMsLTIyNDIxOTY4MywtND
+eyJoaXN0b3J5IjpbLTE2MjE0NDQ2ODcsLTIyNDIxOTY4MywtND
 g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
 MTJdfQ==
 -->
