@@ -70,9 +70,11 @@
 	- Declare a runnable task
 	- Declare a thread that will allocate the runnable task
 	- Call `start()` to launch the thread and `Thread.currentThread()` to return you the current thread that's holding the runnable task
+- How to stop a thread
+	- method `stop()` should not be used and it's there for legacy, backward compatibility reasons.
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMjIwMjY2MCwtMjI0MjE5NjgzLC00OD
+eyJoaXN0b3J5IjpbMTQzMDkyMTY1MCwtMjI0MjE5NjgzLC00OD
 Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
 Ml19
 -->
