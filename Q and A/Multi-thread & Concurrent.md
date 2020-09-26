@@ -65,12 +65,7 @@
 		Thread thread = new Thread(runnable);
 		thread.start();
 		```
-#### Runnable Pattern
-- How to launch a new thread
-	- Declare a runnable task
-	- Declare a thread that will allocate the runnable task
-	- Call `start()` to launch the thread and `Thread.currentThread()` to return you the current thread that's holding the runnable task
-- How to stop a thread
+#### How to stop a thread
 	- method `stop()` should not be used and it's there for legacy, backward compatibility reasons.
 	- should use `interrupt()` method, it will not stop the thread but merely send a signal to the task the thread is running and telling it that it is time for this task to stop itself.
 	- The code of the task should call `isInterrupted()` to terminate itself
@@ -186,7 +181,7 @@ class Consumer {
 - **TERMINATED**: once the task is completed, this thread enters the Terminated state, in which the thread scheduler knows that the thread should not be run anymore.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MjI4MjYwMSwtMTg5MTYwODc3OSwxNz
+eyJoaXN0b3J5IjpbLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNz
 QxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5
 MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEyXX
 0=
