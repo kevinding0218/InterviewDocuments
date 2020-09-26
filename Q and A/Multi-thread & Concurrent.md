@@ -154,6 +154,8 @@ class Producer {
 	public void produce() {
 		synchronized(lock) {
 			if(isFull(buffer))
+				// put the thread in the WAIT state if buffer is full
+				// at this time, the key held by running this method will be released and made available for the consumer
 				lock.wait();
 			buffer[count++] = 1;
 			lock.notifyAll();
@@ -163,7 +165,7 @@ class Producer {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NDE3OTg4NSwtMjI0MjE5NjgzLC00OD
-Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
-Ml19
+eyJoaXN0b3J5IjpbMTE1NDkxNDA2LC0yMjQyMTk2ODMsLTQ4Nj
+Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
+XX0=
 -->
