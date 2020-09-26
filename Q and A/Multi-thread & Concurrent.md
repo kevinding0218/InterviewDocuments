@@ -149,10 +149,21 @@
 	- The **only way to release** a waiting thread
 	- The released thread is chosen randomly
 	- There is also a `notifyAll()` method that will awake all the threads in the WAIT state.
-	- 
+```
+class Producer {
+	public void produce() {
+		synchronized(lock) {
+			if(isFull(buffer))
+				lock.wait();
+			buffer[count++] = 1;
+			lock.notifyAll();
+		}
+	}
+}
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUzNzk5NDU1LC0yMjQyMTk2ODMsLTQ4Nj
-Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
-XX0=
+eyJoaXN0b3J5IjpbMTY3NDE3OTg4NSwtMjI0MjE5NjgzLC00OD
+Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
+Ml19
 -->
