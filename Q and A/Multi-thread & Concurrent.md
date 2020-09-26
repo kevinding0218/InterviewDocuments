@@ -177,9 +177,12 @@ class Consumer {
 	}
 }
 ```
+#### State Diagram
+- New: when we create a thread by thread T = new Thread
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMj
-EzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3
-NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTIzNjUzNDE1NSwtMTg5MTYwODc3OSwxNz
+QxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5
+MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEyXX
+0=
 -->
