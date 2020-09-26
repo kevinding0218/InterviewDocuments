@@ -65,8 +65,9 @@
 		Thread thread = new Thread(runnable);
 		thread.start();
 		```
-#### Runnable Patt
+#### Runnable Pattern
+- How to launch a new thread
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIyNDU4Mzg0LC00ODY2OTIwMTAsNTI0MT
-k3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyND
+E5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
 -->
