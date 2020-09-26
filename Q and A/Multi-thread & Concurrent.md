@@ -84,8 +84,13 @@
 		}
 	}
 	``` 
+#### Producer and Consumer Pattern
+- A producer produces values in a buffer
+- A consumer consumes the values from this buffer
+- Most of the time, will have more than one producers and more than one consumers, and they all will be executed in their own thre
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI1MzE1MTI1LC0yMjQyMTk2ODMsLTQ4Nj
-Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
-XX0=
+eyJoaXN0b3J5IjpbLTE5MDIwOTcyNzYsLTIyNDIxOTY4MywtND
+g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
+MTJdfQ==
 -->
