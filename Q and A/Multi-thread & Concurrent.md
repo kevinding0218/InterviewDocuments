@@ -113,8 +113,19 @@
 	- however this will not fix our problem because synchronization can fix our race condition problem, but not if we write it like that.
 	- why? because if we write synchronized like that, it means that the object holding the key that thread will need to run the `consume/produce` method is the `consumer/producer` instance itself, what we want is to avoid a thread from running the consume method when another thread is running the produce method
 	- so we need a common synchronization object to all the instances of consumer and producer. 
+```
+class Consumer {
+	private Object lock;
+	public void consume() {
+		synchronized(lock) {
+			while(isEmpty(buffer)) {}
+			buffer[--count] = 0;
+		}
+	}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjA5NDYwNTUsLTIyNDIxOTY4MywtND
-g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
-MTJdfQ==
+eyJoaXN0b3J5IjpbMTEzOTU5NTMzNCwtMjI0MjE5NjgzLC00OD
+Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
+Ml19
 -->
