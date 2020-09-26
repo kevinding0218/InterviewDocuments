@@ -164,7 +164,7 @@ class Producer {
 		}
 	}
 }
-// Similar changes in consumer
+// Similar changes in consumer by using wait() and notifyAll
 class Consumer {
 	public void consume() {
 		synchronized(lock) {
@@ -178,7 +178,7 @@ class Consumer {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA3MzY2MTUzLC0yMjQyMTk2ODMsLTQ4Nj
-Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
-XX0=
+eyJoaXN0b3J5IjpbLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtND
+g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
+MTJdfQ==
 -->
