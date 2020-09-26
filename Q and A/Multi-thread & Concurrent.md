@@ -69,9 +69,10 @@
 - How to launch a new thread
 	- Declare a runnable task
 	- Declare a thread that will allocate the runnable task
-	- Call `start()` to launch the thread and `Thread.currentThr
+	- Call `start()` to launch the thread and `Thread.currentThread()` to return you the current thread that's holding the runnable task
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODg3ODM0MjksLTIyNDIxOTY4MywtND
-g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
-MTJdfQ==
+eyJoaXN0b3J5IjpbMTczMjIwMjY2MCwtMjI0MjE5NjgzLC00OD
+Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
+Ml19
 -->
