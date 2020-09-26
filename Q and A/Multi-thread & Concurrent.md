@@ -137,9 +137,11 @@
 	- So we need a way to "park" a thread while he is waiting for some data to be produced, and when the thread is "parked", it should not block all other threads, so the key held by this thread should be released while this thread is "parked", and this is the wait/notify pattern
 #### Wait / Notify Pattern
 - `wait()` and `notify()` are two methods from the Object class
+- They are invoked on a given object
+- The thread executing the invocation should hold the key of that object
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjk4ODkyNSwtMjI0MjE5NjgzLC00OD
-Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
-Ml19
+eyJoaXN0b3J5IjpbNTU4NjEzMTMwLC0yMjQyMTk2ODMsLTQ4Nj
+Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
+XX0=
 -->
