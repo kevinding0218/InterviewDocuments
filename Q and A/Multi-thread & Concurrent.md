@@ -18,7 +18,7 @@
 		3. The thread is waiting for another thread to do something: like to release a resource
 #### Race Condition
 - We know that creating a thread is about doing several things at the same time, accessing data concurrently may lead to issues! For example, two different threads might be reading the same variable, the same field that defined in a Java class or the same array
-- A race condition occurs when two **different** threads are trying to **read** and **write** the **same** variable or same field at the **same** time, this read and write is called a race condition
+- A race condition occurs when two **different** threads are trying to **read** and **write** the **same** variable or same field at the **same** time, this read and write is called a **race condition**
 - "same time" does not mean the same thing on a single core and on a multi core CPU
 - For example in a singleton pattern
 	```
@@ -32,7 +32,7 @@
 	- Thread T2 starts -> check if instance is null ? -> yes -> enters the if block -> creates an instance of Singleton and copy the instance in the private static instance field -> Thread Scheduler pauses T2
 	- Thread T1 continues -> create an instance of Singleton and copy the instance in the private static instance field -> thus erasing the instance that has been created by the T2
 #### How to prevent that?
-- Synchronization: Prevent a block of code to be executed by more than one thread at the same time, it will prevent the thread schedular to give the hand to a thread that wants to execute the synchronized portion of code that has already been executed by another thread
+- **Synchronization**: Prevent a block of code to be executed by more than one thread at the same time, it will prevent the thread schedular to give the hand to a thread that wants to execute the synchronized portion of code that has already been executed by another thread
 - in Java we can do it by using the keyword **synchronized**
 	```
 		public static synchronized Singleton getInstance() {
@@ -50,7 +50,7 @@
 - Using the `synchronized` keyword on a method declaration, uses an implicit lock object, which is the class object in the case of a static method or the instance object itself in the case of a non-static method
 #### Reentrant Locks and Deadlocks
 - Reentrant Locks: In Java, locks are reentrant, meaning when a thread holds a lock, it can enter a block synchronized on the lock it is holding
-- Deadlocks: is a situation where a thread T1 holds a key needed by a thread T2, and T2 also holds the key needed by T1
+- Deadlocks: is a situation where **a thread T1 holds a key needed by a thread T2, and T2 also holds the key needed by T1**
 	- The JVM is able to detect deadlock situation, and can log information help debug the application, unfortunately there is not much we can do if a deadlock situation occurs, besides rebooting the JVM
 #### Runnable Pattern
 - The most basic way to create thread in Java is to use Runnable Pattern
@@ -65,7 +65,8 @@
 		Thread thread = new Thread(runnable);
 		thread.start();
 		```
+#### Runnable Patt
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NjY5MjAxMCw1MjQxOTc3OCwtNjUwNj
-U5MjkxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNTIyNDU4Mzg0LC00ODY2OTIwMTAsNTI0MT
+k3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl19
 -->
