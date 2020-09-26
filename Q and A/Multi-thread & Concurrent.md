@@ -114,8 +114,16 @@
 	- why? because if we write synchronized like that, it means that the object holding the key that thread will need to run the `consume/produce` method is the `consumer/producer` instance itself, what we want is to avoid a thread from running the consume method when another thread is running the produce method
 	- so we need a common synchronization object to all the instances of consumer and producer. This code will work if the lock object is the same for all the producers and consumers instances
 ```
+private Object lock;
+class Producer {
+	public void produce() {
+		synchronized(lock) {
+			while(isFull(buffer)) {}
+			buffer[count++] = 1;
+		}
+	}
+}
 class Consumer {
-	private Object lock;
 	public void consume() {
 		synchronized(lock) {
 			while(isEmpty(buffer)) {}
@@ -125,7 +133,7 @@ class Consumer {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1OTA1MzE5NywtMjI0MjE5NjgzLC00OD
+eyJoaXN0b3J5IjpbMTc1MjYyODAyMywtMjI0MjE5NjgzLC00OD
 Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
 Ml19
 -->
