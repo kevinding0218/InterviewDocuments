@@ -140,9 +140,12 @@
 - They are invoked on a given object
 - The thread executing the invocation should hold the key of that object, if the thread that is executing a `wait` method does not hold the key of the object on which it is executing this method, then an exception is raised
 - Note: `wait()` and `notify()` cannot be invokved outside a synchronized block
-- 
+- Calling `wait()`
+	- will release the key held by this thread
+	- put that thread in a **WAIT** state
+	- The only way to release a thread from a WAIT state is to noti
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTA0NjQzOTQsLTIyNDIxOTY4MywtND
-g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
-MTJdfQ==
+eyJoaXN0b3J5IjpbLTkzNDM2ODc1LC0yMjQyMTk2ODMsLTQ4Nj
+Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
+XX0=
 -->
