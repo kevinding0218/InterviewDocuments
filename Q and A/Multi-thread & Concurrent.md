@@ -178,11 +178,12 @@ class Consumer {
 }
 ```
 #### State Diagram
-- New: when we create a thread by thread T = new Thread
+- **NEW**: when we create a thread by `Thread T = new Thread(someTask);`
+- **RUNNABLE**: once we call `T.start()`, it means that the thread scheduler is free to 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNjUzNDE1NSwtMTg5MTYwODc3OSwxNz
-QxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5
-MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEyXX
-0=
+eyJoaXN0b3J5IjpbLTEzODkwNzA1NTEsLTE4OTE2MDg3NzksMT
+c0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2
+OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl
+19
 -->
