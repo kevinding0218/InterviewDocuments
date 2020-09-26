@@ -134,9 +134,10 @@
 		```
 	- What happens if the buffer is empty?
 		- The thread executing this consumer with running the `isEmpty()` method inside the infinite loop will be running forever. So this thread will be blocked inside the consume method, inside the synchronized block, while holding the key of the lock object, so the producer has no chance to add objects to the buffer since it's waiting for the lock key which is held by the consumer thread.
-	- So we need a way to "park" a thread while he is waiting for some data to be produced, and when the thread is "parked", it should not block all other threads, so the key held by this thread should be released while this thread is "parked"
+	- So we need a way to "park" a thread while he is waiting for some data to be produced, and when the thread is "parked", it should not block all other threads, so the key held by this thread should be released while this thread is "parked", and this is the wait/notify pattern
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MzkxNDMwNiwtMjI0MjE5NjgzLC00OD
-Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
-Ml19
+eyJoaXN0b3J5IjpbLTE2NzU1MTgzNjIsLTIyNDIxOTY4MywtND
+g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
+MTJdfQ==
 -->
