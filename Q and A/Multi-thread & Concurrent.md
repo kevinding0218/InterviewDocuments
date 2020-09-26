@@ -76,6 +76,7 @@
 	- The code of the task should call `isInterrupted()` to terminate itself
 		- if the thread was not interrupted, do what the task should do
 		- if the thread was interrupted, then should stop the task, cleaning all the resource I have opened.
+		- if the thread is blocked, or waiting, then the corresponding method will throw an InterruptedException
 	```
 	Runnable task = () -> {
 		while(!Thread.currentThread().isInterrupted()) {
@@ -84,7 +85,7 @@
 	}
 	``` 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MzcxMTI1MSwtMjI0MjE5NjgzLC00OD
+eyJoaXN0b3J5IjpbLTM0NDc5NDA5OCwtMjI0MjE5NjgzLC00OD
 Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
 Ml19
 -->
