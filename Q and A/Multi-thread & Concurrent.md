@@ -89,27 +89,28 @@
 - A consumer consumes the values from this buffer
 - Most of the time, will have more than one producers and more than one consumers, and they all will be **executed in their own thread**, which means these buffers will be shared among all the threads, maybe the object of a race condition if I do not properly synchronize my code.
 - Be careful, the buffer can be empty or full, if it's empty then consumer cannot consume any value and if it's full, then producer cannot write any values in it.
-```
-// Simple Producer
-int count = 0;
-int[] buffer = new int[BUFFER_SIZE];
+	```
+	// Simple Producer
+	int count = 0;
+	int[] buffer = new int[BUFFER_SIZE];
 
-class Producer {
-	public void produce() {
-		while(isFull(buffer)) {}
-		buffer[count++] = 1;
+	class Producer {
+		public void produce() {
+			while(isFull(buffer)) {}
+			buffer[count++] = 1;
+		}
 	}
-}
-// Simple Consumer
-class Consumer {
-	public void consumer() {
-		while(isEmpty(buffer)) {}
-		buffer[--count] = 0;
+	// Simple Consumer
+	class Consumer {
+		public void consumer() {
+			while(isEmpty(buffer)) {}
+			buffer[--count] = 0;
+		}
 	}
-}
-```
+	```
+- The above code was wrong at race condition here, if my producers and consumers are 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDQ4ODc5NzEsLTIyNDIxOTY4MywtND
-g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
-MTJdfQ==
+eyJoaXN0b3J5IjpbMTU1ODk0NzgzOCwtMjI0MjE5NjgzLC00OD
+Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
+Ml19
 -->
