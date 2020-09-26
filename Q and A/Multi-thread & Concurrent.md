@@ -142,12 +142,14 @@
 - Note: `wait()` and `notify()` cannot be invokved outside a synchronized block
 - Calling `wait()`
 	- will release the key held by this thread
-	- put that thread in a **WAIT** state
+	- put that thread in a **WAIT** special state
 	- The only way to release a thread from a WAIT state is to notify it
 - Calling `notify()`
-	- release a
+	- release a thread in WAIT state and puts it in **RUNNABLE** state
+	- The **only way to release** a waiting thread
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg1MDc0MDczLC0yMjQyMTk2ODMsLTQ4Nj
-Y5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEy
-XX0=
+eyJoaXN0b3J5IjpbLTE1NTAwMjEwMjcsLTIyNDIxOTY4MywtND
+g2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2
+MTJdfQ==
 -->
