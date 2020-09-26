@@ -108,9 +108,9 @@
 		}
 	}
 	```
-- The above code was wrong at race condition here, if my producers and consumers are 
+- The above code was wrong at race condition here, if my producers and consumers are run in their own threads, it means that several threads are reading and writing the buffer at the same time = race condition, this will corrupt the array that I will not be able to write or read values from array because of concurrent access to the array
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1ODk0NzgzOCwtMjI0MjE5NjgzLC00OD
+eyJoaXN0b3J5IjpbMTU1NzE2OTA5NiwtMjI0MjE5NjgzLC00OD
 Y2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYx
 Ml19
 -->
