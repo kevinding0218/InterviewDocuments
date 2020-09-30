@@ -181,9 +181,13 @@ class Consumer {
 - **TERMINATED**: once the task is completed, this thread enters the Terminated state, in which the thread scheduler knows that the thread should not be run anymore.
 
 ### Ordering Read and Write Operation on a multicore CPU
-
+#### Synchronization and Visibility
+- Synchronization: 
+	- Protects a block of code
+	- Guarantees this code is executed by one thread at a time
+	- Prevents race condition
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MzU1Mzk3MSwtNDg0NTI3MzcxLC0xOD
+eyJoaXN0b3J5IjpbLTcwMjEwMjY5NCwtNDg0NTI3MzcxLC0xOD
 kxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIx
 OTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLT
 IwODg3NDY2MTJdfQ==
