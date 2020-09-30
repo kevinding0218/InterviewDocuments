@@ -181,11 +181,17 @@ class Consumer {
 - **TERMINATED**: once the task is completed, this thread enters the Terminated state, in which the thread scheduler knows that the thread should not be run anymore.
 
 ### Ordering Read and Write Operation on a multicore CPU
-#### Memory Access and Cache
+#### Visibility
+```
+Main memory - count: 0
+Core 1 needs count
+1) 
+```
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OT
-E2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5
-NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMj
-A4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTEyNDI1MjE1MzQsMzU4NzIxNTczLC00OD
+Q1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzcz
+ODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLT
+Y1MDY1OTI5MSwtMjA4ODc0NjYxMl19
 -->
