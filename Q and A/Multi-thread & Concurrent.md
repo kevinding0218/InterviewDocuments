@@ -207,11 +207,12 @@ Core 1 needs count
 		print(index);
 	}
 	```
-	- if the `increment()` happens in thread T1 and `print()` happens in thread T2, then there is no synchronization or volatility, so it's hard to say what the value of index would be as the print
+	- if the `increment()` happens in thread T1 and `print()` happens in thread T2, then there is no synchronization or volatility, so it's hard to say what the value of index would be as the `print()` of index varialble is not bound to the last write operation in `increment()`
+	- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MTUyNjQ3MCw1MTAxNjIzNzEsMzU4Nz
-IxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2
-MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNT
-I0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE3ODcwMTA4MTksNTEwMTYyMzcxLDM1OD
+cyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUx
+NjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLD
+UyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
 -->
