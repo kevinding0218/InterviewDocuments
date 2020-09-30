@@ -180,9 +180,11 @@ class Consumer {
 	- **TIMED_WAITING**:  using a `sleep(timeout millisecond)` or `wait(timeout millisecond)` call, at the end of its timeout, the thread will be automatically modified by the system and in this case, this thread will be awakened without calling the `notify` method
 - **TERMINATED**: once the task is completed, this thread enters the Terminated state, in which the thread scheduler knows that the thread should not be run anymore.
 
+### Ordering Read and Write Operation on a multicore CPU
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNz
-QxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5
-MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEyXX
-0=
+eyJoaXN0b3J5IjpbMTk0MzU1Mzk3MSwtNDg0NTI3MzcxLC0xOD
+kxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIx
+OTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLT
+IwODg3NDY2MTJdfQ==
 -->
