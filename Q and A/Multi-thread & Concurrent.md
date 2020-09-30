@@ -185,12 +185,15 @@ class Consumer {
 ```
 Main memory - count: 0
 Core 1 needs count
-1) 
+1) the variable is copied in L1 which is Core 1's cache
+2) Core 1 can modify it
+3) Core 2 also needs count
+4) however, core 2 gets the count of 0 from main memory, rather than from L1 which is 1
 ```
-- 
+- Visibility is about informing the other caches of my CPU that a variable has been modified and that the write value is in one of the cache  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDI1MjE1MzQsMzU4NzIxNTczLC00OD
+eyJoaXN0b3J5IjpbLTEwNzkyODUzMzYsMzU4NzIxNTczLC00OD
 Q1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzcz
 ODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLT
 Y1MDY1OTI5MSwtMjA4ODc0NjYxMl19
