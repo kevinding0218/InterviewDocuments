@@ -197,11 +197,19 @@ Core 1 needs count
  - Visibility means "a read should return the value set by the **last** write"
  - We need a timeline to put read and write operations on
  - A "happens before" link exists between all synchronized or volatile write operations and all synchronized or volatile read operations that follow
- - 
+```
+int index;
+void incremenet() {
+	index++;
+}
+void print() {
+	print(index);
+	
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTA5NzQwNjEsNTEwMTYyMzcxLDM1OD
-cyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUx
-NjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLD
-UyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMjEzMzA3MTMyMCw1MTAxNjIzNzEsMzU4Nz
+IxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2
+MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNT
+I0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl19
 -->
