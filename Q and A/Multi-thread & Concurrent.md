@@ -219,9 +219,18 @@ Core 1 needs count
 	}
 	```
 	- now we have a synchronized write and sychronized read, so we have a "happens before" link between our write and our read operation, the correct value is always printed/read which is updated by our increment/write operation
-	- 
+- Example 3:
+	```
+	volatile int index;
+	void incremenet() {
+		index++;
+	}
+	void print() {
+		print(index);
+	}
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NTc2MTkzNSw1MTAxNjIzNzEsMzU4Nz
+eyJoaXN0b3J5IjpbLTg3MTU0MDM4OSw1MTAxNjIzNzEsMzU4Nz
 IxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2
 MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNT
 I0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl19
