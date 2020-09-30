@@ -192,11 +192,14 @@ Core 1 needs count
 ```
 - Visibility is about informing the other caches of my CPU that a variable has been modified and that the write value is in one of the cache of the CPU and should not be fetched from main memory
 #### "Happens Before" Link
- 
+ - Multicore CPU brings new problems since the value can be stored in multiple places such as main memory and several caches, Read and Write can really happen at the same time
+ - A given variable can be stored in more than one place
+ - Visibility means "a read should return the value set by the **last** write"
+ - We need a timeli
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2ODE4NzIwMSwzNTg3MjE1NzMsLTQ4ND
-UyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MTYwLC0yMTM3NzM4
-OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1MjQxOTc3OCwtNj
-UwNjU5MjkxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTQ3MzQwNjgwLDM1ODcyMTU3MywtNDg0NT
+I3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5
+MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NT
+A2NTkyOTEsLTIwODg3NDY2MTJdfQ==
 -->
