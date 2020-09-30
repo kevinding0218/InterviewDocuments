@@ -195,10 +195,11 @@ Core 1 needs count
  - Multicore CPU brings new problems since the value can be stored in multiple places such as main memory and several caches, Read and Write can really happen at the same time
  - A given variable can be stored in more than one place
  - Visibility means "a read should return the value set by the **last** write"
- - We need a timeli
+ - We need a timeline to put read and write operations on
+ - 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MzQwNjgwLDM1ODcyMTU3MywtNDg0NT
+eyJoaXN0b3J5IjpbNTEwMTYyMzcxLDM1ODcyMTU3MywtNDg0NT
 I3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5
 MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NT
 A2NTkyOTEsLTIwODg3NDY2MTJdfQ==
