@@ -190,11 +190,12 @@ Core 1 needs count
 3) Core 2 also needs count
 4) however, core 2 gets the count of 0 from main memory, rather than from L1 which is 1
 ```
-- Visibility is about informing the other caches of my CPU that a variable has been modified and that the write value is in one of the cache  
+- Visibility is about informing the other caches of my CPU that a variable has been modified and that the write value is in one of the cache of the CPU and should not be fetched from main memory
+-  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzkyODUzMzYsMzU4NzIxNTczLC00OD
-Q1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzcz
-ODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLT
-Y1MDY1OTI5MSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTU5MzMwNTMwLDM1ODcyMTU3MywtNDg0NT
+I3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5
+MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NT
+A2NTkyOTEsLTIwODg3NDY2MTJdfQ==
 -->
