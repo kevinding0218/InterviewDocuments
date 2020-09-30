@@ -196,11 +196,12 @@ Core 1 needs count
  - A given variable can be stored in more than one place
  - Visibility means "a read should return the value set by the **last** write"
  - We need a timeline to put read and write operations on
+ - A "happens before" link exists between all synchronized or volatile write operations and all synchronized or volatile read operations that follow
  - 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEwMTYyMzcxLDM1ODcyMTU3MywtNDg0NT
-I3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5
-MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NT
-A2NTkyOTEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE3NTA5NzQwNjEsNTEwMTYyMzcxLDM1OD
+cyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUx
+NjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLD
+UyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
 -->
