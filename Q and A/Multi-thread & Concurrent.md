@@ -303,9 +303,10 @@ void second Method() {
 		- Core 1 -> L1 | | a b | | | | 
 		- Core 2 -> L1 | | a b | | | |
 - Impact:
-	- The thread T1 is going to increment the "a" variable, thus marking this line of cache as "dirty", 
+	- The thread T1 is going to increment the "a" variable, thus marking this line of cache as "dirty", and this mark as "dirty" will be broadcasted to the other caches of the CPU, including the cache of Core 2.
+	- Then Core 2 wants to increment the "b" variable, but unfortunately, the line of cache it loaded from the ma
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMjY4NTA4MiwtMTUyOTcwODMxNSwtMj
+eyJoaXN0b3J5IjpbLTQxMzMwMjEyMSwtMTUyOTcwODMxNSwtMj
 AwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1
 MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MS
 w1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2
