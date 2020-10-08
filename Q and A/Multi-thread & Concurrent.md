@@ -287,17 +287,19 @@ void second Method() {
 	- When a visible variable is modified in an L1 cache, all the line is marked "dirty" for the other caches
 	- A read on a dirty line triggers a refresh on this line, not just on the variable that has just been modified
 	- Example
-```
-volatile long a, b;
-void 
-```
-
+		```
+		volatile long a, b;
+		void firstMethod() { a++; }
+		void secondMethod() { b++; }
+		```
+		- Core 1 -> L1 ||a|||||
+		- Core 2 -> L1 |||b||||
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYyMTg2ODc3LC0xNTI5NzA4MzE1LC0yMD
-AyOTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUx
-NjI1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLD
-UxMDE2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYw
-ODc3OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2OD
-MsLTQ4NjY5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4
-NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTcwOTIyMTA3OCwtMTUyOTcwODMxNSwtMj
+AwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1
+MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MS
+w1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2
+MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5Nj
+gzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4
+ODc0NjYxMl19
 -->
