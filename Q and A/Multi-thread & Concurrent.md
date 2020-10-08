@@ -196,7 +196,7 @@ Core 1 needs count
  - A given variable can be stored in more than one place
  - Visibility means "a read should return the value set by the **last** write"
  - We need a timeline to put read and write operations on
- - A "**happens before link**" exists between **all synchronized or volatile write operations and all synchronized or volatile read operations that follow**
+ - A "**happens before link**" exists between **all synchronized or volatile write operations AND all synchronized or volatile read operations that follow**
  - Example 1:
 	```
 	int index;
@@ -268,9 +268,10 @@ void second Method() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzQ3NTE2MjUsMTE5MTQwODQ4MywyMT
-I1NDMwMzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMTU3
-MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLT
-IxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5
-Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMT
+kxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIz
+NzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMT
+c0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2
+OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl
+19
 -->
