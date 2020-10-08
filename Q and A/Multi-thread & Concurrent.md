@@ -231,11 +231,28 @@ Core 1 needs count
 	```
 	- correct value will always be printed as well.
 - A more complex example
--
+```
+int x, y, r1, r2;
+Object lock = new Object();
+
+void firstMethod() {
+	x = 1;
+	synchronized(lock) {
+		y = 1;
+	}
+}
+
+void second Method() {
+	synchronized(lock) {
+		r1 = y;
+	}
+	r2 = x;
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1OTIzMzI2NSwtMTY1NjY0NzQ2MSw1MT
-AxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3
-NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC
-00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0
-NjYxMl19
+eyJoaXN0b3J5IjpbLTIwMjM4MjM5NjMsLTE2NTY2NDc0NjEsNT
+EwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4
+Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4My
+wtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3
+NDY2MTJdfQ==
 -->
