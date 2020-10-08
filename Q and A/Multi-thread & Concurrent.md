@@ -270,13 +270,16 @@ void second Method() {
 #### Synchronization and Volatility
 - Synchroniztion: 
 	- Guarantees the exclusive execution of a block of code
-	- one thread can execute a special blok of code at given time
-- Visibility: Guarantees the consistency of the variable, 
+	- Only one thread can execute a special block of code at given time
+- Visibility: 
+	- Guarantees the consistency of the variable, 
+	- If a variable is visible, then I have the guarantee when I read it I read a correctly updated value.
+	- A weaker constraint that synchronization 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzE5NzE0NDksMTEyNTAzMTU3NSwtMT
-E3NDc1MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0
-NzQ2MSw1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLT
-E4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0
-MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MS
-wtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNjg0MTA4NDE1LDExMjUwMzE1NzUsLTExNz
+Q3NTE2MjUsMTE5MTQwODQ4MywyMTI1NDMwMzQsLTE2NTY2NDc0
+NjEsNTEwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3MzcxLC0xOD
+kxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIx
+OTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLT
+IwODg3NDY2MTJdfQ==
 -->
