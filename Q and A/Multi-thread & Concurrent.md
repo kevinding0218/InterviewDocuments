@@ -281,13 +281,15 @@ void second Method() {
 - Definition:
 	- False sharing happens because of the way the CPU caches work
 	- It is a side effect, that can have a tremendous effect on performance
-	- 
+- CPU Cache side:
+	- The cache is organized in lines of data
+	- E
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mjk3MDgzMTUsLTIwMDI5MDQwNDksNj
-g0MTA4NDE1LDExMjUwMzE1NzUsLTExNzQ3NTE2MjUsMTE5MTQw
-ODQ4MywyMTI1NDMwMzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLD
-M1ODcyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2
-MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMD
-EwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
-
+eyJoaXN0b3J5IjpbLTc0ODg4NTMwOCwtMTUyOTcwODMxNSwtMj
+AwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1
+MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MS
+w1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2
+MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5Nj
+gzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4
+ODc0NjYxMl19
 -->
