@@ -231,6 +231,10 @@ Core 1 needs count
 	```
 	- correct value will always be printed as well.
 - A more complex example
+	- `firstMethod()` is writing x and y
+	- `secondMethod()` is read x and y
+	- They are executed in threads T1 and T2
+	- Question: what is the value or r2?
 ```
 int x, y, r1, r2;
 Object lock = new Object();
@@ -250,9 +254,9 @@ void second Method() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjM4MjM5NjMsLTE2NTY2NDc0NjEsNT
-EwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4
-Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4My
-wtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3
-NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTc5OTIxODM0NCwtMTY1NjY0NzQ2MSw1MT
+AxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3
+NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC
+00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0
+NjYxMl19
 -->
