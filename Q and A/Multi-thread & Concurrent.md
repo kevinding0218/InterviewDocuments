@@ -300,12 +300,14 @@ void second Method() {
 		-  The second thread T2 does the same thing, loaded a line of cache from memory
 		- Now because the way that memory is organized in our application, orgnized by the compiler and the JVM, it turns out that "a" and "b" are written in two contiguous areas of the main memory.
 		- So while loading the line of cache, T1 also loaded the "b" variable, and T2 also loaded the "a" variable
+		- Core 1 -> L1 | | a b | | | | 
+		- Core 2 -> L1 | | a b | | | |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI0MDEyMzczLC0xNTI5NzA4MzE1LC0yMD
-AyOTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUx
-NjI1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLD
-UxMDE2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYw
-ODc3OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2OD
-MsLTQ4NjY5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4
-NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTc3MjIyMjU1OCwtMTUyOTcwODMxNSwtMj
+AwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1
+MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MS
+w1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2
+MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5Nj
+gzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4
+ODc0NjYxMl19
 -->
