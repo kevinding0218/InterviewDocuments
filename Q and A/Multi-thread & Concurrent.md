@@ -283,13 +283,21 @@ void second Method() {
 	- It is a side effect, that can have a tremendous effect on performance
 - CPU Cache side:
 	- The cache is organized in lines of data
-	- E
+	- Each line can hold 8 longs (64 bytes)
+	- When a visible variable is modified in an L1 cache, all the line is marked "dirty" for the other caches
+	- A read on a dirty line triggers a refresh on this line, not just on the variable that has just been modified
+	- Example
+```
+volatile long a, b;
+void 
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0ODg4NTMwOCwtMTUyOTcwODMxNSwtMj
-AwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1
-MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MS
-w1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2
-MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5Nj
-gzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4
-ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNDYyMTg2ODc3LC0xNTI5NzA4MzE1LC0yMD
+AyOTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUx
+NjI1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLD
+UxMDE2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYw
+ODc3OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2OD
+MsLTQ4NjY5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4
+NzQ2NjEyXX0=
 -->
