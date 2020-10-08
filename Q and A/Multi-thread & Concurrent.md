@@ -196,7 +196,7 @@ Core 1 needs count
  - A given variable can be stored in more than one place
  - Visibility means "a read should return the value set by the **last** write"
  - We need a timeline to put read and write operations on
- - A "happens before" link exists between all synchronized or volatile write operations and all synchronized or volatile read operations that follow
+ - A "**happens before link**" exists between **all synchronized or volatile write operations and all synchronized or volatile read operations that follow**
  - Example 1:
 	```
 	int index;
@@ -208,7 +208,7 @@ Core 1 needs count
 	}
 	```
 	- if the `increment()` happens in thread T1 and `print()` happens in thread T2, then there is no synchronization or volatility, so it's hard to say what the value of index would be as the `print()` of index varialble is not bound to the last write operation in `increment()`
-- Example 2:
+- Example 2: 
 	```
 	int index;
 	void synchronized incremenet() {
@@ -230,7 +230,7 @@ Core 1 needs count
 	}
 	```
 	- correct value will always be printed as well.
-- A more complex example
+- **A more complex example**
 	- `firstMethod()` is writing x and y
 	- `secondMethod()` is read x and y
 	- They are executed in threads T1 and T2
@@ -268,7 +268,7 @@ void second Method() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NTcyODMzLDExOTE0MDg0ODMsMjEyNT
+eyJoaXN0b3J5IjpbMTEyNTUzMzAxLDExOTE0MDg0ODMsMjEyNT
 QzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3MjE1NzMs
 LTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MTYwLC0yMT
 M3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1MjQxOTc3
