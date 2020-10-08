@@ -238,7 +238,12 @@ Core 1 needs count
 		- Due to the way the code is written, there is a happens-before link between:
 			- x = 1 and y = 1
 			- r1 = y and r2 = x
-			- 
+			- If T1 is the first to enter then synchronized block, then the execution is in the order, happens-before link between a sync
+				- x = 1
+				- y = 1
+				- r1 = y
+				- r2 = x
+				- The value of r2 is 1
 ```
 int x, y, r1, r2;
 Object lock = new Object();
@@ -258,9 +263,9 @@ void second Method() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MTg0MzEzMywtMTY1NjY0NzQ2MSw1MT
-AxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3
-NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC
-00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0
-NjYxMl19
+eyJoaXN0b3J5IjpbLTE5MTMwNzk5MzYsLTE2NTY2NDc0NjEsNT
+EwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4
+Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4My
+wtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3
+NDY2MTJdfQ==
 -->
