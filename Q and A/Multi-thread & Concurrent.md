@@ -276,12 +276,12 @@ void second Method() {
 	- If a variable is visible, then I have the guarantee when I read it I read a correctly updated value.
 	- A weaker constraint of synchronization because two threads can execute the read and write operations at the same time, but I still have the consisntency variables guaranteed.
 - Conclusion:
-	- All shared variables should be accessed in a synchronized or a volatile way
+	- All "shared" (means shared among more than one thread) variables should be accessed in a synchronized or a volatile way
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MTk3MDc0Myw2ODQxMDg0MTUsMTEyNT
-AzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAz
-NCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4NzIxNTczLC00OD
-Q1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzcz
-ODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLT
-Y1MDY1OTI5MSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTIwMDI5MDQwNDksNjg0MTA4NDE1LDExMj
+UwMzE1NzUsLTExNzQ3NTE2MjUsMTE5MTQwODQ4MywyMTI1NDMw
+MzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMTU3MywtND
+g0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3
+Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC
+02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
 -->
