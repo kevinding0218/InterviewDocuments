@@ -274,12 +274,14 @@ void second Method() {
 - Visibility: 
 	- Guarantees the consistency of the variable, 
 	- If a variable is visible, then I have the guarantee when I read it I read a correctly updated value.
-	- A weaker constraint that synchronization 
+	- A weaker constraint of synchronization because two threads can execute the read and write operations at the same time, but I still have the consisntency variables guaranteed.
+- Conclusion:
+	- All shared variables should be accessed in a synchronized or a volatile way
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg0MTA4NDE1LDExMjUwMzE1NzUsLTExNz
-Q3NTE2MjUsMTE5MTQwODQ4MywyMTI1NDMwMzQsLTE2NTY2NDc0
-NjEsNTEwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3MzcxLC0xOD
-kxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIx
-OTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLT
-IwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTM2MTk3MDc0Myw2ODQxMDg0MTUsMTEyNT
+AzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAz
+NCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4NzIxNTczLC00OD
+Q1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzcz
+ODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLT
+Y1MDY1OTI5MSwtMjA4ODc0NjYxMl19
 -->
