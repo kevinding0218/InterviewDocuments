@@ -244,7 +244,7 @@ Core 1 needs count
 				- r1 = y
 				- r2 = x
 				- The value of r2 is 1 (a "happens before" link between x = 1 and r2 = x)
-			- If T2 is the first to enter the synchronized block, then the execution is in this order, then No 
+			- If T2 is the first to enter the synchronized block, then the execution is in this order, then No "happens-before" link between r2 = x and x = 1
 				- r1 = y
 				- r2 = x or x = 1?
 				- y = 1
@@ -267,7 +267,7 @@ void second Method() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NjY2OTUwMSwyMTI1NDMwMzQsLTE2NT
+eyJoaXN0b3J5IjpbMTkwMDUxNzk3MiwyMTI1NDMwMzQsLTE2NT
 Y2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3Mzcx
 LC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLT
 IyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTky
