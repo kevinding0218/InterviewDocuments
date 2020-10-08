@@ -277,11 +277,17 @@ void second Method() {
 	- A weaker constraint of synchronization because two threads can execute the read and write operations at the same time, but I still have the consisntency variables guaranteed.
 - Conclusion:
 	- All "shared" (means shared among more than one thread) variables should be accessed in a synchronized or a volatile way
+#### False Sharing
+- Definition:
+	- False sharing happens because of the way the CPU caches work
+	- It is a side effect, that can have a tremendous effect on performance
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDI5MDQwNDksNjg0MTA4NDE1LDExMj
-UwMzE1NzUsLTExNzQ3NTE2MjUsMTE5MTQwODQ4MywyMTI1NDMw
-MzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMTU3MywtND
-g0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3
-Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC
-02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE1Mjk3MDgzMTUsLTIwMDI5MDQwNDksNj
+g0MTA4NDE1LDExMjUwMzE1NzUsLTExNzQ3NTE2MjUsMTE5MTQw
+ODQ4MywyMTI1NDMwMzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLD
+M1ODcyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2
+MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMD
+EwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
+
 -->
