@@ -243,7 +243,7 @@ Core 1 needs count
 				- y = 1
 				- r1 = y
 				- r2 = x
-				- The value of r2 is 1
+				- The value of r2 is 1 (a "happens before" link between x = 1 and r2 = x)
 ```
 int x, y, r1, r2;
 Object lock = new Object();
@@ -263,9 +263,9 @@ void second Method() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMD
-E2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3
-OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLT
-Q4NjY5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2
-NjEyXX0=
+eyJoaXN0b3J5IjpbLTQxNjkxMDM5OCwyMTI1NDMwMzQsLTE2NT
+Y2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3Mzcx
+LC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLT
+IyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTky
+OTEsLTIwODg3NDY2MTJdfQ==
 -->
