@@ -207,7 +207,7 @@ Core 1 needs count
 		print(index);
 	}
 	```
-	- if the `increment()` happens in thread T1 and `print()` happens in thread T2, then there is no synchronization or volatility, so it's hard to say what the value of index would be as the `print()` of index varialble is not bound to the last write operation in `increment()`
+	- if the `increment()` happens in thread T1 and `print()` happens in thread T2, then there is no synchronization or volatility, so it's hard to say what the value of index would be because the `print()` of index varialble is not bound to the last write operation in `increment()`
 - Example 2: 
 	```
 	int index;
@@ -268,9 +268,9 @@ void second Method() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNTUzMzAxLDExOTE0MDg0ODMsMjEyNT
-QzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3MjE1NzMs
-LTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MTYwLC0yMT
-M3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1MjQxOTc3
-OCwtNjUwNjU5MjkxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTExNzQ3NTE2MjUsMTE5MTQwODQ4MywyMT
+I1NDMwMzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMTU3
+MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLT
+IxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUyNDE5
+Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
 -->
