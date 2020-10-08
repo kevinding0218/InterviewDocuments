@@ -306,13 +306,14 @@ void second Method() {
 	- The thread T1 is going to increment the "a" variable, thus marking this line of cache as "dirty", and this mark as "dirty" will be broadcasted to the other caches of the CPU, including the cache of Core 2.
 	- Then Core 2 wants to increment the "b" variable, but unfortunately, the line of cache it loaded from the main memory has been marked as "dirty" by Core 1, so when it tries to read the variable "b", it is a cache miss, it has to go back to the main memory to fetch the value of "b" and going to increment. Which is a bad effect as the variable "b" has not been touched by Core 1, the "b" variable has been made "dirty" by the side effect of the fact that the CPU cache is organized in lines.
 	- False sharing happens in an invisible way, because when we write a class, we have no idea of how the class and its fields are laid out in memory, it's hard to predict, hitting performance of your application
- 
+#### Thread Safe Singleton on Multicore CPU
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjEwMTc2NTQsLTE1Mjk3MDgzMTUsLT
-IwMDI5MDQwNDksNjg0MTA4NDE1LDExMjUwMzE1NzUsLTExNzQ3
-NTE2MjUsMTE5MTQwODQ4MywyMTI1NDMwMzQsLTE2NTY2NDc0Nj
-EsNTEwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3MzcxLC0xODkx
-NjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIxOT
-Y4MywtNDg2NjkyMDEwLDUyNDE5Nzc4LC02NTA2NTkyOTEsLTIw
-ODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTE2OTQ3NDU2NywtMTY2MTAxNzY1NCwtMT
+UyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAz
+MTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNC
+wtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1
+MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczOD
+kyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1
+MDY1OTI5MV19
 -->
