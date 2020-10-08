@@ -238,7 +238,7 @@ Core 1 needs count
 		- Due to the way the code is written, there is a happens-before link between:
 			- x = 1 and y = 1
 			- r1 = y and r2 = x
-			- If T1 is the first to enter then synchronized block, then the execution is in the order, happens-before link between a synchronized write and a synchronized read
+			- If T1 is the first to enter then synchronized block, then the execution is in the order, happens-before link between a synchronized write `y = 1` and a synchronized read `r1 = y`
 				- x = 1
 				- y = 1
 				- r1 = y
@@ -263,9 +263,9 @@ void second Method() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMzk0NTE2NiwtMTY1NjY0NzQ2MSw1MT
-AxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3
-NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC
-00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0
-NjYxMl19
+eyJoaXN0b3J5IjpbMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMD
+E2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3
+OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLT
+Q4NjY5MjAxMCw1MjQxOTc3OCwtNjUwNjU5MjkxLC0yMDg4NzQ2
+NjEyXX0=
 -->
