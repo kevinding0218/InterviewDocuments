@@ -302,8 +302,10 @@ void second Method() {
 		- So while loading the line of cache, T1 also loaded the "b" variable, and T2 also loaded the "a" variable
 		- Core 1 -> L1 | | a b | | | | 
 		- Core 2 -> L1 | | a b | | | |
+- Impact:
+	- The thread T1 is going to increment the "a" variable, thus marking this line of cache as "dirty", 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MjIyMjU1OCwtMTUyOTcwODMxNSwtMj
+eyJoaXN0b3J5IjpbMTgyMjY4NTA4MiwtMTUyOTcwODMxNSwtMj
 AwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1
 MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MS
 w1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2
