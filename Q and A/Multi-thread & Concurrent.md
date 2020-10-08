@@ -230,9 +230,12 @@ Core 1 needs count
 	}
 	```
 	- correct value will always be printed as well.
+- A more complex example
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1OD
-cyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUx
-NjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLD
-UyNDE5Nzc4LC02NTA2NTkyOTEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMjA1OTIzMzI2NSwtMTY1NjY0NzQ2MSw1MT
+AxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3
+NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC
+00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0
+NjYxMl19
 -->
