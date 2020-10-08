@@ -235,6 +235,10 @@ Core 1 needs count
 	- `secondMethod()` is read x and y
 	- They are executed in threads T1 and T2
 	- Question: what is the value or r2?
+		- Due to the way the code is written, there is a happens-before link between:
+			- x = 1 and y = 1
+			- r1 = y and r2 = x
+			- 
 ```
 int x, y, r1, r2;
 Object lock = new Object();
@@ -254,7 +258,7 @@ void second Method() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5OTIxODM0NCwtMTY1NjY0NzQ2MSw1MT
+eyJoaXN0b3J5IjpbMjA2MTg0MzEzMywtMTY1NjY0NzQ2MSw1MT
 AxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3
 NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC
 00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0
