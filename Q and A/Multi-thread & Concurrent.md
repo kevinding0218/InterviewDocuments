@@ -267,11 +267,16 @@ void second Method() {
 	r2 = x;
 }
 ```
+#### Synchronization and Volatility
+- Synchroniztion: 
+	- Guarantees the exclusive execution of a block of code
+	- one thread can execute a special blok of code at given time
+- Visibility: Guarantees the consistency of the variable, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMT
-kxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIz
-NzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMT
-c0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2
-OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MSwtMjA4ODc0NjYxMl
-19
+eyJoaXN0b3J5IjpbLTE2NzE5NzE0NDksMTEyNTAzMTU3NSwtMT
+E3NDc1MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0
+NzQ2MSw1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLT
+E4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0
+MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1MDY1OTI5MS
+wtMjA4ODc0NjYxMl19
 -->
