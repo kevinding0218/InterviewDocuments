@@ -417,17 +417,19 @@ void second Method() {
 		- here the double check locking is fixed
 		- but with the same performance issues as in the synchronized case
 - **The Right solution: using enum**
+	- it's been used in several places of the JDK
+		- e.g: Comparable interface NaturalOrderOrderComparator
 ```
 public enum Singleton {
 	INSTANCE
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDY1OTc3MTQsLTE4MTEyODk4NDMsMT
-E2OTQ3NDU2NywtMTY2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAw
-MjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MT
-YyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1
-MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MD
-g3NzksMTc0MTYxNTE2MCwtMjEzNzczODkyNSwtMjI0MjE5Njgz
-LC00ODY2OTIwMTBdfQ==
+eyJoaXN0b3J5IjpbLTc4ODYxMTA4MiwtMTgxMTI4OTg0MywxMT
+Y5NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAy
+OTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNj
+I1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUx
+MDE2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwOD
+c3OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMs
+LTQ4NjY5MjAxMF19
 -->
