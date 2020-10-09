@@ -342,13 +342,14 @@ void second Method() {
 		- T1 executes the test
 		- The thread scheulder gives the hand to T2 on the second core of my CPU at the same time T1 is running
 		- T2 tries to enter `getInstance()`, of course it cannot because T1 is in it, holding the key of the synchronized block.
-		- However, something different is happening here because I am on a two cores CPU, T2 knows that some other threads is running on the other cores so there is little chance that the key might be released without T2 leaving the core of my CPU, 
+		- However, something different is happening here because I am on a two cores CPU, T2 knows that some other threads is running on the other cores, so there is little chance that the key might be released without T2 leaving the core of my CPU, so it's going to wait a little for the key to be released.
+		- There might be some timeout in running, at some point it will realize that the key is not released, so maybe the thread scheduler  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzAzMzU3MTIsMTE2OTQ3NDU2NywtMT
-Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
-MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
-gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
-NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNT
-E2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAs
-NTI0MTk3NzhdfQ==
+eyJoaXN0b3J5IjpbMTg4NjAyMzk3MSwxMTY5NDc0NTY3LC0xNj
+YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
+ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
+MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
+MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MT
+YwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1
+MjQxOTc3OF19
 -->
