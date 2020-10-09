@@ -308,7 +308,10 @@ void second Method() {
 	- False sharing happens in an invisible way, because when we write a class, we have no idea of how the class and its fields are laid out in memory, it's hard to predict, hitting performance of your application
 #### Thread Safe Singleton on Multicore CPU
 - Problems with this code
-	- we have a Read
+	- we have a Read operation - `if (instance == null)`
+	- we have a Write operation - `instance = new Singleton()`
+	- If they occur in different threads, it is a race condition
+	- No happens before link between them so no gurantee that first thread will create the new instance and second thread will see this new instance
 	```
 	public class Singleton {
 		private static Singleton instance;
@@ -321,7 +324,7 @@ void second Method() {
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMTI2MTIwOSwxMTY5NDc0NTY3LC0xNj
+eyJoaXN0b3J5IjpbMTYyNzc1NzkzOSwxMTY5NDc0NTY3LC0xNj
 YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
 ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
 MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
