@@ -328,13 +328,18 @@ void second Method() {
 	- Just adding the "**synchronized**" keyword in `getInstance()` method
 		- e.g: `public static Singleton synchronized getInstance()`
 		- this fix will prevent two threads from executing the `getInstance()` method, so we have gurantee that only one Singleton class is going to be created
-	- Execution on a single 
+	- Execution on a Single Core CPU
+		- suppose that two thread T1 and T2 are calling the getInstance() method
+		- T1 is the first to enter the synchronized block
+		- T1 executes the test
+		- The thread scheulder gives the hand to T2
+		- T2 tries to enter `getInstance()` method
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDIxODIwMjgsMTE2OTQ3NDU2NywtMT
-Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
-MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
-gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
-NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNT
-E2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAs
-NTI0MTk3NzhdfQ==
+eyJoaXN0b3J5IjpbLTU3MDE4MjA2NywxMTY5NDc0NTY3LC0xNj
+YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
+ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
+MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
+MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MT
+YwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1
+MjQxOTc3OF19
 -->
