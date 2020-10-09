@@ -427,13 +427,17 @@ void second Method() {
 #### How to write correct concurrent code
 1) Check for race conditions
 	- they occur on fields (race condition cannot occur on variables / parameters)
-	- 2 threads are reading/writig a given field
+	- if you would have 2 threads are reading/writig a given field, means you would have a race condition on that field
+2) Check for happens-before link
+	- need to have "happens before link" between your read operation and write operation
+	- Are the read/write volatile?
+	- Are they synchronized
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MzIxMjQyOSwtMTMwODM2NjAxMCwtMT
-gxMTI4OTg0MywxMTY5NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5
-NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNT
-c1LC0xMTc0NzUxNjI1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0x
-NjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNz
-M3MSwtMTg5MTYwODc3OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1
-LC0yMjQyMTk2ODNdfQ==
+eyJoaXN0b3J5IjpbMjM2MjcwNzY3LC0xMzA4MzY2MDEwLC0xOD
+ExMjg5ODQzLDExNjk0NzQ1NjcsLTE2NjEwMTc2NTQsLTE1Mjk3
+MDgzMTUsLTIwMDI5MDQwNDksNjg0MTA4NDE1LDExMjUwMzE1Nz
+UsLTExNzQ3NTE2MjUsMTE5MTQwODQ4MywyMTI1NDMwMzQsLTE2
+NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3Mz
+cxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUs
+LTIyNDIxOTY4M119
 -->
