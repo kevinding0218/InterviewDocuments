@@ -382,9 +382,12 @@ void second Method() {
 		- So we have a non sychronized read that supposed to return the value set by a sychonized write
 		- Do we have the guarantee that the read will get the value set by the write? No
 		- We need a "happens before link" between the write operation and read operation outside the synchronized, we don't have this "happens before link" because "happens before link" is created between sychronized or vilotile writes and sychronized or vilotile reads
+	- Possible issue
+		- This is a concurrent bug, and cannot be easily observed on a single core CPU because there is no visibility issue n
+		- 
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzU3NzAwMDQsMTE2OTQ3NDU2NywtMT
+eyJoaXN0b3J5IjpbLTIxMzIyODI1NjIsMTE2OTQ3NDU2NywtMT
 Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
 MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
 gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
