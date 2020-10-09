@@ -345,17 +345,18 @@ void second Method() {
 		- However, something different is happening here because I am on a two cores CPU, T2 knows that some other threads is running on the other cores, so there is little chance that the key might be released without T2 leaving the core of my CPU, so it's going to wait a little for the key to be released.
 		- There might be some timeout in running, at some point it will realize that the key is not released, so maybe the thread scheduler will give the hand to another thread in my application, so T1 will finish to execute.
 		- T2 can then enter the `getInstance()` and read instance object , once again this is a synchronized write followed by a sychonized read, everything is fine, T2 is going to read the correct value of the variable
-		- Execution on a Multiple Cores CPU, e.g 4 cores
+		- **Execution on a Multiple Cores CPU**, e.g 4 cores
 			- T1 is the first to enter the synchronized block `getInstance()` method
 			- T2 needs to wait for T1 to leave the synchronized method to be able to read instance
 			- If on my two other cores I have two other threads, T3 and T4 which also wants to read my instance object, well those threads will have to wait for T2 to leave the `getInstance()` method
-			- At this point, the instance has been created, so all the reads could happen at the exact same time, but since my method is sychronized, no more than one thread can enter it at a given time , so no more than one thread can read instance at the same time, and this is really a performance hit because the more cores/threads I have, the more time I am going to wait   
+			- At this point, the instance has been created, so all the reads could happen at the exact same time, but **since my method is sychronized, no more than one thread can enter it at a given time , so no more than one thread can read instance at the same time**, and this is really a performance hit because the more cores/threads I have, the more time I am going to wait or lose since the reads cannot be made in parallel.
+			- **Since the read is synchronized, it cannot be made in parallel**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNzg2MTQ4MiwxMTY5NDc0NTY3LC0xNj
-YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
-ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
-MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
-MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MT
-YwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1
-MjQxOTc3OF19
+eyJoaXN0b3J5IjpbMzk1MTI1NjA1LDExNjk0NzQ1NjcsLTE2Nj
+EwMTc2NTQsLTE1Mjk3MDgzMTUsLTIwMDI5MDQwNDksNjg0MTA4
+NDE1LDExMjUwMzE1NzUsLTExNzQ3NTE2MjUsMTE5MTQwODQ4My
+wyMTI1NDMwMzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcy
+MTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNj
+AsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUy
+NDE5Nzc4XX0=
 -->
