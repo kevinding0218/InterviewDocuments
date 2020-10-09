@@ -381,13 +381,14 @@ void second Method() {
 			- It is a sychronized write, because it's been wrapped inside a sychronized block.
 		- So we have a non sychronized read that supposed to return the value set by a sychonized write
 		- Do we have the guarantee tha the read will get the value set by the write?
+		- We need a "happens before link" between the write operation and read operation outside the synchronized, we don't have this "happens before link" because "happens before link" is created between sychronized or vilotile writes and sychronized or vilotile reads
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDc4MzEzOTAsMTE2OTQ3NDU2NywtMT
-Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
-MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
-gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
-NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNT
-E2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAs
-NTI0MTk3NzhdfQ==
+eyJoaXN0b3J5IjpbLTUwNzk4OTUwNywxMTY5NDc0NTY3LC0xNj
+YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
+ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
+MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
+MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MT
+YwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1
+MjQxOTc3OF19
 -->
