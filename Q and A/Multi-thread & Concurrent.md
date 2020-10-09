@@ -323,7 +323,7 @@ void second Method() {
 		}
 	}
 	```
-- 1st solution
+- 1st solution: use synchronization
 	- Make the read and write operation "synchronized"
 	- Just adding the "**synchronized**" keyword in `getInstance()` method
 		- e.g: `public static Singleton synchronized getInstance()`
@@ -345,18 +345,19 @@ void second Method() {
 		- However, something different is happening here because I am on a two cores CPU, T2 knows that some other threads is running on the other cores, so there is little chance that the key might be released without T2 leaving the core of my CPU, so it's going to wait a little for the key to be released.
 		- There might be some timeout in running, at some point it will realize that the key is not released, so maybe the thread scheduler will give the hand to another thread in my application, so T1 will finish to execute.
 		- T2 can then enter the `getInstance()` and read instance object , once again this is a synchronized write followed by a sychonized read, everything is fine, T2 is going to read the correct value of the variable
-		- **Execution on a Multiple Cores CPU**, e.g 4 cores
-			- T1 is the first to enter the synchronized block `getInstance()` method
-			- T2 needs to wait for T1 to leave the synchronized method to be able to read instance
-			- If on my two other cores I have two other threads, T3 and T4 which also wants to read my instance object, well those threads will have to wait for T2 to leave the `getInstance()` method
-			- At this point, the instance has been created, so all the reads could happen at the exact same time, but **since my method is sychronized, no more than one thread can enter it at a given time , so no more than one thread can read instance at the same time**, and this is really a performance hit because the more cores/threads I have, the more time I am going to wait or lose since the reads cannot be made in parallel.
-			- **Since the read is synchronized, it cannot be made in parallel**
+	- **Execution on a Multiple Cores CPU**, e.g 4 cores
+		- T1 is the first to enter the synchronized block `getInstance()` method
+		- T2 needs to wait for T1 to leave the synchronized method to be able to read instance
+		- If on my two other cores I have two other threads, T3 and T4 which also wants to read my instance object, well those threads will have to wait for T2 to leave the `getInstance()` method
+		- At this point, the instance has been created, so all the reads could happen at the exact same time, but **since my method is sychronized, no more than one thread can enter it at a given time , so no more than one thread can read instance at the same time**, and this is really a performance hit because the more cores/threads I have, the more time I am going to wait or lose since the reads cannot be made in parallel.
+		- **Since the read is synchronized, it cannot be made in parallel**
+- 2nd solution: double check locking singleton pattern
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk1MTI1NjA1LDExNjk0NzQ1NjcsLTE2Nj
-EwMTc2NTQsLTE1Mjk3MDgzMTUsLTIwMDI5MDQwNDksNjg0MTA4
-NDE1LDExMjUwMzE1NzUsLTExNzQ3NTE2MjUsMTE5MTQwODQ4My
-wyMTI1NDMwMzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcy
-MTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNj
-AsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUy
-NDE5Nzc4XX0=
+eyJoaXN0b3J5IjpbLTE2MzMzNjc4NTMsMTE2OTQ3NDU2NywtMT
+Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
+MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
+gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
+NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNT
+E2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAs
+NTI0MTk3NzhdfQ==
 -->
