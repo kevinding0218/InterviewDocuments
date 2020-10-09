@@ -397,29 +397,32 @@ void second Method() {
 		- The effect can be very weird, one can observe an object that is not fully built
 - **3rd solution: make it volatile**
 	- since the problem comes from the non-synchronized/volatile read, let's make it volatile
-```
-public class Singleton {
-	private static volatile Singleton instance;
-	private final Singleton() {}
-	public static Singleton getInstance() {
-		if (instance != null) {
-			return instance;
-		}
-		sychronized(key) {
-			if (instance == null) {
-				instance = new Singleton();
+		```
+		public class Singleton {
+			private static volatile Singleton instance;
+			private final Singleton() {}
+			public static Singleton getInstance() {
+				if (instance != null) {
+					return instance;
+				}
+				sychronized(key) {
+					if (instance == null) {
+						instance = new Singleton();
+					}
+					return instance;
+				}
 			}
-			return instance;
 		}
-	}
-}
-```
+		```
+		- here the double check locking is fixed
+		- but with the same performance issues as in the synchronized case
+- **The Right solution: using enum**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU4MjM5MTczLC0xODExMjg5ODQzLDExNj
-k0NzQ1NjcsLTE2NjEwMTc2NTQsLTE1Mjk3MDgzMTUsLTIwMDI5
-MDQwNDksNjg0MTA4NDE1LDExMjUwMzE1NzUsLTExNzQ3NTE2Mj
-UsMTE5MTQwODQ4MywyMTI1NDMwMzQsLTE2NTY2NDc0NjEsNTEw
-MTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nz
-c5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4Mywt
-NDg2NjkyMDEwXX0=
+eyJoaXN0b3J5IjpbMTkxNDMyMzI3OCwtMTgxMTI4OTg0MywxMT
+Y5NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAy
+OTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNj
+I1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUx
+MDE2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwOD
+c3OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMs
+LTQ4NjY5MjAxMF19
 -->
