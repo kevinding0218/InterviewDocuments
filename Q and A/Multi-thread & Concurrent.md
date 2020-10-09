@@ -343,9 +343,9 @@ void second Method() {
 		- The thread scheulder gives the hand to T2 on the second core of my CPU at the same time T1 is running
 		- T2 tries to enter `getInstance()`, of course it cannot because T1 is in it, holding the key of the synchronized block.
 		- However, something different is happening here because I am on a two cores CPU, T2 knows that some other threads is running on the other cores, so there is little chance that the key might be released without T2 leaving the core of my CPU, so it's going to wait a little for the key to be released.
-		- There might be some timeout in running, at some point it will realize that the key is not released, so maybe the thread scheduler  
+		- There might be some timeout in running, at some point it will realize that the key is not released, so maybe the thread scheduler will give the hand to another thread in my application, so T1 will finish to execute, T2 can then enter the `getInstance()` and read instance object , once again this is a synchronized write followed by a sychonized read, everything is fine.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NjAyMzk3MSwxMTY5NDc0NTY3LC0xNj
+eyJoaXN0b3J5IjpbMTM2ODAwOTUyNiwxMTY5NDc0NTY3LC0xNj
 YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
 ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
 MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
