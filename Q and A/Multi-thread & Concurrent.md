@@ -312,21 +312,31 @@ void second Method() {
 	- we have a Write operation - `instance = new Singleton()`
 	- If they occur in different threads, it is a race condition
 	- No happens before link between them so no gurantee that first thread will create the new instance and second thread will see this new instance
-	```
-	public class Singleton {
-		private static Singleton instance;
-		private final Singleton() {}
-		public static Singleton getInstance() {
-			if (instance == null) {
-				instance = new Singleton();
+		```
+		public class Singleton {
+			private static Singleton instance;
+			private final Singleton() {}
+			public static Singleton getInstance() {
+				if (instance == null) {
+					instance = new Singleton();
+				}
 			}
 		}
-	}
-	```
+		```
 - 1st solution: use synchronization
 	- Make the read and write operation "synchronized"
 	- Just adding the "**synchronized**" keyword in `getInstance()` method
-		- e.g: `public static Singleton synchronized getInstance()`
+		```
+		public class Singleton {
+			private static Singleton instance;
+			private final Singleton() {}
+			public static Singleton getInstance() {
+				if (instance == null) {
+					instance = new Singleton();
+				}
+			}
+		}
+		```
 		- this fix will prevent two threads from executing the `getInstance()` method, so we have gurantee that only one Singleton class is going to be created
 	- **Execution on a Single Core CPU**
 		- suppose that two thread T1 and T2 are calling the getInstance() method
@@ -385,13 +395,31 @@ void second Method() {
 	- Possible issue
 		- This is a concurrent bug, and cannot be easily observed on a single core CPU because there is no visibility issue on a single core CPU, visibility issues can only be seen on a multi core CPUs due to the different caches on each core of the CPU.
 		- The effect can be very weird, one can observe an object that is not fully built
-		- 
+- 3rd possible solution
+	- since the problem comes from the non-synchronized/volatile read, let's make it volatile
+```
+public class Singleton {
+	private static Singleton instance;
+	private final Singleton() {}
+	public static Singleton getInstance() {
+		if (instance != null) {
+			return instance;
+		}
+		sychronized(key) {
+			if (instance == null) {
+				instance = new Singleton();
+			}
+			return instance;
+		}
+	}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTEyODk4NDMsMTE2OTQ3NDU2NywtMT
-Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
-MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
-gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
-NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNT
-E2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAs
-NTI0MTk3NzhdfQ==
+eyJoaXN0b3J5IjpbLTY1MTYxNjkzMSwtMTgxMTI4OTg0MywxMT
+Y5NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAy
+OTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNj
+I1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUx
+MDE2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwOD
+c3OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMs
+LTQ4NjY5MjAxMF19
 -->
