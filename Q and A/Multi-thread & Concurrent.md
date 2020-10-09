@@ -434,13 +434,29 @@ void second Method() {
 	- Are they synchronized?
 	- If not, there is a possible bug like double lock singleton example
 3) Synchronzied or volatile?
-	- Synchronized = atomicity, if you have a certain portion of code that should not be interrupted between threads, then you need to have a
+	- Synchronized = atomicity, if you have a certain portion of code that should not be interrupted between threads, then you need to have a synchronized block (refer to LongWrapper.java)
+		```
+		/**  
+		 * buggy: this getValue() is not synchronized, so it does not guarantee that it would return the last value * from incrementValueWithLock(), we also need to wrap the return l in a synchronized (key) * so now it has a "happens before link" between the synchronized read and write * @return  
+		  */  
+		public long getValue() {  
+		  synchronized (key) {  
+		  return l;  
+		    }  
+		}
+
+		public void incrementValueWithLock() {  
+		  synchronized (key) {  
+		  l = l + 1;  
+		    }  
+		}
+		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTgzMjg3MDMsLTEzMDgzNjYwMTAsLT
-E4MTEyODk4NDMsMTE2OTQ3NDU2NywtMTY2MTAxNzY1NCwtMTUy
-OTcwODMxNSwtMjAwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMT
-U3NSwtMTE3NDc1MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwt
-MTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1Mj
-czNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczODky
-NSwtMjI0MjE5NjgzXX0=
+eyJoaXN0b3J5IjpbMTgxNTI1NDQ0NywtMTMwODM2NjAxMCwtMT
+gxMTI4OTg0MywxMTY5NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5
+NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNT
+c1LC0xMTc0NzUxNjI1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0x
+NjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNz
+M3MSwtMTg5MTYwODc3OSwxNzQxNjE1MTYwLC0yMTM3NzM4OTI1
+LC0yMjQyMTk2ODNdfQ==
 -->
