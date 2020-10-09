@@ -327,13 +327,14 @@ void second Method() {
 	- Make the read and write operation "synchronized"
 	- Just adding the "**synchronized**" keyword in `getInstance()` method
 		- e.g: `public static Singleton synchronized getInstance()`
-		- 
+		- this fix will prevent two threads from executing the `getInstance()` method, so we have gurantee that only one Singleton class is going to be created
+	- Execution on a single 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MjAzMDEwMiwxMTY5NDc0NTY3LC0xNj
-YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
-ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
-MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
-MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MT
-YwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1
-MjQxOTc3OF19
+eyJoaXN0b3J5IjpbLTE3NDIxODIwMjgsMTE2OTQ3NDU2NywtMT
+Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
+MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
+gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
+NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNT
+E2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAs
+NTI0MTk3NzhdfQ==
 -->
