@@ -430,14 +430,15 @@ void second Method() {
 	- if you would have 2 threads are reading/writig a given field, means you would have a race condition on that field
 2) Check for happens-before link
 	- need to have "happens before link" between your read operation and write operation
-	- Are the read/write volatile?
-	- Are they synchronized
+	- Are the read/write volatile? If the field you're checking has been declared as `volatile`, they are synchronized if they occur inside the boundary of a synchronized block. 
+	- Are they synchronized?
+	- If not, there is a possible bug like double lock singleton example
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM2MjcwNzY3LC0xMzA4MzY2MDEwLC0xOD
-ExMjg5ODQzLDExNjk0NzQ1NjcsLTE2NjEwMTc2NTQsLTE1Mjk3
-MDgzMTUsLTIwMDI5MDQwNDksNjg0MTA4NDE1LDExMjUwMzE1Nz
-UsLTExNzQ3NTE2MjUsMTE5MTQwODQ4MywyMTI1NDMwMzQsLTE2
-NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMTU3MywtNDg0NTI3Mz
-cxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAsLTIxMzc3Mzg5MjUs
-LTIyNDIxOTY4M119
+eyJoaXN0b3J5IjpbLTE4MzIzMzQ2MTMsLTEzMDgzNjYwMTAsLT
+E4MTEyODk4NDMsMTE2OTQ3NDU2NywtMTY2MTAxNzY1NCwtMTUy
+OTcwODMxNSwtMjAwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMT
+U3NSwtMTE3NDc1MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwt
+MTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1Mj
+czNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczODky
+NSwtMjI0MjE5NjgzXX0=
 -->
