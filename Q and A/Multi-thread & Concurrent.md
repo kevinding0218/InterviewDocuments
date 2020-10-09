@@ -333,9 +333,10 @@ void second Method() {
 		- T1 is the first to enter the synchronized block `getInstance()` method
 		- T1 executes the test
 		- The thread scheulder gives the hand to T2
-		- T2 tries to enter `getInstance()` method
+		- T2 tries to enter `getInstance()` method, but since the key is not available, T1 is still holding it, it realize it cannot access it
+		- The thread scheduler gives the hand to T1 again very quickly so T1 can finish its execution and return a fresh new created instance o
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDY2MTg5MzQsMTE2OTQ3NDU2NywtMT
+eyJoaXN0b3J5IjpbLTE2ODcwODQ4MzksMTE2OTQ3NDU2NywtMT
 Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
 MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
 gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
