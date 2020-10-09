@@ -323,8 +323,13 @@ void second Method() {
 		}
 	}
 	```
+- 1st solution
+	- Make the read and write operation "synchronized"
+	- Just adding the "**synchronized**" keyword in `getInstance()` method
+		- e.g: `public static Singleton synchronized getInstance()`
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzc1NzkzOSwxMTY5NDc0NTY3LC0xNj
+eyJoaXN0b3J5IjpbLTk3MjAzMDEwMiwxMTY5NDc0NTY3LC0xNj
 YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
 ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
 MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
