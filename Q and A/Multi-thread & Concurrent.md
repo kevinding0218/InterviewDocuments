@@ -307,13 +307,25 @@ void second Method() {
 	- Then Core 2 wants to increment the "b" variable, but unfortunately, the line of cache it loaded from the main memory has been marked as "dirty" by Core 1, so when it tries to read the variable "b", it is a cache miss, it has to go back to the main memory to fetch the value of "b" and going to increment. Which is a bad effect as the variable "b" has not been touched by Core 1, the "b" variable has been made "dirty" by the side effect of the fact that the CPU cache is organized in lines.
 	- False sharing happens in an invisible way, because when we write a class, we have no idea of how the class and its fields are laid out in memory, it's hard to predict, hitting performance of your application
 #### Thread Safe Singleton on Multicore CPU
-
+- Problems with this code
+	- we have a Read
+	```
+	public class Singleton {
+		private static Singleton instance;
+		private final Singleton() {}
+		public static Singleton getInstance() {
+			if (instance == null) {
+				instance = new Singleton();
+			}
+		}
+	}
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2OTQ3NDU2NywtMTY2MTAxNzY1NCwtMT
-UyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAz
-MTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNC
-wtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4NzIxNTczLC00ODQ1
-MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwtMjEzNzczOD
-kyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAsNTI0MTk3NzgsLTY1
-MDY1OTI5MV19
+eyJoaXN0b3J5IjpbMTUzMTI2MTIwOSwxMTY5NDc0NTY3LC0xNj
+YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
+ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
+MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
+MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MT
+YwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1
+MjQxOTc3OF19
 -->
