@@ -323,14 +323,14 @@ void second Method() {
 			}
 		}
 		```
-- 1st solution: use synchronization
+- **1st solution: use synchronization****
 	- Make the read and write operation "synchronized"
 	- Just adding the "**synchronized**" keyword in `getInstance()` method
 		```
 		public class Singleton {
 			private static Singleton instance;
 			private final Singleton() {}
-			public static Singleton getInstance() {
+			public static Singleton synchronized getInstance() {
 				if (instance == null) {
 					instance = new Singleton();
 				}
@@ -361,7 +361,7 @@ void second Method() {
 		- If on my two other cores I have two other threads, T3 and T4 which also wants to read my instance object, well those threads will have to wait for T2 to leave the `getInstance()` method
 		- At this point, the instance has been created, so all the reads could happen at the exact same time, but **since my method is sychronized, no more than one thread can enter it at a given time , so no more than one thread can read instance at the same time**, and this is really a performance hit because the more cores/threads I have, the more time I am going to wait or lose since the reads cannot be made in parallel.
 		- **Since the read is synchronized, it cannot be made in parallel**
-- 2nd solution: double check locking singleton pattern
+- **2nd solution: double check locking singleton pattern**
 	- if instance has been created, then I just return it, it is not in the synchronized block then all my reads will be made in parallel.
 	- if instance has not been created, I have ths synchronized blcok on a special key object which will be static of course
 		```
@@ -395,7 +395,7 @@ void second Method() {
 	- Possible issue
 		- This is a concurrent bug, and cannot be easily observed on a single core CPU because there is no visibility issue on a single core CPU, visibility issues can only be seen on a multi core CPUs due to the different caches on each core of the CPU.
 		- The effect can be very weird, one can observe an object that is not fully built
-- 3rd possible solution
+- **3rd solution: make it volatile**
 	- since the problem comes from the non-synchronized/volatile read, let's make it volatile
 ```
 public class Singleton {
@@ -415,7 +415,7 @@ public class Singleton {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MTYxNjkzMSwtMTgxMTI4OTg0MywxMT
+eyJoaXN0b3J5IjpbLTI2ODA1OTQzNywtMTgxMTI4OTg0MywxMT
 Y5NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAy
 OTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNj
 I1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUx
