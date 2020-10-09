@@ -373,14 +373,16 @@ void second Method() {
 		```
 	- Buggy
 		- If instance is not null, we read it and return it
-		- Is it a sychonized or volatile read?
-			- No.	
+			- Is it a sychonized read or volatile read?
+			- No, instance is not a volatile variable, and our first if statement is outside synchornized blcok	
+		- If instance is null, we create it and return it
+			- obviously 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNzA3ODMyMywxMTY5NDc0NTY3LC0xNj
-YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
-ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
-MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
-MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MT
-YwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1
-MjQxOTc3OF19
+eyJoaXN0b3J5IjpbMjQ1NjA1MTY1LDExNjk0NzQ1NjcsLTE2Nj
+EwMTc2NTQsLTE1Mjk3MDgzMTUsLTIwMDI5MDQwNDksNjg0MTA4
+NDE1LDExMjUwMzE1NzUsLTExNzQ3NTE2MjUsMTE5MTQwODQ4My
+wyMTI1NDMwMzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcy
+MTU3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNj
+AsLTIxMzc3Mzg5MjUsLTIyNDIxOTY4MywtNDg2NjkyMDEwLDUy
+NDE5Nzc4XX0=
 -->
