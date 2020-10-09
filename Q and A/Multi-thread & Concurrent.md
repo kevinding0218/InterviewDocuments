@@ -328,7 +328,7 @@ void second Method() {
 	- Just adding the "**synchronized**" keyword in `getInstance()` method
 		- e.g: `public static Singleton synchronized getInstance()`
 		- this fix will prevent two threads from executing the `getInstance()` method, so we have gurantee that only one Singleton class is going to be created
-	- Execution on a Single Core CPU
+	- **Execution on a Single Core CPU**
 		- suppose that two thread T1 and T2 are calling the getInstance() method
 		- T1 is the first to enter the synchronized block `getInstance()` method
 		- T1 executes the test
@@ -337,19 +337,20 @@ void second Method() {
 		- The thread scheduler gives the hand to T1 again very quickly so T1 can finish its execution and return a fresh new created instance object
 		- The thread scheduler gives the hand to T2 so that T2 can enter the `getInstance()` method read the instance just created in T1, and return with it.
 		- Since the write to this instance object was a synchronized write under the read made by T2, T2 has the gurantee to read the correct value of instance
-	- Execution on a Two Cores CPU
+	- **Execution on a Two Cores CPU**
 		- T1 is the first to enter the synchronized block `getInstance()` method
 		- T1 executes the test
 		- The thread scheulder gives the hand to T2 on the second core of my CPU at the same time T1 is running
 		- T2 tries to enter `getInstance()`, of course it cannot because T1 is in it, holding the key of the synchronized block.
 		- However, something different is happening here because I am on a two cores CPU, T2 knows that some other threads is running on the other cores, so there is little chance that the key might be released without T2 leaving the core of my CPU, so it's going to wait a little for the key to be released.
-		- There might be some timeout in running, at some point it will realize that the key is not released, so maybe the thread scheduler will give the hand to another thread in my application, so T1 will finish to execute, T2 can then enter the `getInstance()` and read instance object , once again this is a synchronized write followed by a sychonized read, everything is fine.
+		- There might be some timeout in running, at some point it will realize that the key is not released, so maybe the thread scheduler will give the hand to another thread in my application, so T1 will finish to execute.
+		- T2 can then enter the `getInstance()` and read instance object , once again this is a synchronized write followed by a sychonized read, everything is fine, T2 is going to read the correct value of the variable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2ODAwOTUyNiwxMTY5NDc0NTY3LC0xNj
-YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
-ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
-MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
-MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MT
-YwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1
-MjQxOTc3OF19
+eyJoaXN0b3J5IjpbLTE0NjY4NDI0NTIsMTE2OTQ3NDU2NywtMT
+Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
+MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
+gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
+NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNT
+E2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAs
+NTI0MTk3NzhdfQ==
 -->
