@@ -348,9 +348,10 @@ void second Method() {
 		- Execution on a Multiple Cores CPU, e.g 4 cores
 			- T1 is the first to enter the synchronized block `getInstance()` method
 			- T2 needs to wait for T1 to leave the synchronized method to be able to read instance
-			- 
+			- If on my two other cores I have two other threads, T3 and T4 which also wants to read my instance object, well those threads will have to wait for T2 to leave the `getInstance()` method
+			- At this point, the instance has been created, so all the reads could happen at same time,  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMzY1MTY1NSwxMTY5NDc0NTY3LC0xNj
+eyJoaXN0b3J5IjpbMTY2MTYyMzU1NiwxMTY5NDc0NTY3LC0xNj
 YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
 ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
 MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
