@@ -424,9 +424,12 @@ void second Method() {
 			INSTANCE
 		}
 		```
-		
+#### How to write correct concurrent code
+1) Check for race conditions
+	- they occur on fields (race condition cannot occur on variables / parameters)
+	- 2 threads are reading/writig a given field
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzE5OTE2NCwtMTMwODM2NjAxMCwtMT
+eyJoaXN0b3J5IjpbLTQ1MzIxMjQyOSwtMTMwODM2NjAxMCwtMT
 gxMTI4OTg0MywxMTY5NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5
 NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNT
 c1LC0xMTc0NzUxNjI1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0x
