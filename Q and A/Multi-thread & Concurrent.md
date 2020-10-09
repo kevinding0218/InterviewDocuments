@@ -433,8 +433,10 @@ void second Method() {
 	- Are the read/write volatile? If the field you're checking has been declared as `volatile`, they are synchronized if they occur inside the boundary of a synchronized block. 
 	- Are they synchronized?
 	- If not, there is a possible bug like double lock singleton example
+3) Synchronzied or volatile?
+	- Synchronized = atomicity, if you have a certain portion of code that should not be interrupted between threads, then you need to have a
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzIzMzQ2MTMsLTEzMDgzNjYwMTAsLT
+eyJoaXN0b3J5IjpbLTE4NTgzMjg3MDMsLTEzMDgzNjYwMTAsLT
 E4MTEyODk4NDMsMTE2OTQ3NDU2NywtMTY2MTAxNzY1NCwtMTUy
 OTcwODMxNSwtMjAwMjkwNDA0OSw2ODQxMDg0MTUsMTEyNTAzMT
 U3NSwtMTE3NDc1MTYyNSwxMTkxNDA4NDgzLDIxMjU0MzAzNCwt
