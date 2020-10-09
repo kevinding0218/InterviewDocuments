@@ -336,12 +336,14 @@ void second Method() {
 		- T2 tries to enter `getInstance()` method, but since the key is not available, T1 is still holding it, it realize it cannot access it
 		- The thread scheduler gives the hand to T1 again very quickly so T1 can finish its execution and return a fresh new created instance object
 		- The thread scheduler gives the hand to T2 so that T2 can enter the `getInstance()` method read the instance just created in T1, and return with it.
+		- Since the write to this instance object was a synchronized write under the read made by T2, T2 has the gurantee to read the correct value of instance
+	- Execute
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMTc0NzM3NCwxMTY5NDc0NTY3LC0xNj
-YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
-ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
-MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
-MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MT
-YwLC0yMTM3NzM4OTI1LC0yMjQyMTk2ODMsLTQ4NjY5MjAxMCw1
-MjQxOTc3OF19
+eyJoaXN0b3J5IjpbLTE1MDE3NTkxMjEsMTE2OTQ3NDU2NywtMT
+Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
+MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
+gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
+NzIxNTczLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNT
+E2MCwtMjEzNzczODkyNSwtMjI0MjE5NjgzLC00ODY2OTIwMTAs
+NTI0MTk3NzhdfQ==
 -->
