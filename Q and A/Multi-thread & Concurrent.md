@@ -354,26 +354,29 @@ void second Method() {
 - 2nd solution: double check locking singleton pattern
 	- if instance has been created, then I just return it, it is not in the synchronized block then all my reads will be made in parallel.
 	- if instance has not been created, I have ths synchronized blcok on a special key object which will be static of course
-	- this is a good idea because between the first thread and this one, another thread could have created this instance
-```
-public class Singleton {
-	private static Singleton instance;
-	private final Singleton() {}
-	public static Singleton getInstance() {
-		if (instance != null) {
-			return instance;
-		}
-		sychronized(key) {
-			if (instance == null) {
-				instance = new Singleton();
+		```
+		public class Singleton {
+			private static Singleton instance;
+			private final Singleton() {}
+			public static Singleton getInstance() {
+				if (instance != null) {
+					return instance;
+				}
+				sychronized(key) {
+					if (instance == null) {
+						instance = new Singleton();
+					}
+					return instance;
+				}
 			}
-			return instance;
 		}
-	}
-}
-```
+		```
+	- Buggy
+		- If instance is not null, we read it and return it
+		- Is it a sychonized or volatile read?
+			- No.	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyOTU4NTYyOCwxMTY5NDc0NTY3LC0xNj
+eyJoaXN0b3J5IjpbMTEwNzA3ODMyMywxMTY5NDc0NTY3LC0xNj
 YxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEw
 ODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0OD
 MsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3
