@@ -425,16 +425,17 @@ void second Method() {
 		}
 		```
 #### How to write correct concurrent code
-1) Check for race conditions
+1) **Check for race conditions**
 	- they occur on fields (race condition cannot occur on variables / parameters)
 	- if you would have 2 threads are reading/writig a given field, means you would have a race condition on that field
-2) Check for happens-before link
+2) **Check for happens-before link**
 	- need to have "happens before link" between your read operation and write operation
 	- Are the read/write volatile? If the field you're checking has been declared as `volatile`, they are synchronized if they occur inside the boundary of a synchronized block. 
 	- Are they synchronized?
 	- If not, there is a possible bug like double lock singleton example
-3) Synchronzied or volatile?
-	- Synchronized = atomicity, if you have a certain portion of code that should not be interrupted between threads, then you need to have a synchronized block (refer to LongWrapper.java)
+3) **Synchronzied or volatile?**
+	- Synchronized = atomicity, if you have **a certain portion of code that should not be interrupted between threads, then you need to have a synchronized block** to protect this portion of code (refer to LongWrapper.java)
+	- Volatile = visibility, **if it's not above case, then volatile is enough**
 		```
 		/**  
 		 * buggy: this getValue() is not synchronized, so it does not guarantee that it would return the last value * from incrementValueWithLock(), we also need to wrap the return l in a synchronized (key) * so now it has a "happens before link" between the synchronized read and write * @return  
@@ -452,7 +453,7 @@ void second Method() {
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNTI1NDQ0NywtMTMwODM2NjAxMCwtMT
+eyJoaXN0b3J5IjpbLTI3NTE1MTMyNSwtMTMwODM2NjAxMCwtMT
 gxMTI4OTg0MywxMTY5NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5
 NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNT
 c1LC0xMTc0NzUxNjI1LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0x
