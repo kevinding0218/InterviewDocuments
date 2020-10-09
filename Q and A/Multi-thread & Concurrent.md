@@ -383,11 +383,11 @@ void second Method() {
 		- Do we have the guarantee that the read will get the value set by the write? No
 		- We need a "happens before link" between the write operation and read operation outside the synchronized, we don't have this "happens before link" because "happens before link" is created between sychronized or vilotile writes and sychronized or vilotile reads
 	- Possible issue
-		- This is a concurrent bug, and cannot be easily observed on a single core CPU because there is no visibility issue n
-		- 
+		- This is a concurrent bug, and cannot be easily observed on a single core CPU because there is no visibility issue on a single core CPU, visibility issues can only be seen on a multi core CPUs due to the different caches on each core of the CPU.
+		- The effect can be very weird, one can observe an object that is not fully built
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzIyODI1NjIsMTE2OTQ3NDU2NywtMT
+eyJoaXN0b3J5IjpbLTE4MTEyODk4NDMsMTE2OTQ3NDU2NywtMT
 Y2MTAxNzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQx
 MDg0MTUsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4ND
 gzLDIxMjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4
