@@ -44,11 +44,14 @@
 - Pricing
 	- based on amount of data stored, number of requests, amount of data transferred
 ##### Relational Database Service (RDS)
-- a collection of AWS services for managed relational databases.
-- 
+- a collection of AWS services for managed relational databases, it's managed because AWS takes care of
+	- Scheduled automated backups
+	- Simple software updates
+	- infrastructure of database
+-  RDS databases run on EC2 Instances
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNzY4MjM2NywxNTA0MTk4NjA0LDczND
+eyJoaXN0b3J5IjpbLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczND
 czMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2
 LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
 -->
