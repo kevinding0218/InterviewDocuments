@@ -1,12 +1,12 @@
-### AWS - a provider of cloud services
+## AWS
 - Providing a range of computing services with on-demand scalability and flexiable pricing
-#### Azure vs GCP vs AWS
+### Azure vs GCP vs AWS
 - Azure: Best place to run Microsoft product
 - GCP (Google Cloud Provider): Specializations in Big Data, Kubernates and AI
 - AWS: Better web console
 - Pluralsight: Understanding the Difference between Azure and AWS
-#### AWS Core Service
-##### Elastic Cloud Compute (EC2)
+### AWS Core Service
+#### Elastic Cloud Compute (EC2)
 -  Computing services operating in remote data servers around the world
 -  Instances running computing operations can increase or decrease at will
 -  An EC2 instance is essentially a virtual server which is operating system agnostic.
@@ -30,7 +30,7 @@
 	- Elastic Block Storage: $0.1 USD per GB/month
 	- Auto Scaling Groups: Free
 	- Load Balancer: $0.0225 USD/hour
-##### Simple Storage Service (S3)
+#### Simple Storage Service (S3)
 -  widely used throughout AWS as the place to store files. 
 - can store any type of file but only limitation is max file size is 5 TB
 - Bucket: 
@@ -43,7 +43,7 @@
 	- Use CloudFront, you can cache your content
 - Pricing
 	- based on amount of data stored, number of requests, amount of data transferred
-##### Relational Database Service (RDS)
+#### Relational Database Service (RDS)
 - a collection of AWS services for managed relational databases, it's managed because AWS takes care of
 	- Scheduled automated backups
 	- Simple software updates
@@ -55,7 +55,7 @@
 	- Type of database
 	- Region
 	- EC2 instance type
-##### Route53
+#### Route53
 - DNS (Domain Name System): a system that translates human-readable URLs to IP addresses
 - Route53 allows you to set URL between website and EC2 application such as S3
 - Is the Core to let users interact with services in AWS
@@ -67,10 +67,17 @@
 	- Queries: $0.4 USD per 1M
 	- DNS Entries: Free
 	- Alarm: $0.5 UDS per Health Check
-##### 
+### Other services
+#### Elastic Beanstalk
+#### Lambda
+#### DynamoDB
+#### Virtual Private Cloud
+#### CloudWatch
+#### CloudFront
+### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA0MDYwMDM2LDg0NTQ3MjExMiwtMzEzMj
-Y0MDQ4LC02ODUwNzUzOTIsMTUwNDE5ODYwNCw3MzQ3MzAwMzQs
-OTI3NTM2MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4OD
-c0NjYxMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTk5MTcxNTM0OSw4NDU0NzIxMTIsLTMxMz
+I2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0
+LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwOD
+g3NDY2MTIsNzMwOTk4MTE2XX0=
 -->
