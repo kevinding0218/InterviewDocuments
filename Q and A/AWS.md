@@ -19,12 +19,13 @@
 	- Add Storage, which refers to EBS (Elastic Block Storage)
 		- Use EBS for EC2 file systems
 		- Use S3 for file storage
-	- Configure Security Group
+	- Configure Security Group, which is IP-based communication rules for a single or group of server instances
+	- 
 ##### Simple Storage Service (S3)
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1Nj
-E2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2
-XX0=
+eyJoaXN0b3J5IjpbMTQ3OTgyMzA1MCw3MzQ3MzAwMzQsOTI3NT
+M2MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYx
+Miw3MzA5OTgxMTZdfQ==
 -->
