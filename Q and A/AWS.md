@@ -25,12 +25,14 @@
 		- allow access to databases
 		- accept HTTP requests
 - Pricing
+	- EC2 instances are charged by the hour
+	- based on the instance type and image that you selected, e.g: Windows image will cost more than a Linux simply because image needs to be licensed and paid by Amazon
 	- 
 ##### Simple Storage Service (S3)
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxODIwODM3Nyw3MzQ3MzAwMzQsOTI3NT
-M2MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYx
-Miw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE1NTQwMjkzNDUsNzM0NzMwMDM0LDkyNz
+UzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2
+MTIsNzMwOTk4MTE2XX0=
 -->
