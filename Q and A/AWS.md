@@ -61,13 +61,16 @@
 - Is the Core to let users interact with services in AWS
 	- Setup a hosted zone, which is like a root domain name, like example.com or google.com
 	- Using hosted zone you can setup subdomains like mail.example.com and configure them to route to AWS resources.
+	- Healthcare check, allows you to set up regular checks for a given URL path, will send you alerts based on different rules.
 - Pricing
 	- Hosted Zone: $0.5 USD per month
 	- Queries: $0.4 USD per 1M
 	- DNS Entries: Free
+	- Alarm: $0.5 UDS per Health Check
+##### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzc2NzI0NjAsODQ1NDcyMTEyLC0zMT
-MyNjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAz
-NCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMD
-g4NzQ2NjEyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbNTA0MDYwMDM2LDg0NTQ3MjExMiwtMzEzMj
+Y0MDQ4LC02ODUwNzUzOTIsMTUwNDE5ODYwNCw3MzQ3MzAwMzQs
+OTI3NTM2MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4OD
+c0NjYxMiw3MzA5OTgxMTZdfQ==
 -->
