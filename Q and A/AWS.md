@@ -13,11 +13,12 @@
 - Create an EC2 instance
 	- Choose an Amazon Machine Image (AMI), which is a combination of an operating system and some application/software preinstalled, such like Java, Python or AWS CLI tools. Amazon provides, manages and updates a selection of images that are available.
 	- Select an instance type, which is the spec of your instance, the number of CPUs, the amount of RAM, and the network performance.
+	- Configure Instance Details, which is related to security roles, number of insntances, etc. You can select "Auto Scaling Group", which is for automatically scaling EC2
 ##### Simple Storage Service (S3)
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MzYwMzY0NCw5Mjc1MzYzNjUsMTg4NT
+eyJoaXN0b3J5IjpbMTUyNzQxOTkwNCw5Mjc1MzYzNjUsMTg4NT
 YxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODEx
 Nl19
 -->
