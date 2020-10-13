@@ -33,17 +33,20 @@
 ##### Simple Storage Service (S3)
 -  widely used throughout AWS as the place to store files. 
 - can store any type of file but only limitation is max file size is 5 TB
-- Structure
-	- Bucket: 
-		- root resource to S3 which you can add, delete or modify objects
-		- can trigger events when objects are added/modified/deleted
-		- preserve older versions of objects
-		- replicate objects across regions
-		- can be access through URL
+- Bucket: 
+	- root resource to S3 which you can add, delete or modify objects
+	- can trigger events when objects are added/modified/deleted
+	- preserve older versions of objects
+	- replicate objects across regions
+	- can be access through URL
+- Solve Latency in S3
+	- Use CloudFront, you can cache your content
+- Pricing
+	- based on amount of data stored, number of requests, am
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNDE5ODYwNCw3MzQ3MzAwMzQsOTI3NT
-M2MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYx
-Miw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbODQwMjk2MzQ4LDE1MDQxOTg2MDQsNzM0Nz
+MwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYs
+LTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
 -->
