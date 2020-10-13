@@ -31,10 +31,11 @@
 	- Auto Scaling Groups: Free
 	- Load Balancer: $0.0225 USD/hour
 ##### Simple Storage Service (S3)
+-  
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk3NDUyNTAsNzM0NzMwMDM0LDkyNzUzNj
-M2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIs
-NzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTk0NzkzNjUzOSw3MzQ3MzAwMzQsOTI3NT
+M2MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYx
+Miw3MzA5OTgxMTZdfQ==
 -->
