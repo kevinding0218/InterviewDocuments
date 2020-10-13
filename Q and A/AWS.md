@@ -50,10 +50,15 @@
 	- infrastructure of database
 -  RDS databases run on EC2 Instances
 -  RDS makes it easy to take DB snapshots or change the hardware
-- 
+-  RDS instance <-> Security Group <-> EC2, BI but not external application
+- Pricing
+	- Type of database
+	- Region
+	- EC2 instance type
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MD
-QxOTg2MDQsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5
-LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbODQ1NDcyMTEyLC0zMTMyNjQwNDgsLTY4NT
+A3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mjc1MzYzNjUs
+MTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLDczMD
+k5ODExNl19
 -->
