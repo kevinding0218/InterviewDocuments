@@ -20,12 +20,17 @@
 		- Use EBS for EC2 file systems
 		- Use S3 for file storage
 	- Configure Security Group, which is IP-based communication rules for a single or group of server instances
+		- control who can SSH into EC2 instance
+		- allow access between EC2 instance
+		- allow access to databases
+		- accept HTTP requests
+- Pricing
 	- 
 ##### Simple Storage Service (S3)
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3OTgyMzA1MCw3MzQ3MzAwMzQsOTI3NT
+eyJoaXN0b3J5IjpbMTkxODIwODM3Nyw3MzQ3MzAwMzQsOTI3NT
 M2MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYx
 Miw3MzA5OTgxMTZdfQ==
 -->
