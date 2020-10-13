@@ -49,9 +49,11 @@
 	- Simple software updates
 	- infrastructure of database
 -  RDS databases run on EC2 Instances
+-  RDS makes it easy to take DB snapshots or change the hardware
+- 
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczND
-czMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2
-LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTMxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MD
+QxOTg2MDQsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5
+LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
 -->
