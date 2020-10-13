@@ -56,9 +56,12 @@
 	- Region
 	- EC2 instance type
 ##### Route53
-- DNS (Domain Name System): a system that tran
+- DNS (Domain Name System): a system that translates human-readable URLs to IP addresses
+- Route53 allows you to set URL between website and EC2 application such as S3
+- Is the Core to let users interact with services in AWS
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3OTY1NjQ0NSw4NDU0NzIxMTIsLTMxMz
+eyJoaXN0b3J5IjpbLTQ2MjE4MDY3NSw4NDU0NzIxMTIsLTMxMz
 I2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0
 LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwOD
 g3NDY2MTIsNzMwOTk4MTE2XX0=
