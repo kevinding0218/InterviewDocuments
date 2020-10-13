@@ -16,12 +16,14 @@
 	- Configure Instance Details, which is related to security roles, number of insntances, etc. You can select "Auto Scaling Group", which is for automatically scaling EC2 images up and down
 		- Use EC2 for scaling AMIs
 		- Use EB (Elastic Beanstalk) for scaling applications 
-	- Add Storage, which refers to 
+	- Add Storage, which refers to EBS (Elastic Block Storage)
+		- Use EBS for EC2 file systems
+		- Use S3 for file storage
 ##### Simple Storage Service (S3)
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTAxMzQ1MjcsOTI3NTM2MzY1LDE4OD
-U2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYxMiw3MzA5OTgx
-MTZdfQ==
+eyJoaXN0b3J5IjpbMTAyMDcxMTQ4NCw5Mjc1MzYzNjUsMTg4NT
+YxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODEx
+Nl19
 -->
