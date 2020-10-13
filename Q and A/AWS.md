@@ -60,10 +60,14 @@
 - Route53 allows you to set URL between website and EC2 application such as S3
 - Is the Core to let users interact with services in AWS
 	- Setup a hosted zone, which is like a root domain name, like example.com or google.com
-	- Using hosted zone you can setup subdomains like 
+	- Using hosted zone you can setup subdomains like mail.example.com and configure them to route to AWS resources.
+- Pricing
+	- Hosted Zone: $0.5 USD per month
+	- Queries: $0.4 USD per 1M
+	- DNS Entries: Free
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NTQxMjA1NSw4NDU0NzIxMTIsLTMxMz
-I2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0
-LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwOD
-g3NDY2MTIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTExNzc2NzI0NjAsODQ1NDcyMTEyLC0zMT
+MyNjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAz
+NCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMD
+g4NzQ2NjEyLDczMDk5ODExNl19
 -->
