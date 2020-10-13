@@ -12,12 +12,12 @@
 -  An EC2 instance is essentially a virtual server which is operating system agnostic.
 - Create an EC2 instance
 	- Choose an Amazon Machine Image (AMI), which is a combination of an operating system and some application/software preinstalled, such like Java, Python or AWS CLI tools. Amazon provides, manages and updates a selection of images that are available.
-	- Select 
+	- Select an instance type, which is the spec of your instance, the number of CPUs, the amount of RAM, and the network performance.
 ##### Simple Storage Service (S3)
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NTQ1OTkyLDkyNzUzNjM2NSwxODg1Nj
-E2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2
-XX0=
+eyJoaXN0b3J5IjpbLTg4MzYwMzY0NCw5Mjc1MzYzNjUsMTg4NT
+YxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODEx
+Nl19
 -->
