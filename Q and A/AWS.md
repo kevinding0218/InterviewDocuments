@@ -42,11 +42,13 @@
 - Solve Latency in S3
 	- Use CloudFront, you can cache your content
 - Pricing
-	- based on amount of data stored, number of requests, am
+	- based on amount of data stored, number of requests, amount of data transferred
 ##### Relational Database Service (RDS)
+- a collection of AWS services for managed relational databases.
+- 
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQwMjk2MzQ4LDE1MDQxOTg2MDQsNzM0Nz
-MwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYs
-LTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTUxNzY4MjM2NywxNTA0MTk4NjA0LDczND
+czMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2
+LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
 -->
