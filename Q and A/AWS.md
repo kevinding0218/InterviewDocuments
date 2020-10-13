@@ -6,9 +6,13 @@
 - AWS: Better web console
 - Pluralsight: Understanding the Difference between Azure and AWS
 #### AWS Core Service
+##### Elastic Cloud Compute (EC2)
 - 
+##### Simple Storage Service (S3)
+##### Relational Database Service (RDS)
+##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwMDkzODM3LDkyNzUzNjM2NSwxODg1Nj
-E2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2
-XX0=
+eyJoaXN0b3J5IjpbLTIxMjMzNTM5MTIsOTI3NTM2MzY1LDE4OD
+U2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYxMiw3MzA5OTgx
+MTZdfQ==
 -->
