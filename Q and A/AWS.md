@@ -29,12 +29,12 @@
 	- based on the instance type and image that you selected, e.g: Windows image will cost more than a Linux simply because image needs to be licensed and paid by Amazon
 	- Elastic Block Storage: $0.1 USD per GB/month
 	- Auto Scaling Groups: Free
-	- Load Balancer: $0.0225 US
+	- Load Balancer: $0.0225 USD/hour
 ##### Simple Storage Service (S3)
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE1MTQ3NDc1LDczNDczMDAzNCw5Mjc1Mz
-YzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEy
-LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMjk3NDUyNTAsNzM0NzMwMDM0LDkyNzUzNj
+M2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIs
+NzMwOTk4MTE2XX0=
 -->
