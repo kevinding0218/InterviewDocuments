@@ -34,11 +34,16 @@
 -  widely used throughout AWS as the place to store files. 
 - can store any type of file but only limitation is max file size is 5 TB
 - Structure
-	- Bucket: root resource to S3 which you can add, d
+	- Bucket: 
+		- root resource to S3 which you can add, delete or modify objects
+		- can trigger events when objects are added/modified/deleted
+		- preserve older versions of objects
+		- replicate objects across regions
+		- can be access through URL
 ##### Relational Database Service (RDS)
 ##### Route53
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NTQ0ODM5NCw3MzQ3MzAwMzQsOTI3NT
+eyJoaXN0b3J5IjpbMTUwNDE5ODYwNCw3MzQ3MzAwMzQsOTI3NT
 M2MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYx
 Miw3MzA5OTgxMTZdfQ==
 -->
