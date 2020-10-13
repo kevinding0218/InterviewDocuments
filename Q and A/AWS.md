@@ -59,9 +59,10 @@
 - DNS (Domain Name System): a system that translates human-readable URLs to IP addresses
 - Route53 allows you to set URL between website and EC2 application such as S3
 - Is the Core to let users interact with services in AWS
-- 
+	- Setup a hosted zone, which is like a root domain name, like example.com or google.com
+	- Using hosted zone you can setup subdomains like 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MjE4MDY3NSw4NDU0NzIxMTIsLTMxMz
+eyJoaXN0b3J5IjpbLTQ1NTQxMjA1NSw4NDU0NzIxMTIsLTMxMz
 I2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0
 LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwOD
 g3NDY2MTIsNzMwOTk4MTE2XX0=
