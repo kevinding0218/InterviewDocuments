@@ -91,17 +91,19 @@
 - Security groups secure single instances
 - VPCs secure groups of instances, inside the VPC there are multiple Subnet, those subnets are a further way to group your resources and assign different rules to each
 - One reason to use Subnet inside VPC is to set up both private and public subnets.
-	- The Private Subnet might hold your databases and application instances, the private subnet would have no internet access at all, keep it quite secure, it may use a NAT gateway in the public subnet to securely access the internet
-	- The Public Subnet would have access to internet, and could utilize security groups to make it secure.
-	- 
+	- The Private Subnet might hold your databases and application instances, the private subnet would have no internet access at all, keep it quite secure, it may use a NAT gateway in the public subnet to securely access the internet.
+	- The Public Subnet would have access to internet, and could utilize security groups to make it secure, you could also launch an EC2 instance in public subnet to act as a tunnel to SSH into your private EC2 instance
+- Two keys VPC controls routing
+	- Routing Table:
+	- Network A
 #### CloudWatch
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NDY3MzM5MywtMTc0MzUxMTM4NywtMT
-M3ODU2MTM1MCwtNzY2MzQyNTcxLDE3OTI4NzM5MDUsLTE0MzIw
-ODgzMzMsLTk5MTcxNTM0OSw4NDU0NzIxMTIsLTMxMzI2NDA0OC
-wtNjg1MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0LDkyNzUz
-NjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MT
-IsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEzNzYwMTM4NTQsLTE3NDM1MTEzODcsLT
+EzNzg1NjEzNTAsLTc2NjM0MjU3MSwxNzkyODczOTA1LC0xNDMy
+MDg4MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQwND
+gsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mjc1
+MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2Nj
+EyLDczMDk5ODExNl19
 -->
