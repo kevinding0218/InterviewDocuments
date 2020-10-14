@@ -99,14 +99,14 @@
 - Free
 #### CloudWatch
 - A monitoring and alarm services for many other different services in AWS
-- For each alarm you could choose from a specific metric examples, such as EC2 - CPU Utilization, 
+- For each alarm you could choose from a specific metric examples, such as EC2 - CPU Utilization, DynamoDB - ConsumedReadCapacityUnits, S3 - NumberOfObjects, Route53 - HealthCheckStates or RedShift - Database Connections
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYwNzQ2NDcsLTE3NDM1MTEzODcsLTEzNz
-g1NjEzNTAsLTc2NjM0MjU3MSwxNzkyODczOTA1LC0xNDMyMDg4
-MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQwNDgsLT
-Y4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mjc1MzYz
-NjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLD
-czMDk5ODExNl19
+eyJoaXN0b3J5IjpbNDA4OTA0NzY3LC0xNzQzNTExMzg3LC0xMz
+c4NTYxMzUwLC03NjYzNDI1NzEsMTc5Mjg3MzkwNSwtMTQzMjA4
+ODMzMywtOTkxNzE1MzQ5LDg0NTQ3MjExMiwtMzEzMjY0MDQ4LC
+02ODUwNzUzOTIsMTUwNDE5ODYwNCw3MzQ3MzAwMzQsOTI3NTM2
+MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYxMi
+w3MzA5OTgxMTZdfQ==
 -->
