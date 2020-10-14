@@ -68,16 +68,17 @@
 	- DNS Entries: Free
 	- Alarm: $0.5 UDS per Health Check
 ### Other services
-#### Elastic Beanstalk
+#### Elastic Beanstalk (EB)
+- 
 #### Lambda
 #### DynamoDB
-#### Virtual Private Cloud
+#### Virtual Private Cloud (VPC)
 #### CloudWatch
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MTcxNTM0OSw4NDU0NzIxMTIsLTMxMz
-I2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0
-LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwOD
-g3NDY2MTIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTc0NjEzMzM3MCwtOTkxNzE1MzQ5LDg0NT
+Q3MjExMiwtMzEzMjY0MDQ4LC02ODUwNzUzOTIsMTUwNDE5ODYw
+NCw3MzQ3MzAwMzQsOTI3NTM2MzY1LDE4ODU2MTY1NTksMTQzMj
+M5MDg0NiwtMjA4ODc0NjYxMiw3MzA5OTgxMTZdfQ==
 -->
