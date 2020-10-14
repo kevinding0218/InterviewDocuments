@@ -103,13 +103,15 @@
 #### CloudFront - CDN
 - A content delivery network (CDN) that allows you to serve files globally with very fast connections
 -  Works seamlessly with S3, EC2, AWS load balancer and Route53 to serve your content from the location closet to incoming requests.
-- 
+- Start by creating a cloud front distribution, a distribution defines a set of contents to be served rom CloudFront.
+- For each distribution, you will need specify an original location for the content, such as an S3 bucket.
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzI1MTkwNjAsLTQ4OTEyMzk5Nyw0MD
-g5MDQ3NjcsLTE3NDM1MTEzODcsLTEzNzg1NjEzNTAsLTc2NjM0
-MjU3MSwxNzkyODczOTA1LC0xNDMyMDg4MzMzLC05OTE3MTUzND
-ksODQ1NDcyMTEyLC0zMTMyNjQwNDgsLTY4NTA3NTM5MiwxNTA0
-MTk4NjA0LDczNDczMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OS
-wxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMjA5MjUzODM1OCwtMTEzMjUxOTA2MCwtND
+g5MTIzOTk3LDQwODkwNDc2NywtMTc0MzUxMTM4NywtMTM3ODU2
+MTM1MCwtNzY2MzQyNTcxLDE3OTI4NzM5MDUsLTE0MzIwODgzMz
+MsLTk5MTcxNTM0OSw4NDU0NzIxMTIsLTMxMzI2NDA0OCwtNjg1
+MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0LDkyNzUzNjM2NS
+wxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMw
+OTk4MTE2XX0=
 -->
