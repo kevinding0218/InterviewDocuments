@@ -75,6 +75,7 @@
 - Configuring the environment in EB is where you spent most of time, since you will set up the deployment, load balancing and scaling rules there.
 - Application versions with the actual bits of files are stored in S3,  there is a limit number of each application versions of 1000
 - Monitoring in EB will aggregate data across all applications, provided metrics such as CPU, Number of Requests, and Network Traffic.
+- Pricing: EB is free in AWS, the only payment is for EC2 instances, load balancers and S2 separately
 #### Lambda
 #### DynamoDB
 #### Virtual Private Cloud (VPC)
@@ -82,8 +83,8 @@
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODczMzY0MjI0LC05OTE3MTUzNDksODQ1ND
-cyMTEyLC0zMTMyNjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0
-LDczNDczMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMz
-kwODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTE0MzIwODgzMzMsLTk5MTcxNTM0OSw4ND
+U0NzIxMTIsLTMxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2
+MDQsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0Mz
+IzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
 -->
