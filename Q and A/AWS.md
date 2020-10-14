@@ -79,15 +79,16 @@
 #### Lambda
 - Provides a function code execution as a service
 - Only pay when your code is running, it means you don't need to pay for idle servers or idle load balancer
+- 
 #### DynamoDB
 #### Virtual Private Cloud (VPC)
 #### CloudWatch
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NjM0MjU3MSwxNzkyODczOTA1LC0xND
-MyMDg4MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQw
-NDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mj
-c1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2
-NjEyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTEzNzg1NjEzNTAsLTc2NjM0MjU3MSwxNz
+kyODczOTA1LC0xNDMyMDg4MzMzLC05OTE3MTUzNDksODQ1NDcy
+MTEyLC0zMTMyNjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LD
+czNDczMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkw
+ODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
 -->
