@@ -72,7 +72,9 @@
 - Deploy your app with EB is easier with various tools than EC2
 - EB structure would include many application versions in one Unique Application (e.g: My Application), with the code of different application version, you can deploy to different environments, like Test/Prod, 
 - An environment is the rules and configuration that manages actual EC2 instances, each envrionment can run in different platforms (e.g, Java or Node), and can be configured with certain EC2 instance types.
-- Configuring the environment in EB is where you spent most of time, since you will s 
+- Configuring the environment in EB is where you spent most of time, since you will set up the deployment, load balancing and scaling rules there.
+- Application versions with the actual bits of files are stored in S3,  there is a limit number of each application versions of 1000
+- 
 #### Lambda
 #### DynamoDB
 #### Virtual Private Cloud (VPC)
@@ -80,8 +82,8 @@
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjE0MDc4NjcsLTk5MTcxNTM0OSw4ND
-U0NzIxMTIsLTMxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2
-MDQsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0Mz
-IzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTA1NTMzMjU5NSwtOTkxNzE1MzQ5LDg0NT
+Q3MjExMiwtMzEzMjY0MDQ4LC02ODUwNzUzOTIsMTUwNDE5ODYw
+NCw3MzQ3MzAwMzQsOTI3NTM2MzY1LDE4ODU2MTY1NTksMTQzMj
+M5MDg0NiwtMjA4ODc0NjYxMiw3MzA5OTgxMTZdfQ==
 -->
