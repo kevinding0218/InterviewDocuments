@@ -104,10 +104,11 @@
 - A content delivery network (CDN) that allows you to serve files globally with very fast connections
 -  Works seamlessly with S3, EC2, AWS load balancer and Route53 to serve your content from the location closet to incoming requests.
 - Start by creating a cloud front distribution, a distribution defines a set of contents to be served rom CloudFront.
-- For each distribution, you will need specify an original location for the content, such as an S3 bucket.
+- For each distribution, you will need specify an original location for the content, such as an S3 bucket, an unique URL will be assigned once the distribution has been created which will be used to access content
+- You can configure which HTTP methods are allowed, whicih edge locations to use, and even configure your own SSL certificates.
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MjUzODM1OCwtMTEzMjUxOTA2MCwtND
+eyJoaXN0b3J5IjpbMTQxNDQzMTc3NSwtMTEzMjUxOTA2MCwtND
 g5MTIzOTk3LDQwODkwNDc2NywtMTc0MzUxMTM4NywtMTM3ODU2
 MTM1MCwtNzY2MzQyNTcxLDE3OTI4NzM5MDUsLTE0MzIwODgzMz
 MsLTk5MTcxNTM0OSw4NDU0NzIxMTIsLTMxMzI2NDA0OCwtNjg1
