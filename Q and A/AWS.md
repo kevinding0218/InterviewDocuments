@@ -89,12 +89,15 @@
 #### Virtual Private Cloud (VPC)
 - commonly used when launch EC2 instance, whether in the service os Elastic Beanstalk, RDS or by themselves, in order to easily control and secure access to them
 - Security groups secure single instances
-- VPCs secure groups of instances
+- VPCs secure groups of instances, inside the VPC there are multiple Subnet, those subnets are a further way to group your resources and assign different rules to each
+- One reason to use Subnet inside VPC is to set up both private and public subnets.
+	- The Private Subnet might hold your databases and application instances
+	- 
 #### CloudWatch
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzc5OTQxNjYsLTE3NDM1MTEzODcsLT
+eyJoaXN0b3J5IjpbLTEyNTExMDg3NTYsLTE3NDM1MTEzODcsLT
 EzNzg1NjEzNTAsLTc2NjM0MjU3MSwxNzkyODczOTA1LC0xNDMy
 MDg4MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQwND
 gsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mjc1
