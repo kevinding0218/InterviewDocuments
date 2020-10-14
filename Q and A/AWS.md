@@ -69,7 +69,7 @@
 	- Alarm: $0.5 UDS per Health Check
 ### Other services
 #### Elastic Beanstalk (EB)
-- 
+- Deploy your app with EB is easier with various tools, 
 #### Lambda
 #### DynamoDB
 #### Virtual Private Cloud (VPC)
@@ -77,7 +77,7 @@
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NjEzMzM3MCwtOTkxNzE1MzQ5LDg0NT
+eyJoaXN0b3J5IjpbMTgyMDg1OTI4MywtOTkxNzE1MzQ5LDg0NT
 Q3MjExMiwtMzEzMjY0MDQ4LC02ODUwNzUzOTIsMTUwNDE5ODYw
 NCw3MzQ3MzAwMzQsOTI3NTM2MzY1LDE4ODU2MTY1NTksMTQzMj
 M5MDg0NiwtMjA4ODc0NjYxMiw3MzA5OTgxMTZdfQ==
