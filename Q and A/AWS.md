@@ -74,7 +74,7 @@
 - An environment is the rules and configuration that manages actual EC2 instances, each envrionment can run in different platforms (e.g, Java or Node), and can be configured with certain EC2 instance types.
 - Configuring the environment in EB is where you spent most of time, since you will set up the deployment, load balancing and scaling rules there.
 - Application versions with the actual bits of files are stored in S3,  there is a limit number of each application versions of 1000
-- 
+- Monitoring in EB will aggregate data across all applications, provided metrics such as CPU, Number of Requests, and Network Traffic.
 #### Lambda
 #### DynamoDB
 #### Virtual Private Cloud (VPC)
@@ -82,8 +82,8 @@
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NTMzMjU5NSwtOTkxNzE1MzQ5LDg0NT
-Q3MjExMiwtMzEzMjY0MDQ4LC02ODUwNzUzOTIsMTUwNDE5ODYw
-NCw3MzQ3MzAwMzQsOTI3NTM2MzY1LDE4ODU2MTY1NTksMTQzMj
-M5MDg0NiwtMjA4ODc0NjYxMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbODczMzY0MjI0LC05OTE3MTUzNDksODQ1ND
+cyMTEyLC0zMTMyNjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0
+LDczNDczMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMz
+kwODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
 -->
