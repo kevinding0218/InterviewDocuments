@@ -87,14 +87,17 @@
 #### DynamoDB
 - A managed NOSQL DB
 #### Virtual Private Cloud (VPC)
+- commonly used when launch EC2 instance, whether in the service os Elastic Beanstalk, RDS or by themselves, in order to easily control and secure access to them
+- Security groups secure single instances
+- VPCs secure groups of instances
 #### CloudWatch
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDM1MTEzODcsLTEzNzg1NjEzNTAsLT
-c2NjM0MjU3MSwxNzkyODczOTA1LC0xNDMyMDg4MzMzLC05OTE3
-MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQwNDgsLTY4NTA3NTM5Mi
-wxNTA0MTk4NjA0LDczNDczMDAzNCw5Mjc1MzYzNjUsMTg4NTYx
-NjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODExNl
-19
+eyJoaXN0b3J5IjpbLTE2Mzc5OTQxNjYsLTE3NDM1MTEzODcsLT
+EzNzg1NjEzNTAsLTc2NjM0MjU3MSwxNzkyODczOTA1LC0xNDMy
+MDg4MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQwND
+gsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mjc1
+MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2Nj
+EyLDczMDk5ODExNl19
 -->
