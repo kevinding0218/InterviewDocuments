@@ -102,13 +102,14 @@
 - For each alarm you could choose from a specific metric examples, such as EC2 - CPU Utilization, DynamoDB - ConsumedReadCapacityUnits, S3 - NumberOfObjects, Route53 - HealthCheckStates or RedShift - Database Connections
 #### CloudFront - CDN
 - A content delivery network (CDN) that allows you to serve files globally with very fast connections
--  
+-  Works seamlessly with S3, EC2, AWS load balancer and Route53 to serve your content from the location closet to incoming requests.
+- 
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4OTEyMzk5Nyw0MDg5MDQ3NjcsLTE3ND
-M1MTEzODcsLTEzNzg1NjEzNTAsLTc2NjM0MjU3MSwxNzkyODcz
-OTA1LC0xNDMyMDg4MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC
-0zMTMyNjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDcz
-MDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC
-0yMDg4NzQ2NjEyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTExMzI1MTkwNjAsLTQ4OTEyMzk5Nyw0MD
+g5MDQ3NjcsLTE3NDM1MTEzODcsLTEzNzg1NjEzNTAsLTc2NjM0
+MjU3MSwxNzkyODczOTA1LC0xNDMyMDg4MzMzLC05OTE3MTUzND
+ksODQ1NDcyMTEyLC0zMTMyNjQwNDgsLTY4NTA3NTM5MiwxNTA0
+MTk4NjA0LDczNDczMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OS
+wxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
 -->
