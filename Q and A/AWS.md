@@ -79,16 +79,21 @@
 #### Lambda
 - Provides a function code execution as a service
 - Only pay when your code is running, it means you don't need to pay for idle servers or idle load balancer
-- 
+- Pricing
+	- First 1 million requests per month free
+	- First 400k Gb-seconds per month free
+	- $0.20 UDS per 1M
+	- $0.18 USD per 24hrs 128mb Function Execution
 #### DynamoDB
 #### Virtual Private Cloud (VPC)
 #### CloudWatch
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzg1NjEzNTAsLTc2NjM0MjU3MSwxNz
-kyODczOTA1LC0xNDMyMDg4MzMzLC05OTE3MTUzNDksODQ1NDcy
-MTEyLC0zMTMyNjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LD
-czNDczMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkw
-ODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTY1MDY3ODQyNywtMTM3ODU2MTM1MCwtNz
+Y2MzQyNTcxLDE3OTI4NzM5MDUsLTE0MzIwODgzMzMsLTk5MTcx
+NTM0OSw4NDU0NzIxMTIsLTMxMzI2NDA0OCwtNjg1MDc1MzkyLD
+E1MDQxOTg2MDQsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1NjE2
+NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX
+0=
 -->
