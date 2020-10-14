@@ -98,13 +98,15 @@
 	- Network ACL (Access Control List):  act as subnet-level firewalls, allowing or disallowing IP ranges for both incoming and outgoing connections.
 - Free
 #### CloudWatch
+- A monitoring and alarm services for many other different services in AWS
+- For each alarm you could choose from a specific metric examples, such as EC2 - CPU Utilization, 
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMzkyOTUxOSwtMTc0MzUxMTM4NywtMT
-M3ODU2MTM1MCwtNzY2MzQyNTcxLDE3OTI4NzM5MDUsLTE0MzIw
-ODgzMzMsLTk5MTcxNTM0OSw4NDU0NzIxMTIsLTMxMzI2NDA0OC
-wtNjg1MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0LDkyNzUz
-NjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MT
-IsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNjYwNzQ2NDcsLTE3NDM1MTEzODcsLTEzNz
+g1NjEzNTAsLTc2NjM0MjU3MSwxNzkyODczOTA1LC0xNDMyMDg4
+MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQwNDgsLT
+Y4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mjc1MzYz
+NjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLD
+czMDk5ODExNl19
 -->
