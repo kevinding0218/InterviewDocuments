@@ -70,7 +70,9 @@
 ### Other services
 #### Elastic Beanstalk (EB)
 - Deploy your app with EB is easier with various tools than EC2
-- EB structure would include many application versions in one Unique Application (e.g: My Application), with the code of different application version, you can deploy to different environments, like Test/Prod, an environment is the rules and configuration that manages actual EC2 instances, each en
+- EB structure would include many application versions in one Unique Application (e.g: My Application), with the code of different application version, you can deploy to different environments, like Test/Prod, 
+- An environment is the rules and configuration that manages actual EC2 instances, each envrionment can run in different platforms (e.g, Java or Node), and can be configured with certain EC2 instance types.
+- Configuring the environment in EB is where you spent most of time, since you will s 
 #### Lambda
 #### DynamoDB
 #### Virtual Private Cloud (VPC)
@@ -78,8 +80,8 @@
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA1OTE5MzU0LC05OTE3MTUzNDksODQ1ND
-cyMTEyLC0zMTMyNjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0
-LDczNDczMDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMz
-kwODQ2LC0yMDg4NzQ2NjEyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTExMjE0MDc4NjcsLTk5MTcxNTM0OSw4ND
+U0NzIxMTIsLTMxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2
+MDQsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0Mz
+IzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
 -->
