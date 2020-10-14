@@ -77,14 +77,17 @@
 - Monitoring in EB will aggregate data across all applications, provided metrics such as CPU, Number of Requests, and Network Traffic.
 - Pricing: EB is free in AWS, the only payment is for EC2 instances, load balancers and S2 separately
 #### Lambda
+- Provides a function code execution as a service
+- 
 #### DynamoDB
 #### Virtual Private Cloud (VPC)
 #### CloudWatch
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzIwODgzMzMsLTk5MTcxNTM0OSw4ND
-U0NzIxMTIsLTMxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2
-MDQsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0Mz
-IzOTA4NDYsLTIwODg3NDY2MTIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTc5Mjg3MzkwNSwtMTQzMjA4ODMzMywtOT
+kxNzE1MzQ5LDg0NTQ3MjExMiwtMzEzMjY0MDQ4LC02ODUwNzUz
+OTIsMTUwNDE5ODYwNCw3MzQ3MzAwMzQsOTI3NTM2MzY1LDE4OD
+U2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYxMiw3MzA5OTgx
+MTZdfQ==
 -->
