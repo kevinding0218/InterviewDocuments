@@ -76,7 +76,7 @@
 - Application versions with the actual bits of files are stored in S3,  there is a limit number of each application versions of 1000
 - Monitoring in EB will aggregate data across all applications, provided metrics such as CPU, Number of Requests, and Network Traffic.
 - Pricing: EB is free in AWS, the only payment is for EC2 instances, load balancers and S2 separately
-#### Lambda - Serverless
+#### Lambda - Serverless Functions
 - Provides a function code execution as a service
 - Only pay when your code is running, it means you don't need to pay for idle servers or idle load balancer
 - Pricing
@@ -108,11 +108,11 @@
 - You can configure which HTTP methods are allowed, whicih edge locations to use, and even configure your own SSL certificates.
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDQyNDA1ODQsLTExMzI1MTkwNjAsLT
-Q4OTEyMzk5Nyw0MDg5MDQ3NjcsLTE3NDM1MTEzODcsLTEzNzg1
-NjEzNTAsLTc2NjM0MjU3MSwxNzkyODczOTA1LC0xNDMyMDg4Mz
-MzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQwNDgsLTY4
-NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mjc1MzYzNj
-UsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLDcz
-MDk5ODExNl19
+eyJoaXN0b3J5IjpbMTU1NTAxNDI5MSwtMTEzMjUxOTA2MCwtND
+g5MTIzOTk3LDQwODkwNDc2NywtMTc0MzUxMTM4NywtMTM3ODU2
+MTM1MCwtNzY2MzQyNTcxLDE3OTI4NzM5MDUsLTE0MzIwODgzMz
+MsLTk5MTcxNTM0OSw4NDU0NzIxMTIsLTMxMzI2NDA0OCwtNjg1
+MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0LDkyNzUzNjM2NS
+wxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMw
+OTk4MTE2XX0=
 -->
