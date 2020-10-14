@@ -68,7 +68,7 @@
 	- DNS Entries: Free
 	- Alarm: $0.5 UDS per Health Check
 ### Other services
-#### Elastic Beanstalk (EB)
+#### Elastic Beanstalk (EB) - application deployment and management service
 - Deploy your app with EB is easier with various tools than EC2
 - EB structure would include many application versions in one Unique Application (e.g: My Application), with the code of different application version, you can deploy to different environments, like Test/Prod, 
 - An environment is the rules and configuration that manages actual EC2 instances, each envrionment can run in different platforms (e.g, Java or Node), and can be configured with certain EC2 instance types.
@@ -108,11 +108,11 @@
 - You can configure which HTTP methods are allowed, whicih edge locations to use, and even configure your own SSL certificates.
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNDQzMTc3NSwtMTEzMjUxOTA2MCwtND
-g5MTIzOTk3LDQwODkwNDc2NywtMTc0MzUxMTM4NywtMTM3ODU2
-MTM1MCwtNzY2MzQyNTcxLDE3OTI4NzM5MDUsLTE0MzIwODgzMz
-MsLTk5MTcxNTM0OSw4NDU0NzIxMTIsLTMxMzI2NDA0OCwtNjg1
-MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0LDkyNzUzNjM2NS
-wxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMw
-OTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE1NDQyNDA1ODQsLTExMzI1MTkwNjAsLT
+Q4OTEyMzk5Nyw0MDg5MDQ3NjcsLTE3NDM1MTEzODcsLTEzNzg1
+NjEzNTAsLTc2NjM0MjU3MSwxNzkyODczOTA1LC0xNDMyMDg4Mz
+MzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQwNDgsLTY4
+NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mjc1MzYzNj
+UsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2NjEyLDcz
+MDk5ODExNl19
 -->
