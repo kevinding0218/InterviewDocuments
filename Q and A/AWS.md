@@ -101,12 +101,13 @@
 - A monitoring and alarm services for many other different services in AWS
 - For each alarm you could choose from a specific metric examples, such as EC2 - CPU Utilization, DynamoDB - ConsumedReadCapacityUnits, S3 - NumberOfObjects, Route53 - HealthCheckStates or RedShift - Database Connections
 #### CloudFront
+- A 
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA4OTA0NzY3LC0xNzQzNTExMzg3LC0xMz
-c4NTYxMzUwLC03NjYzNDI1NzEsMTc5Mjg3MzkwNSwtMTQzMjA4
-ODMzMywtOTkxNzE1MzQ5LDg0NTQ3MjExMiwtMzEzMjY0MDQ4LC
-02ODUwNzUzOTIsMTUwNDE5ODYwNCw3MzQ3MzAwMzQsOTI3NTM2
-MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYxMi
-w3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbNDk1MTk5MDY3LDQwODkwNDc2NywtMTc0Mz
+UxMTM4NywtMTM3ODU2MTM1MCwtNzY2MzQyNTcxLDE3OTI4NzM5
+MDUsLTE0MzIwODgzMzMsLTk5MTcxNTM0OSw4NDU0NzIxMTIsLT
+MxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMw
+MDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLT
+IwODg3NDY2MTIsNzMwOTk4MTE2XX0=
 -->
