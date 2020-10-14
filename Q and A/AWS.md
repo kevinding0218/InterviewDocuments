@@ -78,16 +78,16 @@
 - Pricing: EB is free in AWS, the only payment is for EC2 instances, load balancers and S2 separately
 #### Lambda
 - Provides a function code execution as a service
-- 
+- Only pay when your code is running, it means you don't need to pay for idle servers or idle load balancer
 #### DynamoDB
 #### Virtual Private Cloud (VPC)
 #### CloudWatch
 #### CloudFront
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5Mjg3MzkwNSwtMTQzMjA4ODMzMywtOT
-kxNzE1MzQ5LDg0NTQ3MjExMiwtMzEzMjY0MDQ4LC02ODUwNzUz
-OTIsMTUwNDE5ODYwNCw3MzQ3MzAwMzQsOTI3NTM2MzY1LDE4OD
-U2MTY1NTksMTQzMjM5MDg0NiwtMjA4ODc0NjYxMiw3MzA5OTgx
-MTZdfQ==
+eyJoaXN0b3J5IjpbLTc2NjM0MjU3MSwxNzkyODczOTA1LC0xND
+MyMDg4MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMyNjQw
+NDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNCw5Mj
+c1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4NzQ2
+NjEyLDczMDk5ODExNl19
 -->
