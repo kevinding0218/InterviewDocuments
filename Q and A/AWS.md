@@ -76,7 +76,7 @@
 - Application versions with the actual bits of files are stored in S3,  there is a limit number of each application versions of 1000
 - Monitoring in EB will aggregate data across all applications, provided metrics such as CPU, Number of Requests, and Network Traffic.
 - Pricing: EB is free in AWS, the only payment is for EC2 instances, load balancers and S2 separately
-#### Lambda
+#### Lambda - Serverless
 - Provides a function code execution as a service
 - Only pay when your code is running, it means you don't need to pay for idle servers or idle load balancer
 - Pricing
@@ -84,7 +84,7 @@
 	- First 400k Gb-seconds per month free
 	- $0.20 UDS per 1M
 	- $0.18 USD per 24hrs 128mb Function Execution
-#### DynamoDB
+#### DynamoDB - NoSQL DB
 - A managed NOSQL DB
 #### Virtual Private Cloud (VPC)
 - commonly used when launch EC2 instance, whether in the service os Elastic Beanstalk, RDS or by themselves, in order to easily control and secure access to them
@@ -97,17 +97,18 @@
 	- Routing Table: allow you to override certain IP ranges and redirect the traffic elsewhere. A use case is if you want to direct all outgoing traffic to a NAT gateway that will filter traffic and mask the instance's IP address
 	- Network ACL (Access Control List):  act as subnet-level firewalls, allowing or disallowing IP ranges for both incoming and outgoing connections.
 - Free
-#### CloudWatch
+#### CloudWatch - Monitor + Alarm
 - A monitoring and alarm services for many other different services in AWS
 - For each alarm you could choose from a specific metric examples, such as EC2 - CPU Utilization, DynamoDB - ConsumedReadCapacityUnits, S3 - NumberOfObjects, Route53 - HealthCheckStates or RedShift - Database Connections
-#### CloudFront
-- A 
+#### CloudFront - CDN
+- A content delivery network (CDN) that allows you to serve files globally with very fast connections
+-  
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk1MTk5MDY3LDQwODkwNDc2NywtMTc0Mz
-UxMTM4NywtMTM3ODU2MTM1MCwtNzY2MzQyNTcxLDE3OTI4NzM5
-MDUsLTE0MzIwODgzMzMsLTk5MTcxNTM0OSw4NDU0NzIxMTIsLT
-MxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMw
-MDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIzOTA4NDYsLT
-IwODg3NDY2MTIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTQ4OTEyMzk5Nyw0MDg5MDQ3NjcsLTE3ND
+M1MTEzODcsLTEzNzg1NjEzNTAsLTc2NjM0MjU3MSwxNzkyODcz
+OTA1LC0xNDMyMDg4MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC
+0zMTMyNjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDcz
+MDAzNCw5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC
+0yMDg4NzQ2NjEyLDczMDk5ODExNl19
 -->
