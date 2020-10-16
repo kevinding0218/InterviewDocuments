@@ -43,6 +43,7 @@
 	- Use CloudFront, you can cache your content
 - Pricing
 	- based on amount of data stored, number of requests, amount of data transferred
+#### EC
 #### Relational Database Service (RDS)
 - a collection of AWS services for managed relational databases, it's managed because AWS takes care of
 	- Scheduled automated backups
@@ -108,11 +109,11 @@
 - You can configure which HTTP methods are allowed, whicih edge locations to use, and even configure your own SSL certificates.
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NTAxNDI5MSwtMTEzMjUxOTA2MCwtND
-g5MTIzOTk3LDQwODkwNDc2NywtMTc0MzUxMTM4NywtMTM3ODU2
-MTM1MCwtNzY2MzQyNTcxLDE3OTI4NzM5MDUsLTE0MzIwODgzMz
-MsLTk5MTcxNTM0OSw4NDU0NzIxMTIsLTMxMzI2NDA0OCwtNjg1
-MDc1MzkyLDE1MDQxOTg2MDQsNzM0NzMwMDM0LDkyNzUzNjM2NS
-wxODg1NjE2NTU5LDE0MzIzOTA4NDYsLTIwODg3NDY2MTIsNzMw
-OTk4MTE2XX0=
+eyJoaXN0b3J5IjpbODI4OTA3OTMzLDE1NTUwMTQyOTEsLTExMz
+I1MTkwNjAsLTQ4OTEyMzk5Nyw0MDg5MDQ3NjcsLTE3NDM1MTEz
+ODcsLTEzNzg1NjEzNTAsLTc2NjM0MjU3MSwxNzkyODczOTA1LC
+0xNDMyMDg4MzMzLC05OTE3MTUzNDksODQ1NDcyMTEyLC0zMTMy
+NjQwNDgsLTY4NTA3NTM5MiwxNTA0MTk4NjA0LDczNDczMDAzNC
+w5Mjc1MzYzNjUsMTg4NTYxNjU1OSwxNDMyMzkwODQ2LC0yMDg4
+NzQ2NjEyXX0=
 -->
