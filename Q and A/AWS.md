@@ -46,6 +46,7 @@
 #### EC2 Load Balancer
 - LB is esstially a router instance that provides a stable endpoint to reliaby send your users and set DNS entries to.
 - LB will track of which IPs are available and send users to them efficiently
+- HTTP on Port 80 & HTTPS on Port 443
 - 
 #### Relational Database Service (RDS)
 - a collection of AWS services for managed relational databases, it's managed because AWS takes care of
@@ -112,11 +113,11 @@
 - You can configure which HTTP methods are allowed, whicih edge locations to use, and even configure your own SSL certificates.
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MjY0NDg3MCwxNTU1MDE0MjkxLC0xMT
-MyNTE5MDYwLC00ODkxMjM5OTcsNDA4OTA0NzY3LC0xNzQzNTEx
-Mzg3LC0xMzc4NTYxMzUwLC03NjYzNDI1NzEsMTc5Mjg3MzkwNS
-wtMTQzMjA4ODMzMywtOTkxNzE1MzQ5LDg0NTQ3MjExMiwtMzEz
-MjY0MDQ4LC02ODUwNzUzOTIsMTUwNDE5ODYwNCw3MzQ3MzAwMz
-QsOTI3NTM2MzY1LDE4ODU2MTY1NTksMTQzMjM5MDg0NiwtMjA4
-ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNDkyMTc3ODc5LDE5NzI2NDQ4NzAsMTU1NT
+AxNDI5MSwtMTEzMjUxOTA2MCwtNDg5MTIzOTk3LDQwODkwNDc2
+NywtMTc0MzUxMTM4NywtMTM3ODU2MTM1MCwtNzY2MzQyNTcxLD
+E3OTI4NzM5MDUsLTE0MzIwODgzMzMsLTk5MTcxNTM0OSw4NDU0
+NzIxMTIsLTMxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2MD
+QsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIz
+OTA4NDZdfQ==
 -->
