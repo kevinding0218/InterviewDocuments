@@ -45,7 +45,8 @@
 	- based on amount of data stored, number of requests, amount of data transferred
 #### EC2 Load Balancer
 - LB is esstially a router instance that provides a stable endpoint to reliaby send your users and set DNS entries to.
-- LB will track of which IPs are available and send users to them eff
+- LB will track of which IPs are available and send users to them efficiently
+- 
 #### Relational Database Service (RDS)
 - a collection of AWS services for managed relational databases, it's managed because AWS takes care of
 	- Scheduled automated backups
@@ -111,7 +112,7 @@
 - You can configure which HTTP methods are allowed, whicih edge locations to use, and even configure your own SSL certificates.
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3Mzg0ODUzNiwxNTU1MDE0MjkxLC0xMT
+eyJoaXN0b3J5IjpbMTk3MjY0NDg3MCwxNTU1MDE0MjkxLC0xMT
 MyNTE5MDYwLC00ODkxMjM5OTcsNDA4OTA0NzY3LC0xNzQzNTEx
 Mzg3LC0xMzc4NTYxMzUwLC03NjYzNDI1NzEsMTc5Mjg3MzkwNS
 wtMTQzMjA4ODMzMywtOTkxNzE1MzQ5LDg0NTQ3MjExMiwtMzEz
