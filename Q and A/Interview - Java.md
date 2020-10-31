@@ -118,12 +118,18 @@ public  class  Memory {
 			for(Future<String> fut : list){ 
 			try { 
 				//print the return value of Future, notice the output delay in console  
-				// because Future.get() waits for task to get completed System.out.println(new Date()+ "::"+fut.get()); } catch (InterruptedException | ExecutionException e) { e.printStackTrace(); } } //shut down the executor service now executor.shutdown();
+				// because Future.get() waits for task to get completed 
+				System.out.println(new Date()+ "::"+fut.get()); 
+			} 
+			catch (InterruptedException | ExecutionException e) { 
+				e.printStackTrace(); } 
+			} //shut down the executor service now 
+			executor.shutdown();
 		}
 	}
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5OTE2NjU3OSwtMTQwMjY2NDc5MywxOD
-c0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTE3MDU4ODgwNTMsLTE0MDI2NjQ3OTMsMT
+g3NDAyMTI1NF19
 -->
