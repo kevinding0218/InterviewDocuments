@@ -17,6 +17,18 @@
 - Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method.
 - As soon as the method ends, the block becomes unused and becomes available for the next method.  
 - Stack memory size is very less compared to Heap memory.
+#### Example
+```
+public  class  Memory { 
+	public static void main(String[] args) { // Line 1  				    
+		int i=1; // Line 2 
+		Object obj = new Object(); // Line 3 
+		Memory mem = new Memory(); // Line 4 	
+		mem.foo(obj); // Line 5 
+	} // Line 9  
+	private void foo(Object param) { // Line 6 
+	String str = param.toString(); //// Line 7 	System.out.println(str); } // Line 8 }
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NjUwMDE3OF19
+eyJoaXN0b3J5IjpbMjA2MzQ4MTk0Ml19
 -->
