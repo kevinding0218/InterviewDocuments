@@ -58,17 +58,7 @@ public  class  Memory {
 - **ArrayList is using an array to implement the _List_ interface**. As arrays are fixed size in Java, _ArrayList_ creates an array with some initial capacity. Along the way, if we need to store more items than that default capacity, it will replace that array with a new and more spacious one. So the cost of inserting/deleting will be expensive in memory usage but access is faster as through array index
 - **LinkedList internally uses a doubly linked list** to store the elements, so inserting and deleting are faster but reading is slower as it has to go through some traverse manually
 ### Thread implementation
-1. Initiate Thread object with implementing run method
-	```
-	var thread = new Thread(new Runnable() {
-		public void run() {
-			// logic
-		}
-	});
-	var thread = new Thread(() => {
-	});
-	```
-2. Extends from Thread class and override run method
+1. Extends from Thread class and override run method
 	```
 	public  class MyThread extends Thread { 
 		public MyThread(String name) { 
@@ -81,7 +71,7 @@ public  class  Memory {
 	Thread t3 = new MyThread("t3");
 	t3.start();
 	```
-3. Implement Runnable Interface and override run method
+2. Implement Runnable Interface and override run method
 	```
 	public class MyThread implements Runnable { 
 		@Override  public void run() { 
@@ -91,7 +81,7 @@ public  class  Memory {
 	Thread t3 = new MyThread("t3");
 	t3.start();
 	```
-4. Implement Callable Interface and override run method (if you have a return value)
+3. Implement Callable Interface and override run method (if you have a return value)
 	```
 	import java.util.concurrent.Callable; 
 	import java.util.concurrent.ExecutionException; 
@@ -128,8 +118,22 @@ public  class  Memory {
 		}
 	}
 	```
-
+4. Initiate Thread object with implementing run method
+	```
+	var thread = new Thread(new Runnable() {
+		public void run() {
+			// logic
+		}
+	});
+	var thread = new Thread(() => {
+	});
+	// OR
+	var t = new Thread(new Bar()::baz)
+	class Bar {
+		public void baz() {}
+	}
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDU4ODgwNTMsLTE0MDI2NjQ3OTMsMT
-g3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTI0NjMxNzcyNCwtMTQwMjY2NDc5MywxOD
+c0MDIxMjU0XX0=
 -->
