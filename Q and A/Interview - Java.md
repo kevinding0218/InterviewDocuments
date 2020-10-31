@@ -58,8 +58,14 @@ public  class  Memory {
 - **ArrayList is using an array to implement the _List_ interface**. As arrays are fixed size in Java, _ArrayList_ creates an array with some initial capacity. Along the way, if we need to store more items than that default capacity, it will replace that array with a new and more spacious one. So the cost of inserting/deleting will be expensive in memory usage but access is faster as through array index
 - **LinkedList internally uses a doubly linked list** to store the elements, so inserting and deleting are faster but reading is slower as it has to go through some traverse manually
 ### Thread implementation
-- 
+1. Initiate Thread object with implementing run method
+```
+new Thread(new Runnable() {
+	public void run() {}
+} 
+```
+3. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMjQxMTQyNSwtMTQwMjY2NDc5MywxOD
-c0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTE4OTg4MjY0NjQsLTE0MDI2NjQ3OTMsMT
+g3NDAyMTI1NF19
 -->
