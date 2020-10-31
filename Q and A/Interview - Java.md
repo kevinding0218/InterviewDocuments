@@ -143,8 +143,9 @@ public  class  Memory {
 #### How to prevent?
 1. use `ThreadLocal` to make each thread not exclusive
 2. use `volatile` which would refresh object from L1, L2 cache to main thread, so every thread can have visibility of the object
-3. use distributed lock like Optimistic Locking, 
+3. use distributed lock like [Optimistic Locking](https://www.baeldung.com/jpa-optimistic-locking), **optimistic locking is based on detecting changes on entities by checking their version attribute**.
+	- Version attributes are properties with _@Version_ annotation. **They are necessary for enabling optimistic locking**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMjI5NTQyMCwtMTQwMjY2NDc5MywxOD
-c0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTEwNjE3ODYwMTEsLTE0MDI2NjQ3OTMsMT
+g3NDAyMTI1NF19
 -->
