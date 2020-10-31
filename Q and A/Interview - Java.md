@@ -6,8 +6,8 @@
 - Integer can be directly converted to other types like binary or hex
 - int default value is 0 while Integer default as null
 - int can be compared by using `==` , while Integer usually compares by using `equals`, because when using `==` to compare Integer, it's actually a reference type so the comparison was happening at pointer which referenced to the object memory address, Integer also have a mechanism like cache so it can be compared by using `==` when value between -128 ~ 127
-- int was
+- int as other primitive type was stored in stack, so we usually use `int` for temp value, while Integer as other reference type was stored in heap, we s
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDM0OTk1NDFdfQ==
+eyJoaXN0b3J5IjpbMTkyNjA2ODA0M119
 -->
