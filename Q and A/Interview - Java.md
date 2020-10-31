@@ -78,18 +78,22 @@ public  class  Memory {
 			// logic
 		} 
 	}
+	Thread t3 = new MyThread("t3");
+	t3.start();
 	```
 3. Implement Runnable Interface and override run method
 	```
-	public  class A implements Runnable { 
+	public class MyThread implements Runnable { 
 		@Override  public void run() { 
 			// logic 
 		} 
 	}
+	Thread t3 = new MyThread("t3");
+	t3.start();
 	```
 5. Implement Callable Interface and override run method
 6. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwOTQ5NTE0MSwtMTQwMjY2NDc5MywxOD
-c0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTc1MjU1NjU4LC0xNDAyNjY0NzkzLDE4Nz
+QwMjEyNTRdfQ==
 -->
