@@ -9,6 +9,7 @@
 - int can be compared by using `==` , while Integer usually compares by using `equals`, because when using `==` to compare Integer, it's actually a reference type so the comparison was happening at pointer which referenced to the object memory address, Integer also have a mechanism like cache so it can be compared by using `==` when value between -128 ~ 127
 ### JVM
 - JVM is a virtual machine that understands and runs java bytecodes, works for memory management in heap space and stack memory
+- JVM will mostly distribute objects to HEAP level, 
 #### Java Heap Space
 - Java **Heap space is used by java runtime to allocate memory to Objects and JRE classes**. Whenever we create an object, it’s always created in the Heap space.
 - **Garbage Collection runs on the heap memory to free the memory** used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
@@ -41,7 +42,7 @@ public  class  Memory {
 -   In line 9, **main() method terminates** and the **stack memory created for main() method is destroyed**. Also, the **program ends** at this line, hence **Java Runtime frees all the memory and ends the execution of the program**.
 #### Difference between Java Heap Space and Stack Memory
 1.  **Heap** memory is used by **all the parts of the application** whereas **stack** memory is used only by **one thread of execution**.
-2.  Whenever an **object** is created, it’s always **stored in the Heap space and stack memory contains the reference to it. Stack memory only contains local primitive variables and reference variables to objects in heap space**.
+2.  Whenever an **object** is created, it’s always **stored in the Heap space and stack memory c ontains the reference to it. Stack memory only contains local primitive variables and reference variables to objects in heap space**.
 3.  Objects stored in the heap are globally accessible whereas stack memory can’t be accessed by other threads.
 4.  Memory management in stack is done in LIFO manner whereas it’s more complex in Heap memory because it’s used globally. Heap memory is divided into Young-Generation, Old-Generation etc, more details at  [Java Garbage Collection](https://www.journaldev.com/2856/java-jvm-memory-model-memory-management-in-java).
 5.  Stack memory is short-lived whereas heap memory lives from the start till the end of application execution.
@@ -49,5 +50,5 @@ public  class  Memory {
 7.  When stack memory is full, Java runtime throws  `java.lang.StackOverFlowError`  whereas if heap memory is full, it throws  `java.lang.OutOfMemoryError: Java Heap Space`  error.
 8.  Stack memory size is very less when compared to Heap memory. Because of simplicity in memory allocation (LIFO), stack memory is very fast when compared to heap memory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTE2NzI2NDYyOTAsMTg3NDAyMTI1NF19
 -->
