@@ -1,6 +1,6 @@
 ### int vs Integer
 - int is a primitive data type while Integer is a Wrapper class
-- int as other primitive type was stored in stack, so we usually use `int` for temp value, while Integer as other reference type was stored in heap, we usually use `Integer` for POJO so that we can serialize or deserialize by telling if we have the value
+- int as other **primitive type was stored in stack**, so we usually use `int` for temp value, while Integer as other **reference type was stored in heap**, we usually use `Integer` for POJO so that we can serialize or deserialize by telling if we have the value
 - int was designed for JVM cost and performance perpective, it is not designed for Object Oriented. 
 - int default value is 0 while Integer default as null
 - Integer was a class , when it was initialized will have a reference in JVM. Variables of type Integer store references to Integer objects, just as with any other reference (object) type
@@ -31,8 +31,8 @@ public  class  Memory {
 		System.out.println(str); 
 	} // Line 8 }
 ```
--   As soon as we run the program, it loads all the Runtime classes into the Heap space. When the main() method is found at line 1, Java Runtime creates stack memory to be used by main() method thread.
--   We are creating primitive local variable at line 2, so it’s created and stored in the stack memory of main() method.
+-   As soon as we run the program, it loads all the Runtime classes into the Heap space. When the **main()** method is found at line 1, Java Runtime creates **stack** memory to be used by **main() method thread**.
+-   We are creating **primitive local variable** at line 2, so it’s created and stored in the **stack** memory of main() method.
 -   Since we are creating an Object in the 3rd line, it’s created in heap memory and stack memory contains the reference for it. A similar process occurs when we create Memory object in the 4th line.
 -   Now when we call the foo() method in the 5th line, a block in the top of the stack is created to be used by the foo() method. Since Java is pass-by-value, a new reference to Object is created in the foo() stack block in the 6th line.
 -   A string is created in the 7th line, it goes in the  [String Pool](https://www.journaldev.com/797/what-is-java-string-pool "What is Java String Pool?")  in the heap space and a reference is created in the foo() stack space for it.
@@ -48,5 +48,5 @@ public  class  Memory {
 7.  When stack memory is full, Java runtime throws  `java.lang.StackOverFlowError`  whereas if heap memory is full, it throws  `java.lang.OutOfMemoryError: Java Heap Space`  error.
 8.  Stack memory size is very less when compared to Heap memory. Because of simplicity in memory allocation (LIFO), stack memory is very fast when compared to heap memory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MzgxNDU2NF19
+eyJoaXN0b3J5IjpbNzg0MjEyNTA4XX0=
 -->
