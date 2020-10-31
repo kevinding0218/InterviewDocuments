@@ -143,12 +143,12 @@ public  class  Memory {
 #### How to prevent?
 1. use `ThreadLocal` to make each thread not exclusive
 2. use `volatile` which would refresh object from L1, L2 cache to main thread, so every thread can have visibility of the object
-3. use distributed lock like [Optimistic Locking](https://www.baeldung.com/jpa-optimistic-locking), **optimistic locking is based on detecting changes on entities by checking their version attribute**.
+3. use distributed lock like [Optimistic Locking](https://www.baeldung.com/jpa-optimistic-locking) by database or redis, **optimistic locking is based on detecting changes on entities by checking their version attribute**.
 	- Version attributes are properties with _@Version_ annotation. **They are necessary for enabling optimistic locking**
 	- **We should know that we can retrieve a value of the version attribute via entity, but we mustn't update or increment it.** Only the persistence provider can do that, so data stays consistent.
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzA0OTUwMzksLTE0MDI2NjQ3OTMsMT
-g3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTEzNDY1NDUyNSwtMTczMDQ5NTAzOSwtMT
+QwMjY2NDc5MywxODc0MDIxMjU0XX0=
 -->
