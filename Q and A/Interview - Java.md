@@ -137,9 +137,11 @@ public  class  Memory {
 #### What is deadlock?
 - a deadlock is a situation where **minimum two threads are holding the lock on some different resource, and both are waiting for other’s resource to complete its task. And, none is able to leave the lock on the resource it is holding**.
 #### How deadlock happens?
-- Resources are Mutually exclusive, meaning each time one resour
+- Resources are Mutually exclusive, meaning each time one resource can only be used by one thread
+- When thread A was blocked during requesting a resource, the resource was not released and keep holding
+- 
 #### How to prevent?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNzg3MDYzMCwtMTQwMjY2NDc5MywxOD
-c0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTE2OTA1MjIxNTksLTE0MDI2NjQ3OTMsMT
+g3NDAyMTI1NF19
 -->
