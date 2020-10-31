@@ -143,8 +143,8 @@ public  class  Memory {
 #### How to prevent?
 1. use `ThreadLocal` to make each thread not exclusive
 2. use `volatile` which would refresh object from L1, L2 cache to main thread, so every thread can have visibility of the object
-3. 
+3. use distributed lock like Optimistic Locking, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MTYyODQ1MCwtMTQwMjY2NDc5MywxOD
+eyJoaXN0b3J5IjpbMTcwMjI5NTQyMCwtMTQwMjY2NDc5MywxOD
 c0MDIxMjU0XX0=
 -->
