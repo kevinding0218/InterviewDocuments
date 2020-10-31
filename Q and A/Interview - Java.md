@@ -9,7 +9,8 @@
 - int can be compared by using `==` , while Integer usually compares by using `equals`, because when using `==` to compare Integer, it's actually a reference type so the comparison was happening at pointer which referenced to the object memory address, Integer also have a mechanism like cache so it can be compared by using `==` when value between -128 ~ 127
 ### JVM
 - JVM is a virtual machine that understands and runs java bytecodes, works for memory management in heap space and stack memory
-- JVM will mostly distribute objects to HEAP level, 
+- JVM will mostly distribute objects to HEAP level, when JVM execute the code, every thread will have a thread stack
+- Since program is running on virtual machine, its was running on 
 #### Java Heap Space
 - Java **Heap space is used by java runtime to allocate memory to Objects and JRE classes**. Whenever we create an object, it’s always created in the Heap space.
 - **Garbage Collection runs on the heap memory to free the memory** used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
@@ -50,5 +51,5 @@ public  class  Memory {
 7.  When stack memory is full, Java runtime throws  `java.lang.StackOverFlowError`  whereas if heap memory is full, it throws  `java.lang.OutOfMemoryError: Java Heap Space`  error.
 8.  Stack memory size is very less when compared to Heap memory. Because of simplicity in memory allocation (LIFO), stack memory is very fast when compared to heap memory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzI2NDYyOTAsMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTM3NDMxNzQ5OCwxODc0MDIxMjU0XX0=
 -->
