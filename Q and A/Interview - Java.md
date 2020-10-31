@@ -93,10 +93,15 @@ public  class  Memory {
 	```
 4. Implement Callable Interface and override run method (if you have a return value)
 ```
-
+public class MyCallable implements Callable<String> {
+	@Override  public String call() throws Exception { 	
+		Thread.sleep(1000); 
+		//return the thread name executing this callable task  
+		return Thread.currentThread().getName(); } 
+}
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQwMzcyNDYsLTE0MDI2NjQ3OTMsMTg3ND
-AyMTI1NF19
+eyJoaXN0b3J5IjpbLTQ5NzA4NDM1LC0xNDAyNjY0NzkzLDE4Nz
+QwMjEyNTRdfQ==
 -->
