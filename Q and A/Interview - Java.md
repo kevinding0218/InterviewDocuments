@@ -145,7 +145,8 @@ public  class  Memory {
 2. use `volatile` which would refresh object from L1, L2 cache to main thread, so every thread can have visibility of the object
 3. use distributed lock like [Optimistic Locking](https://www.baeldung.com/jpa-optimistic-locking), **optimistic locking is based on detecting changes on entities by checking their version attribute**.
 	- Version attributes are properties with _@Version_ annotation. **They are necessary for enabling optimistic locking**
+	- **We should know that we can retrieve a value of the version attribute via entity, but we mustn't update or increment it.** Only the persistence provider can do that, so data stays consistent.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjE3ODYwMTEsLTE0MDI2NjQ3OTMsMT
-g3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbMjMyMTMzMjE4LC0xNDAyNjY0NzkzLDE4Nz
+QwMjEyNTRdfQ==
 -->
