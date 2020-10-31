@@ -61,26 +61,35 @@ public  class  Memory {
 1. Initiate Thread object with implementing run method
 	```
 	var thread = new Thread(new Runnable() {
-		public void run() {}
+		public void run() {
+			// logic
+		}
 	});
 	var thread = new Thread(() => {
 	});
 	```
-2. Inherite from Thread class and override run method
+2. Extends from Thread class and override run method
 	```
-	
+	public  class MyThread extends Thread { 
+		public MyThread(String name) { 
+			super(name); 
+		} 
+		@Override  public void run() { 
+			// logic
+		} 
+	}
 	```
 3. Implement Runnable Interface and override run method
 	```
 	public  class A implements Runnable { 
 		@Override  public void run() { 
-			System.out.println("Doing heavy processing - START "+Thread.currentThread().getName()); 
+			// logic 
 		} 
 	}
 	```
 5. Implement Callable Interface and override run method
 6. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MzU2NTg0OCwtMTQwMjY2NDc5MywxOD
+eyJoaXN0b3J5IjpbMTQwOTQ5NTE0MSwtMTQwMjY2NDc5MywxOD
 c0MDIxMjU0XX0=
 -->
