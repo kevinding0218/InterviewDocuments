@@ -91,9 +91,12 @@ public  class  Memory {
 	Thread t3 = new MyThread("t3");
 	t3.start();
 	```
-5. Implement Callable Interface and override run method
-6. 
+4. Implement Callable Interface and override run method (if you have a return value)
+```
+
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MjU1NjU4LC0xNDAyNjY0NzkzLDE4Nz
-QwMjEyNTRdfQ==
+eyJoaXN0b3J5IjpbOTQwMzcyNDYsLTE0MDI2NjQ3OTMsMTg3ND
+AyMTI1NF19
 -->
