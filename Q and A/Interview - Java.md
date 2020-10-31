@@ -59,21 +59,28 @@ public  class  Memory {
 - **LinkedList internally uses a doubly linked list** to store the elements, so inserting and deleting are faster but reading is slower as it has to go through some traverse manually
 ### Thread implementation
 1. Initiate Thread object with implementing run method
-```
-var thread = new Thread(new Runnable() {
-	public void run() {}
-});
-var thread = new Thread(() => {
-});
-```
+	```
+	var thread = new Thread(new Runnable() {
+		public void run() {}
+	});
+	var thread = new Thread(() => {
+	});
+	```
 2. Inherite from Thread class and override run method
-```
-
-```
-4. Implement Runnable Interface and override run method
+	```
+	
+	```
+3. Implement Runnable Interface and override run method
+	```
+	public  class A implements Runnable { 
+		@Override  public void run() { 
+			System.out.println("Doing heavy processing - START "+Thread.currentThread().getName()); 
+		} 
+	}
+	```
 5. Implement Callable Interface and override run method
 6. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDMxMjExMDgsLTE0MDI2NjQ3OTMsMT
-g3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbMTM1MzU2NTg0OCwtMTQwMjY2NDc5MywxOD
+c0MDIxMjU0XX0=
 -->
