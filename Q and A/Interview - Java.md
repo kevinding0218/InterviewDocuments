@@ -8,7 +8,12 @@
 - Integer can be directly converted to other types like binary or hex
 - int can be compared by using `==` , while Integer usually compares by using `equals`, because when using `==` to compare Integer, it's actually a reference type so the comparison was happening at pointer which referenced to the object memory address, Integer also have a mechanism like cache so it can be compared by using `==` when value between -128 ~ 127
 ### JVM
-- JVM is a virtual machine that understands and runs java bytecodes.
+- JVM is a virtual machine that understands and runs java bytecodes, works for memory management in heap space and stack memory
+#### Java Heap Space
+
+Java Heap space is used by java runtime to allocate memory to Objects and JRE classes. Whenever we create an object, it’s always created in the Heap space.
+
+Garbage Collection runs on the heap memory to free the memory used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MTg0NTUzNl19
+eyJoaXN0b3J5IjpbLTMyMTI4NzY5OV19
 -->
