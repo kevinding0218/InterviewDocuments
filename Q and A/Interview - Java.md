@@ -134,10 +134,12 @@ public  class  Memory {
 	}
 	```
 ### Deadlock
+#### What is deadlock?
+- a deadlock is a situation where **minimum two threads are holding the lock on some different resource, and both are waiting for other’s resource to complete its task. And, none is able to leave the lock on the resource it is holding**.
 #### How deadlock happens?
-- 
+- Resources are Mutually exclusive, meaning each time one resour
 #### How to prevent?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIwNTg5MjY2LC0xNDAyNjY0NzkzLDE4Nz
-QwMjEyNTRdfQ==
+eyJoaXN0b3J5IjpbMTUxNzg3MDYzMCwtMTQwMjY2NDc5MywxOD
+c0MDIxMjU0XX0=
 -->
