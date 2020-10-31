@@ -133,9 +133,11 @@ public  class  Memory {
 		public void baz() {}
 	}
 	```
-#### Avoid Deadlock
-1, 
+### Deadlock
+#### How deadlock happens?
+- 
+#### How to prevent?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MTQ0NjE4MywtMTQwMjY2NDc5MywxOD
-c0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbMzIwNTg5MjY2LC0xNDAyNjY0NzkzLDE4Nz
+QwMjEyNTRdfQ==
 -->
