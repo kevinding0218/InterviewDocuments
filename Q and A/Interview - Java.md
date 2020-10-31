@@ -38,7 +38,7 @@ public  class  Memory {
 -   Now when we call the **foo() method** in the 5th line, **a block in the top of the stack is created** to be used by the foo() method. Since **Java is pass-by-value, a new reference to Object is created in the foo() stack block** in the 6th line.
 -   A **string** is created in the 7th line, it goes in the  **String Pool** in the **heap** space and a **reference is created in the foo() stack space** for it.
 -   foo() method is terminated in the 8th line, **at this time memory block allocated for foo() in stack becomes free**.
--   In line 9, **main() method terminates** and the stack memory created for main() method is destroyed. Also, the program ends at this line, hence Java Runtime frees all the memory and ends the execution of the program.
+-   In line 9, **main() method terminates** and the **stack memory created for main() method is destroyed**. Also, the program ends at this line, hence Java Runtime frees all the memory and ends the execution of the program.
 #### Difference between Java Heap Space and Stack Memory
 1.  Heap memory is used by all the parts of the application whereas stack memory is used only by one thread of execution.
 2.  Whenever an object is created, it’s always stored in the Heap space and stack memory contains the reference to it. Stack memory only contains local primitive variables and reference variables to objects in heap space.
@@ -49,5 +49,5 @@ public  class  Memory {
 7.  When stack memory is full, Java runtime throws  `java.lang.StackOverFlowError`  whereas if heap memory is full, it throws  `java.lang.OutOfMemoryError: Java Heap Space`  error.
 8.  Stack memory size is very less when compared to Heap memory. Because of simplicity in memory allocation (LIFO), stack memory is very fast when compared to heap memory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4OTg0NTU1Ml19
+eyJoaXN0b3J5IjpbLTExOTkwMTQ4MzJdfQ==
 -->
