@@ -51,7 +51,7 @@ public  class  Memory {
 7.  When stack memory is full, Java runtime throws  `java.lang.StackOverFlowError`  whereas if heap memory is full, it throws  `java.lang.OutOfMemoryError: Java Heap Space`  error.
 8.  Stack memory size is very less when compared to Heap memory. Because of simplicity in memory allocation (LIFO), stack memory is very fast when compared to heap memory.
 ###  ArrayList vs LinkedList
-- 
+- ArrayList was implemented based on a 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzE4MjMwNDgsMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTE0MDI2NjQ3OTMsMTg3NDAyMTI1NF19
 -->
