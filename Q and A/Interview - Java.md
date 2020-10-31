@@ -93,6 +93,11 @@ public  class  Memory {
 	```
 4. Implement Callable Interface and override run method (if you have a return value)
 	```
+	import java.util.concurrent.Callable; 
+	import java.util.concurrent.ExecutionException; 
+	import java.util.concurrent.ExecutorService; 
+	import java.util.concurrent.Executors; 
+	import java.util.concurrent.Future;
 	public class MyCallable implements Callable<String> {
 		@Override  public String call() throws Exception { 	
 			Thread.sleep(1000); 
@@ -104,11 +109,21 @@ public  class  Memory {
 			ExecutorService executor = Executors.newFixedThreadPool(10);
 			//Create MyCallable instance 
 			Callable<String> callable = new MyCallable();
+			for(int i=0; i< 100; i++){ 
+				//submit Callable tasks to be executed by thread pool 
+				Future<String> future = executor.submit(callable); 	
+				//add Future to the list, we can get return value using Future 
+				list.add(future); 
+			} 
+			for(Future<String> fut : list){ 
+			try { 
+				//print the return value of Future, notice the output delay in console  
+				// because Future.get() waits for task to get completed System.out.println(new Date()+ "::"+fut.get()); } catch (InterruptedException | ExecutionException e) { e.printStackTrace(); } } //shut down the executor service now executor.shutdown();
 		}
 	}
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyODUxMzU3MiwtMTQwMjY2NDc5MywxOD
+eyJoaXN0b3J5IjpbMTE5OTE2NjU3OSwtMTQwMjY2NDc5MywxOD
 c0MDIxMjU0XX0=
 -->
