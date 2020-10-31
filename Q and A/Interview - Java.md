@@ -50,6 +50,8 @@ public  class  Memory {
 6.  We can use  **-Xms**  and  **-Xmx**  JVM option to define the startup size and maximum size of heap memory. We can use  **-Xss**  to define the stack memory size.
 7.  When stack memory is full, Java runtime throws  `java.lang.StackOverFlowError`  whereas if heap memory is full, it throws  `java.lang.OutOfMemoryError: Java Heap Space`  error.
 8.  Stack memory size is very less when compared to Heap memory. Because of simplicity in memory allocation (LIFO), stack memory is very fast when compared to heap memory.
+###  ArrayList vs LinkedList
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNTU2OTE0OSwxODc0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTE3NzE4MjMwNDgsMTg3NDAyMTI1NF19
 -->
