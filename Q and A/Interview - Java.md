@@ -139,9 +139,9 @@ public  class  Memory {
 #### How deadlock happens?
 - Resources are Mutually exclusive, meaning each time one resource can only be used by one thread
 - When thread A was blocked during requesting a resource, the resource was not released and keep holding
-- 
+- Reentrant Locks: **a thread T1 holds a key needed by a thread T2, and T2 also holds the key needed by T1**
 #### How to prevent?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTA1MjIxNTksLTE0MDI2NjQ3OTMsMT
-g3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTIwOTIzODQzMCwtMTQwMjY2NDc5MywxOD
+c0MDIxMjU0XX0=
 -->
