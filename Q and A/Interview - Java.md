@@ -92,16 +92,23 @@ public  class  Memory {
 	t3.start();
 	```
 4. Implement Callable Interface and override run method (if you have a return value)
-```
-public class MyCallable implements Callable<String> {
-	@Override  public String call() throws Exception { 	
-		Thread.sleep(1000); 
-		//return the thread name executing this callable task  
-		return Thread.currentThread().getName(); } 
-}
-```
+	```
+	public class MyCallable implements Callable<String> {
+		@Override  public String call() throws Exception { 	
+			Thread.sleep(1000); 
+			//return the thread name executing this callable task  
+			return Thread.currentThread().getName(); 
+		} 
+		public static void main(String args[]){
+			//Get ExecutorService from Executors utility class, thread pool size is 10 
+			ExecutorService executor = Executors.newFixedThreadPool(10);
+			//Create MyCallable instance 
+			Callable<String> callable = new MyCallable();
+		}
+	}
+	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NzA4NDM1LC0xNDAyNjY0NzkzLDE4Nz
-QwMjEyNTRdfQ==
+eyJoaXN0b3J5IjpbMjAyODUxMzU3MiwtMTQwMjY2NDc5MywxOD
+c0MDIxMjU0XX0=
 -->
