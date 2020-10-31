@@ -60,12 +60,20 @@ public  class  Memory {
 ### Thread implementation
 1. Initiate Thread object with implementing run method
 ```
-new Thread(new Runnable() {
+var thread = new Thread(new Runnable() {
 	public void run() {}
-} 
+});
+var thread = new Thread(() => {
+});
 ```
-3. 
+2. Inherite from Thread class and override run method
+```
+
+```
+4. Implement Runnable Interface and override run method
+5. Implement Callable Interface and override run method
+6. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTg4MjY0NjQsLTE0MDI2NjQ3OTMsMT
+eyJoaXN0b3J5IjpbLTE3NDMxMjExMDgsLTE0MDI2NjQ3OTMsMT
 g3NDAyMTI1NF19
 -->
