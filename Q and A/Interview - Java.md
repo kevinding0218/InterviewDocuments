@@ -8,7 +8,7 @@
 - Integer can be directly converted to other types like binary or hex
 - int can be compared by using `==` , while Integer usually compares by using `equals`, because when using `==` to compare Integer, it's actually a reference type so the comparison was happening at pointer which referenced to the object memory address, Integer also have a mechanism like cache so it can be compared by using `==` when value between -128 ~ 127
 ### JVM
-- 
+- JVM is a virtual machine that understands and runs java bytecodes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQyMzg0OTddfQ==
+eyJoaXN0b3J5IjpbMTM3MTg0NTUzNl19
 -->
