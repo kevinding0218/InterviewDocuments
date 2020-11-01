@@ -702,14 +702,14 @@ function ChatRecipientPicker() {
 	3. Browser executes React
 	4. Page Now Interactable
 #### Why server side rendering initial render faster?
-- Client side rendering requires more JS to be downloaded, which is more JS to parse. It requires a 2nd HTTP request to load the content, and then more JS to generate the template. Even if the initial JS gets cached, it still needs to get parsed, and the 2nd request isn't going to happen until the docment is loaded
+- Client side rendering requires more JS to be downloaded, which is more JS to parse. It requires a 2nd HTTP request to load the content, and then more JS to generate the template. Even if the initial JS gets cached, it still needs to get parsed, and the 2nd request(loading data) isn't going to happen until the docment is loaded
 - Server side rendering's response to the browser is the HTML of your page that is ready to be rendered
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MDE1MzAwLC01MzIwMjE4OTUsLTE4Mj
-Y1NzQ4MTYsMjA1MzQxOTM1MSwtNDgwODU1OTc4LC05Nzk3MzY4
-ODIsMTk5MTk2MzI1OSwtNDU2Nzk5MjE4LC01NTY2MjM1ODcsNT
-g4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3
-MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMz
-A3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUz
-NzcyNTk0MV19
+eyJoaXN0b3J5IjpbLTMyNjk4OTUyMSwtNTMyMDIxODk1LC0xOD
+I2NTc0ODE2LDIwNTM0MTkzNTEsLTQ4MDg1NTk3OCwtOTc5NzM2
+ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LD
+U4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkw
+NzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzExMzk5MzUsLTEyNjYwMj
+MwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1
+Mzc3MjU5NDFdfQ==
 -->
