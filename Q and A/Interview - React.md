@@ -714,13 +714,16 @@ function ChatRecipientPicker() {
 	-  Possible Bottlenecking with site that are very interactive
 	- Throughput of your server is significantly less than CSR throughput.
 	- For react in particular, the throughput impact is extremely large
-	- ReactDOMServer renderToString is a synchronus CPU bound call, which holds the event loop, which means the server will not be able to process any other request till ReactDOMServer.renderToString comple
+	- `ReactDOMServer renderToString` is a **synchronus** CPU bound call, which holds the event loop**strong text**, which means the server will not be able to process any other request till `ReactDOMServer.renderToString` completes.
+		- Let's say that it takes you 500ms to SSR your page, that means you can at most do at most 2 requests per second
+- An overall slow page rendering
+	- While the page is rendered earlier and the customer can see the page sooner, they can't really interact with it until 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjY2NzIwMzgsLTUzMjAyMTg5NSwtMT
-gyNjU3NDgxNiwyMDUzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTcz
-Njg4MiwxOTkxOTYzMjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Ny
-w1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5
-MDczMDY1NDUsLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MD
-IzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwx
-NTM3NzI1OTQxXX0=
+eyJoaXN0b3J5IjpbODc0OTQ2NzQ0LC01MzIwMjE4OTUsLTE4Mj
+Y1NzQ4MTYsMjA1MzQxOTM1MSwtNDgwODU1OTc4LC05Nzk3MzY4
+ODIsMTk5MTk2MzI1OSwtNDU2Nzk5MjE4LC01NTY2MjM1ODcsNT
+g4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3
+MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMz
+A3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUz
+NzcyNTk0MV19
 -->
