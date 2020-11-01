@@ -717,9 +717,12 @@ function ChatRecipientPicker() {
 	- `ReactDOMServer renderToString` is a **synchronus** CPU bound call, which holds the event loop**strong text**, which means the server will not be able to process any other request till `ReactDOMServer.renderToString` completes.
 		- Let's say that it takes you 500ms to SSR your page, that means you can at most do at most 2 requests per second
 - An overall slow page rendering
-	- While the page is rendered earlier and the customer can see the page sooner, they can't really interact with it until 
+	- While the page is rendered earlier and the customer can see the page sooner, they can't really interact with it until react is done executing.
+		- If custom is ready fast and clicks a button, the action won't be executed until React is done executing
+- Non-rich site interactions
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc0OTQ2NzQ0LC01MzIwMjE4OTUsLTE4Mj
+eyJoaXN0b3J5IjpbODAwNjk5NTc4LC01MzIwMjE4OTUsLTE4Mj
 Y1NzQ4MTYsMjA1MzQxOTM1MSwtNDgwODU1OTc4LC05Nzk3MzY4
 ODIsMTk5MTk2MzI1OSwtNDU2Nzk5MjE4LC01NTY2MjM1ODcsNT
 g4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3
