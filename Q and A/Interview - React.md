@@ -659,12 +659,13 @@ function ChatRecipientPicker() {
   const isRecipientOnline = useFriendStatus(recipientID);
 ```
 - This lets us know whether the  _currently selected_  friend is online. If we pick a different friend and update the  `recipientID`  state variable, our  `useFriendStatus`  Hook will unsubscribe from the previously selected friend, and subscribe to the status of the newly selected one.
+### [Custom Hook]([https://reactjs.org/docs/hooks-custom.html](https://reactjs.org/docs/hooks-custom.html))
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjY1NzQ4MTYsMjA1MzQxOTM1MSwtND
-gwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5
-MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC
-0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3
-MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNz
-A3LDIwNzU5ODA2NDksMTUzNzcyNTk0MSw2NTQzNjkyMTZdfQ==
-
+eyJoaXN0b3J5IjpbMTE1OTYyNjQ0OSwtMTgyNjU3NDgxNiwyMD
+UzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYz
+MjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLT
+IxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0
+NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MD
+Y3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1
+NDM2OTIxNl19
 -->
