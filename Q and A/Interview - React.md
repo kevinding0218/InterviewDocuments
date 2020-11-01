@@ -675,19 +675,21 @@ function ChatRecipientPicker() {
 - With server-side rendering, your initial request loads the page, layout, CSS, Javascript and **content - our HTML**
 - Setup server-side rendering example
 ```
-
 const React = require('react');
 const ReactDOM = require('react-dom');
 ReactDOM.render(<App />, document.getElementById('app'));
-
-//
+// if you're using Server side rendering
+const React = require('react');
+const { renderToString } = require('react-dom/server');
+renderToString(<App />_
+// result must be inserted into target div
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzOTU2NjIwLC0xODI2NTc0ODE2LDIwNT
-M0MTkzNTEsLTQ4MDg1NTk3OCwtOTc5NzM2ODgyLDE5OTE5NjMy
-NTksLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LDU4ODQ5MjYxNiwtMj
-EzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3
-NTQxMzM5OSwyNzExMzk5MzUsLTEyNjYwMjMwNzAsNzU5NTgwNj
-c5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1Mzc3MjU5NDEsNjU0
-MzY5MjE2XX0=
+eyJoaXN0b3J5IjpbMTQ0ODA2OTQ4MCwtMTgyNjU3NDgxNiwyMD
+UzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYz
+MjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLT
+IxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0
+NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MD
+Y3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1
+NDM2OTIxNl19
 -->
