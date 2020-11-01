@@ -707,9 +707,13 @@ function ChatRecipientPicker() {
 #### SSR advantages over CSR
 - The initial page load is faster
 - The blank page flicker that happens with CSR also doesn't really happen with SSR (although most people mask this problem with a loading image)
-- SSR is great for SEO. Your content is present before you get it, so search engines are able to index it and crawl it efficientl
+- SSR is great for SEO. Your content is present before you get it, so search engines are able to index it and crawl it efficiently, something that is not so with client-side rendering. At least not simply
+- Great for static sites or text-based sites.
+#### SSR cons over CSR
+- Frequent server requests
+	-  Possible Bottlenecking with site that are very interac
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNTM3MDg0OSwtNTMyMDIxODk1LC0xOD
+eyJoaXN0b3J5IjpbMTY3MTkxMjY5OSwtNTMyMDIxODk1LC0xOD
 I2NTc0ODE2LDIwNTM0MTkzNTEsLTQ4MDg1NTk3OCwtOTc5NzM2
 ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LD
 U4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkw
