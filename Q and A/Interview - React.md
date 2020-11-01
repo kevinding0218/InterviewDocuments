@@ -711,13 +711,16 @@ function ChatRecipientPicker() {
 - Great for static sites or text-based sites.
 #### SSR cons over CSR
 - Frequent server requests
-	-  Possible Bottlenecking with site that are very interac
+	-  Possible Bottlenecking with site that are very interactive
+	- Throughput of your server is significantly less than CSR throughput.
+	- For react in particular, the throughput impact is extremely large
+	- ReactDOMServer renderToString is a synchronus CPU bound call, which holds the event loop, which means the server will not be able to process any other request till ReactDOMServer.renderToString comple
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MTkxMjY5OSwtNTMyMDIxODk1LC0xOD
-I2NTc0ODE2LDIwNTM0MTkzNTEsLTQ4MDg1NTk3OCwtOTc5NzM2
-ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LD
-U4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkw
-NzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzExMzk5MzUsLTEyNjYwMj
-MwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1
-Mzc3MjU5NDFdfQ==
+eyJoaXN0b3J5IjpbLTEwNjY2NzIwMzgsLTUzMjAyMTg5NSwtMT
+gyNjU3NDgxNiwyMDUzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTcz
+Njg4MiwxOTkxOTYzMjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Ny
+w1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5
+MDczMDY1NDUsLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MD
+IzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwx
+NTM3NzI1OTQxXX0=
 -->
