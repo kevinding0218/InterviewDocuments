@@ -684,13 +684,13 @@ function ChatRecipientPicker() {
 	renderToString(<App />_
 	// result must be inserted into target div
 	```
-- Updates using server-side rendering is where a lot of developers start going off the deep end. They actually think page refresh
+- Updates using server-side rendering is where a lot of developers start going off the deep end. They actually think page refresh. Instead, what we
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMjAyMTg5NSwtMTgyNjU3NDgxNiwyMD
-UzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYz
-MjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLT
-IxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0
-NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MDIzMDcwLDc1OTU4MD
-Y3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwxNTM3NzI1OTQxLDY1
-NDM2OTIxNl19
+eyJoaXN0b3J5IjpbLTE4NDUwMjc1OTcsLTUzMjAyMTg5NSwtMT
+gyNjU3NDgxNiwyMDUzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTcz
+Njg4MiwxOTkxOTYzMjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Ny
+w1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5
+MDczMDY1NDUsLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MD
+IzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwx
+NTM3NzI1OTQxXX0=
 -->
