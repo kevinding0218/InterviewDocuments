@@ -674,18 +674,19 @@ function ChatRecipientPicker() {
 #### Server side rendering
 - With server-side rendering, your initial request loads the page, layout, CSS, Javascript and **content - our HTML**
 - Setup server-side rendering example
-```
-const React = require('react');
-const ReactDOM = require('react-dom');
-ReactDOM.render(<App />, document.getElementById('app'));
-// if you're using Server side rendering
-const React = require('react');
-const { renderToString } = require('react-dom/server');
-renderToString(<App />_
-// result must be inserted into target div
-```
+	```
+	const React = require('react');
+	const ReactDOM = require('react-dom');
+	ReactDOM.render(<App />, document.getElementById('app'));
+	// if you're using Server side rendering
+	const React = require('react');
+	const { renderToString } = require('react-dom/server');
+	renderToString(<App />_
+	// result must be inserted into target div
+	```
+- Updates using server-side rendering is where a lot of developers start going off the deep end. They actually think page refresh
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0ODA2OTQ4MCwtMTgyNjU3NDgxNiwyMD
+eyJoaXN0b3J5IjpbLTUzMjAyMTg5NSwtMTgyNjU3NDgxNiwyMD
 UzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTczNjg4MiwxOTkxOTYz
 MjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Nyw1ODg0OTI2MTYsLT
 IxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5MDczMDY1NDUsLTE0
