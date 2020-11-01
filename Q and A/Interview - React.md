@@ -691,17 +691,18 @@ function ChatRecipientPicker() {
 		$.get('/tweets/person', {last_id: 233}, function(r) {
 			$('#tweets').prepend(r);
 		};
+		// stop the page from re-rendering
 		e.preventDefault();
 	});
 	```
 - In other words, we are still only doing a partial update, but letting the server do the rendering and inserting that finalized output into our DOM.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTU5NDE5NTgsLTUzMjAyMTg5NSwtMT
-gyNjU3NDgxNiwyMDUzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTcz
-Njg4MiwxOTkxOTYzMjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Ny
-w1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5
-MDczMDY1NDUsLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MD
-IzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwx
-NTM3NzI1OTQxXX0=
+eyJoaXN0b3J5IjpbMTIxNDk5MzIwNCwtNTMyMDIxODk1LC0xOD
+I2NTc0ODE2LDIwNTM0MTkzNTEsLTQ4MDg1NTk3OCwtOTc5NzM2
+ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LD
+U4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkw
+NzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzExMzk5MzUsLTEyNjYwMj
+MwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNywyMDc1OTgwNjQ5LDE1
+Mzc3MjU5NDFdfQ==
 -->
