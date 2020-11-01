@@ -685,18 +685,19 @@ function ChatRecipientPicker() {
 	// result must be inserted into target div
 	```
 - Updates using server-side rendering is where a lot of developers start going off the deep end. They actually think page refresh. Instead, what we can do is some form of
-```
-$('#loadTweets').on('click', function(e) {
-	$.get('/tweets/person', {last_id: 233}, function(r) {
-		$('#tweets').prepend(r);
-	};
-	e.preventDefault();
-});
-```
+	```
+	// example using jQuery
+	$('#loadTweets').on('click', function(e) {
+		$.get('/tweets/person', {last_id: 233}, function(r) {
+			$('#tweets').prepend(r);
+		};
+		e.preventDefault();
+	});
+	```
 - In other words, we are still only doing a partial update, but letting the server do the rendering and inserting that finalized output into our DOM.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzY4Mzg5NjIsLTUzMjAyMTg5NSwtMT
+eyJoaXN0b3J5IjpbLTIwOTU5NDE5NTgsLTUzMjAyMTg5NSwtMT
 gyNjU3NDgxNiwyMDUzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTcz
 Njg4MiwxOTkxOTYzMjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Ny
 w1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5
