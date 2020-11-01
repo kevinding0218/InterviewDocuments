@@ -671,9 +671,10 @@ function ChatRecipientPicker() {
 	2. Browser Downloads JS
 	3. Brownser executes React
 	4. Plage Now Viewable and Interactable
-
+#### Server side rendering
+- With server-side rendering, your initial request loads the page, layout, CSS, Javascript and **content**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNDE4NjA5LC0xODI2NTc0ODE2LDIwNT
+eyJoaXN0b3J5IjpbNDExNjM3NTE4LC0xODI2NTc0ODE2LDIwNT
 M0MTkzNTEsLTQ4MDg1NTk3OCwtOTc5NzM2ODgyLDE5OTE5NjMy
 NTksLTQ1Njc5OTIxOCwtNTU2NjIzNTg3LDU4ODQ5MjYxNiwtMj
 EzMDk5ODIxNywtMTI4MjAyODYwMCwtMTkwNzMwNjU0NSwtMTQ3
