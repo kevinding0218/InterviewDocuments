@@ -693,13 +693,14 @@ $('#loadTweets').on('click', function(e) {
 	e.preventDefault();
 });
 ```
-- In other words, we are still only doing a partial update, but letting the server do the rendering and inserting that finalized output into our DOM
+- In other words, we are still only doing a partial update, but letting the server do the rendering and inserting that finalized output into our DOM.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk0MjQ4OTY2LC01MzIwMjE4OTUsLTE4Mj
-Y1NzQ4MTYsMjA1MzQxOTM1MSwtNDgwODU1OTc4LC05Nzk3MzY4
-ODIsMTk5MTk2MzI1OSwtNDU2Nzk5MjE4LC01NTY2MjM1ODcsNT
-g4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3
-MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMz
-A3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIwNzU5ODA2NDksMTUz
-NzcyNTk0MV19
+eyJoaXN0b3J5IjpbLTE3MzY4Mzg5NjIsLTUzMjAyMTg5NSwtMT
+gyNjU3NDgxNiwyMDUzNDE5MzUxLC00ODA4NTU5NzgsLTk3OTcz
+Njg4MiwxOTkxOTYzMjU5LC00NTY3OTkyMTgsLTU1NjYyMzU4Ny
+w1ODg0OTI2MTYsLTIxMzA5OTgyMTcsLTEyODIwMjg2MDAsLTE5
+MDczMDY1NDUsLTE0NzU0MTMzOTksMjcxMTM5OTM1LC0xMjY2MD
+IzMDcwLDc1OTU4MDY3OSw3MjM5MTA3MDcsMjA3NTk4MDY0OSwx
+NTM3NzI1OTQxXX0=
 -->
