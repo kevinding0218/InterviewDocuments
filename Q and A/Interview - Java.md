@@ -6,7 +6,7 @@
 - Integer was a class , when it was initialized will have a reference in JVM. Variables of type Integer store references to Integer objects, just as with any other reference (object) type
 - we can't assign a String value to an int value directly or even by casting, but we can do this with Integer
 - Integer can be directly converted to other types like binary or hex
-- int can be compared by using `==` , while Integer usually compares by using `equals`, because when using `==` to compare Integer, it's actually a reference type so the comparison was happening at pointer which referenced to the object memory address, Integer also have a mechanism like cache so it can be compared by using `==` when value between -128 ~ 127
+- int can be compared by using `==` , while Integer usually compares by using `equals`, if number ranges is within ~127 - 128 then we can use "==" to compare Integer as during this data range, it uses primitive type as cache in memory, other wise 
 ### JVM
 - JVM is a virtual machine that understands and runs java bytecodes, works for memory management in heap space and stack memory
 - JVM will mostly distribute objects to HEAP level, when JVM execute the code, every thread will have a thread stack
@@ -149,6 +149,6 @@ public  class  Memory {
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDY1NDUyNSwtMTczMDQ5NTAzOSwtMT
-QwMjY2NDc5MywxODc0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbNDcyODg3MTUwLC0xNzMwNDk1MDM5LC0xND
+AyNjY0NzkzLDE4NzQwMjEyNTRdfQ==
 -->
