@@ -6,7 +6,7 @@
 - Integer was a class , when it was initialized will have a reference in JVM. Variables of type Integer store references to Integer objects, just as with any other reference (object) type
 - we can't assign a String value to an int value directly or even by casting, but we can do this with Integer
 - Integer can be directly converted to other types like binary or hex
-- int can be compared by using `==` , while Integer usually compares by using `equals`, if number ranges is within ~127 - 128 then we can use "==" to compare Integer as during this data range, it uses primitive type as cache in memory, other wise 
+- int can be compared by using `==` , while Integer usually compares by using `equals`, if number ranges is within ~127 - 128 then we can use "==" to compare Integer as during this data range, it uses primitive type as cache in memory, otherwise it compares by address and value (reference type)
 ### JVM
 - JVM is a virtual machine that understands and runs java bytecodes, works for memory management in heap space and stack memory
 - JVM will mostly distribute objects to HEAP level, when JVM execute the code, every thread will have a thread stack
@@ -43,7 +43,7 @@ public  class  Memory {
 -   In line 9, **main() method terminates** and the **stack memory created for main() method is destroyed**. Also, the **program ends** at this line, hence **Java Runtime frees all the memory and ends the execution of the program**.
 #### Difference between Java Heap Space and Stack Memory
 1.  **Heap** memory is used by **all the parts of the application** whereas **stack** memory is used only by **one thread of execution**.
-2.  Whenever an **object** is created, it’s always **stored in the Heap space and stack memory c ontains the reference to it. Stack memory only contains local primitive variables and reference variables to objects in heap space**.
+2.  Whenever an **object** is created, it’s always **stored in the Heap space and stack memory contains the reference to it. Stack memory only contains local primitive variables and reference variables to objects in heap space**.
 3.  Objects stored in the heap are globally accessible whereas stack memory can’t be accessed by other threads.
 4.  Memory management in stack is done in LIFO manner whereas it’s more complex in Heap memory because it’s used globally. Heap memory is divided into Young-Generation, Old-Generation etc, more details at  [Java Garbage Collection](https://www.journaldev.com/2856/java-jvm-memory-model-memory-management-in-java).
 5.  Stack memory is short-lived whereas heap memory lives from the start till the end of application execution.
@@ -149,6 +149,6 @@ public  class  Memory {
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcyODg3MTUwLC0xNzMwNDk1MDM5LC0xND
-AyNjY0NzkzLDE4NzQwMjEyNTRdfQ==
+eyJoaXN0b3J5IjpbMTYxNDUzNzg2MCwtMTczMDQ5NTAzOSwtMT
+QwMjY2NDc5MywxODc0MDIxMjU0XX0=
 -->
