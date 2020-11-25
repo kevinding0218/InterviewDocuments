@@ -115,9 +115,9 @@
 		- Special Cases (Lady Gaga, Inactive users)
 	- Step 2: Maintenance
 		- Robust (what if one server/database goes down)
-		- Scalability ( how to scale if there is 
+		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5Njg1MTIzNSwtMzY4MTE5NTk5LC04MT
-AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE0ODg0NDg4MzgsLTM2ODExOTU5OSwtOD
+EwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
 -->
