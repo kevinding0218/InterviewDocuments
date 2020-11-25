@@ -107,25 +107,25 @@
 					- Facebook / Twitter - Pull
 					- Instragram - Push + Pull
 			- Now we should have an executable plan as we discuss with interviewr in previous 3 steps, we would get a work solution but not perfect solution
-- Scale
+- **Scale**
 	- Sharding / Optimize / Special Case
-	- Step 1: Optimize
+	- Step 1: **Optimize**
 		- Solve the drawback in Pull vs Push Model
 			- **Solve Pull Model Drawback**
 				- The slowest part happens when user is request getNewFeeds
 					- **Add Cache in memory before visiting DB**
-					- Cache every user's timeline
+					- **Cache every user's timeline**
 						- N times of DB requests => N times of Cache requests (N is the number of your followings)
 						- Trade Off: Cache all tweets / Cache lastest 1000 tweets?
-					- Cache News Feed of every user
+					- **Cache News Feed of every user**
 						- User who doesn't have Cache News Feed: merge latest 100 tweets of N user, take the latest 100 from merged result
 						- User who has Cache New Feed: merge all tweets of N user after some specific time stamp
-				- Solve Push Model Drawback
+				- **Solve Push Model Drawback**
 					- Disk is cheap
-					- Inactive Users, rank follower by weight (e.g: last login time)
+					- Inactive Users, **rank follower by weight** (e.g: last login time)
 					- Followers >> follwings (Lady Gaga)
-		- More features design (Edit, Delete, Media, Ads)
-		- Special Cases (Lady Gaga, Inactive users)
+		- **More features design (Edit, Delete, Media, Ads)**
+		- **Special Cases (Lady Gaga, Inactive users)**
 			- For some user who has followers >> followings, fanout in Push could take up to couple of hours
 				- Wrong answer: switch to Pull
 				- Correct answer: try as min change to optimize current plan
@@ -147,12 +147,12 @@
 					- **not require for real-time**
 					- user post less tweets
 					- bi-directional relationship, no lady gaga (like WeChat Friend)
-	- Step 2: Maintenance
+	- Step 2: **Maintenance**
 		- Robust (what if one server/database goes down)
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ0MTM4MTU0LC03NTk3ODgxNTQsLTE0OD
-g0NDg4MzgsLTM2ODExOTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2
-NjEyXX0=
+eyJoaXN0b3J5IjpbLTg0NTg1Mzg0NiwtNzU5Nzg4MTU0LC0xND
+g4NDQ4ODM4LC0zNjgxMTk1OTksLTgxMDMwNTkzNSwtMjA4ODc0
+NjYxMl19
 -->
