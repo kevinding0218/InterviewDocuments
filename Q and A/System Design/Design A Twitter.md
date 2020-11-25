@@ -19,6 +19,8 @@
 		- Concurrent User
 			- Daily Active User * Request Per User / Seconds Per Day = 150 M * 60 / 86400 ~ 100K
 			- Peak = Average Concurrent User * 3 ~ 300K
+			- Read QPS ~ 300K
+			- Write QPS ~ 5K
 - Service
 	- Split / Application / Module
 - Storage
@@ -27,5 +29,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEwODYzNDU3LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNzk5NDY1NTM2LC0yMDg4NzQ2NjEyXX0=
 -->
