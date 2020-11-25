@@ -207,9 +207,29 @@
 	- [如何设计Facebook Mutual Friends]
 		- Design an api which shows all mutual friends of a friend,how the data is stored (data model) , data structure you will use specifically at scale to support 1bn qps. This should also take care of a scenario where given an user profile the response should include common friends if any.
 		- Design an api which takes a content and figures out which users should be able to view it, or design an api which hides contents from my friends because of the permissions In other words how to implement privacy checks.
+		- API for retrieving all mutual friends of friend.
+
+API signature could be -> List getAllMutualFriends(String sourceUserId, String targetUserId)
+
+Where each can have data attributes like { userId: 'A', firstName: 'mark', lastName:'Zang', thumbnailPic: 'base64...', ...}
+
+Appropriate Data Model: Graph based data model where each person is vertex/node in graph, and friendship could be represented using an edge.
+
+Example data representations in graph model:  
+Person (vertex) structure: {userId: 'Aerasdsd', firstName: 'asdd', lastName: 'sdasd', profilePic:'base64...', location:'seattle', .... }  
+Friendship edges structure:  
+{ relationshipId: '100', sourceUserId:'A', targetUserId:'B', relationshipType: 'Friend', relationStartDate: '2000-05-01', ...},  
+{ relationshipId: '201', sourceUserId:'B', targetUserId:'D', relationshipType: 'Friend', relationStartDate: '2010-05-01', ...}  
+{ relationshipId: '501', sourceUserId:'B', targetUserId:'E', relationshipType: 'Friend', relationStartDate: '2010-05-01', ...}
+
+Finding mutual friends or friends of friends: common friends can be found easily using bread first search from both sourceUserId and targetUserId (bi-directional)
+
+Scaling to 1 billion QPS(queries per second): We can have database servers available in each geographic region. (eg. US West, US East, South East Asia, Africa etc. or like CDNs, or PoP(point of presence) servers). mutual friends can be pre-computed and stored in persitent or cached databases. They can be cached for top or frequently logged in users, closer to API servers. API servers, and databases are scaled horizontally, and load balaneced across different regions/availablity zones/point of presence. Consistent hashing technique can be used so users always go to same API server to get the mutual friends data. There is some work which needs to be done as these users could be spread across regions, but idea is to make these data available only on API servers where sourceUserId and targetUserId maybe accessing.
+
+There is lot to dig deeper in this scaling subject and interviewer may drive you accordingly.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxODYwNzY3LDE2NTk3MjAxNzUsLTcxNT
-g2MDE4LC0xMjEzNzg5ODY1LC03NTk3ODgxNTQsLTE0ODg0NDg4
-MzgsLTM2ODExOTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX
-0=
+eyJoaXN0b3J5IjpbMTkwNDYwNDE5LDE2MTg2MDc2NywxNjU5Nz
+IwMTc1LC03MTU4NjAxOCwtMTIxMzc4OTg2NSwtNzU5Nzg4MTU0
+LC0xNDg4NDQ4ODM4LC0zNjgxMTk1OTksLTgxMDMwNTkzNSwtMj
+A4ODc0NjYxMl19
 -->
