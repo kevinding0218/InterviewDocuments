@@ -182,10 +182,16 @@
 - 为什么不全放Cache里？
 	- 内存中的数据断电就会丢失
 	- Cache 比硬盘贵
+- News Feed 和 Timeline 的定义和区别？
+	- News Feed：新鲜事，我朋友+我发的所有帖子按照某种顺序排列的整合（比如按照时间排序）
+		- 用户打开Twitter之后首先看到的界面就是News Feed界面，这些 tweets 来自你关注的用户
+	- Timeline：某个用户发的所有帖子
+		- 用户点开某个人的页面之后，看到这个人发的所有帖子
+
 		- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NTQ4NjMyNSwtNzE1ODYwMTgsLTEyMT
+eyJoaXN0b3J5IjpbMTE0MDcxNTY5NCwtNzE1ODYwMTgsLTEyMT
 M3ODk4NjUsLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMzY4MTE5
 NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
