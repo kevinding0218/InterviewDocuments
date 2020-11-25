@@ -111,15 +111,17 @@
 	- Sharding / Optimize / Special Case
 	- Step 1: Optimize
 		- Solve the drawback in Pull vs Push Model
-			- Solve Pull Model Drawback
+			- **Solve Pull Model Drawback**
 				- The slowest part happens when user is request getNewFeeds
-					- Add Cache before visiting DB
+					- **Add Cache in memory before visiting DB**
 					- Cache every user's timeline
 						- N times of DB requests => N times of Cache requests (N is the number of your followings)
 						- Trade Off: Cache all tweets / Cache lastest 1000 tweets?
 					- Cache News Feed of every user
 						- User who doesn't have Cache News Feed: merge latest 100 tweets of N user, take the latest 100 from merged result
 						- User who has Cache New Feed: merge all tweets of N user after some specific time stamp
+				- Solve Push Model Drawback
+					- 
 		- More features design (Edit, Delete, Media, Ads)
 		- Special Cases (Lady Gaga, Inactive users)
 	- Step 2: Maintenance
@@ -127,6 +129,6 @@
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMTcxOTYyNiwtMTQ4ODQ0ODgzOCwtMz
+eyJoaXN0b3J5IjpbLTUzMDMwMzc5OSwtMTQ4ODQ0ODgzOCwtMz
 Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
