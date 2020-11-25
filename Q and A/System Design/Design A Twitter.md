@@ -144,12 +144,14 @@
 					- single friendship relationship, lady gaga
 				- Use Push when you
 					- less resource
-					- not requre
+					- not require for real-time
+					- user post less tweets
+					- bi-directional relationship, no lady gaga (like WeChat Friend)
 	- Step 2: Maintenance
 		- Robust (what if one server/database goes down)
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNDkzODMzMywtMTQ4ODQ0ODgzOCwtMz
+eyJoaXN0b3J5IjpbLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMz
 Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
