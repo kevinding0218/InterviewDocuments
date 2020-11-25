@@ -141,7 +141,7 @@
 					- enough resource
 					- **high requirement for real-time**
 					- user post a lot tweets
-					- single friendship relationship, lady gaga
+					- single-directional friendship relationship, lady gaga
 				- Use **Push** when you
 					- less resource
 					- **not require for real-time**
@@ -152,7 +152,7 @@
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MDc0OTMzNywtNzU5Nzg4MTU0LC0xND
-g4NDQ4ODM4LC0zNjgxMTk1OTksLTgxMDMwNTkzNSwtMjA4ODc0
-NjYxMl19
+eyJoaXN0b3J5IjpbODQ0MTM4MTU0LC03NTk3ODgxNTQsLTE0OD
+g0NDg4MzgsLTM2ODExOTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2
+NjEyXX0=
 -->
