@@ -132,9 +132,9 @@
 					- e.g: add more machines to do the Push Async Task
 				- Evaluate for longer-term whether it's worth to converting entire model
 			- **Push + Pull Plan**!
-				- Normal user still use Push
-				- Lady Gaga as Star User which followers > 1m, do not use Push to NewsFeed Table
-				- When normal user gets new tweets, Pull from Star User's timeline and merge into his news feed
+				- **Normal user still use Push**
+				- **Lady Gaga as Star User which followers > 1m, do not use Push to NewsFeed Table**
+				- **When normal user gets new tweets, Pull from Star User's timeline and merge into his news feed**
 				- If a star user's follower number decrease that doens't match a star user, we don't need to change original code but checking the current status in timeline to determine whether Pull or not
 			- When to user Pull or Push?
 				- User Pull when you
@@ -152,6 +152,7 @@
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMz
-Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTY0ODQ1NTg3OCwtNzU5Nzg4MTU0LC0xND
+g4NDQ4ODM4LC0zNjgxMTk1OTksLTgxMDMwNTkzNSwtMjA4ODc0
+NjYxMl19
 -->
