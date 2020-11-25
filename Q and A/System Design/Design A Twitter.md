@@ -16,7 +16,7 @@
 		- News Feed
 		- Follow / Unfollow a user
 		- Register / Login
-		- Concurrent User
+		- Concurrent User (mock up the process)
 			- Daily Active User * Request Per User / Seconds Per Day = 150 M * 60 / 86400 ~ 100K
 			- Peak = Average Concurrent User * 3 ~ 300K
 			- Read QPS ~ 300K
@@ -29,5 +29,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk5NDY1NTM2LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTc0NDE1Nzc2MCwtMjA4ODc0NjYxMl19
 -->
