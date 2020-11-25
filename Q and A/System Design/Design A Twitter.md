@@ -114,7 +114,9 @@
 			- Solve Pull Model Drawback
 				- The slowest part happens when user is request getNewFeeds
 					- Add Cache before visiting DB
-					- Ca
+					- Cache every user's timeline
+						- N times of DB requests => N times of Cache requests (N is the number of your followings)
+						- Trade Off: Cache all tweets / Cache lastest 1000 tweets?
 		- More features design (Edit, Delete, Media, Ads)
 		- Special Cases (Lady Gaga, Inactive users)
 	- Step 2: Maintenance
@@ -122,6 +124,6 @@
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTkzMDQzOCwtMTQ4ODQ0ODgzOCwtMz
+eyJoaXN0b3J5IjpbMTQ4MDI1Njk3NiwtMTQ4ODQ0ODgzOCwtMz
 Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
