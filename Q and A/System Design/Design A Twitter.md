@@ -43,15 +43,21 @@
 	- Schema / Data / SQL / NoSQL / File System
 	- **Select** Storage structure for every Service
 		- SQL Database
-			- User Table (User Service/Friendship Service)
+			-User Service/Friendship Service)
+			- User Table (id, username, email, password)
+			- Friendship Table (from_user_id/FK, to_user_id/FK)
+			- 
 		- NoSQL Database
-			- Tweets / Social Graph(Tweet Service/Friendship Service)
+			- Tweet Service/Friendship Service
+			- Tweets / Social Graph
 		- File System
-			- Image / Video / Media files (Media Service)
+			- Media Service
+			- Image / Video / Media files 
 	- Go draw detailed **Schema**
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MTgzMzkyMiwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTExMDk4NzIzODIsLTIwODg3NDY2MTJdfQ
+==
 -->
