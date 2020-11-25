@@ -56,11 +56,13 @@
 	- Go draw detailed **Schema**
 		- New Feed
 			- What is New Feed
-				- the information stream when you login in Facebook / Twitter / Wechat
-				- the union of all the message sent by your friends
+				- the information stream when you login in Facebook / Twitter / Wechat, the union of all the message sent by your friends
+				- Pull Model
+					- When user is checking News Feed, get first 100 tweets of every friend, merge them and sort the first 100 News Feed (Merge K Sorted Arrays)
+					- Complexity: if 
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwOTg1ODUwNywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNjQ0NTE4MTAyLC0yMDg4NzQ2NjEyXX0=
 -->
