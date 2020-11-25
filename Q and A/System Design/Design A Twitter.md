@@ -151,10 +151,12 @@
 		- Robust (what if one server/database goes down)
 		- Scalability ( how to scale if there is request peak)
 - **How to implement follow & unfollow**
-	- 
+	- After follow a user, Merge timeline into news feed asynchronously
+	- After unfollow a user, Pick out tweets from news feed asynchronously.
+	- Why Async? 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTM3ODk4NjUsLTc1OTc4ODE1NCwtMT
-Q4ODQ0ODgzOCwtMzY4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3
-NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbNzgxNzE5Nzc5LC0xMjEzNzg5ODY1LC03NT
+k3ODgxNTQsLTE0ODg0NDg4MzgsLTM2ODExOTU5OSwtODEwMzA1
+OTM1LC0yMDg4NzQ2NjEyXX0=
 -->
