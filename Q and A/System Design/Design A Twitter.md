@@ -91,11 +91,16 @@
 					- Complexity
 						- News Feed => 1 time of DB Read
 						- Post a tweet => N times of DB write if there is N follwings, the benefit is that this could be an asychronized task running in background, no need to have user wait when post a tweet
-					- 
+					- Drawback:
+						- getNewsFeed(request)
+							- return DB.getNewsFeed(request.user)
+						- postTweet(request, tweet_info)
+							- tweet = DB.insertTweet(request.user, tweet_info)
+							- AsyncService.fanoutTweet(request.user, twe
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NzgwNTAyNCwtMzY4MTE5NTk5LC04MT
+eyJoaXN0b3J5IjpbMTM4MjU1NTIzMiwtMzY4MTE5NTk5LC04MT
 AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
