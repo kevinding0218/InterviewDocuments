@@ -54,9 +54,13 @@
 			- Media Service
 			- Image / Video / Media files 
 	- Go draw detailed **Schema**
+		- New Feed
+			- What is New Feed
+				- the information stream when you login in Facebook / Twitter / Wechat
+				- the union of all the message sent by your friends
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyMTM3MDE3OSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTUwOTg1ODUwNywtMjA4ODc0NjYxMl19
 -->
