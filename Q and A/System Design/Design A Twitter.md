@@ -130,12 +130,12 @@
 				- Wrong answer: switch to Pull
 				- Correct answer: try as min change to optimize current plan
 					- e.g: add more machines to do the Push Async Task
-				- Evaluate fo
+				- Evaluate for longer-term whether it's worth to converting entire model
 	- Step 2: Maintenance
 		- Robust (what if one server/database goes down)
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzQ4MjQxNzcsLTE0ODg0NDg4MzgsLT
-M2ODExOTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMjEwMzU5NzUwNSwtMTQ4ODQ0ODgzOCwtMz
+Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
