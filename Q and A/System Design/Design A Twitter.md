@@ -121,7 +121,9 @@
 						- User who doesn't have Cache News Feed: merge latest 100 tweets of N user, take the latest 100 from merged result
 						- User who has Cache New Feed: merge all tweets of N user after some specific time stamp
 				- Solve Push Model Drawback
-					- 
+					- Disk is cheap
+					- Inactive Users, rank follower by weight (e.g: last login time)
+					- Followers >> follwings (Lady Gaga)
 		- More features design (Edit, Delete, Media, Ads)
 		- Special Cases (Lady Gaga, Inactive users)
 	- Step 2: Maintenance
@@ -129,6 +131,6 @@
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMDMwMzc5OSwtMTQ4ODQ0ODgzOCwtMz
-Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTExNTI5NzAwMzUsLTE0ODg0NDg4MzgsLT
+M2ODExOTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
 -->
