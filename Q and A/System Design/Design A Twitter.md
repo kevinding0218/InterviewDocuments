@@ -111,6 +111,10 @@
 	- Sharding / Optimize / Special Case
 	- Step 1: Optimize
 		- Solve the drawback in Pull vs Push Model
+			- Solve Pull Model Drawback
+				- The slowest part happens when user is request getNewFeeds
+					- Add Cache before visiting DB
+					- Ca
 		- More features design (Edit, Delete, Media, Ads)
 		- Special Cases (Lady Gaga, Inactive users)
 	- Step 2: Maintenance
@@ -118,6 +122,6 @@
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODg0NDg4MzgsLTM2ODExOTU5OSwtOD
-EwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTg5OTkzMDQzOCwtMTQ4ODQ0ODgzOCwtMz
+Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
