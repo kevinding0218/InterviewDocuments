@@ -109,8 +109,15 @@
 			- Now we should have an executable plan as we discuss with interviewr in previous 3 steps, we would get a work solution but not perfect solution
 - Scale
 	- Sharding / Optimize / Special Case
+	- Step 1: Optimize
+		- Solve the drawback in Pull vs Push Model
+		- More features design (Edit, Delete, Media, Ads)
+		- Special Cases (Lady Gaga, Inactive users)
+	- Step 2: Maintenance
+		- Robust (what if one server/database goes down)
+		- Scalability ( how to scale if there is 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5OTQwNjQ5OSwtMzY4MTE5NTk5LC04MT
+eyJoaXN0b3J5IjpbLTk5Njg1MTIzNSwtMzY4MTE5NTk5LC04MT
 AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
