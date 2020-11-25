@@ -1,7 +1,14 @@
 ### 4S
 - Scenario
+	- Ask / Features/ QPS / DAU (Daily Active Users) / Interfaces
 - Service
-- Stora
+	- Split / Application / Module
+- Storage
+	- Schema / Data / SQL / NoSQL / File System
+- Scale
+	- Sharding / Optimize / Special Case
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxOTQ0OTI5OSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTEyMjQwMzQyMDUsLTIwODg3NDY2MTJdfQ
+==
 -->
