@@ -193,11 +193,12 @@
 	- 而 Timeline Table 存的是，谁发了什么。也就是主要包含2个部分，user_id和发的内容。也就是说，如果你不做任何优化的话，实际上 Timeline Table 就是 Tweet Table。因为你可以  `select * from tweet_table where user_id=某人`，这就是某人的 timeline 了。
 	- 那么我们看看，当你发了一个帖子之后，如果是 pull 模型，那么只需要在 Tweet Table 里增加一个你发的帖子的记录就好了。其他什么也不用做，当你的好友需要看你的帖子的时候，主动去找你发过的最近100条什么的。
 	- 而 Push Model 下，你发了一个tweet之后，系统需要主动的 deliver你的这个帖子去到 newsfeed table 里去。比如你有3个好友A,B,C。那么系统需要往 news feed table 里存入 [A+你的帖子], [B+你的帖子], [C+你的帖子] 三条数据。
-- 
+- [news feed 的细节问题](https://www.jiuzhang.com/qa/2031/)
+	- 
 		- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNTA4Mjc3MCwtNzE1ODYwMTgsLTEyMT
-M3ODk4NjUsLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMzY4MTE5
-NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbNjIzNjU4MjYzLC03MTU4NjAxOCwtMTIxMz
+c4OTg2NSwtNzU5Nzg4MTU0LC0xNDg4NDQ4ODM4LC0zNjgxMTk1
+OTksLTgxMDMwNTkzNSwtMjA4ODc0NjYxMl19
 -->
