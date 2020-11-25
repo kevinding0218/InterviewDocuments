@@ -72,13 +72,17 @@
 							- follwings = DB.getFollowings(user = request.user)
 							- news_feed = empty
 							- for follow in followings:
-								- tweets = DB.getTweets(follow.to_user, 100): N times of DB read is kinda slow, which is happening during getNewsFeed Request
+								- tweets = DB.getTweets(follow.to_user, 100): **N times of DB read is kinda slow, which is happening during getNewsFeed Request**
 								- news_feed.merge(tweets)
 							- sort(news_feed)
 							- return news_feed
+						- postTweet(request, tweet)
+							- DB.insertTweet(request.user, tweet)
+							- return success
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ3ODg3OTczLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE4MTc4NTY5OTMsLTIwODg3NDY2MTJdfQ
+==
 -->
