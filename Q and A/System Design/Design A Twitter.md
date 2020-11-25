@@ -24,7 +24,10 @@
 		- QPS usage
 			- 100 ~ use a laptop/desktop as Web Server
 			- 1K ~ use a better Web Server, need to consider Single Point Failure
-			- 1M ~ use a cluster of 1000 Web Server, need consider 
+			- 1M ~ use a cluster of 1000 Web Server, need consider how to maintain those server if any of them doesn't work
+		- QPS vs Web Server vs Database
+			- Web Server ~ 1K QPS (including bottleneck of logic processing time and database query)
+			- SQL Database ~ 1K QPS (could be less if there is more JOIN
 - Service
 	- Split / Application / Module
 - Storage
@@ -33,5 +36,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMDU1NTAzNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMzAyNDEwNDI4LC0yMDg4NzQ2NjEyXX0=
 -->
