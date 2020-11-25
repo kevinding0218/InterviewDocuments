@@ -59,6 +59,11 @@
 				- the information stream when you login in Facebook / Twitter / Wechat, the union of all the message sent by your friends
 				- Pull Model
 					- When user is checking News Feed, get first 100 tweets of every friend, merge them and sort the first 100 News Feed (Merge K Sorted Arrays)
+					- Process:
+						1. Send Get News Feed to Web Server
+						2. Server goes to Friendship Table and get followings list
+						3. Server goes to Tweet Table and get tweets from followings
+						4. Merge and return to UI
 					- Complexity: 
 						- Get news feed: if user has N friends, then it will take N times of DB Reads + O(MergeKSortedArray) which could be ignored
 						- Post a tweet => 1 time of DB Write
@@ -66,5 +71,6 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MDI1OTA1OCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE5MTYyMjMxMTYsLTIwODg3NDY2MTJdfQ
+==
 -->
