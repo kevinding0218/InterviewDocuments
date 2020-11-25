@@ -136,11 +136,20 @@
 				- Lady Gaga as Star User which followers > 1m, do not use Push to NewsFeed Table
 				- When normal user gets new tweets, Pull from Star User's timeline and merge into his news feed
 				- If a star user's follower number decrease that doens't match a star user, we don't need to change original code but checking the current status in timeline to determine whether Pull or not
+			- When to user Pull or Push?
+				- User Pull when you
+					- enough resource
+					- high requirement for real-time
+					- user post a lot tweets
+					- single friendship relationship, lady gaga
+				- Use Push when you
+					- less resource
+					- not requre
 	- Step 2: Maintenance
 		- Robust (what if one server/database goes down)
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTY3MzM5ODMsLTE0ODg0NDg4MzgsLT
-M2ODExOTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTgwNDkzODMzMywtMTQ4ODQ0ODgzOCwtMz
+Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
