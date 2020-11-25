@@ -35,13 +35,15 @@
 		- Replay : go over every requirement and add a service for each requirement
 		- Merge: merge common function as a service
 		- Router
-			- 
+			- User Service: Register / Login
+			- Tweet Service: Post a tweet / News Feed / Timeline
+			- Media Service: Upload Image / Upload Video
+			- Friendship Service: Follow / Unfollow
 - Storage
 	- Schema / Data / SQL / NoSQL / File System
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDEzOTI3MDUsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTUxMDY4MTE5NCwtMjA4ODc0NjYxMl19
 -->
