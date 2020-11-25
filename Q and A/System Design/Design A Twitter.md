@@ -32,11 +32,16 @@
 			- NoSQL(Memcached) ~ 1M QPS
 - Service
 	- Split / Application / Module
+		- Replay : go over every requirement and add a service for each requirement
+		- Merge: merge common function as a service
+		- Router
+			- 
 - Storage
 	- Schema / Data / SQL / NoSQL / File System
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc2MDI2ODM3LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTIxMDEzOTI3MDUsLTIwODg3NDY2MTJdfQ
+==
 -->
