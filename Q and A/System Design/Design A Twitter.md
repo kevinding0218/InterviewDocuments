@@ -16,6 +16,9 @@
 		- News Feed
 		- Follow / Unfollow a user
 		- Register / Login
+		- Concurrent User
+			- Daily Active User * Request Per User / Seconds Per Day = 150 M * 60 / 86400 ~ 100K
+			- Peak = Average Concurrent User * 3 ~ 300K
 - Service
 	- Split / Application / Module
 - Storage
@@ -24,5 +27,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTExNjcwNzQ5LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNTEwODYzNDU3LC0yMDg4NzQ2NjEyXX0=
 -->
