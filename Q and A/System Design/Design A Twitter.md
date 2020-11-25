@@ -10,7 +10,12 @@
 		- Post / Share a tweet
 		- Timeline / News Feed
 		- Follow / Unfollow a user
-	- Sort them and pick up the core feature
+	- Sort them and pick up the core feature as you cannot design everything in such a short time
+		- Post a Tweet
+		- Timeline
+		- News Feed
+		- Follow / Unfollow a user
+		- Register / Login
 - Service
 	- Split / Application / Module
 - Storage
@@ -19,5 +24,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgwMTAyNDI4LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTQ4NDYwODU4MSwtMjA4ODc0NjYxMl19
 -->
