@@ -131,7 +131,7 @@
 				- Correct answer: try as min change to optimize current plan
 					- e.g: add more machines to do the Push Async Task
 				- Evaluate for longer-term whether it's worth to converting entire model
-			- Push + Pull Plan!
+			- **Push + Pull Plan**!
 				- Normal user still use Push
 				- Lady Gaga as Star User which followers > 1m, do not use Push to NewsFeed Table
 				- When normal user gets new tweets, Pull from Star User's timeline and merge into his news feed
@@ -141,6 +141,6 @@
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYzMjczMzUsLTE0ODg0NDg4MzgsLTM2OD
-ExOTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTEyMTQxODA1MDUsLTE0ODg0NDg4MzgsLT
+M2ODExOTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
 -->
