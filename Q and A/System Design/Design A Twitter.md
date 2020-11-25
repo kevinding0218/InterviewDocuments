@@ -39,13 +39,19 @@
 			- Tweet Service: Post a tweet / News Feed / Timeline
 			- Media Service: Upload Image / Upload Video
 			- Friendship Service: Follow / Unfollow
-- Storage
+- **Storage**
 	- Schema / Data / SQL / NoSQL / File System
 	- Select Storage structure for every Service
+		- SQL Database
+			- User Table
+		- NoSQL Database
+			- Tweets / Social Graph(followers)
+		- File System
+			- Image / Video / Media files
 	- Go draw detailed Schema
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NTgxOTI4NiwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMzM5NjcwOTcyLC0yMDg4NzQ2NjEyXX0=
 -->
