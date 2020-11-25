@@ -27,7 +27,9 @@
 			- 1M ~ use a cluster of 1000 Web Server, need consider how to maintain those server if any of them doesn't work
 		- QPS vs Web Server vs Database
 			- Web Server ~ 1K QPS (including bottleneck of logic processing time and database query)
-			- SQL Database ~ 1K QPS (could be less if there is more JOIN
+			- SQL Database ~ 1K QPS (could be less if there is more JOIN or Index query)
+			- NoSQL(Cassandra) ~ 10K QPS
+			- NoSQL(Memcached) ~ 1M QPS
 - Service
 	- Split / Application / Module
 - Storage
@@ -36,5 +38,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAyNDEwNDI4LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMjc2MDI2ODM3LC0yMDg4NzQ2NjEyXX0=
 -->
