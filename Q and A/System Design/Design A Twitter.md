@@ -150,6 +150,7 @@
 	- Step 2: **Maintenance**
 		- Robust (what if one server/database goes down)
 		- Scalability ( how to scale if there is request peak)
+#### Other question
 - **How to implement follow & unfollow**
 	- After follow a user, Merge timeline into news feed asynchronously
 	- After unfollow a user, Pick out tweets from news feed asynchronously.
@@ -162,10 +163,12 @@
 	- high volumn request at peak from countless user
 	- Database cannot take pressure
 		- because it's large amount of requests to single common data in a short time, so it's useless with load balancer, sharding, consistent hashing
+	- Follow up: like, re-tweet, comment will edit the basic infor about this twee, how to refresh?
+	- Follow up: what to do when cache is invalidate?
 		- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTEyODQ1MDQsLTcxNTg2MDE4LC0xMj
-EzNzg5ODY1LC03NTk3ODgxNTQsLTE0ODg0NDg4MzgsLTM2ODEx
-OTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTI1MzU4MzcyMSwtNzE1ODYwMTgsLTEyMT
+M3ODk4NjUsLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMzY4MTE5
+NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
