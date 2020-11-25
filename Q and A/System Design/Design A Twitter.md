@@ -106,11 +106,11 @@
 				- Pull vs Push
 					- Facebook / Twitter - Pull
 					- Instragram - Push + Pull
-
+			- Now we should have an executable plan as we discuss with interviewr in previous 3 steps, we would get a work solution but not perfect solution
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NDc4MTcwNCwtMzY4MTE5NTk5LC04MT
+eyJoaXN0b3J5IjpbMTA5OTQwNjQ5OSwtMzY4MTE5NTk5LC04MT
 AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
