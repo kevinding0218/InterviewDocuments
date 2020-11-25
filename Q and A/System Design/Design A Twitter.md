@@ -169,10 +169,23 @@
 		- because it's large amount of requests to single common data in a short time, so it's useless with load balancer, sharding, consistent hashing
 	- Follow up: like, re-tweet, comment will edit the basic infor about this twee, how to refresh?
 	- Follow up: what to do when cache is invalidate?
+##### Common QA
+- Cache是什么？
+	- 你可以认为相当于算法中的HashMap
+	- 是Key-value的结构
+- Cache存在哪儿？Cache存在内存里
+- 常用的Cache工具/服务器有什么？
+	- Memcached
+	- Redis
+- 为什么需要用Cache?
+	- Cache因为是内存里，所以存取效率比DB要高
+- 为什么不全放Cache里？
+	- 内存中的数据断电就会丢失
+	- Cache 比硬盘贵
 		- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzYwNjk3MDIsLTcxNTg2MDE4LC0xMj
-EzNzg5ODY1LC03NTk3ODgxNTQsLTE0ODg0NDg4MzgsLTM2ODEx
-OTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMjA0NTQ4NjMyNSwtNzE1ODYwMTgsLTEyMT
+M3ODk4NjUsLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMzY4MTE5
+NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
