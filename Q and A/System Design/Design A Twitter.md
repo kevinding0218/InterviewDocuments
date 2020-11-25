@@ -85,9 +85,9 @@
 					- Process:
 						1. Send Post tweet to Web Server
 						2. Insert the tweet to DB Tweet Table
-						3. Post message: send tweets to my friends/followers
+						3. Publish message to MQ: send tweets to my friends/followers
 						4. Async Tasks Server: Get friends/followers
-						5. 
+						5. Fanout in MQ: Insert new tweet to follwers DB News Feed Table
 					- Complexity
 						- News Feed => 1 time of DB Read
 						- Post a tweet => N times of DB write if there is N follwings, the benefit is that this could be an asychronized task running in background, no need to have user wait when post a tweet
@@ -96,6 +96,6 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MTEyOTM0MCwtMzY4MTE5NTk5LC04MT
+eyJoaXN0b3J5IjpbMTU2NzgwNTAyNCwtMzY4MTE5NTk5LC04MT
 AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
