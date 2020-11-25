@@ -80,7 +80,7 @@
 						- postTweet(request, tweet)
 							- DB.insertTweet(request.user, tweet)
 							- return success
-				- Push Model
+				- **Push Model**
 					- **Description**: Create a list for every user to store user's followings' news feed, whenever a user post a tweet, Fanout this tweet to every user's new feed list, when user needs to getNewsFeed, just ready the latest 100 from News Feed List
 					- News Feed Table (id, owner_id<FK>, tweet_id<FK>, created_at), owner_id will be the fan_out of self and its followings user id
 					- **Process**:
@@ -103,10 +103,14 @@
 							- followers = DB.getFollowers(user)
 							- for follwer in followers:
 								- DB.insertNewsFeed(tweet, follower)	<= **the number of followers could be pretty big**
+				- Pull vs Push
+					- Facebook / Twitter - Pull
+					- Instragram - Push + Pull
+
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY1MjkyMzMyLC0zNjgxMTk1OTksLTgxMD
-MwNTkzNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTI1NDc4MTcwNCwtMzY4MTE5NTk5LC04MT
+AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
