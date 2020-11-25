@@ -194,12 +194,12 @@
 	- 那么我们看看，当你发了一个帖子之后，如果是 pull 模型，那么只需要在 Tweet Table 里增加一个你发的帖子的记录就好了。其他什么也不用做，当你的好友需要看你的帖子的时候，主动去找你发过的最近100条什么的。
 	- 而 Push Model 下，你发了一个tweet之后，系统需要主动的 deliver你的这个帖子去到 newsfeed table 里去。比如你有3个好友A,B,C。那么系统需要往 news feed table 里存入 [A+你的帖子], [B+你的帖子], [C+你的帖子] 三条数据。
 - [news feed 的细节问题](https://www.jiuzhang.com/qa/2031/)
--
+- [IN Query 的问题](https://www.jiuzhang.com/qa/1741/)
 - 比如在 Twitter 这样级别的数据中，假如你关注了100个好友。你的数据库一般是几千台，那么你这100个好友的信息，很可能分布在100台不同的机器上。这个时候，你用 IN QUery 和 for 一遍所有的好友，然后单独send query。效率是一样的，都可以认为是 N 条 并发的 数据库Query。虽然你这个时候看起来，既然是并发，时间应该很快咯。这个是没错，但是你想一下，一次用户请求，`整个系统`就要产生100条数据库请求，这个实在是负载太大了，需要优化。
 		- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMTMzNzc0OCwtNzE1ODYwMTgsLTEyMT
+eyJoaXN0b3J5IjpbMTMxOTA1OTE4NSwtNzE1ODYwMTgsLTEyMT
 M3ODk4NjUsLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMzY4MTE5
 NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
