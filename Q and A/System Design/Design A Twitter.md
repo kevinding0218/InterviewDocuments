@@ -187,11 +187,20 @@
 		- 用户打开Twitter之后首先看到的界面就是News Feed界面，这些 tweets 来自你关注的用户
 	- Timeline：某个用户发的所有帖子
 		- 用户点开某个人的页面之后，看到这个人发的所有帖子
+- News Feed 中 push model 和 pull model 的差別
+	- 区别就是有没有 News Feed Table。Pull 模型是没有 News Feed Table的，Pull 只有 Timeline table。有一些网上的 NewsFeed 和 Timeline 的定义和我的定义刚好相反，需要注意一下。
 
+我的 NewsFeed Table 存的是，谁发了什么，谁可以看到。包含三个部分，owner_user_id（这个newsfeed 是发给谁的），user_id 这个内容是谁发的（也可以不存这个，因为 可以根据 tweet_id 去查是谁发的），然后 tweet_id，然后一些其他的内容。
+
+而 Timeline Table 存的是，谁发了什么。也就是主要包含2个部分，user_id和发的内容。也就是说，如果你不做任何优化的话，实际上 Timeline Table 就是 Tweet Table。因为你可以  `select * from tweet_table where user_id=某人`，这就是某人的 timeline 了。
+
+那么我们看看，当你发了一个帖子之后，如果是 pull 模型，那么只需要在 Tweet Table 里增加一个你发的帖子的记录就好了。其他什么也不用做，当你的好友需要看你的帖子的时候，主动去找你发过的最近100条什么的。
+
+而 Push Model 下，你发了一个tweet之后，系统需要主动的 deliver你的这个帖子去到 newsfeed table 里去。比如你有3个好友A,B,C。那么系统需要往 news feed table 里存入 [A+你的帖子], [B+你的帖子], [C+你的帖子] 三条数据。
 		- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0MDcxNTY5NCwtNzE1ODYwMTgsLTEyMT
-M3ODk4NjUsLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMzY4MTE5
-NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbOTMwNTI4MTY0LC03MTU4NjAxOCwtMTIxMz
+c4OTg2NSwtNzU5Nzg4MTU0LC0xNDg4NDQ4ODM4LC0zNjgxMTk1
+OTksLTgxMDMwNTkzNSwtMjA4ODc0NjYxMl19
 -->
