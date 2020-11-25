@@ -1,7 +1,7 @@
 ### Design A Twitter
 #### 4S
 - Scenario
-	- Ask / Features/ QPS / DAU (Daily Active Users) / Interfaces
+	- Ask / Features/ QPS (Queries Per Second) / DAU (Daily Active Users) / Interfaces
 	- List features of twitter such as
 		- Register / Login
 		- User Profile Display / Edit
@@ -24,5 +24,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NDYwODU4MSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNTExNjcwNzQ5LC0yMDg4NzQ2NjEyXX0=
 -->
