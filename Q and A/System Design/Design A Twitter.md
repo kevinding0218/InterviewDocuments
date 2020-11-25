@@ -83,12 +83,13 @@
 					- **Description**: Create a list for every user to store user's followings' news feed, whenever a user post a tweet, Fanout this tweet to every user's new feed list, when user needs to getNewsFeed, just ready the latest 100 from News Feed List
 					- Process:
 					- Complexity
-						- News Feed => 
+						- News Feed => 1 time of DB Read
+						- Post a tweet => N times of DB write if there is N follwings, the benefit is that this could be an asychronized task running in background, 
 					- 
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTU2MDUwMjgsLTgxMDMwNTkzNSwtMj
-A4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTI2NzE2Nzg4MSwtODEwMzA1OTM1LC0yMD
+g4NzQ2NjEyXX0=
 -->
