@@ -65,7 +65,7 @@
 						3. Server goes to Tweet Table and get tweets from followings
 						4. Merge and return to UI
 					- **Complexity**: 
-						- Get news feed: if user has N friends, then it will take N times of DB Reads + O(MergeKSortedArray) which could be ignored
+						- Get news feed => if user has N friends, then it will take N times of DB Reads + O(MergeKSortedArray) which could be ignored
 						- Post a tweet => 1 time of DB Write
 					- **Drawback**:
 						- getNewsFeed(request)
@@ -89,6 +89,6 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxOTQ3OTA2MSwtODEwMzA1OTM1LC0yMD
-g4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTEzOTU2MDUwMjgsLTgxMDMwNTkzNSwtMj
+A4ODc0NjYxMl19
 -->
