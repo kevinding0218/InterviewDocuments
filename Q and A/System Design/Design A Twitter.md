@@ -96,11 +96,16 @@
 							- return DB.getNewsFeed(request.user)
 						- postTweet(request, tweet_info)
 							- tweet = DB.insertTweet(request.user, tweet_info)
-							- AsyncService.fanoutTweet(request.user, twe
+							- AsyncService.fanoutTweet(request.user, tweet)
+							- return success
+						- asyncService::fanoutTweet(user, tweet)
+							- followers = DB.getFollowers(user)
+							- for follwer in followers:
+								- DB.insertNewsFeed(tweet, follower)	<= the number of followers could be pretty big
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MjU1NTIzMiwtMzY4MTE5NTk5LC04MT
+eyJoaXN0b3J5IjpbMTc3Njg2Mjg1NiwtMzY4MTE5NTk5LC04MT
 AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
