@@ -55,7 +55,7 @@
 			- Media Service
 			- Image / Video / Media files 
 	- Go draw detailed **Schema**
-		- New Feed
+		- **How to Implement Get New Feed**
 			- What is New Feed
 				- the information stream when you login in Facebook / Twitter / Wechat, the union of all the message sent by your friends
 				- **Pull Model**
@@ -103,12 +103,12 @@
 							- followers = DB.getFollowers(user)
 							- for follwer in followers:
 								- DB.insertNewsFeed(tweet, follower)	<= **the number of followers could be pretty big**
-				- Pull vs Push
+				- **Pull vs Push**
 					- Facebook / Twitter - Pull
 					- Instragram - Push + Pull
 			- Now we should have an executable plan as we discuss with interviewr in previous 3 steps, we would get a work solution but not perfect solution
 - **Scale**
-	- Sharding / Optimize / Special Case
+	- **Sharding / Optimize / Special Case**
 	- Step 1: **Optimize**
 		- Solve the drawback in Pull vs Push Model
 			- **Solve Pull Model Drawback**
@@ -150,9 +150,11 @@
 	- Step 2: **Maintenance**
 		- Robust (what if one server/database goes down)
 		- Scalability ( how to scale if there is request peak)
+- **How to implement follow & unfollow**
+	- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NTg1Mzg0NiwtNzU5Nzg4MTU0LC0xND
-g4NDQ4ODM4LC0zNjgxMTk1OTksLTgxMDMwNTkzNSwtMjA4ODc0
-NjYxMl19
+eyJoaXN0b3J5IjpbLTEyMTM3ODk4NjUsLTc1OTc4ODE1NCwtMT
+Q4ODQ0ODgzOCwtMzY4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3
+NDY2MTJdfQ==
 -->
