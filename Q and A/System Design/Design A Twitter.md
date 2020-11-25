@@ -134,13 +134,13 @@
 			- Push + Pull Plan!
 				- Normal user still use Push
 				- Lady Gaga as Star User which followers > 1m, do not use Push to NewsFeed Table
-				- When normal user gets new tweets, pull from Star User's timeline and merge into his news feed
+				- When normal user gets new tweets, Pull from Star User's timeline and merge into his news feed
 				- If a star user's follower number decrease, we don't need to change original code but 
 	- Step 2: Maintenance
 		- Robust (what if one server/database goes down)
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MjYzNjY2NSwtMTQ4ODQ0ODgzOCwtMz
-Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbOTYzMjczMzUsLTE0ODg0NDg4MzgsLTM2OD
+ExOTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
 -->
