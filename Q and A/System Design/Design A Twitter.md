@@ -1,6 +1,6 @@
 ### Design A Twitter
 #### 4S
-- Scenario
+- **Scenario**
 	- Ask / Features/ QPS (Queries Per Second) / DAU (Daily Active Users) / Interfaces
 	- List features of twitter such as
 		- Register / Login
@@ -30,10 +30,10 @@
 			- SQL Database ~ 1K QPS (could be less if there is more JOIN or Index query)
 			- NoSQL(Cassandra) ~ 10K QPS
 			- NoSQL(Memcached) ~ 1M QPS
-- Service
+- **Service**
 	- Split / Application / Module
-		- Replay : go over every requirement and add a service for each requirement
-		- Merge: merge common function as a service
+		- **Replay** : go over every requirement and add a service for each requirement
+		- **Merge**: merge common function as a service
 		- Router
 			- User Service: Register / Login
 			- Tweet Service: Post a tweet / News Feed / Timeline
@@ -41,9 +41,11 @@
 			- Friendship Service: Follow / Unfollow
 - Storage
 	- Schema / Data / SQL / NoSQL / File System
+	- Select Storage structure for every Service
+	- Go draw detailed Schema
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDY4MTE5NCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTk5NTgxOTI4NiwtMjA4ODc0NjYxMl19
 -->
