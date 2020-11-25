@@ -161,11 +161,11 @@
 - Lady Gaga Post II - Thundering Herd
 	- high volumn request at peak from countless user
 	- Database cannot take pressure
-		- because it's large amount of requests to single data in a short time
+		- because it's large amount of requests to single common data in a short time, so it's useless with load balancer, sharding, consistent hashing
 		- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNTg2MDE4LC0xMjEzNzg5ODY1LC03NT
-k3ODgxNTQsLTE0ODg0NDg4MzgsLTM2ODExOTU5OSwtODEwMzA1
-OTM1LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTExMTEyODQ1MDQsLTcxNTg2MDE4LC0xMj
+EzNzg5ODY1LC03NTk3ODgxNTQsLTE0ODg0NDg4MzgsLTM2ODEx
+OTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
 -->
