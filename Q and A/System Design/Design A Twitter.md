@@ -155,10 +155,11 @@
 	- After unfollow a user, Pick out tweets from news feed asynchronously.
 	- Why Async? User get action completed immediately
 	- Drawback: refresh news feed after unfollow, the tweets are still there for a short time, but will be erased eventually
-	- 
+- How to store "likes"
+	- Tweet Table (id, user_id, content, created_at, like_nums, comment_nums, retweet_nums)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwOTMzMTUzMSwtMTIxMzc4OTg2NSwtNz
-U5Nzg4MTU0LC0xNDg4NDQ4ODM4LC0zNjgxMTk1OTksLTgxMDMw
-NTkzNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbOTc4NTcyNDgzLC0xMjEzNzg5ODY1LC03NT
+k3ODgxNTQsLTE0ODg0NDg4MzgsLTM2ODExOTU5OSwtODEwMzA1
+OTM1LC0yMDg4NzQ2NjEyXX0=
 -->
