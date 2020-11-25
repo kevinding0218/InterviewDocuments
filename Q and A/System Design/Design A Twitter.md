@@ -41,17 +41,17 @@
 			- Friendship Service: Follow / Unfollow
 - **Storage**
 	- Schema / Data / SQL / NoSQL / File System
-	- Select Storage structure for every Service
+	- **Select** Storage structure for every Service
 		- SQL Database
-			- User Table
+			- User Table (User Service/Friendship Service)
 		- NoSQL Database
-			- Tweets / Social Graph(followers)
+			- Tweets / Social Graph(Tweet Service/Friendship Service)
 		- File System
-			- Image / Video / Media files
-	- Go draw detailed Schema
+			- Image / Video / Media files (Media Service)
+	- Go draw detailed **Schema**
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM5NjcwOTcyLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTE5MTgzMzkyMiwtMjA4ODc0NjYxMl19
 -->
