@@ -1,5 +1,6 @@
 ### Design A Twitter
 #### 4S
+- It's all about Trade off
 - **Scenario**
 	- Ask / Features/ QPS (Queries Per Second) / DAU (Daily Active Users) / Interfaces
 	- List features of twitter such as
@@ -82,16 +83,16 @@
 				- Push Model
 					- **Description**: Create a list for every user to store user's followings' news feed, whenever a user post a tweet, Fanout this tweet to every user's new feed list, when user needs to getNewsFeed, just ready the latest 100 from News Feed List
 					- News Feed Table (id, owner_id<FK>, tweet_id<FK>, created_at), owner_id will be the fan_out of self and its followings user id
-					- Process:
+					- **Process**:
 						1. Send Post tweet to Web Server
 						2. Insert the tweet to DB Tweet Table
 						3. Publish message to MQ: send tweets to my friends/followers
 						4. Async Tasks Server: Get friends/followers
 						5. Fanout in MQ: Insert new tweet to follwers DB News Feed Table
-					- Complexity
+					- **Complexity**
 						- News Feed => 1 time of DB Read
 						- Post a tweet => N times of DB write if there is N follwings, the benefit is that this could be an asychronized task running in background, no need to have user wait when post a tweet
-					- Drawback:
+					- **Drawback**:
 						- getNewsFeed(request)
 							- return DB.getNewsFeed(request.user)
 						- postTweet(request, tweet_info)
@@ -101,11 +102,11 @@
 						- asyncService::fanoutTweet(user, tweet)
 							- followers = DB.getFollowers(user)
 							- for follwer in followers:
-								- DB.insertNewsFeed(tweet, follower)	<= the number of followers could be pretty big
+								- DB.insertNewsFeed(tweet, follower)	<= **the number of followers could be pretty big**
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3Njg2Mjg1NiwtMzY4MTE5NTk5LC04MT
+eyJoaXN0b3J5IjpbLTI4ODcwMDUzOSwtMzY4MTE5NTk5LC04MT
 AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
