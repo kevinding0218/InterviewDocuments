@@ -21,6 +21,10 @@
 			- Peak = Average Concurrent User * 3 ~ 300K
 			- Read QPS ~ 300K
 			- Write QPS ~ 5K
+		- QPS usage
+			- 100 ~ use a laptop/desktop as Web Server
+			- 1K ~ use a better Web Server, need to consider Single Point Failure
+			- 1M ~ use a cluster of 1000 Web Server, need consider 
 - Service
 	- Split / Application / Module
 - Storage
@@ -29,5 +33,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NDE1Nzc2MCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTUwMDU1NTAzNSwtMjA4ODc0NjYxMl19
 -->
