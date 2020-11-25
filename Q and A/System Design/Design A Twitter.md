@@ -1,6 +1,6 @@
 ### Design A Twitter
 #### 4S
-- It's all about Trade off
+- It's all about Trade Off!
 - **Scenario**
 	- Ask / Features/ QPS (Queries Per Second) / DAU (Daily Active Users) / Interfaces
 	- List features of twitter such as
@@ -107,6 +107,6 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4ODcwMDUzOSwtMzY4MTE5NTk5LC04MT
-AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbNDY1MjkyMzMyLC0zNjgxMTk1OTksLTgxMD
+MwNTkzNSwtMjA4ODc0NjYxMl19
 -->
