@@ -58,7 +58,7 @@
 			- What is New Feed
 				- the information stream when you login in Facebook / Twitter / Wechat, the union of all the message sent by your friends
 				- **Pull Model**
-					- When user is requesting News Feed, get first 100 tweets of every friend, merge them and sort the first 100 News Feed (Merge K Sorted Arrays)
+					- **Description**: When user is requesting News Feed, get first 100 tweets of every friend, merge them and sort the first 100 News Feed (Merge K Sorted Arrays)
 					- **Process**:
 						1. Send Get News Feed to Web Server
 						2. Server goes to Friendship Table and get followings list
@@ -80,13 +80,15 @@
 							- DB.insertTweet(request.user, tweet)
 							- return success
 				- Push Model
-					- Create a list for every user to store user's followings' news feed
-					- Whenever a user post a tweet, Fanout this tweet to every user's new feed list
-					- When user needs to getNewsFeed, just ready the latest 100 from News Feed List
+					- **Description**: Create a list for every user to store user's followings' news feed, whenever a user post a tweet, Fanout this tweet to every user's new feed list, when user needs to getNewsFeed, just ready the latest 100 from News Feed List
+					- Process:
+					- Complexity
+						- News Feed => 
 					- 
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMDMwNTkzNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTkxOTQ3OTA2MSwtODEwMzA1OTM1LC0yMD
+g4NzQ2NjEyXX0=
 -->
