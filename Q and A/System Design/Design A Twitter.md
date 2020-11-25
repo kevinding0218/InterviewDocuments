@@ -81,7 +81,7 @@
 							- return success
 				- Push Model
 					- **Description**: Create a list for every user to store user's followings' news feed, whenever a user post a tweet, Fanout this tweet to every user's new feed list, when user needs to getNewsFeed, just ready the latest 100 from News Feed List
-					- News Feed Table (id, owner_id<FK>, tweet_id<FK>, created_at)
+					- News Feed Table (id, owner_id<FK>, tweet_id<FK>, created_at), owner_id will be the fan_out of self and its followings user id
 					- Process:
 					- Complexity
 						- News Feed => 1 time of DB Read
@@ -91,6 +91,6 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2ODExOTU5OSwtODEwMzA1OTM1LC0yMD
-g4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTI1NDY3MjUzOCwtMzY4MTE5NTk5LC04MT
+AzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
