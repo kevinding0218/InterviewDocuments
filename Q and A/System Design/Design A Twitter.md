@@ -158,9 +158,14 @@
 - How to store "likes"
 	- Tweet Table (id, user_id<FK>, content, created_at, like_nums, comment_nums, retweet_nums) where like_nums could be de-normalized as
 	- Like Table: (id, user_id<FK>, tweet_id<FK>, created_at)
+- Lady Gaga Post II - Thundering Herd
+	- high volumn request at peak from countless user
+	- Database cannot take pressure
+		- because it's large amount of requests to single data in a short time
+		- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3OTk1Njc0MSwtMTIxMzc4OTg2NSwtNz
-U5Nzg4MTU0LC0xNDg4NDQ4ODM4LC0zNjgxMTk1OTksLTgxMDMw
-NTkzNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTcxNTg2MDE4LC0xMjEzNzg5ODY1LC03NT
+k3ODgxNTQsLTE0ODg0NDg4MzgsLTM2ODExOTU5OSwtODEwMzA1
+OTM1LC0yMDg4NzQ2NjEyXX0=
 -->
