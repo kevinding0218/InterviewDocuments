@@ -43,7 +43,7 @@
 	- Schema / Data / SQL / NoSQL / File System
 	- **Select** Storage structure for every Service
 		- SQL Database
-			-User Service/Friendship Service)
+			-User Service/Friendship Service/Tweet Service)
 			- User Table (id, username, email, password)
 			- Friendship Table (from_user_id<FK>, to_user_id<FK>)
 			- Tweet Table (id, user_id<FK>, content, created_at)
@@ -58,5 +58,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIxOTU2NTQsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTIyMTM3MDE3OSwtMjA4ODc0NjYxMl19
 -->
