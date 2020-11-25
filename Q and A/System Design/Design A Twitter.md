@@ -46,7 +46,7 @@
 			-User Service/Friendship Service)
 			- User Table (id, username, email, password)
 			- Friendship Table (from_user_id/FK, to_user_id/FK)
-			- 
+			- Tweet Table (id, user_id, content, created_at)
 		- NoSQL Database
 			- Tweet Service/Friendship Service
 			- Tweets / Social Graph
@@ -58,6 +58,5 @@
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDk4NzIzODIsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbOTI2NjgzNTMsLTIwODg3NDY2MTJdfQ==
 -->
