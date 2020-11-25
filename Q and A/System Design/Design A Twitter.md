@@ -67,10 +67,18 @@
 					- Complexity: 
 						- Get news feed: if user has N friends, then it will take N times of DB Reads + O(MergeKSortedArray) which could be ignored
 						- Post a tweet => 1 time of DB Write
+					- Drawback:
+						- getNewsFeed(request)
+							- follwings = DB.getFollowings(user = request.user)
+							- news_feed = empty
+							- for follow in followings:
+								- tweets = DB.getTweets(follow.to_user, 100)
+								- news_feed.merge(tweets)
+							- sort(news
 - Scale
 	- Sharding / Optimize / Special Case
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTYyMjMxMTYsLTIwODg3NDY2MTJdfQ
+eyJoaXN0b3J5IjpbLTIxMDkyNzgxOTUsLTIwODg3NDY2MTJdfQ
 ==
 -->
