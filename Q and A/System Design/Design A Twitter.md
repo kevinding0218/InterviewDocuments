@@ -193,13 +193,24 @@
 	- 而 Timeline Table 存的是，谁发了什么。也就是主要包含2个部分，user_id和发的内容。也就是说，如果你不做任何优化的话，实际上 Timeline Table 就是 Tweet Table。因为你可以  `select * from tweet_table where user_id=某人`，这就是某人的 timeline 了。
 	- 那么我们看看，当你发了一个帖子之后，如果是 pull 模型，那么只需要在 Tweet Table 里增加一个你发的帖子的记录就好了。其他什么也不用做，当你的好友需要看你的帖子的时候，主动去找你发过的最近100条什么的。
 	- 而 Push Model 下，你发了一个tweet之后，系统需要主动的 deliver你的这个帖子去到 newsfeed table 里去。比如你有3个好友A,B,C。那么系统需要往 news feed table 里存入 [A+你的帖子], [B+你的帖子], [C+你的帖子] 三条数据。
-- [news feed 的细节问题](https://www.jiuzhang.com/qa/2031/)
 - [IN Query 的问题](https://www.jiuzhang.com/qa/1741/)
-- 比如在 Twitter 这样级别的数据中，假如你关注了100个好友。你的数据库一般是几千台，那么你这100个好友的信息，很可能分布在100台不同的机器上。这个时候，你用 IN QUery 和 for 一遍所有的好友，然后单独send query。效率是一样的，都可以认为是 N 条 并发的 数据库Query。虽然你这个时候看起来，既然是并发，时间应该很快咯。这个是没错，但是你想一下，一次用户请求，`整个系统`就要产生100条数据库请求，这个实在是负载太大了，需要优化。
-		- 
+	- 比如在 Twitter 这样级别的数据中，假如你关注了100个好友。你的数据库一般是几千台，那么你这100个好友的信息，很可能分布在100台不同的机器上。这个时候，你用 IN QUery 和 for 一遍所有的好友，然后单独send query。效率是一样的，都可以认为是 N 条 并发的 数据库Query。虽然你这个时候看起来，既然是并发，时间应该很快咯。这个是没错，但是你想一下，一次用户请求，`整个系统`就要产生100条数据库请求，这个实在是负载太大了，需要优化。
+- [NewsFeed如何实现pagination](https://www.jiuzhang.com/qa/1839/)
+	- 问：**是不是不管push还是pull模型，如果翻页的话都得pull?**  
+	- 翻页是用户主动操作的过程，所以肯定是由client 发给 server，肯定是一个pull的过程。
+
+问：**假设前100条中最早的timestamp是T，就分别请求follow的人在T之前的100条feed，然后再进行合并？**  
+答：对
+
+问：**如果恰好有几条feed的timestamp一样该如何处理？**  
+答：首先不会有帖子的timestamp一样，timestamp的精度很高的（微秒级别）
+
+通常来说，翻页这个完全可以作为一道单独的系统设计面试题来问你。翻页并不是简单的1-100，101-200这样去翻页。因为当你在翻页的时候，你的news feed可能已经添加了新的 内容，这个时候你再去索引最新的101-200可能和你的1-100就有重叠了。
+
+通常的做法是，拿第101个帖子的timestamp作为下一页的起始位置，也就是说，当用户在看到第一页的前100个帖子的时候，他还有第101个帖子的timestamp信息（隐藏在你看不到的地方），然后你请求下一页的时候，会带上这个timestamp的信息，server端会去数据库里请求 >= timestamp 的前101个帖子，然后也同样把第101个帖子作为下一页的timestamp。这个方法比直接用第100个帖子的timestamp好的地方是，你如果读不到第101个帖子，说明没有下一页了，如果你刚才只有100个帖子的话，用第100个帖子的timestamp的坏处是，你会有一次`空翻`。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxOTA1OTE4NSwtNzE1ODYwMTgsLTEyMT
+eyJoaXN0b3J5IjpbMTMxNjA1NDA3MSwtNzE1ODYwMTgsLTEyMT
 M3ODk4NjUsLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMzY4MTE5
 NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
