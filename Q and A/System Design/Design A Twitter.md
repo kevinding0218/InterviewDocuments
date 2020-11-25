@@ -1,6 +1,10 @@
 ### Design A Twitter
 #### 4S
+- Ask before design
+- No more no less
+- Done is better than perfect!
 - It's all about Trade Off!
+- Analysis is important than solution
 - **Scenario**
 	- Ask / Features/ QPS (Queries Per Second) / DAU (Daily Active Users) / Interfaces
 	- List features of twitter such as
@@ -156,10 +160,10 @@
 	- After unfollow a user, Pick out tweets from news feed asynchronously.
 	- Why Async? User get action completed immediately
 	- Drawback: refresh news feed after unfollow, the tweets are still there for a short time, but will be erased eventually
-- How to store "likes"
+- **How to store "likes"**
 	- Tweet Table (id, user_id<FK>, content, created_at, like_nums, comment_nums, retweet_nums) where like_nums could be de-normalized as
 	- Like Table: (id, user_id<FK>, tweet_id<FK>, created_at)
-- Lady Gaga Post II - Thundering Herd
+- **Lady Gaga Post II - Thundering Herd**
 	- high volumn request at peak from countless user
 	- Database cannot take pressure
 		- because it's large amount of requests to single common data in a short time, so it's useless with load balancer, sharding, consistent hashing
@@ -168,7 +172,7 @@
 		- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MzU4MzcyMSwtNzE1ODYwMTgsLTEyMT
-M3ODk4NjUsLTc1OTc4ODE1NCwtMTQ4ODQ0ODgzOCwtMzY4MTE5
-NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE2NzYwNjk3MDIsLTcxNTg2MDE4LC0xMj
+EzNzg5ODY1LC03NTk3ODgxNTQsLTE0ODg0NDg4MzgsLTM2ODEx
+OTU5OSwtODEwMzA1OTM1LC0yMDg4NzQ2NjEyXX0=
 -->
