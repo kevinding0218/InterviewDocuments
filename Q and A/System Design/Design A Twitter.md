@@ -131,11 +131,15 @@
 				- Correct answer: try as min change to optimize current plan
 					- e.g: add more machines to do the Push Async Task
 				- Evaluate for longer-term whether it's worth to converting entire model
+			- Push + Pull Plan!
+				- Normal user still use Push
+				- Lady Gaga as Star User, do not use Push to NewsFeed Table
+				- When normal user gets , get from Star User's timeline and merge into 
 	- Step 2: Maintenance
 		- Robust (what if one server/database goes down)
 		- Scalability ( how to scale if there is request peak)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMzU5NzUwNSwtMTQ4ODQ0ODgzOCwtMz
+eyJoaXN0b3J5IjpbMTI5NjU5NTc4OCwtMTQ4ODQ0ODgzOCwtMz
 Y4MTE5NTk5LC04MTAzMDU5MzUsLTIwODg3NDY2MTJdfQ==
 -->
