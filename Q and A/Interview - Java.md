@@ -64,6 +64,7 @@ public  class  Memory {
 - Static Method;
 	- Java interface static method is similar to default method except that we can’t override them in the implementation classes. This feature helps us in avoiding undesired results incase of poor implementation in implementation classes, static method is visible to interface methods only
 	- static methods are good for providing utility methods, for example null check, collection sorting etc.
+### Java main method [Link](https://www.journaldev.com/12552/public-static-void-main-string-args-java-main-method)
 ### Thread implementation
 1. Extends from Thread class and override run method
 	```
@@ -156,7 +157,8 @@ public  class  Memory {
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMz
-k1Nzg5MSwxNTIyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUw
-MzksLTE0MDI2NjQ3OTMsMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbMTg4NDE3MzEyNiwyMDQ4MzA1NTAyLDM1OT
+Y4NjE3NiwxMTEzOTU3ODkxLDE1MjIyMzUyNTAsMTYxNDUzNzg2
+MCwtMTczMDQ5NTAzOSwtMTQwMjY2NDc5MywxODc0MDIxMjU0XX
+0=
 -->
