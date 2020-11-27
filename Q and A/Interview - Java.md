@@ -7,11 +7,11 @@
 - we can't assign a String value to an int value directly or even by casting, but we can do this with Integer
 - Integer can be directly converted to other types like binary or hex
 - int can be compared by using `==` , while Integer usually compares by using `equals`, if number ranges is within ~127 - 128 then we can use "because when using `=="` to compare Integer as during this data range, it uses primitive type as cache in memory, otherwise it, it's actually a reference type so the comparison was happening at pointer which referenced to the object memory address, Integer also have a mechanism like cache so it can be comparesd by address and value (reference type)using `==` when value between -128 ~ 127
-### JVM
+### JVM 
 - JVM is a virtual machine that understands and runs java bytecodes, works for memory management in heap space and stack memory
 - JVM will mostly distribute objects to HEAP level, when JVM execute the code, every thread will have a thread stack
 - Since program is running on virtual machine, it would also have some local method stack like it will calling some C library e.g Sleep
-#### Java Heap Space
+#### Java Heap Space [Link](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 - Java **Heap space is used by java runtime to allocate memory to Objects and JRE classes**. Whenever we create an object, it’s always created in the Heap space.
 - **Garbage Collection runs on the heap memory to free the memory** used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
 ####  Java Stack Memory
@@ -156,7 +156,7 @@ public  class  Memory {
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU5Njg2MTc2LDExMTM5NTc4OTEsMTUyMj
-IzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAyNjY0
-NzkzLDE4NzQwMjEyNTRdfQ==
+eyJoaXN0b3J5IjpbMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMz
+k1Nzg5MSwxNTIyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUw
+MzksLTE0MDI2NjQ3OTMsMTg3NDAyMTI1NF19
 -->
