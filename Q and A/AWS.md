@@ -6,6 +6,7 @@
 - AWS: Better web console
 - Pluralsight: Understanding the Difference between Azure and AWS
 ### AWS Core Service
+#### [ECS vs ECR](https://medium.com/faun/what-is-amazon-ecs-and-ecr-how-does-they-work-with-an-example-4acbf9be8415)
 #### Elastic Cloud Compute (EC2)
 -  Computing services operating in remote data servers around the world
 -  Instances running computing operations can increase or decrease at will
@@ -113,11 +114,11 @@
 - You can configure which HTTP methods are allowed, whicih edge locations to use, and even configure your own SSL certificates.
 ### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkyMTc3ODc5LDE5NzI2NDQ4NzAsMTU1NT
-AxNDI5MSwtMTEzMjUxOTA2MCwtNDg5MTIzOTk3LDQwODkwNDc2
-NywtMTc0MzUxMTM4NywtMTM3ODU2MTM1MCwtNzY2MzQyNTcxLD
-E3OTI4NzM5MDUsLTE0MzIwODgzMzMsLTk5MTcxNTM0OSw4NDU0
-NzIxMTIsLTMxMzI2NDA0OCwtNjg1MDc1MzkyLDE1MDQxOTg2MD
-QsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1NjE2NTU5LDE0MzIz
-OTA4NDZdfQ==
+eyJoaXN0b3J5IjpbLTE2OTQyNTM0MjksNDkyMTc3ODc5LDE5Nz
+I2NDQ4NzAsMTU1NTAxNDI5MSwtMTEzMjUxOTA2MCwtNDg5MTIz
+OTk3LDQwODkwNDc2NywtMTc0MzUxMTM4NywtMTM3ODU2MTM1MC
+wtNzY2MzQyNTcxLDE3OTI4NzM5MDUsLTE0MzIwODgzMzMsLTk5
+MTcxNTM0OSw4NDU0NzIxMTIsLTMxMzI2NDA0OCwtNjg1MDc1Mz
+kyLDE1MDQxOTg2MDQsNzM0NzMwMDM0LDkyNzUzNjM2NSwxODg1
+NjE2NTU5XX0=
 -->
