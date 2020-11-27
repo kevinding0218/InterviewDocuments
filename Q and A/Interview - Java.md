@@ -57,7 +57,8 @@ public  class  Memory {
 ###  ArrayList vs LinkedList
 - **ArrayList is using an array to implement the _List_ interface**. As arrays are fixed size in Java, _ArrayList_ creates an array with some initial capacity. Along the way, if we need to store more items than that default capacity, it will replace that array with a new and more spacious one. So the cost of inserting/deleting will be expensive in memory usage but access is faster as through array index
 - **LinkedList internally uses a doubly linked list** to store the elements, so inserting and deleting are faster but reading is slower as it has to go through some traverse manually
-### 
+### Interface Default Method
+- "default" keyword infront of the implementation method with in the interface. This is the new way of declaring the method body in Java 8 for an interface, default methods comes along with implementation.
 ### Thread implementation
 1. Extends from Thread class and override run method
 	```
@@ -150,7 +151,7 @@ public  class  Memory {
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzk1Nzg5MSwxNTIyMjM1MjUwLDE2MT
-Q1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2NjQ3OTMsMTg3NDAy
-MTI1NF19
+eyJoaXN0b3J5IjpbODI4MDMxMDA2LDExMTM5NTc4OTEsMTUyMj
+IzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAyNjY0
+NzkzLDE4NzQwMjEyNTRdfQ==
 -->
