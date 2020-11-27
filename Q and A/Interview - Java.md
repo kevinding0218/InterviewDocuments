@@ -59,6 +59,7 @@ public  class  Memory {
 - **LinkedList internally uses a doubly linked list** to store the elements, so inserting and deleting are faster but reading is slower as it has to go through some traverse manually
 ### Interface Default Method
 - "default" keyword infront of the implementation method with in the interface. This is the new way of declaring the method body in Java 8 for an interface, default methods comes along with implementation.
+- when a class will implement Interface1, it is not mandatory to provide implementation for default methods of interface. This feature will help us in extending interfaces with additional methods, all we need is to provide a default implementation.
 ### Thread implementation
 1. Extends from Thread class and override run method
 	```
@@ -151,7 +152,7 @@ public  class  Memory {
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI4MDMxMDA2LDExMTM5NTc4OTEsMTUyMj
+eyJoaXN0b3J5IjpbNDQyOTI4OTkyLDExMTM5NTc4OTEsMTUyMj
 IzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAyNjY0
 NzkzLDE4NzQwMjEyNTRdfQ==
 -->
