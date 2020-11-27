@@ -62,7 +62,7 @@ public  class  Memory {
 	- "default" keyword infront of the implementation method with in the interface. This is the new way of declaring the method body in Java 8 for an interface, default methods comes along with implementation.
 	- help us in extending interfaces without having the fear of breaking implementation classes, it will help us in removing base implementation classes, we can provide default implementation and the implementation classes can chose which one to override.
 - Static Method;
-	- Java interface static method is similar to default method except that we can’t override them in the implementation classes. This feature helps us in avoiding undesired results incase of poor implementation in implementation classes
+	- Java interface static method is similar to default method except that we can’t override them in the implementation classes. This feature helps us in avoiding undesired results incase of poor implementation in implementation classes, static method is visible to interface methods only
 ### Thread implementation
 1. Extends from Thread class and override run method
 	```
@@ -155,7 +155,7 @@ public  class  Memory {
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NTA3OTQ5NCwxMTEzOTU3ODkxLDE1Mj
-IyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5NTAzOSwtMTQwMjY2
-NDc5MywxODc0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTIwMTEwNjA5ODksMTExMzk1Nzg5MSwxNT
+IyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2
+NjQ3OTMsMTg3NDAyMTI1NF19
 -->
