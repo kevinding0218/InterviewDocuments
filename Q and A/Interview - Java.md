@@ -58,9 +58,11 @@ public  class  Memory {
 - **ArrayList is using an array to implement the _List_ interface**. As arrays are fixed size in Java, _ArrayList_ creates an array with some initial capacity. Along the way, if we need to store more items than that default capacity, it will replace that array with a new and more spacious one. So the cost of inserting/deleting will be expensive in memory usage but access is faster as through array index
 - **LinkedList internally uses a doubly linked list** to store the elements, so inserting and deleting are faster but reading is slower as it has to go through some traverse manually
 ### Interface Default Method vs Static Method [Link](https://www.journaldev.com/2752/java-8-interface-changes-static-method-default-method)
-- "default" keyword infront of the implementation method with in the interface. This is the new way of declaring the method body in Java 8 for an interface, default methods comes along with implementation.
-- help us in extending interfaces without having the fear of breaking implementation classes, it will help us in removing base implementation classes, we can provide default implementation and the implementation classes can chose which one to override.
-- StaJava interface static method is similar to default method except that we can’t override them in the implementation classes. This feature helps us in avoiding undesired results incase of poor implementation in implementation classes
+- Default Method
+	- "default" keyword infront of the implementation method with in the interface. This is the new way of declaring the method body in Java 8 for an interface, default methods comes along with implementation.
+	- help us in extending interfaces without having the fear of breaking implementation classes, it will help us in removing base implementation classes, we can provide default implementation and the implementation classes can chose which one to override.
+- Static Method;
+	- Java interface static method is similar to default method except that we can’t override them in the implementation classes. This feature helps us in avoiding undesired results incase of poor implementation in implementation classes
 ### Thread implementation
 1. Extends from Thread class and override run method
 	```
@@ -153,7 +155,7 @@ public  class  Memory {
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxOTk1MTE1NiwxMTEzOTU3ODkxLDE1Mj
+eyJoaXN0b3J5IjpbMTA4NTA3OTQ5NCwxMTEzOTU3ODkxLDE1Mj
 IyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5NTAzOSwtMTQwMjY2
 NDc5MywxODc0MDIxMjU0XX0=
 -->
