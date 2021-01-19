@@ -80,9 +80,9 @@ What would happen to below scenario?
 What happens when setUser occurs right after user = database.get(user_id) in getUser?
 - This might occur minor chance
 Inconsistency between cache and database
-- This is not avoided, often we add a timeout in cache.set(key, user, ttl=5mins) to minimize the inconsistancy scenarios
+- This is not avoided, often we add a timeout in cache.set(key, user, ttl=5mins) to minimize the inconsistancy scenarios, called eventually consistent
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIyNTAyNzIxLDE0MTk5OTQ4NzksMjA1MD
-A2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1
-LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbMjUwMTA2MDksMTQxOTk5NDg3OSwyMDUwMD
+Y1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUs
+MTM5NzA3MTI2OF19
 -->
