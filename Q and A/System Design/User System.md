@@ -36,10 +36,16 @@
 - store info that could be used later on first
 	- next time when query for such info, can get it directly from here, no need to re-calculation or db query, etc
 - can be consider as a software level HashMap
-	- Java hashmap is t
+	- Java hashmap is process level
 - key-value structure
+#### Common cache software
+- Memcached (not support data persistence)
+- Redis (support data persistence)
+#### Does cache always store in memory?
+- No
+- cache doesn't mean it 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTIzMjI2MDAsMTY5NTA2NTgzOCwxNT
+eyJoaXN0b3J5IjpbLTEyMTM5Nzc4MzksMTY5NTA2NTgzOCwxNT
 YyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
 -->
