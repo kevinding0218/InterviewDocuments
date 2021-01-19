@@ -125,7 +125,7 @@ Inconsistency between cache and database
 | B | C |
 | C | B |
 	- Query B's friends
-	SELECT * FROM friendship WHERE from_user_id = B
+	SELECT * FROM friendship WHERE from_user_id = B - return A, C
 - Solution 2: save as one message, but need to check twice when query
 ### Friendship actions
 - Most of them are key-value
@@ -157,8 +157,8 @@ Inconsistency between cache and database
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzIzMzgwMzMsMTI4MDY0NTA1OSwtMz
-E1OTQzMzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIw
-MywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OT
-UwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbNjg4ODIxMDI4LDEyODA2NDUwNTksLTMxNT
+k0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMs
+MTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MD
+Y1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
