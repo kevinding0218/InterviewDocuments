@@ -114,10 +114,11 @@ Inconsistency between cache and database
 ### Read more
 - we can use Memcached to improve the performance of read
 ### What if read and write a lot
-- Solution 1: we can use more database server to 
+- Solution 1: we can use more database server to take over the stream
+- Solution 2: we can use Cache-through database like Redis which read/write both fast, Memcached is a cache-aside database, client needs to manage data loading when cache-missing
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzIxMjQyNDgsLTMxNTk0MzM1LC0zOT
-AzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3
-OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1Nj
-IwNjkxNTUsMTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbMTI4MDY0NTA1OSwtMzE1OTQzMzUsLTM5MD
+M4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxNDE5OTk0ODc5
+LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4MzgsMTU2Mj
+A2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
