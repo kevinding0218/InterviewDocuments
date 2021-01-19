@@ -120,9 +120,14 @@ Inconsistency between cache and database
 - DB <-> Web Server <-> Cache
 - Server communicate with DB and Cache seperately
 - No direct communication between DB and Cache
-- representative: Memcached + MySQL/Couchbase + Sql Server
+- Example: Memcached + MySQL/Couchbase + Sql Server
+### Cache Through
+- Web Server <-> Cache <-> DB
+- Server only communicate with Cache
+- Cache needs to communicate with DB and persist data
+- Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODE4Nzc4MDAsMTI4MDY0NTA1OSwtMz
+eyJoaXN0b3J5IjpbLTE4NTk5MTcyMzksMTI4MDY0NTA1OSwtMz
 E1OTQzMzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIw
 MywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OT
 UwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
