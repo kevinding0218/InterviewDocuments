@@ -95,12 +95,13 @@ Inconsistency between cache and database
 - return session_key as cookie value to browser
 - browser save this session_key in browser cookie
 - every time user sends request to server, will automatically bring all cookie of current website
-- server received request and will validate if session_key in cookie to s
+- server received request and will validate the session_key in cookie to consider if user has been logged in
 ### After user logout
+- delete according data in session table
 ### Where does Session Table store
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNTg1MDgzOCwyMDkyMjgzMzkxLDU2OT
-U5ODIwMywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1
-LDE2OTUwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbLTExNDUzNzA3ODAsMjA5MjI4MzM5MSw1Nj
+k1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUy
+NSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
