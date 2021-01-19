@@ -101,9 +101,13 @@ Inconsistency between cache and database
 ### After user logout
 - delete according data in session table
 ### Where does Session Table store
-
+- database
+- cache
+	- 
+- both
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OT
-U5ODIwMywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1
-LDE2OTUwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbLTM0NzE0MjQwMCwtMzkwMzgzMzU4LDIwOT
+IyODMzOTEsNTY5NTk4MjAzLDE0MTk5OTQ4NzksMjA1MDA2NTM1
+NCwzNzgyMTY1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1LDEzOT
+cwNzEyNjhdfQ==
 -->
