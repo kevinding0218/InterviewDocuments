@@ -26,11 +26,12 @@
 			- disadvantage: unlike above two, memcached does NOT support data persistence in hard disk, once electric cut off, data might be missing and need reload once it's back up
 			- User system is read more than write, for a system that works like that, must use Cache for performance improvement
 			- 爬虫系统 is write more than read, catch and store web page key words, it doesn't support an api for user to view those contents. e.g: Google search engine use this to store web page in its service then indexing them when you search for certain keywords
+			- System for human beings is read more than write, for system is write more than read
 #### Service
 - AuthService - register/login
 - UserService - user info storage/edit
 - FriendshipService - friendship storage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMjQzNzA1LDE2OTUwNjU4MzgsMTU2Mj
+eyJoaXN0b3J5IjpbNjI5Nzg2NTE1LDE2OTUwNjU4MzgsMTU2Mj
 A2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
