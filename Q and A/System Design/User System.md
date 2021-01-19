@@ -67,8 +67,9 @@ class UserService:
 		database.set(user)
 ```
 What would happen to below scenario?
-- database.set(user); cache
+- database.set(user); cache.set(key,user);
+	- db connection might fail, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQzMDU4OTgsMzc4MjE2NTI1LDE2OTUwNj
-U4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbLTEyMjk5MTU5MTYsMzc4MjE2NTI1LDE2OT
+UwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
