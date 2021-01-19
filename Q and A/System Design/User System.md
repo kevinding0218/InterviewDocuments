@@ -87,11 +87,12 @@ Inconsistency between cache and database
 ### How to persist user login
 ### Session Table
 |session_key|string|a unique global hash key
-|--|--|
-|  |  |
+|--|--|--|
+| user_id | Foreign key | point to User Table
+|expire_at|timestamp|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY5NTk4MjAzLDE0MTk5OTQ4NzksMjA1MD
-A2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1
-LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbMTk5MTU1NTg0Miw1Njk1OTgyMDMsMTQxOT
+k5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4
+LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
