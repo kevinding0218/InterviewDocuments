@@ -72,7 +72,10 @@ What would happen to below scenario?
 	- if db.set succeeded, but cache.set failed, now db has new data but cache holds old data, next time the get would return old data while data stores inconsistent between db and cache
 - cache.set(key, user); database.set(user)
 	- if cache.set succeeded, but db.set failed, now cache has new data but dbholds old data, next time the get would return new data while data stores inconsistent between db and cache
+- cache.delete(key); database.set(user)
+	- it would be Ok if cache failed and database succeeded, as next time the get would still return whatever from db
+- database.set(user); cache.delete(key)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMTE0NDk0MCwzNzgyMTY1MjUsMTY5NT
-A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbMzg0OTExNDcxLDM3ODIxNjUyNSwxNjk1MD
+Y1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
