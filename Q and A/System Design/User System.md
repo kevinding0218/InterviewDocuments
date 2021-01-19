@@ -120,7 +120,7 @@ Inconsistency between cache and database
 1. Query all users that user A follows
 2. Query all followers after user A
 3. A follows B --> insert a record
-4. A un-follow B --> dele
+4. A un-follow B --> delete a record
 
 
 ## Summary
@@ -145,7 +145,7 @@ Inconsistency between cache and database
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNjU2OTUyNCwxMjgwNjQ1MDU5LC0zMT
+eyJoaXN0b3J5IjpbMTQzMjYwNTg3MywxMjgwNjQ1MDU5LC0zMT
 U5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAz
 LDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NT
 A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
