@@ -105,6 +105,10 @@ Inconsistency between cache and database
 - cache
 	- when system goes down or needs restart, while a log of user tries to login, will create too many write requests peak
 - both: normally stores in database, and use cache for performance improvement
+
+## Friendship Service
+### Single Direct
+
 ## Summary
 ### for User System
 - Write less
@@ -127,8 +131,8 @@ Inconsistency between cache and database
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTk5MTcyMzksMTI4MDY0NTA1OSwtMz
-E1OTQzMzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIw
-MywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OT
-UwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbLTkzMjgzNzEzNiwxMjgwNjQ1MDU5LC0zMT
+U5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAz
+LDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NT
+A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
 -->
