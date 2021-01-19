@@ -118,12 +118,12 @@ Inconsistency between cache and database
 - Solution 2: we can use Cache-through database like Redis which read/write both fast, Memcached is a cache-aside database, client needs to manage data loading when cache-missing
 ### Cache Aside
 - DB <-> Web Server <-> Cache
-- Server communicate with Db and Cache seperately
+- Server communicate with DB and Cache seperately
 - No direct communication between DB and Cache
-- p
+- representative: Memcached + MySQL
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NTQyMjg2NywxMjgwNjQ1MDU5LC0zMT
-U5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAz
-LDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NT
-A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbMzYzNzAyNzIyLDEyODA2NDUwNTksLTMxNT
+k0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMs
+MTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MD
+Y1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
