@@ -104,9 +104,9 @@ Inconsistency between cache and database
 - database
 - cache
 	- when system goes down or needs restart, while a log of user tries to login, will create too many write requests peak
-- both
+- both: normally stores in database, and use cache for performance improvement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc2Nzc4MDMwLC0zOTAzODMzNTgsMjA5Mj
+eyJoaXN0b3J5IjpbLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5Mj
 I4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0
 LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5Nz
 A3MTI2OF19
