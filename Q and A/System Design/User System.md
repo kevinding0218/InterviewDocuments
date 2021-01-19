@@ -82,8 +82,16 @@ What happens when setUser occurs right after user = database.get(user_id) in get
 - This might occur minor chance
 Inconsistency between cache and database
 - This is not avoided, often we add a timeout in cache.set(key, user, ttl=5mins) to minimize the inconsistancy scenarios, called eventually consistent
+
+## Authentication Service
+### How to persist user login
+### Session Table
+|session_key|string|a unique global hash key
+|--|--|
+|  |  |
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAzMjMwODc0LDE0MTk5OTQ4NzksMjA1MD
+eyJoaXN0b3J5IjpbNTY5NTk4MjAzLDE0MTk5OTQ4NzksMjA1MD
 A2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1
 LDEzOTcwNzEyNjhdfQ==
 -->
