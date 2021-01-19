@@ -95,14 +95,15 @@ Inconsistency between cache and database
 - Create a session object
 - return session_key as cookie value to browser
 - browser save this session_key in browser cookie
-- every time user sends request to server, will automatically bring all cookie of current website
+- every time user sends request to server, will automatically bring **all** cookie of current website
+	- do not store anything in cookie, which would make the request data size too big
 - server received request and will validate the session_key in cookie to consider if user has been logged in
 ### After user logout
 - delete according data in session table
 ### Where does Session Table store
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODM5MzY4NTYsMjA5MjI4MzM5MSw1Nj
-k1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUy
-NSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OT
+U5ODIwMywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1
+LDE2OTUwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
