@@ -111,13 +111,16 @@ Inconsistency between cache and database
 |column_name|key_type|usage
 |--|--|--|
 |from_user_id|Foreign Key|user entity
-|to_user_id|Foreign Key| user to be focus
+|to_user_id|Foreign Key| user to be followed
 ### Bi-direction (WhatsApp, Facebook, Wechat)
 - Solution 1: use above table and store two message that A to B and B to A
-- Solution 2: save as one message, but need to query twice
+- Solution 2: save as one message, but need to check twice when query
 ### Friendship actions
 - Most of them are key-value
-- 
+1. Query all users that user A follows
+2. Query all followers after user A
+3. A follows B --> insert a record
+4. A un-follow B --> dele
 
 
 ## Summary
@@ -142,7 +145,7 @@ Inconsistency between cache and database
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1ODExODI0OSwxMjgwNjQ1MDU5LC0zMT
+eyJoaXN0b3J5IjpbLTYxNjU2OTUyNCwxMjgwNjQ1MDU5LC0zMT
 U5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAz
 LDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NT
 A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
