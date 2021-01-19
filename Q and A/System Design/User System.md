@@ -42,16 +42,16 @@
 - Memcached (not support data persistence)
 - Redis (support data persistence)
 #### Does cache always store in memory?
-- No
-- cache doesn't mean it has to be stored in whichever storage
+- No, cache doesn't mean it has to be stored in whichever storage
+- Memory cache in refer to file system
 - File system can also used as cache
-	- 
+	- in refer to network, reading faster from local file system 
 - CPU can be cache
 	- read from register, L1, L2, L3 cache, faster than memory cache
 #### Does cache mean Server Cache?
 - No, frontend/client/browser can also have client side cache
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NjYzMjEyMywxNjk1MDY1ODM4LDE1Nj
-IwNjkxNTUsMTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbNTc3NTE2MDY0LDE2OTUwNjU4MzgsMTU2Mj
+A2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
