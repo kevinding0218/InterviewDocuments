@@ -7,6 +7,10 @@
 ### Sharding
 ### Consistent Hashing
 ### Replica
+
+#### Scenario
+- Register, Login, Query & ProfileEdit, Query needs most requests
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbLTc5Mzg3MDc5LDEzOTcwNzEyNjhdfQ==
 -->
