@@ -86,8 +86,9 @@ Inconsistency between cache and database
 ## Authentication Service
 ### How to persist user login
 ### Session Table
-|session_key|string|a unique global hash key
+|column name|data type|usage
 |--|--|--|
+|session_key|string|a unique global hash key
 | user_id | Foreign key | point to User Table
 |expire_at|timestamp|when this key expire
 ### After user login
@@ -101,7 +102,7 @@ Inconsistency between cache and database
 ### Where does Session Table store
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDUzNzA3ODAsMjA5MjI4MzM5MSw1Nj
+eyJoaXN0b3J5IjpbLTE3ODM5MzY4NTYsMjA5MjI4MzM5MSw1Nj
 k1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUy
 NSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
