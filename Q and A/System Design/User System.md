@@ -69,10 +69,10 @@ class UserService:
 What would happen to below scenario?
 - database.set(user); cache.set(key,user);
 	- db connection might fail, notify user current action failed and retry, but this should be Ok'
-	- if db.set succeeded, but cache.set failed, now db has new data but cache holds old data, next time the get would return old data
+	- if db.set succeeded, but cache.set failed, now db has new data but cache holds old data, next time the get would return old data while data stores inconsistent between db and cache
 - cache.set(key, user); database.set(user)
-	- if cache.set succeeded, but db.set failed, now cache has new data but dbholds old data, next time the get would return indata
+	- if cache.set succeeded, but db.set failed, now cache has new data but dbholds old data, next time the get would return new data while data stores inconsistent between db and cache
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDYwMDIyNTcsMzc4MjE2NTI1LDE2OT
-UwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbLTUwMTE0NDk0MCwzNzgyMTY1MjUsMTY5NT
+A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
 -->
