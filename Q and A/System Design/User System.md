@@ -91,11 +91,16 @@ Inconsistency between cache and database
 | user_id | Foreign key | point to User Table
 |expire_at|timestamp|when this key expire
 ### After user login
+- Create a session object
+- return session_key as cookie value to browser
+- browser save this session_key in browser cookie
+- every time user sends request to server, will automatically bring all cookie of current website
+- server received request and will validate if session_key in cookie to s
 ### After user logout
 ### Where does Session Table store
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MjI4MzM5MSw1Njk1OTgyMDMsMTQxOT
-k5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4
-LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbMTUwNTg1MDgzOCwyMDkyMjgzMzkxLDU2OT
+U5ODIwMywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1
+LDE2OTUwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
