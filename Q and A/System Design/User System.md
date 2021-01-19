@@ -51,7 +51,8 @@
 #### Does cache mean Server Cache?
 - No, frontend/client/browser can also have client side cache
 	
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMjk2OTU1MywzNzgyMTY1MjUsMTY5NT
-A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbNDMyODI0MTI3LDM3ODIxNjUyNSwxNjk1MD
+Y1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
