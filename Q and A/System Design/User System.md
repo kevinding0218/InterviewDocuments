@@ -24,11 +24,12 @@
 		- MongoDB/Cassandra **(Hard disk NoSQL DB): 10k QPS**
 		- Redis/Memcached **(Memory NoSQL DB): 100k - 1M QPS**
 			- disadvantage: unlike above two, memcached does NOT support data persistence in hard disk, once electric cut off, data might be missing and need reload once it's back up
+			- User system is read more than write, for a system that works like that, must use Cache for performance improvement
 #### Service
 - AuthService - register/login
 - UserService - user info storage/edit
 - FriendshipService - friendship storage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk2OTEyMDIxLDE1NjIwNjkxNTUsMTM5Nz
-A3MTI2OF19
+eyJoaXN0b3J5IjpbMTY5NTA2NTgzOCwxNTYyMDY5MTU1LDEzOT
+cwNzEyNjhdfQ==
 -->
