@@ -61,9 +61,12 @@ class UserService:
 		user = database.get(user_id)
 		cache.set(key, user)
 		return user
-		
+	def setUser(self, user)
+		key = "user::%s" % user.id
+		cache.delete(key)
+		database.set(user)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTQwODE3ODMsMzc4MjE2NTI1LDE2OT
-UwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbMTg0MDYyNDM0NywzNzgyMTY1MjUsMTY5NT
+A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
 -->
