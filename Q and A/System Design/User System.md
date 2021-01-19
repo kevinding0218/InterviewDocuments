@@ -50,9 +50,20 @@
 	- read from register, L1, L2, L3 cache, faster than memory cache
 #### Does cache mean Server Cache?
 - No, frontend/client/browser can also have client side cache
-	
-
+#### Example of UserService
+```
+class UserService:
+	def getUser(self, user_id):
+		key = "user::%s" % user_id
+		user = cache.get(key)
+		if user:
+			return user
+		user = database.get(user_id)
+		cache.set(key, user)
+		return user
+		
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMyODI0MTI3LDM3ODIxNjUyNSwxNjk1MD
-Y1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbLTEzOTQwODE3ODMsMzc4MjE2NTI1LDE2OT
+UwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
