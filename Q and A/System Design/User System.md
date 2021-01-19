@@ -23,12 +23,12 @@
 		- MySql/PosgreSQL/Sql Server **(SQL DB): 1k QPS** ~ we need 300 - 600 MySql
 		- MongoDB/Cassandra **(Hard disk NoSQL DB): 10k QPS**
 		- Redis/Memcached **(Memory NoSQL DB): 100k - 1M QPS**
-			- disadvantage: does NOT support data perssi
+			- disadvantage: unlike above two, memcached does NOT support data persistence in hard disk, once electric cut off, data might be missing and need reload once it's back up
 #### Service
 - AuthService - register/login
 - UserService - user info storage/edit
 - FriendshipService - friendship storage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNzM4MDQzOCwxNTYyMDY5MTU1LDEzOT
-cwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbNzk2OTEyMDIxLDE1NjIwNjkxNTUsMTM5Nz
+A3MTI2OF19
 -->
