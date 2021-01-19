@@ -107,7 +107,12 @@ Inconsistency between cache and database
 - both: normally stores in database, and use cache for performance improvement
 
 ## Friendship Service
-### Single Direct
+### Single Direction (Twitter, Instagram, Weibo)
+|column_name|key_type|usage
+|--|--|--|
+|from_user_id|Foreign Key|user entity
+|||
+
 
 ## Summary
 ### for User System
@@ -131,8 +136,8 @@ Inconsistency between cache and database
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMjgzNzEzNiwxMjgwNjQ1MDU5LC0zMT
-U5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAz
-LDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NT
-A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbMzQ0Mjk5NTEyLDEyODA2NDUwNTksLTMxNT
+k0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMs
+MTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MD
+Y1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
