@@ -115,9 +115,12 @@ Inconsistency between cache and database
 ### Bi-direction (WhatsApp, Facebook, Wechat)
 - Solution 1: use above table and store two message that A to B and B to A
 	- Friendship Table
-| from_user_id | to_user_id  |
+	
+| from_user_id | to_user_id |
 |--|--|
 | A | B |
+| B | A |
+| B | A |
 
 - Solution 2: save as one message, but need to check twice when query
 ### Friendship actions
@@ -150,7 +153,7 @@ Inconsistency between cache and database
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNTY0NzM0LDEyODA2NDUwNTksLTMxNT
+eyJoaXN0b3J5IjpbLTc5NjYxOTc2LDEyODA2NDUwNTksLTMxNT
 k0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMs
 MTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MD
 Y1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
