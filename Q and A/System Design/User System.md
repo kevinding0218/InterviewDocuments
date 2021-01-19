@@ -89,10 +89,13 @@ Inconsistency between cache and database
 |session_key|string|a unique global hash key
 |--|--|--|
 | user_id | Foreign key | point to User Table
-|expire_at|timestamp|
+|expire_at|timestamp|when this key expire
+### After user login
+### After user logout
+### Where does Session Table store
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MTU1NTg0Miw1Njk1OTgyMDMsMTQxOT
+eyJoaXN0b3J5IjpbMjA5MjI4MzM5MSw1Njk1OTgyMDMsMTQxOT
 k5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4
 LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
