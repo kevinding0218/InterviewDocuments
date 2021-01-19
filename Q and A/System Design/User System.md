@@ -66,7 +66,9 @@ class UserService:
 		cache.delete(key)
 		database.set(user)
 ```
+What would happen to below scenario?
+- database.set(user); cache
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MDYyNDM0NywzNzgyMTY1MjUsMTY5NT
-A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbNzQzMDU4OTgsMzc4MjE2NTI1LDE2OTUwNj
+U4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
