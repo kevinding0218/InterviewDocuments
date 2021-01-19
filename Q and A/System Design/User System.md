@@ -76,9 +76,9 @@ What would happen to below scenario?
 	- it would be Ok if cache failed and database succeeded, as next time the get would still return whatever from db
 - database.set(user); cache.delete(key)
 - database.set succeeded but cache.delete failed, now cache still holds old data, as next time the get would still return old data
-- database should be the source of truth
+- database should always be the source of truth
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NTQyODgxNywyMDUwMDY1MzU0LDM3OD
-IxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2
-OF19
+eyJoaXN0b3J5IjpbNDI0NzczNzIsMjA1MDA2NTM1NCwzNzgyMT
+Y1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhd
+fQ==
 -->
