@@ -105,9 +105,19 @@ Inconsistency between cache and database
 - cache
 	- when system goes down or needs restart, while a log of user tries to login, will create too many write requests peak
 - both: normally stores in database, and use cache for performance improvement
+## Summary
+### for User System
+- Write less
+- Read more
+### Write less
+- from the perspective of QPS, one MySql could handle it
+### Read more
+- we can use Memcached to improve the performance of read
+### What if read and write a lot
+- Solution 1: we can use more database server to 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5Mj
-I4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0
-LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5Nz
-A3MTI2OF19
+eyJoaXN0b3J5IjpbLTE4MzIxMjQyNDgsLTMxNTk0MzM1LC0zOT
+AzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3
+OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1Nj
+IwNjkxNTUsMTM5NzA3MTI2OF19
 -->
