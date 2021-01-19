@@ -111,7 +111,7 @@ Inconsistency between cache and database
 |column_name|key_type|usage
 |--|--|--|
 |from_user_id|Foreign Key|user entity
-|||
+|to_user_id|Foreign Key| user to be focus
 
 
 ## Summary
@@ -136,8 +136,8 @@ Inconsistency between cache and database
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ0Mjk5NTEyLDEyODA2NDUwNTksLTMxNT
-k0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMs
-MTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MD
-Y1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbLTQ2MzAwNzUxMywxMjgwNjQ1MDU5LC0zMT
+U5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAz
+LDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NT
+A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
 -->
