@@ -103,11 +103,11 @@ Inconsistency between cache and database
 ### Where does Session Table store
 - database
 - cache
-	- 
+	- when system goes down or needs restart, while a log of user tries to login, will create too many write requests peak
 - both
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NzE0MjQwMCwtMzkwMzgzMzU4LDIwOT
-IyODMzOTEsNTY5NTk4MjAzLDE0MTk5OTQ4NzksMjA1MDA2NTM1
-NCwzNzgyMTY1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1LDEzOT
-cwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbNTc2Nzc4MDMwLC0zOTAzODMzNTgsMjA5Mj
+I4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0
+LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5Nz
+A3MTI2OF19
 -->
