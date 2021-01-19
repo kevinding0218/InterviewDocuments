@@ -33,9 +33,13 @@
 - FriendshipService - friendship storage
 ### Cache
 #### What is cache
-- store info first that can be used later
+- store info that could be used later on first
+	- next time when query for such info, can get it directly from here, no need to re-calculation or db query, etc
+- can be consider as a software level HashMap
+	- Java hashmap is t
+- key-value structure
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mzg3MTg3NDMsMTY5NTA2NTgzOCwxNT
+eyJoaXN0b3J5IjpbLTIwMTIzMjI2MDAsMTY5NTA2NTgzOCwxNT
 YyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
 -->
