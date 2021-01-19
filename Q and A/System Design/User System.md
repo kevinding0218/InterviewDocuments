@@ -43,9 +43,13 @@
 - Redis (support data persistence)
 #### Does cache always store in memory?
 - No
-- cache doesn't mean it 
+- cache doesn't mean it has to be stored in whichever storage
+- File system can also used as cache
+- CPU can be cache
+#### Does cache mean Server Cache?
+- No, frontend/client/browser can also have client side cache
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTM5Nzc4MzksMTY5NTA2NTgzOCwxNT
-YyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbMTY0OTgzMjEwOSwxNjk1MDY1ODM4LDE1Nj
+IwNjkxNTUsMTM5NzA3MTI2OF19
 -->
