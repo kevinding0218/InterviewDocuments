@@ -18,7 +18,7 @@
 	- Esitmation of Query
 		- 100 = times of query user profile per day per user (check friends, send message, update blog, etc)
 		- QPS (query per second): 100M * 100 / 86400 ~ 100k QPS
-		- Peak: 100k * 3 = 300
+		- Peak: 100k * 3 = 300k
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIyNjQwNzIwLDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbLTE3ODk0OTU2ODcsMTM5NzA3MTI2OF19
 -->
