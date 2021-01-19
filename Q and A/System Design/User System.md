@@ -68,8 +68,9 @@ class UserService:
 ```
 What would happen to below scenario?
 - database.set(user); cache.set(key,user);
-	- db connection might fail, 
+	- db connection might fail, notify user current action failed and retry, but this should be Ok'
+	- if db.set succeeded, cache.set failed, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjk5MTU5MTYsMzc4MjE2NTI1LDE2OT
+eyJoaXN0b3J5IjpbLTEwNTAwODQzOTEsMzc4MjE2NTI1LDE2OT
 UwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
