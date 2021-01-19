@@ -8,6 +8,7 @@
 ### Consistent Hashing
 ### Replica
 
+## Memcached
 ### Scenario
 - Register, Login, Query & ProfileEdit, Query needs most requests
 - Interviewer: support 100M daily active user
@@ -82,7 +83,7 @@ What happens when setUser occurs right after user = database.get(user_id) in get
 Inconsistency between cache and database
 - This is not avoided, often we add a timeout in cache.set(key, user, ttl=5mins) to minimize the inconsistancy scenarios, called eventually consistent
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUwMTA2MDksMTQxOTk5NDg3OSwyMDUwMD
-Y1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUs
-MTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbNjAzMjMwODc0LDE0MTk5OTQ4NzksMjA1MD
+A2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1
+LDEzOTcwNzEyNjhdfQ==
 -->
