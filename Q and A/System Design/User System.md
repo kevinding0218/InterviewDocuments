@@ -21,7 +21,10 @@
 		- Peak: 100k * 3 = 300k
 	- MySql: 1k QPS ~ we need 300 - 600 MySql
 	- Memcached: 1M QPS
-	- 
+#### Service
+- AuthService - register/login
+- UserService - user info storage/edit
+- FriendshipService - friendship storage
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ5MzIxOTU1LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbMTg5Njg4OTUyNiwxMzk3MDcxMjY4XX0=
 -->
