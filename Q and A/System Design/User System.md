@@ -45,11 +45,13 @@
 - No
 - cache doesn't mean it has to be stored in whichever storage
 - File system can also used as cache
+	- 
 - CPU can be cache
+	- read from register, L1, L2, L3 cache, faster than memory cache
 #### Does cache mean Server Cache?
 - No, frontend/client/browser can also have client side cache
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0OTgzMjEwOSwxNjk1MDY1ODM4LDE1Nj
+eyJoaXN0b3J5IjpbLTM5NjYzMjEyMywxNjk1MDY1ODM4LDE1Nj
 IwNjkxNTUsMTM5NzA3MTI2OF19
 -->
