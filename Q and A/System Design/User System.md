@@ -77,8 +77,10 @@ What would happen to below scenario?
 - database.set(user); cache.delete(key)
 - database.set succeeded but cache.delete failed, now cache still holds old data, as next time the get would still return old data
 - database should always be the source of truth
+What happens when setUser occurs right after user = database.get(user_id) in getUser?
+- This mig
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI0NzczNzIsMjA1MDA2NTM1NCwzNzgyMT
-Y1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhd
-fQ==
+eyJoaXN0b3J5IjpbLTE1MzcyMzI1NSwyMDUwMDY1MzU0LDM3OD
+IxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2
+OF19
 -->
