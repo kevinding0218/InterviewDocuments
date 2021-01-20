@@ -187,12 +187,16 @@ two action must be completed in one transaction
 	- Single point failure: What if the current database goes down
 	- temporarily down: website unavailable
 	- permanent down: data might be lost
-1. Sharding
-2. 
+1. Data Sharding
+	- Separate data into different parts and store in different machines by certain rule
+	- in SQL vs NoSQL
+		- SQ
+2. Replica
+	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY5MDkwOTAsLTIxMTg2NTUwMzIsLTI1OD
-cwNzEzMCw2ODg4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQzMzUs
-LTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxNDE5OT
-k0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4Mzgs
-MTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbMjA4NzY3NjUxNSwtMjExODY1NTAzMiwtMj
+U4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMTU5NDMz
+NSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAzLDE0MT
+k5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgz
+OCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
 -->
