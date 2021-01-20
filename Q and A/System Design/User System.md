@@ -219,26 +219,29 @@ two action must be completed in one transaction
 			- Problem
 				- when we have 11 machine now, the original rule % 10 become % 11, nearly all data needs migration
 				- data migration concern: slow, server pressure, data inconsistence
-		- Consistent Hashing
+		- Inconsistent Hashing
 			- %n is the eaiset hashing algo, however, when n become n + 1, the result of key of %n vs %(n + 1) would be different, so this is called inconsistent hashing
 			- suppose we have 12 pieces of data
 				- when we do 12 % 3, data ([0,3,6,9] goes to DB1, [1,4,7,10] goes to DB2, [2,5,8,11] goes to DB3)
 				- when we do 12 % 4, data ([0,4,8] goes to DB1, [1,5,9] goes to DB2, [2,6,10] goes to DB3, [3,7,11] goes to DB4)
 				- meaning when we add one more machine, almost 75% data need to perform migration
+		-  Consistent Hashing
 			- we can mod a big number, e.g: 360
 				- split data in 360 to n database server, each server takes care of one range
 				- the separation record will be saved into a hashing map in web server
-				- whenever a new machine comes, insert into the hashing map record, then move only part of the
+				- whenever a new machine comes, insert into the hashing map record, then move only part of the two closet machines
+				- Example:
+					- original 2 databases, DB1 -> [0, 179], DB2 -> [] 
 	- How to store data seperately in different machines
 		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMxNTA0MDg3LDEzNDg4MzE4OTEsLTQ4Nz
-YyMzg5MywtOTQ2NDAwNzA2LDE1Mjc5NTY1NTgsNzExNzI3NDgy
-LDI3NDIzOTAzMSwxMjAzOTQ0Mjc0LC0yMTE4NjU1MDMyLC0yNT
-g3MDcxMzAsNjg4ODIxMDI4LDEyODA2NDUwNTksLTMxNTk0MzM1
-LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMsMTQxOT
-k5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4
-XX0=
+eyJoaXN0b3J5IjpbMTgyNzk4NTQ3OCwxMzQ4ODMxODkxLC00OD
+c2MjM4OTMsLTk0NjQwMDcwNiwxNTI3OTU2NTU4LDcxMTcyNzQ4
+MiwyNzQyMzkwMzEsMTIwMzk0NDI3NCwtMjExODY1NTAzMiwtMj
+U4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMTU5NDMz
+NSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAzLDE0MT
+k5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgz
+OF19
 -->
