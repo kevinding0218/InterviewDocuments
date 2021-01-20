@@ -215,12 +215,15 @@ two action must be completed in one transaction
 			- If one table is too large,  still can face single point failure
 	- Horizontal Sharding
 		- Separate the data by row
+		- Example 1: seperate the Friendship Table by from_user_id % 10 into 10 different database servers
+			- Problem
+				- when we have 11 machine now, the original rule % 10 become % 11,
 	- How to store data seperately in different machines
 		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyOTE5NTA4NiwtOTQ2NDAwNzA2LDE1Mj
+eyJoaXN0b3J5IjpbLTYzOTY1NTMwMiwtOTQ2NDAwNzA2LDE1Mj
 c5NTY1NTgsNzExNzI3NDgyLDI3NDIzOTAzMSwxMjAzOTQ0Mjc0
 LC0yMTE4NjU1MDMyLC0yNTg3MDcxMzAsNjg4ODIxMDI4LDEyOD
 A2NDUwNTksLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5
