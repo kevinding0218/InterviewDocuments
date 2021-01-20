@@ -202,14 +202,15 @@ two action must be completed in one transaction
 			- we know that for email/username/password won't change often, while push_preference, avatar could be updated frequently
 			- split them into two tables: user table and user profile table
 			- and store these two tables in different database
-			- so if user profile tabl
+			- so if user profile table goes down, doesn't affect user table to login
+		- Disadvantage:
+			- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDM0OTk4NjMsMTIwMzk0NDI3NCwtMj
-ExODY1NTAzMiwtMjU4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1
-MDU5LC0zMTU5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNT
-Y5NTk4MjAzLDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1
-MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ
-==
+eyJoaXN0b3J5IjpbMjc0MjM5MDMxLDEyMDM5NDQyNzQsLTIxMT
+g2NTUwMzIsLTI1ODcwNzEzMCw2ODg4MjEwMjgsMTI4MDY0NTA1
+OSwtMzE1OTQzMzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OT
+U5ODIwMywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1
+LDE2OTUwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
