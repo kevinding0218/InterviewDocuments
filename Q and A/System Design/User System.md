@@ -136,7 +136,7 @@ Inconsistency between cache and database
 ### NoSQL Data Structure
 Cassandra is a 3-level NoSQL database
 1. First Level: row_key
-	- also known as hash_key
+	- also known as hash_key, tells you data stored in which machine
 	- same key as we know in traditional key-value
 	- Always attach this key in any query, no ways to perform range query
 	- common row_key: user_id
@@ -208,9 +208,10 @@ two action must be completed in one transaction
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc0MjM5MDMxLDEyMDM5NDQyNzQsLTIxMT
-g2NTUwMzIsLTI1ODcwNzEzMCw2ODg4MjEwMjgsMTI4MDY0NTA1
-OSwtMzE1OTQzMzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OT
-U5ODIwMywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1
-LDE2OTUwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbNzExNzI3NDgyLDI3NDIzOTAzMSwxMjAzOT
+Q0Mjc0LC0yMTE4NjU1MDMyLC0yNTg3MDcxMzAsNjg4ODIxMDI4
+LDEyODA2NDUwNTksLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5Mj
+I4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0
+LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5Nz
+A3MTI2OF19
 -->
