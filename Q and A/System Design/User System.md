@@ -231,13 +231,15 @@ two action must be completed in one transaction
 				- the separation record will be saved into a hashing map in web server
 				- whenever a new machine comes, insert into the hashing map record, then move only part of the two closet machines
 				- Example:
-					- original 2 databases, DB1 -> [0, 179], DB2 -> [] 
+					- original 2 databases, DB1 -> [0, 179], DB2 -> [180, 359]
+					- now adding 1 more,  DB1 -> [0, 119], DB2 -> [240, 359], DB3 -> [120, 239]
+					- for n from 2 to 3, only 1/3 data needs migration
 	- How to store data seperately in different machines
 		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNzk4NTQ3OCwxMzQ4ODMxODkxLC00OD
+eyJoaXN0b3J5IjpbLTI0NTMzMjAwOCwxMzQ4ODMxODkxLC00OD
 c2MjM4OTMsLTk0NjQwMDcwNiwxNTI3OTU2NTU4LDcxMTcyNzQ4
 MiwyNzQyMzkwMzEsMTIwMzk0NDI3NCwtMjExODY1NTAzMiwtMj
 U4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMTU5NDMz
