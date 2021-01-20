@@ -196,7 +196,7 @@ two action must be completed in one transaction
 	- temporarily down: website unavailable
 	- permanent down: data might be lost
 1. Data Sharding
-	- Separate data into different parts and store in different machines by certain rule
+	- Separate data into different parts and store in different machines by certain rule(by table or by column)
 	- in SQL vs NoSQL
 		- SQL does not have sharding
 		- NoSQL have self-sharding
@@ -212,19 +212,19 @@ two action must be completed in one transaction
 			- and store these two tables in different database
 			- so if user profile table goes down, doesn't affect user table to login
 		- Disadvantage:
-			- 
+			- If one table is too large,  still can face single point failure
 	- Horizontal Sharding
-		- 
+		- Separate the data by row
 	- How to store data seperately in different machines
 		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTY3MjMwMzQsLTk0NjQwMDcwNiwxNT
-I3OTU2NTU4LDcxMTcyNzQ4MiwyNzQyMzkwMzEsMTIwMzk0NDI3
-NCwtMjExODY1NTAzMiwtMjU4NzA3MTMwLDY4ODgyMTAyOCwxMj
-gwNjQ1MDU5LC0zMTU5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMz
-OTEsNTY5NTk4MjAzLDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNz
-gyMTY1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEy
-NjhdfQ==
+eyJoaXN0b3J5IjpbMTEyOTE5NTA4NiwtOTQ2NDAwNzA2LDE1Mj
+c5NTY1NTgsNzExNzI3NDgyLDI3NDIzOTAzMSwxMjAzOTQ0Mjc0
+LC0yMTE4NjU1MDMyLC0yNTg3MDcxMzAsNjg4ODIxMDI4LDEyOD
+A2NDUwNTksLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5
+MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3OD
+IxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2
+OF19
 -->
