@@ -213,15 +213,18 @@ two action must be completed in one transaction
 			- so if user profile table goes down, doesn't affect user table to login
 		- Disadvantage:
 			- 
+	- Horizontal Sharding
+		- 
 	- How to store data seperately in different machines
 		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NjQwMDcwNiwxNTI3OTU2NTU4LDcxMT
-cyNzQ4MiwyNzQyMzkwMzEsMTIwMzk0NDI3NCwtMjExODY1NTAz
-MiwtMjU4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMT
-U5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAz
-LDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NT
-A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbLTE5NTY3MjMwMzQsLTk0NjQwMDcwNiwxNT
+I3OTU2NTU4LDcxMTcyNzQ4MiwyNzQyMzkwMzEsMTIwMzk0NDI3
+NCwtMjExODY1NTAzMiwtMjU4NzA3MTMwLDY4ODgyMTAyOCwxMj
+gwNjQ1MDU5LC0zMTU5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMz
+OTEsNTY5NTk4MjAzLDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNz
+gyMTY1MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEy
+NjhdfQ==
 -->
