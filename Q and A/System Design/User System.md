@@ -190,11 +190,12 @@ two action must be completed in one transaction
 1. Data Sharding
 	- Separate data into different parts and store in different machines by certain rule
 	- in SQL vs NoSQL
-		- SQ
+		- SQL does not have sharding
+		- NoSQL have self-sharding
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NzY3NjUxNSwtMjExODY1NTAzMiwtMj
+eyJoaXN0b3J5IjpbMTIwMzk0NDI3NCwtMjExODY1NTAzMiwtMj
 U4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMTU5NDMz
 NSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAzLDE0MT
 k5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgz
