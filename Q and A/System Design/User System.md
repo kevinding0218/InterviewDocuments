@@ -185,11 +185,14 @@ two action must be completed in one transaction
 ## How to scale?
 - What to consider except QPS and storage after cache?
 	- Single point failure: What if the current database goes down
-	- temporarily down
+	- temporarily down: website unavailable
+	- permanent down: data might be lost
+1. Sharding
+2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTgwMDU4OTcsLTIxMTg2NTUwMzIsLT
-I1ODcwNzEzMCw2ODg4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQz
-MzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxND
-E5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4
-MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbNjY5MDkwOTAsLTIxMTg2NTUwMzIsLTI1OD
+cwNzEzMCw2ODg4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQzMzUs
+LTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxNDE5OT
+k0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4Mzgs
+MTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
