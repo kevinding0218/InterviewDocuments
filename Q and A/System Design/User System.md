@@ -181,10 +181,15 @@ two action must be completed in one transaction
 - Server only communicate with Cache
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
+
+## How to scale?
+- What to consider except QPS and storage after cache?
+	- Single point failure: What if the current database goes down
+	- temporarily down
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTg2NTUwMzIsLTI1ODcwNzEzMCw2OD
-g4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQzMzUsLTM5MDM4MzM1
-OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxNDE5OTk0ODc5LDIwNT
-AwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4MzgsMTU2MjA2OTE1
-NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbLTEyNTgwMDU4OTcsLTIxMTg2NTUwMzIsLT
+I1ODcwNzEzMCw2ODg4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQz
+MzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxND
+E5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4
+MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
