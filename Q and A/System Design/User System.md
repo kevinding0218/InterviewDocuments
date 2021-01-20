@@ -134,6 +134,9 @@ Inconsistency between cache and database
 3. A follows B --> insert a record
 4. A un-follow B --> delete a record
 
+## SQL vs NoSQL
+1. Most scenario it's ok to use either SQL or NoSQL
+2. 
 
 ## Summary
 ### for User System
@@ -157,8 +160,9 @@ Inconsistency between cache and database
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg4ODIxMDI4LDEyODA2NDUwNTksLTMxNT
-k0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMs
-MTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MD
-Y1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbLTE2MDU4NTExNzAsNjg4ODIxMDI4LDEyOD
+A2NDUwNTksLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5
+MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3OD
+IxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2
+OF19
 -->
