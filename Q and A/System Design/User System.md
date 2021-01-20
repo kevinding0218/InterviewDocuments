@@ -227,23 +227,23 @@ two action must be completed in one transaction
 				- meaning when we add one more machine, almost 75% data need to perform migration
 		-  Consistent Hashing
 			- we can mod a big number, e.g: 360
-				- split data in 360 to n database server, each server takes care of one range
+				- split data with  %360 to n database server, each server takes care of one range
 				- the separation record will be saved into a hashing map in web server
 				- whenever a new machine comes, insert into the hashing map record, then move only part of the two closet machines
 				- Example:
-					- original 2 databases, DB1 -> [0, 179], DB2 -> [180, 359]
-					- now adding 1 more,  DB1 -> [0, 119], DB2 -> [240, 359], DB3 -> [120, 239]
+					- original 2 databases, hasihng map: DB1 -> [0, 179], DB2 -> [180, 359]
+					- now adding 1 more, hashing map: DB1 -> [0, 119], DB2 -> [240, 359], DB3 -> [120, 239]
 					- for n from 2 to 3, only 33% data needs migration
 	- How to store data seperately in different machines
 		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTM0NTUxNjAsMTM0ODgzMTg5MSwtND
-g3NjIzODkzLC05NDY0MDA3MDYsMTUyNzk1NjU1OCw3MTE3Mjc0
-ODIsMjc0MjM5MDMxLDEyMDM5NDQyNzQsLTIxMTg2NTUwMzIsLT
-I1ODcwNzEzMCw2ODg4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQz
-MzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxND
-E5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4
-MzhdfQ==
+eyJoaXN0b3J5IjpbMTI1NDg1NDc4MiwxMzQ4ODMxODkxLC00OD
+c2MjM4OTMsLTk0NjQwMDcwNiwxNTI3OTU2NTU4LDcxMTcyNzQ4
+MiwyNzQyMzkwMzEsMTIwMzk0NDI3NCwtMjExODY1NTAzMiwtMj
+U4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMTU5NDMz
+NSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAzLDE0MT
+k5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgz
+OF19
 -->
