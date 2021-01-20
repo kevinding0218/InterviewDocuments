@@ -136,9 +136,13 @@ Inconsistency between cache and database
 
 ## SQL vs NoSQL
 1. Most scenario it's ok to use either SQL or NoSQL
-2. Do Not choose NoSQL if needs support Transaction
-3.
-4. 
+2. Do **Not** choose NoSQL if needs support **Transaction**
+```
+Transfer $10 from A to B
+A.money -= 10
+B.money += 10
+```
+3.  SQL does more things for you than NoSQl 
 
 ## Summary
 ### for User System
@@ -162,7 +166,7 @@ Inconsistency between cache and database
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NTY2MDkzMiw2ODg4MjEwMjgsMTI4MD
+eyJoaXN0b3J5IjpbMTI0MDY4MjIyMCw2ODg4MjEwMjgsMTI4MD
 Y0NTA1OSwtMzE1OTQzMzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkx
 LDU2OTU5ODIwMywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4Mj
 E2NTI1LDE2OTUwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4
