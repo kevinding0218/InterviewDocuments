@@ -219,17 +219,18 @@ two action must be completed in one transaction
 			- Problem
 				- when we have 11 machine now, the original rule % 10 become % 11, nearly all data needs migration
 				- data migration concern: slow, server pressure, data inconsistence
-		- Correct way: Consistent Hashing
-			- %n is the eaiset hashing algo
+		- Consistent Hashing
+			- %n is the eaiset hashing algo, however, when n become n + 1, the result of key of %n vs %(n + 1) would be different, so this is called inconsistent hashing
 			- suppose we have 12 pieces of data
 				- when we do 12 % 3, data ([0,3,6,9] goes to DB1, [1,4,7,10] goes to DB2, [2,5,8,11] goes to DB3)
-				- when we do 12 % 4, data ([
+				- when we do 12 % 4, data ([0,4,8] goes to DB1, [1,5,9] goes to DB2, [2,6,10] goes to DB3, [3,7,11] goes to DB4)
+			- 
 	- How to store data seperately in different machines
 		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNDY2MTIzMiwtOTQ2NDAwNzA2LDE1Mj
+eyJoaXN0b3J5IjpbMTU0NTgzMTY3MSwtOTQ2NDAwNzA2LDE1Mj
 c5NTY1NTgsNzExNzI3NDgyLDI3NDIzOTAzMSwxMjAzOTQ0Mjc0
 LC0yMTE4NjU1MDMyLC0yNTg3MDcxMzAsNjg4ODIxMDI4LDEyOD
 A2NDUwNTksLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5
