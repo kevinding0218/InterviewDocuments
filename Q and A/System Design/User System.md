@@ -233,17 +233,17 @@ two action must be completed in one transaction
 				- Example:
 					- original 2 databases, DB1 -> [0, 179], DB2 -> [180, 359]
 					- now adding 1 more,  DB1 -> [0, 119], DB2 -> [240, 359], DB3 -> [120, 239]
-					- for n from 2 to 3, only 1/3 data needs migration
+					- for n from 2 to 3, only 33% data needs migration
 	- How to store data seperately in different machines
 		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NTMzMjAwOCwxMzQ4ODMxODkxLC00OD
-c2MjM4OTMsLTk0NjQwMDcwNiwxNTI3OTU2NTU4LDcxMTcyNzQ4
-MiwyNzQyMzkwMzEsMTIwMzk0NDI3NCwtMjExODY1NTAzMiwtMj
-U4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMTU5NDMz
-NSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAzLDE0MT
-k5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgz
-OF19
+eyJoaXN0b3J5IjpbLTEzOTM0NTUxNjAsMTM0ODgzMTg5MSwtND
+g3NjIzODkzLC05NDY0MDA3MDYsMTUyNzk1NjU1OCw3MTE3Mjc0
+ODIsMjc0MjM5MDMxLDEyMDM5NDQyNzQsLTIxMTg2NTUwMzIsLT
+I1ODcwNzEzMCw2ODg4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQz
+MzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxND
+E5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4
+MzhdfQ==
 -->
