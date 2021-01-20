@@ -198,13 +198,18 @@ two action must be completed in one transaction
 			- Friendship table in database B
 			- Message table in database C
 		- Complex example:
-			- 
+			- For a user table that has (email, username, password, push_preference, avatar)
+			- we know that for email/username/password won't change often, while push_preference, avatar could be updated frequently
+			- split them into two tables: user table and user profile table
+			- and store these two tables in different database
+			- so if user profile tabl
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyOTcyODQyNywxMjAzOTQ0Mjc0LC0yMT
-E4NjU1MDMyLC0yNTg3MDcxMzAsNjg4ODIxMDI4LDEyODA2NDUw
-NTksLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Nj
-k1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUy
-NSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbLTIxMDM0OTk4NjMsMTIwMzk0NDI3NCwtMj
+ExODY1NTAzMiwtMjU4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1
+MDU5LC0zMTU5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNT
+Y5NTk4MjAzLDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1
+MjUsMTY5NTA2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ
+==
 -->
