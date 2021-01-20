@@ -213,15 +213,15 @@ two action must be completed in one transaction
 			- so if user profile table goes down, doesn't affect user table to login
 		- Disadvantage:
 			- 
-		- How to store data seperately in different machines
-			- 
+	- How to store data seperately in different machines
+		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNzk1NjU1OCw3MTE3Mjc0ODIsMjc0Mj
-M5MDMxLDEyMDM5NDQyNzQsLTIxMTg2NTUwMzIsLTI1ODcwNzEz
-MCw2ODg4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQzMzUsLTM5MD
-M4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxNDE5OTk0ODc5
-LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4MzgsMTU2Mj
-A2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbLTk0NjQwMDcwNiwxNTI3OTU2NTU4LDcxMT
+cyNzQ4MiwyNzQyMzkwMzEsMTIwMzk0NDI3NCwtMjExODY1NTAz
+MiwtMjU4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMT
+U5NDMzNSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAz
+LDE0MTk5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NT
+A2NTgzOCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
 -->
