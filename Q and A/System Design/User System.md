@@ -192,12 +192,19 @@ two action must be completed in one transaction
 	- in SQL vs NoSQL
 		- SQL does not have sharding
 		- NoSQL have self-sharding
+	- Vertical Sharding
+		- Simple example:
+			- User table in database A
+			- Friendship table in database B
+			- Message table in database C
+		- Complex example:
+			- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMzk0NDI3NCwtMjExODY1NTAzMiwtMj
-U4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMTU5NDMz
-NSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAzLDE0MT
-k5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgz
-OCwxNTYyMDY5MTU1LDEzOTcwNzEyNjhdfQ==
+eyJoaXN0b3J5IjpbLTYyOTcyODQyNywxMjAzOTQ0Mjc0LC0yMT
+E4NjU1MDMyLC0yNTg3MDcxMzAsNjg4ODIxMDI4LDEyODA2NDUw
+NTksLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Nj
+k1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUy
+NSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5NzA3MTI2OF19
 -->
