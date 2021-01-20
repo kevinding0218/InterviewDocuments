@@ -153,7 +153,8 @@ Cassandra is a 3-level NoSQL database
 	- value: is_mutual_friend, is_blocked, time_stamp, etc
 - NewsFeed Example
 	- row_key: owner_id
-	- col_key: <
+	- col_key: <created_at + tweet_id>
+	- value: tweet_data1
 
 ## SQL vs NoSQL
 1. Most scenario it's ok to use either SQL or NoSQL
@@ -215,10 +216,10 @@ two action must be completed in one transaction
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MzEyODc3OSw3MTE3Mjc0ODIsMjc0Mj
-M5MDMxLDEyMDM5NDQyNzQsLTIxMTg2NTUwMzIsLTI1ODcwNzEz
-MCw2ODg4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQzMzUsLTM5MD
-M4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxNDE5OTk0ODc5
-LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4MzgsMTU2Mj
-A2OTE1NSwxMzk3MDcxMjY4XX0=
+eyJoaXN0b3J5IjpbNTM4NDc5NTYsNzExNzI3NDgyLDI3NDIzOT
+AzMSwxMjAzOTQ0Mjc0LC0yMTE4NjU1MDMyLC0yNTg3MDcxMzAs
+Njg4ODIxMDI4LDEyODA2NDUwNTksLTMxNTk0MzM1LC0zOTAzOD
+MzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwy
+MDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNj
+kxNTUsMTM5NzA3MTI2OF19
 -->
