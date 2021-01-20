@@ -234,16 +234,14 @@ two action must be completed in one transaction
 					- original 2 databases, hasihng map: DB1 -> [0, 179], DB2 -> [180, 359]
 					- now adding 1 more, hashing map: DB1 -> [0, 119], DB2 -> [240, 359], DB3 -> [120, 239]
 					- for n from 2 to 3, only 33% data needs migration
-	- How to store data seperately in different machines
-		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NDg1NDc4MiwxMzQ4ODMxODkxLC00OD
-c2MjM4OTMsLTk0NjQwMDcwNiwxNTI3OTU2NTU4LDcxMTcyNzQ4
-MiwyNzQyMzkwMzEsMTIwMzk0NDI3NCwtMjExODY1NTAzMiwtMj
-U4NzA3MTMwLDY4ODgyMTAyOCwxMjgwNjQ1MDU5LC0zMTU5NDMz
-NSwtMzkwMzgzMzU4LDIwOTIyODMzOTEsNTY5NTk4MjAzLDE0MT
-k5OTQ4NzksMjA1MDA2NTM1NCwzNzgyMTY1MjUsMTY5NTA2NTgz
-OF19
+eyJoaXN0b3J5IjpbMTU5MTMxMDkyLDEyNTQ4NTQ3ODIsMTM0OD
+gzMTg5MSwtNDg3NjIzODkzLC05NDY0MDA3MDYsMTUyNzk1NjU1
+OCw3MTE3Mjc0ODIsMjc0MjM5MDMxLDEyMDM5NDQyNzQsLTIxMT
+g2NTUwMzIsLTI1ODcwNzEzMCw2ODg4MjEwMjgsMTI4MDY0NTA1
+OSwtMzE1OTQzMzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkxLDU2OT
+U5ODIwMywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4MjE2NTI1
+XX0=
 -->
