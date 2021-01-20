@@ -226,17 +226,19 @@ two action must be completed in one transaction
 				- when we do 12 % 4, data ([0,4,8] goes to DB1, [1,5,9] goes to DB2, [2,6,10] goes to DB3, [3,7,11] goes to DB4)
 				- meaning when we add one more machine, almost 75% data need to perform migration
 			- we can mod a big number, e.g: 360
-				- 
+				- split data in 360 to n database server, each server takes care of one range
+				- the separation record will be saved into a hashing map in web server
+				- whenever a new machine comes, insert into the hashing map record, then move only part of the
 	- How to store data seperately in different machines
 		- 
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0ODgzMTg5MSwtNDg3NjIzODkzLC05ND
-Y0MDA3MDYsMTUyNzk1NjU1OCw3MTE3Mjc0ODIsMjc0MjM5MDMx
-LDEyMDM5NDQyNzQsLTIxMTg2NTUwMzIsLTI1ODcwNzEzMCw2OD
-g4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQzMzUsLTM5MDM4MzM1
-OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxNDE5OTk0ODc5LDIwNT
-AwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4MzgsMTU2MjA2OTE1
-NV19
+eyJoaXN0b3J5IjpbODMxNTA0MDg3LDEzNDg4MzE4OTEsLTQ4Nz
+YyMzg5MywtOTQ2NDAwNzA2LDE1Mjc5NTY1NTgsNzExNzI3NDgy
+LDI3NDIzOTAzMSwxMjAzOTQ0Mjc0LC0yMTE4NjU1MDMyLC0yNT
+g3MDcxMzAsNjg4ODIxMDI4LDEyODA2NDUwNTksLTMxNTk0MzM1
+LC0zOTAzODMzNTgsMjA5MjI4MzM5MSw1Njk1OTgyMDMsMTQxOT
+k5NDg3OSwyMDUwMDY1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4
+XX0=
 -->
