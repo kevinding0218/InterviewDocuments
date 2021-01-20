@@ -147,6 +147,13 @@ Cassandra is a 3-level NoSQL database
 - usually String
 - you need to do Serialization if stored too many info
 	- Serialization is the process of converting an object hash into a string
+- Friendship Example
+	- row_key: user_id
+	- col_key: other_user_id
+	- value: is_mutual_friend, is_blocked, time_stamp, etc
+- NewsFeed Example
+	- row_key: owner_id
+	- col_key: <
 
 ## SQL vs NoSQL
 1. Most scenario it's ok to use either SQL or NoSQL
@@ -208,10 +215,10 @@ two action must be completed in one transaction
 2. Replica
 	- 一式三份
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExNzI3NDgyLDI3NDIzOTAzMSwxMjAzOT
-Q0Mjc0LC0yMTE4NjU1MDMyLC0yNTg3MDcxMzAsNjg4ODIxMDI4
-LDEyODA2NDUwNTksLTMxNTk0MzM1LC0zOTAzODMzNTgsMjA5Mj
-I4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMDY1MzU0
-LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUsMTM5Nz
-A3MTI2OF19
+eyJoaXN0b3J5IjpbMjA2MzEyODc3OSw3MTE3Mjc0ODIsMjc0Mj
+M5MDMxLDEyMDM5NDQyNzQsLTIxMTg2NTUwMzIsLTI1ODcwNzEz
+MCw2ODg4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQzMzUsLTM5MD
+M4MzM1OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxNDE5OTk0ODc5
+LDIwNTAwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4MzgsMTU2Mj
+A2OTE1NSwxMzk3MDcxMjY4XX0=
 -->
