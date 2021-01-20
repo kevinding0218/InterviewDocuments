@@ -133,14 +133,16 @@ Inconsistency between cache and database
 2. Query all followers after user A
 3. A follows B --> insert a record
 4. A un-follow B --> delete a record
+### NoSQL Data Structure
 
 ## SQL vs NoSQL
 1. Most scenario it's ok to use either SQL or NoSQL
 2. Do **Not** choose NoSQL if needs support **Transaction**
 ```
-Transfer $10 from A to B
+Transaction Example: Transfer $10 from A to B
 A.money -= 10
 B.money += 10
+two action must be completed in one transaction
 ```
 3.  SQL does more things for you than NoSQL (Serialization, Secondary Index)
 4. User NoSQL if looking for better perfornamce, or query is not too complex, hard disk NoSQL is 10 times faster than SQL
@@ -167,9 +169,9 @@ B.money += 10
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1ODcwNzEzMCw2ODg4MjEwMjgsMTI4MD
-Y0NTA1OSwtMzE1OTQzMzUsLTM5MDM4MzM1OCwyMDkyMjgzMzkx
-LDU2OTU5ODIwMywxNDE5OTk0ODc5LDIwNTAwNjUzNTQsMzc4Mj
-E2NTI1LDE2OTUwNjU4MzgsMTU2MjA2OTE1NSwxMzk3MDcxMjY4
-XX0=
+eyJoaXN0b3J5IjpbNTU1MTE0NTM5LC0yNTg3MDcxMzAsNjg4OD
+IxMDI4LDEyODA2NDUwNTksLTMxNTk0MzM1LC0zOTAzODMzNTgs
+MjA5MjI4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMD
+Y1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUs
+MTM5NzA3MTI2OF19
 -->
