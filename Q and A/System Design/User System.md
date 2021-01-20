@@ -134,6 +134,13 @@ Inconsistency between cache and database
 3. A follows B --> insert a record
 4. A un-follow B --> delete a record
 ### NoSQL Data Structure
+Cassandra is a 3-level NoSQL database
+1. First level: row_key
+	- also known as hash_key
+	- same key as we know in traditional key-value
+	- Always attach this key in any query, no ways to perform range query
+	- common row_key: user_id
+	- 
 
 ## SQL vs NoSQL
 1. Most scenario it's ok to use either SQL or NoSQL
@@ -169,9 +176,9 @@ two action must be completed in one transaction
 - Cache needs to communicate with DB and persist data
 - Example: Redis (Redis contains a cache and a DB)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1MTE0NTM5LC0yNTg3MDcxMzAsNjg4OD
-IxMDI4LDEyODA2NDUwNTksLTMxNTk0MzM1LC0zOTAzODMzNTgs
-MjA5MjI4MzM5MSw1Njk1OTgyMDMsMTQxOTk5NDg3OSwyMDUwMD
-Y1MzU0LDM3ODIxNjUyNSwxNjk1MDY1ODM4LDE1NjIwNjkxNTUs
-MTM5NzA3MTI2OF19
+eyJoaXN0b3J5IjpbLTEyNjMyNjc1MTMsLTI1ODcwNzEzMCw2OD
+g4MjEwMjgsMTI4MDY0NTA1OSwtMzE1OTQzMzUsLTM5MDM4MzM1
+OCwyMDkyMjgzMzkxLDU2OTU5ODIwMywxNDE5OTk0ODc5LDIwNT
+AwNjUzNTQsMzc4MjE2NTI1LDE2OTUwNjU4MzgsMTU2MjA2OTE1
+NSwxMzk3MDcxMjY4XX0=
 -->
