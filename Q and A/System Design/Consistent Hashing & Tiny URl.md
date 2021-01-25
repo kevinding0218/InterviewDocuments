@@ -104,10 +104,16 @@
 		- Peak Write QPS = 100 * 2 = 200
 	- Estimate QPS for clicking on one tiny URL
 		- suppose each user click on 1 tiny URL
-		- Average Read QPS = 100
+		- Average Read QPS = 100M * 1 / 86400 ~ 1k
+		- Peak Read QPS = 2k
+	- Estimate Storage for new URL daily
+		- 100M * 0.1 ~ 10M URL daily
+		- average storage for a tiny url like 100 bytes, total of 1G
+		- 1T hard disk be used for 3 years
+			- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MjAzMTM2NiwtNTM1MjU2MDYsLTIxND
-YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
-NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
-g0NzAzMjA2LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbMTQwNjIxNDg5LC01MzUyNTYwNiwtMjE0Nj
+E2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1
+LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3OD
+Q3MDMyMDYsLTkwOTkxMTkwOV19
 -->
