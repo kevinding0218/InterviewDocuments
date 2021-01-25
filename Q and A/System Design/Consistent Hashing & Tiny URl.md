@@ -272,14 +272,15 @@
 	 			- AB1234 -> 0AB1234
 	 			- another way is to pick first digit 'A' as sharding key
  			- the prefix value was getting from Hash(long_url)%62
+ 			- \
 	- How to query Long Url if using ID?
 	- How to query ID if using Long URL?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NzI2MjYwOCw1NzU2NjgyNTAsMTc1OT
-gzNDc3NywtMjAyMjIxNTIwMCwtMTI5NjExMDIwOSwyNDk2ODAz
-NDgsOTIyMjAxMzEyLC0zMjg2MzM4OTksLTE3MzUyNTA1NSwyNT
-YzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5
-LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1ND
-cyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIw
-Nl19
+eyJoaXN0b3J5IjpbODAyNTUxMjUxLDExNzcyNjI2MDgsNTc1Nj
+Y4MjUwLDE3NTk4MzQ3NzcsLTIwMjIyMTUyMDAsLTEyOTYxMTAy
+MDksMjQ5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNz
+M1MjUwNTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwt
+MjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1OD
+AwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMz
+XX0=
 -->
