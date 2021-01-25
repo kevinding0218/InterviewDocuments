@@ -290,18 +290,24 @@
 - Think about user's experience and habits
 	- When China user hits the URL, will be distributed to Chinese Server
 	- Because usually Chinese user would visit Chinese website
-	- So we can Sharding based on website GEO region info
+	- So we can have Sharding key based on website GEO region info
 		- How to get the region info? 
 	- What if Chinese user wants to hit U.S website?
 		- Let Chinese server hit U.S data
 		- The major requirement is for letting China to visit Chinese website, system improvement is based on
 		solving for major requirements
+		```
+		USA user -> DNS -> Web Server <--> Memcached
+	                        DB USA -> http://tiny.url/0AB1234
+	                        DB CN -> http://tiny.url/1AB1234
+	    CN user   -> DNS -> Web Server <--> Memcached
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MDg0MDE1LDExNzcyNjI2MDgsNTc1Nj
-Y4MjUwLDE3NTk4MzQ3NzcsLTIwMjIyMTUyMDAsLTEyOTYxMTAy
-MDksMjQ5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNz
-M1MjUwNTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwt
-MjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1OD
-AwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMz
-XX0=
+eyJoaXN0b3J5IjpbMzQ0NzExMTU3LC03OTA4NDAxNSwxMTc3Mj
+YyNjA4LDU3NTY2ODI1MCwxNzU5ODM0Nzc3LC0yMDIyMjE1MjAw
+LC0xMjk2MTEwMjA5LDI0OTY4MDM0OCw5MjIyMDEzMTIsLTMyOD
+YzMzg5OSwtMTczNTI1MDU1LDI1NjMxNzQ0MCw2MjI0MjA0MSwt
+NTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3MzY3ND
+IyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjNd
+fQ==
 -->
