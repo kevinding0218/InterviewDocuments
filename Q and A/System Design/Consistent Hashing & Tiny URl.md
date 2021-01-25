@@ -25,13 +25,15 @@
 	- DB1: [0,119] data remain there, [120,179] 60 data migrated to DB3
 	- DB2: [240, 359] data remain there, [180, 239] 60 data migrated to DB3
 	- total of 120/360 = 33% data migrated
-- 4 machines: find max closet two section and divided into 3 sections, move part of data from bot
-	- DB1 --> [0, 79], DB2 --> [240, 359], DB3 --> [160, 239], DB4 --> [80, 159]
+- 4 machines: DB1 --> [0, 79], DB2 --> [240, 359], DB3 --> [160, 239], DB4 --> [80, 159]
+- find max closet two section and divided into 3 sections, move part of data from both into new section
+- other section might remain same
 	- DB1: [0,79] data remain there, [80, 110] 40 data migrated to DB4
 	- DB2: [240, 359] all data remain there
 	- DB3: [160, 239] data remain there, [120, 159] 40 data migrated to DB4
 	- total of 80/360 = 22% data migrated
+- disadvantage: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3ODQ5MDI5Myw3OTQxMjUyNjMsLTI5OD
+eyJoaXN0b3J5IjpbLTE2NzQxNzYzMSw3OTQxMjUyNjMsLTI5OD
 U2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
