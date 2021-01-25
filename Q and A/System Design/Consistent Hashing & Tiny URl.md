@@ -33,7 +33,8 @@
 	- DB3: [160, 239] data remain there, [120, 159] 40 data migrated to DB4
 	- total of 80/360 = 22% data migrated
 - disadvantage: 
+	- data distribution not shared equaly
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzQxNzYzMSw3OTQxMjUyNjMsLTI5OD
+eyJoaXN0b3J5IjpbMTMxMTI3MDc4Nyw3OTQxMjUyNjMsLTI5OD
 U2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
