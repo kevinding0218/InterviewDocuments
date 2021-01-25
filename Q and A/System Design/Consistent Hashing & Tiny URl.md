@@ -243,9 +243,11 @@
 	- improve data visit time
 		- use Centralized SQL database + Distributed Memcached
 		- One SQL database with many Memcache, distributed across regions
+		```
 		USA user -> DNS -> Web Server <--> Memcached
                                              Shared DB (Centralized SQL DB)
         CN user   -> DNS -> Web Server <--> Memcached
+        ```
         - User visit a webserver would be much slower than webserver visit another webserver, because of less redirection
     
 ### Interviewer: what if one SQL database is out of capacity? (Sharding)
@@ -282,7 +284,7 @@
 	- How to query Long Url if using ID?
 	- How to query ID if using Long URL?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxNjM5NTA3LDExNzcyNjI2MDgsNTc1Nj
+eyJoaXN0b3J5IjpbNTg4NTA0NzczLDExNzcyNjI2MDgsNTc1Nj
 Y4MjUwLDE3NTk4MzQ3NzcsLTIwMjIyMTUyMDAsLTEyOTYxMTAy
 MDksMjQ5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNz
 M1MjUwNTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwt
