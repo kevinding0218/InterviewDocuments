@@ -42,7 +42,7 @@
 - each machine and data can be considered as a point in the circle by their hashing value
 - import the concept of micro shards/virtual nodes
 	- one physical machine refers 1000 micro shards/virtual nodes
-	- use TreeMap --> O(logN) finds 
+	- use TreeMap/RBT --> O(logN) finds minimum value that's greater than X
 - each virtual node refers to a point in the circle
 - each time when adding a new machine, placing 1000 virtual nodes randomly in the circle
 - when adding a new data
@@ -52,7 +52,7 @@
 - when adding a new machine
 	- 1000 virtual nodes clockwise asking data of its next virtual node
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODMwNzQ5MDEsLTE1NDcyNjgyMjIsNz
-k0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTEx
-OTA5XX0=
+eyJoaXN0b3J5IjpbLTg2MDkyMjY4MywtMTU0NzI2ODIyMiw3OT
+QxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5
+MDldfQ==
 -->
