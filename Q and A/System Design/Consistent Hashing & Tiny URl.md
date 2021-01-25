@@ -217,10 +217,17 @@
 		- row_key=shortURL, column_key=longURL, value=null or timestamp
 2. base62
 - because this will be used of sequential ID, can only choose SQL database
+- shortURL doesn't need to store in table because it can be calculated based on id
+|id| longUrl(index=true |
+|--|--|
+| 1| http://www.facebook.com |
+| 2| http://www.google.com |
+
+### Interviewr: how to r
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjgwMjI5NTksLTE3MzUyNTA1NSwyNT
-YzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5
-LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1ND
-cyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIw
-NiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMTc4NzY0MDQ1NywtMTczNTI1MDU1LDI1Nj
+MxNzQ0MCw2MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTks
+LTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0Nz
+I2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2
+LC05MDk5MTE5MDldfQ==
 -->
