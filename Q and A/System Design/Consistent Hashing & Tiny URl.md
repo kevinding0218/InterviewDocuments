@@ -88,9 +88,11 @@
 	- "self-contained" is storing 3 copies in consistent hashing in circle
 	- "manual", no need! NoSQL is for saving between sharding and replica
 
-###
+### Design Tiny URL
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzEzNTcyMCwtOTE3MjU2MzA3LDczNj
-c0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2
-MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3Mz
+Y3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUy
+NjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ
+==
 -->
