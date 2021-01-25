@@ -56,10 +56,17 @@
 ### Replica
 #### difference between backup and replica
 - backup: schedule job
+	- normaly schedule periodically
+	- when data lost, usually can only recover at certain time stamp
+	- not used as online data service, not for distribute data reading
 - replicate: real-time executing
-	- store
+	- store multiply copies
+	- when data lost, can restore through other copy
+	- used as online data service, used to distribute data reading
+- Why still needs backup
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjA4NDAxODIsNzM2NzQyMjgsLTEzMT
+eyJoaXN0b3J5IjpbLTEzMDMzMDI4MDYsNzM2NzQyMjgsLTEzMT
 U4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5
 MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
