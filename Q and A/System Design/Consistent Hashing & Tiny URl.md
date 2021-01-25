@@ -123,10 +123,16 @@
 		- Return short url
 #### Storage
 - How to store and visit data
-	- Select storage structure
+	- Select storage structure (SQL or NoSQL)
+		- Does it need to support Transaction?
+			- NoSQL doesn't support Transaction
+		- Does it need a lot SQL Query?
+			- NoSQL doesn't enrich in Query
+			- Some NoSQL support simple SQL Query
+		- Save time in infrustructure
 	- Schema data list in detail
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NTk0NDA2MiwtNTM1MjU2MDYsLTIxND
+eyJoaXN0b3J5IjpbMTIxODc2NzQ0OCwtNTM1MjU2MDYsLTIxND
 YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
 NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
 g0NzAzMjA2LC05MDk5MTE5MDldfQ==
