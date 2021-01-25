@@ -52,8 +52,14 @@
 - when adding a new machine
 	- 1000 virtual nodes clockwise asking data of its next virtual node
 - leetcode consistent-hashing
+
+### Replica
+#### difference between backup and replica
+- backup: schedule job
+- replicate: real-time executing
+	- store
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1ND
-cyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIw
-NiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbLTE5NjA4NDAxODIsNzM2NzQyMjgsLTEzMT
+U4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5
+MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
