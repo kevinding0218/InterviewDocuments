@@ -260,12 +260,16 @@
 		- too busy (like mallicious attack)
 - Vertical Sharding
 	- Distribute many data tables to many machines
-		- Not applicable for Tiny
+		- Not applicable for TinyURL
+- Horizontal Sharding
+	- How to make Sharding Key?
+	- How to query Long Url if using ID?
+	- How to query ID if using Long URL?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NDIyMTE3NCwtMTI5NjExMDIwOSwyND
-k2ODAzNDgsOTIyMjAxMzEyLC0zMjg2MzM4OTksLTE3MzUyNTA1
-NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MT
-YwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUs
-LTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4ND
-cwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbLTIwMjIyMTUyMDAsLTEyOTYxMTAyMDksMj
+Q5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNzM1MjUw
+NTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwtMjE0Nj
+E2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1
+LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3OD
+Q3MDMyMDYsLTkwOTkxMTkwOV19
 -->
