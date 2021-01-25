@@ -9,9 +9,12 @@
 - What happened when visit www.google.com
 
 ### Consistent Hashing
+#### What is consistent hashing
+when base mod number changes, data after mod changed a lot
 #### Horizontal
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMjI3ODY1MDc5LDE3ODQ3MDMyMDYsLTkwOT
+kxMTkwOV19
 -->
