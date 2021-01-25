@@ -99,9 +99,14 @@
 	- Ask interviewer daily active user (DAU)
 		- nearly 100M
 	- Estimate QPS for generating one tiny URL
-		- suppose ea
+		- suppose each user post 0.1 twitter that includes a tiney URL
+		- Average Write QPS = 100M * 0.1/86400 ~ 100
+		- Peak Write QPS = 100 * 2 = 200
+	- Estimate QPS for clicking on one tiny URL
+		- suppose each user click on 1 tiny URL
+		- Average Read QPS = 100
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NTAxNjk4NywtNTM1MjU2MDYsLTIxND
+eyJoaXN0b3J5IjpbLTM0MjAzMTM2NiwtNTM1MjU2MDYsLTIxND
 YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
 NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
 g0NzAzMjA2LC05MDk5MTE5MDldfQ==
