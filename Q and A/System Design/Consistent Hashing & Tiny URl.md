@@ -304,12 +304,16 @@
 	                        DB CN -> http://tiny.url/1AB1234
 	    CN user   -> DNS -> Web Server <--> Memcached
 	```
+
+### Interviewer: How to provide custom url?
+- custom url example
+	- http://tiny.url/google/ => 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkyMzk5OTY5LC03OTA4NDAxNSwxMTc3Mj
-YyNjA4LDU3NTY2ODI1MCwxNzU5ODM0Nzc3LC0yMDIyMjE1MjAw
-LC0xMjk2MTEwMjA5LDI0OTY4MDM0OCw5MjIyMDEzMTIsLTMyOD
-YzMzg5OSwtMTczNTI1MDU1LDI1NjMxNzQ0MCw2MjI0MjA0MSwt
-NTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3MzY3ND
-IyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjNd
-fQ==
+eyJoaXN0b3J5IjpbMjA5MjQxMjYyNiwtNzkwODQwMTUsMTE3Nz
+I2MjYwOCw1NzU2NjgyNTAsMTc1OTgzNDc3NywtMjAyMjIxNTIw
+MCwtMTI5NjExMDIwOSwyNDk2ODAzNDgsOTIyMjAxMzEyLC0zMj
+g2MzM4OTksLTE3MzUyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEs
+LTUzNTI1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2Nz
+QyMjgsLTEzMTU4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYz
+XX0=
 -->
