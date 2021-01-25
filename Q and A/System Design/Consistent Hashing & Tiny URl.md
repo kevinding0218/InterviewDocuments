@@ -309,13 +309,20 @@
 - custom url example
 	- http://tiny.url/google/ => http://www.google.com
 	- http://tiny.url/systemdesign/ => http://www.jiuzhang.com/course/2/
-- Create a new table to store custom URL (CustomURL table)
+- Create a new table to store custom URL (e.g: CustomURLTable)
 |custom_url| long_url(index=true) |
 |--|--|
-| gg |  |
+| gg | http://www.google.com |
+| fb| http://www.facebook.com |
+- Query for long url
+	- first query CustomURLTable
+	- then query URLTable
+- Create Short url based on Long url
+	- first query if already existed in CustomURLTable
+	- If not, query in URLTable and insert if need
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NDI1NDc3OSwtNzkwODQwMTUsMTE3Nz
+eyJoaXN0b3J5IjpbLTg1NDM1NzIwMSwtNzkwODQwMTUsMTE3Nz
 I2MjYwOCw1NzU2NjgyNTAsMTc1OTgzNDc3NywtMjAyMjIxNTIw
 MCwtMTI5NjExMDIwOSwyNDk2ODAzNDgsOTIyMjAxMzEyLC0zMj
 g2MzM4OTksLTE3MzUyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEs
