@@ -49,9 +49,9 @@
 	- clockwise find the first virtual nodes
 	- the physical machine which represents the virtual node will be the final data storage
 - when adding a new machine
-	- 1000 virtual nodes clockwise asking data of its next vir
+	- 1000 virtual nodes clockwise asking data of its next virtual node
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MjQ1MzkwMSwtMTU0NzI2ODIyMiw3OT
+eyJoaXN0b3J5IjpbMTU2MjE1ODQ0OSwtMTU0NzI2ODIyMiw3OT
 QxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5
 MDldfQ==
 -->
