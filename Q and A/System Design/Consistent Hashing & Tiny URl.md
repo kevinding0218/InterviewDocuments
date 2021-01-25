@@ -267,11 +267,12 @@
 			- when reading Short to get Long, use Short as Sharding Key
 			- when reading Long to get Short, use Long as Sharding Key
 			- Long could have more than one Short, but not the other way around
-		- So
+		- Solution 2:
+			- 
 	- How to query Long Url if using ID?
 	- How to query ID if using Long URL?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NzE2NjY4MywtMjAyMjIxNTIwMCwtMT
+eyJoaXN0b3J5IjpbMTc1OTgzNDc3NywtMjAyMjIxNTIwMCwtMT
 I5NjExMDIwOSwyNDk2ODAzNDgsOTIyMjAxMzEyLC0zMjg2MzM4
 OTksLTE3MzUyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNT
 I1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgs
