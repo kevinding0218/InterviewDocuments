@@ -174,9 +174,13 @@
 	- every short url refers to an Integer
 	- this integer can be mapping as primary key in database - Sequential ID
 - how many URL can the 6 digit short url represent?
-	- 5 digits = 62 ^ 5
+	- 5 digits = 62 ^ 5 = 0.9B
+	- 6 digits = 62 ^ 6 = 57B
+	- 7 digits = 62 ^ 7 = 3.5T
+- advantage: better performance
+- disadvantage: rely to auto-increment global ID
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDY5MjQ3MDEsMjU2MzE3NDQwLDYyMj
+eyJoaXN0b3J5IjpbLTE2NzUzMjg5OTUsMjU2MzE3NDQwLDYyMj
 QyMDQxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3
 LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5ND
 EyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkw
