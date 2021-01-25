@@ -121,10 +121,12 @@
 	- Post /data/shorten/
 		- Data body = {url: http://xxxxxx }
 		- Return short url
-	
+#### Storage
+- How to store and visit data
+	- Select s
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM5MTQ2NzgxLC01MzUyNTYwNiwtMjE0Nj
-E2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1
-LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3OD
-Q3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbNDI0OTU2MDcsLTUzNTI1NjA2LC0yMTQ2MT
+YwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUs
+LTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4ND
+cwMzIwNiwtOTA5OTExOTA5XX0=
 -->
