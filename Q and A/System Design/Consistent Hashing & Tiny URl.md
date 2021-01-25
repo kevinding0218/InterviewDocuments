@@ -79,9 +79,9 @@
 	- promote one Slave to be Master, which accept read + write
 	- might cause data lost and inconsistency
 #### NoSQL database Replica
-- usually store data cloc
+- usually store data "clockwise" as 3 virtual nodes as consistent hashing circle
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MzQ1NjU3Miw3MzY3NDIyOCwtMTMxNT
-gwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2Mzkz
-MywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbLTExMzU2NjYwNjYsNzM2NzQyMjgsLTEzMT
+U4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5
+MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
