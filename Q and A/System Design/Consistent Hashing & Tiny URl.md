@@ -274,17 +274,19 @@
  			- the prefix value was getting from Hash(long_url)%62
  			- devided the circle into 62 sections, each machine would be responsible for one section
  			- this way we don't need broadcast, either find short2long or long2short can use sharding key
- 			USA user -> DNS -> Web Server <--> Memcached
-                                             Shared DB (1, 2, ..., 61)
-             CN user   -> DNS -> Web Server <--> Memcached
+ 			```
+		 USA user -> DNS -> Web Server <--> Memcached
+	                  Shared DB (1, 2, ..., 61)
+	    CN user   -> DNS -> Web Server <--> Memcached
+        ```
 	- How to query Long Url if using ID?
 	- How to query ID if using Long URL?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NjA5NDgwNywxMTc3MjYyNjA4LDU3NT
-Y2ODI1MCwxNzU5ODM0Nzc3LC0yMDIyMjE1MjAwLC0xMjk2MTEw
-MjA5LDI0OTY4MDM0OCw5MjIyMDEzMTIsLTMyODYzMzg5OSwtMT
-czNTI1MDU1LDI1NjMxNzQ0MCw2MjI0MjA0MSwtNTM1MjU2MDYs
-LTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNT
-gwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2Mzkz
-M119
+eyJoaXN0b3J5IjpbOTkxNjM5NTA3LDExNzcyNjI2MDgsNTc1Nj
+Y4MjUwLDE3NTk4MzQ3NzcsLTIwMjIyMTUyMDAsLTEyOTYxMTAy
+MDksMjQ5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNz
+M1MjUwNTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwt
+MjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1OD
+AwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMz
+XX0=
 -->
