@@ -15,9 +15,10 @@
 - data might change during migration, consistency is not guranteed
 #### Horizontal
 - 2 machines: DB1 --> [0, 179], DB2 --> [180, 359]
-- 3 machines: DB1 --> [0, 119], DB2 --> 
+- 3 machines: DB1 --> [0, 119], DB2 --> , DB3 --> [120,239]
+	- DB1: [0,119] data remain there, [120,179] data migrated
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMzU4OTAyNiwtMjk4NTYzOTMzLDE3OD
-Q3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbMzY5OTAwNDIyLC0yOTg1NjM5MzMsMTc4ND
+cwMzIwNiwtOTA5OTExOTA5XX0=
 -->
