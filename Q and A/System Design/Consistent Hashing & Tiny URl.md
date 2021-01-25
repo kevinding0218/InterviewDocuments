@@ -110,9 +110,17 @@
 		- 100M * 0.1 ~ 10M URL daily
 		- average storage for a tiny url like 100 bytes, total of 1G
 		- 1T hard disk be used for 3 years
+#### Service
+- TinyURL only needs one UrlService
+- Function Design
+	- UrlService.encode(long_url)
+	- UrlService.decode(short_url)
+- Endpoint Design
+	- Get /<short_url>
+		- return a Http redirect respons
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2OTc4Mjk4NSwtNTM1MjU2MDYsLTIxND
+eyJoaXN0b3J5IjpbLTk0NTM2ODkwMCwtNTM1MjU2MDYsLTIxND
 YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
 NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
 g0NzAzMjA2LC05MDk5MTE5MDldfQ==
