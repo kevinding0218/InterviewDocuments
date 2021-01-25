@@ -13,7 +13,9 @@
 - when base mod number changes, data after mod changed a lot
 - server pressure when data migration during hashing
 - data might change during migration, consistency is not guranteed
-- 3 machines: DB1 
+- 3 machines: DB1 --> [0,3,6,9], DB2 --> [1,4,7,10], DB3 --> [2,5,8,11]
+- 4 machines: DB1 --> [0,4,8], DB2 --> [1,5,9], DB3 --> [2,6,10], DB4 --> [3,7,11]
+	- DB1: 
 #### Horizontal
 - 2 machines: DB1 --> [0, 179], DB2 --> [180, 359]
 - 3 machines: DB1 --> [0, 119], DB2 --> [240, 359], DB3 --> [120,239]
@@ -23,6 +25,6 @@
 - 4 machines: 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTY0Nzk1NDEsLTI5ODU2MzkzMywxNz
-g0NzAzMjA2LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbMTAwOTI0NjYzMSwtMjk4NTYzOTMzLDE3OD
+Q3MDMyMDYsLTkwOTkxMTkwOV19
 -->
