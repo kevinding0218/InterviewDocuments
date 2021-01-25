@@ -64,9 +64,13 @@
 	- when data lost, can restore through other copy
 	- used as online data service, used to distribute data reading
 - Why still needs backup
-	- 
+	- money cost
+#### SQL database Replica
+- usually self-contained master-slave replica
+	- master = write, slave = read
+	- slave sync data from master
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDMzMDI4MDYsNzM2NzQyMjgsLTEzMT
-U4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5
-MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMTQxNDg1MTcyOCw3MzY3NDIyOCwtMTMxNT
+gwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2Mzkz
+MywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
