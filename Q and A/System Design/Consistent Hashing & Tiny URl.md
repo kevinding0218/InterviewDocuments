@@ -51,9 +51,9 @@
 	- use TreeMap/RBT --> O(logN) finds minimum value that's greater than X
 - when adding a new machine
 	- 1000 virtual nodes clockwise asking data of its next virtual node
-
+- leetcode consistent-hashing
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcwMDc5NDM5LC0xMzE1ODAwMDk1LC0xNT
-Q3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMy
-MDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1ND
+cyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIw
+NiwtOTA5OTExOTA5XX0=
 -->
