@@ -149,7 +149,7 @@
 	- Schema data list in detail
 
 #### Algorithm
-- Hashing function (No because of conflict)
+- Hashing function (**No** because of conflict)
 	- get long URL last 6 digets of MD5
 	- advantage: fast
 	- disadvantage: hard to design a non-conflict hashing algorithm
@@ -169,8 +169,9 @@
 	-	advantage: simple implementation
 	-	disadvantage: with more data coming, speed become slower
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNT
-YwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0x
-MzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NT
-YzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbNDcxMDkyMjg4LDI1NjMxNzQ0MCw2MjI0Mj
+A0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3
+MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMj
+UyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDld
+fQ==
 -->
