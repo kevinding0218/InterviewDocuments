@@ -78,8 +78,10 @@
 - what if master is down?
 	- promote one Slave to be Master, which accept read + write
 	- might cause data lost and inconsistency
+#### NoSQL database Replica
+- usually store data cloc
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTA1OTU3NzAsNzM2NzQyMjgsLTEzMT
-U4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5
-MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMTA4MzQ1NjU3Miw3MzY3NDIyOCwtMTMxNT
+gwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2Mzkz
+MywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
