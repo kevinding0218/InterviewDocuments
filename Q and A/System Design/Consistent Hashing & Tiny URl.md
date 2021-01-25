@@ -225,7 +225,7 @@
 
 ### Interviewr: how to reduce response time
 - Scale
-	- because the read would be much more than write
+1. Read more than write
 	- use cache aside to improve the speed
 	- cache needs to store two types of data
 		- long to short (for usage when generating short url)
@@ -235,10 +235,15 @@
 		2. request sends to web server, check this short url in Memcached and if found, return long url
 		3. if not found in Memcached, check this short url in SQL database and return
 		4. server return to user with http 301 redirect
+2. Geo info usage
+	- improve service visit time
+		- use different web servers in different districts
+		- use DNS to decode users across regions to different servers
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyMjAxMzEyLC0zMjg2MzM4OTksLTE3Mz
-UyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0y
-MTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MD
-AwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMs
-MTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbNTU1NjYyMTI1LDkyMjIwMTMxMiwtMzI4Nj
+MzODk5LC0xNzM1MjUwNTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01
+MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0Mj
+I4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2Mywt
+Mjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkwOV19
 -->
