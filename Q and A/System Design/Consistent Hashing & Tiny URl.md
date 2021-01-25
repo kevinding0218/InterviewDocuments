@@ -37,7 +37,9 @@
 	- data distribution not shared equaly, e.g DB2 remained same for 120 data, while other 3 DB shared 60 each
 	- pressure on those 2 servers might got heavy during migration, e.g: suppose we have 100 server, only those 2 servers got higher pressure, while the other 98 server didn't shared the pressure
 ##### more practical way
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOT
-g1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMTE2NzUwODc4NCwtMTU0NzI2ODIyMiw3OT
+QxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5
+MDldfQ==
 -->
