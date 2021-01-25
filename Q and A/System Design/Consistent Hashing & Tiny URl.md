@@ -15,16 +15,19 @@
 - data might change during migration, consistency is not guranteed
 - 3 machines: DB1 --> [0,3,6,9], DB2 --> [1,4,7,10], DB3 --> [2,5,8,11]
 - 4 machines: DB1 --> [0,4,8], DB2 --> [1,5,9], DB3 --> [2,6,10], DB4 --> [3,7,11]
-	- DB1: 
+	- DB1: only 0 remain there, [3,6,9] 3 data migrated somewhere else
+	- DB2: only 1 remain there, [4,7,10] 3 data migrated somewhere else
+	- DB3: only 2 remain there, [6,10] 2 data migrated somewhere else
+	- total of 9/12 = 75% data migrated
 #### Horizontal
 - 2 machines: DB1 --> [0, 179], DB2 --> [180, 359]
 - 3 machines: DB1 --> [0, 119], DB2 --> [240, 359], DB3 --> [120,239]
 	- DB1: [0,119] data remain there, [120,179] 60 data migrated to DB3
 	- DB2: [240, 359] data remain there, [180, 239] 60 data migrated to DB3
-	- total of 120/360 = 1/3 data migrated
+	- total of 120/360 = 33% data migrated
 - 4 machines: 
-
+	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwOTI0NjYzMSwtMjk4NTYzOTMzLDE3OD
-Q3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4ND
+cwMzIwNiwtOTA5OTExOTA5XX0=
 -->
