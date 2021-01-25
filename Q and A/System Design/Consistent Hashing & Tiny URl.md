@@ -204,11 +204,12 @@
 ### database design
 1. random generator
 - need query Short url based on Long url, also need to query Long url based on Short url
+- if choose SQL database, table will 
 3. base62
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEyMDU1ODc1LDI1NjMxNzQ0MCw2MjI0Mj
-A0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3
-MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMj
-UyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDld
-fQ==
+eyJoaXN0b3J5IjpbLTE3MzUyNTA1NSwyNTYzMTc0NDAsNjIyND
+IwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcs
+NzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MT
+I1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5
+XX0=
 -->
