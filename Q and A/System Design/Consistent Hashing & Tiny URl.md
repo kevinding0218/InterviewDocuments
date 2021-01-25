@@ -231,11 +231,13 @@
 		- long to short (for usage when generating short url)
 		- short to long (for usage when query short url)
 	- workflow:
-		- 
+		1. get http://bit.ly/1Us49DS
+		2. request sends to web server, check this short url in Memcached and if found, return long url
+		3. if not found in Memcached, check this short url in SQL database
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NzE0OTI3MCwtMzI4NjMzODk5LC0xNz
-M1MjUwNTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwt
-MjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1OD
-AwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMz
-LDE3ODQ3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbNjU0OTkyNTMyLC0zMjg2MzM4OTksLTE3Mz
+UyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0y
+MTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MD
+AwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMs
+MTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
