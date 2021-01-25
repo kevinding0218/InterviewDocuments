@@ -129,10 +129,15 @@
 		- Does it need a lot SQL Query?
 			- NoSQL doesn't enrich in Query
 			- Some NoSQL support simple SQL Query
-		- Save time in infrustructure
+		- Save time in infrustructure?
+			- Most web framework has good compatibility with SQL Database
+			- Less code when use SQL vs NoSQL
+		- Does it need Sequential ID?
+			- SQL supports auto-increment Sequential ID, like 1,2,3,4,5 ...
+			- NoSQL ID is not sequential
 	- Schema data list in detail
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxODc2NzQ0OCwtNTM1MjU2MDYsLTIxND
+eyJoaXN0b3J5IjpbMTA5MDEzNjk3OCwtNTM1MjU2MDYsLTIxND
 YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
 NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
 g0NzAzMjA2LC05MDk5MTE5MDldfQ==
