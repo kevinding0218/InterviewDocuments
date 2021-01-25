@@ -96,10 +96,13 @@
 	- Restore Long URL based on Short URL
 		- http://bit.ly/1UIoQB6 => http://www.jiuzhang.com
 - Daily Usage (QPS + Storage)
-	- 
+	- Ask interviewer daily active user (DAU)
+		- nearly 100M
+	- Estimate QPS for generating one tiny URL
+		- suppose ea
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNTI1NjA2LC0yMTQ2MTYwMDU5LC05MT
-cyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1NDcyNjgy
-MjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOT
-A5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMjA5NTAxNjk4NywtNTM1MjU2MDYsLTIxND
+YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
+NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
+g0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
