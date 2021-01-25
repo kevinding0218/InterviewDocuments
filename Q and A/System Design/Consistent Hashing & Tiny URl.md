@@ -185,7 +185,13 @@
 		String chars = "0123456789abc..xyzABC..XYZ";
 		String short_url = "";
 		while (id > 0){
+			short_url = chars.charAt(id%62) + short_url;
+			id = id/62;
 		}
+		while (short_url.length() < 6){
+			short_url = "0" + short_url;
+		}
+		return short_url;
 	}
 	```
 - how many URL can the 6 digit short url represent?
@@ -195,9 +201,9 @@
 - advantage: better performance
 - disadvantage: rely to auto-increment global ID
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTQxMjg0MTksMjU2MzE3NDQwLDYyMj
-QyMDQxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3
-LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5ND
-EyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkw
-OV19
+eyJoaXN0b3J5IjpbNjA5MDY2ODg3LDI1NjMxNzQ0MCw2MjI0Mj
+A0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3
+MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMj
+UyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDld
+fQ==
 -->
