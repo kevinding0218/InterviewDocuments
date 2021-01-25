@@ -246,11 +246,12 @@
 		USA user -> DNS -> Web Server <--> Memcached
                                              Shared DB (Centralized SQL DB)
         CN user   -> DNS -> Web Server <--> Memcached
+        - User visit a webserver would be much slower than webserver visit another webserver, because of less redirection
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTYxMTAyMDksMjQ5NjgwMzQ4LDkyMj
-IwMTMxMiwtMzI4NjMzODk5LC0xNzM1MjUwNTUsMjU2MzE3NDQw
-LDYyMjQyMDQxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3Mj
-U2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIy
-LDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOT
-kxMTkwOV19
+eyJoaXN0b3J5IjpbLTE2MTYxOTI5MDYsLTEyOTYxMTAyMDksMj
+Q5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNzM1MjUw
+NTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwtMjE0Nj
+E2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1
+LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3OD
+Q3MDMyMDYsLTkwOTkxMTkwOV19
 -->
