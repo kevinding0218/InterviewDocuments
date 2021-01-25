@@ -271,15 +271,15 @@
  			- If at beginning, short key is 6 digit, adding a prefix diget in short key
 	 			- AB1234 -> 0AB1234
 	 			- another way is to pick first digit 'A' as sharding key
- 			- the prefix 
+ 			- the prefix v
 	- How to query Long Url if using ID?
 	- How to query ID if using Long URL?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc1NjY4MjUwLDE3NTk4MzQ3NzcsLTIwMj
-IyMTUyMDAsLTEyOTYxMTAyMDksMjQ5NjgwMzQ4LDkyMjIwMTMx
-MiwtMzI4NjMzODk5LC0xNzM1MjUwNTUsMjU2MzE3NDQwLDYyMj
-QyMDQxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3
-LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5ND
-EyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkw
-OV19
+eyJoaXN0b3J5IjpbLTQ4NzY4ODE2NCw1NzU2NjgyNTAsMTc1OT
+gzNDc3NywtMjAyMjIxNTIwMCwtMTI5NjExMDIwOSwyNDk2ODAz
+NDgsOTIyMjAxMzEyLC0zMjg2MzM4OTksLTE3MzUyNTA1NSwyNT
+YzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5
+LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1ND
+cyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIw
+Nl19
 -->
