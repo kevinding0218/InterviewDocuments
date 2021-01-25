@@ -123,10 +123,11 @@
 		- Return short url
 #### Storage
 - How to store and visit data
-	- Select s
+	- Select storage structure
+	- Schema data list in detail
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI0OTU2MDcsLTUzNTI1NjA2LC0yMTQ2MT
-YwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUs
-LTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4ND
-cwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMTI2NTk0NDA2MiwtNTM1MjU2MDYsLTIxND
+YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
+NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
+g0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
