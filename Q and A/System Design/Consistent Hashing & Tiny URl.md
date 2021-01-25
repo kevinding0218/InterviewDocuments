@@ -75,8 +75,11 @@
 	- when Slave get activated, will inform Master it's ready
 	- everytime when operation happened in Master will inform Slave to read log
 	- so data in Slave will have a "delay"
+- what if master is down?
+	- promote one Slave to be Master, which accept read + write
+	- might cause data lost and inconsistency
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NTE0MjgyNyw3MzY3NDIyOCwtMTMxNT
-gwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2Mzkz
-MywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbLTE3MTA1OTU3NzAsNzM2NzQyMjgsLTEzMT
+U4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5
+MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
