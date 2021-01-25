@@ -20,6 +20,7 @@
 	- DB3: only 2 remain there, [6,10] 2 data migrated somewhere else
 	- total of 9/12 = 75% data migrated
 #### Horizontal
+##### 
 - 2 machines: DB1 --> [0, 179], DB2 --> [180, 359]
 - 3 machines: DB1 --> [0, 119], DB2 --> [240, 359], DB3 --> [120,239]
 	- DB1: [0,119] data remain there, [120,179] 60 data migrated to DB3
@@ -34,8 +35,9 @@
 	- total of 80/360 = 22% data migrated
 - disadvantage: 
 	- data distribution not shared equaly, e.g DB2 remained same for 120 data, while other 3 DB shared 60 each
-	- pressure on those 2 servers might got heavy during migration, e.g: suppose we have 100 server, only those 2 servers got higher pressure, while the other 
+	- pressure on those 2 servers might got heavy during migration, e.g: suppose we have 100 server, only those 2 servers got higher pressure, while the other 98 server didn't shared the pressure
+##### more practical way
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTkzODMyNzUsNzk0MTI1MjYzLC0yOT
-g1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMTg1MDM0Njc3Myw3OTQxMjUyNjMsLTI5OD
+U2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
