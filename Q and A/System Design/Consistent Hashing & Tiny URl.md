@@ -80,8 +80,15 @@
 	- might cause data lost and inconsistency
 #### NoSQL database Replica
 - usually store data "clockwise" as 3 virtual nodes as consistent hashing circle
+#### SQL vs NoSQL in Replica
+- SQL
+	- "self-contained" is Master-Slave
+	- "manual" can also be storing 3 copies in consistent hashing in circle
+- NoSQL
+	- "self-contained" is storing 3 copies in consistent hashing in circle
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzU2NjYwNjYsNzM2NzQyMjgsLTEzMT
-U4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5
-MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMTc0NjYyNzc0Niw3MzY3NDIyOCwtMTMxNT
+gwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2Mzkz
+MywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
