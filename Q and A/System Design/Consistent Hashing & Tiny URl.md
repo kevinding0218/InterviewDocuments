@@ -239,14 +239,15 @@
 	- improve service visit time
 		- use different web servers in different districts
 		- use DNS to decode users across regions to different servers
-		- e.g if user's long url is an asia website, your server is in U.S, putting it in U.S server meaning user's request has to decode the url in U.S server
+		- e.g if user's long url is an asia website, your server is in U.S, putting it in U.S server meaning user's request has to decode the url in U.S server then redirect to asia
 	- improve data visit time
 		- use Centralized SQL database + Distributed Memcached
 		- One SQL database with many Memcache, distributed across regions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4Nj
-MzODk5LC0xNzM1MjUwNTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01
-MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0Mj
-I4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2Mywt
-Mjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbNzc0NzYzOTgyLDI0OTY4MDM0OCw5MjIyMD
+EzMTIsLTMyODYzMzg5OSwtMTczNTI1MDU1LDI1NjMxNzQ0MCw2
+MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1Nj
+MwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3
+OTQxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MT
+E5MDldfQ==
 -->
