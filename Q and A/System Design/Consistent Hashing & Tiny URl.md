@@ -199,11 +199,16 @@
 	- 6 digits = 62 ^ 6 = 57B
 	- 7 digits = 62 ^ 7 = 3.5T
 - advantage: better performance
-- disadvantage: rely to auto-increment global ID (need a single database 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbODA1NzMwODcsMjU2MzE3NDQwLDYyMjQyMD
-QxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3LDcz
-Njc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNT
-I2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkwOV19
+- disadvantage: rely to auto-increment global ID (need a single database table for auto-increment id)
 
+### database design
+1. random generator
+- need query Short based on Long Url, also need to query Long url based on Short url
+3. base62
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTYwNTk2ODY2MCwyNTYzMTc0NDAsNjIyND
+IwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcs
+NzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MT
+I1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5
+XX0=
 -->
