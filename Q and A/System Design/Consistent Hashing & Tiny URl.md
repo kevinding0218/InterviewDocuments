@@ -263,13 +263,16 @@
 		- Not applicable for TinyURL
 - Horizontal Sharding
 	- How to make Sharding Key?
+		- when reading Short to get Long, use Short as Sharding Key
+		- when reading Long to get Short, use Long as Sharding Key
+		- Long could have more than one Short, but not the other way around
 	- How to query Long Url if using ID?
 	- How to query ID if using Long URL?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjIyMTUyMDAsLTEyOTYxMTAyMDksMj
-Q5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNzM1MjUw
-NTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwtMjE0Nj
-E2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1
-LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3OD
-Q3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbLTcwNjg0MzM4OSwtMjAyMjIxNTIwMCwtMT
+I5NjExMDIwOSwyNDk2ODAzNDgsOTIyMjAxMzEyLC0zMjg2MzM4
+OTksLTE3MzUyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNT
+I1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgs
+LTEzMTU4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOT
+g1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
