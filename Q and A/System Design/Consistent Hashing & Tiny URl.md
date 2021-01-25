@@ -271,11 +271,11 @@
  			- If at beginning, short key is 6 digit, adding a prefix diget in short key
 	 			- AB1234 -> 0AB1234
 	 			- another way is to pick first digit 'A' as sharding key
- 			- the prefix v
+ 			- the prefix value was getting from Hash(long_url)%62
 	- How to query Long Url if using ID?
 	- How to query ID if using Long URL?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NzY4ODE2NCw1NzU2NjgyNTAsMTc1OT
+eyJoaXN0b3J5IjpbMTE3NzI2MjYwOCw1NzU2NjgyNTAsMTc1OT
 gzNDc3NywtMjAyMjIxNTIwMCwtMTI5NjExMDIwOSwyNDk2ODAz
 NDgsOTIyMjAxMzEyLC0zMjg2MzM4OTksLTE3MzUyNTA1NSwyNT
 YzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5
