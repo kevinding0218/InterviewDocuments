@@ -126,24 +126,28 @@
 	- Select storage structure (SQL or NoSQL)
 		- Does it need to support Transaction?
 			- NoSQL doesn't support Transaction
+			- For current, no need (NoSQL + 1)
 		- Does it need a lot SQL Query?
 			- NoSQL doesn't enrich in Query
 			- Some NoSQL support simple SQL Query
+			- For current, no need (NoSQL + 1)
 		- Save time in infrustructure?
 			- Most web framework has good compatibility with SQL Database
 			- Less code when use SQL vs NoSQL
+			- For current, no need for complex code (NoSQL + 1)
 		- Does it need Sequential ID?
 			- SQL supports auto-increment Sequential ID, like 1,2,3,4,5 ...
 			- NoSQL ID is not sequential
 		- How much expectation in QPS?
 			- NoSQL has better performance
+			- 2k is not a high expectation, can use Cache for reading, much less write
 		- How much expectation in scalability/
 			- SQL needs developer to scale (consistent hashing with horizontal virtual node)
 			- NoSQL does these for you
 	- Schema data list in detail
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTQ5NDM2OTYsLTUzNTI1NjA2LC0yMT
-Q2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAw
-OTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMT
-c4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbNzIzMjU2MDM5LC01MzUyNTYwNiwtMjE0Nj
+E2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1
+LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3OD
+Q3MDMyMDYsLTkwOTkxMTkwOV19
 -->
