@@ -153,9 +153,11 @@
 	- get long URL last 6 digets of MD5
 	- advantage: fast
 	- disadvantage: hard to design a non-conflict hashing algorithm
+- Randomly generate a short URL + remove replicate in database
+	- Geenrate a
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NTkxMjEyMSw2MjI0MjA0MSwtNTM1Mj
-U2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwt
-MTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5OD
-U2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbLTE4MDQ0MTcyMDgsNjIyNDIwNDEsLTUzNT
+I1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgs
+LTEzMTU4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOT
+g1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
