@@ -138,12 +138,12 @@
 		- How much expectation in QPS?
 			- NoSQL has better performance
 		- How much expectation in scalability/
-			- SQL needs developer to scale
+			- SQL needs developer to scale (consistent hashing with horizontal virtual node)
 			- NoSQL does these for you
 	- Schema data list in detail
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzUyNTEzNCwtNTM1MjU2MDYsLTIxND
-YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
-NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
-g0NzAzMjA2LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbLTE2MTQ5NDM2OTYsLTUzNTI1NjA2LC0yMT
+Q2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAw
+OTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMT
+c4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
