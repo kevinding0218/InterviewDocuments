@@ -290,13 +290,18 @@
 - Think about user's experience and habits
 	- When China user hits the URL, will be distributed to Chinese Server
 	- Because usually Chinese user would visit Chinese website
-	- So we can Sharding the
+	- So we can Sharding based on website GEO region info
+		- How to get the region info? 
+	- What if Chinese user wants to hit U.S website?
+		- Let Chinese server hit U.S data
+		- The major requirement is for letting China to visit Chinese website, system improvement is based on
+		solving for major requirements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTI1MzgwMDgsMTE3NzI2MjYwOCw1Nz
-U2NjgyNTAsMTc1OTgzNDc3NywtMjAyMjIxNTIwMCwtMTI5NjEx
-MDIwOSwyNDk2ODAzNDgsOTIyMjAxMzEyLC0zMjg2MzM4OTksLT
-E3MzUyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2
-LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMT
-U4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5
-MzNdfQ==
+eyJoaXN0b3J5IjpbLTc5MDg0MDE1LDExNzcyNjI2MDgsNTc1Nj
+Y4MjUwLDE3NTk4MzQ3NzcsLTIwMjIyMTUyMDAsLTEyOTYxMTAy
+MDksMjQ5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNz
+M1MjUwNTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwt
+MjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1OD
+AwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMz
+XX0=
 -->
