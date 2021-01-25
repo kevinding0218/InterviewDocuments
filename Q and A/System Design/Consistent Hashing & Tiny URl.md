@@ -257,9 +257,12 @@
 	- solve the out of capacity storage (Storage)
 	- solve the too busy (QPS)
 	- What is main issue of TinyURL
-		- too busy
+		- too busy (like mallicious attack)
+- Vertical Sharding
+	- Distribute many data tables to many machines
+		- Not applicable for Tiny
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MTA4MTQ1MSwtMTI5NjExMDIwOSwyND
+eyJoaXN0b3J5IjpbLTY2NDIyMTE3NCwtMTI5NjExMDIwOSwyND
 k2ODAzNDgsOTIyMjAxMzEyLC0zMjg2MzM4OTksLTE3MzUyNTA1
 NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MT
 YwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUs
