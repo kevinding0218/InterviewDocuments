@@ -33,8 +33,9 @@
 	- DB3: [160, 239] data remain there, [120, 159] 40 data migrated to DB4
 	- total of 80/360 = 22% data migrated
 - disadvantage: 
-	- data distribution not shared equaly
+	- data distribution not shared equaly, e.g DB2 remained same for 120 data, while other 3 DB shared 60 each
+	- pressure on those 2 servers might got heavy during migration, e.g: suppose we have 100 server, only those 2 servers got higher pressure, while the other 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMTI3MDc4Nyw3OTQxMjUyNjMsLTI5OD
-U2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbLTExOTkzODMyNzUsNzk0MTI1MjYzLC0yOT
+g1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
