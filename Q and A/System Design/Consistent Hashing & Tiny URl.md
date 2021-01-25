@@ -69,8 +69,12 @@
 - usually self-contained master-slave replica
 	- master = write, slave = read
 	- slave sync data from master
+- write ahead log
+	- all operations in SQL database will have a record in the form of log, e.g:
+	- data A updated from C to D at time B
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNDg1MTcyOCw3MzY3NDIyOCwtMTMxNT
+eyJoaXN0b3J5IjpbMTA5NjcwNzQ5Miw3MzY3NDIyOCwtMTMxNT
 gwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2Mzkz
 MywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
