@@ -89,10 +89,14 @@
 	- "manual", no need! NoSQL is for saving between sharding and replica
 
 ### Design Tiny URL
-
+#### Scenario
+- generate a Short URL based on Long URL
+	- http://www.jiuzhang.com => http://bit.ly/1UIoQB6
+- Restore Long URL based on Short URL
+	- http://bit.ly/1UIoQB6 => http://www.jiuzhang.com
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3Mz
-Y3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUy
-NjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ
-==
+eyJoaXN0b3J5IjpbLTczNDczODUwMywtMjE0NjE2MDA1OSwtOT
+E3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4
+MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLT
+kwOTkxMTkwOV19
 -->
