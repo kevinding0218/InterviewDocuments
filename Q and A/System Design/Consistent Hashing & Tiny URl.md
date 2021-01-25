@@ -244,13 +244,13 @@
 		- use Centralized SQL database + Distributed Memcached
 		- One SQL database with many Memcache, distributed across regions
 		USA user -> DNS -> Web Server <--> Memcached
-                                             Shared DB
+                                             Shared DB (Centralized SQL DB)
         CN user   -> DNS -> Web Server <--> Memcached
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMDc0MTI5MywyNDk2ODAzNDgsOTIyMj
-AxMzEyLC0zMjg2MzM4OTksLTE3MzUyNTA1NSwyNTYzMTc0NDAs
-NjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNT
-YzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1NDcyNjgyMjIs
-Nzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OT
-ExOTA5XX0=
+eyJoaXN0b3J5IjpbLTEyOTYxMTAyMDksMjQ5NjgwMzQ4LDkyMj
+IwMTMxMiwtMzI4NjMzODk5LC0xNzM1MjUwNTUsMjU2MzE3NDQw
+LDYyMjQyMDQxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3Mj
+U2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIy
+LDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOT
+kxMTkwOV19
 -->
