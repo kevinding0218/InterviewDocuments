@@ -248,7 +248,7 @@
         CN user   -> DNS -> Web Server <--> Memcached
         - User visit a webserver would be much slower than webserver visit another webserver, because of less redirection
     
-### Interviewer: what if one SQL database is out of capacity?
+### Interviewer: what if one SQL database is out of capacity? (Sharding)
 - When would we need more database server?
 	- Cache resource is out of capacity
 	- Write operation become much more
@@ -258,10 +258,10 @@
 	- solve the too busy (QPS)
 	- What is main issue of TinyURL
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMjU1MTgyMSwtMTI5NjExMDIwOSwyND
-k2ODAzNDgsOTIyMjAxMzEyLC0zMjg2MzM4OTksLTE3MzUyNTA1
-NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MT
-YwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUs
-LTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4ND
-cwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbNTU3MzE5NzUyLC0xMjk2MTEwMjA5LDI0OT
+Y4MDM0OCw5MjIyMDEzMTIsLTMyODYzMzg5OSwtMTczNTI1MDU1
+LDI1NjMxNzQ0MCw2MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNj
+AwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwt
+MTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNzg0Nz
+AzMjA2LC05MDk5MTE5MDldfQ==
 -->
