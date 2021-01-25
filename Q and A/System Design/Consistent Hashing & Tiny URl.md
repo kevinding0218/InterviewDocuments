@@ -147,9 +147,11 @@
 			- NoSQL does these for you
 			- For tiny url, not high expectation
 	- Schema data list in detail
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MT
-YwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUs
-LTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4ND
-cwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbODg5OTAwMzcsNjIyNDIwNDEsLTUzNTI1Nj
+A2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEz
+MTU4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1Nj
+M5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
 -->
