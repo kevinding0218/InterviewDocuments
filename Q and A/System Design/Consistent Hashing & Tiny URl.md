@@ -315,14 +315,19 @@
 | gg | http://www.google.com |
 | fb| http://www.facebook.com |
 - Query for long url
-	- first query CustomURLTable
-	- then query URLTable
+	- first query if already existed in CustomURLTable
+	- if not, then query URLTable
 - Create Short url based on Long url
 	- first query if already existed in CustomURLTable
-	- If not, query in URLTable and insert if need
+	- If not, query in URLTable and insert if needed
+- Create Custom Link Url
+	- query if already exisetd in URLTable
+	- if not, query in CustomURLTable and insert if needed
+- Wrong idea
+	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NDM1NzIwMSwtNzkwODQwMTUsMTE3Nz
+eyJoaXN0b3J5IjpbMjA2OTQ0MjE3MSwtNzkwODQwMTUsMTE3Nz
 I2MjYwOCw1NzU2NjgyNTAsMTc1OTgzNDc3NywtMjAyMjIxNTIw
 MCwtMTI5NjExMDIwOSwyNDk2ODAzNDgsOTIyMjAxMzEyLC0zMj
 g2MzM4OTksLTE3MzUyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEs
