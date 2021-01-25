@@ -212,12 +212,14 @@
 	- need to indexing on both shortKey and longUrl
 - if choose NoSQL database, but will need two tables
 	- 1st table, query Short based on Long
-		- row_key=longURL, colu
+		- row_key=longURL, column_key=shortURL, value=null or timestamp
+	- 2nd table, query Long based on Short
+		- row_key=shortURL, column_key=longURL, value=null or timestamp
 3. base62
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDUyNDE2ODQsLTE3MzUyNTA1NSwyNT
-YzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5
-LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1ND
-cyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIw
-NiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbNjc3NTQ3MDEzLC0xNzM1MjUwNTUsMjU2Mz
+E3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwt
+OTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3Mj
+Y4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYs
+LTkwOTkxMTkwOV19
 -->
