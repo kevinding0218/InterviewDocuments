@@ -148,10 +148,14 @@
 			- For tiny url, not high expectation
 	- Schema data list in detail
 
-
+#### Algorithm
+- Using hashing function (No)
+	- get long URL last 6 digets of MD5
+	- advantage: fast
+	- disadvantage: hard to design a non-conflict hashing algorithm
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg5OTAwMzcsNjIyNDIwNDEsLTUzNTI1Nj
-A2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEz
-MTU4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1Nj
-M5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbMTQ3OTM3NTk5OCw2MjI0MjA0MSwtNTM1Mj
+U2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwt
+MTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5OD
+U2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
