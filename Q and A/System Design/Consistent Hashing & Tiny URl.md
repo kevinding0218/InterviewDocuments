@@ -243,11 +243,14 @@
 	- improve data visit time
 		- use Centralized SQL database + Distributed Memcached
 		- One SQL database with many Memcache, distributed across regions
+		USA user -> DNS -> Web Server <--> Memcached
+
+     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc0NzYzOTgyLDI0OTY4MDM0OCw5MjIyMD
-EzMTIsLTMyODYzMzg5OSwtMTczNTI1MDU1LDI1NjMxNzQ0MCw2
-MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1Nj
-MwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3
-OTQxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MT
-E5MDldfQ==
+eyJoaXN0b3J5IjpbMTExNzI1NDM4OSwyNDk2ODAzNDgsOTIyMj
+AxMzEyLC0zMjg2MzM4OTksLTE3MzUyNTA1NSwyNTYzMTc0NDAs
+NjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNT
+YzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1NDcyNjgyMjIs
+Nzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OT
+ExOTA5XX0=
 -->
