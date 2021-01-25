@@ -40,9 +40,10 @@
 - still consider data storage as a circle
 - instead of thinking 360 pieces, consider as 2^64 - 1 pieces,  all big data will be allowed
 - each machine and data can be considered as a point in the circle by their hashing value
-- 
+- import the concept of micro shards/virtual nodes
+	- one py
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NTMyOTg3LC0xNTQ3MjY4MjIyLDc5ND
-EyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkw
-OV19
+eyJoaXN0b3J5IjpbMjEzMzM3MTY3MCwtMTU0NzI2ODIyMiw3OT
+QxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5
+MDldfQ==
 -->
