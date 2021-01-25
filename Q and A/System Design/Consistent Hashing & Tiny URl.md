@@ -223,9 +223,10 @@
 | 1| http://www.facebook.com |
 | 2| http://www.google.com |
 
-### Interviewr: how to r
+### Interviewr: how to reduce response time
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NzY0MDQ1NywtMTczNTI1MDU1LDI1Nj
+eyJoaXN0b3J5IjpbLTMyODYzMzg5OSwtMTczNTI1MDU1LDI1Nj
 MxNzQ0MCw2MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTks
 LTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0Nz
 I2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2
