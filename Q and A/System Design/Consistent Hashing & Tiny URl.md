@@ -247,8 +247,14 @@
                                              Shared DB (Centralized SQL DB)
         CN user   -> DNS -> Web Server <--> Memcached
         - User visit a webserver would be much slower than webserver visit another webserver, because of less redirection
+    
+### Interviewer: what if one SQL database is out of capacity?
+- When would we need more database server?
+	- Cache resource is out of capacity
+	- Write operation become much more
+	- M
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTYxOTI5MDYsLTEyOTYxMTAyMDksMj
+eyJoaXN0b3J5IjpbLTE3NTcxNDIxMDksLTEyOTYxMTAyMDksMj
 Q5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNzM1MjUw
 NTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwtMjE0Nj
 E2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1
