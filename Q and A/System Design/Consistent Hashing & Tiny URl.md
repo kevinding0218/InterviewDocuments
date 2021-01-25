@@ -224,11 +224,18 @@
 | 2| http://www.google.com |
 
 ### Interviewr: how to reduce response time
-
+- Scale
+	- because the read would be much more than write
+	- use cache aside to improve the speed
+	- cache needs to store two types of data
+		- long to short (for usage when generating short url)
+		- short to long (for usage when query short url)
+	- workflow:
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyODYzMzg5OSwtMTczNTI1MDU1LDI1Nj
-MxNzQ0MCw2MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTks
-LTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0Nz
-I2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2
-LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbMjA1NzE0OTI3MCwtMzI4NjMzODk5LC0xNz
+M1MjUwNTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwt
+MjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1OD
+AwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMz
+LDE3ODQ3MDMyMDYsLTkwOTkxMTkwOV19
 -->
