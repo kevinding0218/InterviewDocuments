@@ -199,11 +199,11 @@
 	- 6 digits = 62 ^ 6 = 57B
 	- 7 digits = 62 ^ 7 = 3.5T
 - advantage: better performance
-- disadvantage: rely to auto-increment global ID
+- disadvantage: rely to auto-increment global ID (need a single database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA5MDY2ODg3LDI1NjMxNzQ0MCw2MjI0Mj
-A0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3
-MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMj
-UyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDld
-fQ==
+eyJoaXN0b3J5IjpbODA1NzMwODcsMjU2MzE3NDQwLDYyMjQyMD
+QxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3LDcz
+Njc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNT
+I2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkwOV19
+
 -->
