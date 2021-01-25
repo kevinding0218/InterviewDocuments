@@ -176,7 +176,16 @@
 	```
 	int shortURLtoID(String shortURL) {
 		int id = 0;
-		for(int i = 0; i < shortURL.len
+		for(int i = 0; i < shortURL.length(); ++i) {
+			id = id * 62 + toBase62(shortURL.charAt(i));
+		}
+		return id;
+	}
+	String idToShortURL(int id) {
+		String chars = "0123456789abc..xyzABC..XYZ";
+		String short_url = "";
+		while (id > 0){
+		}
 	}
 	```
 - how many URL can the 6 digit short url represent?
@@ -186,9 +195,9 @@
 - advantage: better performance
 - disadvantage: rely to auto-increment global ID
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYwMTk4NTQyLDI1NjMxNzQ0MCw2MjI0Mj
-A0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3
-MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMj
-UyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDld
-fQ==
+eyJoaXN0b3J5IjpbLTEyMTQxMjg0MTksMjU2MzE3NDQwLDYyMj
+QyMDQxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3
+LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5ND
+EyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkw
+OV19
 -->
