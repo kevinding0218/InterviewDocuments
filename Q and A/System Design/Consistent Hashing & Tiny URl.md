@@ -292,6 +292,7 @@
 	- Because usually Chinese user would visit Chinese website
 	- So we can have Sharding key based on website GEO region info
 		- How to get the region info? 
+			- find out andgrouping most visited website
 	- What if Chinese user wants to hit U.S website?
 		- Let Chinese server hit U.S data
 		- The major requirement is for letting China to visit Chinese website, system improvement is based on
@@ -303,11 +304,11 @@
 	    CN user   -> DNS -> Web Server <--> Memcached
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ0NzExMTU3LC03OTA4NDAxNSwxMTc3Mj
-YyNjA4LDU3NTY2ODI1MCwxNzU5ODM0Nzc3LC0yMDIyMjE1MjAw
-LC0xMjk2MTEwMjA5LDI0OTY4MDM0OCw5MjIyMDEzMTIsLTMyOD
-YzMzg5OSwtMTczNTI1MDU1LDI1NjMxNzQ0MCw2MjI0MjA0MSwt
-NTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3MzY3ND
-IyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjNd
-fQ==
+eyJoaXN0b3J5IjpbLTQ5NzU4NzgwMSwtNzkwODQwMTUsMTE3Nz
+I2MjYwOCw1NzU2NjgyNTAsMTc1OTgzNDc3NywtMjAyMjIxNTIw
+MCwtMTI5NjExMDIwOSwyNDk2ODAzNDgsOTIyMjAxMzEyLC0zMj
+g2MzM4OTksLTE3MzUyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEs
+LTUzNTI1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2Nz
+QyMjgsLTEzMTU4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYz
+XX0=
 -->
