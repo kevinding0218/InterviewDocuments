@@ -149,11 +149,11 @@
 	- Schema data list in detail
 
 #### Algorithm
-- Hashing function (**No** because of conflict)
+1. Hashing function (**No** because of conflict)
 	- get long URL last 6 digets of MD5
 	- advantage: fast
 	- disadvantage: hard to design a non-conflict hashing algorithm
-- Randomly generate a short URL + remove replicate in database
+2. Randomly generate a short URL + remove replicate in database
 	- Generate a 6 diget short url randomly, if not has been used, bind it to long url
 	```
 	public String longToShort(String url) {
@@ -168,8 +168,11 @@
 	```
 	-	advantage: simple implementation
 	-	disadvantage: with more data coming, speed become slower
+3. Convert to Base62
+- Base 62
+	- consider a 62-did
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcxMDkyMjg4LDI1NjMxNzQ0MCw2MjI0Mj
+eyJoaXN0b3J5IjpbOTI2NjY0NzI2LDI1NjMxNzQ0MCw2MjI0Mj
 A0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3
 MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMj
 UyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDld
