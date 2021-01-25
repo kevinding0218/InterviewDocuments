@@ -66,15 +66,17 @@
 - Why still needs backup
 	- money cost
 #### SQL database Replica
-- usually self-contained master-slave replica
-	- master = write, slave = read
-	- slave sync data from master
+- usually self-contained Master -Slave replica
+	- Master = write, Slave = read
+	- Slave sync data from master
 - write ahead log
 	- all operations in SQL database will have a record in the form of log, e.g:
 	- data A updated from C to D at time B
-	- 
+	- when Slave get activated, will inform Master it's ready
+	- everytime when operation happened in Master will inform Slave to read log
+	- so data in Slave will have a "delay"
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NjcwNzQ5Miw3MzY3NDIyOCwtMTMxNT
+eyJoaXN0b3J5IjpbLTU4NTE0MjgyNyw3MzY3NDIyOCwtMTMxNT
 gwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2Mzkz
 MywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
