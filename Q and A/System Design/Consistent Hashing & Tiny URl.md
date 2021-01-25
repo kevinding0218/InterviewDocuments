@@ -265,7 +265,7 @@
 		- Not applicable for TinyURL
 - Horizontal Sharding
 	- What does Sharding Key do?
-		- Determine which database server/machine it should retrieve the data, when data is distributed sotred
+		- Determine which database server/machine it should select to retrieve the data, when data is distributed sotred
 	- How to make Sharding Key?
 		- Solution 1:save as 2 copies
 			- when reading Short to get Long, use Short as Sharding Key
@@ -329,11 +329,11 @@
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk5NTg3MTM4LDIwNjk0NDIxNzEsLTc5MD
-g0MDE1LDExNzcyNjI2MDgsNTc1NjY4MjUwLDE3NTk4MzQ3Nzcs
-LTIwMjIyMTUyMDAsLTEyOTYxMTAyMDksMjQ5NjgwMzQ4LDkyMj
-IwMTMxMiwtMzI4NjMzODk5LC0xNzM1MjUwNTUsMjU2MzE3NDQw
-LDYyMjQyMDQxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3Mj
-U2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIy
-XX0=
+eyJoaXN0b3J5IjpbMTM5NTA3NTc0NywyMDY5NDQyMTcxLC03OT
+A4NDAxNSwxMTc3MjYyNjA4LDU3NTY2ODI1MCwxNzU5ODM0Nzc3
+LC0yMDIyMjE1MjAwLC0xMjk2MTEwMjA5LDI0OTY4MDM0OCw5Mj
+IyMDEzMTIsLTMyODYzMzg5OSwtMTczNTI1MDU1LDI1NjMxNzQ0
+MCw2MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNz
+I1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIy
+Ml19
 -->
