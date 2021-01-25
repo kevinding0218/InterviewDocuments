@@ -159,13 +159,18 @@
 	public String longToShort(String url) {
 		while(true) {
 			String shortURL = randomShortURL();
-			if (!database.filter(shortURL=shortURL).existed())
+			if (!database.filter(shortURL=shortURL).existed()) {
+				database.create(shortURL=shortURL, longURL = url);
+				return shortURL;
+			}
 		}
 	}
 	```
+	-	advantage: simple implementation
+	-	disadvantage: with more data coming, speed become slower
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjg4OTMwOSw2MjI0MjA0MSwtNTM1Mj
-U2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwt
-MTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5OD
-U2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNT
+YwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0x
+MzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NT
+YzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkwOV19
 -->
