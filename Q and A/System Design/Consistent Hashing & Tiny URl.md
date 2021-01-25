@@ -233,9 +233,11 @@
 	- workflow:
 		1. get http://bit.ly/1Us49DS
 		2. request sends to web server, check this short url in Memcached and if found, return long url
-		3. if not found in Memcached, check this short url in SQL database
+		3. if not found in Memcached, check this short url in SQL database and return
+		4. server return to user with http 301 redirect
+	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU0OTkyNTMyLC0zMjg2MzM4OTksLTE3Mz
+eyJoaXN0b3J5IjpbMTk4ODI5NDMwLC0zMjg2MzM4OTksLTE3Mz
 UyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0y
 MTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MD
 AwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMs
