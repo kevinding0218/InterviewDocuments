@@ -41,9 +41,14 @@
 - instead of thinking 360 pieces, consider as 2^64 - 1 pieces,  all big data will be allowed
 - each machine and data can be considered as a point in the circle by their hashing value
 - import the concept of micro shards/virtual nodes
-	- one py
+	- one physical machine refers 1000 micro shards/virtual nodes
+- each virtual node refers to a point in the circle
+- each time when adding a new machine, placing 1000 virtual nodes randomly in the circle
+- when calculate which maching should store the new data
+	- calculate the hashing key --> get the number of [0, 2^64]
+	- clockwise find the 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMzM3MTY3MCwtMTU0NzI2ODIyMiw3OT
-QxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5
-MDldfQ==
+eyJoaXN0b3J5IjpbLTEzNDYyMjA0OTEsLTE1NDcyNjgyMjIsNz
+k0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTEx
+OTA5XX0=
 -->
