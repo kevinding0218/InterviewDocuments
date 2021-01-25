@@ -25,9 +25,12 @@
 	- DB1: [0,119] data remain there, [120,179] 60 data migrated to DB3
 	- DB2: [240, 359] data remain there, [180, 239] 60 data migrated to DB3
 	- total of 120/360 = 33% data migrated
-- 4 machines: DB1 --> [0, 79], DB2 --> [240, 359], DB3 --> [80, 23
-	
+- 4 machines: DB1 --> [0, 79], DB2 --> [240, 359], DB3 --> [160, 239], DB4 --> [80, 159]
+	- DB1: [0,79] data remain there, [80, 110] 40 data migrated to DB4
+	- DB2: [240, 359] data 
+	- DB2: [1, 359] data remain there, [180, 239] 60 data migrated to DB3
+	- total of 120/360 = 33% data migrated	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDI5ODE0NDYsNzk0MTI1MjYzLC0yOT
-g1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5XX0=
+eyJoaXN0b3J5IjpbLTE0ODc5NjQzNyw3OTQxMjUyNjMsLTI5OD
+U2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
