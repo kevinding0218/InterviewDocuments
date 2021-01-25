@@ -51,9 +51,9 @@
 	- use TreeMap/RBT --> O(logN) finds minimum value that's greater than X
 - when adding a new machine
 	- 1000 virtual nodes clockwise asking data of its next virtual node
-	- 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MDM0MTc2NCwtMTMxNTgwMDA5NSwtMT
-U0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAz
-MjA2LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbMjcwMDc5NDM5LC0xMzE1ODAwMDk1LC0xNT
+Q3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMy
+MDYsLTkwOTkxMTkwOV19
 -->
