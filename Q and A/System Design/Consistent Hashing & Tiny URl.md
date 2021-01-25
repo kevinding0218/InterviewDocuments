@@ -20,7 +20,7 @@
 	- DB3: only 2 remain there, [6,10] 2 data migrated somewhere else
 	- total of 9/12 = 75% data migrated
 #### Horizontal
-##### consider as a circle and data can be distributed into 360 degress in the circle
+##### consider as a circle and data can be distributed into 360 pieces/degress in the circle
 - 2 machines: DB1 --> [0, 179], DB2 --> [180, 359]
 - 3 machines: DB1 --> [0, 119], DB2 --> [240, 359], DB3 --> [120,239]
 	- DB1: [0,119] data remain there, [120,179] 60 data migrated to DB3
@@ -37,9 +37,10 @@
 	- data distribution not shared equaly, e.g DB2 remained same for 120 data, while other 3 DB shared 60 each
 	- pressure on those 2 servers might got heavy during migration, e.g: suppose we have 100 server, only those 2 servers got higher pressure, while the other 98 server didn't shared the pressure
 ##### more practical way
-
+- still consider data storage as a circle
+- instead of thinking 360 pieces, consider as 2^64 - 1 pieces,  all big data will be allowed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NzUwODc4NCwtMTU0NzI2ODIyMiw3OT
-QxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5
-MDldfQ==
+eyJoaXN0b3J5IjpbLTQ4MTAzNTA0LC0xNTQ3MjY4MjIyLDc5ND
+EyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkw
+OV19
 -->
