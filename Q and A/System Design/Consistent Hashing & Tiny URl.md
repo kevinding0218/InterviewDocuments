@@ -307,9 +307,15 @@
 
 ### Interviewer: How to provide custom url?
 - custom url example
-	- http://tiny.url/google/ => 
+	- http://tiny.url/google/ => http://www.google.com
+	- http://tiny.url/systemdesign/ => http://www.jiuzhang.com/course/2/
+- Create a new table to store custom URL (CustomURL table)
+|custom_url| long_url(index=true) |
+|--|--|
+| gg |  |
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MjQxMjYyNiwtNzkwODQwMTUsMTE3Nz
+eyJoaXN0b3J5IjpbMTY2NDI1NDc3OSwtNzkwODQwMTUsMTE3Nz
 I2MjYwOCw1NzU2NjgyNTAsMTc1OTgzNDc3NywtMjAyMjIxNTIw
 MCwtMTI5NjExMDIwOSwyNDk2ODAzNDgsOTIyMjAxMzEyLC0zMj
 g2MzM4OTksLTE3MzUyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEs
