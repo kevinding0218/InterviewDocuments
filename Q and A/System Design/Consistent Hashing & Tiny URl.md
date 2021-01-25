@@ -205,11 +205,16 @@
 1. random generator
 - need query Short url based on Long url, also need to query Long url based on Short url
 - if choose SQL database, table will 
+|shortKey| longUrl |
+|--|--|
+| a0B4Lb | http://www.facebook.com |
+| Df523P| http://www.google.com |
+- need to indexing on both shortKey and longUrl
 3. base62
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzUyNTA1NSwyNTYzMTc0NDAsNjIyND
-IwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcs
-NzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MT
-I1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTExOTA5
-XX0=
+eyJoaXN0b3J5IjpbLTU4MDcxODc0NiwtMTczNTI1MDU1LDI1Nj
+MxNzQ0MCw2MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTks
+LTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0Nz
+I2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2
+LC05MDk5MTE5MDldfQ==
 -->
