@@ -261,9 +261,11 @@
 	- What is main issue of TinyURL
 		- too busy (like mallicious attack)
 - Vertical Sharding
-	- Distribute many data tables to many machines
-		- Not applicable for TinyURL
+	- Table has too many column
+		-  we can separate partial columns of that table into a different table
 - Horizontal Sharding
+	- Table has too many rows
+		- we can separate partial rows of data into another database server/machine
 	- What does Sharding Key do?
 		- Determine which database server/machine it should select to retrieve the data, when data is distributed sotred
 	- How to make Sharding Key?
@@ -329,11 +331,11 @@
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NTA3NTc0NywyMDY5NDQyMTcxLC03OT
-A4NDAxNSwxMTc3MjYyNjA4LDU3NTY2ODI1MCwxNzU5ODM0Nzc3
-LC0yMDIyMjE1MjAwLC0xMjk2MTEwMjA5LDI0OTY4MDM0OCw5Mj
-IyMDEzMTIsLTMyODYzMzg5OSwtMTczNTI1MDU1LDI1NjMxNzQ0
-MCw2MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNz
-I1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIy
-Ml19
+eyJoaXN0b3J5IjpbLTE3ODYwNDM1ODksMTM5NTA3NTc0NywyMD
+Y5NDQyMTcxLC03OTA4NDAxNSwxMTc3MjYyNjA4LDU3NTY2ODI1
+MCwxNzU5ODM0Nzc3LC0yMDIyMjE1MjAwLC0xMjk2MTEwMjA5LD
+I0OTY4MDM0OCw5MjIyMDEzMTIsLTMyODYzMzg5OSwtMTczNTI1
+MDU1LDI1NjMxNzQ0MCw2MjI0MjA0MSwtNTM1MjU2MDYsLTIxND
+YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
+NV19
 -->
