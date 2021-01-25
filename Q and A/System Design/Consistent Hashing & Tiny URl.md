@@ -285,13 +285,18 @@
 	- How to query ID if using Long URL?
 ### Scale - Multi Region
 - we can continue improving the performance in communication between web server and database
-- Communication between Centralized DB set and cross region Web
+- Communication between Centralized DB set and cross region Web Server is slow
+	- e.g Server in China to hit database in U.S
+- Think about user's experience and habits
+	- When China user hits the URL, will be distributed to Chinese Server
+	- Because usually Chinese user would visit Chinese website
+	- So we can Sharding the
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNTU0NzExOSwxMTc3MjYyNjA4LDU3NT
-Y2ODI1MCwxNzU5ODM0Nzc3LC0yMDIyMjE1MjAwLC0xMjk2MTEw
-MjA5LDI0OTY4MDM0OCw5MjIyMDEzMTIsLTMyODYzMzg5OSwtMT
-czNTI1MDU1LDI1NjMxNzQ0MCw2MjI0MjA0MSwtNTM1MjU2MDYs
-LTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNT
-gwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2Mzkz
-M119
+eyJoaXN0b3J5IjpbLTE2NTI1MzgwMDgsMTE3NzI2MjYwOCw1Nz
+U2NjgyNTAsMTc1OTgzNDc3NywtMjAyMjIxNTIwMCwtMTI5NjEx
+MDIwOSwyNDk2ODAzNDgsOTIyMjAxMzEyLC0zMjg2MzM4OTksLT
+E3MzUyNTA1NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2
+LC0yMTQ2MTYwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMT
+U4MDAwOTUsLTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5
+MzNdfQ==
 -->
