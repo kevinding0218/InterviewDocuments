@@ -252,12 +252,16 @@
 - When would we need more database server?
 	- Cache resource is out of capacity
 	- Write operation become much more
-	- M
+	- More requestes cannot get resolved through Cache
+- What can we improve by adding more database server
+	- solve the out of capacity storage (Storage)
+	- solve the too busy (QPS)
+	- What is main issue of TinyURL
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTcxNDIxMDksLTEyOTYxMTAyMDksMj
-Q5NjgwMzQ4LDkyMjIwMTMxMiwtMzI4NjMzODk5LC0xNzM1MjUw
-NTUsMjU2MzE3NDQwLDYyMjQyMDQxLC01MzUyNTYwNiwtMjE0Nj
-E2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1
-LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3OD
-Q3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbMTczMjU1MTgyMSwtMTI5NjExMDIwOSwyND
+k2ODAzNDgsOTIyMjAxMzEyLC0zMjg2MzM4OTksLTE3MzUyNTA1
+NSwyNTYzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MT
+YwMDU5LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUs
+LTE1NDcyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4ND
+cwMzIwNiwtOTA5OTExOTA5XX0=
 -->
