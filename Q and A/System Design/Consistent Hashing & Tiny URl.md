@@ -90,13 +90,16 @@
 
 ### Design Tiny URL
 #### Scenario
-- generate a Short URL based on Long URL
-	- http://www.jiuzhang.com => http://bit.ly/1UIoQB6
-- Restore Long URL based on Short URL
-	- http://bit.ly/1UIoQB6 => http://www.jiuzhang.com
+- Requirement
+	- generate a Short URL based on Long URL
+		- http://www.jiuzhang.com => http://bit.ly/1UIoQB6
+	- Restore Long URL based on Short URL
+		- http://bit.ly/1UIoQB6 => http://www.jiuzhang.com
+- Daily Usage (QPS + Storage)
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNDczODUwMywtMjE0NjE2MDA1OSwtOT
-E3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4
-MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLT
-kwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbLTUzNTI1NjA2LC0yMTQ2MTYwMDU5LC05MT
+cyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1NDcyNjgy
+MjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOT
+A5OTExOTA5XX0=
 -->
