@@ -110,10 +110,10 @@
 		- 100M * 0.1 ~ 10M URL daily
 		- average storage for a tiny url like 100 bytes, total of 1G
 		- 1T hard disk be used for 3 years
-			- 
+	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNjIxNDg5LC01MzUyNTYwNiwtMjE0Nj
-E2MDA1OSwtOTE3MjU2MzA3LDczNjc0MjI4LC0xMzE1ODAwMDk1
-LC0xNTQ3MjY4MjIyLDc5NDEyNTI2MywtMjk4NTYzOTMzLDE3OD
-Q3MDMyMDYsLTkwOTkxMTkwOV19
+eyJoaXN0b3J5IjpbLTQyNjUxMDA2MCwtNTM1MjU2MDYsLTIxND
+YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
+NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
+g0NzAzMjA2LC05MDk5MTE5MDldfQ==
 -->
