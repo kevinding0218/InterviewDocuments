@@ -135,9 +135,14 @@
 		- Does it need Sequential ID?
 			- SQL supports auto-increment Sequential ID, like 1,2,3,4,5 ...
 			- NoSQL ID is not sequential
+		- How much expectation in QPS?
+			- NoSQL has better performance
+		- How much expectation in scalability/
+			- SQL needs developer to scale
+			- NoSQL does these for you
 	- Schema data list in detail
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MDEzNjk3OCwtNTM1MjU2MDYsLTIxND
+eyJoaXN0b3J5IjpbMTUxMzUyNTEzNCwtNTM1MjU2MDYsLTIxND
 YxNjAwNTksLTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5
 NSwtMTU0NzI2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNz
 g0NzAzMjA2LC05MDk5MTE5MDldfQ==
