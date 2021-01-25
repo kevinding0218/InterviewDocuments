@@ -173,6 +173,12 @@
 	- consider a 62-digit number (0-9, a-z, A-Z) for the 6 digit short url
 	- every short url refers to an Integer
 	- this integer can be mapping as primary key in database - Sequential ID
+	```
+	int shortURLtoID(String shortURL) {
+		int id = 0;
+		for(int i = 0; i < shortURL.len
+	}
+	```
 - how many URL can the 6 digit short url represent?
 	- 5 digits = 62 ^ 5 = 0.9B
 	- 6 digits = 62 ^ 6 = 57B
@@ -180,9 +186,9 @@
 - advantage: better performance
 - disadvantage: rely to auto-increment global ID
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzUzMjg5OTUsMjU2MzE3NDQwLDYyMj
-QyMDQxLC01MzUyNTYwNiwtMjE0NjE2MDA1OSwtOTE3MjU2MzA3
-LDczNjc0MjI4LC0xMzE1ODAwMDk1LC0xNTQ3MjY4MjIyLDc5ND
-EyNTI2MywtMjk4NTYzOTMzLDE3ODQ3MDMyMDYsLTkwOTkxMTkw
-OV19
+eyJoaXN0b3J5IjpbNTYwMTk4NTQyLDI1NjMxNzQ0MCw2MjI0Mj
+A0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTksLTkxNzI1NjMwNyw3
+MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0NzI2ODIyMiw3OTQxMj
+UyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5MDld
+fQ==
 -->
