@@ -209,12 +209,15 @@
 |--|--|
 | a0B4Lb | http://www.facebook.com |
 | Df523P| http://www.google.com |
-- need to indexing on both shortKey and longUrl
+	- need to indexing on both shortKey and longUrl
+- if choose NoSQL database, but will need two tables
+	- 1st table, query Short based on Long
+		- row_key=longURL, colu
 3. base62
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MDcxODc0NiwtMTczNTI1MDU1LDI1Nj
-MxNzQ0MCw2MjI0MjA0MSwtNTM1MjU2MDYsLTIxNDYxNjAwNTks
-LTkxNzI1NjMwNyw3MzY3NDIyOCwtMTMxNTgwMDA5NSwtMTU0Nz
-I2ODIyMiw3OTQxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2
-LC05MDk5MTE5MDldfQ==
+eyJoaXN0b3J5IjpbLTE2NDUyNDE2ODQsLTE3MzUyNTA1NSwyNT
+YzMTc0NDAsNjIyNDIwNDEsLTUzNTI1NjA2LC0yMTQ2MTYwMDU5
+LC05MTcyNTYzMDcsNzM2NzQyMjgsLTEzMTU4MDAwOTUsLTE1ND
+cyNjgyMjIsNzk0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIw
+NiwtOTA5OTExOTA5XX0=
 -->
