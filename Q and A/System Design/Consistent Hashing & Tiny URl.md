@@ -10,11 +10,13 @@
 
 ### Consistent Hashing
 #### What is consistent hashing
-when base mod number changes, data after mod changed a lot
+- when base mod number changes, data after mod changed a lot
+- server pressure when data migration during hashing
+- data might change during migration, consistency is not guranteed
 #### Horizontal
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI3ODY1MDc5LDE3ODQ3MDMyMDYsLTkwOT
-kxMTkwOV19
+eyJoaXN0b3J5IjpbLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MD
+k5MTE5MDldfQ==
 -->
