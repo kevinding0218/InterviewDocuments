@@ -44,11 +44,14 @@
 	- one physical machine refers 1000 micro shards/virtual nodes
 - each virtual node refers to a point in the circle
 - each time when adding a new machine, placing 1000 virtual nodes randomly in the circle
-- when calculate which maching should store the new data
+- when adding a new data
 	- calculate the hashing key --> get the number of [0, 2^64]
-	- clockwise find the 
+	- clockwise find the first virtual nodes
+	- the physical machine which represents the virtual node will be the final data storage
+- when adding a new machine
+	- 1000 virtual nodes clockwise asking data of its next vir
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDYyMjA0OTEsLTE1NDcyNjgyMjIsNz
-k0MTI1MjYzLC0yOTg1NjM5MzMsMTc4NDcwMzIwNiwtOTA5OTEx
-OTA5XX0=
+eyJoaXN0b3J5IjpbMjA5MjQ1MzkwMSwtMTU0NzI2ODIyMiw3OT
+QxMjUyNjMsLTI5ODU2MzkzMywxNzg0NzAzMjA2LC05MDk5MTE5
+MDldfQ==
 -->
