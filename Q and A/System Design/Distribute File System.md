@@ -20,10 +20,14 @@
 	- GFS (C++)
 	- HDFS (Java) - Hadoop Distributed File System
 
-
+### Scenario
+- What requirement needs to design
+	- Write a file
+	- Read a file
+	- W
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTgxODU1MDYsLTEwNzQzNDc5MThdfQ
-==
+eyJoaXN0b3J5IjpbNjQ1NzQwOTg2LC0xMzE4MTg1NTA2LC0xMD
+c0MzQ3OTE4XX0=
 -->
