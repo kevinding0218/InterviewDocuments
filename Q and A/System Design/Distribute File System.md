@@ -9,8 +9,11 @@
 	- How to process data faster
 - Bigtable = NoSQL
 	- How to connect data at foundation or upper level
-- 
+- Master Slave Pattern
+- How to check and handle system failure and error
+- How to design Distributed File System
+	- how to deal with failure and recovery
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTEyMjA3NzUsLTEwNzQzNDc5MThdfQ
-==
+eyJoaXN0b3J5IjpbNDQ3MDQzMzEzLC0xMDc0MzQ3OTE4XX0=
 -->
