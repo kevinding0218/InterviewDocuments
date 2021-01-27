@@ -13,7 +13,11 @@
 - How to check and handle system failure and error
 - How to design Distributed File System
 	- how to deal with failure and recovery
+|Distribute File System| Company | Open Source |
+|--|--|
+|  |  |
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ3MDQzMzEzLC0xMDc0MzQ3OTE4XX0=
+eyJoaXN0b3J5IjpbOTI0MjYyNzc5LC0xMDc0MzQ3OTE4XX0=
 -->
