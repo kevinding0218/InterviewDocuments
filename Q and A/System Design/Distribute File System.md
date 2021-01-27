@@ -15,9 +15,15 @@
 	- how to deal with failure and recovery
 |Distribute File System| Company | Open Source |
 |--|--|
-|  |  |
+| GFS | Google | No
+| HDFS | Yahoo(Alibaba) | Yes
+	- GFS (C++)
+	- HDFS (Java) - Hadoop Distributed File System
+
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI0MjYyNzc5LC0xMDc0MzQ3OTE4XX0=
+eyJoaXN0b3J5IjpbLTEzMTgxODU1MDYsLTEwNzQzNDc5MThdfQ
+==
 -->
