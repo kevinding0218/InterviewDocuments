@@ -26,10 +26,14 @@
 	- Read a file
 	- What size does it support? > 1000T
 	- How many machines to store these files? 100k (2007)
-	- 
+
+### Service
+- Client + Server
+	- What is client?
+		- Human?Browser?Webserver?Database?
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NjY1NTM1NywtMTMxODE4NTUwNiwtMT
-A3NDM0NzkxOF19
+eyJoaXN0b3J5IjpbLTE5OTYzMTAyMzUsLTEzMTgxODU1MDYsLT
+EwNzQzNDc5MThdfQ==
 -->
