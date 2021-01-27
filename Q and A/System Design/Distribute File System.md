@@ -24,10 +24,12 @@
 - What requirement needs to design
 	- Write a file
 	- Read a file
-	- W
+	- What size does it support? > 1000T
+	- How many machines to store these files? 100k (2007)
+	- 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ1NzQwOTg2LC0xMzE4MTg1NTA2LC0xMD
-c0MzQ3OTE4XX0=
+eyJoaXN0b3J5IjpbMTQ1NjY1NTM1NywtMTMxODE4NTUwNiwtMT
+A3NDM0NzkxOF19
 -->
