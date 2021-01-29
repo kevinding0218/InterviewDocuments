@@ -722,12 +722,13 @@ function ChatRecipientPicker() {
 - Non-rich site interactions
 
 #### reselect
+-https://stackoverflow.com/questions/58587126/can-someone-explain-how-input-functions-are-used-in-functions-in-reselect-librar
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NjU4NjIxLDgwMDY5OTU3OCwtNTMyMD
-IxODk1LC0xODI2NTc0ODE2LDIwNTM0MTkzNTEsLTQ4MDg1NTk3
-OCwtOTc5NzM2ODgyLDE5OTE5NjMyNTksLTQ1Njc5OTIxOCwtNT
-U2NjIzNTg3LDU4ODQ5MjYxNiwtMjEzMDk5ODIxNywtMTI4MjAy
-ODYwMCwtMTkwNzMwNjU0NSwtMTQ3NTQxMzM5OSwyNzExMzk5Mz
-UsLTEyNjYwMjMwNzAsNzU5NTgwNjc5LDcyMzkxMDcwNywyMDc1
-OTgwNjQ5XX0=
+eyJoaXN0b3J5IjpbLTEzMTUxOTA2MzEsODAwNjk5NTc4LC01Mz
+IwMjE4OTUsLTE4MjY1NzQ4MTYsMjA1MzQxOTM1MSwtNDgwODU1
+OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5MjE4LC
+01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMjgy
+MDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOT
+kzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIw
+NzU5ODA2NDldfQ==
 -->
