@@ -50,11 +50,13 @@
 	- Metadata (describe "other data", usually visited more than content)
 		- File info(FileName, CreatedTime, Size)
 		- Windows: Sequential Storage - disk piece management for removed file
-		- Linux: Separate Storage
+		- Linux: Separate Storage - Reduce size of metadata, waste space for small files
+			- Index: Chunk 11 -> diskOffset1, Chunk 12 -> diskOffset2
+			- 1 chunk = 64M = 64 * 1024K
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM4MTUwMDMwLDc4MTM0MTM3OCwtMTQ0MT
-gyNzU5OCwxMDU0OTA2NjAxLC0xOTk2MzEwMjM1LC0xMzE4MTg1
-NTA2LC0xMDc0MzQ3OTE4XX0=
+eyJoaXN0b3J5IjpbLTIwNzE1MTM1ODIsMjM4MTUwMDMwLDc4MT
+M0MTM3OCwtMTQ0MTgyNzU5OCwxMDU0OTA2NjAxLC0xOTk2MzEw
+MjM1LC0xMzE4MTg1NTA2LC0xMDc0MzQ3OTE4XX0=
 -->
