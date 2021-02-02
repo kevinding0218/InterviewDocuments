@@ -55,11 +55,14 @@
 			- 1 chunk = 64M = 64 * 1024K
 - Scale about the Storage
 	- One Master + many Chunk Slave Server
-	- 
+	- Key point: master don't record the diskOffset of a chunk
+	- Advantage
+		- Reduce the size of metadata in master
+		- Reduce the traffic between master and ChunkServer (chunk offset change doesn't need to notify master)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzU2MjE2MTksLTIwNzE1MTM1ODIsMj
-M4MTUwMDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5OCwxMDU0OTA2
-NjAxLC0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC0xMDc0MzQ3OT
-E4XX0=
+eyJoaXN0b3J5IjpbMTUwNTIyNjQxNiwtMTkzNTYyMTYxOSwtMj
+A3MTUxMzU4MiwyMzgxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3
+NTk4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MD
+YsLTEwNzQzNDc5MThdfQ==
 -->
