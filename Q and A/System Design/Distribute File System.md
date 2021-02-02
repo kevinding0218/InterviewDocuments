@@ -127,12 +127,14 @@
 - Master /gfs/home/file1.mp4 Chunk03 -> CS3, CS5, CS4
 	- Chunk Server 5 (file1.mp4-chunk-03)
 	- Chunk Server 4 (file1.mp4-chunk-03, file2.mp4-chunk-01-file2.mp4-chunk-02)
-	- Ask master that if Chunk 03 is wrong, where are the others
+	- Ask master that if Chunk 03 is wrong in CS3, where are the others (CS4 & CS5)
+#### How to find whether a ChunkServer is down?
+- HeartBeat
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjQxNDc0MiwxOTQ4NTk3MzcsNjIzOT
-Q2MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOCw2MTI0NjI5ODgs
-LTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5LC0yMD
-cxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0NDE4Mjc1
-OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMTMxODE4NTUwNi
-wtMTA3NDM0NzkxOF19
+eyJoaXN0b3J5IjpbNzAyOTU2MTgwLDE5NDg1OTczNyw2MjM5ND
+YxODUsMTIyNTg4MjU0NSwtOTY0MzQ4MDM4LDYxMjQ2Mjk4OCwt
+MjEwODA0OTgzLDEwNDA3MTQxNjYsLTE5MzU2MjE2MTksLTIwNz
+E1MTM1ODIsMjM4MTUwMDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5
+OCwxMDU0OTA2NjAxLC0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC
+0xMDc0MzQ3OTE4XX0=
 -->
