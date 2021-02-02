@@ -31,6 +31,12 @@
 - Client + Server
 	- What is client?
 		- Webserver & Database
+		- Client vs Server
+			- User vs Browser
+			- Browser vs Webserver
+			- Webserver vs Database
+			- Database vs GFS
+			- Webserver vs GFS
 	- How to communicate across multiply machine?
 		- Peer 2 Peer (BitComet, Cassandra)
 			- Client -> Server 1 <-> Server 2 <...> Server N
@@ -76,9 +82,11 @@
 	2. master response to client to "assign chunkserver_locations = US, CS1"
 	3. GFS client trasnfer data = /gfs/home/file1.mp4-01-of-09 to ChunkServer 1
 	4. ChunkServer 1 notify master transfer is done
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkwMDM4NjIsLTIxMDgwNDk4MywxMDQwNz
-E0MTY2LC0xOTM1NjIxNjE5LC0yMDcxNTEzNTgyLDIzODE1MDAz
-MCw3ODEzNDEzNzgsLTE0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMT
-k5NjMxMDIzNSwtMTMxODE4NTUwNiwtMTA3NDM0NzkxOF19
+eyJoaXN0b3J5IjpbLTczMjIyNjIxMiwtMjEwODA0OTgzLDEwND
+A3MTQxNjYsLTE5MzU2MjE2MTksLTIwNzE1MTM1ODIsMjM4MTUw
+MDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5OCwxMDU0OTA2NjAxLC
+0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC0xMDc0MzQ3OTE4XX0=
+
 -->
