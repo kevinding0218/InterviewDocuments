@@ -114,12 +114,16 @@
 		- write the checksum when write a chunk
 	- when to read the checksum
 		- read file
-#### How to avoid 
+#### How to avoid chunk data loss when a ChunkServer is down/fail?
+- Replica
+- How many backup we need? Where are they stored?
+	- 3 backup
+	- 2 is not safe enough 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg2MzQ5MTE0LDE5NDg1OTczNyw2MjM5ND
-YxODUsMTIyNTg4MjU0NSwtOTY0MzQ4MDM4LDYxMjQ2Mjk4OCwt
-MjEwODA0OTgzLDEwNDA3MTQxNjYsLTE5MzU2MjE2MTksLTIwNz
-E1MTM1ODIsMjM4MTUwMDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5
-OCwxMDU0OTA2NjAxLC0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC
-0xMDc0MzQ3OTE4XX0=
+eyJoaXN0b3J5IjpbMTIyMjE3MDQ3NywxOTQ4NTk3MzcsNjIzOT
+Q2MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOCw2MTI0NjI5ODgs
+LTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5LC0yMD
+cxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0NDE4Mjc1
+OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMTMxODE4NTUwNi
+wtMTA3NDM0NzkxOF19
 -->
