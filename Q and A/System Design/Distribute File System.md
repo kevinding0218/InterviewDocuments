@@ -57,11 +57,11 @@
 	- One Master + many Chunk Slave Server
 	- Key point: master don't record the diskOffset of a chunk
 	- Advantage
-		- Reduce the size of metadata in master
+		- Reduce the size of metadata in master, one file could be saved across different chunk
 		- Reduce the traffic between master and ChunkServer (chunk offset change doesn't need to notify master)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNTIyNjQxNiwtMTkzNTYyMTYxOSwtMj
+eyJoaXN0b3J5IjpbMTA0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMj
 A3MTUxMzU4MiwyMzgxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3
 NTk4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MD
 YsLTEwNzQzNDc5MThdfQ==
