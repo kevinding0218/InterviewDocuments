@@ -118,10 +118,10 @@
 - Replica
 - How many backup we need? Where are they stored?
 	- 3 backup
-		- 2 NY + 1 SEA > 1NY + 1SEA + 1PIT
+		- 2 NY + 1 SEA > 1 NY + 1 SEA + 1 PIT
 	- 2 is not safe enough 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDc5ODE0OTIsMTk0ODU5NzM3LDYyMz
+eyJoaXN0b3J5IjpbLTEwMDA1NDQ0NzgsMTk0ODU5NzM3LDYyMz
 k0NjE4NSwxMjI1ODgyNTQ1LC05NjQzNDgwMzgsNjEyNDYyOTg4
 LC0yMTA4MDQ5ODMsMTA0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMj
 A3MTUxMzU4MiwyMzgxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3
