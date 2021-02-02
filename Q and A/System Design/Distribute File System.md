@@ -54,11 +54,12 @@
 			- Index: Chunk 11 -> diskOffset1, Chunk 12 -> diskOffset2
 			- 1 chunk = 64M = 64 * 1024K
 - Scale about the Storage
+	- One Master + many Chunk Slave Server
 	- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NTY3MjE3NSwtMjA3MTUxMzU4MiwyMz
-gxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2
-MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQzNDc5MT
-hdfQ==
+eyJoaXN0b3J5IjpbLTE5MzU2MjE2MTksLTIwNzE1MTM1ODIsMj
+M4MTUwMDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5OCwxMDU0OTA2
+NjAxLC0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC0xMDc0MzQ3OT
+E4XX0=
 -->
