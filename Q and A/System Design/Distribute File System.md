@@ -65,7 +65,7 @@
 	- Advantage
 		- Reduce the size of metadata in master, one file could be saved across different chunk
 		- Reduce the traffic between master and ChunkServer (chunk offset change doesn't need to notify master)
-### How to write a big file
+### How to write a file
 #### One write vs multiple write
 - What if something goes wrong during write process
 	- one write needs to write entire file again 
@@ -83,10 +83,15 @@
 	3. GFS client trasnfer data = /gfs/home/file1.mp4-01-of-09 to ChunkServer 1
 	4. ChunkServer 1 notify master transfer is done
 #### How to modify a file
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEyNDYyOTg4LC0yMTA4MDQ5ODMsMTA0MD
-cxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMzgxNTAw
-MzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2MDEsLT
-E5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQzNDc5MThdfQ==
+- One time to write, many times to read
+- first delete /gfs/home/file1.mp4, then re-write the file
 
+### How to read a file
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTk2NDM0ODAzOCw2MTI0NjI5ODgsLTIxMD
+gwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5LC0yMDcxNTEz
+NTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0NDE4Mjc1OTgsMT
+A1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMTMxODE4NTUwNiwtMTA3
+NDM0NzkxOF19
 -->
