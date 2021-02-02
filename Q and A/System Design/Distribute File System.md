@@ -47,11 +47,13 @@
 
 ### Interview: How to save one file
 - What contains in a file
-	- Metadata
+	- Metadata (describe "other data", 
+		- File info(FileName, CreatedTime, Size)
+		- 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzOTEyODE2Niw3ODEzNDEzNzgsLTE0ND
-E4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMTMxODE4
-NTUwNiwtMTA3NDM0NzkxOF19
+eyJoaXN0b3J5IjpbLTE1NzYzODc0NzEsNzgxMzQxMzc4LC0xND
+QxODI3NTk4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgx
+ODU1MDYsLTEwNzQzNDc5MThdfQ==
 -->
