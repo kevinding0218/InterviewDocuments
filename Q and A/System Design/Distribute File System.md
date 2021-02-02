@@ -89,9 +89,15 @@
 ### How to read a file
 #### read by chunks
 1. Client tells master to read 'Filename=/gfs/home/file1.mp4'
-2. Master returns a chunk list with chunk indexes and chunk se
+2. Master returns a chunk list with chunk indexes and chunk servers
+3. Client read '/gfs/home/file1.mp4-00-of-09' in Chunk Server 1
+4. Chunk Server 1 return data of '/gfs/home/file1.mp4-00-of-09'
+
+### Master Task
+- Store metadata of each file
+- Store a 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxOTcxMzIyMiwtOTY0MzQ4MDM4LDYxMj
+eyJoaXN0b3J5IjpbLTU3OTU4ODgwOCwtOTY0MzQ4MDM4LDYxMj
 Q2Mjk4OCwtMjEwODA0OTgzLDEwNDA3MTQxNjYsLTE5MzU2MjE2
 MTksLTIwNzE1MTM1ODIsMjM4MTUwMDMwLDc4MTM0MTM3OCwtMT
 Q0MTgyNzU5OCwxMDU0OTA2NjAxLC0xOTk2MzEwMjM1LC0xMzE4
