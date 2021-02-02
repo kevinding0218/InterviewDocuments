@@ -123,8 +123,11 @@
 #### How to select chunk server?
 - LRU, less write most recent
 - Disk storage small
+#### How to recover when a chunk is broken?
+- Master /gfs/home/file1.mp4 Chunk03 -> CS3, CS5, CS4
+	- Chunk 5 (file1.m
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNDM0NTY3NiwxOTQ4NTk3MzcsNjIzOT
+eyJoaXN0b3J5IjpbLTUwMjYwMTU2NCwxOTQ4NTk3MzcsNjIzOT
 Q2MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOCw2MTI0NjI5ODgs
 LTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5LC0yMD
 cxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0NDE4Mjc1
