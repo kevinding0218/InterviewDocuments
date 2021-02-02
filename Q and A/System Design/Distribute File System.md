@@ -105,9 +105,9 @@
 #### is single master enough?
 - Yes, simple is perfect
 #### How to identify whether a chunk on the disk is broken?
-- CheckSum(XML Method (MD5, SHA1, SHA256 and SHA512)
+- CheckSum(XOR) Method (MD5, SHA1, SHA256 and SHA512)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc3NDcwODcyLDYyMzk0NjE4NSwxMjI1OD
+eyJoaXN0b3J5IjpbMTk0ODU5NzM3LDYyMzk0NjE4NSwxMjI1OD
 gyNTQ1LC05NjQzNDgwMzgsNjEyNDYyOTg4LC0yMTA4MDQ5ODMs
 MTA0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMz
 gxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2
