@@ -105,12 +105,14 @@
 #### is single master enough?
 - Yes, simple is perfect
 #### How to identify whether a chunk on the disk is broken?
-- CheckSum(XOR) Method (MD5, SHA1, SHA256 and SHA512)
+- CheckSum(XOR) Method (MD5, SHA1, SHA256 and SHA512), only check 1 digit
+	- 1 (01) && 2(10) && 3(11) = CheckSum(00)
+	-  (01) && 2(11) && 3(11) = CheckSum(01) not match
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0ODU5NzM3LDYyMzk0NjE4NSwxMjI1OD
-gyNTQ1LC05NjQzNDgwMzgsNjEyNDYyOTg4LC0yMTA4MDQ5ODMs
-MTA0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMz
-gxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2
-MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQzNDc5MT
-hdfQ==
+eyJoaXN0b3J5IjpbNzkzMDc4NDQ0LDE5NDg1OTczNyw2MjM5ND
+YxODUsMTIyNTg4MjU0NSwtOTY0MzQ4MDM4LDYxMjQ2Mjk4OCwt
+MjEwODA0OTgzLDEwNDA3MTQxNjYsLTE5MzU2MjE2MTksLTIwNz
+E1MTM1ODIsMjM4MTUwMDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5
+OCwxMDU0OTA2NjAxLC0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC
+0xMDc0MzQ3OTE4XX0=
 -->
