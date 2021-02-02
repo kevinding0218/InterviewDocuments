@@ -70,9 +70,11 @@
 	- GFS Client will cut down based on file size
 	- e.g: gfd/home/file1.mp4 size = 576M, so cut down to 576M/64M = 9 chunks
 	- every chunk has a chunk index : file1.map4-01-of-09, file1.map4-02-of-09, ...
-- 
+- How each chunk write to server?
+	1. GFS client tell GFS master that I am going to write file_name = /gfs/home/file1.mp4, Chunk index = 1
+	2. GFS master response to 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NzUzNjI1NywtMjEwODA0OTgzLDEwND
+eyJoaXN0b3J5IjpbMTg2MzM1MTU3NiwtMjEwODA0OTgzLDEwND
 A3MTQxNjYsLTE5MzU2MjE2MTksLTIwNzE1MTM1ODIsMjM4MTUw
 MDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5OCwxMDU0OTA2NjAxLC
 0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC0xMDc0MzQ3OTE4XX0=
