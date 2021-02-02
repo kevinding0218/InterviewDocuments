@@ -65,10 +65,14 @@
 	- one write needs to write entire file again
 	- multiple writes only need to transfer a small piece
 - Size of multiple write
-	- 
+	- File is stored by Chunk, so chunk (64M) is the transfer unit
+- Separate by master or client
+	- Client cut down based on file size
+	- e.g: gfd/home/file1.mp4 size = 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOT
-M1NjIxNjE5LC0yMDcxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEz
-NzgsLTE0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNS
-wtMTMxODE4NTUwNiwtMTA3NDM0NzkxOF19
+eyJoaXN0b3J5IjpbLTQ2MTY3NjA2LC0yMTA4MDQ5ODMsMTA0MD
+cxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMzgxNTAw
+MzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2MDEsLT
+E5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQzNDc5MThdfQ==
+
 -->
