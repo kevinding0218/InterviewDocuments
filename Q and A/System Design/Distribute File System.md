@@ -38,14 +38,14 @@
 			- dis: multiple machines needs keep communication to persist their data
 		- Master Slave
 			- Client -> Master (Server 1, Server 2, ... Server N)
-			- adv: Simple Design
+			- adv: Simple Design and data is easy to persist
 			- dis: master goes down then all down
-		- Final Des
-		- 
+		- Final Decision of GFS
+			- Master + Slave
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIzOTMyNzk5LC0xNDQxODI3NTk4LDEwNT
+eyJoaXN0b3J5IjpbNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNT
 Q5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQz
 NDc5MThdfQ==
 -->
