@@ -99,11 +99,13 @@
 	- when read, find corresponding chunk servers
 	- when write, arrange free chunk servers
 - Why not let master write data but let client do this
-	- 
+	- master bottleneck
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDA5NjcwMDYsLTk2NDM0ODAzOCw2MT
-I0NjI5ODgsLTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIx
-NjE5LC0yMDcxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLT
-E0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMTMx
-ODE4NTUwNiwtMTA3NDM0NzkxOF19
+eyJoaXN0b3J5IjpbODMzODU0ODMsLTk2NDM0ODAzOCw2MTI0Nj
+I5ODgsLTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5
+LC0yMDcxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0ND
+E4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMTMxODE4
+NTUwNiwtMTA3NDM0NzkxOF19
 -->
