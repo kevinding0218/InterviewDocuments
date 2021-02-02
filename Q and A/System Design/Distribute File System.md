@@ -108,10 +108,11 @@
 - CheckSum(XOR) Method (MD5, SHA1, SHA256 and SHA512), only check 1 digit
 	- 1 (01) && 2(10) && 3(11) = CheckSum(00)
 	-  (01) && 2(11) && 3(11) = CheckSum(01) not match
-- when to use CheckSum
+	- when to use CheckSum
+	- 1chunk = 64MB, each chunk has a checksum, size of checksum of 1p file is 1P/64MB*32bit = 62.5MB
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzM1NjQwMSwxOTQ4NTk3MzcsNjIzOT
+eyJoaXN0b3J5IjpbMTc5NjI1NTY2MywxOTQ4NTk3MzcsNjIzOT
 Q2MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOCw2MTI0NjI5ODgs
 LTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5LC0yMD
 cxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0NDE4Mjc1
