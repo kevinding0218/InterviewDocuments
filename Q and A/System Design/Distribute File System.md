@@ -108,9 +108,10 @@
 - CheckSum(XOR) Method (MD5, SHA1, SHA256 and SHA512), only check 1 digit
 	- 1 (01) && 2(10) && 3(11) = CheckSum(00)
 	-  (01) && 2(11) && 3(11) = CheckSum(01) not match
-- 
+- when to use CheckSum
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NTY5NDY4MSwxOTQ4NTk3MzcsNjIzOT
+eyJoaXN0b3J5IjpbLTIwNzM1NjQwMSwxOTQ4NTk3MzcsNjIzOT
 Q2MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOCw2MTI0NjI5ODgs
 LTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5LC0yMD
 cxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0NDE4Mjc1
