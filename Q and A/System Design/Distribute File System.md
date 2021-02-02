@@ -68,9 +68,10 @@
 	- File is stored by Chunk, so chunk (64M) is the transfer unit
 - Separate by master or client
 	- Client cut down based on file size
-	- e.g: gfd/home/file1.mp4 size = 
+	- e.g: gfd/home/file1.mp4 size = 576M, so cut down to 576M/64M = 9 chunks
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MTY3NjA2LC0yMTA4MDQ5ODMsMTA0MD
+eyJoaXN0b3J5IjpbNDc4MDQzOTE0LC0yMTA4MDQ5ODMsMTA0MD
 cxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMzgxNTAw
 MzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2MDEsLT
 E5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQzNDc5MThdfQ==
