@@ -60,9 +60,10 @@
 		- Reduce the size of metadata in master, one file could be saved across different chunk
 		- Reduce the traffic between master and ChunkServer (chunk offset change doesn't need to notify master)
 ### How to write a big file
-- 
+#### One write vs multiple write
+- What if something goes wrong during write process
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1ODM3NDA3NSwxMDQwNzE0MTY2LC0xOT
+eyJoaXN0b3J5IjpbLTI5NjA2MjQ3MSwxMDQwNzE0MTY2LC0xOT
 M1NjIxNjE5LC0yMDcxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEz
 NzgsLTE0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNS
 wtMTMxODE4NTUwNiwtMTA3NDM0NzkxOF19
