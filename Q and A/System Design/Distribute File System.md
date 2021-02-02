@@ -62,8 +62,12 @@
 ### How to write a big file
 #### One write vs multiple write
 - What if something goes wrong during write process
+	- one write needs to write entire file again
+	- multiple writes only need to transfer a small piece
+- Size of multiple write
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NjA2MjQ3MSwxMDQwNzE0MTY2LC0xOT
+eyJoaXN0b3J5IjpbLTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOT
 M1NjIxNjE5LC0yMDcxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEz
 NzgsLTE0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNS
 wtMTMxODE4NTUwNiwtMTA3NDM0NzkxOF19
