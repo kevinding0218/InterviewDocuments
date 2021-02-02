@@ -95,11 +95,15 @@
 
 ### Master Task
 - Store metadata of each file
-- Store a 
+- Store a Map of (file name + chunk index -> chunk server)
+	- when read, find corresponding chunk servers
+	- when write, arrange free chunk servers
+- Why not let master write data but let client do this
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3OTU4ODgwOCwtOTY0MzQ4MDM4LDYxMj
-Q2Mjk4OCwtMjEwODA0OTgzLDEwNDA3MTQxNjYsLTE5MzU2MjE2
-MTksLTIwNzE1MTM1ODIsMjM4MTUwMDMwLDc4MTM0MTM3OCwtMT
-Q0MTgyNzU5OCwxMDU0OTA2NjAxLC0xOTk2MzEwMjM1LC0xMzE4
-MTg1NTA2LC0xMDc0MzQ3OTE4XX0=
+eyJoaXN0b3J5IjpbLTIxNDA5NjcwMDYsLTk2NDM0ODAzOCw2MT
+I0NjI5ODgsLTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIx
+NjE5LC0yMDcxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLT
+E0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMTMx
+ODE4NTUwNiwtMTA3NDM0NzkxOF19
 -->
