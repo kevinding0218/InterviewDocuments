@@ -130,11 +130,14 @@
 	- Ask master that if Chunk 03 is wrong in CS3, where are the others (CS4 & CS5)
 #### How to find whether a ChunkServer is down?
 - HeartBeat
+	- Master send request to server frequently like every 5 mins
+	- Server send message to master frequently like every 5 mins, better
+-  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAyOTU2MTgwLDE5NDg1OTczNyw2MjM5ND
-YxODUsMTIyNTg4MjU0NSwtOTY0MzQ4MDM4LDYxMjQ2Mjk4OCwt
-MjEwODA0OTgzLDEwNDA3MTQxNjYsLTE5MzU2MjE2MTksLTIwNz
-E1MTM1ODIsMjM4MTUwMDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5
-OCwxMDU0OTA2NjAxLC0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC
-0xMDc0MzQ3OTE4XX0=
+eyJoaXN0b3J5IjpbLTIwMDAzOTcwNTksMTk0ODU5NzM3LDYyMz
+k0NjE4NSwxMjI1ODgyNTQ1LC05NjQzNDgwMzgsNjEyNDYyOTg4
+LC0yMTA4MDQ5ODMsMTA0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMj
+A3MTUxMzU4MiwyMzgxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3
+NTk4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MD
+YsLTEwNzQzNDc5MThdfQ==
 -->
