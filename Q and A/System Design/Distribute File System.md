@@ -75,10 +75,10 @@
 	1. GFS client tell master that I am going to write file_name = /gfs/home/file1.mp4, Chunk index = 1
 	2. master response to client to "assign chunkserver_locations = US, CS1"
 	3. GFS client trasnfer data = /gfs/home/file1.mp4-01-of-09 to ChunkServer 1
+	4. ChunkServer 1 notify master transfer is done
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQyODkwMzI5LC0yMTA4MDQ5ODMsMTA0MD
-cxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMzgxNTAw
-MzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2MDEsLT
-E5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQzNDc5MThdfQ==
-
+eyJoaXN0b3J5IjpbNjkwMDM4NjIsLTIxMDgwNDk4MywxMDQwNz
+E0MTY2LC0xOTM1NjIxNjE5LC0yMDcxNTEzNTgyLDIzODE1MDAz
+MCw3ODEzNDEzNzgsLTE0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMT
+k5NjMxMDIzNSwtMTMxODE4NTUwNiwtMTA3NDM0NzkxOF19
 -->
