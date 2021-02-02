@@ -125,9 +125,11 @@
 - Disk storage small
 #### How to recover when a chunk is broken?
 - Master /gfs/home/file1.mp4 Chunk03 -> CS3, CS5, CS4
-	- Chunk 5 (file1.m
+	- Chunk Server 5 (file1.mp4-chunk-03)
+	- Chunk Server 4 (file1.mp4-chunk-03, file2.mp4-chunk-01-file2.mp4-chunk-02)
+	- Ask master that if Chunk 03 is wrong, where are the others
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMjYwMTU2NCwxOTQ4NTk3MzcsNjIzOT
+eyJoaXN0b3J5IjpbLTIzNjQxNDc0MiwxOTQ4NTk3MzcsNjIzOT
 Q2MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOCw2MTI0NjI5ODgs
 LTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5LC0yMD
 cxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0NDE4Mjc1
