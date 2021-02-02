@@ -59,10 +59,11 @@
 	- Advantage
 		- Reduce the size of metadata in master, one file could be saved across different chunk
 		- Reduce the traffic between master and ChunkServer (chunk offset change doesn't need to notify master)
-
+### How to write a big file
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMj
-A3MTUxMzU4MiwyMzgxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3
-NTk4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MD
-YsLTEwNzQzNDc5MThdfQ==
+eyJoaXN0b3J5IjpbLTM1ODM3NDA3NSwxMDQwNzE0MTY2LC0xOT
+M1NjIxNjE5LC0yMDcxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEz
+NzgsLTE0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNS
+wtMTMxODE4NTUwNiwtMTA3NDM0NzkxOF19
 -->
