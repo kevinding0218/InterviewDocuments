@@ -30,10 +30,12 @@
 ### Service
 - Client + Server
 	- What is client?
-		- Human?Browser?Webserver?Database?
+		- Webserver & Database
+	- How to communicate across multiply machine?
+		- 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTYzMTAyMzUsLTEzMTgxODU1MDYsLT
-EwNzQzNDc5MThdfQ==
+eyJoaXN0b3J5IjpbMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMT
+MxODE4NTUwNiwtMTA3NDM0NzkxOF19
 -->
