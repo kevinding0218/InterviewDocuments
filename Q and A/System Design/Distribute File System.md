@@ -112,10 +112,11 @@
 		- 1chunk = 64MB, each chunk has a checksum, size of checksum of 1p file is 1P/64MB*32bit = 62.5MB
 	- when to write the CheckSum
 		- write the checksum when write a chunk
-
+	- when to read the checksum
+		- read file
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzODgzMTgyMiwxOTQ4NTk3MzcsNjIzOT
+eyJoaXN0b3J5IjpbMTczOTA5MTUwMywxOTQ4NTk3MzcsNjIzOT
 Q2MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOCw2MTI0NjI5ODgs
 LTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5LC0yMD
 cxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0NDE4Mjc1
