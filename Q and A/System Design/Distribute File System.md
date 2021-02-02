@@ -32,11 +32,13 @@
 	- What is client?
 		- Webserver & Database
 	- How to communicate across multiply machine?
-		- Client -> Server 1 <-> Server 2 <...> Server N
+		- 
+			- Client -> Server 1 <-> Server 2 <...> Server N
 		- Client -> Master (Server 1, Server 2, ... Server N)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMT
-k5NjMxMDIzNSwtMTMxODE4NTUwNiwtMTA3NDM0NzkxOF19
+eyJoaXN0b3J5IjpbLTgxNDU0ODEyOSwtMTQ0MTgyNzU5OCwxMD
+U0OTA2NjAxLC0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC0xMDc0
+MzQ3OTE4XX0=
 -->
