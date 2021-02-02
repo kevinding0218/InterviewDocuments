@@ -82,11 +82,11 @@
 	2. master response to client to "assign chunkserver_locations = US, CS1"
 	3. GFS client trasnfer data = /gfs/home/file1.mp4-01-of-09 to ChunkServer 1
 	4. ChunkServer 1 notify master transfer is done
-
+#### How to modify a file
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMjIyNjIxMiwtMjEwODA0OTgzLDEwND
-A3MTQxNjYsLTE5MzU2MjE2MTksLTIwNzE1MTM1ODIsMjM4MTUw
-MDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5OCwxMDU0OTA2NjAxLC
-0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC0xMDc0MzQ3OTE4XX0=
+eyJoaXN0b3J5IjpbNjEyNDYyOTg4LC0yMTA4MDQ5ODMsMTA0MD
+cxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMzgxNTAw
+MzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2MDEsLT
+E5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQzNDc5MThdfQ==
 
 -->
