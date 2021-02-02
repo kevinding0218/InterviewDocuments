@@ -42,10 +42,16 @@
 			- dis: master goes down then all down
 		- Final Decision of GFS
 			- Master + Slave
+	
+### Storage
+
+### Interview: How to save one file
+- What contains in a file
+	- Metadata
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNT
-Q5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQz
-NDc5MThdfQ==
+eyJoaXN0b3J5IjpbLTIzOTEyODE2Niw3ODEzNDEzNzgsLTE0ND
+E4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMTMxODE4
+NTUwNiwtMTA3NDM0NzkxOF19
 -->
