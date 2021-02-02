@@ -62,7 +62,7 @@
 ### How to write a big file
 #### One write vs multiple write
 - What if something goes wrong during write process
-	- one write needs to write entire file again
+	- one write needs to write entire file again 
 	- multiple writes only need to transfer a small piece
 - Size of multiple write
 	- File is stored by Chunk, so chunk (64M) is the transfer unit
@@ -74,10 +74,11 @@
 	- master will distribute chunkserver for each chunk to client
 	1. GFS client tell master that I am going to write file_name = /gfs/home/file1.mp4, Chunk index = 1
 	2. master response to client to "assign chunkserver_locations = US, CS1"
+	3. GFS client trasnfer data = /gfs/home/file1.mp4-01-of-09 to ChunkServer 1
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwOTAwMTk0NSwtMjEwODA0OTgzLDEwND
-A3MTQxNjYsLTE5MzU2MjE2MTksLTIwNzE1MTM1ODIsMjM4MTUw
-MDMwLDc4MTM0MTM3OCwtMTQ0MTgyNzU5OCwxMDU0OTA2NjAxLC
-0xOTk2MzEwMjM1LC0xMzE4MTg1NTA2LC0xMDc0MzQ3OTE4XX0=
+eyJoaXN0b3J5IjpbMjQyODkwMzI5LC0yMTA4MDQ5ODMsMTA0MD
+cxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMzgxNTAw
+MzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2MDEsLT
+E5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQzNDc5MThdfQ==
 
 -->
