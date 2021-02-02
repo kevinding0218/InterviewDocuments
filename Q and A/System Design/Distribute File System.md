@@ -47,13 +47,14 @@
 
 ### Interview: How to save one file
 - What contains in a file
-	- Metadata (describe "other data", 
+	- Metadata (describe "other data", usually visited more than content)
 		- File info(FileName, CreatedTime, Size)
-		- 
+		- Windows: Sequential Storage
+		- Linux: Separate Storage
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzYzODc0NzEsNzgxMzQxMzc4LC0xND
+eyJoaXN0b3J5IjpbLTEwNjgwOTAxNzAsNzgxMzQxMzc4LC0xND
 QxODI3NTk4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgx
 ODU1MDYsLTEwNzQzNDc5MThdfQ==
 -->
