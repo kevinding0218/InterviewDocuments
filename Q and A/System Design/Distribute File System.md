@@ -163,14 +163,18 @@
 		- CheckSum
 	- Avoid the failure chunk
 		- Replica
-	- Recover the faulre
-		- Ask mas
+	- Recover the failure
+		- Ask master
+	- Discover the failure of the chunk server
+		- Heart Beat
+	- Solve the failure of writing ChunkServer
+		- Retry
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzY2MjIwMjksLTQyNTM3MDMzNCwtMT
-k5OTAxNDAwOCwtMTMyMzYxMjk4OCwtMjAwMDM5NzA1OSwxOTQ4
-NTk3MzcsNjIzOTQ2MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOC
-w2MTI0NjI5ODgsLTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1
-NjIxNjE5LC0yMDcxNTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNz
-gsLTE0NDE4Mjc1OTgsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwt
-MTMxODE4NTUwNl19
+eyJoaXN0b3J5IjpbMTMxMzQ4NTI5OCwtNDI1MzcwMzM0LC0xOT
+k5MDE0MDA4LC0xMzIzNjEyOTg4LC0yMDAwMzk3MDU5LDE5NDg1
+OTczNyw2MjM5NDYxODUsMTIyNTg4MjU0NSwtOTY0MzQ4MDM4LD
+YxMjQ2Mjk4OCwtMjEwODA0OTgzLDEwNDA3MTQxNjYsLTE5MzU2
+MjE2MTksLTIwNzE1MTM1ODIsMjM4MTUwMDMwLDc4MTM0MTM3OC
+wtMTQ0MTgyNzU5OCwxMDU0OTA2NjAxLC0xOTk2MzEwMjM1LC0x
+MzE4MTg1NTA2XX0=
 -->
