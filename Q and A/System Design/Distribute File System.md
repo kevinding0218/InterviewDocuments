@@ -148,9 +148,25 @@
 - Storage:
 	- Save a file in one machine -> a big file in one machine -> a extra big file in multi-machine
 	- Multi-machine
-		- How to use
+		- How to use master?
+		- How to traffic and storage of master
+- Read
+	- The process of reading a file
+- Write
+	- The process of writing a file
+	- How to reduce master traffic?
+		- Client communicate with Chunk Server
+	- How to reduce client traffic
+		- Leader election
+- Failure and Recover (key)
+	- Discover the failure chunk
+		- CheckSum
+	- Avoid the failure chunk
+		- Replica
+	- Recover the faulre
+		- Ask mas
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjAyNTQ2OTIsLTQyNTM3MDMzNCwtMT
+eyJoaXN0b3J5IjpbLTE3NzY2MjIwMjksLTQyNTM3MDMzNCwtMT
 k5OTAxNDAwOCwtMTMyMzYxMjk4OCwtMjAwMDM5NzA1OSwxOTQ4
 NTk3MzcsNjIzOTQ2MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOC
 w2MTI0NjI5ODgsLTIxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1
