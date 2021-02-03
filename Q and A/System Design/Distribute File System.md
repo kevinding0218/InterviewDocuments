@@ -135,8 +135,15 @@
 #### Write with Replica Chunk Server
 - When client request master to write file1.mp4 chunk1, previously master would respond with only one chunk server, now master would respond with multiple chunk servers like 1, 2 & 3
 - pick one chunk server 1 as leader, then client transfer data to leader chunk server 1, let leader chunk server 1 transfer data to chunk server 2 and 3
+- this could solve client bottleneck
+- how leader chunk server being selected?
+	- nearest server to client
+	- disk space smallest
+- what if leader chunk server down?
+	- 
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDQ3NDI1MDEsLTEzMjM2MTI5ODgsLT
+eyJoaXN0b3J5IjpbLTE5OTkwMTQwMDgsLTEzMjM2MTI5ODgsLT
 IwMDAzOTcwNTksMTk0ODU5NzM3LDYyMzk0NjE4NSwxMjI1ODgy
 NTQ1LC05NjQzNDgwMzgsNjEyNDYyOTg4LC0yMTA4MDQ5ODMsMT
 A0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMzgx
