@@ -132,12 +132,13 @@
 - HeartBeat
 	- Master send request to server frequently like every 5 mins
 	- Server send message to master frequently like every 5 mins, better
--  
+#### Write with Replica Chunk Server
+- When client request master to write file1.mp4 chunk1, previously master would respond with only one chunk server
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDAzOTcwNTksMTk0ODU5NzM3LDYyMz
-k0NjE4NSwxMjI1ODgyNTQ1LC05NjQzNDgwMzgsNjEyNDYyOTg4
-LC0yMTA4MDQ5ODMsMTA0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMj
-A3MTUxMzU4MiwyMzgxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3
-NTk4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MD
-YsLTEwNzQzNDc5MThdfQ==
+eyJoaXN0b3J5IjpbLTEzMjM2MTI5ODgsLTIwMDAzOTcwNTksMT
+k0ODU5NzM3LDYyMzk0NjE4NSwxMjI1ODgyNTQ1LC05NjQzNDgw
+MzgsNjEyNDYyOTg4LC0yMTA4MDQ5ODMsMTA0MDcxNDE2NiwtMT
+kzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMzgxNTAwMzAsNzgxMzQx
+Mzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMz
+UsLTEzMTgxODU1MDYsLTEwNzQzNDc5MThdfQ==
 -->
