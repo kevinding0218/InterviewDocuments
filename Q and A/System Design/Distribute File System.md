@@ -144,13 +144,15 @@
 	- master doesn't receive heartbeat from lead chunk server, re-select a different leader chunk server
 
 ### Summary
-- 
+- Key Point: Master-Slave
+- Storage:
+	- Save a file in one machine -> 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTkwMzQ1NDcsLTE5OTkwMTQwMDgsLT
-EzMjM2MTI5ODgsLTIwMDAzOTcwNTksMTk0ODU5NzM3LDYyMzk0
-NjE4NSwxMjI1ODgyNTQ1LC05NjQzNDgwMzgsNjEyNDYyOTg4LC
-0yMTA4MDQ5ODMsMTA0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMjA3
-MTUxMzU4MiwyMzgxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3NT
-k4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MDYs
-LTEwNzQzNDc5MThdfQ==
+eyJoaXN0b3J5IjpbLTQyNTM3MDMzNCwtMTk5OTAxNDAwOCwtMT
+MyMzYxMjk4OCwtMjAwMDM5NzA1OSwxOTQ4NTk3MzcsNjIzOTQ2
+MTg1LDEyMjU4ODI1NDUsLTk2NDM0ODAzOCw2MTI0NjI5ODgsLT
+IxMDgwNDk4MywxMDQwNzE0MTY2LC0xOTM1NjIxNjE5LC0yMDcx
+NTEzNTgyLDIzODE1MDAzMCw3ODEzNDEzNzgsLTE0NDE4Mjc1OT
+gsMTA1NDkwNjYwMSwtMTk5NjMxMDIzNSwtMTMxODE4NTUwNiwt
+MTA3NDM0NzkxOF19
 -->
