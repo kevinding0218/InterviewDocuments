@@ -140,14 +140,17 @@
 	- nearest server to client
 	- disk space smallest
 - what if leader chunk server down?
-	- 
+	- client should do retry
+	- master doesn't receive heartbeat from lead chunk server, re-select a different leader chunk server
+
+### Summary
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTkwMTQwMDgsLTEzMjM2MTI5ODgsLT
-IwMDAzOTcwNTksMTk0ODU5NzM3LDYyMzk0NjE4NSwxMjI1ODgy
-NTQ1LC05NjQzNDgwMzgsNjEyNDYyOTg4LC0yMTA4MDQ5ODMsMT
-A0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMjA3MTUxMzU4MiwyMzgx
-NTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3NTk4LDEwNTQ5MDY2MD
-EsLTE5OTYzMTAyMzUsLTEzMTgxODU1MDYsLTEwNzQzNDc5MThd
-fQ==
+eyJoaXN0b3J5IjpbLTE2MTkwMzQ1NDcsLTE5OTkwMTQwMDgsLT
+EzMjM2MTI5ODgsLTIwMDAzOTcwNTksMTk0ODU5NzM3LDYyMzk0
+NjE4NSwxMjI1ODgyNTQ1LC05NjQzNDgwMzgsNjEyNDYyOTg4LC
+0yMTA4MDQ5ODMsMTA0MDcxNDE2NiwtMTkzNTYyMTYxOSwtMjA3
+MTUxMzU4MiwyMzgxNTAwMzAsNzgxMzQxMzc4LC0xNDQxODI3NT
+k4LDEwNTQ5MDY2MDEsLTE5OTYzMTAyMzUsLTEzMTgxODU1MDYs
+LTEwNzQzNDc5MThdfQ==
 -->
