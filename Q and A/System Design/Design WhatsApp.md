@@ -26,7 +26,14 @@
 
 ### Storage
 - Message Table
-	- 
+	- if we design like
+		- id
+		- from_user_id
+		- to_user_id
+		- content
+		- created_at
+	- What issue would we have
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY4MzQ4ODYsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTcwNTY1OTI3OCwtMjA4ODc0NjYxMl19
 -->
