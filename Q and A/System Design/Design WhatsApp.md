@@ -34,8 +34,12 @@
 		- created_at
 	- What issue would we have
 		- if we need to fetch communications between A & B, we need following sql
-			- SELECT * FROM message_table WHERE (from_user_id = A and to_user_id = B) or (to_user_id = B and from_user_id = A) ORDER by created_at DESC
-		- Issue 1: where cla 
+			- SELECT * FROM message_table WHERE (from_user_id = A and to_user_id = B) or (to_user_id = A and from_user_id = B) ORDER by created_at DESC
+		- Issue 1: where clause is complex and low SQL performance
+		- Issue 2: if this is a group chat, the structure is unable to extend
+	- How to improve?
+		-  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3Njc4MDU2MiwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ
+==
 -->
