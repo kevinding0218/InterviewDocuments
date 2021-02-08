@@ -24,6 +24,9 @@
 - Real-time Service
 	- for sending message to receiver at real-time
 
+### Storage
+- Message Table
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NzY4NDA3MSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbODY4MzQ4ODYsLTIwODg3NDY2MTJdfQ==
 -->
