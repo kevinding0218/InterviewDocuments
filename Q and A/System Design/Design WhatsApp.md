@@ -76,9 +76,9 @@
 			- created_at - timestamp
 		- Sharding Key (decide which machine stores my data)
 			- thread_id
-			- cannot use user_id, because in that way, two
+			- cannot use user_id, because in that way, two messages in one chat thread may stores in different database server
 		- Row Key:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjUxMzc5NzIsMTcwMTU4OTk2MSwzOT
+eyJoaXN0b3J5IjpbLTE2ODg4OTYyNTQsMTcwMTU4OTk2MSwzOT
 QyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
 -->
