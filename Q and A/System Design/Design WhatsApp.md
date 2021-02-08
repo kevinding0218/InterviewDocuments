@@ -40,8 +40,11 @@
 	- How to improve?
 		-  Add a "Thread" Table
 		- Thread vs Message
-			- Inbox ha
+			- Inbox has a list of "Threads"
+			- Thread has a list of "Messages"
+		- What to store in Thread
+			- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MjU1MzkzOCwtMTUzMDg3NDM2OSwtMj
+eyJoaXN0b3J5IjpbMTExMDQ5MTE3MiwtMTUzMDg3NDM2OSwtMj
 A4ODc0NjYxMl19
 -->
