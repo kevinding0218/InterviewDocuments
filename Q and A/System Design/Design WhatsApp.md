@@ -43,8 +43,11 @@
 			- Inbox has a list of "Threads"
 			- Thread has a list of "Messages"
 		- What to store in Thread
-			- 
+			- id	int
+			- participant_ids	text [1,2] means conversation between 1 & 2
+			- created_at
+			- updated_at
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDQ5MTE3MiwtMTUzMDg3NDM2OSwtMj
+eyJoaXN0b3J5IjpbMTQxMDk5MzU2MCwtMTUzMDg3NDM2OSwtMj
 A4ODc0NjYxMl19
 -->
