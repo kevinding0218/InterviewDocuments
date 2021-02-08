@@ -51,7 +51,8 @@
 			- nickname - string
 			- created_at - timestamp
 			- updated_at - timestamp		index = true
+			- Primary Key (combination of owner_id & thread_id)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NTg1MDMwOSwzOTQyODAyNDIsLTE1Mz
+eyJoaXN0b3J5IjpbMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1Mz
 A4NzQzNjksLTIwODg3NDY2MTJdfQ==
 -->
