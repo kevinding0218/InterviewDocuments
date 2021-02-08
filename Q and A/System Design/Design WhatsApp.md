@@ -38,8 +38,10 @@
 		- Issue 1: where clause is complex and low SQL performance
 		- Issue 2: if this is a group chat, the structure is unable to extend
 	- How to improve?
-		-  
+		-  Add a "Thread" Table
+		- Thread vs Message
+			- Inbox ha
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbMTQ5MjU1MzkzOCwtMTUzMDg3NDM2OSwtMj
+A4ODc0NjYxMl19
 -->
