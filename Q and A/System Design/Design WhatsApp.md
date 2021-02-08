@@ -53,7 +53,9 @@
 			- updated_at - timestamp		index = true
 		- Primary Key (combination of owner_id & thread_id)
 		- Need indexing on 
-			- owner
+			- owner_id + thread_id (primary key)
+			- owner_id + updated_time (sort by updated time)
+			- NoSQL doesn't have good support for secondary index
 		-
 | uid | tid | is_muted | nickname | participant_ids |
 |--|--|--|--|--|
@@ -66,12 +68,16 @@
 			- we would like to get as much info as possible in one simple query
 			- risk of inconsistency
 	- Update "Message" Table (NoSQL)
-		- id - int
-		- thread_id - int
-		- user_id - int
-		- content - text
-		- created_at - timestamp
+		- Because of large data volume and no need to update, one chat message is like one log
+			- id - int
+			- thread_id - int
+			- user_id - int
+			- content - text
+			- created_at - timestamp
+		- Sharding Key:
+			- 
+		- Row Key:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzM0MDUzNTQsMTcwMTU4OTk2MSwzOT
-QyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbNjMzNzUxMzUwLDE3MDE1ODk5NjEsMzk0Mj
+gwMjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
 -->
