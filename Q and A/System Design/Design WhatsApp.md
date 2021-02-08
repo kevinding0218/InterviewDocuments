@@ -33,7 +33,9 @@
 		- content
 		- created_at
 	- What issue would we have
-		- 
+		- if we need to fetch communications between A & B, we need following sql
+			- SELECT * FROM message_table WHERE (from_user_id = A and to_user_id = B) or (to_user_id = B and from_user_id = A) ORDER by created_at DESC
+		- Issue 1: where cla 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNTY1OTI3OCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTM3Njc4MDU2MiwtMjA4ODc0NjYxMl19
 -->
