@@ -16,7 +16,14 @@
 	- Peek QPS = 20k * 5 = 100k
 - Storage Estimation
 	- Suppose one user sends 10 messages per day
-	- needs 1B daily, 
+	- 100M users needs 1B messages daily, if we take 30 bytes per message, total would be 30G of storage
+
+### Service
+- Message Service
+	- for message management
+- Real-time Service
+	- for sending message to receiver at real-time
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMTY2MzQ3MiwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTI1NzY4NDA3MSwtMjA4ODc0NjYxMl19
 -->
