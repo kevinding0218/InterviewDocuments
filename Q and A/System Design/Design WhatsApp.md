@@ -44,7 +44,7 @@
 			- Thread has a list of "Messages"
 		- What to store in Thread
 			- owner_id	- int - who owns this thread
-				- if there is a thread conversation betwee A, B & C, we store 3 copies of the threads with same thread_id and different owner_id of A, B & C, why because some info inside a thread would be private, such as is_muted, nickname
+				- if there is a thread conversation betwee A, B & C, we store 3 copies of the threads with same thread_id and different owner_id of A, B & C, why because some info inside a thread would be private, such as is_muted, nickname 
 			- thread_id - int
 			- participant_ids	- text [1,2] means conversation between 1 & 2
 			- is_muted - bool
@@ -52,6 +52,6 @@
 			- created_at - timestamp
 			- updated_at - timestamp		index = true
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjI5MDY4MzgsLTE1MzA4NzQzNjksLT
-IwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMzk0MjgwMjQyLC0xNTMwODc0MzY5LC0yMD
+g4NzQ2NjEyXX0=
 -->
