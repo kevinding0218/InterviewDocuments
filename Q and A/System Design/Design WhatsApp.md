@@ -52,7 +52,14 @@
 			- created_at - timestamp
 			- updated_at - timestamp		index = true
 			- Primary Key (combination of owner_id & thread_id)
+		
+| uid | tid | is_muted | nickname | participant_ids |
+|--|--|--|--|--|
+| 1 | 1 | 0 | sb | 1, 2, 3 |
+| 2 | 1 | 1 | nb | 1, 2, 3 |
+| 3 | 1 | 1 | xx | 1, 2, 3 |
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1Mz
-A4NzQzNjksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTAzMjQyNjA0NCwxNzAxNTg5OTYxLDM5ND
+I4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
 -->
