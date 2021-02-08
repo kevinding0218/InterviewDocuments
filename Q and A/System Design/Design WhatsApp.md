@@ -74,10 +74,11 @@
 			- user_id - int
 			- content - text
 			- created_at - timestamp
-		- Sharding Key:
-			- 
+		- Sharding Key (decide which machine stores my data)
+			- thread_id
+			- cannot use user_id, because in that way, two
 		- Row Key:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMzNzUxMzUwLDE3MDE1ODk5NjEsMzk0Mj
-gwMjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE5MjUxMzc5NzIsMTcwMTU4OTk2MSwzOT
+QyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
 -->
