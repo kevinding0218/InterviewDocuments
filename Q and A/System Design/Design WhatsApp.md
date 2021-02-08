@@ -43,11 +43,14 @@
 			- Inbox has a list of "Threads"
 			- Thread has a list of "Messages"
 		- What to store in Thread
-			- id	- int
+			- owner_id	- int - who owns this thread
+			- thread_id - int
 			- participant_ids	- text [1,2] means conversation between 1 & 2
+			- is_muted - bool
+			- nickname - string
 			- created_at - timestamp
 			- updated_at - timestamp		index = true
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5ODgzNjc0NSwtMTUzMDg3NDM2OSwtMj
-A4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNzA5OTQ0ODg1LC0xNTMwODc0MzY5LC0yMD
+g4NzQ2NjEyXX0=
 -->
