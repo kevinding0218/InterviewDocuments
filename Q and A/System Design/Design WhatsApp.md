@@ -60,9 +60,10 @@
 | 3 | 1 | 1 | xx | 1, 2, 3 |
 		- why store the shared info like participant_ids as private?
 			- to improve query retrieving performance
-			- 
+			- otherwise we need to separate into a different table that has to use foreign key to join info together
+			- we would like to get as much info as possible in one simple query
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NTgwNzEwNiwxNzAxNTg5OTYxLDM5ND
+eyJoaXN0b3J5IjpbMTU1MjUwNzk4MiwxNzAxNTg5OTYxLDM5ND
 I4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
 -->
