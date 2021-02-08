@@ -45,13 +45,13 @@
 		- What to store in Thread
 			- owner_id	- int - who owns this thread
 				- if there is a thread conversation betwee A, B & C, we store 3 copies of the threads with same thread_id and different owner_id of A, B & C, why because some info inside a thread would be private, such as is_muted, nickname 
-			- thread_id - int
+			- thread_id - int - shared across multiple owners
 			- participant_ids	- text [1,2] means conversation between 1 & 2
 			- is_muted - bool
 			- nickname - string
 			- created_at - timestamp
 			- updated_at - timestamp		index = true
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk0MjgwMjQyLC0xNTMwODc0MzY5LC0yMD
-g4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTg2NTg1MDMwOSwzOTQyODAyNDIsLTE1Mz
+A4NzQzNjksLTIwODg3NDY2MTJdfQ==
 -->
