@@ -25,7 +25,7 @@
 	- for sending message to receiver at real-time
 
 ### Storage
-- "Message" Table
+- "Message" Table (SQL)
 	- if we design like
 		- id
 		- from_user_id
@@ -38,7 +38,7 @@
 		- Issue 1: where clause is complex and low SQL performance
 		- Issue 2: if this is a group chat, the structure is unable to extend
 	- How to improve?
-		-  Add a "Thread" Table
+		-  Add a "Thread" Table (SQL)
 		- Thread vs Message
 			- Inbox has a list of "Threads"
 			- Thread has a list of "Messages"
@@ -51,7 +51,9 @@
 			- nickname - string
 			- created_at - timestamp
 			- updated_at - timestamp		index = true
-			- Primary Key (combination of owner_id & thread_id)
+		- Primary Key (combination of owner_id & thread_id)
+		- Need indexing on 
+			- owner
 		-
 | uid | tid | is_muted | nickname | participant_ids |
 |--|--|--|--|--|
@@ -63,13 +65,13 @@
 			- otherwise we need to separate into a different table that has to use foreign key to join info together
 			- we would like to get as much info as possible in one simple query
 			- risk of inconsistency
-	- Update "Message" Table
+	- Update "Message" Table (NoSQL)
 		- id - int
 		- thread_id - int
 		- user_id - int
 		- content - text
 		- created_at - timestamp
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjM4NTIyNTQsMTcwMTU4OTk2MSwzOT
+eyJoaXN0b3J5IjpbLTEzMzM0MDUzNTQsMTcwMTU4OTk2MSwzOT
 QyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
 -->
