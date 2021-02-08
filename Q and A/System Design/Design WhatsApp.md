@@ -62,8 +62,9 @@
 			- to improve query retrieving performance
 			- otherwise we need to separate into a different table that has to use foreign key to join info together
 			- we would like to get as much info as possible in one simple query
+			- risk of inconsistency
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MjUwNzk4MiwxNzAxNTg5OTYxLDM5ND
-I4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNzQ4OTc2NTAwLDE3MDE1ODk5NjEsMzk0Mj
+gwMjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
 -->
