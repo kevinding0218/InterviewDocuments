@@ -89,10 +89,14 @@
 
 ### Scale with socket & push service
 #### Socket 
-- W
+- Http is a short communication and only when triggeres from client request to server
+- Socket can enable server push message to client 
 #### Push Service
+- Provide a socket connection service, so that the socket can keep long communication with TCP
+- When user opens an APP, he would connect a socket in Push Service of his own
+- When there is message sent out from 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NDc4OTA2NywtMTQ5MTg1OTkyOCwtMT
-g3NDk4MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5OTYxLDM5NDI4
-MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbODA4Mzg0NDcxLC0xNDkxODU5OTI4LC0xOD
+c0OTgxNDExLC0xNjg4ODk2MjU0LDE3MDE1ODk5NjEsMzk0Mjgw
+MjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
 -->
