@@ -25,7 +25,7 @@
 	- for sending message to receiver at real-time
 
 ### Storage
-- "Message" Table (SQL)
+#### "Message" Table (SQL)
 	- if we design like
 		- id
 		- from_user_id
@@ -37,8 +37,7 @@
 			- SELECT * FROM message_table WHERE (from_user_id = A and to_user_id = B) or (to_user_id = A and from_user_id = B) ORDER by created_at DESC
 		- Issue 1: where clause is complex and low SQL performance
 		- Issue 2: if this is a group chat, the structure is unable to extend
-	- How to improve?
-		-  Add a "Thread" Table (SQL)
+####  Add a "Thread" Table (SQL)
 		- Thread vs Message
 			- Inbox has a list of "Threads"
 			- Thread has a list of "Messages"
@@ -54,7 +53,7 @@
 		- Primary Key (combination of owner_id & thread_id)
 		- Need indexing on 
 			- owner_id + thread_id (primary key)
-			- owner_id + updated_time (sort by updated time)
+			- owner_id + updated_time (sort by updated time) so we can se
 			- NoSQL doesn't have good support for secondary index
 		-
 | uid | tid | is_muted | nickname | participant_ids |
@@ -67,7 +66,7 @@
 			- otherwise we need to separate into a different table that has to use foreign key to join info together
 			- we would like to get as much info as possible in one simple query
 			- risk of inconsistency
-	- Update "Message" Table (NoSQL)
+#### Update "Message" Table (NoSQL)
 		- Because of large data volume and no need to update, one chat message is like one log
 			- id - int
 			- thread_id - int （could be combination of user_id or owner_id + created timestamp）
@@ -79,7 +78,7 @@
 			- cannot use user_id, because in that way, two messages in one chat thread may stores in different database server
 		- Row Key:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MTk1MTA5MSwtMTY4ODg5NjI1NCwxNz
+eyJoaXN0b3J5IjpbLTM4MjYxMzYxNSwtMTY4ODg5NjI1NCwxNz
 AxNTg5OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0
 NjYxMl19
 -->
