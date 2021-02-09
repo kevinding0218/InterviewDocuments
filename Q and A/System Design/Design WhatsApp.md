@@ -107,7 +107,7 @@
 Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
      |              |             |                               |              |             |             |
       Push Server 1													 Push Server 2
-                    |																		   |
+                    |																		   |	(sharding by user_id)
                                         Message Service		
 
 ### Interviewer - how to support group chat
@@ -124,8 +124,8 @@ From Message deliver perspective
 From Database perspective
 - Since we would keep 500 copy of thead info, one message sends out would trigger 500 updates
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MjQ3ODQ2MCwtODE5NjY3OTc1LDE2OD
-YzMjk4OTYsLTE0OTE4NTk5MjgsLTE4NzQ5ODE0MTEsLTE2ODg4
-OTYyNTQsMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4NzQzNj
-ksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbNTk4OTgxNTc1LC04MTk2Njc5NzUsMTY4Nj
+MyOTg5NiwtMTQ5MTg1OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5
+NjI1NCwxNzAxNTg5OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OS
+wtMjA4ODc0NjYxMl19
 -->
