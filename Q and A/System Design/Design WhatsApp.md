@@ -99,12 +99,14 @@
 - When APP restarts or get focus back again, we can do the Pull from that point
 	- Andriod GCM / IOS APNS
 #### Flow
-- When user A opens the APP, request web server for a Push Service connection address
-- A keeps communication with push server through socket
-- Wne
+- When user A opens the APP, request web server for a Push Server connection address
+- A keeps communication with Push Server through socket
+- When user B sends message to A, message would be sent to server first
+- Server stores the message then tell Push Server to notify A
+- A gets message notification
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM2MjMzOTM2LDE2ODYzMjk4OTYsLTE0OT
-E4NTk5MjgsLTE4NzQ5ODE0MTEsLTE2ODg4OTYyNTQsMTcwMTU4
-OTk2MSwzOTQyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MT
-JdfQ==
+eyJoaXN0b3J5IjpbNzAxMzM4ODcsMTY4NjMyOTg5NiwtMTQ5MT
+g1OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5
+OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl
+19
 -->
