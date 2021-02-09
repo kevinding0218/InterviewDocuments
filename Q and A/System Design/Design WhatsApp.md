@@ -81,12 +81,13 @@
 - How would user send out message?
 	- Client sends message content and receiver into fo server
 	- Server create a thread in Thread Table for every receiver (including sender himself) if there hasn't been one created
+		- same group of users can be in different threads
 	- Create a message (with thread_id) in Message Table
 - How would user receive message?
 	- Periodically request to server to checkout latest inbox like every 10 sec
 	- Notify user if there is new message coming
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzQ5ODE0MTEsLTE2ODg4OTYyNTQsMT
-cwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3
-NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE0OTE4NTk5MjgsLTE4NzQ5ODE0MTEsLT
+E2ODg4OTYyNTQsMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4
+NzQzNjksLTIwODg3NDY2MTJdfQ==
 -->
