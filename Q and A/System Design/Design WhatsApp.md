@@ -122,10 +122,10 @@ From Message deliver perspective
 - When message reaches Push Server then Push Server knows there are 490 sockets cut off
 - We wasted 490 message delivery between Message Service & Push Server
 From Database perspective
-- Since we w
+- Since we would keep 500 copy of thead info, one message sends out would trigger 500 updates
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTA3MjIxMzAsLTgxOTY2Nzk3NSwxNj
-g2MzI5ODk2LC0xNDkxODU5OTI4LC0xODc0OTgxNDExLC0xNjg4
-ODk2MjU0LDE3MDE1ODk5NjEsMzk0MjgwMjQyLC0xNTMwODc0Mz
-Y5LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTk1MjQ3ODQ2MCwtODE5NjY3OTc1LDE2OD
+YzMjk4OTYsLTE0OTE4NTk5MjgsLTE4NzQ5ODE0MTEsLTE2ODg4
+OTYyNTQsMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4NzQzNj
+ksLTIwODg3NDY2MTJdfQ==
 -->
