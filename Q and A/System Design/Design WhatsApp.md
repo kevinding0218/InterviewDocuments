@@ -94,9 +94,11 @@
 #### Push Service
 - Provide a socket connection service, so that the socket can keep long communication with TCP
 - When user opens an APP, he would connect a socket in Push Service of his own
-- When there is message sent out from 
+- When there is message sent out from other user, Message Service would get the message and sends out through Push Service
+- If an inactive user in 10 mins, we can cut off the connection and release the TCP port
+- When APP restarts or get focus back again, we can do the Pull from that point
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA4Mzg0NDcxLC0xNDkxODU5OTI4LC0xOD
-c0OTgxNDExLC0xNjg4ODk2MjU0LDE3MDE1ODk5NjEsMzk0Mjgw
-MjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTY4NjMyOTg5NiwtMTQ5MTg1OTkyOCwtMT
+g3NDk4MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5OTYxLDM5NDI4
+MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
 -->
