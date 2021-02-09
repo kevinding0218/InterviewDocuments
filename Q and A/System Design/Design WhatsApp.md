@@ -124,7 +124,7 @@ From Message deliver perspective
 From Database perspective
 - Since we would keep 500 copy of thead info, one message sends out would trigger 500 updates
 #### How to solve
-- Add a Channel Service
+- Add a Channel/Topic Service
 - For every Thread add a channel info
 - For larger group, active user needs to subscribe to corresponding Channel
 	- When user goes online, Message Service (Web Server) will find user belonged chat groups, and notify Channel Service to complete subscription
@@ -137,8 +137,8 @@ From Database perspective
 - Channel Service find current online user
 	- sends out the message to Push Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NjQzNDQxOSwtODE5NjY3OTc1LDE2OD
-YzMjk4OTYsLTE0OTE4NTk5MjgsLTE4NzQ5ODE0MTEsLTE2ODg4
-OTYyNTQsMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4NzQzNj
-ksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTIwNzAxMTM1NDksLTgxOTY2Nzk3NSwxNj
+g2MzI5ODk2LC0xNDkxODU5OTI4LC0xODc0OTgxNDExLC0xNjg4
+ODk2MjU0LDE3MDE1ODk5NjEsMzk0MjgwMjQyLC0xNTMwODc0Mz
+Y5LC0yMDg4NzQ2NjEyXX0=
 -->
