@@ -53,7 +53,7 @@
 		- Primary Key (combination of owner_id & thread_id)
 		- Need indexing on 
 			- owner_id + thread_id (primary key)
-			- owner_id + updated_time (sort by updated time) so we can se
+			- owner_id + updated_time (sort by updated time) so we can take lastUpdated thread at top of chat window
 			- NoSQL doesn't have good support for secondary index
 		-
 | uid | tid | is_muted | nickname | participant_ids |
@@ -77,8 +77,12 @@
 			- thread_id
 			- cannot use user_id, because in that way, two messages in one chat thread may stores in different database server
 		- Row Key:
+#### Work Solution
+- How would user send out message?
+	- Client sends message content and receiver into fo server
+	- Server create a thread for every receiver (including sender himself) if there hasn't bee
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MjYxMzYxNSwtMTY4ODg5NjI1NCwxNz
+eyJoaXN0b3J5IjpbMTIyNDgxOTY4MywtMTY4ODg5NjI1NCwxNz
 AxNTg5OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0
 NjYxMl19
 -->
