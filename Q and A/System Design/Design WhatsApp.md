@@ -97,8 +97,10 @@
 - When there is message sent out from other user, Message Service would get the message and sends out through Push Service
 - If an inactive user in 10 mins, we can cut off the connection and release the TCP port
 - When APP restarts or get focus back again, we can do the Pull from that point
+	- Andriod GCM / IOS APNS
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NjMyOTg5NiwtMTQ5MTg1OTkyOCwtMT
-g3NDk4MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5OTYxLDM5NDI4
-MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTEyMDMxNTI3MjksMTY4NjMyOTg5NiwtMT
+Q5MTg1OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5NjI1NCwxNzAx
+NTg5OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0Nj
+YxMl19
 -->
