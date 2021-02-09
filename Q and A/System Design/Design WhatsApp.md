@@ -86,8 +86,12 @@
 - How would user receive message?
 	- Periodically request to server to checkout latest inbox like every 10 sec
 	- Notify user if there is new message coming
+
+### Scale
+#### Socket
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTE4NTk5MjgsLTE4NzQ5ODE0MTEsLT
-E2ODg4OTYyNTQsMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4
-NzQzNjksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTIwMDA0MTI4MDIsLTE0OTE4NTk5MjgsLT
+E4NzQ5ODE0MTEsLTE2ODg4OTYyNTQsMTcwMTU4OTk2MSwzOTQy
+ODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
 -->
