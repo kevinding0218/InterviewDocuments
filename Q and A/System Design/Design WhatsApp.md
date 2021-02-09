@@ -107,7 +107,7 @@
 Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
      |              |             |                               |              |             |             |
       Push Server 1													 Push Server 2
-                    |																		   |	(sharding by user_id)
+                    |																		   |	(sharding by user_id) 
                                         Message Service		
 
 ### Interviewer - how to support group chat
@@ -123,8 +123,13 @@ From Message deliver perspective
 - We wasted 490 message delivery between Message Service & Push Server
 From Database perspective
 - Since we would keep 500 copy of thead info, one message sends out would trigger 500 updates
+#### How to solve
+- Add a Channel Service
+- For every Thread add a channel info
+- For larger group, active user needs to subscribe to corresponding Channel
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk4OTgxNTc1LC04MTk2Njc5NzUsMTY4Nj
+eyJoaXN0b3J5IjpbNTc1NjQ4OTExLC04MTk2Njc5NzUsMTY4Nj
 MyOTg5NiwtMTQ5MTg1OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5
 NjI1NCwxNzAxNTg5OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OS
 wtMjA4ODc0NjYxMl19
