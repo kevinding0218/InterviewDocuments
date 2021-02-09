@@ -70,7 +70,7 @@
 	- Update "Message" Table (NoSQL)
 		- Because of large data volume and no need to update, one chat message is like one log
 			- id - int
-			- thread_id - int
+			- thread_id - int （could be combination of user_id or owner_id + created timestamp）
 			- user_id - int
 			- content - text
 			- created_at - timestamp
@@ -79,6 +79,7 @@
 			- cannot use user_id, because in that way, two messages in one chat thread may stores in different database server
 		- Row Key:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODg4OTYyNTQsMTcwMTU4OTk2MSwzOT
-QyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTI0MTk1MTA5MSwtMTY4ODg5NjI1NCwxNz
+AxNTg5OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0
+NjYxMl19
 -->
