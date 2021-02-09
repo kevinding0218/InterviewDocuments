@@ -127,10 +127,12 @@ From Database perspective
 - Add a Channel Service
 - For every Thread add a channel info
 - For larger group, active user needs to subscribe to corresponding Channel
-- 
+	- When user goes online, Message Service (Web Server) will find user belonged groups, and notify Channel Service to complete subscription
+	- Channel Service would know which users are active in groups
+	- If user goes offline, Push Service knows it and will notify Channel Service to remove that user in the c
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc1NjQ4OTExLC04MTk2Njc5NzUsMTY4Nj
-MyOTg5NiwtMTQ5MTg1OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5
-NjI1NCwxNzAxNTg5OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OS
-wtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTY5MDMyOTQwMSwtODE5NjY3OTc1LDE2OD
+YzMjk4OTYsLTE0OTE4NTk5MjgsLTE4NzQ5ODE0MTEsLTE2ODg4
+OTYyNTQsMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4NzQzNj
+ksLTIwODg3NDY2MTJdfQ==
 -->
