@@ -112,6 +112,7 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 
 ### Interviewer - how to support group chat
 #### Question
+From Message deliver perspective
 - If one group has 500 users or 1M users
 - If no performance improvement, needs to send message to every one of 500 users
 - In fact, there might be only 10 users active online among 500 users
@@ -119,10 +120,12 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 	- Message Service (web server) has no way to know whether the connection between User and Push Server socket has been cut off or not
 	- Only Push Server itself knows
 - When message reaches Push Server then Push Server knows there are 490 sockets cut off
-- We wasted 490 message delivery between Message Service & Push 
+- We wasted 490 message delivery between Message Service & Push Server
+From Database perspective
+- Since we w
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MTYzNjYzNCwtODE5NjY3OTc1LDE2OD
-YzMjk4OTYsLTE0OTE4NTk5MjgsLTE4NzQ5ODE0MTEsLTE2ODg4
-OTYyNTQsMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4NzQzNj
-ksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTEwOTA3MjIxMzAsLTgxOTY2Nzk3NSwxNj
+g2MzI5ODk2LC0xNDkxODU5OTI4LC0xODc0OTgxNDExLC0xNjg4
+ODk2MjU0LDE3MDE1ODk5NjEsMzk0MjgwMjQyLC0xNTMwODc0Mz
+Y5LC0yMDg4NzQ2NjEyXX0=
 -->
