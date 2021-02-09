@@ -104,9 +104,13 @@
 - When user B sends message to A, message would be sent to server first
 - Server stores the message then tell Push Server to notify A
 - A gets message notification
+Socket1 Socket2 
+
+### Interviewer - how to support group chat
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxOTY2Nzk3NSwxNjg2MzI5ODk2LC0xND
-kxODU5OTI4LC0xODc0OTgxNDExLC0xNjg4ODk2MjU0LDE3MDE1
-ODk5NjEsMzk0MjgwMjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2Nj
-EyXX0=
+eyJoaXN0b3J5IjpbODM1NTY3ODI2LC04MTk2Njc5NzUsMTY4Nj
+MyOTg5NiwtMTQ5MTg1OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5
+NjI1NCwxNzAxNTg5OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OS
+wtMjA4ODc0NjYxMl19
 -->
