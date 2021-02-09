@@ -87,11 +87,12 @@
 	- Periodically request to server to checkout latest inbox like every 10 sec
 	- Notify user if there is new message coming
 
-### Scale
-#### Socket
+### Scale with socket & push service
+#### Socket 
 
+#### Push Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDA0MTI4MDIsLTE0OTE4NTk5MjgsLT
-E4NzQ5ODE0MTEsLTE2ODg4OTYyNTQsMTcwMTU4OTk2MSwzOTQy
-ODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTY1OTIzMTk4NywtMTQ5MTg1OTkyOCwtMT
+g3NDk4MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5OTYxLDM5NDI4
+MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
 -->
