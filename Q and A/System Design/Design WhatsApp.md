@@ -111,9 +111,13 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
                                         Message Service		
 
 ### Interviewer - how to support group chat
+#### Question
+- If one group has 500 users or 1M users
+- If no performance improvement, needs to send message to every one of 500 users
+- In fact, there might be only 10 users active online among 500 users
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUzMjc5NDgxLC04MTk2Njc5NzUsMTY4Nj
+eyJoaXN0b3J5IjpbNTc4NDU3NDA1LC04MTk2Njc5NzUsMTY4Nj
 MyOTg5NiwtMTQ5MTg1OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5
 NjI1NCwxNzAxNTg5OTYxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OS
 wtMjA4ODc0NjYxMl19
