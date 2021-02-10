@@ -161,7 +161,7 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 		- Q1: how did server know you goes offline
 		- Q2: what to do if there is a network error in a disctrict so that when network is recovered, a group of N user would go online, suppose everyone has 100 friends, you need to notifiy 100 * N users which might cause network traffic jam
 		- Q3: Most of friends are offline
-- Onilne Status Pull (Better)
+- Onilne Status Pull (**Better**)
 	- Tell server I am online/offline
 		- do a heart beat every 3 - 5 sec
 	- Server tells my friends that I am online/offline
@@ -172,9 +172,9 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 		- e.g: pull?channel=p_1312802&seq=1e45a
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NzE3Njk4OSwxMDQ4NjgyNjQ4LC04MT
-I0MTMxODcsLTgxOTY2Nzk3NSwxNjg2MzI5ODk2LC0xNDkxODU5
-OTI4LC0xODc0OTgxNDExLC0xNjg4ODk2MjU0LDE3MDE1ODk5Nj
-EsMzk0MjgwMjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNTQ3NzMyNTc5LDEwNDg2ODI2NDgsLTgxMj
+QxMzE4NywtODE5NjY3OTc1LDE2ODYzMjk4OTYsLTE0OTE4NTk5
+MjgsLTE4NzQ5ODE0MTEsLTE2ODg4OTYyNTQsMTcwMTU4OTk2MS
+wzOTQyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
 
 -->
