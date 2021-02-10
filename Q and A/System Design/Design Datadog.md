@@ -27,12 +27,12 @@
 - How to aggregate yesterday's data as per 5 mins?
 	- when doing the read operation and found one key has a lot of values, trigger a "retention" operation
 	- retention will aggregate all old record
-Twitter (Merge k Sorted Arrays) [􀮑􂝶􂟬􁼲􂌜]
+Twitter (Merge k Sorted Arrays)
 • Tiny Url (Base62)
-• Google Suggestion (Trie) [􂟬􁼲强􀻬􂌜]
+• Google Suggestion (Trie)
 • Web Crawler (Multi Threading)
 • Amazon Top 10 Products (Hash Heap)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNjM1ODU2MiwtNDkxNjM0Mzk5LC00Mj
-kyMzI4MDQsMTc2Mzg4NjAwNSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTEzMTI5Njc1OTksLTQ5MTYzNDM5OSwtND
+I5MjMyODA0LDE3NjM4ODYwMDUsNzMwOTk4MTE2XX0=
 -->
