@@ -38,14 +38,14 @@
 	- if we take unit as 1 hour, each bucket can set up as per 1 mins, one query would read at most 60 times
 	- if we take unit as 1 day, each bucket can set up as 1 hour, one query would read at most 24 times
 - If there is minor delay in above case, how to solve it
-	- First of all, rate limiter doesn't need 100% accurancy
+	- First of all, rate limiter doesn't need 100% accurancy, it's a trade off
 	- we can have more accurancey by adding a third level bucket(sec, min, hour)
 	- e.g when getting visit count of most recent 1 day, let's say current time is 23:30:33, we can add
 		- 
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTY1MzIwMywyMTAwNzI0NzMyLC0zNT
-g1MTE4NTQsLTIxMTM1MDA3MjAsLTIxNTMxMTM0MCw3MzA5OTgx
-MTZdfQ==
+eyJoaXN0b3J5IjpbMjY3NjkwMTAsMjEwMDcyNDczMiwtMzU4NT
+ExODU0LC0yMTEzNTAwNzIwLC0yMTUzMTEzNDAsNzMwOTk4MTE2
+XX0=
 -->
