@@ -143,9 +143,10 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
                                         Channel Service
                   (Dispatch messages)  |   (Subscribe channel)
                                         Message Service
+- What to use
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMjQxMzE4NywtODE5NjY3OTc1LDE2OD
-YzMjk4OTYsLTE0OTE4NTk5MjgsLTE4NzQ5ODE0MTEsLTE2ODg4
-OTYyNTQsMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4NzQzNj
-ksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbOTIzMjkzODIyLC04MTI0MTMxODcsLTgxOT
+Y2Nzk3NSwxNjg2MzI5ODk2LC0xNDkxODU5OTI4LC0xODc0OTgx
+NDExLC0xNjg4ODk2MjU0LDE3MDE1ODk5NjEsMzk0MjgwMjQyLC
+0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
 -->
