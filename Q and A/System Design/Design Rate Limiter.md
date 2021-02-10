@@ -40,12 +40,14 @@
 - If there is minor delay in above case, how to solve it
 	- First of all, rate limiter doesn't need 100% accurancy, it's a trade off
 	- we can have more accurancey by adding a third level bucket(sec, min, hour)
-	- e.g when getting visit count of most recent 1 day, let's say current time is 23:30:33, we can add
-		- 
+	- e.g when getting visit count of most recent 1 day, let's say current time is 23:30:33, we can do:
+		- in the second bucket, add sum between 23:30:00 ~ 23:30:33 (total of 34 queries)
+		- in the minute bucket, add sum between 23:00 ~ 23:29 (total of 30 queries)
+		- in the hour bucket, add sum between 0
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY3NjkwMTAsMjEwMDcyNDczMiwtMzU4NT
-ExODU0LC0yMTEzNTAwNzIwLC0yMTUzMTEzNDAsNzMwOTk4MTE2
-XX0=
+eyJoaXN0b3J5IjpbLTEwMjQ5Nzk3MDEsMjEwMDcyNDczMiwtMz
+U4NTExODU0LC0yMTEzNTAwNzIwLC0yMTUzMTEzNDAsNzMwOTk4
+MTE2XX0=
 -->
