@@ -56,8 +56,13 @@ thread crawler
 			url_queue.enqueue_all(url_list)
 		end
 ```
-
+- Producer Consumer Pattern
+	- Producer -> Buffer -> Consumer
+	- why need buffer? because speed is different 
+- Issue
+	- might be slow
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ5NDQ3MzcwLDY1MzMwMSwxNDAzNTU4Nz
-I1LC0xNjg2NDgyMTUsLTE1NjU4NjY4MThdfQ==
+eyJoaXN0b3J5IjpbMTM0MTg2MTcxMCw2NDk0NDczNzAsNjUzMz
+AxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
+
 -->
