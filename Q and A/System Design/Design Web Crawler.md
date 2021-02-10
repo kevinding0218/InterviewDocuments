@@ -73,9 +73,11 @@ thread crawler
 	- condition variable
 	- semaphore
 - However, more threads doesn't necessarily mean more performance
-- 
+	- context switch cost (CPU number limitation)
+	- thread (port) number limitation
+	- network bottleneck for single machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzMzODQ2NDAsMjI1ODI5NzY2LDg5Mz
-Y0Mjg4MywxMTY1ODgwOTU2LDY0OTQ0NzM3MCw2NTMzMDEsMTQw
-MzU1ODcyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
+eyJoaXN0b3J5IjpbMTkyNzc0Njg1MiwyMjU4Mjk3NjYsODkzNj
+QyODgzLDExNjU4ODA5NTYsNjQ5NDQ3MzcwLDY1MzMwMSwxNDAz
+NTU4NzI1LC0xNjg2NDgyMTUsLTE1NjU4NjY4MThdfQ==
 -->
