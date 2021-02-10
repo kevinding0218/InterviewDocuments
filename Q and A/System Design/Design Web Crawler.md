@@ -41,7 +41,11 @@
 
 ### A single-threaded Web Crawler
 - use BFS
+- starting seeds can be Url Queue
+	- Url goes to web page loader
+	- Save web page content into storage
+	- If there are additional link url in current web page, extract them as a list then put into the Url Queue
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDIxOTI3NzQsNjUzMzAxLDE0MDM1NT
-g3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
+eyJoaXN0b3J5IjpbNjU2MTYxMjg2LDY1MzMwMSwxNDAzNTU4Nz
+I1LC0xNjg2NDgyMTUsLTE1NjU4NjY4MThdfQ==
 -->
