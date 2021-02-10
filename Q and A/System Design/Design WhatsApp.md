@@ -170,11 +170,10 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 		- Tells server that I am online for every 10 sec, and also request my friends' online status
 		- If server didn't receive any message over 1 min, assuming user goes offline
 		- e.g: pull?channel=p_1312802&seq=1e45a
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ3NzMyNTc5LDEwNDg2ODI2NDgsLTgxMj
-QxMzE4NywtODE5NjY3OTc1LDE2ODYzMjk4OTYsLTE0OTE4NTk5
-MjgsLTE4NzQ5ODE0MTEsLTE2ODg4OTYyNTQsMTcwMTU4OTk2MS
-wzOTQyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTkzMTE1NDA1OSwxMDQ4NjgyNjQ4LC04MT
+I0MTMxODcsLTgxOTY2Nzk3NSwxNjg2MzI5ODk2LC0xNDkxODU5
+OTI4LC0xODc0OTgxNDExLC0xNjg4ODk2MjU0LDE3MDE1ODk5Nj
+EsMzk0MjgwMjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
 
 -->
