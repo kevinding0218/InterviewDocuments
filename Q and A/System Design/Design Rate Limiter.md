@@ -34,10 +34,13 @@
 	- add value up from 00:01:11 ~ 00:02:11 and compare with condition
 ### Question: for one day there is 86400 seconds, each time we need query for 86k cache
 - Store level by level
-	- before when we take unit as 1 mins, each bucket size is 1 sec, one query would read at most 60 
+	- if we take unit as 1 mins, each bucket size is 1 sec, one query would read at most 60 times
+	- if we take unit as 1 hour, each bucket can set up as per 1 mins, one query would read at most 60 times
+	- if we take unit as 1 day, each bucket size can be 1 hour, one query would read at most 24 times
+
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NDA2MDEyNiwtMzU4NTExODU0LC0yMT
+eyJoaXN0b3J5IjpbMTM5NDI4MTE5MSwtMzU4NTExODU0LC0yMT
 EzNTAwNzIwLC0yMTUzMTEzNDAsNzMwOTk4MTE2XX0=
 -->
