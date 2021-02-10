@@ -20,6 +20,15 @@
 	- for last year's data, we can aggregate & store per week as unit
 	- user query is usually for a certain timestap to current timestamp chart data
 	- which means, for last year's data, yuo don't have to store per minute
+	- e.g
+		- 2016/02/26 23 1h 200
+		- ...
+		- 2016/03/27 23:50 5m 40
+		- 2016/03/27 23:55 5m 30
+		- 2016/03/27 00:00 1m 10
+		- 2016/03/27 0059 5m 40
+		- ...
+		- 2016/03/27 23:59 5m 40
 ### How to calculate visit data?
 - Q: for 2K QPS, do we need to write 2k in NoSql?
 	- No, we can aggregate visit times for most recent 15 seconds and write into memory
@@ -33,6 +42,6 @@ Twitter (Merge k Sorted Arrays)
 • Web Crawler (Multi Threading)
 • Amazon Top 10 Products (Hash Heap)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTI5Njc1OTksLTQ5MTYzNDM5OSwtND
-I5MjMyODA0LDE3NjM4ODYwMDUsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNTQ4MTc2ODUyLC00OTE2MzQzOTksLTQyOT
+IzMjgwNCwxNzYzODg2MDA1LDczMDk5ODExNl19
 -->
