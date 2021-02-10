@@ -80,10 +80,16 @@ thread crawler
 	- Size concern
 		- 1000000000000 * 20 (chars) * 2 (bytes per char)  / 1000(kb) / 1000 (mb) / 1000 (gb) / 1000 (tb) ~ 40tb
 		- we cannot store in memory for 40tb size, we have to store in database
+		- Task table design
+			- id
+			- url
+			- state (idle/working)
+			- priority (0, 1, 2)
+			- available time
 	- Url priority
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNzA1MzA0MywxOTI3NzQ2ODUyLDIyNT
-gyOTc2Niw4OTM2NDI4ODMsMTE2NTg4MDk1Niw2NDk0NDczNzAs
-NjUzMzAxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwtMTU2NTg2Nj
-gxOF19
+eyJoaXN0b3J5IjpbLTExODU2NzUzNjAsMTkyNzc0Njg1MiwyMj
+U4Mjk3NjYsODkzNjQyODgzLDExNjU4ODA5NTYsNjQ5NDQ3Mzcw
+LDY1MzMwMSwxNDAzNTU4NzI1LC0xNjg2NDgyMTUsLTE1NjU4Nj
+Y4MThdfQ==
 -->
