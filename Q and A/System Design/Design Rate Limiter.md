@@ -31,10 +31,11 @@
 	- event = url_shorten
 	- feature = 192.168.0.1
 	- 00:01:11(100)/00:01:12(0)/00:01:13(1).....00:02:10(10)/00:02:11(3)
+	- add value up from 00:01:11 ~ 00:02:11
 ### Interview: How to limit request?
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMyNTA2NDE4LC0yMTEzNTAwNzIwLC0yMT
-UzMTEzNDAsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTA0MDA3NzMyNywtMjExMzUwMDcyMCwtMj
+E1MzExMzQwLDczMDk5ODExNl19
 -->
