@@ -147,7 +147,7 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 	- Memory should be good enough, as those data are not important, we can reset if service id down
 ### Interview - how to check online status
 #### Online status Push vs Pull
-- Server needs to know who's online or offline
+- Onilne Status Push
 	- Tell server I am online/offline
 		- When user goes online, keep socket connection with Push Service
 			- do a heart beat every 3 - 5 sec
@@ -161,13 +161,14 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 		- Q1: how did server know you goes offline
 		- Q2: what to do if there is a network error in a disctrict so that when network is recovered, a group of N user would go online, suppose everyone has 100 friends, you need to notifiy 100 * N users which might cause network traffic jam
 		- Q3: Most of friends are offline
+- Onilne Status P
 	- Tells server that I am online for every 10 sec, and also request my friends' online status
 	- If server didn't receive any message over 1 min, assuming user goes offline
 - User needs to know friends' online or offline
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDI4NDU1MTcsMTA0ODY4MjY0OCwtOD
-EyNDEzMTg3LC04MTk2Njc5NzUsMTY4NjMyOTg5NiwtMTQ5MTg1
-OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5OT
-YxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTUyODg3ODA5MSwxMDQ4NjgyNjQ4LC04MT
+I0MTMxODcsLTgxOTY2Nzk3NSwxNjg2MzI5ODk2LC0xNDkxODU5
+OTI4LC0xODc0OTgxNDExLC0xNjg4ODk2MjU0LDE3MDE1ODk5Nj
+EsMzk0MjgwMjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
 
 -->
