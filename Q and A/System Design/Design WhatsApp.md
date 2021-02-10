@@ -147,6 +147,9 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 	- Memory should be good enough, as those data are not important, we can reset if service id down
 ### Interview - how to check online status
 #### Online status Push vs Pull
+- Online Status includes
+	- Server needs to know who's online/offline
+	- User needs to know friends' online or offline
 - Onilne Status Push
 	- Tell server I am online/offline
 		- When user goes online, keep socket connection with Push Service
@@ -167,9 +170,9 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 		- Tells server that I am online for every 10 sec, and also request my friends' online status
 		- If server didn't receive any message over 1 min, assuming user goes offline
 		- e.g: pull?channel=p_1312802&seq=1e45a
-- User needs to know friends' online or offline
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNjk4MjcyNiwxMDQ4NjgyNjQ4LC04MT
+eyJoaXN0b3J5IjpbLTI0NzE3Njk4OSwxMDQ4NjgyNjQ4LC04MT
 I0MTMxODcsLTgxOTY2Nzk3NSwxNjg2MzI5ODk2LC0xNDkxODU5
 OTI4LC0xODc0OTgxNDExLC0xNjg4ODk2MjU0LDE3MDE1ODk5Nj
 EsMzk0MjgwMjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
