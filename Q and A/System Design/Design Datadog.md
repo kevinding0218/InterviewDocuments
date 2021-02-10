@@ -25,13 +25,13 @@
 	- No, we can aggregate visit times for most recent 15 seconds and write into memory
 	- For every 15 seconds, we write the record into NoSql, so our write QPS are 2k / 15
 - How to aggregate yesterday's data as per 5 mins?
-	- 
+	- when doing the read operation and found one key has a lot of values, trigger a "retention" operation
 Twitter (Merge k Sorted Arrays) [􀮑􂝶􂟬􁼲􂌜]
 • Tiny Url (Base62)
 • Google Suggestion (Trie) [􂟬􁼲强􀻬􂌜]
 • Web Crawler (Multi Threading)
 • Amazon Top 10 Products (Hash Heap)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MTYzNDM5OSwtNDI5MjMyODA0LDE3Nj
-M4ODYwMDUsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNDE0NDU0NDM5LC00OTE2MzQzOTksLTQyOT
+IzMjgwNCwxNzYzODg2MDA1LDczMDk5ODExNl19
 -->
