@@ -23,8 +23,10 @@
 ### How to calculate visit data?
 - Q: for 2K QPS, do we need to write 2k in NoSql?
 	- No, we can aggregate visit times for most recent 15 seconds and write into memory
-	- For every 15 seconds, we write the record into NoSql, so our write QPS 
+	- For every 15 seconds, we write the record into NoSql, so our write QPS are 2k / 15
+- How to aggregate yesterday's data as per 5 mins?
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTQ3Mjk4OTgsMTc2Mzg4NjAwNSw3Mz
-A5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTQyOTIzMjgwNCwxNzYzODg2MDA1LDczMD
+k5ODExNl19
 -->
