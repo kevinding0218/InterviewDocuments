@@ -40,8 +40,8 @@
 	- Output: list of urls
 
 ### A single-threaded Web Crawler
-
+- use BFS
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MzU4MjEwMyw2NTMzMDEsMTQwMzU1OD
-cyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
+eyJoaXN0b3J5IjpbLTE2NDIxOTI3NzQsNjUzMzAxLDE0MDM1NT
+g3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
 -->
