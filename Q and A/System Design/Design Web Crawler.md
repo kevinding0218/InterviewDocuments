@@ -31,9 +31,9 @@
 		page = response.read();
 		```
 	- Extract all the news titles from the news list page
-		- Regular Expression <h3[^>
+		- Regular Expression <h3> <a> content only
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE4MzQwOTI3LDE0MDM1NTg3MjUsLTE2OD
-Y0ODIxNSwtMTU2NTg2NjgxOF19
+eyJoaXN0b3J5IjpbMTMzMTk0MzczMiwxNDAzNTU4NzI1LC0xNj
+g2NDgyMTUsLTE1NjU4NjY4MThdfQ==
 -->
