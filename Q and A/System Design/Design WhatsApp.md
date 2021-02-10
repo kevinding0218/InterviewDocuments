@@ -148,17 +148,21 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 ### Interview - how to check online status
 #### Online status Push vs Pull
 - Server needs to know who's online or offline
-	- Tell server I am here/gone
+	- Tell server I am online/offline
 		- When user goes online, keep socket connection with Push Service, do a heart beat every 3 - 5 sec
 		- When user goes offline, tells server to disconnect
 		- Q: when would server know when you goes offline? what if there is no internet connection?
 			- 
-	- Server tells my friends that Iam her
+	- Server tells my friends that I am online/offline
+		- Server got notification when user goes online/offline
+		- Server locates my friends and tell them I went online/offline
+		- Q1: how did server know you goes offline
+		- Q2: what to do if there is a network error in a disctrict so that when network is recovered, a 
 - User needs to know friends' online or offline
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NTIzNDI3MywxMDQ4NjgyNjQ4LC04MT
-I0MTMxODcsLTgxOTY2Nzk3NSwxNjg2MzI5ODk2LC0xNDkxODU5
-OTI4LC0xODc0OTgxNDExLC0xNjg4ODk2MjU0LDE3MDE1ODk5Nj
-EsMzk0MjgwMjQyLC0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE5NDAwNzI4MzMsMTA0ODY4MjY0OCwtOD
+EyNDEzMTg3LC04MTk2Njc5NzUsMTY4NjMyOTg5NiwtMTQ5MTg1
+OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5OT
+YxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
 
 -->
