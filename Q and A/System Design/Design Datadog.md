@@ -14,13 +14,17 @@
 	- let's assume NoSql
 	- key would be the short_key of tiny url, value would be all visit record data of that key
 - Value (multi-level bucket)
-	- for today's data, we can store per minute as unit
-	- for yesterday's data, we can store per 5 minutes as unit
-	- for last month's data, we can store per hour as unit
-	- for last year's data, we can store per week as unit
+	- for today's data, we can aggregate & store per minute as unit
+	- for yesterday's data, we can aggregate & store per 5 minutes as unit
+	- for last month's data, we can aggregate & store per hour as unit
+	- for last year's data, we can aggregate & store per week as unit
 	- user query is usually for a certain timestap to current timestamp chart data
 	- which means, for last year's data, yuo don't have to store per minute
-
+### How to calculate visit data?
+- Q: for 2K QPS, do we need to write 2k in NoSql?
+	- No, we can aggregate visit times for most recent 15 seconds and write into memory
+	- For every 15 seconds, we write the record into NoSql, so our write QPS 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2Mzg4NjAwNSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE2NTQ3Mjk4OTgsMTc2Mzg4NjAwNSw3Mz
+A5OTgxMTZdfQ==
 -->
