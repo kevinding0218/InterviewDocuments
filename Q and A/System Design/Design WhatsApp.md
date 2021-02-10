@@ -143,10 +143,11 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
                                         Channel Service
                   (Dispatch messages)  |   (Subscribe channel)
                                         Message Service
-- What to use
+- What to use for storing data in Channel Service?
+	- Memory should be good enough, as those data are not important, we can reset if service id down
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIzMjkzODIyLC04MTI0MTMxODcsLTgxOT
-Y2Nzk3NSwxNjg2MzI5ODk2LC0xNDkxODU5OTI4LC0xODc0OTgx
-NDExLC0xNjg4ODk2MjU0LDE3MDE1ODk5NjEsMzk0MjgwMjQyLC
-0xNTMwODc0MzY5LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTA0ODY4MjY0OCwtODEyNDEzMTg3LC04MT
+k2Njc5NzUsMTY4NjMyOTg5NiwtMTQ5MTg1OTkyOCwtMTg3NDk4
+MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5OTYxLDM5NDI4MDI0Mi
+wtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
 -->
