@@ -34,13 +34,16 @@
 	- add value up from 00:01:11 ~ 00:02:11 and compare with condition
 ### Question: for one day there is 86400 seconds, each time we need query for 86k cache
 - Store level by level
-	- if we take unit as 1 mins, each bucket size is 1 sec, one query would read at most 60 times
+	- if we take unit as 1 mins, each bucket can set up as 1 sec, one query would read at most 60 times
 	- if we take unit as 1 hour, each bucket can set up as per 1 mins, one query would read at most 60 times
-	- if we take unit as 1 day, each bucket size can be 1 hour, one query would read at most 24 times
-
+	- if we take unit as 1 day, each bucket can set up as 1 hour, one query would read at most 24 times
+- If there is minor delay in above case, how to solve it
+	- First of all, rate limiter doesn't need 100% accurancy
+	- we can have more accurancey by adding a third level bucket(sec, min, hour)
+	- e.g when getting visit count of most
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NDI4MTE5MSwtMzU4NTExODU0LC0yMT
-EzNTAwNzIwLC0yMTUzMTEzNDAsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE1MzQ2ODI1NDYsLTM1ODUxMTg1NCwtMj
+ExMzUwMDcyMCwtMjE1MzExMzQwLDczMDk5ODExNl19
 -->
