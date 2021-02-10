@@ -21,8 +21,14 @@
 - A multi-threaded web crawler
 
 ### A simplistic news crawler
-
+- How will it work
+	- given the URL of news list page
+	- Send an HTTP request and grab the content of the news list page
+	- 
+	- Extract all the news titles from the news list page
+- Input: URL of the news list page
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMzU1ODcyNSwtMTY4NjQ4MjE1LC0xNT
-Y1ODY2ODE4XX0=
+eyJoaXN0b3J5IjpbMTAzODMyNjQyNiwxNDAzNTU4NzI1LC0xNj
+g2NDgyMTUsLTE1NjU4NjY4MThdfQ==
 -->
