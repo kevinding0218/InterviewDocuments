@@ -26,9 +26,9 @@
 		- 2016/03/27 23:50 5m 40
 		- 2016/03/27 23:55 5m 30
 		- 2016/03/27 00:00 1m 10
-		- 2016/03/27 0059 5m 40
+		- 2016/03/27 00:01 1m 21
 		- ...
-		- 2016/03/27 23:59 5m 40
+		- 2016/03/27 16:00 5m 12
 ### How to calculate visit data?
 - Q: for 2K QPS, do we need to write 2k in NoSql?
 	- No, we can aggregate visit times for most recent 15 seconds and write into memory
@@ -42,6 +42,6 @@ Twitter (Merge k Sorted Arrays)
 • Web Crawler (Multi Threading)
 • Amazon Top 10 Products (Hash Heap)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ4MTc2ODUyLC00OTE2MzQzOTksLTQyOT
-IzMjgwNCwxNzYzODg2MDA1LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTUwNDg1MjU2NSwtNDkxNjM0Mzk5LC00Mj
+kyMzI4MDQsMTc2Mzg4NjAwNSw3MzA5OTgxMTZdfQ==
 -->
