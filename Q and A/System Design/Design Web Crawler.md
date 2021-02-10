@@ -62,9 +62,9 @@ thread crawler
 - might be slow
 
 ### A multi-threaded Web Crawler
-- we can open multi
+- we can open multi-thread of Crawler but sharing with same Url Queue
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3OTQwNDgzLDY0OTQ0NzM3MCw2NTMzMD
-EsMTQwMzU1ODcyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
-
+eyJoaXN0b3J5IjpbLTE2MDQxMzQyMjIsNjQ5NDQ3MzcwLDY1Mz
+MwMSwxNDAzNTU4NzI1LC0xNjg2NDgyMTUsLTE1NjU4NjY4MThd
+fQ==
 -->
