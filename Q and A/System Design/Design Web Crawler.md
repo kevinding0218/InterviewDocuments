@@ -76,12 +76,12 @@ thread crawler
 	- context switch cost (CPU number limitation)
 	- thread (port) number limitation
 	- network bottleneck for single machine
-- Assuming our Url storage size
+- Assuming our Url Queue size
 	- 1000000000000 * 20 (chars) * 2 (bytes per char)  / 1000(kb) / 1000 (mb) / 1000 (gb) / 1000 (tb) ~ 40tb
-	- we can
+	- we cannot store in memory for 40tb size, we have to store in database
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzA0MDQxMzAsMTkyNzc0Njg1MiwyMj
-U4Mjk3NjYsODkzNjQyODgzLDExNjU4ODA5NTYsNjQ5NDQ3Mzcw
-LDY1MzMwMSwxNDAzNTU4NzI1LC0xNjg2NDgyMTUsLTE1NjU4Nj
-Y4MThdfQ==
+eyJoaXN0b3J5IjpbMTM5OTc3OTIzNiwxOTI3NzQ2ODUyLDIyNT
+gyOTc2Niw4OTM2NDI4ODMsMTE2NTg4MDk1Niw2NDk0NDczNzAs
+NjUzMzAxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwtMTU2NTg2Nj
+gxOF19
 -->
