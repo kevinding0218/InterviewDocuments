@@ -24,11 +24,16 @@
 - How will it work
 	- given the URL of news list page
 	- Send an HTTP request and grab the content of the news list page
-	- 
+		```
+		import urllib2
+		request = urllib2.Request(requestUrl);
+		response = urllib2.urlOpen(request);
+		page = response.read();
+		```
 	- Extract all the news titles from the news list page
-- Input: URL of the news list page
+		- Regular Expression <h3[^>
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzODMyNjQyNiwxNDAzNTU4NzI1LC0xNj
-g2NDgyMTUsLTE1NjU4NjY4MThdfQ==
+eyJoaXN0b3J5IjpbMzE4MzQwOTI3LDE0MDM1NTg3MjUsLTE2OD
+Y0ODIxNSwtMTU2NTg2NjgxOF19
 -->
