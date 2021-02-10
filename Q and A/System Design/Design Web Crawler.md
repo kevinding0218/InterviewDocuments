@@ -5,7 +5,7 @@
 	- page_content: "<!DOCTYPE html><html>...</html>"
 - How to use this
 	- when user search for "John Smith"
-	- Google does a string search on page_content column and return the urls of those whose
+	- Google does a string search on page_content column and return the urls in an collection of those whose page_content contain "John Smith"
 
 ### Scenario
 - How many web pages? How long? How large?
@@ -15,6 +15,6 @@
 	- 10p (petabyte) web page storage
 		- aeverage size of web page: 10k
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMDIwNDA5MiwtMTY4NjQ4MjE1LC0xNT
+eyJoaXN0b3J5IjpbLTE5MjAxNDcyOSwtMTY4NjQ4MjE1LC0xNT
 Y1ODY2ODE4XX0=
 -->
