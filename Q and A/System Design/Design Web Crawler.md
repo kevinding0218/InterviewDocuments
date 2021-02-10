@@ -59,10 +59,12 @@ thread crawler
 - Producer Consumer Pattern
 	- Producer -> Buffer -> Consumer
 	- why need buffer? because speed or producer and consuer is different, usually producer is faster than consumer
-- Issue
-	- might be slow
+- might be slow
+
+### A multi-threaded Web Crawler
+- we can open multi
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NDcyNzA4Miw2NDk0NDczNzAsNjUzMz
-AxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
+eyJoaXN0b3J5IjpbOTU3OTQwNDgzLDY0OTQ0NzM3MCw2NTMzMD
+EsMTQwMzU1ODcyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
 
 -->
