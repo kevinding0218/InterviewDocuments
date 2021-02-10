@@ -46,11 +46,11 @@
 		- in the hour bucket, add sum between 00 ~ 22 (total of 23 queries)
 		- in the second bucket, add sum between yesterday 23:30:34 ~ 23:30:59 (total of 26 queries)
 		- in the minute bucket, add sum between yesterday 23:31 ~ 23:59 (total of 29 queries)
-		- total query would be 34 + 30 + 23 + 26 + 29 = 142 queries
+		- total query would be 34 + 30 + 23 + 26 + 29 = 142 queries which is acceptable
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAyMjY2ODY5LDIxMDA3MjQ3MzIsLTM1OD
-UxMTg1NCwtMjExMzUwMDcyMCwtMjE1MzExMzQwLDczMDk5ODEx
-Nl19
+eyJoaXN0b3J5IjpbLTI4MjAxOTU1MiwyMTAwNzI0NzMyLC0zNT
+g1MTE4NTQsLTIxMTM1MDA3MjAsLTIxNTMxMTM0MCw3MzA5OTgx
+MTZdfQ==
 -->
