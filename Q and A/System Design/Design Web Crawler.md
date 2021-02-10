@@ -15,7 +15,11 @@
 		- crawl all of them every week
 	- 10p (petabyte) web page storage
 		- aeverage size of web page: 10k
+- A simplistic news crawler
+- A simplistic web crawler
+- A single-threaded web crawler
+- A multi-threaded web crawler
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyODM1ODg1LC0xNjg2NDgyMTUsLTE1Nj
-U4NjY4MThdfQ==
+eyJoaXN0b3J5IjpbLTQ4OTk0Nzc0MywtMTY4NjQ4MjE1LC0xNT
+Y1ODY2ODE4XX0=
 -->
