@@ -2,8 +2,8 @@
 - Dropbox, Google, Alibaba
 - For collecting data/information from the web
 	- table columns definition and example
-	- url: "http://www.wiki.org"
-	- page_content: "<!DOCTYPE html><html>...</html>"
+		- url: "http://www.wiki.org"
+		- page_content: "<!DOCTYPE html><html>...</html>"
 - How to use this
 	- when user search for "John Smith"
 	- Google does a string search on page_content column and return the urls in an collection of those whose page_content contain "John Smith"
@@ -16,6 +16,6 @@
 	- 10p (petabyte) web page storage
 		- aeverage size of web page: 10k
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTE3Mjg1NzksLTE2ODY0ODIxNSwtMT
-U2NTg2NjgxOF19
+eyJoaXN0b3J5IjpbMjAyODM1ODg1LC0xNjg2NDgyMTUsLTE1Nj
+U4NjY4MThdfQ==
 -->
