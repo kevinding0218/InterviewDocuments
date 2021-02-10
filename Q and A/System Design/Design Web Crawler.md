@@ -53,9 +53,11 @@ thread crawler
 			url = url_queue.dequeue();
 			html = web_page_loader.load(url)	//consume
 			url_list = url_extractor.extract(html)	// produce
-			url_queue.enqueue_all(url_
+			url_queue.enqueue_all(url_list)
+		end
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMTQ1MzIzMCw2NTMzMDEsMTQwMzU1OD
-cyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
+eyJoaXN0b3J5IjpbNjQ5NDQ3MzcwLDY1MzMwMSwxNDAzNTU4Nz
+I1LC0xNjg2NDgyMTUsLTE1NjU4NjY4MThdfQ==
 -->
