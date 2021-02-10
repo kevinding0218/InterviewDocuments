@@ -32,10 +32,12 @@
 	- feature = 192.168.0.1
 	- 00:01:11(100)/00:01:12(0)/00:01:13(1).....00:02:10(10)/00:02:11(3)
 	- add value up from 00:01:11 ~ 00:02:11 and compare with condition
-### Interview: How to limit request?
+### Question: for one day there is 86400 seconds, each time we need query for 86k cache
+- Store level by level
+	- before when we take unit as 1 mins, each bucket size is 1 sec, one query would read at most 60 
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1ODUxMTg1NCwtMjExMzUwMDcyMCwtMj
-E1MzExMzQwLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTc5NDA2MDEyNiwtMzU4NTExODU0LC0yMT
+EzNTAwNzIwLC0yMTUzMTEzNDAsNzMwOTk4MTE2XX0=
 -->
