@@ -20,7 +20,7 @@
 - A single-threaded web crawler
 - A multi-threaded web crawler
 
-### A simplistic news crawler
+### A simplistic News Crawler
 - How will it work
 	- given the URL of news list page
 	- Send an HTTP request and grab the content of the news list page
@@ -34,11 +34,14 @@
 		- Regular Expression "<h3> <a>[*?]</a></h3>" for matching html content only for header or anchor link
 		- Outputs: a list of news titles 
 
-### A simplistic web crawler
+### A simplistic Web Crawler
 - How will it work
 	- Input: url seeds
 	- Output: list of urls
+
+### A single-threaded Web Crawler
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUzMzAxLDE0MDM1NTg3MjUsLTE2ODY0OD
-IxNSwtMTU2NTg2NjgxOF19
+eyJoaXN0b3J5IjpbMTA3MzU4MjEwMyw2NTMzMDEsMTQwMzU1OD
+cyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
 -->
