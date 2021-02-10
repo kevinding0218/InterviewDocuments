@@ -145,9 +145,14 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
                                         Message Service
 - What to use for storing data in Channel Service?
 	- Memory should be good enough, as those data are not important, we can reset if service id down
+### Interview - how to check online status
+#### Online status Push vs Pull
+- Server needs to know who's online or offline
+- User needs to know friends' on
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0ODY4MjY0OCwtODEyNDEzMTg3LC04MT
-k2Njc5NzUsMTY4NjMyOTg5NiwtMTQ5MTg1OTkyOCwtMTg3NDk4
-MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5OTYxLDM5NDI4MDI0Mi
-wtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMzMwMDY1MTg2LDEwNDg2ODI2NDgsLTgxMj
+QxMzE4NywtODE5NjY3OTc1LDE2ODYzMjk4OTYsLTE0OTE4NTk5
+MjgsLTE4NzQ5ODE0MTEsLTE2ODg4OTYyNTQsMTcwMTU4OTk2MS
+wzOTQyODAyNDIsLTE1MzA4NzQzNjksLTIwODg3NDY2MTJdfQ==
+
 -->
