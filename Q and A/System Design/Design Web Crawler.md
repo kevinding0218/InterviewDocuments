@@ -45,7 +45,8 @@
 	- Url goes to web page loader
 	- Save web page content into storage
 	- If there are additional link url in current web page, extract them as a list then put into the Url Queue
+	- typically, one Url contains many other Url
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU2MTYxMjg2LDY1MzMwMSwxNDAzNTU4Nz
+eyJoaXN0b3J5IjpbNDUyMTU3NjcwLDY1MzMwMSwxNDAzNTU4Nz
 I1LC0xNjg2NDgyMTUsLTE1NjU4NjY4MThdfQ==
 -->
