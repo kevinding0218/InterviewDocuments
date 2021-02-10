@@ -149,19 +149,21 @@ Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
 #### Online status Push vs Pull
 - Server needs to know who's online or offline
 	- Tell server I am online/offline
-		- When user goes online, keep socket connection with Push Service, do a heart beat every 3 - 5 sec
+		- When user goes online, keep socket connection with Push Service
+			- do a heart beat every 3 - 5 sec
 		- When user goes offline, tells server to disconnect
 		- Q: when would server know when you goes offline? what if there is no internet connection?
 			- 
 	- Server tells my friends that I am online/offline
 		- Server got notification when user goes online/offline
+			- for online friends, request server every 3 - 5 sec for everyone's online status
 		- Server locates my friends and tell them I went online/offline
 		- Q1: how did server know you goes offline
 		- Q2: what to do if there is a network error in a disctrict so that when network is recovered, a group of N user would go online, suppose everyone has 100 friends, you need to notifiy 100 * N users which might cause network traffic jam
 		- Q3: Most of friends are offline
 - User needs to know friends' online or offline
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDgwOTY3ODYsMTA0ODY4MjY0OCwtOD
+eyJoaXN0b3J5IjpbLTEwMTA0MjE2NjUsMTA0ODY4MjY0OCwtOD
 EyNDEzMTg3LC04MTk2Njc5NzUsMTY4NjMyOTg5NiwtMTQ5MTg1
 OTkyOCwtMTg3NDk4MTQxMSwtMTY4ODg5NjI1NCwxNzAxNTg5OT
 YxLDM5NDI4MDI0MiwtMTUzMDg3NDM2OSwtMjA4ODc0NjYxMl19
