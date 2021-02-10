@@ -63,8 +63,10 @@ thread crawler
 
 ### A multi-threaded Web Crawler
 - we can open multi-thread of Crawler but sharing with same Url Queue
+- why multi-thread is better than single-thread
+	- for a single thread, there would be a waiting time period between sen
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDQxMzQyMjIsNjQ5NDQ3MzcwLDY1Mz
+eyJoaXN0b3J5IjpbLTExNTkwMTA1MTQsNjQ5NDQ3MzcwLDY1Mz
 MwMSwxNDAzNTU4NzI1LC0xNjg2NDgyMTUsLTE1NjU4NjY4MThd
 fQ==
 -->
