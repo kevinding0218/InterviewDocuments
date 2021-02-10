@@ -44,9 +44,18 @@
 - starting seeds can be Url Queue
 	- Url goes to web page loader
 	- Save web page content into storage
-	- If there are additional link url in current web page, extract them as a list then put into the Url Queue (The Queue would be increasing larger)
+	- If there are additional link url in current web page content, extract them as a list then put into the Url Queue (The Queue would be increasing larger)
 	- typically, one Url contains many other Url
+```
+thread crawler
+	function run
+		while (url_queue not empty)
+			url = url_queue.dequeue();
+			html = web_page_loader.load(url)	//consume
+			url_list = url_extractor.extract(html)	// produce
+			url_queue.enqueue_all(url_
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjMxNzQzODMsNjUzMzAxLDE0MDM1NT
-g3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
+eyJoaXN0b3J5IjpbMTMyMTQ1MzIzMCw2NTMzMDEsMTQwMzU1OD
+cyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
 -->
