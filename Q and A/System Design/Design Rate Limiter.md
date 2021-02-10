@@ -27,10 +27,14 @@
 		sum += memcached.get(key, default=0)
 	```
 	- sum up all records in most recent 1 mins 
+- Example:
+	- event = url_shorten
+	- feature = 192.168.0.1
+	- 00:01:11(100)/00:01:12(0)/00:01:13(1).....00:02:10(10)/00:02:11(3)
 ### Interview: How to limit request?
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDYxNjcwNDYsLTIxMTM1MDA3MjAsLT
-IxNTMxMTM0MCw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbNTMyNTA2NDE4LC0yMTEzNTAwNzIwLC0yMT
+UzMTEzNDAsNzMwOTk4MTE2XX0=
 -->
