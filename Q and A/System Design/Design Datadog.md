@@ -21,14 +21,14 @@
 	- user query is usually for a certain timestap to current timestamp chart data
 	- which means, for last year's data, yuo don't have to store per minute
 	- e.g
-		- 2016/02/26 23 1h 200
+		- 2016/02/26 23 1h 200     (last month)
 		- ...
-		- 2016/03/27 23:50 5m 40
-		- 2016/03/27 23:55 5m 30
-		- 2016/03/27 00:00 1m 10
-		- 2016/03/27 00:01 1m 21
+		- 2016/03/27 23:50 5m 40 (yesterday)
+		- 2016/03/27 23:55 5m 30 (yesterday)
+		- 2016/03/28 00:00 1m 10 (today)
+		- 2016/03/28 00:01 1m 21	(today)
 		- ...
-		- 2016/03/27 16:00 5m 12
+		- 2016/03/28 16:00 m 12
 ### How to calculate visit data?
 - Q: for 2K QPS, do we need to write 2k in NoSql?
 	- No, we can aggregate visit times for most recent 15 seconds and write into memory
@@ -42,6 +42,6 @@ Twitter (Merge k Sorted Arrays)
 • Web Crawler (Multi Threading)
 • Amazon Top 10 Products (Hash Heap)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNDg1MjU2NSwtNDkxNjM0Mzk5LC00Mj
+eyJoaXN0b3J5IjpbMTE1OTE4NjQ0MCwtNDkxNjM0Mzk5LC00Mj
 kyMzI4MDQsMTc2Mzg4NjAwNSw3MzA5OTgxMTZdfQ==
 -->
