@@ -32,8 +32,13 @@
 		```
 	- Extract all the news titles from the news list page
 		- Regular Expression "<h3> <a>[*?]</a></h3>" for matching html content only for header or anchor link
-- 
+		- Outputs: a list of news titles 
+
+### A simplistic web crawler
+- How will it work
+	- Input: url seeds
+	- Output: list of urls
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjkxMTQ3NzgsMTQwMzU1ODcyNSwtMT
-Y4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
+eyJoaXN0b3J5IjpbNjUzMzAxLDE0MDM1NTg3MjUsLTE2ODY0OD
+IxNSwtMTU2NTg2NjgxOF19
 -->
