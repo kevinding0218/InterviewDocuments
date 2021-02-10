@@ -1,6 +1,7 @@
 ## Example
 - Dropbox, Google, Alibaba
 - For collecting data/information from the web
+	- table columns definition and example
 	- url: "http://www.wiki.org"
 	- page_content: "<!DOCTYPE html><html>...</html>"
 - How to use this
@@ -15,6 +16,6 @@
 	- 10p (petabyte) web page storage
 		- aeverage size of web page: 10k
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjAxNDcyOSwtMTY4NjQ4MjE1LC0xNT
-Y1ODY2ODE4XX0=
+eyJoaXN0b3J5IjpbLTExOTE3Mjg1NzksLTE2ODY0ODIxNSwtMT
+U2NTg2NjgxOF19
 -->
