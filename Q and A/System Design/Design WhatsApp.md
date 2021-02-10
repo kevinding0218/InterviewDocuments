@@ -136,9 +136,16 @@ From Database perspective
 	- so previous 500 messages now would become 1
 - Channel Service find current online user
 	- sends out the message to Push Service
+Socket1 Socket2 Socket3                Socket1 Socket2 Socket3 Socket4
+     |              |             |                               |              |             |             |
+      Push Server 1													 Push Server 2
+                    |																		   |	(sharding by user_id) 
+                                        Channel Service
+                  (Dispatch messages)  |   (Subscribe channel)
+                                        Message Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzAxMTM1NDksLTgxOTY2Nzk3NSwxNj
-g2MzI5ODk2LC0xNDkxODU5OTI4LC0xODc0OTgxNDExLC0xNjg4
-ODk2MjU0LDE3MDE1ODk5NjEsMzk0MjgwMjQyLC0xNTMwODc0Mz
-Y5LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTgxMjQxMzE4NywtODE5NjY3OTc1LDE2OD
+YzMjk4OTYsLTE0OTE4NTk5MjgsLTE4NzQ5ODE0MTEsLTE2ODg4
+OTYyNTQsMTcwMTU4OTk2MSwzOTQyODAyNDIsLTE1MzA4NzQzNj
+ksLTIwODg3NDY2MTJdfQ==
 -->
