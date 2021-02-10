@@ -69,10 +69,11 @@ thread crawler
 - How different threads work together? (how to we solve sharing resource(Url Queue) write problem among multi-thread)
 - we wouldn't want multi-thread to write at same time of sharing resource
 	- sleep
+		- sleep for a random period then go back every time and check if resource is available again
 	- condition variable
 	- semaphore
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkzNjQyODgzLDExNjU4ODA5NTYsNjQ5ND
-Q3MzcwLDY1MzMwMSwxNDAzNTU4NzI1LC0xNjg2NDgyMTUsLTE1
-NjU4NjY4MThdfQ==
+eyJoaXN0b3J5IjpbMjI1ODI5NzY2LDg5MzY0Mjg4MywxMTY1OD
+gwOTU2LDY0OTQ0NzM3MCw2NTMzMDEsMTQwMzU1ODcyNSwtMTY4
+NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
 -->
