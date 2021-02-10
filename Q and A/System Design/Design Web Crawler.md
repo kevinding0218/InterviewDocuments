@@ -65,9 +65,9 @@ thread crawler
 - we can open multi-thread of Crawler but sharing with same Url Queue
 - why multi-thread is better than single-thread
 	- for a single thread, there would be a waiting time period between sending the request to server and waiting for the response, the waiting time could because of DNS, CDN or Firewall connection during the waiting time (~200ms), CPU is not doing anything efficint
-	- for multi thread, during the waiting time, it can send a 2nd request to web server, 
+	- for multi thread, during the waiting time, it can send a 2nd request to web server, during same time period, multi thread can do multiple jobs
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NTg4MDk1Niw2NDk0NDczNzAsNjUzMz
-AxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
-
+eyJoaXN0b3J5IjpbLTIwMjk0NjYyNzksMTE2NTg4MDk1Niw2ND
+k0NDczNzAsNjUzMzAxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwt
+MTU2NTg2NjgxOF19
 -->
