@@ -72,8 +72,10 @@ thread crawler
 		- sleep for a random period then go back every time and check if resource is available again
 	- condition variable
 	- semaphore
+- However, more threads doesn't necessarily mean more performance
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI1ODI5NzY2LDg5MzY0Mjg4MywxMTY1OD
-gwOTU2LDY0OTQ0NzM3MCw2NTMzMDEsMTQwMzU1ODcyNSwtMTY4
-NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
+eyJoaXN0b3J5IjpbLTEwMzMzODQ2NDAsMjI1ODI5NzY2LDg5Mz
+Y0Mjg4MywxMTY1ODgwOTU2LDY0OTQ0NzM3MCw2NTMzMDEsMTQw
+MzU1ODcyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
 -->
