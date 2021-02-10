@@ -11,11 +11,13 @@
 
 ### Storage
 - Need to log any feature at any time, did what event
-- Such data can kee
+- Such data can keep no more than 1 day (for rate = 5/m, there is no mean after logging for 1 mins)
+- Must have high-efficient structure
+- So we'll Memcached as storage structure as data doesn't need persist
 ### Interview: How to limit request?
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNzM1MjUwMCwtMjE1MzExMzQwLDczMD
-k5ODExNl19
+eyJoaXN0b3J5IjpbLTIxMTM1MDA3MjAsLTIxNTMxMTM0MCw3Mz
+A5OTgxMTZdfQ==
 -->
