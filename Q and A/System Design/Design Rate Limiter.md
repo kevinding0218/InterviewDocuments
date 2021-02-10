@@ -21,10 +21,16 @@
 	- code: memcached.increment(key, ttl=60s)
 	- increase visit count of corresponding bucket, and time to live is 60 sec
 - Query whether is over limitation
+	```
+	for t in 0 ~ 59 do
+		key = event + feature + (current_timestamp - t)
+		sum += memcached.get(key, default=0)
+	```
+	- sum up all records in most recent 1 mins 
 ### Interview: How to limit request?
 - e.g: cannot reset password for more than 5 times in one hour
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNzc4Njc5NiwtMjExMzUwMDcyMCwtMj
-E1MzExMzQwLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTEzMDYxNjcwNDYsLTIxMTM1MDA3MjAsLT
+IxNTMxMTM0MCw3MzA5OTgxMTZdfQ==
 -->
