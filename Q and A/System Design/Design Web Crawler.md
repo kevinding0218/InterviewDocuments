@@ -1,5 +1,5 @@
 ## Example
-- Dropbox, Google, Alibaba
+- Interviewed by: Dropbox, Google, Alibaba
 - For collecting data/information from the web
 	- table columns definition and example
 		- url: "http://www.wiki.org"
@@ -20,6 +20,6 @@
 - A single-threaded web crawler
 - A multi-threaded web crawler
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4OTk0Nzc0MywtMTY4NjQ4MjE1LC0xNT
+eyJoaXN0b3J5IjpbMjExOTUxNDExMCwtMTY4NjQ4MjE1LC0xNT
 Y1ODY2ODE4XX0=
 -->
