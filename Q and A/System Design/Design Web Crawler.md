@@ -8,8 +8,8 @@
 	- when user search for "John Smith"
 	- Google does a string search on page_content column and return the urls in an collection of those whose page_content contain "John Smith"
 
-### Scenario
-- How many web pages? How long? How large?
+## Scenario
+### How many web pages? How long? How large?
 	- crawl 1.6m web pages per second
 		- 1 trillion web pages
 		- crawl all of them every week
@@ -19,7 +19,10 @@
 - A simplistic web crawler
 - A single-threaded web crawler
 - A multi-threaded web crawler
+
+### A simplistic news crawler
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExOTUxNDExMCwtMTY4NjQ4MjE1LC0xNT
+eyJoaXN0b3J5IjpbMTQwMzU1ODcyNSwtMTY4NjQ4MjE1LC0xNT
 Y1ODY2ODE4XX0=
 -->
