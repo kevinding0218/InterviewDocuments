@@ -66,12 +66,13 @@ thread crawler
 - why multi-thread is better than single-thread
 	- for a single thread, there would be a waiting time period between sending the request to server and waiting for the response, the waiting time could because of DNS, CDN or Firewall connection during the waiting time (~200ms), CPU is not doing anything efficint
 	- for multi thread, during the waiting time, it can send a 2nd request to web server, during same time period, multi thread can do multiple jobs
-- How different threads work together? (how to we solve resource(Url Queue) sharing/writing problem among multi-thread)
+- How different threads work together? (how to we solve sharing resource(Url Queue) write problem among multi-thread)
+- we wouldn't want multi-thread to write at same time of sharing resource
 	- sleep
 	- condition variable
 	- semaphore
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MzYzMTMzNywxMTY1ODgwOTU2LDY0OT
-Q0NzM3MCw2NTMzMDEsMTQwMzU1ODcyNSwtMTY4NjQ4MjE1LC0x
-NTY1ODY2ODE4XX0=
+eyJoaXN0b3J5IjpbODkzNjQyODgzLDExNjU4ODA5NTYsNjQ5ND
+Q3MzcwLDY1MzMwMSwxNDAzNTU4NzI1LC0xNjg2NDgyMTUsLTE1
+NjU4NjY4MThdfQ==
 -->
