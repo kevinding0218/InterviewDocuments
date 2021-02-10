@@ -58,11 +58,11 @@ thread crawler
 ```
 - Producer Consumer Pattern
 	- Producer -> Buffer -> Consumer
-	- why need buffer? because speed is different 
+	- why need buffer? because speed or producer and consuer is different, usually producer is faster than consumer
 - Issue
 	- might be slow
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MTg2MTcxMCw2NDk0NDczNzAsNjUzMz
+eyJoaXN0b3J5IjpbMTg0NDcyNzA4Miw2NDk0NDczNzAsNjUzMz
 AxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
 
 -->
