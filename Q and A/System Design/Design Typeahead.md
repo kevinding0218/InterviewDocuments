@@ -70,8 +70,9 @@ LIMIT 10
 	- e.g: {axx: 10b}, 
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
 		- continue to "ax", then "axx"
+### Trie can only be stored in memory
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTA2OTA5OTIsMTk5ODE2MzUwNCwyNj
+eyJoaXN0b3J5IjpbLTE2NTMxODgxMDcsMTk5ODE2MzUwNCwyNj
 g4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0OTkxMCwtNzEzODg3
 OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX0=
 -->
