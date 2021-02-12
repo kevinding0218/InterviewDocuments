@@ -23,9 +23,12 @@ QueryService						Tries (in memory)
 	- The naive way
 	- keyword (e.g: "amazon", "apple", "adidas")
 	- hit_count (e.g: 20b, 15b 7b)
-| keyword | hitco |
+	- 
+| keyword | hitcount |
 |--|--|
-|  |  |
+| "amazon" | 20b |
+| "apple" | 15b |
+| "adidas" | 7b |
 
 ### Interviewer: what's the problem with this approach
 - when we do a query search like
@@ -37,11 +40,14 @@ LIMIT 10
 ```
 - Like Operation is expensive
 - To reduce query time, we can change our design in a tries way like
+
 |prefix| keywords |
 |--|--|
-|  |  |
+| "a" | ["amazon", "apple", ...] |
+| "am" | ["amazon", "amc", ...] |
+| "ad" | ["adidas", "adobe", ...] |
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxOTkzMDY0MCwyMTA4ODg3MjI4LDg0OD
+eyJoaXN0b3J5IjpbLTcxMzg4NzkxMywyMTA4ODg3MjI4LDg0OD
 A4ODMyMF19
 -->
