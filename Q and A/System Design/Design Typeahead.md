@@ -94,11 +94,12 @@ LIMIT 10
 - We could have multiple QueryService based on splitting on character
 #### How is trie stored across multiple machines?
 - We use consistent hashing to decide which machine a particular string belongs 2
-- e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad"
-- e.g 2: when "adi" comes, we calculate its has
+- e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad". At this time, even though other Query Service Tries also contains "ad" node, we won't store anything there
+- e.g 2: when "adi" comes, we calculate its hashing value, assuming it's 0,  then we would go to Query Service 0 to either read/write/update in the Service 0 Tries for the "adi". At this time, even though other Query Service Tries also contains "adi", we won't store anything there
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk2MjU3ODYxLC0xNjUzMTg4MTA3LDE5OT
-gxNjM1MDQsMjY4ODE1MTkxLDE4NzcyMjA4MDcsLTEzMzI1NDk5
-MTAsLTcxMzg4NzkxMywyMTA4ODg3MjI4LDg0ODA4ODMyMF19
+eyJoaXN0b3J5IjpbMTQ0MTM5MjE4NSwtMTY1MzE4ODEwNywxOT
+k4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5
+OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ
+==
 -->
