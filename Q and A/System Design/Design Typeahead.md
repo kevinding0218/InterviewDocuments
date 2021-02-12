@@ -91,10 +91,11 @@ LIMIT 10
 	- Switch machine B with machine A
 
 ### Interviewer: what if the trie gets too large for one machine?
-- We could have multiple QueryService based on splitting on character, e
+- We could have multiple QueryService based on splitting on character
+#### How is trie
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ0ODE5OCwtMTY1MzE4ODEwNywxOTk4MT
-YzNTA0LDI2ODgxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5OTEw
-LC03MTM4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ==
+eyJoaXN0b3J5IjpbMTkxNzMyODcsLTE2NTMxODgxMDcsMTk5OD
+E2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0OTkx
+MCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX0=
 -->
