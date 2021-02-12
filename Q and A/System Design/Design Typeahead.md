@@ -56,17 +56,17 @@ LIMIT 10
 - but Memcached has overhead
 ### Trie
 ### key value store
-	- e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in ending char of "n" (a -> m -> a -> z -> o -> n[20b])
+- e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in ending char of "n" (a -> m -> a -> z -> o -> n[20b])
 ### how to get hot keywords
-	- e.g: user type "a", we need to track every node with "a" and find the hit_count, with O(26^n)
-	- very slow
+- e.g: user type "a", we need to track every node with "a" and find the hit_count, with O(26^n)
+- very slow
 ### how to improve
 - instead of just storing the hit_count of exact ending char node, we can store a collection of key as words and value as hit_count in every char node if they're in the middle of the wording path
-- e.g
-	- "a" -> [{adidas: 7b},{airbnb:3b},{amazon: 20b},{apple: 15b},...]
-	- "a" - "d" -> [{adidas: 7b},{adobe: 1b},{adele: 2b},{adblock: 1b},...]
+	- e.g
+		- "a" -> [{adidas: 7b},{airbnb:3b},{amazon: 20b},{apple: 15b},...]
+		- "a" - "d" -> [{adidas: 7b},{adobe: 1b},{adele: 2b},{adblock: 1b},...]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5ODE2MzUwNCwyNjg4MTUxOTEsMTg3Nz
-IyMDgwNywtMTMzMjU0OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcy
-MjgsODQ4MDg4MzIwXX0=
+eyJoaXN0b3J5IjpbMTM0MDExMjk0NCwxOTk4MTYzNTA0LDI2OD
+gxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5OTEwLC03MTM4ODc5
+MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ==
 -->
