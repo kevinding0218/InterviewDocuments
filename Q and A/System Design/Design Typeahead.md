@@ -104,11 +104,12 @@ LIMIT 10
 	- log file size would be reduced by 1/10k
 - Will this impact hot keyword search?
 	- No, because we don't care about exact keyword search number, we only care about relative keyword search number
-	- e.g, if a keyword has been searched over 10b for over two weeks, it would only be logged as 10k times,
-	- e.g, if a keyword has been searched over 2m for over two weeks, it would only be logged as 100 times,
+	- e.g, if a keyword A has been searched over 10b for over two weeks, it would only be logged as 10k times,
+	- e.g, if a keyword B has been searched over 100k for over two weeks, it would only be logged as 10 times,
+	- both A and B appearance decreased by same times, and apparantly B won't become hot keyword
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDM5MzMwNjQsLTE1NzI1MDM0NjIsLT
-E2NTMxODgxMDcsMTk5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIy
-MDgwNywtMTMzMjU0OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMj
-gsODQ4MDg4MzIwXX0=
+eyJoaXN0b3J5IjpbMTQ2NDQ5MTU2OCwtMTU3MjUwMzQ2MiwtMT
+Y1MzE4ODEwNywxOTk4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIw
+ODA3LC0xMzMyNTQ5OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOC
+w4NDgwODgzMjBdfQ==
 -->
