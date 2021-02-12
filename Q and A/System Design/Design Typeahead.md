@@ -72,8 +72,8 @@ LIMIT 10
 		- continue to "ax", then "axx"
 #### Trie can only be stored in memory
 - but what if electronic cut off, memeory will be lost, so we still need to serialize into disk, like convert a Tree into a character string and store in disk
-### Where does raw data come from
-- e.g what does DataCollectionService do?
+### What does DataCollectionService do
+- create raw data based on user search from web request and generate the result of keyword with hit_count
 - 
 |user| keyword | timestamp |
 |--|--|--|
@@ -90,8 +90,11 @@ LIMIT 10
 	- Update Tries in machine B from DataCollectionService
 	- Switch machine B with machine A
 
+### Interviewer: what if the trie gets too large for one machine?
+- We could have multiple QueryService based on splitting on character, e
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ0MzExNTY4LC0xNjUzMTg4MTA3LDE5OT
-gxNjM1MDQsMjY4ODE1MTkxLDE4NzcyMjA4MDcsLTEzMzI1NDk5
-MTAsLTcxMzg4NzkxMywyMTA4ODg3MjI4LDg0ODA4ODMyMF19
+eyJoaXN0b3J5IjpbOTQ0ODE5OCwtMTY1MzE4ODEwNywxOTk4MT
+YzNTA0LDI2ODgxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5OTEw
+LC03MTM4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ==
 -->
