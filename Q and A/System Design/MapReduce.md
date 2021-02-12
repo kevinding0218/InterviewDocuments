@@ -7,8 +7,9 @@
 	- Use a hashmap and iterative with every word: HashMap<String, Integer> worldCount: O(N)
 	- How to improve
 - Solution 2: Multiple Machine with For Loop
-	- Line 1: abacdd => Machine 1 (a: 2, b: 1, c: 1, d:2)
-	- Line 2: abccdb => Machine 2 (a: 1, b: 2, c: 2, 
+	- Line 1: abacdd => Machine 1 (a: 2, b: 1, c: 1, d: 2)
+	- Line 2: abccdb => Machine 2 (a: 1, b: 2, c: 2, d: 1)
+	- Aggregate in => Machine 3 (a: 3, b: 3, c: 3, d: 3)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MTMzNzQ0OSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTkyOTA0NTAwMiw3MzA5OTgxMTZdfQ==
 -->
