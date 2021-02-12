@@ -50,8 +50,9 @@ LIMIT 10
 | "a" | ["amazon", "apple", ...] |
 | "am" | ["amazon", "amc", ...] |
 | "ad" | ["adidas", "adobe", ...] |
-
+### Disk vs MemCached
+- Above was around Table in Database which is stored in disk, the reading speed is 1/1000 of 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE0MDMzNDE5LC0xMzMyNTQ5OTEwLC03MT
+eyJoaXN0b3J5IjpbODk4MzE4MDM5LC0xMzMyNTQ5OTEwLC03MT
 M4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ==
 -->
