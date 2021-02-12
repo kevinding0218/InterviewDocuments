@@ -56,9 +56,10 @@ LIMIT 10
 - but Memcached has overhead
 ### Trie
 - key value store
-	- e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in "n" (a -> m -> a -> z -> o -> n)
+	- e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in "n" (a -> m -> a -> z -> o -> n[20b])
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY4ODE1MTkxLDE4NzcyMjA4MDcsLTEzMz
-I1NDk5MTAsLTcxMzg4NzkxMywyMTA4ODg3MjI4LDg0ODA4ODMy
-MF19
+eyJoaXN0b3J5IjpbLTEwOTcxNDg4MzAsMjY4ODE1MTkxLDE4Nz
+cyMjA4MDcsLTEzMzI1NDk5MTAsLTcxMzg4NzkxMywyMTA4ODg3
+MjI4LDg0ODA4ODMyMF19
 -->
