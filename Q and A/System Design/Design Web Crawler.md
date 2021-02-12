@@ -42,6 +42,7 @@
 ### A single-threaded Web Crawler
 - use BFS
 - starting seeds can be Url Queue
+	- Url Queue will be stored in memory
 	- Url goes to web page loader
 	- Save web page content into storage
 	- If there are additional link url in current web page content, extract them as a list then put into the Url Queue (The Queue would be increasing larger)
@@ -104,7 +105,7 @@ WebPageStorage -> [Crawler Machine 1 & Crawler Machine 2 & Crawler Machine 3](We
 ### Multi-region
 - Set a web crawler service in China and periodically sync the data with global data
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyMzQzMTMyLDQ3MDE0NDYwNCwtOTQ4OT
+eyJoaXN0b3J5IjpbMjEyMDA4ODcxLDQ3MDE0NDYwNCwtOTQ4OT
 I1NDUxLC0xMTg1Njc1MzYwLDE5Mjc3NDY4NTIsMjI1ODI5NzY2
 LDg5MzY0Mjg4MywxMTY1ODgwOTU2LDY0OTQ0NzM3MCw2NTMzMD
 EsMTQwMzU1ODcyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
