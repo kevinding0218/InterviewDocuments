@@ -102,9 +102,9 @@ WebPageStorage -> [Crawler Machine 1 & Crawler Machine 2 & Crawler Machine 3](We
 - Use Quota
 	- e.g: scehduler can arrage no more than 10% task for sina.com
 ### Multi-region
-- Set a web crawler service in China and data s
+- Set a web crawler service in China and periodically sync the data with global data
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc5NDA5MzQzLDQ3MDE0NDYwNCwtOTQ4OT
+eyJoaXN0b3J5IjpbOTIyMzQzMTMyLDQ3MDE0NDYwNCwtOTQ4OT
 I1NDUxLC0xMTg1Njc1MzYwLDE5Mjc3NDY4NTIsMjI1ODI5NzY2
 LDg5MzY0Mjg4MywxMTY1ODgwOTU2LDY0OTQ0NzM3MCw2NTMzMD
 EsMTQwMzU1ODcyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
