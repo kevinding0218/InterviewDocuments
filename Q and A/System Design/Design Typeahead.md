@@ -55,12 +55,12 @@ LIMIT 10
 - So we definiately need a MemCached in front of Database
 - but Memcached has overhead
 ### Trie
-### key value store
+#### key value store
 - e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in ending char of "n" (a -> m -> a -> z -> o -> n[20b])
 ### how to get hot keywords
 - e.g: user type "a", we need to track every node with "a" and find the hit_count, with O(26^n)
 - very slow
-### how to improve
+#### how to improve
 - instead of just storing the hit_count of exact ending char node, we can store a collection of key as words and value as hit_count in every char node if they're in the middle of the wording path
 	- e.g
 		- "a" -> [{adidas: 7b},{airbnb:3b},{amazon: 20b},{apple: 15b},...]
@@ -70,11 +70,17 @@ LIMIT 10
 	- e.g: {axx: 10b}, 
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
 		- continue to "ax", then "axx"
-### Trie can only be stored in memory
+#### Trie can only be stored in memory
 - but what if electronic cut off, memeory will be lost, so we still need to serialize into disk, like convert a Tree into a character string and store in disk
+### Where does raw data come from
+- e.g what does DataCollectionService do?
+|user| keyword | timestamp |
+|--|--|
+| xxx | "amazon" | 1425234213
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDMyMTI3ODYsLTE2NTMxODgxMDcsMT
-k5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0
-OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX
-0=
+eyJoaXN0b3J5IjpbMTU4NDk3MjE0MCwtMTY1MzE4ODEwNywxOT
+k4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5
+OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ
+==
 -->
