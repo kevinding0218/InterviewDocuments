@@ -55,8 +55,10 @@ LIMIT 10
 - So we definiately need a MemCached in front of Database
 - but Memcached has overhead
 ### Trie
-
+- key value store
+	- e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in "n"
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NzIyMDgwNywtMTMzMjU0OTkxMCwtNz
-EzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX0=
+eyJoaXN0b3J5IjpbODAxNzgyMDMzLDE4NzcyMjA4MDcsLTEzMz
+I1NDk5MTAsLTcxMzg4NzkxMywyMTA4ODg3MjI4LDg0ODA4ODMy
+MF19
 -->
