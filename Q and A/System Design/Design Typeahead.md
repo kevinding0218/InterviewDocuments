@@ -21,7 +21,10 @@ QueryService						Tries (in memory)
 ## Storage
 - What kind of data do we need to store?
 	- The naive way
-	- keyword (e.g: "amazon", "apple", "ad
+	- keyword (e.g: "amazon", "apple", "adidas")
+	- hit_count (e.g: 20b, 15b 7b)
+### Interviewer: what's the problem with this approach
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NDYyODEwNCw4NDgwODgzMjBdfQ==
+eyJoaXN0b3J5IjpbMjEwODg4NzIyOCw4NDgwODgzMjBdfQ==
 -->
