@@ -65,8 +65,10 @@ LIMIT 10
 	- e.g
 		- "a" -> [{adidas: 7b},{airbnb:3b},{amazon: 20b},{apple: 15b},...]
 		- "a" - "d" -> [{adidas: 7b},{adobe: 1b},{adele: 2b},{adblock: 1b},...]
+- when new data comes in
+	- e.g: {axx: 10b}, check "a" lists, see if the value collection reaches capacity, if not, inserte
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDExMjk0NCwxOTk4MTYzNTA0LDI2OD
-gxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5OTEwLC03MTM4ODc5
-MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ==
+eyJoaXN0b3J5IjpbLTE2NDQ5ODU0ODUsMTk5ODE2MzUwNCwyNj
+g4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0OTkxMCwtNzEzODg3
+OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX0=
 -->
