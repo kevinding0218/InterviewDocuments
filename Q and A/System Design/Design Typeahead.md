@@ -55,13 +55,15 @@ LIMIT 10
 - So we definiately need a MemCached in front of Database
 - but Memcached has overhead
 ### Trie
-- key value store
-	- e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in "n" (a -> m -> a -> z -> o -> n[20b])
-- how to get hot keywords
+### key value store
+	- e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in ending char of "n" (a -> m -> a -> z -> o -> n[20b])
+### how to get hot keywords
 	- e.g: user type "a", we need to track every node with "a" and find the hit_count, with O(26^n)
 	- very slow
+### how to improve
+- instead of just storing the hit_count of exact ending char node
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjEzNDE0MywyNjg4MTUxOTEsMTg3Nz
+eyJoaXN0b3J5IjpbMTkxNDEwNzcxMCwyNjg4MTUxOTEsMTg3Nz
 IyMDgwNywtMTMzMjU0OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcy
 MjgsODQ4MDg4MzIwXX0=
 -->
