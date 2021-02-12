@@ -23,13 +23,25 @@ QueryService						Tries (in memory)
 	- The naive way
 	- keyword (e.g: "amazon", "apple", "adidas")
 	- hit_count (e.g: 20b, 15b 7b)
+| keyword | hitco |
+|--|--|
+|  |  |
+
 ### Interviewer: what's the problem with this approach
 - when we do a query search like
 ```
 SELECT * FROM hit_stats
 WHERE keyword LIKE '${key}%'
+ORDER BY hit_count DESC
+LIMIT 10
 ```
+- Like Operation is expensive
+- To reduce query time, we can change our design in a tries way like
+|prefix| keywords |
+|--|--|
+|  |  |
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ3NTg2NTY3LDIxMDg4ODcyMjgsODQ4MD
-g4MzIwXX0=
+eyJoaXN0b3J5IjpbLTQxOTkzMDY0MCwyMTA4ODg3MjI4LDg0OD
+A4ODMyMF19
 -->
