@@ -71,9 +71,9 @@ LIMIT 10
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
 		- continue to "ax", then "axx"
 ### Trie can only be stored in memory
-
+- but what if electronic cut off, memeory will be lost, so we still need to serialize into disk, like convert a Tree into a character string and store in disk
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzcyNTI4OTMsLTE2NTMxODgxMDcsMT
+eyJoaXN0b3J5IjpbLTIxMDMyMTI3ODYsLTE2NTMxODgxMDcsMT
 k5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0
 OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX
 0=
