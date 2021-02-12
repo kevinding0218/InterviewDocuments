@@ -85,11 +85,15 @@ thread crawler
 			- url
 			- state (idle/working)
 			- priority (0, 1, 2)
-			- available time
-	- Url priority
+			- available time (if current time is earlier than available time, we can wait until available time to process this url)
+
+### Interviewer: how to improve slow select
+- Table sharding
+	- we can split Task table into multiple Task tables
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODU2NzUzNjAsMTkyNzc0Njg1MiwyMj
-U4Mjk3NjYsODkzNjQyODgzLDExNjU4ODA5NTYsNjQ5NDQ3Mzcw
-LDY1MzMwMSwxNDAzNTU4NzI1LC0xNjg2NDgyMTUsLTE1NjU4Nj
-Y4MThdfQ==
+eyJoaXN0b3J5IjpbNDMwNTcwODc4LC0xMTg1Njc1MzYwLDE5Mj
+c3NDY4NTIsMjI1ODI5NzY2LDg5MzY0Mjg4MywxMTY1ODgwOTU2
+LDY0OTQ0NzM3MCw2NTMzMDEsMTQwMzU1ODcyNSwtMTY4NjQ4Mj
+E1LC0xNTY1ODY2ODE4XX0=
 -->
