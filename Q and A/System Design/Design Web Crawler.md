@@ -95,12 +95,13 @@ thread crawler
 WebPageStorage -> [Crawler Machine 1 & Crawler Machine 2 & Crawler Machine 3](Web) -> Scheduler -> [Task Table 1 & Task Table 2 & Task Table 3]
 ### Interviewer: how often should we do crawler
 - Exponential back-off
-	- e.g: if currently we would crawler on www.sina.com every week (7 days), by the next time we found the content changed a lot, we can set the next prioed to be 7/2 = 3 days, then after 3 days we found same behavior, we can s
+	- e.g: if currently we would crawler on www.sina.com every 1 week (7 days), by the next time we found the content changed a lot, we can set the next period to be 7/2 = 3 days, then after 3 days we found same behavior, we can set the period to be 3/2 = 1 days, and so on...
+	- e.g: if currently we would crawler on www.sina.com every 1 week (7 days), by the next time we found no content changed, we can set the next period to be 1 * 2 = 2 weeks, then after 2 weeks, we found same behavior, we can set the period to be 2 * 2 =4 weeks, and so on...
 ### Interviewer: how to handle update for failure (i.e. content update, crawl failure)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwODY3NzM3MywtOTQ4OTI1NDUxLC0xMT
-g1Njc1MzYwLDE5Mjc3NDY4NTIsMjI1ODI5NzY2LDg5MzY0Mjg4
-MywxMTY1ODgwOTU2LDY0OTQ0NzM3MCw2NTMzMDEsMTQwMzU1OD
-cyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
+eyJoaXN0b3J5IjpbNDcwMTQ0NjA0LC05NDg5MjU0NTEsLTExOD
+U2NzUzNjAsMTkyNzc0Njg1MiwyMjU4Mjk3NjYsODkzNjQyODgz
+LDExNjU4ODA5NTYsNjQ5NDQ3MzcwLDY1MzMwMSwxNDAzNTU4Nz
+I1LC0xNjg2NDgyMTUsLTE1NjU4NjY4MThdfQ==
 -->
