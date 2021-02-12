@@ -110,11 +110,13 @@ LIMIT 10
 
 ### Interviewer: how to reduce response time in front-end
 - Suppose we already did well on server side, what can we do at client/browser side
-- suppose when we type "123", we would request 3 times already (1, 12 & 123), now if we remove 3 it comes "12", we don't need to make a new request because we already get the response earlier
-- 
+- No duplicate request 
+	- suppose when we type "123", we would request 3 times already (1, 12 & 123), now if we remove 3 it comes "12", we don't need to make a new request because we already get the response earlier
+- Filter on client side with more data response at initial request
+	- suppose when we type "a", instead of just return the top 4 keywords with a, we can return keywords of other combination such as "ab", "ac
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MDg3MjI2LC0xNTcyNTAzNDYyLC0xNj
-UzMTg4MTA3LDE5OTgxNjM1MDQsMjY4ODE1MTkxLDE4NzcyMjA4
-MDcsLTEzMzI1NDk5MTAsLTcxMzg4NzkxMywyMTA4ODg3MjI4LD
-g0ODA4ODMyMF19
+eyJoaXN0b3J5IjpbMTUzNDkxMzM5MCwtMTU3MjUwMzQ2MiwtMT
+Y1MzE4ODEwNywxOTk4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIw
+ODA3LC0xMzMyNTQ5OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOC
+w4NDgwODgzMjBdfQ==
 -->
