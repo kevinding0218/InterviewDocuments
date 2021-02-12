@@ -101,10 +101,12 @@ WebPageStorage -> [Crawler Machine 1 & Crawler Machine 2 & Crawler Machine 3](We
 - Too many web pages (url) in sina.com, the crawler keeps crawling sina.com and don't crawl other websites
 - Use Quota
 	- e.g: scehduler can arrage no more than 10% task for sina.com
+### Multi-region
+- Set a web crawler service in China and data s
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0Njg4NzM5OSw0NzAxNDQ2MDQsLTk0OD
-kyNTQ1MSwtMTE4NTY3NTM2MCwxOTI3NzQ2ODUyLDIyNTgyOTc2
-Niw4OTM2NDI4ODMsMTE2NTg4MDk1Niw2NDk0NDczNzAsNjUzMz
-AxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
+eyJoaXN0b3J5IjpbNjc5NDA5MzQzLDQ3MDE0NDYwNCwtOTQ4OT
+I1NDUxLC0xMTg1Njc1MzYwLDE5Mjc3NDY4NTIsMjI1ODI5NzY2
+LDg5MzY0Mjg4MywxMTY1ODgwOTU2LDY0OTQ0NzM3MCw2NTMzMD
+EsMTQwMzU1ODcyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
 
 -->
