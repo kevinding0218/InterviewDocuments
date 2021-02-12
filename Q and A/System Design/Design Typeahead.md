@@ -53,8 +53,10 @@ LIMIT 10
 ### Disk vs MemCached
 - Above was around Table in Database which is stored in disk, the reading speed is 1/1000 of reading from memory
 - So we definiately need a MemCached in front of Database
-- Memcached overhead
+- but Memcached has overhead
+### Trie
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NDA5MzAzMSwtMTMzMjU0OTkxMCwtNz
+eyJoaXN0b3J5IjpbMTg3NzIyMDgwNywtMTMzMjU0OTkxMCwtNz
 EzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX0=
 -->
