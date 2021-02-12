@@ -107,8 +107,12 @@ LIMIT 10
 	- e.g, if a keyword A has been searched over 10b for over two weeks, it would only be logged as 10k times,
 	- e.g, if a keyword B has been searched over 100k for over two weeks, it would only be logged as 10 times,
 	- both A and B appearance decreased by same times, and apparantly B won't become hot keyword
+
+### Interviewer: how to reduce response time in front-end
+- Suppose we already did well on server side, what can we do at client/browser side
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NDQ5MTU2OCwtMTU3MjUwMzQ2MiwtMT
+eyJoaXN0b3J5IjpbLTYyMTEyNDk5MCwtMTU3MjUwMzQ2MiwtMT
 Y1MzE4ODEwNywxOTk4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIw
 ODA3LC0xMzMyNTQ5OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOC
 w4NDgwODgzMjBdfQ==
