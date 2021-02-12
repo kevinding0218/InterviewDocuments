@@ -92,10 +92,12 @@ LIMIT 10
 
 ### Interviewer: what if the trie gets too large for one machine?
 - We could have multiple QueryService based on splitting on character
-#### How is trie
+#### How is trie stored across multiple machines?
+- We use consistent hashing to decide which machine a particular string belongs 2
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNzMyODcsLTE2NTMxODgxMDcsMTk5OD
-E2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0OTkx
-MCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX0=
+eyJoaXN0b3J5IjpbODY4MzI0MzkzLC0xNjUzMTg4MTA3LDE5OT
+gxNjM1MDQsMjY4ODE1MTkxLDE4NzcyMjA4MDcsLTEzMzI1NDk5
+MTAsLTcxMzg4NzkxMywyMTA4ODg3MjI4LDg0ODA4ODMyMF19
 -->
