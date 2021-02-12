@@ -1,7 +1,6 @@
-
-
-
-> Written with [StackEdit](https://stackedit.io/).
+## Map Reduce
+- Why Map Reduce?
+	- Distr
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMjU1NDk2MjYzLDczMDk5ODExNl19
 -->
