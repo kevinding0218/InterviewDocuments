@@ -40,6 +40,7 @@ LIMIT 10
 ```
 - Like Operation is expensive
 - To reduce query time, we can change our design in a tries way like
+	- since "amazon" we know has hit_count of 20b, we can save the table with prefix of "a", "am", "ama", ... etc
 	- whenever a new words comes in, if keywordssize is not full, put the new words in
 	- otherwise, compare the hit_count of new words with each word in keywords, replace the one having lower least hit_count
 	- 
@@ -50,6 +51,6 @@ LIMIT 10
 | "ad" | ["adidas", "adobe", ...] |
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzI1NDk5MTAsLTcxMzg4NzkxMywyMT
-A4ODg3MjI4LDg0ODA4ODMyMF19
+eyJoaXN0b3J5IjpbLTE3MDkyNDc5OTMsLTEzMzI1NDk5MTAsLT
+cxMzg4NzkxMywyMTA4ODg3MjI4LDg0ODA4ODMyMF19
 -->
