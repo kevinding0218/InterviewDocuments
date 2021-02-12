@@ -40,7 +40,8 @@ LIMIT 10
 ```
 - Like Operation is expensive
 - To reduce query time, we can change our design in a tries way like
-	- whenever a new words comes in, if keyword size is not full, put the new wor
+	- whenever a new words comes in, if keywordssize is not full, put the new words in
+	- otherwise, compare the hit_count of new words with each word in keywords, replace the one having lower least hit_count
 	- 
 |prefix| keywords |
 |--|--|
@@ -49,6 +50,6 @@ LIMIT 10
 | "ad" | ["adidas", "adobe", ...] |
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODI4Njc3MzAsLTcxMzg4NzkxMywyMT
+eyJoaXN0b3J5IjpbLTEzMzI1NDk5MTAsLTcxMzg4NzkxMywyMT
 A4ODg3MjI4LDg0ODA4ODMyMF19
 -->
