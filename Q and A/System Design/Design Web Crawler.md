@@ -96,12 +96,14 @@ WebPageStorage -> [Crawler Machine 1 & Crawler Machine 2 & Crawler Machine 3](We
 ### Interviewer: how often should we do crawler
 - Exponential back-off
 	- e.g: if currently we would crawler on www.sina.com every 1 week (7 days), by the next time we found the content changed a lot, we can set the next period to be 7/2 = 3 days, then after 3 days we found same behavior, we can set the period to be 3/2 = 1 days, and so on...
-	- e.g: if currently we would crawler on www.sina.com every 1 week (7 days), by the next time we found no content changed, we can set the next period to be 1 * 2 = 2 weeks, then after 2 weeks, we found same behavior, we can set the period to be 2 * 2 =4 weeks, and so on...
-### Interviewer: how to handle update for failure (i.e. content update, crawl failure)
-
+	- e.g: if currently we would crawler on www.sina.com every 1 week (7 days), by the next time we found no content changed or url deactivate (404), we can set the next period to be 1 * 2 = 2 weeks, then after 2 weeks, we found same behavior, we can set the period to be 2 * 2 =4 weeks, and so on...
+### Interviewer: how to handle dead cycle
+- Too many web pages in sina.com, the crawler keeps crawling sina.com and don't crawl other websites
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcwMTQ0NjA0LC05NDg5MjU0NTEsLTExOD
-U2NzUzNjAsMTkyNzc0Njg1MiwyMjU4Mjk3NjYsODkzNjQyODgz
-LDExNjU4ODA5NTYsNjQ5NDQ3MzcwLDY1MzMwMSwxNDAzNTU4Nz
-I1LC0xNjg2NDgyMTUsLTE1NjU4NjY4MThdfQ==
+eyJoaXN0b3J5IjpbMTk3MDI5MTExOSw0NzAxNDQ2MDQsLTk0OD
+kyNTQ1MSwtMTE4NTY3NTM2MCwxOTI3NzQ2ODUyLDIyNTgyOTc2
+Niw4OTM2NDI4ODMsMTE2NTg4MDk1Niw2NDk0NDczNzAsNjUzMz
+AxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
+
 -->
