@@ -16,9 +16,9 @@
 - Solution 3: Map Reduce
 	- Line 1: abacdd => Machine 1 (a: 2, b: 1, c: 1, d: 2)
 	- Line 2: abccdb => Machine 2 (a: 1, b: 2, c: 2, d: 1)
-	- Aggregate in  2 machines => Machine 3 aggregate for a & b, Machine 4 aggregate for c & d
+	- Aggregate in  2 machines => Machine 3 aggregate for a & b {a: 3, b: 3}, Machine 4 aggregate for c & d {c: 3, d: 3}
 	- Then finally aggreagate Machine 3 & 4
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NzE4ODM0MywxOTI5MDQ1MDAyLDczMD
+eyJoaXN0b3J5IjpbLTY2NjcwODU0MSwxOTI5MDQ1MDAyLDczMD
 k5ODExNl19
 -->
