@@ -59,8 +59,9 @@ LIMIT 10
 	- e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in "n" (a -> m -> a -> z -> o -> n[20b])
 - how to get hot keywords
 	- e.g: user type "a", we need to track every node with "a" and find the hit_count, with O(26^n)
+	- very slow
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjY0NDQ5NTUsMjY4ODE1MTkxLDE4Nz
-cyMjA4MDcsLTEzMzI1NDk5MTAsLTcxMzg4NzkxMywyMTA4ODg3
-MjI4LDg0ODA4ODMyMF19
+eyJoaXN0b3J5IjpbLTE3NjEzNDE0MywyNjg4MTUxOTEsMTg3Nz
+IyMDgwNywtMTMzMjU0OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcy
+MjgsODQ4MDg4MzIwXX0=
 -->
