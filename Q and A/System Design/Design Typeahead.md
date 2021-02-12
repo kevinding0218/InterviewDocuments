@@ -75,12 +75,16 @@ LIMIT 10
 ### Where does raw data come from
 - e.g what does DataCollectionService do?
 |user| keyword | timestamp |
-|--|--|
-| xxx | "amazon" | 1425234213
+|--|--|--|
+| xxx | "amazon" | 142523421
+| yyy | "apple" | 142528465
+| zzz | "amazon" | 142529861
+
+- group by keyword to get "amazon" with hit_count 20b
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NDk3MjE0MCwtMTY1MzE4ODEwNywxOT
-k4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5
-OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ
-==
+eyJoaXN0b3J5IjpbLTE4MzQwNzg1NTMsLTE2NTMxODgxMDcsMT
+k5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0
+OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX
+0=
 -->
