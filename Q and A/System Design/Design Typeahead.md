@@ -82,11 +82,12 @@ LIMIT 10
 | zzz | "amazon" | 142529861
 
 - group by keyword to get "amazon" with hit_count 20b
-- update Tries in Query Service memory
+- update periodically Tries in Query Service memory 
+	- cannot update Query Service while it's live and used by user
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NTYzNDg3NiwtMTY1MzE4ODEwNywxOT
-k4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5
-OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ
-==
+eyJoaXN0b3J5IjpbLTE3NzgwMDcyMTUsLTE2NTMxODgxMDcsMT
+k5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0
+OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX
+0=
 -->
