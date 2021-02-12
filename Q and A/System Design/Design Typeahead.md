@@ -97,9 +97,12 @@ LIMIT 10
 - e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad". At this time, even though other Query Service Tries also contains "ad" node, we won't store anything there
 - e.g 2: when "adi" comes, we calculate its hashing value, assuming it's 0,  then we would go to Query Service 0 to either read/write/update in the Service 0 Tries for the "adi". At this time, even though other Query Service Tries also contains "adi" node, we won't store anything there
 
+### Interviewer: how to reduce the size of log file
+- what is log file?
+	- log which user searched which keyword at when
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMjYxMzgzMCwtMTY1MzE4ODEwNywxOT
-k4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5
-OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ
-==
+eyJoaXN0b3J5IjpbLTE1NzI1MDM0NjIsLTE2NTMxODgxMDcsMT
+k5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0
+OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX
+0=
 -->
