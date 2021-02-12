@@ -98,10 +98,11 @@ WebPageStorage -> [Crawler Machine 1 & Crawler Machine 2 & Crawler Machine 3](We
 	- e.g: if currently we would crawler on www.sina.com every 1 week (7 days), by the next time we found the content changed a lot, we can set the next period to be 7/2 = 3 days, then after 3 days we found same behavior, we can set the period to be 3/2 = 1 days, and so on...
 	- e.g: if currently we would crawler on www.sina.com every 1 week (7 days), by the next time we found no content changed or url deactivate (404), we can set the next period to be 1 * 2 = 2 weeks, then after 2 weeks, we found same behavior, we can set the period to be 2 * 2 =4 weeks, and so on...
 ### Interviewer: how to handle dead cycle
-- Too many web pages in sina.com, the crawler keeps crawling sina.com and don't crawl other websites
-- 
+- Too many web pages (url) in sina.com, the crawler keeps crawling sina.com and don't crawl other websites
+- Use Quota
+	- e.g: scehduler can arrage no more than 10% task for sina.com
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MDI5MTExOSw0NzAxNDQ2MDQsLTk0OD
+eyJoaXN0b3J5IjpbMjA0Njg4NzM5OSw0NzAxNDQ2MDQsLTk0OD
 kyNTQ1MSwtMTE4NTY3NTM2MCwxOTI3NzQ2ODUyLDIyNTgyOTc2
 Niw4OTM2NDI4ODMsMTE2NTg4MDk1Niw2NDk0NDczNzAsNjUzMz
 AxLDE0MDM1NTg3MjUsLTE2ODY0ODIxNSwtMTU2NTg2NjgxOF19
