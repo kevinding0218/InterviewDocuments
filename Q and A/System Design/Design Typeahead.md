@@ -113,9 +113,9 @@ LIMIT 10
 - No duplicate request 
 	- suppose when we type "123", we would request 3 times already (1, 12 & 123), now if we remove 3 it comes "12", we don't need to make a new request because we already get the response earlier
 - Filter on client side with more data response at initial request
-	- suppose when we type "a", instead of just return the top 4 keywords with a, we can return keywords of other combination such as "ab", "ac
+	- suppose when we type "a", instead of just return the top 4 keywords with a, we can return keywords of other combination such as "ab", "ac", ... "az", so we can filter the result on client side when user type the next word
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNDkxMzM5MCwtMTU3MjUwMzQ2MiwtMT
+eyJoaXN0b3J5IjpbLTYzMTM3MjI0MSwtMTU3MjUwMzQ2MiwtMT
 Y1MzE4ODEwNywxOTk4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIw
 ODA3LC0xMzMyNTQ5OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOC
 w4NDgwODgzMjBdfQ==
