@@ -103,10 +103,10 @@ LIMIT 10
 - Use a random number like (1 ~ 10k), only when random number equals 1, then we log the record into log file
 	- log file size would be reduced by 1/10k
 - Will this impact hot keyword search?
-	- No, because we don't care about exact keyword search number, we only care about relative keywor
+	- No, because we don't care about exact keyword search number, we only care about relative keyword search number
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzEyNTM3NjAsLTE1NzI1MDM0NjIsLT
-E2NTMxODgxMDcsMTk5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIy
-MDgwNywtMTMzMjU0OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMj
-gsODQ4MDg4MzIwXX0=
+eyJoaXN0b3J5IjpbMTYyODkxOTAyMywtMTU3MjUwMzQ2MiwtMT
+Y1MzE4ODEwNywxOTk4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIw
+ODA3LC0xMzMyNTQ5OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOC
+w4NDgwODgzMjBdfQ==
 -->
