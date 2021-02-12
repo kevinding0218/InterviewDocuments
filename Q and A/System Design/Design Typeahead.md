@@ -71,8 +71,10 @@ LIMIT 10
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
 		- continue to "ax", then "axx"
 ### Trie can only be stored in memory
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTMxODgxMDcsMTk5ODE2MzUwNCwyNj
-g4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0OTkxMCwtNzEzODg3
-OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX0=
+eyJoaXN0b3J5IjpbLTE4MzcyNTI4OTMsLTE2NTMxODgxMDcsMT
+k5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0
+OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX
+0=
 -->
