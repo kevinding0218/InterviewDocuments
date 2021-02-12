@@ -84,10 +84,15 @@ LIMIT 10
 - group by keyword to get "amazon" with hit_count 20b
 - update periodically Tries in Query Service memory 
 	- cannot update Query Service while it's live and used by user
+	- cannot write and read at same time
+	- back up Query Service disk from live machine A in another machine B 
+	- Deserialize disk in machine B into Trie in machine B
+	- Update Tries in machine B from DataCollectionService
+	- Switch machine B with machine A
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzgwMDcyMTUsLTE2NTMxODgxMDcsMT
-k5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0
-OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX
-0=
+eyJoaXN0b3J5IjpbLTcyNzU4Mzc2MCwtMTY1MzE4ODEwNywxOT
+k4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5
+OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ
+==
 -->
