@@ -92,11 +92,12 @@ thread crawler
 	- we can split Task table into multiple Task tables
 	- after splitting the task table, we are not only request data from one machine but multiple machines,
 	- so we need a scheduler 
-WebPage
+WebPageStorage -> [Crawler Machine 1 & Crawler Machine 2 & Crawler Machine 3](Web) -> Scheduler -> [Task Table 1 & Task Table 2 & Task Table 3]
+### Inter
 ### Interviewer: how to handle update for failure (i.e. content update, crawl failure)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MzU5MDI5MCwtOTQ4OTI1NDUxLC0xMT
+eyJoaXN0b3J5IjpbMTAzMjUwODEwMywtOTQ4OTI1NDUxLC0xMT
 g1Njc1MzYwLDE5Mjc3NDY4NTIsMjI1ODI5NzY2LDg5MzY0Mjg4
 MywxMTY1ODgwOTU2LDY0OTQ0NzM3MCw2NTMzMDEsMTQwMzU1OD
 cyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
