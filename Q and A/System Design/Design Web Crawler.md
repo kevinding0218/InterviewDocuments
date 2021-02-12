@@ -90,12 +90,14 @@ thread crawler
 ### Interviewer: how to improve slow select
 - Table sharding
 	- we can split Task table into multiple Task tables
-
+	- after splitting the task table, we are not only request data from one machine but multiple machines,
+	- so we need a scheduler 
+WebPage
 ### Interviewer: how to handle update for failure (i.e. content update, crawl failure)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0ODkyNTQ1MSwtMTE4NTY3NTM2MCwxOT
-I3NzQ2ODUyLDIyNTgyOTc2Niw4OTM2NDI4ODMsMTE2NTg4MDk1
-Niw2NDk0NDczNzAsNjUzMzAxLDE0MDM1NTg3MjUsLTE2ODY0OD
-IxNSwtMTU2NTg2NjgxOF19
+eyJoaXN0b3J5IjpbLTM1MzU5MDI5MCwtOTQ4OTI1NDUxLC0xMT
+g1Njc1MzYwLDE5Mjc3NDY4NTIsMjI1ODI5NzY2LDg5MzY0Mjg4
+MywxMTY1ODgwOTU2LDY0OTQ0NzM3MCw2NTMzMDEsMTQwMzU1OD
+cyNSwtMTY4NjQ4MjE1LC0xNTY1ODY2ODE4XX0=
 -->
