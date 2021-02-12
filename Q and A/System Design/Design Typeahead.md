@@ -100,9 +100,13 @@ LIMIT 10
 ### Interviewer: how to reduce the size of log file
 - what is log file?
 	- log which user searched which keyword at when
+- Use a random number like (1 ~ 10k), only when random number equals 1, then we log the record into log file
+	- log file size would be reduced by 1/10k
+- Will this impact hot keyword search?
+	- No, because we don't care about exact keyword search number, we only care about relative keywor
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzI1MDM0NjIsLTE2NTMxODgxMDcsMT
-k5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0
-OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX
-0=
+eyJoaXN0b3J5IjpbLTEwNzEyNTM3NjAsLTE1NzI1MDM0NjIsLT
+E2NTMxODgxMDcsMTk5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIy
+MDgwNywtMTMzMjU0OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMj
+gsODQ4MDg4MzIwXX0=
 -->
