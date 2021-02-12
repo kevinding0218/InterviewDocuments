@@ -91,15 +91,15 @@ LIMIT 10
 	- Switch machine B with machine A
 
 ### Interviewer: what if the trie gets too large for one machine?
-- We could have multiple QueryService based on splitting on character
+- We could have multiple QueryService based on splitting on character (Sharding)
 #### How is trie stored across multiple machines?
 - We use consistent hashing to decide which machine a particular string belongs 2
 - e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad". At this time, even though other Query Service Tries also contains "ad" node, we won't store anything there
 - e.g 2: when "adi" comes, we calculate its hashing value, assuming it's 0,  then we would go to Query Service 0 to either read/write/update in the Service 0 Tries for the "adi". At this time, even though other Query Service Tries also contains "adi" node, we won't store anything there
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mzc2MzI2NDcsLTE2NTMxODgxMDcsMT
-k5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0
-OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX
-0=
+eyJoaXN0b3J5IjpbLTMwMjYxMzgzMCwtMTY1MzE4ODEwNywxOT
+k4MTYzNTA0LDI2ODgxNTE5MSwxODc3MjIwODA3LC0xMzMyNTQ5
+OTEwLC03MTM4ODc5MTMsMjEwODg4NzIyOCw4NDgwODgzMjBdfQ
+==
 -->
