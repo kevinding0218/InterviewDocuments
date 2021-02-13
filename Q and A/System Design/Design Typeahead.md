@@ -114,9 +114,12 @@ LIMIT 10
 	- suppose when we type "123", we would request 3 times already (1, 12 & 123), now if we remove 3 it comes "12", we don't need to make a new request because we already get the response earlier
 - Filter on client side with more data response at initial request
 	- suppose when we type "a", instead of just return the top 4 keywords with a, we can return keywords of other combination such as "ab", "ac", ... "az", so we can filter the result on client side when user type the next word but also request for "ab"
+
+### Stopwords
+- Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDc1ODk4ODgsLTE1NzI1MDM0NjIsLT
-E2NTMxODgxMDcsMTk5ODE2MzUwNCwyNjg4MTUxOTEsMTg3NzIy
-MDgwNywtMTMzMjU0OTkxMCwtNzEzODg3OTEzLDIxMDg4ODcyMj
-gsODQ4MDg4MzIwXX0=
+eyJoaXN0b3J5IjpbLTEyNDUxODQxMTMsLTE3MDc1ODk4ODgsLT
+E1NzI1MDM0NjIsLTE2NTMxODgxMDcsMTk5ODE2MzUwNCwyNjg4
+MTUxOTEsMTg3NzIyMDgwNywtMTMzMjU0OTkxMCwtNzEzODg3OT
+EzLDIxMDg4ODcyMjgsODQ4MDg4MzIwXX0=
 -->
