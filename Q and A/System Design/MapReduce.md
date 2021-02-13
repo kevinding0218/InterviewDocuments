@@ -22,8 +22,9 @@
 			- Machine 3 aggregate for a & b {a: 3, b: 3}
 			- Machine 4 aggregate for c & d {c: 3, d: 3}
 		- Then finally aggreagate Machine 3 & 4
-	- 
+	#### Map Reduce Steps
+	`. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ0MDg2NzY2LDE5MjkwNDUwMDIsNzMwOT
-k4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE1MDYwMTE0MTQsMTkyOTA0NTAwMiw3Mz
+A5OTgxMTZdfQ==
 -->
