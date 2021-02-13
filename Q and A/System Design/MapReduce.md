@@ -42,7 +42,8 @@
 			- Machine 4 Receive {c: {1, 1, 1}, d: {1,1,1}} and aggregate to be {c: 3, d: 3}
 		6. Step 6: Output
 			- Output {a: 3, b: 3, c: 3, d: 3}
-	- What are we going to implement?
+			- 
+#### Map & Reduce implement
 		- Map and Reduce function
 			- Map: how to split an article into words
 			- Reduce: how to aggregate words
@@ -78,7 +79,7 @@
 			```
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQwMTk1NTA1LC03NTExNTg0ODcsNTc0MT
+eyJoaXN0b3J5IjpbODUyMjEwMjc3LC03NTExNTg0ODcsNTc0MT
 IzMDYyLDU3MzE5NjE5NywxOTIwNjU0MDksMTkyOTA0NTAwMiw3
 MzA5OTgxMTZdfQ==
 -->
