@@ -102,6 +102,7 @@
 			- M3: {{ a: 1, a: 1, b: 1 }  { a: 1, b: 1, b: 1 }}
 			- M4: {{ c: 1, d: 1, d: 1 }, { c: 1, c: 1, d: 1 }}
 		- Merge Sort
+			- Works on any sorted collections
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNTM1MTQxXX0=
+eyJoaXN0b3J5IjpbLTk4MzM3MjUxXX0=
 -->
