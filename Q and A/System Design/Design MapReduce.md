@@ -119,8 +119,9 @@
 		- wolf -> (1)
 		- deer -> (1)
 		- cat (2)
-		- when we do the same search, we can just return (
+		- when we do the same search, we can just return (0, 2)
+		- Similar like when we google a word, all the result have been already prepared in inverted index
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MDA5MzQxNCwtMjQ4MzI5ODQ4LDEyMD
+eyJoaXN0b3J5IjpbMTA3NDUyNTA5MCwtMjQ4MzI5ODQ4LDEyMD
 I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
