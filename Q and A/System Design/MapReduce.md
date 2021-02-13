@@ -46,8 +46,10 @@
 		- Map and Reduce function
 			- Map: how to split an article into words
 			- Reduce: how to aggregate words
+		- Function Interface
+			- Input and output must be Key-Value 
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYwMTk0MjU1LDU3MzE5NjE5NywxOTIwNj
-U0MDksMTkyOTA0NTAwMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMTM5MjIyOTMsNTczMTk2MTk3LDE5Mj
+A2NTQwOSwxOTI5MDQ1MDAyLDczMDk5ODExNl19
 -->
