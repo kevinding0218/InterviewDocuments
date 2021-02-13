@@ -38,9 +38,9 @@
 			- Receive {a: {1, 1, 1}, b: {1,1,1}} to Machine 3 and aggregate to be {a: 3, b: 3}
 			- Receive {c: {1, 1, 1}, d: {1,1,1}} to Machine 4 and aggregate to be {c: 3, d: 3}
 		6. Step 6: Output
-			- Output
+			- Output {a: 3, b: 3, c: 3, d: 3}
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMyNzcxMTU5LDE5MjkwNDUwMDIsNzMwOT
-k4MTE2XX0=
+eyJoaXN0b3J5IjpbMTAwMDc4MzYyOSwxOTI5MDQ1MDAyLDczMD
+k5ODExNl19
 -->
