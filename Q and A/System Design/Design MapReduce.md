@@ -190,14 +190,21 @@
 	- 2: init
 	- 3: car
 - Split
-	- Machine 1 -> 0: lint
-	- Machine 2 -> 1: intl
-	- Machine 3 -> 2: init
-	- Machine 4 -> 3: car
+	- Machine 1 -> [0: lint]
+	- Machine 2 -> [1: intl]
+	- Machine 3 -> [2: init]
+	- Machine 4 -> [3: car]
 - Map
-	- 
+	- Key as sorted word, and value is original word
+	- Machine 1 -> [intl: lint]
+	- Machine 2 -> [intl: intl]
+	- Machine 3 -> [intl: init]
+	- Machine 4 -> [acr: car]
+- Reduce
+	- Machine 5 -> Acr: car
+	- Machine 6 -> [intl: lint], [intl: intl], 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI1NDgxNjkxLC0xNTUyNjcxOTA2LC0yND
-gzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1
-NDU2M119
+eyJoaXN0b3J5IjpbLTg4NzAyNDIxNSwtMTU1MjY3MTkwNiwtMj
+Q4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5
+NTQ1NjNdfQ==
 -->
