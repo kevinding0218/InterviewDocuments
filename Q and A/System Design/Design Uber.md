@@ -51,9 +51,16 @@
 	```
 	      Report Location every 4s					 Driver: Save Location
 	Car      ->						DispatchService		->					GeoService
-			<-				
+			<-											<-
+		  Return matched rider						  Rider: Find drivers nearby
+		  Request Uber
+	User	->	
+			<-
+		  Return matched driver
 	``` 
-	 Car -> 
+- What does DispatchService do?
+	- Business Logic + Data Storage
+	- 
 	
 #### Service Oriented Architectore
 
@@ -64,6 +71,6 @@
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDgzMDA5NzksMTY2NTQwNTcxNSwtMT
-g4OTgwNzUwOSw0MjE2MjAxOTMsLTIwNTY5MDAxODFdfQ==
+eyJoaXN0b3J5IjpbLTQzMTEwNDI1NywxNjY1NDA1NzE1LC0xOD
+g5ODA3NTA5LDQyMTYyMDE5MywtMjA1NjkwMDE4MV19
 -->
