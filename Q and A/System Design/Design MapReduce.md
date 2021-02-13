@@ -238,9 +238,13 @@
 ```
 
 ### Interviewer: Design a MapReduce System
-
+- Does Mapper and Reduce work at same time or Mapper first then Reduce?
+	- Reduce will be start to work after Mapper ends
+- What if Mapper or Reduce goes down in the middle of processing?
+	- Re-assign a machine
+- What if the key on Reducer beco
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMDEzODc1NCw2NzQwNjEyMywtMTU1Mj
-Y3MTkwNiwtMjQ4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUw
-MTQsLTE4Nzc5NTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbNDMwNDMyMDM4LDY3NDA2MTIzLC0xNTUyNj
+cxOTA2LC0yNDgzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAx
+NCwtMTg3Nzk1NDU2M119
 -->
