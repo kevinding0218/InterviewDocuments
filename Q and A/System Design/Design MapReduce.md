@@ -95,6 +95,7 @@
 	- Design 1: Quick/bucket sort based on key
 		- Disadvantage: these sorting algorithms are processing through memory, which is against Big Data in Map Reduce
 	- Design 2: partition and sort
+		- { a: 1, b: 1, a: 1, c: 1, d: 1, d: 1 } => {{ a: 1, b: 1, a: 1} { c: 1, d: 1, d: 1 }}
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDI0MDU2NV19
+eyJoaXN0b3J5IjpbLTIwNzk5NjM0NDddfQ==
 -->
