@@ -210,8 +210,17 @@
 		- Output: aggregate the input
 			- Machine 5 -> [acr: [car]]
 			- Machine 6 -> [intl: [lint, intl, init]]
+```
+	public class AnagramMapReduce {
+		public static class Map {
+			public void map(String key, String value, OutputCollector<String, String> output) {
+				String 
+			}
+		}
+	}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MDE4Njk4NiwtMTU1MjY3MTkwNiwtMj
+eyJoaXN0b3J5IjpbLTQyMjEzNTY3MywtMTU1MjY3MTkwNiwtMj
 Q4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5
 NTQ1NjNdfQ==
 -->
