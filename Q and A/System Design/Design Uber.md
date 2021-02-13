@@ -43,6 +43,7 @@
 	- Storage Estimation
 		- If every location need to be recorded, 200k * 86400 / 4 * 100 bytes ~ 0.5T / day
 		- if only need to recrod current location info: 200k * 100 bytes = 20M
+
 ### Service
 #### Service Oriented Architectore
 
@@ -53,6 +54,6 @@
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNDA3MDc5LDQyMTYyMDE5MywtMjA1Nj
-kwMDE4MV19
+eyJoaXN0b3J5IjpbLTE4ODk4MDc1MDksNDIxNjIwMTkzLC0yMD
+U2OTAwMTgxXX0=
 -->
