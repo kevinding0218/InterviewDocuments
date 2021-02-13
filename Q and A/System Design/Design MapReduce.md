@@ -158,13 +158,21 @@
 				int id = value.id;
 				String[] words = value.content.split(" ");
 				for (String word : words) {
-					if (!word
+					if (!word.equals("")) {
+						output.collect(word, id);
+					}
 				}
+			}
+		}
+		public static class Reduce {
+			public void reduce(String key, Iterator<Integer> values, OutputCollector<String, List<Integer>> output) {
+				List<Integer> results = new ArrayList<Integer>();
+				int previous = 
 			}
 		}
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNDM5NjMzMywtMjQ4MzI5ODQ4LDEyMD
-I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbMzIxNDk3NzI0LC0yNDgzMjk4NDgsMTIwMj
+QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
 -->
