@@ -24,14 +24,17 @@
 		- Then finally aggreagate Machine 3 & 4
 	#### Map Reduce Steps
 	- Map Reduce is a framework for implementing distributed calculation
-		1. Step 1: Input	{0: abacdd, 1: abcccdb}
-		2. Step 2: Split   M
-		3. Step 3: Map
+		1. Step 1: Input	
+			- { 0: abacdd, 1: abcccdb }
+		2. Step 2: Split   
+			- Machine 1: { 0: abacdd }, Machine 2: { 1: abcccdb }
+		3. Step 3: Map	
+			4. Machine 1: { a: 1, b: 1, a: 1, c: 1, d: 1, d: 1 }
 		4. Step 4: Transfer & Manage
 		5. Step 5: Reduce
 		6. Step 6: Output
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU3ODYwMTM2LDE5MjkwNDUwMDIsNzMwOT
-k4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE1MjIwNTk2MTksMTkyOTA0NTAwMiw3Mz
+A5OTgxMTZdfQ==
 -->
