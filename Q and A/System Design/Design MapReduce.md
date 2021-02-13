@@ -225,11 +225,19 @@
 				}
 			}
 		}
-		public static c
+		public static class Reduce {
+			public void reduce(String key, Iterator<String> values, OutputCollector<String, List<String>> output) {
+				List<String> results = new ArrayList<String>();
+				while (values.hasNext()) {
+					results.add(values.next());
+				}
+				output.collect(key, results);
+			}
+		}
 	}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcyNDYxNTExLC0xNTUyNjcxOTA2LC0yND
-gzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1
-NDU2M119
+eyJoaXN0b3J5IjpbNjc0MDYxMjMsLTE1NTI2NzE5MDYsLTI0OD
+MyOTg0OCwxMjAyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3OTU0
+NTYzXX0=
 -->
