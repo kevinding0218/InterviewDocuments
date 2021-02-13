@@ -201,10 +201,14 @@
 	- Machine 3 -> [intl: init]
 	- Machine 4 -> [acr: car]
 - Reduce
-	- Machine 5 -> Acr: car
-	- Machine 6 -> [intl: lint], [intl: intl], 
+	- Input: sorted words of starts with "a" goes to one machine, "i" goes to another machine
+		- Machine 5 -> [Acr: car]
+		- Machine 6 -> [intl: lint], [intl: intl], [intl: init]
+	- Output: aggregate the input
+		- Machine 5 -> [acr: [car]]
+		- Machine 6 -> [in]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NzAyNDIxNSwtMTU1MjY3MTkwNiwtMj
+eyJoaXN0b3J5IjpbMTcxOTg2MTg1OCwtMTU1MjY3MTkwNiwtMj
 Q4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5
 NTQ1NjNdfQ==
 -->
