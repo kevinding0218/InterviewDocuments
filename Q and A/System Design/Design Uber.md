@@ -53,7 +53,7 @@
 	```
 	      Report Location every 4s					 Driver: Save Location
 	Car      ->						DispatchService		->					GeoService
-			<-											<-
+			<-						  (Trip Table)		<-					(Location Table)
 		  Return matched rider						  Rider: Find drivers nearby
 		  Request Uber
 	User	->	
@@ -73,6 +73,6 @@
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDYzMjE5NiwxNjY1NDA1NzE1LC0xOD
+eyJoaXN0b3J5IjpbMTE0ODExOTU1MiwxNjY1NDA1NzE1LC0xOD
 g5ODA3NTA5LDQyMTYyMDE5MywtMjA1NjkwMDE4MV19
 -->
