@@ -152,9 +152,19 @@
 				- Machine 4: [Bear: 0, 2], [Car: 1, 2]
 				- Machine 5: [Deer: 0, 2], [River: 0, 1]
 	```
-	public 
+	public class InvertedIndex {
+		public static class Map {
+			public void map(String key, Document value, OutputCollector<String, Integer> output) {
+				int id = value.id;
+				String[] words = value.content.split(" ");
+				for (String word : words) {
+					if (!word
+				}
+			}
+		}
+	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcwMjUzMTc4LC0yNDgzMjk4NDgsMTIwMj
-QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
+eyJoaXN0b3J5IjpbLTQyNDM5NjMzMywtMjQ4MzI5ODQ4LDEyMD
+I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
