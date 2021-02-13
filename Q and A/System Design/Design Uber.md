@@ -28,11 +28,14 @@
 	- Rider cancel a request
 	- Driver pick up a rider / start a trip
 	- Driver drop off a rider / end a trip
-- 3rd Stage
+- 3rd Stage (no need bonus)
 	- Uber Pool
 	- Uber Eat
 #### QPS/Storage
-
+- Assuming 200k driver online at same time
+	- Driver QPS = 200k / 4 = 50k
+		- Driver report locations by every 4 seconds
+	- Peak Driver QPS = 50k * 3 = 150k
 ### Service
 #### Service Oriented Architectore
 
@@ -43,6 +46,6 @@
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA4NjYzNzEsNDIxNjIwMTkzLC0yMDU2OT
-AwMTgxXX0=
+eyJoaXN0b3J5IjpbLTEwMzcyODcxMzEsNDIxNjIwMTkzLC0yMD
+U2OTAwMTgxXX0=
 -->
