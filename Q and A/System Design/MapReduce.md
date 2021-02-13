@@ -42,8 +42,9 @@
 			- Machine 4 Receive {c: {1, 1, 1}, d: {1,1,1}} and aggregate to be {c: 3, d: 3}
 		6. Step 6: Output
 			- Output {a: 3, b: 3, c: 3, d: 3}
-	
+	- What are we going to implement?
+		- Map and Reduce function
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5ODY3MzcwNiw1NzMxOTYxOTcsMTkyMD
+eyJoaXN0b3J5IjpbLTczODM0NDc5Niw1NzMxOTYxOTcsMTkyMD
 Y1NDA5LDE5MjkwNDUwMDIsNzMwOTk4MTE2XX0=
 -->
