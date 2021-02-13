@@ -79,10 +79,15 @@
 	- lat					fk
 	- lng				fk		
 	- updated_at	timestamp	store the last updated time to see if driver is offline
+#### How to query current location
+- Such query will be too slow and complex
+```
+SELECT * FROM LOCATION WHERE lat < 
+```
 ### Scale
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MTAxMDY5NiwxNjY1NDA1NzE1LC0xOD
+eyJoaXN0b3J5IjpbLTk5MzY2ODE4MSwxNjY1NDA1NzE1LC0xOD
 g5ODA3NTA5LDQyMTYyMDE5MywtMjA1NjkwMDE4MV19
 -->
