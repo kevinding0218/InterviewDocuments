@@ -55,10 +55,19 @@
 				- Key: key of Map Function output - word content
 				- Value: value of Map Function output - word occurrence number
 			```
-			
+		public class WordCount{
+			public static class Map {
+				public void map(String key, String value, OutputCollector<String, Integer> output) {
+					String[] tokens = value.split(" ");
+					for (String word : tokens) {
+						output.collect(word, 1);
+					}
+				}
+			}
+		}
 			```
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDkyNzc3NTIsNTczMTk2MTk3LDE5Mj
-A2NTQwOSwxOTI5MDQ1MDAyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTQ0NjI3NzIyMyw1NzMxOTYxOTcsMTkyMD
+Y1NDA5LDE5MjkwNDUwMDIsNzMwOTk4MTE2XX0=
 -->
