@@ -27,7 +27,7 @@
 		1. Step 1: Input	
 			- { 0: abacdd, 1: abcccdb }
 		2. Step 2: Split   
-			- Machine 1: { 0: abacdd }, Machine 2: { 1: abcccdb }
+			- Split line by line and send request to Machine 1: { 0: abacdd }, Machine 2: { 1: abcccdb }
 		3. Step 3: Map	
 			- Machine 1: { a: 1, b: 1, a: 1, c: 1, d: 1, d: 1 }
 			- Machine 2: { a: 1, b: 1, b: 1, c: 1, c: 1, d: 1 }
@@ -44,6 +44,6 @@
 			- Output {a: 3, b: 3, c: 3, d: 3}
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzk1MzU1MTYsNTczMTk2MTk3LDE5Mj
-A2NTQwOSwxOTI5MDQ1MDAyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTc5ODY3MzcwNiw1NzMxOTYxOTcsMTkyMD
+Y1NDA5LDE5MjkwNDUwMDIsNzMwOTk4MTE2XX0=
 -->
