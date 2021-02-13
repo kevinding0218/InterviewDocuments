@@ -242,9 +242,16 @@
 	- Reduce will be start to work after Mapper ends
 - What if Mapper or Reduce goes down in the middle of processing?
 	- Re-assign a machine
-- What if the key on Reducer beco
+- What if the key on Reducer become too large?
+	- Add a random suffix like Sharding Key
+- Where are Input and Output stored?
+	- GFS
+- Do we need to store Mapper output data in GFS?
+	- No, if we lost then redo
+- Can Mapper and Reducer placed in one machine
+	- Not good, as both Mapper and Reducer has some pre-work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMwNDMyMDM4LDY3NDA2MTIzLC0xNTUyNj
-cxOTA2LC0yNDgzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAx
-NCwtMTg3Nzk1NDU2M119
+eyJoaXN0b3J5IjpbMTAwMDkyNTUyMyw2NzQwNjEyMywtMTU1Mj
+Y3MTkwNiwtMjQ4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUw
+MTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
