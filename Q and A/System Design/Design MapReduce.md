@@ -176,11 +176,12 @@
 					}
 					previous = now;
 				}
+				output.collect(key, value);
 			}
 		}
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEwNDU1NTExLC0yNDgzMjk4NDgsMTIwMj
-QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
+eyJoaXN0b3J5IjpbLTE1NTI2NzE5MDYsLTI0ODMyOTg0OCwxMj
+AyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3OTU0NTYzXX0=
 -->
