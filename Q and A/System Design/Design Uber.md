@@ -62,17 +62,16 @@
 	``` 
 - What does DispatchService do?
 	- Business Logic + Data Storage
-	- 
-	
 #### Service Oriented Architectore
 
 ### Storage
 #### Schema
-
+- Trip Table
+	- id	(pk)
 ### Scale
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0ODExOTU1MiwxNjY1NDA1NzE1LC0xOD
-g5ODA3NTA5LDQyMTYyMDE5MywtMjA1NjkwMDE4MV19
+eyJoaXN0b3J5IjpbLTE2NTIwODA5NDksMTY2NTQwNTcxNSwtMT
+g4OTgwNzUwOSw0MjE2MjAxOTMsLTIwNTY5MDAxODFdfQ==
 -->
