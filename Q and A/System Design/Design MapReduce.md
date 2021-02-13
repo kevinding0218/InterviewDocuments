@@ -183,8 +183,9 @@
 	```
 ### Apple: Anagram - Map Reduce
 - Given ["lint", "intl", "init", "code"], return ["lint", "init", "intl"], ["code"]
+- Given ["ab", "ba", "cd", "dc", "e"], return ["ab", "ba"], ["cd", "dc"], [
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDkzMzE2MTMsLTE1NTI2NzE5MDYsLT
-I0ODMyOTg0OCwxMjAyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3
-OTU0NTYzXX0=
+eyJoaXN0b3J5IjpbMTM0NDI3NzM5LC0xNTUyNjcxOTA2LC0yND
+gzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1
+NDU2M119
 -->
