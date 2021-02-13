@@ -88,8 +88,8 @@
 	- No, the limitation of Key/Word would be the limitation of reduce machine sizes
 
 #### Transfer & Manage
-- After transfer & manage, words are sorted and classified
-	- 
+- After transfer & manage, words are sorted and partitioned
+	- Why sorted? while doing reduce, we can easily treat all same words at one time, no need to create additional hashmap to store
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMTUwMDcyNF19
+eyJoaXN0b3J5IjpbLTE5MzQyNzI0NjRdfQ==
 -->
