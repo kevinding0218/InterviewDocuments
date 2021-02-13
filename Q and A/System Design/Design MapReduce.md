@@ -167,12 +167,19 @@
 		public static class Reduce {
 			public void reduce(String key, Iterator<Integer> values, OutputCollector<String, List<Integer>> output) {
 				List<Integer> results = new ArrayList<Integer>();
-				int previous = 
+				int previous = -1;
+				while (values.hasNext()) {
+					int now = values.next();
+					if (previous != now) {
+						results.add(now);
+					}
+					previous = now;
+				}
 			}
 		}
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIxNDk3NzI0LC0yNDgzMjk4NDgsMTIwMj
-QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
+eyJoaXN0b3J5IjpbLTExMDQwMjgxMjMsLTI0ODMyOTg0OCwxMj
+AyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3OTU0NTYzXX0=
 -->
