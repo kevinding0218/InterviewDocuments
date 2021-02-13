@@ -14,7 +14,9 @@
 
 #### Google S2
 - an algorithm for geo location query and storage
+- we would focus on this design
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5ODY4OTU3MCwtMjA1NjkwMDE4MV19
+eyJoaXN0b3J5IjpbNDIxNjIwMTkzLC0yMDU2OTAwMTgxXX0=
 -->
