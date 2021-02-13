@@ -196,19 +196,22 @@
 	- Machine 4 -> [3: car]
 - Map
 	- Key as sorted word, and value is original word
-	- Machine 1 -> [intl: lint]
-	- Machine 2 -> [intl: intl]
-	- Machine 3 -> [intl: init]
-	- Machine 4 -> [acr: car]
+		- Machine 1 -> [intl: lint]
+		- Machine 2 -> [intl: intl]
+		- Machine 3 -> [intl: init]
+		- Machine 4 -> [acr: car]
 - Reduce
-	- Input: sorted words of starts with "a" goes to one machine, "i" goes to another machine
-		- Machine 5 -> [Acr: car]
-		- Machine 6 -> [intl: lint], [intl: intl], [intl: init]
-	- Output: aggregate the input
-		- Machine 5 -> [acr: [car]]
-		- Machine 6 -> [intl: [lint, intl, init]]
+	- Input: 
+		- sorted words of starts with "a" goes to one machine, "i" goes to another machine
+		- key: sorted word
+		- value = {anagram}
+			- Machine 5 -> [Acr: car]
+			- Machine 6 -> [intl: lint], [intl: intl], [intl: init]
+		- Output: aggregate the input
+			- Machine 5 -> [acr: [car]]
+			- Machine 6 -> [intl: [lint, intl, init]]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIxMjY4NzQ2LC0xNTUyNjcxOTA2LC0yND
-gzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1
-NDU2M119
+eyJoaXN0b3J5IjpbMTY0MDE4Njk4NiwtMTU1MjY3MTkwNiwtMj
+Q4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5
+NTQ1NjNdfQ==
 -->
