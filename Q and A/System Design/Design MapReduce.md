@@ -105,7 +105,8 @@
 			- Works on any sorted collections
 			- Merge K sorted list/array => Leetcode In Memory
 			- Merge K sorted list/array => On Harddisk [External Sorting](https://en.wikipedia.org/wiki/External_sorting)
+				- Paritially sort element in smaller memory, then do a merge k sort
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ
-==
+eyJoaXN0b3J5IjpbMTIwMjQxMTQ3NCwtMTM2ODQxNTAxNCwtMT
+g3Nzk1NDU2M119
 -->
