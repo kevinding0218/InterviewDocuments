@@ -184,8 +184,14 @@
 ### Apple: Anagram - Map Reduce
 - Given ["lint", "intl", "init", "code"], return ["lint", "init", "intl"], ["code"]
 - Given ["ab", "ba", "cd", "dc", "e"], return ["ab", "ba"], ["cd", "dc"], ["e"]
+- Input 
+	- 0: lint
+	- 1: intl
+	- 2: init
+	- 3: car
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY2MjExMzMxLC0xNTUyNjcxOTA2LC0yND
-gzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1
-NDU2M119
+eyJoaXN0b3J5IjpbLTE5OTY2NzM5NTMsLTE1NTI2NzE5MDYsLT
+I0ODMyOTg0OCwxMjAyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3
+OTU0NTYzXX0=
 -->
