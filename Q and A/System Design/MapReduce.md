@@ -47,9 +47,15 @@
 			- Map: how to split an article into words
 			- Reduce: how to aggregate words
 		- Function Interface
-			- Input and output must be Key-Value 
+			- Input and output must be Key-Value pair
+			- Map Function Input
+				- Key: article storage address
+				- Value: article content
+			- Reduce Function Input
+				- Key: key of Map Function output
+				- Value: value of Map Function output
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTM5MjIyOTMsNTczMTk2MTk3LDE5Mj
-A2NTQwOSwxOTI5MDQ1MDAyLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTQ0MjkyNTY2NSw1NzMxOTYxOTcsMTkyMD
+Y1NDA5LDE5MjkwNDUwMDIsNzMwOTk4MTE2XX0=
 -->
