@@ -145,11 +145,16 @@
 		- Map:
 			- the input of Map is the output of Split
 			- the Map will manage which word sent to which server machine of Reduce
-			- Machine 4(Reduce - B & C): [Bear, 0], [Bear: 2] + [Car: 1], [Car: 2]
-			- Machine 5(Reduce - D & R): [Deer: 0], [Deer: 2] + [River, 0], [River, 1]
-		- 
-			- 
+				- Machine 4(Reduce - B & C): [Bear, 0], [Bear: 2] + [Car: 1], [Car: 2]
+				- Machine 5(Reduce - D & R): [Deer: 0], [Deer: 2] + [River, 0], [River, 1]
+		- Reduce
+			- Aggregate the input from Map output
+				- Machine 4: [Bear: 0, 2], [Car: 1, 2]
+				- Machine 5: [Deer: 0, 2], [River: 0, 1]
+	```
+	public 
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MjcwNDExNywtMjQ4MzI5ODQ4LDEyMD
-I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbNjcwMjUzMTc4LC0yNDgzMjk4NDgsMTIwMj
+QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
 -->
