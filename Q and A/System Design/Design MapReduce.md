@@ -127,8 +127,10 @@
 		- 2: Deer Car Bear
 	- Output
 		- Bear: 0, 2
-		- Car: 
+		- Car: 1, 2
+		- Deer: 0, 2
+		- River: 0, 1
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Njk1MzI0MDYsLTI0ODMyOTg0OCwxMj
-AyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3OTU0NTYzXX0=
+eyJoaXN0b3J5IjpbMTAyNzcyNDU4MCwtMjQ4MzI5ODQ4LDEyMD
+I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
