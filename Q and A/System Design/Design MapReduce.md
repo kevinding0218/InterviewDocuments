@@ -108,8 +108,12 @@
 				- Paritially sort element in smaller memory, then do a merge k sort
 	
 	### Apple: Build inverted index with MapReduce
-	
+	- 正排索引
+		- 0 -> harry potter (car, river)
+		- 1 -> one piece (deer, wolf)
+		- 2 -> red hat (cat, car)
+		- when we try to find which 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0ODMyOTg0OCwxMjAyNDExNDc0LC0xMz
-Y4NDE1MDE0LC0xODc3OTU0NTYzXX0=
+eyJoaXN0b3J5IjpbLTg4OTY1ODIyNiwtMjQ4MzI5ODQ4LDEyMD
+I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
