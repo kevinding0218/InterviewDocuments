@@ -141,8 +141,12 @@
 			- value: int index
 				- Machine 1: [Deer: 0], [Bear, 0], [River, 0]
 				- Machine 2: [Car: 1], [River: 1]
-				- Machine 3: [Deer: 2], [Car: 2], [Be]
+				- Machine 3: [Deer: 2], [Car: 2], [Bear: 2]
+		- Map:
+			- the input of Map is the output of Split
+			- the Map will manage which word sent to which server machine of Reduce
+			- Machine 4(Reduce): 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MDAzMjk3MCwtMjQ4MzI5ODQ4LDEyMD
-I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbLTE0ODU4NzcxOTgsLTI0ODMyOTg0OCwxMj
+AyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3OTU0NTYzXX0=
 -->
