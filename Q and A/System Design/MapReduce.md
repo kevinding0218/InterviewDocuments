@@ -23,8 +23,15 @@
 			- Machine 4 aggregate for c & d {c: 3, d: 3}
 		- Then finally aggreagate Machine 3 & 4
 	#### Map Reduce Steps
-	`. 
+	- Map Reduce is a framework for implementing distributed calculation
+		1. Step 1: Input
+		2. Step 2: Split
+		3. Step 3: Map
+		4. Step 4: Transfer & Manage
+		5. Step 5: Reduce
+		6. Step 6: Output
+	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDYwMTE0MTQsMTkyOTA0NTAwMiw3Mz
-A5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTc5MjgyMDcwNywxOTI5MDQ1MDAyLDczMD
+k5ODExNl19
 -->
