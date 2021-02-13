@@ -103,8 +103,8 @@
 			- M4: {{ c: 1, d: 1, d: 1 }, { c: 1, c: 1, d: 1 }}
 		- Merge Sort
 			- Works on any sorted collections
-			- Merge K sorted list/array => Leetcode In memory
+			- Merge K sorted list/array => Leetcode In Memory
 			- Merge K sorted list/array => On Harddisk
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQ5MDQ5MzFdfQ==
+eyJoaXN0b3J5IjpbLTE4Nzc5NTQ1NjNdfQ==
 -->
