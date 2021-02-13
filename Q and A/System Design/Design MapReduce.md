@@ -104,7 +104,7 @@
 		- Merge Sort
 			- Works on any sorted collections
 			- Merge K sorted list/array => Leetcode In Memory
-			- Merge K sorted list/array => On Harddisk External Sorting
+			- Merge K sorted list/array => On Harddisk External Sorting (
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDE1MTAzMiwtMTg3Nzk1NDU2M119
+eyJoaXN0b3J5IjpbLTM0MjY5NTY4LC0xODc3OTU0NTYzXX0=
 -->
