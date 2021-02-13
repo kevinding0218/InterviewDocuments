@@ -106,7 +106,10 @@
 			- Merge K sorted list/array => Leetcode In Memory
 			- Merge K sorted list/array => On Harddisk [External Sorting](https://en.wikipedia.org/wiki/External_sorting)
 				- Paritially sort element in smaller memory, then do a merge k sort
+	
+	### Apple: Build inverted index with MapReduce
+	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMjQxMTQ3NCwtMTM2ODQxNTAxNCwtMT
-g3Nzk1NDU2M119
+eyJoaXN0b3J5IjpbLTI0ODMyOTg0OCwxMjAyNDExNDc0LC0xMz
+Y4NDE1MDE0LC0xODc3OTU0NTYzXX0=
 -->
