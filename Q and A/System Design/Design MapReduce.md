@@ -240,12 +240,14 @@
 ### Interviewer: Design a MapReduce System
 - Input Data: Input File (GFS)
 	- disk/memory/gfs?
+- User System: Start Worker
+	- 
 - Master
 - Output Data: (GFS)
 	- Output File 0
 	- Output File 1
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjgzNDU0MTcsNjc0MDYxMjMsLTE1NT
+eyJoaXN0b3J5IjpbLTE1OTUwNjYxOTksNjc0MDYxMjMsLTE1NT
 I2NzE5MDYsLTI0ODMyOTg0OCwxMjAyNDExNDc0LC0xMzY4NDE1
 MDE0LC0xODc3OTU0NTYzXX0=
 -->
