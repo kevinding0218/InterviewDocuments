@@ -67,11 +67,16 @@
 ### Storage
 #### Schema
 - Trip Table
-	- id	(pk)
+	- id					pk
+	- rider_id			fk			User Id
+	- driver_id		fk			User Id
+	- lat				    float	Latitude
+	- lng				float	Longitude
+	- status			int		NewRequest/WaitingForDriver/O
 ### Scale
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MTcxNDAyMSwxNjY1NDA1NzE1LC0xOD
+eyJoaXN0b3J5IjpbLTU2OTIzNjg4NSwxNjY1NDA1NzE1LC0xOD
 g5ODA3NTA5LDQyMTYyMDE5MywtMjA1NjkwMDE4MV19
 -->
