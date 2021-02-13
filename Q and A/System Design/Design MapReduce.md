@@ -103,6 +103,7 @@
 			- M4: {{ c: 1, d: 1, d: 1 }, { c: 1, c: 1, d: 1 }}
 		- Merge Sort
 			- Works on any sorted collections
+			- Merge K sorted list/array
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MzM3MjUxXX0=
+eyJoaXN0b3J5IjpbLTE1NzAwNzYxMDZdfQ==
 -->
