@@ -19,9 +19,18 @@
 ### Scenario
 #### Feature
 - MVP (minimum value product), what minimum featured need can make out this product
-- First Stage
+- 1st Stage
 	- Driver report locations
-	- Rider request Uber, match a driver wi
+	- Rider request Uber, match a driver with rider
+- 2nd Stage
+	- Driver deny / accept a request
+	- Driver cancel a matched request
+	- Rider cancel a request
+	- Driver pick up a rider / start a trip
+	- Driver drop off a rider / end a trip
+- 3rd Stage
+	- Uber Pool
+	- Uber Eat
 #### QPS/Storage
 
 ### Service
@@ -34,6 +43,6 @@
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MzMwOTQzMyw0MjE2MjAxOTMsLTIwNT
-Y5MDAxODFdfQ==
+eyJoaXN0b3J5IjpbNDA4NjYzNzEsNDIxNjIwMTkzLC0yMDU2OT
+AwMTgxXX0=
 -->
