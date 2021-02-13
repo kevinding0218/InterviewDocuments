@@ -35,8 +35,8 @@
 				- Memeory limitation for HashMap because of processing big data
 				- No need to wait all words be calculated then transfer, we can transfer as long as "a" appears
 		4. Step 4: Transfer & Manage via Master machine
-			- Having a Master Machine to decidedSend a & b data to Machine 3
-			- Send c & d data to Machine 4
+			- Decide to send a & b data to Machine 3
+			- Decide to send c & d data to Machine 4
 		5. Step 5: Reduce
 			- Machine 3 Receive {a: {1, 1, 1}, b: {1,1,1}} and aggregate to be {a: 3, b: 3}
 			- Machine 4 Receive {c: {1, 1, 1}, d: {1,1,1}} and aggregate to be {c: 3, d: 3}
@@ -78,7 +78,7 @@
 			```
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NzM4ODAyOSw1NzQxMjMwNjIsNTczMT
+eyJoaXN0b3J5IjpbLTc1MTE1ODQ4Nyw1NzQxMjMwNjIsNTczMT
 k2MTk3LDE5MjA2NTQwOSwxOTI5MDQ1MDAyLDczMDk5ODExNl19
 
 -->
