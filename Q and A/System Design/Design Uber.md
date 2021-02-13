@@ -72,11 +72,17 @@
 	- driver_id		fk			User Id
 	- lat				    float	Latitude
 	- lng				float	Longitude
-	- status			int		NewRequest/WaitingForDriver/O
+	- status			int		NewRequest/WaitingForDriver/OMWPickup/InTrip/Cancelled/Ended
+	- create_at		timestamp
+- Location Table
+	- driver_id		fk
+	- lat					fk
+	- lng				fk		
+	- updated_at	timestamp	store the last updated time to see if driver is offline
 ### Scale
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2OTIzNjg4NSwxNjY1NDA1NzE1LC0xOD
+eyJoaXN0b3J5IjpbLTk2MTAxMDY5NiwxNjY1NDA1NzE1LC0xOD
 g5ODA3NTA5LDQyMTYyMDE5MywtMjA1NjkwMDE4MV19
 -->
