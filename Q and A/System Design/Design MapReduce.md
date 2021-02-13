@@ -121,7 +121,14 @@
 		- cat (2)
 		- when we do the same search, we can just return (0, 2)
 		- Similar like when we google a word, that it shows N result. As all the result have been already prepared in inverted index
+	- Input
+		- 0: Deer Bear River
+		- 1: Car River
+		- 2: Deer Car Bear
+	- Output
+		- Bear: 0, 2
+		- Car: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE2NDE0NjMzLC0yNDgzMjk4NDgsMTIwMj
-QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
+eyJoaXN0b3J5IjpbLTE4Njk1MzI0MDYsLTI0ODMyOTg0OCwxMj
+AyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3OTU0NTYzXX0=
 -->
