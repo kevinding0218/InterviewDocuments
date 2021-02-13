@@ -89,10 +89,14 @@ WHERE lat < myLat + delta
 	AND lng < myLng + delta
 	AND lng > myLng - delta
 ```
+- Google S2
+	- Map a location of latitude and longitude as a 2^64 Integer
+	- So if there is two location closed to each other, their mapped value should be closed as well
+	- e.
 ### Scale
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk2MDQ2ODIyLDE2NjU0MDU3MTUsLTE4OD
-k4MDc1MDksNDIxNjIwMTkzLC0yMDU2OTAwMTgxXX0=
+eyJoaXN0b3J5IjpbLTExMzg5OTA4NzMsMTY2NTQwNTcxNSwtMT
+g4OTgwNzUwOSw0MjE2MjAxOTMsLTIwNTY5MDAxODFdfQ==
 -->
