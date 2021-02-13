@@ -236,8 +236,11 @@
 		}
 	}
 ```
+
+### Interviewer: Design a MapReduce System
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc0MDYxMjMsLTE1NTI2NzE5MDYsLTI0OD
-MyOTg0OCwxMjAyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3OTU0
-NTYzXX0=
+eyJoaXN0b3J5IjpbLTkwMDEzODc1NCw2NzQwNjEyMywtMTU1Mj
+Y3MTkwNiwtMjQ4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUw
+MTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
