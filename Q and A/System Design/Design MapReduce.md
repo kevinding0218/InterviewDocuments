@@ -154,7 +154,7 @@
 	```
 	public class InvertedIndex {
 		public static class Map {
-			public void map(String key, Document value, OutputCollector<String, Integer> output) {
+			public void map(String key /*content address*/, Document value, OutputCollector<String, Integer> output) {
 				int id = value.id;
 				String[] words = value.content.split(" ");
 				for (String word : words) {
@@ -180,6 +180,6 @@
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDQwMjgxMjMsLTI0ODMyOTg0OCwxMj
-AyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3OTU0NTYzXX0=
+eyJoaXN0b3J5IjpbMTQwNjg2MzY0NCwtMjQ4MzI5ODQ4LDEyMD
+I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
