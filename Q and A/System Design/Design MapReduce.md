@@ -189,9 +189,15 @@
 	- 1: intl
 	- 2: init
 	- 3: car
-- 
+- Split
+	- Machine 1 -> 0: lint
+	- Machine 2 -> 1: intl
+	- Machine 3 -> 2: init
+	- Machine 4 -> 3: car
+- Map
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTY2NzM5NTMsLTE1NTI2NzE5MDYsLT
-I0ODMyOTg0OCwxMjAyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3
-OTU0NTYzXX0=
+eyJoaXN0b3J5IjpbMzI1NDgxNjkxLC0xNTUyNjcxOTA2LC0yND
+gzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1
+NDU2M119
 -->
