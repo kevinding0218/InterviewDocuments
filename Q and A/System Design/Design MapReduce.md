@@ -90,6 +90,8 @@
 #### Transfer & Manage
 - After transfer & manage, words are sorted and partitioned
 	- Why sorted? while doing reduce, we can easily treat all same words at one time, no need to create additional hashmap to store
+- Design the sorting
+	- e.g: request looks like { a: 1, b: 1, a: 1, c: 1, d: 1, d: 1 } & { a: 1, b: 1, b: 1, c: 1, c: 1, d: 1 }
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzQyNzI0NjRdfQ==
+eyJoaXN0b3J5IjpbMjcwOTQ5MDYzXX0=
 -->
