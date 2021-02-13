@@ -81,9 +81,12 @@
 #### Interviewer Question
 1. Q1: How many machine does Map or Reduce need?
 	- 1000 map & 1000 reduce for 10 PB data
-2. 
+2. Q2: More machine the better?
+	- Advantage: More machine, the data processing at each machine would be less and total time could be less
+	- Disadvantage: Starting time could be longer
+3. Q3: If starting time is not into consideration, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM0NTQzMzY5LC03NTExNTg0ODcsNTc0MT
-IzMDYyLDU3MzE5NjE5NywxOTIwNjU0MDksMTkyOTA0NTAwMiw3
-MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTM5MDI0NTA0NywtNzUxMTU4NDg3LDU3ND
+EyMzA2Miw1NzMxOTYxOTcsMTkyMDY1NDA5LDE5MjkwNDUwMDIs
+NzMwOTk4MTE2XX0=
 -->
