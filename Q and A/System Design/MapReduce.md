@@ -29,12 +29,14 @@
 		2. Step 2: Split   
 			- Machine 1: { 0: abacdd }, Machine 2: { 1: abcccdb }
 		3. Step 3: Map	
-			4. Machine 1: { a: 1, b: 1, a: 1, c: 1, d: 1, d: 1 }
+			- Machine 1: { a: 1, b: 1, a: 1, c: 1, d: 1, d: 1 }
+			- Machine 2: { a: 1, b: 1, b: 1, c: 1, c: 1, d: 1 }
 		4. Step 4: Transfer & Manage
+			- Send {a: {1, 1, 1} b} to Machine 3
 		5. Step 5: Reduce
 		6. Step 6: Output
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjIwNTk2MTksMTkyOTA0NTAwMiw3Mz
-A5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMzQ2MTc1MjI5LDE5MjkwNDUwMDIsNzMwOT
+k4MTE2XX0=
 -->
