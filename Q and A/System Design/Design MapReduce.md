@@ -181,7 +181,10 @@
 		}
 	}
 	```
+### Apple: Anagram - Map Reduce
+- Given ["lint", "intl", "init", "code"], return ["lint", "init", "intl"], ["code"]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTI2NzE5MDYsLTI0ODMyOTg0OCwxMj
-AyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3OTU0NTYzXX0=
+eyJoaXN0b3J5IjpbLTIwMDkzMzE2MTMsLTE1NTI2NzE5MDYsLT
+I0ODMyOTg0OCwxMjAyNDExNDc0LC0xMzY4NDE1MDE0LC0xODc3
+OTU0NTYzXX0=
 -->
