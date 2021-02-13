@@ -35,12 +35,12 @@
 			- Send a & b data to Machine 3
 			- Send c & d data to Machine 4
 		5. Step 5: Reduce
-			- Receive {a: {1, 1, 1}, b: {1,1,1}} to Machine 3 and aggregate to be {a: 3, b: 3}
-			- Receive {c: {1, 1, 1}, d: {1,1,1}} to Machine 4 and aggregate to be {c: 3, d: 3}
+			- Machine 3 Receive {a: {1, 1, 1}, b: {1,1,1}} and aggregate to be {a: 3, b: 3}
+			- Machine 4 Receive {c: {1, 1, 1}, d: {1,1,1}} and aggregate to be {c: 3, d: 3}
 		6. Step 6: Output
 			- Output {a: 3, b: 3, c: 3, d: 3}
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMDc4MzYyOSwxOTI5MDQ1MDAyLDczMD
-k5ODExNl19
+eyJoaXN0b3J5IjpbMTkyMDY1NDA5LDE5MjkwNDUwMDIsNzMwOT
+k4MTE2XX0=
 -->
