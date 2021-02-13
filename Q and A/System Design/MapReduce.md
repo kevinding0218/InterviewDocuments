@@ -54,31 +54,31 @@
 			- Reduce Function Input
 				- Key: key of Map Function output - word content
 				- Value: value of Map Function output - word occurrence number
-			```
-		public class WordCount{
-			public static class Map {
-				public void map(String key, String value, OutputCollector<String, Integer> output) {
-					String[] tokens = value.split(" ");
-					for (String word : tokens) {
-						output.collect(word, 1);
+		```
+				public class WordCount{
+					public static class Map {
+						public void map(String key, String value, OutputCollector<String, Integer> output) {
+							String[] tokens = value.split(" ");
+							for (String word : tokens) {
+								output.collect(word, 1);
+							}
+						}
+					}
+					public static class Reduce {
+						public void reduce(String key, Iterator<Integer> values, 
+							OutputCollection<String, Integer> output) {
+							int sum = 0;
+							while(values.hasNext()) {
+								sum += values.next();
+							}
+							output.collect(key, sum);
+						}
 					}
 				}
-			}
-			public static class Reduce {
-				public void reduce(String key, Iterator<Integer> values, 
-					OutputCollection<String, Integer> output) {
-					int sum = 0;
-					while(values.hasNext()) {
-						sum += values.next();
-					}
-					output.collect(key, sum);
-				}
-			}
-		}
 			```
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MTE1ODQ4Nyw1NzQxMjMwNjIsNTczMT
-k2MTk3LDE5MjA2NTQwOSwxOTI5MDQ1MDAyLDczMDk5ODExNl19
-
+eyJoaXN0b3J5IjpbODQwMTk1NTA1LC03NTExNTg0ODcsNTc0MT
+IzMDYyLDU3MzE5NjE5NywxOTIwNjU0MDksMTkyOTA0NTAwMiw3
+MzA5OTgxMTZdfQ==
 -->
