@@ -64,10 +64,20 @@
 					}
 				}
 			}
+			public static class Reduce {
+				public void reduce(String key, Iterator<Integer> values, 
+					OutputCollection<String, Integer> output) {
+					int sum = 0;
+					while(values.hasNext()) {
+						sum += values.next();
+					}
+					output.collect(key, sum);
+				}
+			}
 		}
 			```
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NjI3NzIyMyw1NzMxOTYxOTcsMTkyMD
-Y1NDA5LDE5MjkwNDUwMDIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNTc0MTIzMDYyLDU3MzE5NjE5NywxOTIwNj
+U0MDksMTkyOTA0NTAwMiw3MzA5OTgxMTZdfQ==
 -->
