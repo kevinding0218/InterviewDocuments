@@ -45,6 +45,10 @@
 		- if only need to recrod current location info: 200k * 100 bytes = 20M
 
 ### Service
+- Basically Uber app does 2 things
+	- record current car's location (GeoService)
+	- dispatch riding request (DispatchService)
+	- Car -> Report Location (every 4s) -> Geo Service -> Dispatch Service -> Request 
 #### Service Oriented Architectore
 
 ### Storage
@@ -54,6 +58,6 @@
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODk4MDc1MDksNDIxNjIwMTkzLC0yMD
-U2OTAwMTgxXX0=
+eyJoaXN0b3J5IjpbLTE5MjkzNzgyNTYsLTE4ODk4MDc1MDksND
+IxNjIwMTkzLC0yMDU2OTAwMTgxXX0=
 -->
