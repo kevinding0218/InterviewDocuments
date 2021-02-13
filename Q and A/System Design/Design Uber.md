@@ -49,7 +49,7 @@
 	- record current car's location (GeoService)
 	- dispatch riding request (DispatchService)
 	- How would driver get Rider request
-		- in the mean time of report location, server can also return matched uber request
+		- in the mean time of report location, server can also return matched rider request
 	```
 	      Report Location every 4s					 Driver: Save Location
 	Car      ->						DispatchService		->					GeoService
@@ -73,6 +73,6 @@
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NzgxMjk0NCwxNjY1NDA1NzE1LC0xOD
+eyJoaXN0b3J5IjpbMTM0MDYzMjE5NiwxNjY1NDA1NzE1LC0xOD
 g5ODA3NTA5LDQyMTYyMDE5MywtMjA1NjkwMDE4MV19
 -->
