@@ -154,7 +154,7 @@
 	```
 	public class InvertedIndex {
 		public static class Map {
-			public void map(String key /*content address*/, Document value, OutputCollector<String, Integer> output) {
+			public void map(String key /*file address*/, Document value, OutputCollector<String, Integer> output) {
 				int id = value.id;
 				String[] words = value.content.split(" ");
 				for (String word : words) {
@@ -170,6 +170,7 @@
 				int previous = -1;
 				while (values.hasNext()) {
 					int now = values.next();
+					// remove duplication
 					if (previous != now) {
 						results.add(now);
 					}
@@ -180,6 +181,6 @@
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNjg2MzY0NCwtMjQ4MzI5ODQ4LDEyMD
-I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbNzEwNDU1NTExLC0yNDgzMjk4NDgsMTIwMj
+QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
 -->
