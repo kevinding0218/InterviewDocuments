@@ -244,6 +244,7 @@
 	- Re-assign a machine
 - What if the key on Reducer become too large?
 	- Add a random suffix like Sharding Key
+	- e.g 
 - Where are Input and Output stored?
 	- GFS
 - Do we need to store Mapper output data in GFS?
@@ -251,7 +252,7 @@
 - Can Mapper and Reducer placed in one machine
 	- Not good, as both Mapper and Reducer has some pre-work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMDkyNTUyMyw2NzQwNjEyMywtMTU1Mj
+eyJoaXN0b3J5IjpbLTQ2OTIzNzM1OCw2NzQwNjEyMywtMTU1Mj
 Y3MTkwNiwtMjQ4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUw
 MTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
