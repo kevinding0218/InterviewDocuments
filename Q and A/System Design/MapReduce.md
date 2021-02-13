@@ -34,8 +34,8 @@
 			- Why not use HashMap to store like { a: 2, b: 1, c:1 }
 				- Memeory limitation for HashMap because of processing big data
 				- No need to wait all words be calculated then transfer, we can transfer as long as "a" appears
-		4. Step 4: Transfer & Manage
-			- Send a & b data to Machine 3
+		4. Step 4: Transfer & Manage via Master machine
+			- Having a Master Machine to decidedSend a & b data to Machine 3
 			- Send c & d data to Machine 4
 		5. Step 5: Reduce
 			- Machine 3 Receive {a: {1, 1, 1}, b: {1,1,1}} and aggregate to be {a: 3, b: 3}
@@ -78,6 +78,7 @@
 			```
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc0MTIzMDYyLDU3MzE5NjE5NywxOTIwNj
-U0MDksMTkyOTA0NTAwMiw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTY3NzM4ODAyOSw1NzQxMjMwNjIsNTczMT
+k2MTk3LDE5MjA2NTQwOSwxOTI5MDQ1MDAyLDczMDk5ODExNl19
+
 -->
