@@ -18,11 +18,19 @@
 
 ### Scenario
 #### Feature
+- MVP (minumum value product
 #### QPS/Storage
 
 ### Service
-#### S
+#### Service Oriented Architectore
+
+### Storage
+#### Schema
+
+### Scale
+#### Robust
+#### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ1NTQ0MDMzLDQyMTYyMDE5MywtMjA1Nj
-kwMDE4MV19
+eyJoaXN0b3J5IjpbMTgzMTI5ODE3MSw0MjE2MjAxOTMsLTIwNT
+Y5MDAxODFdfQ==
 -->
