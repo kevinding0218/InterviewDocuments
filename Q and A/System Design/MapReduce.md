@@ -44,7 +44,10 @@
 			- Output {a: 3, b: 3, c: 3, d: 3}
 	- What are we going to implement?
 		- Map and Reduce function
+			- Map: how to split an article into words
+			- Reduce: how to aggregate words
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczODM0NDc5Niw1NzMxOTYxOTcsMTkyMD
-Y1NDA5LDE5MjkwNDUwMDIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMzYwMTk0MjU1LDU3MzE5NjE5NywxOTIwNj
+U0MDksMTkyOTA0NTAwMiw3MzA5OTgxMTZdfQ==
 -->
