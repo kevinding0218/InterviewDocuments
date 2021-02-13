@@ -44,17 +44,17 @@
 			- Output {a: 3, b: 3, c: 3, d: 3}
 			- 
 #### Map & Reduce implement
-		- Map and Reduce function
-			- Map: how to split an article into words
-			- Reduce: how to aggregate words
-		- Function Interface
-			- Input and output must be Key-Value pair
-			- Map Function Input
-				- Key: article storage address
-				- Value: article content
-			- Reduce Function Input
-				- Key: key of Map Function output - word content
-				- Value: value of Map Function output - word occurrence number
+- Map and Reduce function
+	- Map: how to split an article into words
+	- Reduce: how to aggregate words
+- Function Interface
+	- Input and output must be Key-Value pair
+	- Map Function Input
+		- Key: article storage address
+		- Value: article content
+	- Reduce Function Input
+		- Key: key of Map Function output - word content
+		- Value: value of Map Function output - word occurrence number
 		```
 				public class WordCount{
 					public static class Map {
@@ -77,9 +77,13 @@
 					}
 				}
 			```
-		- 
+		
+#### Interviewer Question
+1. Q1: How many machine does Map or Reduce need?
+	- 1000 map & 1000 reduce for 10 PB data
+2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUyMjEwMjc3LC03NTExNTg0ODcsNTc0MT
+eyJoaXN0b3J5IjpbNDM0NTQzMzY5LC03NTExNTg0ODcsNTc0MT
 IzMDYyLDU3MzE5NjE5NywxOTIwNjU0MDksMTkyOTA0NTAwMiw3
 MzA5OTgxMTZdfQ==
 -->
