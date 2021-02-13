@@ -93,7 +93,8 @@
 - Design the sorting
 	- e.g: request looks like { a: 1, b: 1, a: 1 } & { a: 1, b: 1, b: 1 }, how to sorted as { a: {1, 1, 1} , b: {1, 1, 1} }
 	- Design 1: Quick/bucket sort based on key
-		- 
+		- Disadvantage: these sorting algorithms are processing through memory, which is against Big Data in Map Reduce
+	- Design 2: partition and sort
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjczNTEwNjNdfQ==
+eyJoaXN0b3J5IjpbLTE1MDI0MDU2NV19
 -->
