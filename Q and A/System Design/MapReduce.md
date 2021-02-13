@@ -52,10 +52,13 @@
 				- Key: article storage address
 				- Value: article content
 			- Reduce Function Input
-				- Key: key of Map Function output
-				- Value: value of Map Function output
+				- Key: key of Map Function output - word content
+				- Value: value of Map Function output - word occurrence number
+			```
+			
+			```
 		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MjkyNTY2NSw1NzMxOTYxOTcsMTkyMD
-Y1NDA5LDE5MjkwNDUwMDIsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEwNDkyNzc3NTIsNTczMTk2MTk3LDE5Mj
+A2NTQwOSwxOTI5MDQ1MDAyLDczMDk5ODExNl19
 -->
