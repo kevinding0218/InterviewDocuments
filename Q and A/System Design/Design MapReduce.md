@@ -112,8 +112,15 @@
 		- 0 -> harry potter (car, river)
 		- 1 -> one piece (deer, wolf)
 		- 2 -> red hat (cat, car)
-		- when we try to find which 
+		- when we try to find which book contains word "car", we would first go to harry potter, do a for loop through all its word and filter that out
+	- inverted index
+		- car -> (0, 2)
+		- river -> (0)
+		- wolf -> (1)
+		- deer -> (1)
+		- cat (2)
+		- when we do the same search, we can just return (
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4OTY1ODIyNiwtMjQ4MzI5ODQ4LDEyMD
+eyJoaXN0b3J5IjpbMTc5MDA5MzQxNCwtMjQ4MzI5ODQ4LDEyMD
 I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
