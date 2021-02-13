@@ -238,9 +238,14 @@
 ```
 
 ### Interviewer: Design a MapReduce System
-
+- Input Data: Input File (GFS)
+	- disk/memory/gfs?
+- Master
+- Output Data: (GFS)
+	- Output File 0
+	- Output File 1
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMDEzODc1NCw2NzQwNjEyMywtMTU1Mj
-Y3MTkwNiwtMjQ4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUw
-MTQsLTE4Nzc5NTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbLTExMjgzNDU0MTcsNjc0MDYxMjMsLTE1NT
+I2NzE5MDYsLTI0ODMyOTg0OCwxMjAyNDExNDc0LC0xMzY4NDE1
+MDE0LC0xODc3OTU0NTYzXX0=
 -->
