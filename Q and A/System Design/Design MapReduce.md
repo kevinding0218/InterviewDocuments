@@ -96,11 +96,12 @@
 		- Disadvantage: these sorting algorithms are processing through memory, which is against Big Data in Map Reduce
 	- Design 2: 
 		- partition and sort, e.g:
-			- { a: 1, b: 1, a: 1, c: 1, d: 1, d: 1 } => { { a: 1, a: 1, b: 1} { c: 1, d: 1, d: 1 } }
-			- { a: 1, b: 1, b: 1, c: 1, c: 1, d: 1 } => { { a: 1, b: 1, b: 1} { c: 1, c: 1, d: 1 } }
+			- { a: 1, b: 1, a: 1, c: 1, d: 1, d: 1 } => { { a: 1, a: 1, b: 1 } { c: 1, d: 1, d: 1 } }
+			- { a: 1, b: 1, b: 1, c: 1, c: 1, d: 1 } => { { a: 1, b: 1, b: 1 } { c: 1, c: 1, d: 1 } }
 		- Fetch
-			- 
+			- M3: {{ a: 1, a: 1, b: 1 }  { a: 1, b: 1, b: 1 }}
+			- M4: {{ c: 1, d: 1, d: 1 }, { c: 1, c: 1, d: 1 }}
 		- Merge Sort
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NzY1OTkzXX0=
+eyJoaXN0b3J5IjpbLTYyNTM1MTQxXX0=
 -->
