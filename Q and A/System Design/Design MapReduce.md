@@ -130,7 +130,8 @@
 		- Car: 1, 2
 		- Deer: 0, 2
 		- River: 0, 1
+	- From 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNzcyNDU4MCwtMjQ4MzI5ODQ4LDEyMD
-I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbNjg4ODI5OTExLC0yNDgzMjk4NDgsMTIwMj
+QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
 -->
