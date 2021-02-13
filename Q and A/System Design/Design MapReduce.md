@@ -91,7 +91,9 @@
 - After transfer & manage, words are sorted and partitioned
 	- Why sorted? while doing reduce, we can easily treat all same words at one time, no need to create additional hashmap to store
 - Design the sorting
-	- e.g: request looks like { a: 1, b: 1, a: 1, c: 1, d: 1, d: 1 } & { a: 1, b: 1, b: 1, c: 1, c: 1, d: 1 }
+	- e.g: request looks like { a: 1, b: 1, a: 1 } & { a: 1, b: 1, b: 1 }, how to sorted as { a: {1, 1, 1} , b: {1, 1, 1} }
+	- Design 1: Quick/bucket sort based on key
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcwOTQ5MDYzXX0=
+eyJoaXN0b3J5IjpbLTIxMjczNTEwNjNdfQ==
 -->
