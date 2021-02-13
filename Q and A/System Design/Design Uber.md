@@ -48,7 +48,13 @@
 - Basically Uber app does 2 things
 	- record current car's location (GeoService)
 	- dispatch riding request (DispatchService)
-	- Car -> Report Location (every 4s) -> Geo Service -> Dispatch Service -> Driver Info/Request Uber -> User
+	```
+	      Report Location every 4s					 Driver: Save Location
+	Car      ->						DispatchService		->					GeoService
+			<-				
+	``` 
+	 Car -> 
+	
 #### Service Oriented Architectore
 
 ### Storage
@@ -58,6 +64,6 @@
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NTQwNTcxNSwtMTg4OTgwNzUwOSw0Mj
-E2MjAxOTMsLTIwNTY5MDAxODFdfQ==
+eyJoaXN0b3J5IjpbLTEzNDgzMDA5NzksMTY2NTQwNTcxNSwtMT
+g4OTgwNzUwOSw0MjE2MjAxOTMsLTIwNTY5MDAxODFdfQ==
 -->
