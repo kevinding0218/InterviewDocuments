@@ -244,7 +244,8 @@
 	- Re-assign a machine
 - What if the key on Reducer become too large?
 	- Add a random suffix like Sharding Key
-	- e.g 
+	- e.g if facebook is a large key, we can reassign to be facebook_random(10)
+	- so that facebook don't need to go to a single machine but can be splitted again into multiple machines
 - Where are Input and Output stored?
 	- GFS
 - Do we need to store Mapper output data in GFS?
@@ -252,7 +253,7 @@
 - Can Mapper and Reducer placed in one machine
 	- Not good, as both Mapper and Reducer has some pre-work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2OTIzNzM1OCw2NzQwNjEyMywtMTU1Mj
-Y3MTkwNiwtMjQ4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUw
-MTQsLTE4Nzc5NTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbNjYzMjY5MDU1LDY3NDA2MTIzLC0xNTUyNj
+cxOTA2LC0yNDgzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAx
+NCwtMTg3Nzk1NDU2M119
 -->
