@@ -36,12 +36,13 @@
 	- Driver QPS = 200k / 4 = 50k
 		- Driver report locations by every 4 seconds
 	- Peak Driver QPS = 50k * 3 = 150k
+	- !!! 150K is not a small QPS, must find a write fast storage
 	- Rider QPS can be ignored
 		- No need to report at any time
 		- Must be far less than Driver QPS
 	- Storage Estimation
 		- If every location need to be recorded, 200k * 86400 / 4 * 100 bytes ~ 0.5T / day
-		- if only need 
+		- if only need to recrod current location info: 200k * 100 bytes = 20M
 ### Service
 #### Service Oriented Architectore
 
@@ -52,6 +53,6 @@
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk0MzkxNjcxLDQyMTYyMDE5MywtMjA1Nj
+eyJoaXN0b3J5IjpbLTcwNDA3MDc5LDQyMTYyMDE5MywtMjA1Nj
 kwMDE4MV19
 -->
