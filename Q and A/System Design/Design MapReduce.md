@@ -130,8 +130,12 @@
 		- Car: 1, 2
 		- Deer: 0, 2
 		- River: 0, 1
-	- From 
+	- From input to output in MapReduce, we need to go through same steps as Input, Split, Map, Reduce, Output
+	- Split: we can split the input into 3 different machine
+		- the input of Split can be each entry of the Input, such as
+			- Machine 1: 0: Deer Bear River
+			- Machin
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg4ODI5OTExLC0yNDgzMjk4NDgsMTIwMj
+eyJoaXN0b3J5IjpbNzQwMDkzMjc1LC0yNDgzMjk4NDgsMTIwMj
 QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
 -->
