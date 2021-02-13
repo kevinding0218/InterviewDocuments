@@ -134,8 +134,15 @@
 	- Split: we can split the input into 3 different machine
 		- the input of Split can be each entry of the Input, such as
 			- Machine 1: 0: Deer Bear River
-			- Machin
+			- Machine 2: 1: Car River
+			- Machine 3: 2: Deer Car Bear
+		- the output of Split will be a key-value pair
+			- key: String word
+			- value: int index
+				- Machine 1: [Deer: 0], [Bear, 0], [River, 0]
+				- Machine 2: [Car: 1], [River: 1]
+				- Machine 3: [Deer: 2], [Car: 2], [Be]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQwMDkzMjc1LC0yNDgzMjk4NDgsMTIwMj
-QxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1NDU2M119
+eyJoaXN0b3J5IjpbLTI5MDAzMjk3MCwtMjQ4MzI5ODQ4LDEyMD
+I0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5NTQ1NjNdfQ==
 -->
