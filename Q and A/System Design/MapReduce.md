@@ -85,9 +85,9 @@
 	- Advantage: More machine, the data processing at each machine would be less and total time could be less
 	- Disadvantage: Starting time could be longer
 3. Q3: If starting time is not into consideration, would more machine for Reduce the better?
-	- No, the limitation of Key would be the limitation of reduce machine sizes
+	- No, the limitation of Key/Word would be the limitation of reduce machine sizes
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE4OTM5NzkxLC03NTExNTg0ODcsNTc0MT
-IzMDYyLDU3MzE5NjE5NywxOTIwNjU0MDksMTkyOTA0NTAwMiw3
-MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTEwOTI5MjUzOCwtNzUxMTU4NDg3LDU3ND
+EyMzA2Miw1NzMxOTYxOTcsMTkyMDY1NDA5LDE5MjkwNDUwMDIs
+NzMwOTk4MTE2XX0=
 -->
