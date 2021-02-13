@@ -214,13 +214,22 @@
 	public class AnagramMapReduce {
 		public static class Map {
 			public void map(String key, String value, OutputCollector<String, String> output) {
-				String 
+				StringTokenizer tokenizer = new StringTokenizer(value);
+				while (tokenizer.hasMoreTokens()){
+					String word = tokenizer.nextToken();
+					String orginal = word;
+					char[] chars = orginal.toCharArray();
+					Arrays.sort(chars);
+					String sorted = new String(char);
+					output.collect(sorted, word);
+				}
 			}
 		}
+		public static c
 	}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMjEzNTY3MywtMTU1MjY3MTkwNiwtMj
-Q4MzI5ODQ4LDEyMDI0MTE0NzQsLTEzNjg0MTUwMTQsLTE4Nzc5
-NTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbMzcyNDYxNTExLC0xNTUyNjcxOTA2LC0yND
+gzMjk4NDgsMTIwMjQxMTQ3NCwtMTM2ODQxNTAxNCwtMTg3Nzk1
+NDU2M119
 -->
