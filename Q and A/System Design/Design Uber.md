@@ -92,11 +92,13 @@ WHERE lat < myLat + delta
 - Google S2
 	- Map a location of latitude and longitude as a 2^64 Integer
 	- So if there is two location closed to each other, their mapped value should be closed as well
-	- e.
+	- e.g (-30.4, -51) => 10748121851329123
+- Geohash
+	- 
 ### Scale
 #### Robust
 #### Feature
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzg5OTA4NzMsMTY2NTQwNTcxNSwtMT
+eyJoaXN0b3J5IjpbLTE0NjQ2MDc4ODQsMTY2NTQwNTcxNSwtMT
 g4OTgwNzUwOSw0MjE2MjAxOTMsLTIwNTY5MDAxODFdfQ==
 -->
