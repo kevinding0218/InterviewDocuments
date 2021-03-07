@@ -35,6 +35,7 @@
 		- if asked to minimize development cost, we should be leaning towards well-regarded open-source frameworks
 	- Should the design minimize the cost of maintenance?
 		- if future maintenance cost is a primary concern, we should consider publich cloud services
+- The end goal of requirements clarification discussion is to get us closer to defining both FUNCTIONAL and NON-FUNCTIONAL requirements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODg0NzY5MzgsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTEwNzIwMzM4NjMsNDY0NjM5NDgzXX0=
 -->
