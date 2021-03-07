@@ -8,7 +8,7 @@
 
 ### What questions we must think or ask
 - Taken example of "Count of videos" design
-- Users/Customers
+- Users/Customers : help us understand what data we store in the system
 	- Who will use the system?
 		- is this all Youtube viewers who will see the total views count for a video?
 		- is this a per-hour statistics available to a video owners only
@@ -17,10 +17,12 @@
 		- data may be used by marketing department only to generate some monthly reports,
 			- meaning data is retrieved not often
 		- data is sent to recommendation service in real-time
-			- meaning data ma
-- Scale (read and write)
+			- meaning data may be retrieved from the system with a very high pace
+		- questions in this category 
+- Scale (read and write): give us a clue how much data is coming to the system
+	- 
 - Performance
 - Cost: budget constraint
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkzNzM0MjZdfQ==
+eyJoaXN0b3J5IjpbNzI1NjQ2NTIzXX0=
 -->
