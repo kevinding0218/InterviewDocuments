@@ -180,8 +180,10 @@
 		```
 		- This setup helps us address several requirements we mentioned before, like scalability and performance. But availability is not yet addressed.
 - What if database shard died? How to make sure data is not getting lost?
-	- We need replicate data. Lets call each existed shard a master shard 
+	- We need replicate data. Lets call each existed shard a master shard or a leader shard.
+	- For every master shard we introduce a copy of it, called read replica or a follower. We call it read replica because writes still go through a master shard, but reads may go through both master shard and a replica.
+	- W
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NTAyNDE0MCwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbMTU2NjczODY5NiwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
