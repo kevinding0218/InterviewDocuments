@@ -43,7 +43,9 @@
 - After figureing out what the system should do, you write it down on the whiteboard in a few sentences, e.g
 	- The system has to count video view events
 		- count view events is the actual action the system performs and video becomes the input
+		``countViewEvent(videoId)``
+		- if we want the system to calculate not just views, but a broader set of events, let's say likes and shares, we may generalize our API a bit and introduce `eventType parameter, this parameter 
 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5ODIzMTIsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTEyMzczODY4MjQsNDY0NjM5NDgzXX0=
 -->
