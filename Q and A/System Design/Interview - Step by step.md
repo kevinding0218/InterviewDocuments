@@ -279,9 +279,12 @@
 		- Document: MongoDB, uses leader-based replication.
 		- Key-value
 		- Graph
+### Data Process
+#### Define Process in our example
+- Process basically means we
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYzMzY1MzMxLC02NTkxMjg5NzQsLTczMD
-gwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEs
-MTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2ND
-YzOTQ4M119
+eyJoaXN0b3J5IjpbMjA4Njg4MDE1MiwtNjU5MTI4OTc0LC03Mz
+A4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQx
+LDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0Nj
+Q2Mzk0ODNdfQ==
 -->
