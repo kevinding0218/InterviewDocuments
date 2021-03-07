@@ -62,9 +62,9 @@
 		``getStats(videoId, eventType, function, startTime, endTime) where function can be delegate to count/sum/average``
 
 ### Non-Functional APIs
-- Usually interviewers will not tell us specific non-function requirements, most 
+- Usually interviewers will not tell us specific non-function requirements, most likely will challenge use with mentioning big scale and high performance, and we will need to find trade offs.
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODA3OTQyNzgsLTEzNDYzMzc4OTQsND
-Y0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTczMjQ0OTgzMiwtMTM0NjMzNzg5NCw0Nj
+Q2Mzk0ODNdfQ==
 -->
