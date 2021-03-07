@@ -45,7 +45,7 @@
 		- count view events is the actual action the system performs and `videoId` becomes the input
 		``countViewEvent(videoId)``
 		- if we want the system to calculate not just views, but a broader set of events, let's say `likes` and `share`, we may generalize our API a bit and introduce `eventType` parameter, this parameter indicates type of the event we process
-		``countViewEvent(videoId, eventType) where eventType is enum of view/like/share``
+		``countEvent(videoId, eventType) where eventType is enum of view/like/share``
 		- we can go one step further and make the system calculate not only count function, but other functions as well, like sum and average. 
 			- By supporting sum function we can calculate such metric as "total watch time" for a video
 			- By supporting avg function, we can calculate average view duration
@@ -56,8 +56,11 @@
 	- The system has to return video views count for a time period
 		- GetViewsCount becomes an action, while videoId, start and end time become input parameters.
 		``getViewsCount(videoId, startTime, endTime)``
-		- if we want to retrieve count not only for video views, but for likes and dislikes, we 
+		- if we want to retrieve count not only for video views, but for likes and dislikes, we can introduce `eventType` parameter
+		``getCount(videoId, eventType, startTime, endTime) where eventType is enum of view/like/dislike/share``
+		- if we want our API return not just count statistics, but also for sum and average
+		
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MzY2NTg1Niw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbMjQ0NjA1NTUxLDQ2NDYzOTQ4M119
 -->
