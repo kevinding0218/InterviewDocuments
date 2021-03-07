@@ -114,9 +114,12 @@
 			 - it may cost a lot of money to store all the raw events, costly for a large scale (many events), Youtube generates billions of views every day so raw events storage must be huge.
 		 - Aggregate events Pros
 			 - **Fast read**: we do not need to calculate each indivudal event, we just retrieve total count value.
-			 - Decision making in real-time
+			 - Decision making in real-time, for exmaple, we may send the total count value to a recommendation service or trending service for popular videos to be promoted to trends.
+		 - Aggregate events Cons
+			 - We can only query data the way it was aggregated, ability to filter data or aggregate it differently is very limited.
+			 - Also require
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MjMzMzAxNSwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbLTg1NDQyOTI3OSwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
