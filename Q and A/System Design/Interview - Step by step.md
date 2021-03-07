@@ -185,16 +185,17 @@
 	- We also put some replicates to a data center different from their master shard, so that if the whole data center goes down, we still have a copy of data available.
 		```	
 													Master/Lead Shard				Read/Follower Shard
-					 	  	Config Service		Shard Proxy + MySQL-I (A-M) 	Shard Proxy + MySQL-I (A-M)
-		Processing Service		  |
-							\ 	  |
+					 	  	  Config Service	Shard Proxy + MySQL-I (A-M) -->	Shard Proxy + MySQL-I (A-M)
+		Processing Service		     |		 /	
+							\store 	 |		/
 							  ClusterProxy
-							/						Master/Lead Shard				Read/Follower Shard
-		Query Service							Shard Proxy + MySQL-II(N-Z)     Shard Proxy + MySQL-II(N-Z)
+							/retrieve				Master/Lead Shard				Read/Follower Shard
+		Query Service	 /					Shard Proxy + MySQL-II(N-Z)     Shard Proxy + MySQL-II(N-Z)
 													Data Center A					Data Center B
 		```
-	- So when store data request comes, based on the information provided by Configuration service, cluster proxy sends data to a shard. And data is either synchronously or asynchrono
+	- When store data request comes, based on the information provided by Configuration service, cluster proxy sends data to a shard. And data is either synchronously or asynchronously replicated to a corresponding read replica.
+	- When retrieve data request comes, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5OTg4MDkxOCwtMTU5MDkxNTQ3MCwtMT
-M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTE1Mjc0MjU5NjQsLTE1OTA5MTU0NzAsLT
+EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
