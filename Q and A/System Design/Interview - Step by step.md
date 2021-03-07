@@ -123,8 +123,10 @@
 		 - we need interviewer to help us make a decision, we should ask interviewer about expected data delay, time between when event happened and when it was processed.
 			 - If it should be no more than several minutes, we must aggregate data on the fly, this is called batch data.
 			 - if several hours is ok, then we can store raw events and process them in the background, this is known as stream data processing.
+		 - we can also combine both approaches which makes a lot of sense for many systems out there.
+			 - we will store raw events, and because there are so many of the, we will store events for several da
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI4NDMyNzk0LC0xNTkwOTE1NDcwLC0xMz
+eyJoaXN0b3J5IjpbMjc2NjA5Mzg0LC0xNTkwOTE1NDcwLC0xMz
 Q2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
