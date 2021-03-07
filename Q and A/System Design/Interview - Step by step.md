@@ -60,7 +60,8 @@
 		``getCount(videoId, eventType, startTime, endTime) where eventType is enum of view/like/dislike/share``
 		- if we want our API return not just count statistics, but also for sum and average, we should specify function as a parameter and rename our API in a more generic way, like `getStats`
 		``getStats(videoId, eventType, function, startTime, endTime) where function can be delegate to count/sum/average``
+- Technique help you identifiy name of APIs, input parameters
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MzYxMDI0Nyw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
