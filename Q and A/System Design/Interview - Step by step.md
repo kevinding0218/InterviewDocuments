@@ -281,10 +281,11 @@
 		- Graph
 ### Data Process
 #### Define Process in our example
-- Process basically means we
+- Process basically means we get a video view event and increment several counters, total and per hour counters.
+- Where to start? Start with requirement we wrote on the whiteboard, we want the processing service to scale together with increase in video views.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4Njg4MDE1MiwtNjU5MTI4OTc0LC03Mz
-A4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQx
-LDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0Nj
-Q2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNz
+MwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0
+MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsND
+Y0NjM5NDgzXX0=
 -->
