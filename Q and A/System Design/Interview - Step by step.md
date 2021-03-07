@@ -169,8 +169,16 @@
 							/
 		Query Service							MySQL-II(N-Z)
 		```
+	- Shard Proxy
 		- And Instead of calling database instance directly, we can introduce one more proxy - `Shard Proxy`, that sits in front of database. `Shard Proxy` will help us in many different ways: it can cache query results, monitor database instance health and publish metrics, terminate queries that take too long to return data and many more.
+```
+			 	  	Config Service		Shard Proxy + MySQL-I (A-M)
+Processing Service		  |
+					\ ClusterProxy
+					/
+Query Service							Shard Proxy + MySQL-II(N-Z)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4OTAyMTQxMiwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbMTQ3MTM5OTQ1OSwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
