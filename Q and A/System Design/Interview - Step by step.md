@@ -64,11 +64,11 @@
 ### Non-Functional APIs
 - Usually interviewers will not tell us specific non-function requirements, most likely will challenge use with mentioning big scale and high performance, and we will need to find trade offs.
 - Focus on scalability, performance and availability as top priority requirements, e.g
-- Scalable (tens of thousands of video viewer per second)
-	- we need to design such should handle tens of thousands of requests per second
-	- 
+	- Scalable: we need to design such should handle tens of thousands of requests per second
+	- Highly Performant: we want view count statistic to be returned in a matter of few tends of milliseconds.
+	- Highly Available: we want statistics to be shown to users all the time, s
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyODUxOTAzOSwtMTM0NjMzNzg5NCw0Nj
+eyJoaXN0b3J5IjpbMTY5NTgyNjY3MSwtMTM0NjMzNzg5NCw0Nj
 Q2Mzk0ODNdfQ==
 -->
