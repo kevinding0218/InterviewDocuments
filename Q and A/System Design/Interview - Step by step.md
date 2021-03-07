@@ -77,8 +77,8 @@
 	- we will have a web service that processing incoming video view events and stores data in the database - "Processing Service"
 	- we will have another web service that to retrieve view counts from the database - "Query Service"
 ``User -> Browser -> Processing Service -> Database -> Query Service -> Browser -> User``
-- Interviewers may start asking questions about any component we outlined in the high-level architecture.
+- Interviewers may start asking questions about any component we outlined in the high-level architecture, but we may not feel comfortable discussing any component just yet, we need to start with something simple and construct the puzzle/frame with the outside pieces.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI3NjQ2NDQyLC0xMzQ2MzM3ODk0LDQ2ND
-YzOTQ4M119
+eyJoaXN0b3J5IjpbMTA4NDY2NzQ0OSwtMTM0NjMzNzg5NCw0Nj
+Q2Mzk0ODNdfQ==
 -->
