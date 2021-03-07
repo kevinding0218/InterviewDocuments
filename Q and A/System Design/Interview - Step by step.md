@@ -180,10 +180,10 @@
 	Query Service							Shard Proxy + MySQL-II(N-Z)
 	```
 - This setup helps us address several requirements we mentioned before, like scalability and performance. But availability is not yet addressed.
-##### Add Replica Master/Read (Lead/Follower) 
+##### Add Replica Lead/Follower (Master/Read) 
 - What if database shard died? How to make sure data is not getting lost?
-- We need replicate data. Lets call each existed shard a master shard or a leader shard.
-- For every master shard we introduce a copy of it, called read replica or a follower. We call it read replica because writes still go through a master shard, but reads may go through both master shard and a replica.
+- We need replicate data. Lets call each existed shard a leader shard or a master shard.
+- For every master shard we introduce a copy of it, called follower replica or a read replica. We call it follower replica because writes still go through a leader shard, but reads may go through both leader shard and a follower replica.
 ##### Add Data Center
 - We also put some replicates to a data center different from their master shard, so that if the whole data center goes down, we still have a copy of data available.
 	```	
@@ -204,7 +204,7 @@
 - In NoSQL world, we split data into chunks, shards, also known as nodes, but instead of having leaders and followers, we saythat each shard is equal
 ``Node1(A-F) Node2(G-L) Node3(M-R) Node4(S-Z)``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUxMzcwMTIyLDE0MTkxODY2MzEsNzEwMD
+eyJoaXN0b3J5IjpbMTAyMDM5MDE2LDE0MTkxODY2MzEsNzEwMD
 U5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAs
 LTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
