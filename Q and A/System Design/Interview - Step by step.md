@@ -120,9 +120,11 @@
 			 - Also requires us to implement data aggregation pipeline, we need to somehow pre-aggregate data in memory before storing it in the database, this is not an easy task and later you will see why.
 			 - Important: It's hard to even impossible to fix errors. Let's say we introduced a bug in the aggregation logic. Then how do we fix total counts after the bug was fixed?
 	 - Which approatch to choose?
-		 - we need interviewer to help us make a decision.
+		 - we need interviewer to help us make a decision, we should ask interviewer about expected data delay, time between when event happened and when it was processed.
+			 - If it should be no more than several minutes, we must aggregate data on the fly, this is known 
+			 - if several hours is ok, then we can store raw events and process them in the background.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzUyMTIzMzAsLTE1OTA5MTU0NzAsLT
-EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbNDk4MTAzMzc0LC0xNTkwOTE1NDcwLC0xMz
+Q2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
