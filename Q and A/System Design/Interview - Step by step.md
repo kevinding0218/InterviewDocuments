@@ -36,13 +36,14 @@
 	- Should the design minimize the cost of maintenance?
 		- if future maintenance cost is a primary concern, we should consider publich cloud services
 - The end goal of requirements clarification discussion is to get us closer to defining both FUNCTIONAL and NON-FUNCTIONAL requirements
+	- Functional requirements, we mean system behavior, or more specifically APIs, a set of operations the system will support, basically how system will do
+	- Non-functional requirements, we mean system qualities, such as fast, fault-tolerant, secure, basically how system is supposed to be
 
 ### Functional Requirements - API
-- Functional requirements, we mean system behavior, or more specifically APIs, a set of operations the system will support, basically how system will do
 - After figureing out what the system should do, you write it down on the whiteboard in a few sentences, e.g
 	- The system has to count video view events
-	- 
-	- Non-functional requirements, we mean system qualities, such as fast, fault-tolerant, secure, basically how system is supposed to be
+		- count view events is the actual action the system performs and video becomes the input
+	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDIxMzk1MzEsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMTI5ODIzMTIsNDY0NjM5NDgzXX0=
 -->
