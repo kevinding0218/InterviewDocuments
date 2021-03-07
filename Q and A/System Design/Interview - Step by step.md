@@ -19,9 +19,13 @@
 			- meaning data may be retrieved from the system with a very high pace
 		- questions in this category 
 - Scale (read and write): give us a clue how much data is coming to the system and how much data is retrieved from the system
-	- How many read queries per second the system needs to proce
-- Performance
+	- How many read queries per second the system needs to process?
+	- How much data is queried per request?
+	- How many video views are processed per second?
+	- Can there be spikes in traffic and how big they may be?
+- Performance: help us quickly evaluate different design options
+	- What is expected write-to
 - Cost: budget constraint
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MDI3NjM4XX0=
+eyJoaXN0b3J5IjpbLTQ3OTMzMjU0NF19
 -->
