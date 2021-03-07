@@ -201,10 +201,11 @@
 ##### Cons
 - This solution doesn't seems simple, we have all these proxies, configuration service, leader and follower replica instances, maybe we can use NoSQL to simplify things a little bit.
 #### NoSQL
-- In NoSQL world, we split data into chunks, shards, also known as nodes, but instead of having leaders and followers, we saythat each shard is equal, we no longer need configuration service to monitor health of each shard.
+- In NoSQL world, we split data into chunks, shards, also known as nodes
+- Instead of having leaders and followers, we saythat each shard is equal, we no longer need configuration service to monitor health of each shard. Instead, let's allow shards talk to each other and exchange information about their state.
 ``Node1(A-F) Node2(G-L) Node3(M-R) Node4(S-Z)``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwOTgyNDc1NiwxNDE5MTg2NjMxLDcxMD
-A1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcw
-LC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbNDA4MTk3NzIzLDE0MTkxODY2MzEsNzEwMD
+U5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAs
+LTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
