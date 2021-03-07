@@ -264,9 +264,10 @@
 - To generate report mentioned above, we run a JOIN query that retrieves data from all three tables
 - Import property of a relational database: data is normalized
 	- it simply means we minimize data duplication across different tables
-	- e.g, we store video names in the video info table only
+	- e.g, we store video names in the video info table only, and we don't store video name in other tables, otherwise because if some video name changes, we have to change it in several places which may leads to inconsistent data.
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzk0NDAxNzEsLTY1OTEyODk3NCwtNz
+eyJoaXN0b3J5IjpbLTEwODMzODM3ODgsLTY1OTEyODk3NCwtNz
 MwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0
 MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsND
 Y0NjM5NDgzXX0=
