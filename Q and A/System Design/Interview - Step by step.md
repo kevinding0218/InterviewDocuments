@@ -258,10 +258,16 @@
 		- timestamp
 		- count
 	- channel_info
-		- channel_i
+		- channel_id
+		- name
+		- ...
+- To generate report mentioned above, we run a JOIN query that retrieves data from all three tables
+- Import property of a relational database: data is normalized
+	- it simply means we minimize data duplication across different tables
+	- e.g, we store video names in the video info table only
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgzODQ2NTA4LC02NTkxMjg5NzQsLTczMD
-gwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEs
-MTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2ND
-YzOTQ4M119
+eyJoaXN0b3J5IjpbLTE0Mzk0NDAxNzEsLTY1OTEyODk3NCwtNz
+MwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0
+MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsND
+Y0NjM5NDgzXX0=
 -->
