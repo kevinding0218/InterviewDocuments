@@ -182,8 +182,17 @@
 - What if database shard died? How to make sure data is not getting lost?
 	- We need replicate data. Lets call each existed shard a master shard or a leader shard.
 	- For every master shard we introduce a copy of it, called read replica or a follower. We call it read replica because writes still go through a master shard, but reads may go through both master shard and a replica.
-	- W
+	- We also put some replicates to a data center different from their master shard, so that if the whole data center goes down, we still have a copy of data available.
+```	
+											Master/Lead Shard
+			 	  	Config Service		Shard Proxy + MySQL-I (A-M) 
+Processing Service		  |
+					\ ClusterProxy
+					/
+					/
+Query Service							Shard Proxy + MySQL-II(N-Z)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NjczODY5NiwtMTU5MDkxNTQ3MCwtMT
-M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbMjM4NDYxNTg0LC0xNTkwOTE1NDcwLC0xMz
+Q2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
