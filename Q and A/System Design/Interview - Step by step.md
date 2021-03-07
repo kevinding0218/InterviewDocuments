@@ -74,8 +74,11 @@
 ### High-level architecture
 - start with something simple
 	- we need a database to store data
-	- we will have a web service that processing incoming video view events and stores data 
+	- we will have a web service that processing incoming video view events and stores data in the database - "Processing Service"
+	- we will have another web service that to retrieve view counts from the database - "Query Service"
+``User -> Browser -> Processing Service -> Database -> Query Service -> Browser -> User``
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjQyNTYzLC0xMzQ2MzM3ODk0LDQ2ND
-YzOTQ4M119
+eyJoaXN0b3J5IjpbLTE1OTM0NDc2MzcsLTEzNDYzMzc4OTQsND
+Y0NjM5NDgzXX0=
 -->
