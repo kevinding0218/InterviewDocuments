@@ -62,25 +62,25 @@
 		``getStats(videoId, eventType, function, startTime, endTime) where function can be delegate to count/sum/average``
 
 ### Non-Functional APIs
-- Usually interviewers will not tell us specific non-function requirements, most likely will challenge use with mentioning big scale and high performance, and we will need to find trade offs.
-- Focus on scalability, performance and availability as top priority requirements, e.g
+ - Usually interviewers will not tell us specific non-function requirements, most likely will challenge use with mentioning big scale and high performance, and we will need to find trade offs.
+ - Focus on scalability, performance and availability as top priority requirements, e.g
 	- Scalable: we need to design such should handle tens of thousands of requests per second
 	- Highly Performant: we want view count statistic to be returned in a matter of few tends of milliseconds.
 	- Highly Available: we want statistics to be shown to users all the time, survives hardware/network failures, no single point of failure
-- CAP theorem tells me I should be choosing between Availability and Consistency
+ - CAP theorem tells me I should be choosing between Availability and Consistency
 	- Consistency
 	- Cost(hardware, development, maintenance)
 		
 ### High-level architecture
-- Start with something SIMPLE
+ - Start with something SIMPLE
 	- we need a database to store data
 	- we will have a web service that processing incoming video view events and stores data in the database - "Processing Service"
 	- we will have another web service that to retrieve view counts from the database - "Query Service"
 ``User -> Browser -> Processing Service -> Database -> Query Service -> Browser -> User``
-- Interviewers may start asking questions about any component we outlined in the high-level architecture, but we may not feel comfortable discussing any component just yet, we need to start with something simple and construct the puzzle/frame with the outside pieces.
-- What is the frame of outside pieces of a system design puzzle? DATA!!!
+ - Interviewers may start asking questions about any component we outlined in the high-level architecture, but we may not feel comfortable discussing any component just yet, we need to start with something simple and construct the puzzle/frame with the outside pieces.
+ - What is the frame of outside pieces of a system design puzzle? DATA!!!
 	- more specifically, we need to think what data we want to store and how, we need to define a data model.
-- What we store
+ - What we store
 	- we have 2 options of how we want to store
 		- we may store each individual video view event
 		- or we may calcuate views on the fly and store aggregated data.
@@ -93,10 +93,17 @@
 | A | 2019-08-26 15: 21:32 | ... |
 | B | 2019-08-26 15: 22:04 | ... |
 | B | 2019-08-26 15: 22:47 | ... |
-	
-	- Aggregate data (e.g per minute) in real-time
-		- 
+
+
+	 - 
+	 - Aggregate data (e.g per minute) in real-time
+		 - we calculate a total count per some time interval, let's say one 
+
+|  |  |
+|--|--|
+|  |  |
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzE2NTQ2OCwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbLTg4NTc2MjYyMiwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
