@@ -72,21 +72,21 @@
 	- Cost(hardware, development, maintenance)
 		
 ### High-level architecture
- - Start with something SIMPLE
-	- we need a database to store data
-	- we will have a web service that processing incoming video view events and stores data in the database - "Processing Service"
-	- we will have another web service that to retrieve view counts from the database - "Query Service"
+#### Start with something SIMPLE
+- we need a database to store data
+- we will have a web service that processing incoming video view events and stores data in the database - "Processing Service"
+- we will have another web service that to retrieve view counts from the database - "Query Service"
 ``User -> Browser -> Processing Service -> Database -> Query Service -> Browser -> User``
  - Interviewers may start asking questions about any component we outlined in the high-level architecture, but we may not feel comfortable discussing any component just yet, we need to start with something simple and construct the puzzle/frame with the outside pieces.
- - What is the frame of outside pieces of a system design puzzle? DATA!!!
+ - What is the frame of outside pieces of a system design puzzle? **DATA**!!!
 	- more specifically, we need to think what data we want to store and how, we need to define a data model.
- - What we store
-	- we have 2 options of how we want to store
-		- we may store each individual video view event
-		- or we may calcuate views on the fly and store aggregated data.
-	- Invidual events (every click)
-		- we need capture all attributes of the event: videoId, timestamp, user related information such as country, device type, operating system and so on	
-		
+#### How we store the data
+- we have 2 options of how we want to store
+	- we may store each individual video view event
+	- or we may calcuate views on the fly and store aggregated data.
+- Invidual events (every click)
+	- we need capture all attributes of the event: videoId, timestamp, user related information such as country, device type, operating system and so on	
+	
 | videoId | timestamp | ...
 |--|--|--|
 | A | 2019-08-26 15: 21:17 | ... |
@@ -95,39 +95,41 @@
 | B | 2019-08-26 15: 22:47 | ... |
 
 
- - 
-	 - Aggregate data (e.g per minute) in real-time
-		 - we calculate a total count per some time interval, let's say one minute and we lose details of each individul event.
+- 
+ - Aggregate data (e.g per minute) in real-time
+	 - we calculate a total count per some time interval, let's say one minute and we lose details of each individul event.
 
 | videoId | timestamp | count |
 |--|--|--|
 | A | 2019-08-26 15:21 | 2 |
 | B | 2019-08-26 15:21 | 3 |
 - 
-	 - There are pros and cons of each option.
-		 - Individual events Pros
-			 - **Fast write**: can be stored really fast, we just get the event and push it to the database. 
-			 - Later, when we retrieve data, we can **slice and dice data however we want**,  we can filter based on specific attributes, aggregate based on some rules. 
-			 -  if there was a bug in some business report, we can **recalculate numbers from scratch.**
-		 - Individual events Cons
-			 - we cannot read data quickly, we need to count each individual event when total count is requested, this takes time.
-			 - it may cost a lot of money to store all the raw events, costly for a large scale (many events), Youtube generates billions of views every day so raw events storage must be huge.
-		 - Aggregate events Pros
-			 - **Fast read**: we do not need to calculate each indivudal event, we just retrieve total count value.
-			 - Decision making in real-time, for exmaple, we may send the total count value to a recommendation service or trending service for popular videos to be promoted to trends.
-		 - Aggregate events Cons
-			 - We can only query data the way it was aggregated, ability to filter data or aggregate it differently is very limited.
-			 - Also requires us to implement data aggregation pipeline, we need to somehow pre-aggregate data in memory before storing it in the database, this is not an easy task and later you will see why.
-			 - Important: It's hard to even impossible to fix errors. Let's say we introduced a bug in the aggregation logic. Then how do we fix total counts after the bug was fixed?
-	 - Which approatch to choose?
-		 - we need interviewer to help us make a decision, we should ask interviewer about expected data delay, time between when event happened and when it was processed.
-			 - If it should be no more than several minutes, we must aggregate data on the fly, this is called batch data.
-			 - if several hours is ok, then we can store raw events and process them in the background, this is known as stream data processing.
-		 - we can also combine both approaches which makes a lot of sense for many systems out there.
-			 - we will store raw events, and because there are so many of the, we will store events for several days or weeks only. And then purge old data, and we will also calculate and store numbers in real-time. So that statistics is available for users right away, by storing both raw events and aggreated data we get the best of both words: Fast Read, ability to aggregate data differently and re-calculate statistics if there were bugs or failures on a real-time path.
-			 - But there is a price to pay for all the flexibility, the system becomes more complex and expensive.
+ - There are pros and cons of each option.
+	 - Individual events Pros
+		 - **Fast write**: can be stored really fast, we just get the event and push it to the database. 
+		 - Later, when we retrieve data, we can **slice and dice data however we want**,  we can filter based on specific attributes, aggregate based on some rules. 
+		 -  if there was a bug in some business report, we can **recalculate numbers from scratch.**
+	 - Individual events Cons
+		 - we cannot read data quickly, we need to count each individual event when total count is requested, this takes time.
+		 - it may cost a lot of money to store all the raw events, costly for a large scale (many events), Youtube generates billions of views every day so raw events storage must be huge.
+	 - Aggregate events Pros
+		 - **Fast read**: we do not need to calculate each indivudal event, we just retrieve total count value.
+		 - Decision making in real-time, for exmaple, we may send the total count value to a recommendation service or trending service for popular videos to be promoted to trends.
+	 - Aggregate events Cons
+		 - We can only query data the way it was aggregated, ability to filter data or aggregate it differently is very limited.
+		 - Also requires us to implement data aggregation pipeline, we need to somehow pre-aggregate data in memory before storing it in the database, this is not an easy task and later you will see why.
+		 - Important: It's hard to even impossible to fix errors. Let's say we introduced a bug in the aggregation logic. Then how do we fix total counts after the bug was fixed?
+ - Which approatch to choose?
+	 - we need interviewer to help us make a decision, we should ask interviewer about expected data delay, time between when event happened and when it was processed.
+		 - If it should be no more than several minutes, we must aggregate data on the fly, this is called batch data.
+		 - if several hours is ok, then we can store raw events and process them in the background, this is known as stream data processing.
+	 - we can also combine both approaches which makes a lot of sense for many systems out there.
+		 - we will store raw events, and because there are so many of the, we will store events for several days or weeks only. And then purge old data, and we will also calculate and store numbers in real-time. So that statistics is available for users right away, by storing both raw events and aggreated data we get the best of both words: Fast Read, ability to aggregate data differently and re-calculate statistics if there were bugs or failures on a real-time path.
+		 - But there is a price to pay for all the flexibility, the system becomes more complex and expensive.
+#### Where we store the data
+- Interviewer wants to know 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NDkxNTg5MSwtMTU5MDkxNTQ3MCwtMT
-M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbMjIyNTAyMzUxLC0xNTkwOTE1NDcwLC0xMz
+Q2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
