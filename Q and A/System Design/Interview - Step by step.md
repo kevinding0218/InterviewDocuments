@@ -51,7 +51,11 @@
 			- By supporting avg function, we can calculate average view duration
 		``processEvent(videoId, eventType, function) where function can be count/sum/average``
 		- we can further generalize the API and say that system will not just process events one by one, but a list of events as a single batch, where each event is an object that contains information about a video, type of event, time when event happened and so forth
-		``processEve
+		``processEvents(List<Event>)``
+		- Similar thought process can be applied for data retrieval API.
+	- The system has to return video views count for a time period
+		- 
+		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NTcxNzc1NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbMTgwNDE4OTA3Miw0NjQ2Mzk0ODNdfQ==
 -->
