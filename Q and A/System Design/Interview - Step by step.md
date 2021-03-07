@@ -244,10 +244,24 @@
 ### How we can store the data
 #### Data Modeling between SQL and NoSQL databases
 - build report that shows the following 3 entities:
-	- information a
+	- information about video
+	- number of total views per hour for last several hours
+	- information about the channel this video belongs to
+- 3 tables
+	- video_info table
+		- video_id
+		- name
+		- ...
+		- channel_id
+	- video_stas table
+		- video_id
+		- timestamp
+		- count
+	- channel_info
+		- channel_i
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNjczOTkwNiwtNjU5MTI4OTc0LC03Mz
-A4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQx
-LDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0Nj
-Q2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbOTgzODQ2NTA4LC02NTkxMjg5NzQsLTczMD
+gwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEs
+MTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2ND
+YzOTQ4M119
 -->
