@@ -46,7 +46,10 @@
 		``countViewEvent(videoId)``
 		- if we want the system to calculate not just views, but a broader set of events, let's say `likes` and `share`, we may generalize our API a bit and introduce `eventType` parameter, this parameter indicates type of the event we process
 		``countViewEvent(videoId, eventType) where eventType is enum of view/like/share``
-		- we can go one step further and make the system calculate not only count function
+		- we can go one step further and make the system calculate not only count function, but other functions as well, like sum and average. 
+			- By supporting sum function we can calculate such metric as "total watch time" for a video
+			- By supporting avg function, we can calculate average view duration
+		``processEvent(videoId, ev
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU5OTk2ODI2LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbLTU5NTQyNDMxMyw0NjQ2Mzk0ODNdfQ==
 -->
