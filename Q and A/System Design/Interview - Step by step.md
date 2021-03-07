@@ -68,7 +68,7 @@
 	- Highly Performant: we want view count statistic to be returned in a matter of few tends of milliseconds.
 	- Highly Available: we want statistics to be shown to users all the time, survives hardware/network failures, no single point of failure
  - CAP theorem tells me I should be choosing between Availability and Consistency
-	- Consistency
+	- If we choose availability over consistency, it simply means we prefer to show stale (not update to dConsistency
 	- Cost(hardware, development, maintenance)
 		
 ### High-level architecture
@@ -221,14 +221,14 @@
 	Query Service	====>		Node3(M-R) - Node4(S-Z)
 	```
 - Cassandra uses version numbers to determine staleness of data, and similar to SQL database, we want to store copies of data across several different data centers for high availabilities.
-```
-	Processing Service			Node1(A-F) - Node2(G-L) 		Node1(A-F) - Node2(G-L) 
-						\\			|			|					|			|
-	Query Service	====>		Node3(M-R) - Node4(S-Z)			Node3(M-R) - Node4(S-Z)
-									Data Center A					Data Center B
-```
+	```
+		Processing Service			Node1(A-F) - Node2(G-L) 		Node1(A-F) - Node2(G-L) 
+							\\			|			|					|			|
+		Query Service	====>		Node3(M-R) - Node4(S-Z)			Node3(M-R) - Node4(S-Z)
+										Data Center A					Data Center B
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODA2NTg1MzUsLTczMDgwNTI0NSwxND
-E5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0
-LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbNTY2MTE3MjQ3LC03MzA4MDUyNDUsMTQxOT
+E4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwt
+MTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
