@@ -140,7 +140,7 @@
 	- Where to run (clous vs on-premises data centers)? 
 	- How much money will it all cost?
 #### SQL database
-- Sharding or Horizontal Partitioning
+# Sharding or Horizontal Partitioning
 	- Things are simple when we can store all our data on a single database machine. 
 	``MySQL-I (A-Z)``
 	- But when a single machine is not enough, we need to introduce more machines and split data between them, this procedure is called sharding or horizontal partitioning, each shard stores a subset of all the data.
@@ -180,7 +180,7 @@
 		Query Service							Shard Proxy + MySQL-II(N-Z)
 		```
 	- This setup helps us address several requirements we mentioned before, like scalability and performance. But availability is not yet addressed.
-- Add Master/Read (Lead/Follower) Replica
+- Add Replica Master/Read (Lead/Follower) 
 	- What if database shard died? How to make sure data is not getting lost?
 	- We need replicate data. Lets call each existed shard a master shard or a leader shard.
 	- For every master shard we introduce a copy of it, called read replica or a follower. We call it read replica because writes still go through a master shard, but reads may go through both master shard and a replica.
@@ -199,9 +199,10 @@
 	- When store data request comes, based on the information provided by `Configuration Service`, `Cluster Proxy` sends data to a shard. And data is either synchronously or asynchronously replicated to a corresponding read replica.
 	- When retrieve data request comes, `Cluster Proxy` may retrieve data either from a master or read replica
 - Cons
-	- T
+	- This solution doesn't seems simple, we have all these proxies, configuration service, leader and follower replica instances, maybe we can use NoSQL to simplify things a little bit.
+#### NoSQL
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNDYwNjkyNSw3MTAwNTk2ODksNDQ2Nz
-YyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5
-NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbODQ2ODMwMjA4LDcxMDA1OTY4OSw0NDY3Nj
+IyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0
+LDQ2NDYzOTQ4M119
 -->
