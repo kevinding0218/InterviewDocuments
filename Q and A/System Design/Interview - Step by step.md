@@ -73,7 +73,8 @@
 		
 ### High-level architecture
 #### Start with something SIMPLE
-- we need a database to store data
+- we need a database to store data and services to interact with database
+#### Services
 - we will have a web service that processing incoming video view events and stores data in the database - "Processing Service"
 - we will have another web service that to retrieve view counts from the database - "Query Service"
 ``User -> Browser -> Processing Service -> Database -> Query Service -> Browser -> User``
@@ -84,8 +85,8 @@
 - we have 2 options of how we want to store
 	- we may store each individual video view event
 	- or we may calcuate views on the fly and store aggregated data.
-- Invidual events (every click)
-	- we need capture all attributes of the event: videoId, timestamp, user related information such as country, device type, operating system and so on	
+##### Invidual events (every click)
+- we need capture all attributes of the event: videoId, timestamp, user related information such as country, device type, operating system and so on	
 	
 | videoId | timestamp | ...
 |--|--|--|
@@ -95,8 +96,8 @@
 | B | 2019-08-26 15: 22:47 | ... |
 
 
-- 
- - Aggregate data (e.g per minute) in real-time
+
+##### Aggregate data (e.g per minute) in real-time
 	 - we calculate a total count per some time interval, let's say one minute and we lose details of each individul event.
 
 | videoId | timestamp | count |
@@ -202,7 +203,7 @@
 - This solution doesn't seems simple, we have all these proxies, configuration service, leader and follower replica instances, maybe we can use NoSQL to simplify things a little bit.
 #### NoSQL
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODkzNTEzNDQsNzEwMDU5Njg5LDQ0Nj
-c2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4
-OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTM5NDQ1ODU1OCw3MTAwNTk2ODksNDQ2Nz
+YyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5
+NCw0NjQ2Mzk0ODNdfQ==
 -->
