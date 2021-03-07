@@ -152,6 +152,7 @@
 							  X
 		Query Service		  -			MySQL-II(N-Z)
 		```
+- Add Cluster Proxy Server
 	- A better approatch is to introduce a light `Cluster Proxy Server` that knows about all database machines and route traffic to the correct shard, now both services talk to the `Cluster Proxy` only, services do not need to know about each and every database machine anymore, but `Cluster Proxy` has to know.
 		```
 		Processing Service 	  				MySQL-I (A-M)
@@ -160,8 +161,8 @@
 		Query Service		  				MySQL-II(N-Z)
 		```
 		- Moreover, `Cluster Proxy` needs to know when some shard dies or become unavailable due to network partition. And if new shard has been added to the database cluster, proxy should become aware of it.
-- Configuration Service
-		- We introduce a new component - `Configuration Service(e.g ZooKeeper)`, which maintains a health check connection to all shards, so it alwasy knows what database machines are available. So `Cluster Proxy` calls a particular shard
+- Add Configuration Service
+	- We introduce a new component - `Configuration Service(e.g ZooKeeper)`, which maintains a health check connection to all shards, so it alwasy knows what database machines are available. So `Cluster Proxy` calls a particular shard
 		```
 					 	  	Config Service		MySQL-I (A-M)
 		Processing Service		  |
@@ -169,8 +170,8 @@
 							/
 		Query Service							MySQL-II(N-Z)
 		```
-	- Shard Proxy
-		- And Instead of calling database instance directly, we can introduce one more proxy - `Shard Proxy`, that sits in front of database. `Shard Proxy` will help us in many different ways: it can cache query results, monitor database instance health and publish metrics, terminate queries that take too long to return data and many more.
+- Add Shard Proxy
+	- And Instead of calling database instance directly, we can introduce one more proxy - `Shard Proxy`, that sits in front of database. `Shard Proxy` will help us in many different ways: it can cache query results, monitor database instance health and publish metrics, terminate queries that take too long to return data and many more.
 		```
 					 	  	Config Service		Shard Proxy + MySQL-I (A-M)
 		Processing Service		  |
@@ -178,11 +179,12 @@
 							/
 		Query Service							Shard Proxy + MySQL-II(N-Z)
 		```
-		- This setup helps us address several requirements we mentioned before, like scalability and performance. But availability is not yet addressed.
-- Master/Read (Lead/Follower) Replica
+	- This setup helps us address several requirements we mentioned before, like scalability and performance. But availability is not yet addressed.
+- Add Master/Read (Lead/Follower) Replica
 	- What if database shard died? How to make sure data is not getting lost?
 	- We need replicate data. Lets call each existed shard a master shard or a leader shard.
 	- For every master shard we introduce a copy of it, called read replica or a follower. We call it read replica because writes still go through a master shard, but reads may go through both master shard and a replica.
+- Add Data Center
 	- We also put some replicates to a data center different from their master shard, so that if the whole data center goes down, we still have a copy of data available.
 		```	
 															Master/Lead Shard				Read/Follower Shard
@@ -196,9 +198,10 @@
 		```
 	- When store data request comes, based on the information provided by `Configuration Service`, `Cluster Proxy` sends data to a shard. And data is either synchronously or asynchronously replicated to a corresponding read replica.
 	- When retrieve data request comes, `Cluster Proxy` may retrieve data either from a master or read replica
-- 
+- Cons
+	- T
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNjEyNzk4NCw3MTAwNTk2ODksNDQ2Nz
+eyJoaXN0b3J5IjpbMTQxNDYwNjkyNSw3MTAwNTk2ODksNDQ2Nz
 YyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5
 NCw0NjQ2Mzk0ODNdfQ==
 -->
