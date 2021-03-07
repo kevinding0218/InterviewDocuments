@@ -187,7 +187,7 @@
 ##### Add Data Center
 - We also put some replicates to a data center different from their master shard, so that if the whole data center goes down, we still have a copy of data available.
 	```	
-														Master/Lead Shard				Read/Follower Shard
+														Lead/Master Shard				Follower/Read Shard
 						 	  	  Config Service	Shard Proxy + MySQL-I (A-M) -->	Shard Proxy + MySQL-I (A-M)
 	Processing Service		     		 |	     ^				||							   ||
 								\store 	 |		/				||			OR				   ||	
@@ -204,7 +204,7 @@
 - In NoSQL world, we split data into chunks, shards, also known as nodes, but instead of having leaders and followers, we saythat each shard is equal
 ``Node1(A-F) Node2(G-L) Node3(M-R) Node4(S-Z)``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMDM5MDE2LDE0MTkxODY2MzEsNzEwMD
-U5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAs
-LTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMTUyNjc2MzUyNCwxNDE5MTg2NjMxLDcxMD
+A1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcw
+LC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
