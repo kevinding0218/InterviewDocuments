@@ -98,28 +98,27 @@
 
 
 ##### Aggregate data (e.g per minute) in real-time
-	 - we calculate a total count per some time interval, let's say one minute and we lose details of each individul event.
-
+- we calculate a total count per some time interval, let's say one minute and we lose details of each individul event.
+- 
 | videoId | timestamp | count |
 |--|--|--|
 | A | 2019-08-26 15:21 | 2 |
 | B | 2019-08-26 15:21 | 3 |
-- 
- - There are pros and cons of each option.
-	 - Individual events Pros
-		 - **Fast write**: can be stored really fast, we just get the event and push it to the database. 
-		 - Later, when we retrieve data, we can **slice and dice data however we want**,  we can filter based on specific attributes, aggregate based on some rules. 
-		 -  if there was a bug in some business report, we can **recalculate numbers from scratch.**
-	 - Individual events Cons
-		 - we cannot read data quickly, we need to count each individual event when total count is requested, this takes time.
-		 - it may cost a lot of money to store all the raw events, costly for a large scale (many events), Youtube generates billions of views every day so raw events storage must be huge.
-	 - Aggregate events Pros
-		 - **Fast read**: we do not need to calculate each indivudal event, we just retrieve total count value.
-		 - Decision making in real-time, for exmaple, we may send the total count value to a recommendation service or trending service for popular videos to be promoted to trends.
-	 - Aggregate events Cons
-		 - We can only query data the way it was aggregated, ability to filter data or aggregate it differently is very limited.
-		 - Also requires us to implement data aggregation pipeline, we need to somehow pre-aggregate data in memory before storing it in the database, this is not an easy task and later you will see why.
-		 - Important: It's hard to even impossible to fix errors. Let's say we introduced a bug in the aggregation logic. Then how do we fix total counts after the bug was fixed?
+##### Pros and Cons
+ - Individual events Pros
+	 - **Fast write**: can be stored really fast, we just get the event and push it to the database. 
+	 - Later, when we retrieve data, we can **slice and dice data however we want**,  we can filter based on specific attributes, aggregate based on some rules. 
+	 -  if there was a bug in some business report, we can **recalculate numbers from scratch.**
+ - Individual events Cons
+	 - we cannot read data quickly, we need to count each individual event when total count is requested, this takes time.
+	 - it may cost a lot of money to store all the raw events, costly for a large scale (many events), Youtube generates billions of views every day so raw events storage must be huge.
+ - Aggregate events Pros
+	 - **Fast read**: we do not need to calculate each indivudal event, we just retrieve total count value.
+	 - Decision making in real-time, for exmaple, we may send the total count value to a recommendation service or trending service for popular videos to be promoted to trends.
+ - Aggregate events Cons
+	 - We can **only query data the way it was aggregated**, ability to filter data or aggregate it differently is very limited.
+	 - Also requires us to implement data aggregation pipeline, we need to somehow **pre-aggregate data in memory before storing it in the database**, this is not an easy task and later you will see why.
+	 - Important: It's **hard to even impossible to fix errors**. Let's say we introduced a bug in the aggregation logic. Then how do we fix total counts after the bug was fixed?
  - Which approatch to choose?
 	 - we need interviewer to help us make a decision, we should ask interviewer about expected data delay, time between when event happened and when it was processed.
 		 - If it should be no more than several minutes, we must aggregate data on the fly, this is called batch data.
@@ -203,7 +202,7 @@
 - This solution doesn't seems simple, we have all these proxies, configuration service, leader and follower replica instances, maybe we can use NoSQL to simplify things a little bit.
 #### NoSQL
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NDQ1ODU1OCw3MTAwNTk2ODksNDQ2Nz
+eyJoaXN0b3J5IjpbMjEzODcyMDc2Nyw3MTAwNTk2ODksNDQ2Nz
 YyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5
 NCw0NjQ2Mzk0ODNdfQ==
 -->
