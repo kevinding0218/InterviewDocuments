@@ -186,9 +186,9 @@
 ```	
 													Master/Lead Shard				Read/Follower Shard
 					 	  	  Config Service	Shard Proxy + MySQL-I (A-M) -->	Shard Proxy + MySQL-I (A-M)
-Processing Service		     		 |	     ^											   ^^
+Processing Service		     		 |	     ^											   ||
 							\store 	 |		/											   ||	
-							  ClusterProxy		=========================================== 
+							  ClusterProxy		<============================================= 
 							//						Master/Lead Shard				Read/Follower Shard
 Query Service	       //retrieve			Shard Proxy + MySQL-II(N-Z)     Shard Proxy + MySQL-II(N-Z)
 													Data Center A					Data Center B
@@ -197,6 +197,6 @@ Query Service	       //retrieve			Shard Proxy + MySQL-II(N-Z)     Shard Proxy + 
 	- When store data request comes, based on the information provided by `Configuration Service`, `Cluster Proxy` sends data to a shard. And data is either synchronously or asynchronously replicated to a corresponding read replica.
 	- When retrieve data request comes, `Cluster Proxy` may retrieve data either from a master or read replica
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NDA3NzY4NCwxMzY5NDU3NjQsLTE1OT
-A5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTEzODA3MzY2MjIsMTM2OTQ1NzY0LC0xNT
+kwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
