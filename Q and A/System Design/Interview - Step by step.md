@@ -187,12 +187,12 @@
 											Master/Lead Shard
 			 	  	Config Service		Shard Proxy + MySQL-I (A-M) 
 Processing Service		  |
-					\ ClusterProxy
-					/
-					/
+					\ 	  |
+					  ClusterProxy
+					/						Master/Lead Shard
 Query Service							Shard Proxy + MySQL-II(N-Z)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM4NDYxNTg0LC0xNTkwOTE1NDcwLC0xMz
-Q2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMTYwNzgzODQxNCwtMTU5MDkxNTQ3MCwtMT
+M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
