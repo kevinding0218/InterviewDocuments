@@ -215,14 +215,14 @@
 - Let's call this `Node 4` a `Coordinator Node` needs to decide which node stores data for the requested video. We can use `Consistent Hashing` algorithm to pick the node. As you may see, `Node 1` should store the data for the video B. `Coordinate Node` will make a call to the `Node 1` and wait for the response.
 - Actually nothing stops `Coordinator Node` to call multiple nodes to replicate data, for example 3 nodes if we want 3 copies of data. Waiting for 3 responses from replicate may be too slow, so we may consider the write to be successful as soon as only 2 replication requests succeeded. This approach is called `Quorum Writes`
 - Similar to `Quorum Writes`, there is a `Quorum Reads` approach, when `Query Service` retrieves views count for video B, `Coordinate Node 4` will initiate several read requests in paralle. In theory, the coordinate node may get different responses from replica nodes. Why? Because some node could have been unavailable when write request happened. That node has stale data right now, other 2 nodes has up-to-date data. `Read Quorum` defines a minimum number of nodes that have to agree on the response.
-```
-Processing Service			Node1(A-F) - Node2(G-L) 
-					\\			|			|
-Query Service	====>		Node3(M-R) - Node4(S-Z)
-```
-- Cassandra uses version numbers to determine staleness of data, and similar to SQL database, we want to store copies of data across several different data centers
+	```
+	Processing Service			Node1(A-F) - Node2(G-L) 
+						\\			|			|
+	Query Service	====>		Node3(M-R) - Node4(S-Z)
+	```
+- Cassandra uses version numbers to determine staleness of data, and similar to SQL database, we want to store copies of data across several different data centers for high availabilities.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI4ODc2NTYzLC03MzA4MDUyNDUsMTQxOT
+eyJoaXN0b3J5IjpbMzMzMjcyNTM5LC03MzA4MDUyNDUsMTQxOT
 E4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwt
 MTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
