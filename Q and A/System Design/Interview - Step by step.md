@@ -243,8 +243,11 @@
 ##### Cassandra (Tunable Consistency)
 ### How we can store the data
 #### Data Modeling between SQL and NoSQL databases
+- build report that shows the following 3 entities:
+	- information a
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0MT
-kxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQs
-LTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMTcwNjczOTkwNiwtNjU5MTI4OTc0LC03Mz
+A4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQx
+LDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0Nj
+Q2Mzk0ODNdfQ==
 -->
