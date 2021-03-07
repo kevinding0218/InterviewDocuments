@@ -236,9 +236,9 @@
 #### Consistency
 - If we choose availability over consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all.
 - Consistency: Synchronous data replicate is slow, we usually replicate data asynchronously.
-- In case of a leader-follower replication for example, some read replicas may be behind their master. Which leads to a situa
+- In case of a leader-follower replication for example, some read replicas may be behind their master. Which leads to a situation when different users see different total count for a video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDA3MTMyMzAsLTczMDgwNTI0NSwxND
+eyJoaXN0b3J5IjpbLTExMDI2OTA4OTcsLTczMDgwNTI0NSwxND
 E5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0
 LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
