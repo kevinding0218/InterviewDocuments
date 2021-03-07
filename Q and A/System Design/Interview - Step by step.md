@@ -7,6 +7,7 @@
 - Batch processing (Hadoop MapReduce)
 
 ### What questions we must think or ask ("Count of videos" design)
+- Help interviewers to understand your design scope
 - Users/Customers : help us understand what data we store in the system
 	- Who will use the system?
 		- is this all Youtube viewers who will see the total views count for a video?
@@ -35,5 +36,5 @@
 	- Should the design minimize the cost of maintenance?
 		- if future maintenance cost is a primary concern, we should consider publich cloud services
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDcyOTA3NzZdfQ==
+eyJoaXN0b3J5IjpbNDY0NjM5NDgzXX0=
 -->
