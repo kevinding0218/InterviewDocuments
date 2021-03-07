@@ -106,13 +106,14 @@
 - 
 	 - There are pros and cons of each option.
 		 - Individual events Pros
-			 - Fast write: can be stored really fast, we just get the event and push it to the database. 
-			 - Later, when we retrieve data, we can slice and dice data however we want,  we can filter based on specific attributes, aggregate based on some rules. 
-			 -  if there was a bug in some business report, we can recalculate numbers from scratch.
+			 - **Fast write**: can be stored really fast, we just get the event and push it to the database. 
+			 - Later, when we retrieve data, we can **slice and dice data however we want**,  we can filter based on specific attributes, aggregate based on some rules. 
+			 -  if there was a bug in some business report, we can **recalculate numbers from scratch.**
 		 - Individual events Cons
-			 - we cannot read data quickly
+			 - we cannot read data quickly, we need to count each individual event when total count is requested, this takes time.
+			 - it may cost a lot of money to store all the raw events, costly for a large scale (many events), Youtube gener
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNDEzNzg3MiwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbMTk4NzUzOTY1OCwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
