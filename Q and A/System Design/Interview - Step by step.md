@@ -183,19 +183,20 @@
 	- We need replicate data. Lets call each existed shard a master shard or a leader shard.
 	- For every master shard we introduce a copy of it, called read replica or a follower. We call it read replica because writes still go through a master shard, but reads may go through both master shard and a replica.
 	- We also put some replicates to a data center different from their master shard, so that if the whole data center goes down, we still have a copy of data available.
-		```	
+```	
 													Master/Lead Shard				Read/Follower Shard
 					 	  	  Config Service	Shard Proxy + MySQL-I (A-M) -->	Shard Proxy + MySQL-I (A-M)
-		Processing Service		     |		 /	
+Processing Service		     |		 /	
 							\store 	 |		/
 							  ClusterProxy
 							/						Master/Lead Shard				Read/Follower Shard
-	Query Service	       /retrieve			Shard Proxy + MySQL-II(N-Z)     Shard Proxy + MySQL-II(N-Z)
+Query Service	       /retrieve			Shard Proxy + MySQL-II(N-Z)     Shard Proxy + MySQL-II(N-Z)
 													Data Center A					Data Center B
-		```
-	- When store data request comes, based on the information provided by Configuration service, cluster proxy sends data to a shard. And data is either synchronously or asynchronously replicated to a corresponding read replica.
-	- When retrieve data request comes, 
+```
+
+	- When store data request comes, based on the information provided by `Configuration Service`, `Cluster Proxy` sends data to a shard. And data is either synchronously or asynchronously replicated to a corresponding read replica.
+	- When retrieve data request comes, `Cluster Proxy` may retrieve data either from a master or read replica
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMz
-Q2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMTEyOTU5OTY4OCwxMzY5NDU3NjQsLTE1OT
+A5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
