@@ -141,8 +141,11 @@
 	- How much money will it all cost?
 #### SQL database
 - Sharding or Horizontal Partitioning
-	- Things are simple when we can store all our data on a single database machine. But when a single machine is not enough, we need to introduce more machines and split data between them, this procedure 
+	- Things are simple when we can store all our data on a single database machine. 
+	``MySQL-I (A-Z)``
+	- But when a single machine is not enough, we need to introduce more machines and split data between them, this procedure is called sharding or horizontal partitioning.
+	``MySQL-I (A-M) + MySQL-II(N-Z)``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjEzODU4OTAsLTE1OTA5MTU0NzAsLT
-EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMTU3MDgwMDcyNiwtMTU5MDkxNTQ3MCwtMT
+M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
