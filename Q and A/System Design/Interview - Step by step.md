@@ -124,9 +124,9 @@
 			 - If it should be no more than several minutes, we must aggregate data on the fly, this is called batch data.
 			 - if several hours is ok, then we can store raw events and process them in the background, this is known as stream data processing.
 		 - we can also combine both approaches which makes a lot of sense for many systems out there.
-			 - we will store raw events, and because there are so many of the, we will store events for several da
+			 - we will store raw events, and because there are so many of the, we will store events for several days or weeks only. And then purge old data, and we will also calculate and store numbers in real-time. So that statistics is available for users right away, by storing both raw events and aggreated data we get the best of both words: Fast Read, ability
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc2NjA5Mzg0LC0xNTkwOTE1NDcwLC0xMz
-Q2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbLTE2NDUyMjI5OSwtMTU5MDkxNTQ3MCwtMT
+M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
