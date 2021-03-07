@@ -153,15 +153,15 @@
 		Query Service		  -			MySQL-II(N-Z)
 		```
 		- A better approatch is to introduce a light `Cluster Proxy Server` that knows about all database machines and route traffic to the correct shard, now both services talk to the `Cluster Proxy` only, services do not need to know about each and every database machine anymore, but `Cluster Proxy` has to know.
-```
-Processing Service 	  				MySQL-I (A-M)
-					\ ClusterProxy
-					/
-Query Service		  				MySQL-II(N-Z)
-```
+		```
+		Processing Service 	  				MySQL-I (A-M)
+							\ ClusterProxy
+							/
+		Query Service		  				MySQL-II(N-Z)
+		```
 		- Moreover, `Cluster Proxy` needs to know when some shard dies or become unavailable due to network partition. And if new shard has been added to the database cluster, proxy should become aware of it.
-		- How do we achieve this.
+		- How do we achieve this? We introduce a new component - `Configuration Service(e.g ZooKeeper)`, which maintains a health check connection to all shards, so it alwasy knows what database machines are available. So `Cluster Proxy` calls a particular shard.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NTEwMzQ3NSwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbLTk0MjQ3OTE3NCwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
