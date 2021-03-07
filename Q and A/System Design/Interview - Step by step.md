@@ -127,9 +127,9 @@
 		 - we will store raw events, and because there are so many of the, we will store events for several days or weeks only. And then purge old data, and we will also calculate and store numbers in real-time. So that statistics is available for users right away, by storing both raw events and aggreated data we get the best of both words: Fast Read, ability to aggregate data differently and re-calculate statistics if there were bugs or failures on a real-time path.
 		 - But there is a price to pay for all the flexibility, the system becomes more complex and expensive.
 #### Where we store the data
-- Interviewer wants to know 
+- Interviewer wants to know specific database name and why we make this choice, you should know both SQL and NoSQL database can scale and perform well, so we should evaulate both types.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIyNTAyMzUxLC0xNTkwOTE1NDcwLC0xMz
-Q2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMTQzOTIzMzY0NCwtMTU5MDkxNTQ3MCwtMT
+M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
