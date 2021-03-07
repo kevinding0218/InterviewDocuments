@@ -78,7 +78,12 @@
 	- we will have another web service that to retrieve view counts from the database - "Query Service"
 ``User -> Browser -> Processing Service -> Database -> Query Service -> Browser -> User``
 - Interviewers may start asking questions about any component we outlined in the high-level architecture, but we may not feel comfortable discussing any component just yet, we need to start with something simple and construct the puzzle/frame with the outside pieces.
+- What is the frame of outside pieces of a system design puzzle? DATA!!!
+	- more specifically, we need to think what data we want to store and how, we need to define a data model.
+- What we store
+	- we have 2 options of how we want to store
+		- we may store each individual video view event. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NDY2NzQ0OSwtMTM0NjMzNzg5NCw0Nj
-Q2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTEzNjU4MzE2OTksLTEzNDYzMzc4OTQsND
+Y0NjM5NDgzXX0=
 -->
