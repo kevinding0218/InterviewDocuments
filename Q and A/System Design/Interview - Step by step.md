@@ -195,9 +195,9 @@
 		```
 	- When store data request comes, based on the information provided by `Configuration Service`, `Cluster Proxy` sends data to a shard. And data is either synchronously or asynchronously replicated to a corresponding read replica.
 	- When retrieve data request comes, `Cluster Proxy` may retrieve data either from a master or read replica
-![enter image description here](https://photos.google.com/photo/AF1QipO_eFziZx3zfeOIcFRbiq4QGYACedLqDlFuTtXL)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5ND
-U3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgz
-XX0=
+eyJoaXN0b3J5IjpbMTg3NTM2OTcxMSw3MTAwNTk2ODksNDQ2Nz
+YyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5
+NCw0NjQ2Mzk0ODNdfQ==
 -->
