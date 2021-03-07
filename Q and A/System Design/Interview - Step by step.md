@@ -216,13 +216,13 @@
 - Actually nothing stops `Coordinator Node` to call multiple nodes to replicate data, for example 3 nodes if we want 3 copies of data. Waiting for 3 responses from replicate may be too slow, so we may consider the write to be successful as soon as only 2 replication requests succeeded. This approach is called `Quorum Writes`
 - Similar to `Quorum Writes`, there is a `Quorum Reads` approach, when `Query Service` retrieves views count for video B, `Coordinate Node 4` will initiate several read requests in paralle. In theory, the coordinate node may get different responses from replica nodes. Why? Because some node could have been unavailable when write request happened. That node has stale data right now, other 2 nodes has up-to-date data. `Read Quorum` defines a minimum number of nodes that have to agree on the response.
 ```
-Node1(A-F) - Node2(G-L) 
-		|			|
-	Node3(M-R) - Node4(S-Z)
+Processing Service			Node1(A-F) - Node2(G-L) 
+					\\			|			|
+Query Service	====>		Node3(M-R) - Node4(S-Z)
 ```
 - Cassandra uses version numbers to determine staleness of data, and similar to SQL database, we want to store copies of data across several different data centers
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMzk0NjM1MCwtNzMwODA1MjQ1LDE0MT
-kxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQs
-LTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbNzI4ODc2NTYzLC03MzA4MDUyNDUsMTQxOT
+E4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwt
+MTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
