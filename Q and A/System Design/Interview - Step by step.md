@@ -270,12 +270,12 @@
 	- Cassandra, logical view
 	- 
 | videoId | channelName | videoName | 15:00 | 16:00 | 17:00 | ... |
-|--|--|
-|  |  |
+|--|--|--|--|--|--|--|
+| A | SD Interview | Distributed Cache | 2 | 3 | 8 | ... |
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxOTk1MzEzMywtNjU5MTI4OTc0LC03Mz
-A4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQx
-LDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0Nj
-Q2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTE4MTQzMDM4NzQsLTY1OTEyODk3NCwtNz
+MwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0
+MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsND
+Y0NjM5NDgzXX0=
 -->
