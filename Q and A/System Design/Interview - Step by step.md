@@ -117,9 +117,9 @@
 			 - Decision making in real-time, for exmaple, we may send the total count value to a recommendation service or trending service for popular videos to be promoted to trends.
 		 - Aggregate events Cons
 			 - We can only query data the way it was aggregated, ability to filter data or aggregate it differently is very limited.
-			 - Also require
+			 - Also requires us to implement data aggregation pipeline, we need to somehow pre-aggregate data in memory before storing it in the database, this is not an easy task and later you will see why.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NDQyOTI3OSwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbLTYyODU5MDIzOSwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
