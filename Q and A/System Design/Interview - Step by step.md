@@ -71,7 +71,11 @@
 	- Consistency
 	- Cost(hardware, development, maintenance)
 		
+### High-level architecture
+- start with something simple
+	- we need a database to store data
+	- we will have a web service that processing incoming video view events and stores data 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMDU3NTY5NywtMTM0NjMzNzg5NCw0Nj
-Q2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTExMjQyNTYzLC0xMzQ2MzM3ODk0LDQ2ND
+YzOTQ4M119
 -->
