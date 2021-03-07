@@ -54,8 +54,10 @@
 		``processEvents(List<Event>)``
 		- Similar thought process can be applied for data retrieval API.
 	- The system has to return video views count for a time period
-		- 
+		- GetViewsCount becomes an action, while videoId, start and end time become input parameters.
+		``getViewsCount(videoId, startTime, endTime)``
+		- if we want to retrieve count not only for video views, but for likes and dislikes, we 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNDE4OTA3Miw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTY1MzY2NTg1Niw0NjQ2Mzk0ODNdfQ==
 -->
