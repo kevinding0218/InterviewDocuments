@@ -128,8 +128,14 @@
 		 - But there is a price to pay for all the flexibility, the system becomes more complex and expensive.
 #### Where we store the data
 - Interviewer wants to know specific database name and why we make this choice, you should know both SQL and NoSQL database can scale and perform well, so we should evaulate both types. Here is what we should recall non-functional requirements: Scalability, performance and availability, we should evaluate databases against these requirements.
+- Here is a list we should think when choosing database solutions
+	- How to scale writes?
+	- How to scale reads?
+	- How to make both writes and reads fast?
+	- How not to lose data in case of hardware faults and network partitions?
+	- How to achieve strong consistency? What are the tradeof
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4OTQxMTA3MiwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbMTk0Njg0NDkzMCwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
