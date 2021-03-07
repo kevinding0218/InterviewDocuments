@@ -111,9 +111,12 @@
 			 -  if there was a bug in some business report, we can **recalculate numbers from scratch.**
 		 - Individual events Cons
 			 - we cannot read data quickly, we need to count each individual event when total count is requested, this takes time.
-			 - it may cost a lot of money to store all the raw events, costly for a large scale (many events), Youtube gener
+			 - it may cost a lot of money to store all the raw events, costly for a large scale (many events), Youtube generates billions of views every day so raw events storage must be huge.
+		 - Aggregate events Pros
+			 - **Fast read**: we do not need to calculate each indivudal event, we just retrieve total count value.
+			 - Decision making in real-time
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NzUzOTY1OCwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbMTc3MjMzMzAxNSwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
