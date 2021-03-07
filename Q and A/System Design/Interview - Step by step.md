@@ -68,7 +68,7 @@
 	- Highly Performant: we want view count statistic to be returned in a matter of few tends of milliseconds.
 	- Highly Available: we want statistics to be shown to users all the time, survives hardware/network failures, no single point of failure
  - CAP theorem tells me I should be choosing between Availability and Consistency
-	- If we choose availability over consistency, it simply means we prefer to show stale (not update to dConsistency
+	- If we choose availability over consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all.
 	- Cost(hardware, development, maintenance)
 		
 ### High-level architecture
@@ -228,7 +228,7 @@
 										Data Center A					Data Center B
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY2MTE3MjQ3LC03MzA4MDUyNDUsMTQxOT
-E4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwt
-MTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbNzA0MDMwOTYsLTczMDgwNTI0NSwxNDE5MT
+g2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0x
+NTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
