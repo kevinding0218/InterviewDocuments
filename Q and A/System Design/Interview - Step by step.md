@@ -69,6 +69,7 @@
 	- Highly Available: we want statistics to be shown to users all the time, survives hardware/network failures, no single point of failure
  - CAP theorem tells me I should be choosing between Availability and Consistency
 	- If we choose availability over consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all.
+	- Consistency: Synchronous data replicate is slow, we usually replicate data asynchronously.
 	- Cost(hardware, development, maintenance)
 		
 ### High-level architecture
@@ -201,6 +202,7 @@
 ##### Cons
 - This solution doesn't seems simple, we have all these proxies, configuration service, leader and follower replica instances, maybe we can use NoSQL to simplify things a little bit.
 #### NoSQL
+##### Nodes and Shards
 - In NoSQL world, we split data into chunks, shards, also known as nodes
 - Instead of having leaders and followers, we say that each shard is Equal, we no longer need configuration service to monitor health of each shard. Instead, let's allow shards talk to each other and exchange information about their state.
 - To reduce network load, we don't need each shard to talk to every other shard. Every second shard may exchange information with a few other shards, no more than 3. Qucik enough state information about every node propagates throughout the cluster. This procedure is called a gossip protocol.
@@ -228,7 +230,7 @@
 										Data Center A					Data Center B
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA0MDMwOTYsLTczMDgwNTI0NSwxNDE5MT
-g2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0x
-NTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMjEyOTExNjM5NywtNzMwODA1MjQ1LDE0MT
+kxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQs
+LTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
