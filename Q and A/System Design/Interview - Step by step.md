@@ -241,8 +241,10 @@
 - In case of a leader-follower replication for example, some read replicas may be behind their master. Which leads to a situation when different users see different total count for a video.
 - This inconsistency is temporary, over time all writes will propagate to replicas. This effect is known as `Eventual Consistency`
 ##### Cassandra (Tunable Consistency)
+### How we can store the data
+#### Data Modeling between SQL and NoSQL databases
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MjcyNjU0OCwtNzMwODA1MjQ1LDE0MT
+eyJoaXN0b3J5IjpbLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0MT
 kxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQs
 LTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
