@@ -178,7 +178,8 @@ Processing Service		  |
 					/
 Query Service							Shard Proxy + MySQL-II(N-Z)
 ```
+- This setup helps us address several requirements we mentioned before, like scalability and performance.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MTM5OTQ1OSwtMTU5MDkxNTQ3MCwtMT
-M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbMjYzOTI4OTYsLTE1OTA5MTU0NzAsLTEzND
+YzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
