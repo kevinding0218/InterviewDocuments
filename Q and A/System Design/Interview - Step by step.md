@@ -24,8 +24,10 @@
 	- How many video views are processed per second?
 	- Can there be spikes in traffic and how big they may be?
 - Performance: help us quickly evaluate different design options
-	- What is expected write-to
+	- What is expected write-to-read data delay? 
+		- if we can count views several hours later than these views actually happened, both batch data processing and stream processing design options can be considered
+		- but if time matters and we need to count views on the fly in real-time, batch data processing might be slow and not considered as an option,
 - Cost: budget constraint
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3OTMzMjU0NF19
+eyJoaXN0b3J5IjpbLTY4NTAzMzAzNV19
 -->
