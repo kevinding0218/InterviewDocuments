@@ -211,9 +211,9 @@
 		|			|
 	Node3(M-R) - Node4(S-Z)
 	```
-- `Processing Service` makes a call to store views count for some video B, let's say Node 4 is selected to ser 
+- `Processing Service` makes a call to store views count for some video B, let's say `Node 4` is selected to serve this request, we can use a simple round robin algorithm to chose this initial node, or we may be smarter and chose a node that is "closet" to the client in terms of network distance. Let's call this `Node 4` a coordinator node needs to decide which node stores data for the requested video. We can use `Consistan
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ1NjY4ODk1LDE0MTkxODY2MzEsNzEwMD
+eyJoaXN0b3J5IjpbNTE0MjA3MjA5LDE0MTkxODY2MzEsNzEwMD
 U5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAs
 LTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
