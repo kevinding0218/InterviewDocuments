@@ -95,15 +95,18 @@
 | B | 2019-08-26 15: 22:47 | ... |
 
 
-	 - 
+ - 
 	 - Aggregate data (e.g per minute) in real-time
-		 - we calculate a total count per some time interval, let's say one 
+		 - we calculate a total count per some time interval, let's say one minute and we lose details of each individul event.
 
-|  |  |
-|--|--|
-|  |  |
+| videoId | timestamp | count |
+|--|--|--|
+| A | 2019-08-26 15:21 | 2 |
+| B | 2019-08-26 15:21 | 3 |
+
+	 - List item	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NTc2MjYyMiwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbMTg3ODA2MDM1NSwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
