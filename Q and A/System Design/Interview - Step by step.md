@@ -49,7 +49,7 @@
 		- we can go one step further and make the system calculate not only count function, but other functions as well, like sum and average. 
 			- By supporting sum function we can calculate such metric as "total watch time" for a video
 			- By supporting avg function, we can calculate average view duration
-		``processEvent(videoId, eventType, function) where function can be count/sum/average``
+		``processEvent(videoId, eventType, function) where function can be delegate to count/sum/average``
 		- we can further generalize the API and say that system will not just process events one by one, but a list of events as a single batch, where each event is an object that contains information about a video, type of event, time when event happened and so forth
 		``processEvents(List<Event>)``
 		- Similar thought process can be applied for data retrieval API.
@@ -58,9 +58,9 @@
 		``getViewsCount(videoId, startTime, endTime)``
 		- if we want to retrieve count not only for video views, but for likes and dislikes, we can introduce `eventType` parameter
 		``getCount(videoId, eventType, startTime, endTime) where eventType is enum of view/like/dislike/share``
-		- if we want our API return not just count statistics, but also for sum and average
-		
+		- if we want our API return not just count statistics, but also for sum and average, we should specify function as a parameter and rename our API in a more generic way, like `getStats`
+		``getStats(videoId, eventType, function, startTime, endTime) where function can be delegate to count/sum/average``
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ0NjA1NTUxLDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMTA4MzYxMDI0Nyw0NjQ2Mzk0ODNdfQ==
 -->
