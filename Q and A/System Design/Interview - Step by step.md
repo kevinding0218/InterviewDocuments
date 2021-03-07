@@ -204,13 +204,14 @@
 - In NoSQL world, we split data into chunks, shards, also known as nodes
 - Instead of having leaders and followers, we saythat each shard is equal, we no longer need configuration service to monitor health of each shard. Instead, let's allow shards talk to each other and exchange information about their state.
 - To reduce network load, we don't need each shard to talk to every other shard. Every second shard may exchange information with a few other shards, no more than 3. Qucik enough state information about every node propagates throughout the cluster. This procedure is called a gossip protocol.
+- Ok, each node in the cluster knows about other node and this is a big deal. Remember preivously we used `Cluster Proxy` component to route requests to a particular shard, as `Cluster Proxy` was the only one who knew about all shards, but now every node knows about each other. So clients of our data
 	```
 	Node1(A-F) - Node2(G-L) 
 		|			|
 	Node3(M-R) - Node4(S-Z)
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDgyNjY3NTgsMTQxOTE4NjYzMSw3MT
+eyJoaXN0b3J5IjpbLTE4MzkxNTYyOTIsMTQxOTE4NjYzMSw3MT
 AwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3
 MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
