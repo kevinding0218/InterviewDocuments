@@ -184,15 +184,15 @@
 	- For every master shard we introduce a copy of it, called read replica or a follower. We call it read replica because writes still go through a master shard, but reads may go through both master shard and a replica.
 	- We also put some replicates to a data center different from their master shard, so that if the whole data center goes down, we still have a copy of data available.
 ```	
-											Master/Lead Shard
-			 	  	Config Service		Shard Proxy + MySQL-I (A-M) 
+											Master/Lead Shard				Read/Follower Shard
+			 	  	Config Service		Shard Proxy + MySQL-I (A-M) 	Shard Proxy + MySQL-I (A-M)
 Processing Service		  |
 					\ 	  |
 					  ClusterProxy
-					/						Master/Lead Shard
-Query Service							Shard Proxy + MySQL-II(N-Z)
+					/						Master/Lead Shard				Read/Follower Shard
+Query Service							Shard Proxy + MySQL-II(N-Z)     Shard Proxy + MySQL-II(N-Z)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNzgzODQxNCwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbMTk3NjA2ODExMywtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
