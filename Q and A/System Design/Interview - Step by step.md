@@ -152,7 +152,7 @@
 							  X
 		Query Service		  -			MySQL-II(N-Z)
 		```
-		- A better approatch is to introduce a light `Cluster Proxy Server` that knows about all database machines and route traffic to the correct shard, now both services talk to the `Cluster Proxy` only, services do not need to know about each and every database machine anymore, but `Cluster Proxy` has to know.
+	- A better approatch is to introduce a light `Cluster Proxy Server` that knows about all database machines and route traffic to the correct shard, now both services talk to the `Cluster Proxy` only, services do not need to know about each and every database machine anymore, but `Cluster Proxy` has to know.
 		```
 		Processing Service 	  				MySQL-I (A-M)
 							\ ClusterProxy
@@ -160,17 +160,17 @@
 		Query Service		  				MySQL-II(N-Z)
 		```
 		- Moreover, `Cluster Proxy` needs to know when some shard dies or become unavailable due to network partition. And if new shard has been added to the database cluster, proxy should become aware of it.
-		- How do we achieve this? 
-			- We introduce a new component - `Configuration Service(e.g ZooKeeper)`, which maintains a health check connection to all shards, so it alwasy knows what database machines are available. So `Cluster Proxy` calls a particular shard
-```
-			 	  	Config Service		MySQL-I (A-M)
-Processing Service		  |
-					\ ClusterProxy
-					/
-Query Service							MySQL-II(N-Z)
-```
-			- 
+	- How do we achieve this? 
+		- We introduce a new component - `Configuration Service(e.g ZooKeeper)`, which maintains a health check connection to all shards, so it alwasy knows what database machines are available. So `Cluster Proxy` calls a particular shard
+		```
+					 	  	Config Service		MySQL-I (A-M)
+		Processing Service		  |
+							\ ClusterProxy
+							/
+		Query Service							MySQL-II(N-Z)
+		```
+		- And Instead of calling database instance directly, we can introduce one more proxy - `Shard Proxy`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjc2NjM3MTIsLTE1OTA5MTU0NzAsLT
+eyJoaXN0b3J5IjpbLTE4MzE0NzA2MTUsLTE1OTA5MTU0NzAsLT
 EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
