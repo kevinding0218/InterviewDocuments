@@ -267,7 +267,7 @@
 		- it simply means we minimize data duplication across different tables
 		- e.g, we store video names in the video info table only, and we don't store video name in other tables, otherwise because if some video name changes, we have to change it in several places which may leads to inconsistent data.
 - NoSQL
-	- Cassandra, logical view
+	- Cassandra, logical view, we choose Cassandra because it is fault-tolerant, scalable (both read and write throughput increases linearly as new machines are added), it support multi data center replication and works well with time-series data.
 	- 
 | videoId | channelName | videoName | 15:00 | 16:00 | 17:00 | ... |
 |--|--|--|--|--|--|--|
@@ -278,10 +278,10 @@
 		- Column
 		- Document
 		- Key-value
-		- 
+		- Graph
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDA5MDYzNDUsLTY1OTEyODk3NCwtNz
-MwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0
-MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsND
-Y0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMTc1ODE2ODg4NSwtNjU5MTI4OTc0LC03Mz
+A4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQx
+LDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0Nj
+Q2Mzk0ODNdfQ==
 -->
