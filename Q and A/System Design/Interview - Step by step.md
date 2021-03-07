@@ -191,8 +191,9 @@ Processing Service		  |
 					  ClusterProxy
 					/						Master/Lead Shard				Read/Follower Shard
 Query Service							Shard Proxy + MySQL-II(N-Z)     Shard Proxy + MySQL-II(N-Z)
+											Data Center A					Data Center B
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3NjA2ODExMywtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbLTk3NDY1Njc4MCwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
