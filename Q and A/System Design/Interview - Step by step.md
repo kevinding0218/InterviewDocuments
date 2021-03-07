@@ -234,13 +234,15 @@
 										Data Center A					Data Center B
 	```
 #### Consistency
+##### Cons of not choose consistency
 - If we choose availability over consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all.
 - Synchronous data replicate is slow, we usually replicate data asynchronously.
+##### Eventual Consistency
 - In case of a leader-follower replication for example, some read replicas may be behind their master. Which leads to a situation when different users see different total count for a video.
 - This inconsistency is temporary, over time all writes will propagate to replicas. This effect is known as `Eventual Consistency`
 ##### Cassandra (Tunable Consistency)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMTU1NDk3MiwtNzMwODA1MjQ1LDE0MT
+eyJoaXN0b3J5IjpbMTQ2MjcyNjU0OCwtNzMwODA1MjQ1LDE0MT
 kxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQs
 LTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
