@@ -40,7 +40,7 @@
 	- Non-functional requirements, we mean system qualities, such as fast, fault-tolerant, secure, basically how system is supposed to be
 
 ### Functional Requirements - API
-- After figureing out what the system should do, you write it down on the whiteboard in a few sentences, e.g
+- After figureing out what the system should do, you write it down on the whiteboard in a few sentences, help you identifiy name of APIs, input parameters and if needed, make several iteration to generalize APIs. e.g
 	- The system has to count video view events
 		- count view events is the actual action the system performs and `videoId` becomes the input
 		``countViewEvent(videoId)``
@@ -60,8 +60,11 @@
 		``getCount(videoId, eventType, startTime, endTime) where eventType is enum of view/like/dislike/share``
 		- if we want our API return not just count statistics, but also for sum and average, we should specify function as a parameter and rename our API in a more generic way, like `getStats`
 		``getStats(videoId, eventType, function, startTime, endTime) where function can be delegate to count/sum/average``
-- Technique help you identifiy name of APIs, input parameters
+
+### Non-Functional APIs
+- Usually interviewers will not tell us specific non-function requirements, most 
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTE5ODA3OTQyNzgsLTEzNDYzMzc4OTQsND
+Y0NjM5NDgzXX0=
 -->
