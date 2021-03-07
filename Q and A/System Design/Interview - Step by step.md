@@ -82,8 +82,12 @@
 	- more specifically, we need to think what data we want to store and how, we need to define a data model.
 - What we store
 	- we have 2 options of how we want to store
-		- we may store each individual video view event. 
+		- we may store each individual video view event
+		- or we may calcuate views on the fly and store aggregated data.
+	- Invidual events (every click)
+		- we need capture all attributes of the event: videoId, 
+	- Aggregate data (e.g per minute) in real-time
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjU4MzE2OTksLTEzNDYzMzc4OTQsND
+eyJoaXN0b3J5IjpbLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsND
 Y0NjM5NDgzXX0=
 -->
