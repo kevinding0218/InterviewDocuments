@@ -212,10 +212,10 @@
 	Node3(M-R) - Node4(S-Z)
 	```
 - `Processing Service` makes a call to store views count for some video B, let's say `Node 4` is selected to serve this request, we can use a simple round robin algorithm to chose this initial node, or we may be smarter and chose a node that is "closet" to the client in terms of network distance. 
-- Let's call this `Node 4` a coordinator node needs to decide which node stores data for the requested video. We can use `Consistent Hashing` algorithm to pick the node.
-- 
+- Let's call this `Node 4` a `Coordinator Node` needs to decide which node stores data for the requested video. We can use `Consistent Hashing` algorithm to pick the node. As you may see, `Node 1` should store the data for the video B. `Coordinate Node` will make a call to the `Node 1` and wait for the response.
+- Actually nothing stops `Coord
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcxMD
-A1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcw
-LC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbNzEyNDU0NDUwLC03MzA4MDUyNDUsMTQxOT
+E4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwt
+MTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
