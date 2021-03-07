@@ -66,9 +66,12 @@
 - Focus on scalability, performance and availability as top priority requirements, e.g
 	- Scalable: we need to design such should handle tens of thousands of requests per second
 	- Highly Performant: we want view count statistic to be returned in a matter of few tends of milliseconds.
-	- Highly Available: we want statistics to be shown to users all the time, s
+	- Highly Available: we want statistics to be shown to users all the time, survives hardware/network failures, no single point of failure
+- CAP theorem tells me I should be choosing between Availability and Consistency
+	- Consistency
+	- Cost(hardware, development, maintenance)
 		
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NTgyNjY3MSwtMTM0NjMzNzg5NCw0Nj
+eyJoaXN0b3J5IjpbMTUxMDU3NTY5NywtMTM0NjMzNzg5NCw0Nj
 Q2Mzk0ODNdfQ==
 -->
