@@ -147,8 +147,9 @@
 	``MySQL-I (A-M) + MySQL-II(N-Z)``
 	- And because we now have several machines, services that talk to the database need to know how many machines exist and which one to pick to store and retrieve data.
 	- We discussed before that we have `Processing Service` that stores data in the database, and `Query Service` that retrieve data from the database, we could have made both these services to call every database machine directly.
-		- A better approatch is to introduce a light cluster proxy server that knows about all database machines and route traffic to the correct shard, now both services
+		- A better approatch is to introduce a light `Cluster Proxy Server` that knows about all database machines and route traffic to the correct shard, now both services talk to the `Cluster Proxy` only, services do not need to know about each and every database machine anymore, but `Cluster Proxy` has to know.
+		- Moreover, `Cluster Proxy` needs to know when some shard dies or become unavailable due to network, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTQwNDcxMDMsLTE1OTA5MTU0NzAsLT
-EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMTI1NzYwOTY3MiwtMTU5MDkxNTQ3MCwtMT
+M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
