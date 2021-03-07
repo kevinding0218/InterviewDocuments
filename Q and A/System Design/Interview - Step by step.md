@@ -85,9 +85,16 @@
 		- we may store each individual video view event
 		- or we may calcuate views on the fly and store aggregated data.
 	- Invidual events (every click)
-		- we need capture all attributes of the event: videoId, 
+		- we need capture all attributes of the event: videoId, timestamp, user related information such as country, device type, operating system and so on	
+| videoId |  |
+|--|--|
+|  |  |
+
+
+
+
 	- Aggregate data (e.g per minute) in real-time
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsND
-Y0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbNTcyMzgzODU5LC0xNTkwOTE1NDcwLC0xMz
+Q2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
