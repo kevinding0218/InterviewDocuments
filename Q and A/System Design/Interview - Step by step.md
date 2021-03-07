@@ -235,10 +235,12 @@
 	```
 #### Consistency
 - If we choose availability over consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all.
-- Consistency: Synchronous data replicate is slow, we usually replicate data asynchronously.
+- Synchronous data replicate is slow, we usually replicate data asynchronously.
 - In case of a leader-follower replication for example, some read replicas may be behind their master. Which leads to a situation when different users see different total count for a video.
+- This inconsistency is temporary, over time all writes will propagate to replicas. This effect is known as `Eventual Consistency`
+##### Cassandra (Tunable Consistency)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDI2OTA4OTcsLTczMDgwNTI0NSwxND
-E5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0
-LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMTMyMTU1NDk3MiwtNzMwODA1MjQ1LDE0MT
+kxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQs
+LTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
