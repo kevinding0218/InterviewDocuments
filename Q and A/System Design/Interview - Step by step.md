@@ -205,13 +205,15 @@
 - Instead of having leaders and followers, we saythat each shard is equal, we no longer need configuration service to monitor health of each shard. Instead, let's allow shards talk to each other and exchange information about their state.
 - To reduce network load, we don't need each shard to talk to every other shard. Every second shard may exchange information with a few other shards, no more than 3. Qucik enough state information about every node propagates throughout the cluster. This procedure is called a gossip protocol.
 - Ok, each node in the cluster knows about other node and this is a big deal. Remember preivously we used `Cluster Proxy` component to route requests to a particular shard, as `Cluster Proxy` was the only one who knew about all shards, but now every node knows about each other. So clients of our database no longer need to call a special component for routng requests.
+- Clients may call any node in the cluster and node itself will decide where to forward this request further.
 	```
 	Node1(A-F) - Node2(G-L) 
 		|			|
 	Node3(M-R) - Node4(S-Z)
 	```
+- `Processing Service` makes a call to store views count for some video B, let's say Node 4 is selected to ser 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNTIyNjIxMywxNDE5MTg2NjMxLDcxMD
-A1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcw
-LC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbNzQ1NjY4ODk1LDE0MTkxODY2MzEsNzEwMD
+U5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAs
+LTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
