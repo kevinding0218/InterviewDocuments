@@ -275,13 +275,13 @@
 - 
 	- Instead of adding rows in the tables of SQL databases, we keep adding columns every hour
 	- 4 Types of NoSQL databases
-		- Column: Cassandra, Hb
+		- Column: Cassandra, HBase has a master-based architecture
 		- Document: MongoDB, uses leader-based replication.
 		- Key-value
 		- Graph
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQwMDA0MTAsLTY1OTEyODk3NCwtNz
-MwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0
-MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsND
-Y0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbOTYzMzY1MzMxLC02NTkxMjg5NzQsLTczMD
+gwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEs
+MTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2ND
+YzOTQ4M119
 -->
