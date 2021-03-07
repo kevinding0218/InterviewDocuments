@@ -72,13 +72,13 @@
 	- Cost(hardware, development, maintenance)
 		
 ### High-level architecture
-- start with something simple
+- Start with something SIMPLE
 	- we need a database to store data
 	- we will have a web service that processing incoming video view events and stores data in the database - "Processing Service"
 	- we will have another web service that to retrieve view counts from the database - "Query Service"
 ``User -> Browser -> Processing Service -> Database -> Query Service -> Browser -> User``
-
+- Interviewers may start asking questions about any component we outlined in the high-level architecture.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTM0NDc2MzcsLTEzNDYzMzc4OTQsND
-Y0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbNDI3NjQ2NDQyLC0xMzQ2MzM3ODk0LDQ2ND
+YzOTQ4M119
 -->
