@@ -143,9 +143,11 @@
 - Sharding or Horizontal Partitioning
 	- Things are simple when we can store all our data on a single database machine. 
 	``MySQL-I (A-Z)``
-	- But when a single machine is not enough, we need to introduce more machines and split data between them, this procedure is called sharding or horizontal partitioning.
+	- But when a single machine is not enough, we need to introduce more machines and split data between them, this procedure is called sharding or horizontal partitioning, each shard stores a subset of all the data.
 	``MySQL-I (A-M) + MySQL-II(N-Z)``
+	- And because we now have several machines, services that talk to the database need to know how many machines exist and which one to pick to store and retrieve data.
+	- We discussed before that we have `Processing Service` that stores data in the database
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MDgwMDcyNiwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbLTM1MjQ4Mjg2MCwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
