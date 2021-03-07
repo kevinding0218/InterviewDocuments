@@ -49,7 +49,9 @@
 		- we can go one step further and make the system calculate not only count function, but other functions as well, like sum and average. 
 			- By supporting sum function we can calculate such metric as "total watch time" for a video
 			- By supporting avg function, we can calculate average view duration
-		``processEvent(videoId, ev
+		``processEvent(videoId, eventType, function) where function can be count/sum/average``
+		- we can further generalize the API and say that system will not just process events one by one, but a list of events as a single batch, where each event is an object that contains information about a video, type of event, time when event happened and so forth
+		``processEve
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NTQyNDMxMyw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbMTE3NTcxNzc1NCw0NjQ2Mzk0ODNdfQ==
 -->
