@@ -28,8 +28,10 @@
 		- if we can count views several hours later than these views actually happened, both batch data processing and stream processing design options can be considered
 		- but if time matters and we need to count views on the fly in real-time, batch data processing might be slow and not considered as an option,
 	- What is exepcted p99 latency for read queries? how fast data must be retrieved from the system
-		- if interviewer tells us that response time must be as small as possible,  it's a hint that we must count views when we write data and we should do minimal or no counting
-- Cost: budget constraint
+		- if interviewer tells us that response time must be as small as possible,  it's a hint that we must count views when we write data, and we should do minimal or no counting calculation when we read data, in other words, data must already be aggregated.
+- Cost: help us evaluate technology stack
+	- Should the design minimize the cost of development?
+		- if asked to minimize development cost, we should be leaning towards well-regarded open-s
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MjM5NTE4N119
+eyJoaXN0b3J5IjpbNzA4ODczMDI5XX0=
 -->
