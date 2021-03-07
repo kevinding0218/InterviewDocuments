@@ -171,15 +171,17 @@
 		```
 	- Shard Proxy
 		- And Instead of calling database instance directly, we can introduce one more proxy - `Shard Proxy`, that sits in front of database. `Shard Proxy` will help us in many different ways: it can cache query results, monitor database instance health and publish metrics, terminate queries that take too long to return data and many more.
-```
-			 	  	Config Service		Shard Proxy + MySQL-I (A-M)
-Processing Service		  |
-					\ ClusterProxy
-					/
-Query Service							Shard Proxy + MySQL-II(N-Z)
-```
-- This setup helps us address several requirements we mentioned before, like scalability and performance. But availability is not yet addressed.
+		```
+					 	  	Config Service		Shard Proxy + MySQL-I (A-M)
+		Processing Service		  |
+							\ ClusterProxy
+							/
+		Query Service							Shard Proxy + MySQL-II(N-Z)
+		```
+		- This setup helps us address several requirements we mentioned before, like scalability and performance. But availability is not yet addressed.
+- What if database shard died? How to make sure data is not getting lost?
+	- We need replicate data. Lets call each existed shard a master shard 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NTUyMTU0MCwtMTU5MDkxNTQ3MCwtMT
+eyJoaXN0b3J5IjpbLTk3NTAyNDE0MCwtMTU5MDkxNTQ3MCwtMT
 M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
