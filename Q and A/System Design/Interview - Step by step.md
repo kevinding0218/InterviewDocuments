@@ -213,9 +213,9 @@
 	```
 - `Processing Service` makes a call to store views count for some video B, let's say `Node 4` is selected to serve this request, we can use a simple round robin algorithm to chose this initial node, or we may be smarter and chose a node that is "closet" to the client in terms of network distance. 
 - Let's call this `Node 4` a `Coordinator Node` needs to decide which node stores data for the requested video. We can use `Consistent Hashing` algorithm to pick the node. As you may see, `Node 1` should store the data for the video B. `Coordinate Node` will make a call to the `Node 1` and wait for the response.
-- Actually nothing stops `Coord
+- Actually nothing stops `Coordinator Node` to call multiple nodes to replicate data, for example 3 nodes if we want 3 copies of data. Waiting for 3 responses from replicate may be too slow, so we may consider the write to be successful as soon as only 2 replication requests succeeded. This approach is called `Quora
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEyNDU0NDUwLC03MzA4MDUyNDUsMTQxOT
-E4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwt
-MTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTUxNTAxMDIwMiwtNzMwODA1MjQ1LDE0MT
+kxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQs
+LTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
