@@ -201,10 +201,10 @@
 ##### Cons
 - This solution doesn't seems simple, we have all these proxies, configuration service, leader and follower replica instances, maybe we can use NoSQL to simplify things a little bit.
 #### NoSQL
-- In NoSQL world, we split data into chunks, shards, also known as nodes.
+- In NoSQL world, we split data into chunks, shards, also known as nodes, but instead of having leaders and followers, we saythat each shard is equal
 ``Node1(A-F) Node2(G-L) Node3(M-R) Node4(S-Z)``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE2Mjc4ODk4LDE0MTkxODY2MzEsNzEwMD
+eyJoaXN0b3J5IjpbNzUxMzcwMTIyLDE0MTkxODY2MzEsNzEwMD
 U5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAs
 LTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
