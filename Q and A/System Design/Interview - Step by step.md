@@ -31,7 +31,9 @@
 		- if interviewer tells us that response time must be as small as possible,  it's a hint that we must count views when we write data, and we should do minimal or no counting calculation when we read data, in other words, data must already be aggregated.
 - Cost: help us evaluate technology stack
 	- Should the design minimize the cost of development?
-		- if asked to minimize development cost, we should be leaning towards well-regarded open-s
+		- if asked to minimize development cost, we should be leaning towards well-regarded open-source frameworks
+	- Should the design minimize the cost of maintenance?
+		- if future maintenance cost is a primary concern, we should consider publich cloud services
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA4ODczMDI5XX0=
+eyJoaXN0b3J5IjpbLTE1MDcyOTA3NzZdfQ==
 -->
