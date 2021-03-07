@@ -139,8 +139,10 @@
 	- How to make it extensible for data model changes in the future?
 	- Where to run (clous vs on-premises data centers)? 
 	- How much money will it all cost?
-
+#### SQL database
+- Sharding or Horizontal Partitioning
+	- Things are simple when we can store all our data on a single database machine. But when a single machine is not enough, we need to introduce more machines and split data between them, this procedure 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI2OTUxODg0LC0xNTkwOTE1NDcwLC0xMz
-Q2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbLTE0NjEzODU4OTAsLTE1OTA5MTU0NzAsLT
+EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
