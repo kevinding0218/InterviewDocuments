@@ -133,9 +133,14 @@
 	- How to scale reads?
 	- How to make both writes and reads fast?
 	- How not to lose data in case of hardware faults and network partitions?
-	- How to achieve strong consistency? What are the tradeof
+	- How to achieve strong consistency? What are the tradeoffs?
+	- How to recover data in case of an outage?
+	- How to ensure data security?
+	- How to make it extensible for data model changes in the future?
+	- Where to run (clous vs on-premises data centers)? 
+	- How much money will it all cost?
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0Njg0NDkzMCwtMTU5MDkxNTQ3MCwtMT
-M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbMzI2OTUxODg0LC0xNTkwOTE1NDcwLC0xMz
+Q2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
