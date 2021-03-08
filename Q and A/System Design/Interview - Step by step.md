@@ -307,10 +307,12 @@
 ##### Pull
 - Pull means that the processing service pulls events from some temporary storage.
 ##### Which is better?
-- Al
+- Although answer is that both options are totally valid and we can make both work, `Pull` has more advantages, as it provides a better fault-tolerance support and easier to scale.
+- Let's say we have 2 users opening two different videos A and B
+	- Processing service updates in-memory 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMjkwMDkzMSwtMTk1MjI3NDA5MiwtMT
-czMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4
-NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMT
-U5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbODUxMTU2MTQyLC0xOTUyMjc0MDkyLC0xNz
+MwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2
+NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNT
+kwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
