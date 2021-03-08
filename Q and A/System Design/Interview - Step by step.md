@@ -296,13 +296,14 @@
 #### Data aggregation basics
 ##### 1st Option
 `Processing Service` increment counter for every incoming event, 
-- for example, if 3 users opened the same video A, the processing service simply increment total count in the database 3 times
+- for example, if 3 users opened the same video A, the `Processing Service` simply increment total count in the database 3 times
 ##### 2nd Option
 We accumulate data in the `Processing Service` memory for some period of time, let's say several seconds, and then add the accumulated value to the database counter.
+- for example, if 3 users opened the same video A, the `Processing Service` takes each event and increments in-memory counter, and every several seconds in-memory counter value is sent to the database to calculate the final count
 ##### Whether or not we should pre-aggregate data in the processing service?
-- First option: Process Service increment counter for every incoming event, meaning if 3 users opened the same video A, the processing service simply increment total count in the database 3 times
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MDU4OTcwMywtMTk1MjI3NDA5MiwtMT
+eyJoaXN0b3J5IjpbMTc5NDQxODg0MSwtMTk1MjI3NDA5MiwtMT
 czMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4
 NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMT
 U5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
