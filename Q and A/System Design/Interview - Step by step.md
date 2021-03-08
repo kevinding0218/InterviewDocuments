@@ -288,9 +288,14 @@
 	- How to achieve high throughput?
 	- How not to lose data when processing service machine node crashes?
 	- What to do when database is unavailable or slow?
+	- How to make data processing scalable, reliable and fast?
+		- Scalable = Partitioning
+		- Reliable = Replication and checkpointing
+		- Fast = In-memory
+		- Let's see if we can combine all 3
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDk4MDA5NDksLTE3MzAxNjI2ODQsLT
-Y1OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5
-Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLT
-EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMTYwMDEwNzA2MSwtMTczMDE2MjY4NCwtNj
+U5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2
+ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMT
+M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
