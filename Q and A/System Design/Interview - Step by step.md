@@ -283,19 +283,21 @@
 #### Define Process in our example
 - Process basically means we get a video view event and increment several counters, total and per hour counters.
 - Where to start? Start with requirement we wrote on the whiteboard, we want the processing service to scale together with increase in video views.
-- Think of following questions
-	- How to scale?
-	- How to achieve high throughput?
-	- How not to lose data when processing service machine node crashes?
-	- What to do when database is unavailable or slow?
-	- How to make data processing scalable, reliable and fast?
-		- Scalable = Partitioning
-		- Reliable = Replication and checkpointing
-		- Fast = In-memory
-		- Let's see if we can combine all 3
+#### Think of following questions
+- How to scale?
+- How to achieve high throughput?
+- How not to lose data when processing service machine node crashes?
+- What to do when database is unavailable or slow?
+- How to make data processing scalable, reliable and fast?
+	- Scalable = Partitioning
+	- Reliable = Replication and checkpointing to avoid data loss
+	- Fast = Keep things In-memory and minimize disk reads
+	- Let's see if we can combine all 3
+#### Data aggregation basics
+- Whether or not we should pre-aggrega
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMDEwNzA2MSwtMTczMDE2MjY4NCwtNj
-U5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2
-ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMT
-M0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTE0MDI0MTkxOTgsLTE3MzAxNjI2ODQsLT
+Y1OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5
+Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLT
+EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
