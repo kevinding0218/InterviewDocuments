@@ -293,19 +293,20 @@
 	- Reliable = Replication and checkpointing to avoid data loss
 	- Fast = Keep things In-memory and minimize disk reads
 	- Let's see if we can combine all 3
-#### Data aggregation basics
+#### Should pre-aggregate data in the processing service?
 ##### 1st Option
-`Processing Service` increment counter for every incoming event, 
-- for example, if 3 users opened the same video A, the `Processing Service` simply increment total count in the database 3 times
+- `Processing Service` increment counter for every incoming event, 
+	- for example, if 3 users opened the same video A, the `Processing Service` simply increment total count in the database 3 times
 ##### 2nd Option
-We accumulate data in the `Processing Service` memory for some period of time, let's say several seconds, and then add the accumulated value to the database counter.
-- for example, if 3 users opened the same video A, the `Processing Service` takes each event and increments in-memory counter, and every several seconds in-memory counter value is sent to the database to calculate the final count
-For larger scale systems, 2nd option is better
-
-
+- We accumulate data in the `Processing Service` memory for some period of time, let's say several seconds, and then add the accumulated value to the database counter.
+	- for example, if 3 users opened the same video A, the `Processing Service` takes each event and increments in-memory counter, and every several seconds in-memory counter value is sent to the database to calculate the final count
+- 2nd Option might be better when work in large scale systems
+#### Push or Pull?
+##### Push
+- Push 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODA3MjU3MjksLTE5NTIyNzQwOTIsLT
-E3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkx
-ODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLT
-E1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMTUyNjA2NDU1MiwtMTk1MjI3NDA5MiwtMT
+czMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4
+NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMT
+U5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
