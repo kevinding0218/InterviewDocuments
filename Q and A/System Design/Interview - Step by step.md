@@ -303,9 +303,13 @@
 - 2nd Option might be better when work in large scale systems, let's assuming we go with 2nd option
 #### Push or Pull?
 ##### Push
-- Push 
+- Push means that some other service sends events synchronously to the processing service.
+##### Pull
+- Pull means that the processing service pulls events from some temporary storage.
+##### Which is better?
+- Al
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MTQ4NDE1OSwtMTk1MjI3NDA5MiwtMT
+eyJoaXN0b3J5IjpbMTcxMjkwMDkzMSwtMTk1MjI3NDA5MiwtMT
 czMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4
 NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMT
 U5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
