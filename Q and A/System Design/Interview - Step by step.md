@@ -283,9 +283,14 @@
 #### Define Process in our example
 - Process basically means we get a video view event and increment several counters, total and per hour counters.
 - Where to start? Start with requirement we wrote on the whiteboard, we want the processing service to scale together with increase in video views.
+- Think of following questions
+	- How to scale?
+	- How to achieve high throughput?
+	- How not to lose data when processing service machine node crashes?
+	- What to do when database is unavailable or slow?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNz
-MwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0
-MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsND
-Y0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTEyMDk4MDA5NDksLTE3MzAxNjI2ODQsLT
+Y1OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5
+Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLT
+EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
