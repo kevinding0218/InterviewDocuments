@@ -294,13 +294,15 @@
 	- Fast = Keep things In-memory and minimize disk reads
 	- Let's see if we can combine all 3
 #### Data aggregation basics
-##### First option
-Process Service increment counter for every incoming event, meaning if 3 users opened the same video A, the processing service simply increment total count in the database 3 times
-##### 2n
+##### 1st Option
+`Processing Service` increment counter for every incoming event, 
+- for example, if 3 users opened the same video A, the processing service simply increment total count in the database 3 times
+##### 2nd Option
+We accumulate data in the `Processing Service` memory for some period of time, let's say several seconds, and then add the accumulated value to the database counter.
 ##### Whether or not we should pre-aggregate data in the processing service?
 - First option: Process Service increment counter for every incoming event, meaning if 3 users opened the same video A, the processing service simply increment total count in the database 3 times
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyODY2NzExNywtMTk1MjI3NDA5MiwtMT
+eyJoaXN0b3J5IjpbLTY0MDU4OTcwMywtMTk1MjI3NDA5MiwtMT
 czMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4
 NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMT
 U5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
