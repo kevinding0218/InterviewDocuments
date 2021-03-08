@@ -310,9 +310,11 @@
 - Although answer is that both options are totally valid and we can make both work, `Pull` has more advantages, as it provides a better fault-tolerance support and easier to scale.
 - Let's say we have 2 users opening two different videos A and B
 	- Processing service updates in-memory counters, returns successful responses back to client and the machine crashes without sending this updated in-memory data to the database, then Data is lost.
+##### Alternative Push
+- The alternative to `Push` approach is for the processing service to pull events from a storage.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDM4NjUzOTcsLTE5NTIyNzQwOTIsLT
-E3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkx
-ODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLT
-E1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbNjc5MDExODYyLC0xOTUyMjc0MDkyLC0xNz
+MwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2
+NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNT
+kwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
