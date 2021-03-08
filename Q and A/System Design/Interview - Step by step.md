@@ -294,9 +294,10 @@
 	- Fast = Keep things In-memory and minimize disk reads
 	- Let's see if we can combine all 3
 #### Data aggregation basics
-- Whether or not we should pre-aggrega
+##### Whether or not we should pre-aggregate data in the processing service?
+- Process Service increment counter for every incoming event.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDI0MTkxOTgsLTE3MzAxNjI2ODQsLT
+eyJoaXN0b3J5IjpbLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLT
 Y1OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5
 Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLT
 EzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
