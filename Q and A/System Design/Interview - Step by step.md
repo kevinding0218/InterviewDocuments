@@ -300,12 +300,12 @@
 ##### 2nd Option
 - We accumulate data in the `Processing Service` memory for some period of time, let's say several seconds, and then add the accumulated value to the database counter.
 	- for example, if 3 users opened the same video A, the `Processing Service` takes each event and increments in-memory counter, and every several seconds in-memory counter value is sent to the database to calculate the final count
-- 2nd Option might be better when work in large scale systems
+- 2nd Option might be better when work in large scale systems, let's assuming we go with 2nd option
 #### Push or Pull?
 ##### Push
 - Push 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNjA2NDU1MiwtMTk1MjI3NDA5MiwtMT
+eyJoaXN0b3J5IjpbMTg0MTQ4NDE1OSwtMTk1MjI3NDA5MiwtMT
 czMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4
 NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMT
 U5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
