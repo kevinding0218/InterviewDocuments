@@ -423,13 +423,23 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 	2. The client initiates the connection by using sockets. When a client makes a request, the socket that handles that connection on the server-side is blocked. This happens within a single execution thread. So the thread that handles that connection is blocked as well.
 	3. When another client sends a request at the same time, we need to create one more thread to process that request. This is how blocking systems work.They create one thread per connection. 
 	4. Modern multi-core machines can handle hundreds of concurrent connections each. But let's say server starts to experience a slow down and number of active connections and threads increases. When this happens, machines can go into a death spiral and the whole cluster of machines may die. This is why we need `Rate Limiting` solution, to help keep systems stable during traffic peeks.
+- 
+	- Modern multi-core machines can handle hundreds
+of concurrent connections each.
+But let's say server starts to experience
+a slow down and number of active connections
+and threads increases.
+When this happens, machines can go into a
+death spiral and the whole cluster of machines
+may die.
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MDc0NDEwLC0xOTEwNjMyOTQ3LC02Mj
-E3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAw
-NzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNj
-g0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcx
-MDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1ND
-cwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMTc2NTEyNjE3NiwxNjYwNzQ0MTAsLTE5MT
+A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
+MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOT
+IsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0
+MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3Nj
+QsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+
 -->
