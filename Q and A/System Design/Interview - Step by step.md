@@ -355,7 +355,7 @@
 		```
 												In-memory Store	
 														|
-		Partition/Shard	=> Partition Consumer		Aggregator									Database								
+		Partition/Shard	=> Partition Consumer	=>	Aggregator	=>	Internal Queue	=>  Database Writer =>	Database								
 									^
 								    |
 							Deduplicate Cache				
@@ -367,9 +367,9 @@
 		- Remember we have a single thread that reads events from the partition, but nothing stops us from processing these events by multiple threads, to speed up processing, especially if processing takes time.
 		- By sending data to the internal queue we decouple consumption and processing.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk3MjE2Njg1LC0xNzg0NzcxMTU4LDIxMj
-EwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2
-MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMS
-w3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkx
-NTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTIwMzA5ODIzMjEsLTE3ODQ3NzExNTgsMj
+EyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMw
+MTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2Nj
+MxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkw
+OTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
