@@ -321,10 +321,16 @@ A
 B
 ```
 ##### Checkpointing
-
+- Intentionally draw the storage as a queue, because when events arrive we put them in that storage in order, one by one.
+- Fixed order allows us to assign an offset for each event in the storage
+``
+Checkpointing					C	B	A
+					offset		
+``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMT
-czMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4
-NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMT
-U5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbMTIwODM4NjQ1OSwtNjE4NDI1MTUxLC0xOT
+UyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgw
+NTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMT
+M2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYz
+OTQ4M119
 -->
