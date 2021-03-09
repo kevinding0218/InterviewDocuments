@@ -325,10 +325,10 @@ B
 - Fixed order allows us to assign an offset for each event in the storage
 ``
 Checkpointing					C	B	A
-					offset		
+					offset		2	1	0
 ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwODM4NjQ1OSwtNjE4NDI1MTUxLC0xOT
+eyJoaXN0b3J5IjpbMTQyMTU2NDkzMiwtNjE4NDI1MTUxLC0xOT
 UyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgw
 NTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMT
 M2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYz
