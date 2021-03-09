@@ -353,14 +353,16 @@
 	- Consumer does one more important thing - helps to eliminate duplicate events. If the same message was submitted to the partition several times, we need a mechanism to avoid double counting.
 	- To achieve this we use a distributed cache that stores unique event identifiers for, let's say last 10 minutes, and if several identical messages arrived within a 10 minutes interval, only one of them (the first one) will be processed.
 		```
-		Partition/Shard	=> Partition Consumer											Database
+												In-memory Store	
+														|
+		Partition/Shard	=> Partition Consumer		Aggregator									Database								
 									^
 								    |
 							Deduplicate Cache				
 		```
-	- Even then comes to the component d
+	- Even then comes to the component that does in-memory counting.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNDQ3NzMwOCwyMTIxMDA3Mzc0LC02MT
+eyJoaXN0b3J5IjpbMTk4Nzk2MTk4MywyMTIxMDA3Mzc0LC02MT
 g0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEy
 ODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LD
 Q0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYz
