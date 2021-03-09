@@ -301,6 +301,7 @@
 - We accumulate data in the `Processing Service` memory for some period of time, let's say several seconds, and then add the accumulated value to the database counter.
 	- for example, if 3 users opened the same video A, the `Processing Service` takes each event and increments in-memory counter, and every several seconds in-memory counter value is sent to the database to calculate the final count
 - 2nd Option might be better when work in large scale systems, let's assuming we go with 2nd option
+### Some Important Concept
 #### Push or Pull?
 ##### Push
 - Push means that some other service sends events synchronously to the processing service.
@@ -343,10 +344,11 @@ Partitioning			  B B B		=> 	B = 3	=> Database
 							  C		=> 	C = 1
 ``
 	- As you may see, partitioning allows us to parrallelize events processing
+	- More events we get, more partitions we create.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mzc2OTY0MzksMjEyMTAwNzM3NCwtNj
-E4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkx
-Mjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OS
-w0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2
-MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMTkyOTEyODQxNSwyMTIxMDA3Mzc0LC02MT
+g0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEy
+ODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LD
+Q0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYz
+Mzc4OTQsNDY0NjM5NDgzXX0=
 -->
