@@ -431,18 +431,22 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 	- Blocking systems are easy to debug.And this is a big deal.
 	- In blocking systems we have a thread per request and we can easily track progress of the request by looking into the thread's stack. Exceptions pop up the stack and it is easy to catch and handle them. We can use thread local variables in blocking systems.
 ##### Buffering and Batching
-- Why use Batching
+- Why use Buffering and Batching
 	- There are thousands of video view events happening on Youtube every second. To process all these requests, API Gateway cluster has to be big in size. Thousands of machines.
 	- If we then pass each individual event to the partitioner service, partitioner service cluster of machines has to be big as well. This is not efficient.
-- 
+	- We should somehow combine events together and send several of them in a single request to the partitioner service. This is what batching is about.
+- How it works then
+	- Instead of sending each event individually, we first put events into a buffer. We then wait up to several seconds before sending buffer's content or until batch fills up, whichever comes first.
+	- There are many benefits of batching: it increases throughput, it helps to save on cost, request compression is more effective. But there are drawbacks as well. It introduces some complexity both on the client and the server side.
+	- For example think of a scenario when partitioner service processes a batch request and several events from the batch fail, while other succeed. Should we re-send the whole batch? Or only failed events?
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNTU5NzQ3MSwxNjYwNzQ0MTAsLTE5MT
-A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
-MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOT
-IsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0
-MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3Nj
-QsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTEyODQ3NTM2NTcsMTY2MDc0NDEwLC0xOT
+EwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3
+NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MD
+kyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwx
+NDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1Nz
+Y0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 
 -->
