@@ -424,19 +424,19 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 	3. When another client sends a request at the same time, we need to create one more thread to process that request. This is how blocking systems work.They create one thread per connection. 
 	4. Modern multi-core machines can handle hundreds of concurrent connections each. But let's say server starts to experience a slow down and number of active connections and threads increases. When this happens, machines can go into a death spiral and the whole cluster of machines may die. This is why we need `Rate Limiting` solution, to help keep systems stable during traffic peeks.
 -  non-blockingI/O
-	- When we can use a single thread on the server side to handle multiple concurrent connections. Server just queues the request and the actual I/O is then processed at some later point. Piling up requests in the queue are far less expensive than piling up threads. Non-blocking systems are more efficient and as a result has higher throughput. 
-	- You may be wondering that if non-blocking systems are so great, why we still have so many blocking systems out there? Because everything has a price. And the price of non-blocking systems is increased complexity of operations. Blocking systems are easy to debug. And this is a big deal.
+	- When we can use a single thread on the server side to handle multiple concurrent connections. Server just queues the request and the actual I/O is then processed at some later point. 
+	- Piling up requests in the queue are far less expensive than piling up threads. Non-blocking systems are more efficient and as a result has higher throughput. 
+	- You may be wondering that if non-blocking systems are so great, why we still have so many blocking systems out there? Because everything has a price. And the price of non-blocking systems is increased complexity of operations. Blocking systems are easy to debug. 
 - Blocking Pros
 	- Blocking systems are easy to debug.And this is a big deal.
 	- In blocking systems we have a thread per request and we can easily track progress of the request by looking into the thread's stack. Exceptions pop up the stack and it is easy to catch and handle them. We can use thread local variables in blocking systems.
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxOTE1Mjg4OSwxNjYwNzQ0MTAsLTE5MT
-A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
-MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOT
-IsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0
-MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3Nj
-QsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
-
+eyJoaXN0b3J5IjpbNTQyNjE1MDgsMTY2MDc0NDEwLC0xOTEwNj
+MyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzEx
+NTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC
+0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5
+MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC
+0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
