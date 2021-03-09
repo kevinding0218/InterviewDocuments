@@ -338,14 +338,15 @@ B
 - Every queue physically lives on its own machine and stores a subset of all events.
 	- For example, we compute a hash based on video Identifier and use the hash number to pick a queue
 ``
-							A A
-Partitioning			  B B B
-						
+							A A		=> 	A = 2
+Partitioning			  B B B		=> 	B = 3	=> Database
+							  C		=> 	C = 1
 ``
+	- As you may see, partitioning allows us to parrallelize events processing
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NDg5NDgyMCwyMTIxMDA3Mzc0LC02MT
-g0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEy
-ODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LD
-Q0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYz
-Mzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTE1Mzc2OTY0MzksMjEyMTAwNzM3NCwtNj
+E4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkx
+Mjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OS
+w0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2
+MzM3ODk0LDQ2NDYzOTQ4M119
 -->
