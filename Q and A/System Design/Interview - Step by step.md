@@ -381,12 +381,14 @@
 	- There is a separate process that reads messages from this queue and sends them to the database
 	- The DLQ is widely used when you need to preserve data in case of downstream services degradation, but you can also store the undeliverable messages in local disk
 - Data Enrichment
-	- Like Cassandra, we store data the way it would be queried. For example, if we
+	- Like Cassandra, we store data the way it would be queried. For example, if we want to show video title in the report, we need to store video title together with views count.
+	- Same is true for the channel name and many other attribute that we may want to display, but all these attributes do not come to the `Processing Service` with every video view event.
+	- Event contains minimum information, like videoId and timestamp.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTk3ODA3ODUsLTEzNTIwMDY2MjUsLT
-E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
-Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
-I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
-OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOT
-Q4M119
+eyJoaXN0b3J5IjpbNjQ5MDg2MTYxLC0xMzUyMDA2NjI1LC0xNz
+g0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3
+NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyND
+UsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0
+NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0OD
+NdfQ==
 -->
