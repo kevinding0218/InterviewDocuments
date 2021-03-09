@@ -409,7 +409,7 @@
 	- New machine just re-loads this state into its memory when started.
 ### Data Ingestion Path
 - When user opens a video, request goes through API gateway, component that represents a single-entry point into a video content delivery system
-- API Gateway routes client requests to backend services.
+- API Gateway routes client requests to backend services. Our counting system may be one of such backend services.
 ```
 																Queue A		ProcessingServiceI
 User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	ProcessingServiceII		=> Database
@@ -417,10 +417,10 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMTkyOTgsLTEzNTIwMDY2MjUsLTE3OD
-Q3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0
-MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NS
-wxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1
-NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M1
-19
+eyJoaXN0b3J5IjpbLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMT
+c4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIy
+NzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1Mj
+Q1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5
+NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5ND
+gzXX0=
 -->
