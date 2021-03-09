@@ -434,9 +434,9 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 - Why use Buffering and Batching
 	- There are thousands of video view events happening on Youtube every second. To process all these requests, API Gateway cluster has to be big in size. Thousands of machines.
 	- If we then pass each individual event to the partitioner service, partitioner service cluster of machines has to be big as well. This is not efficient.
-	- We should somehow combine events together and send several of them in a single request to the partitioner service. This is what batching is about.
 - How it works
-	- Instead of sending each event individually, we first put events into a buffer. We then wait up to several seconds before sending buffer's content or until batch fills up, whichever comes first.
+	- Batching: We should somehow combine events together and send several of them in a single request to the partitioner service. This is what batching is about.
+	- Buffering: Instead of sending each event individually, we first put events into a buffer. We then wait up to several seconds before sending buffer's content or until batch fills up, whichever comes first.
 	- There are many benefits of batching: it increases throughput, it helps to save on cost, request compression is more effective. 
 - Cons
 	- It introduces some complexity both on the client and the server side.
@@ -444,11 +444,11 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLTE5MT
-A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
-MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOT
-IsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0
-MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3Nj
-QsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
-
+eyJoaXN0b3J5IjpbLTMzMjA3MjM2NiwxNDU1MTY0ODA0LDE2Nj
+A3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2
+NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MS
+wtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03
+MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMj
+QxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0
+NjQ2Mzk0ODNdfQ==
 -->
