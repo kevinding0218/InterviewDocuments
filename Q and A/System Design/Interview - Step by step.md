@@ -385,11 +385,13 @@
 	- Same is true for the channel name and many other attribute that we may want to display, but all these attributes do not come to the `Processing Service` with every video view event.
 	- Event contains minimum information, like videoId and timestamp. It doesn't need to contain video title or channel name or video creation date. There information is going to be coming from somewhere else, like some Embedded Database.
 	- But the trick here is that this database lives on the same machine as the `Processing Service`. All these additional attributes should be retrieved from the database really quickly. Thus, having it on the same machine eliminates a need for remote calls.
+	- LinkedIn for example uses this concept for the "who viewed your profile" feature, when they show additional information about people who viewed your profile, e.g: how many viewers have recruiter job title.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3Njk0ODU3NiwtMTM1MjAwNjYyNSwtMT
-c4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIy
-NzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1Mj
-Q1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5
-NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5ND
-gzXX0=
+eyJoaXN0b3J5IjpbMjAyOTQyMTc1LC0xMzUyMDA2NjI1LC0xNz
+g0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3
+NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyND
+UsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0
+NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0OD
+NdfQ==
 -->
