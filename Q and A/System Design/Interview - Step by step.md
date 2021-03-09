@@ -360,16 +360,21 @@
 								    |
 							Deduplicate Cache				
 		```
-	- Even then comes to the component that does in-memory counting. Let's call it `Aggregator`
+	- Aggregator
+		- Even then comes to the component that does in-memory counting. Let's call it `Aggregator`
 		- Think of it as a hash table that accumulates data for some period of time.
 		- Periodically, we stop writing to the current hash table and create a new one, the new hash table keeps accumulating incoming data, while old hash table is no longer counting any data and each counter from the old hash table is sent to the internal queue for further processing.
-	- Why do we need this internal queue? Why can't we send data directly to the database?
-		- Remember we have a single thread that reads events from the partition, but nothing stops us from processing these events by multiple threads, to speed up processing, especially if processing takes time.
-		- By sending data to the internal queue we decouple consumption and processing.
+	- Internal Queue
+		- Why do we need this internal queue? Why can't we send data directly to the database?
+			- Remember we have a single thread that reads events from the partition, but nothing stops us from processing these events by multiple threads, to speed up processing, especially if processing takes time.
+			- By sending data to the internal queue we decouple consumption and processing.
+	- Database Write
+		- either a single-thread or a multi-threaded component.
+		- Each thread
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzA5ODIzMjEsLTE3ODQ3NzExNTgsMj
-EyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMw
-MTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2Nj
-MxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkw
-OTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbNTkzMTI1MzE1LC0xNzg0NzcxMTU4LDIxMj
+EwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2
+MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMS
+w3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkx
+NTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
