@@ -431,12 +431,14 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 	- Blocking systems are easy to debug.And this is a big deal.
 	- In blocking systems we have a thread per request and we can easily track progress of the request by looking into the thread's stack. Exceptions pop up the stack and it is easy to catch and handle them. We can use thread local variables in blocking systems.
 ##### Buffering and Batching
-- There are thousands of video view events happening on Youtube every second. To process all these requests, API Gateway cluster has to be big in size. Thousands of machines.
+- Why use Batching
+	- There are thousands of video view events happening on Youtube every second. To process all these requests, API Gateway cluster has to be big in size. Thousands of machines.
+	- If we then pass each individual event to the partitioner service, partitioner service cluster of machines has to be big as well. This is not efficient.
 - 
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1Nzc1MjE3MiwxNjYwNzQ0MTAsLTE5MT
+eyJoaXN0b3J5IjpbMTMwNTU5NzQ3MSwxNjYwNzQ0MTAsLTE5MT
 A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
 MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOT
 IsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0
