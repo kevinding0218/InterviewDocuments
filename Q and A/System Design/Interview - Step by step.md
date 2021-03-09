@@ -347,9 +347,11 @@
 	- More events we get, more partitions we create.
 ### Processing Service Detail Design
 - `Processing Service` reads events from partition one by one, count events in memory, and flushes this counted values to the database periodically, so we need a component to read events.
-- The consumer establishes and maintains TCP connection with the partition to fetch data, we can think of it as an infinite loop that polls data from the partition.
+- Partition Consumer
+	- The consumer establishes and maintains TCP connection with the partition to fetch data, we can think of it as an infinite loop that polls data from the partition.
 	- When consumer reads event, it deserializes it, meaning it converts byte array into the actual object.
 	- Usually, consumer is a single threaded component, we can also implement multi-threaded access. When several threads read from the partition in parallel, but this approach comes with a cost, checkpointing becomes more complicated and it's hard to perserve order of events if needed.
+- Deduplicate Cache
 	- Consumer does one more important thing - helps to eliminate duplicate events. If the same message was submitted to the partition several times, we need a mechanism to avoid double counting.
 	- To achieve this we use a distributed cache that stores unique event identifiers for, let's say last 10 minutes, and if several identical messages arrived within a 10 minutes interval, only one of them (the first one) will be processed.
 		```
@@ -372,9 +374,9 @@
 		- either a single-thread or a multi-threaded component.
 		- Each thread
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkzMTI1MzE1LC0xNzg0NzcxMTU4LDIxMj
-EwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2
-MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMS
-w3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkx
-NTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTExMDYyNTcyNSwtMTc4NDc3MTE1OCwyMT
+IxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAx
+NjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2Mz
+EsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5
+MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
 -->
