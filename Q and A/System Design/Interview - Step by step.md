@@ -459,7 +459,7 @@ the first request. And the second attempt may hit a different server machine, in
 			- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
 			- Even with exponential backoff and jitter we may still be in danger of too many retries.
 				- For example when partitioner service is down or degraded. And majority of requests are retried. The Circuit Breaker pattern stops a client from repeatedly trying to execute an operation that's likely to fail.
-				- We simply calculate how many requests have failed recently and if error threshold is exceeded we stop calling a downstream service. Some time later, limited number of requestsfrom the client are allowed to pass through
+				- We simply calculate how many requests have failed recently and if error threshold is exceeded we stop calling a downstream service. Some time later, limited number of requests from the client are allowed to pass through
 and invoke the operation.
 If these requests are successful, it's assumed
 that the fault that was previously causing
@@ -475,11 +475,11 @@ and timers.
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczOTQyOTkyLDE0NzM1MTU3NSwxNDU1MT
-Y0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQw
-LC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLT
-YxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5
-MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2OD
-ksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0
-NjMzNzg5NF19
+eyJoaXN0b3J5IjpbLTIxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NT
+E2NDgwNCwxNjYwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0
+MCwtMTM1MjAwNjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC
+02MTg0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1
+OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Nj
+g5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEz
+NDYzMzc4OTRdfQ==
 -->
