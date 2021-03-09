@@ -383,9 +383,10 @@
 - Data Enrichment
 	- Like Cassandra, we store data the way it would be queried. For example, if we want to show video title in the report, we need to store video title together with views count.
 	- Same is true for the channel name and many other attribute that we may want to display, but all these attributes do not come to the `Processing Service` with every video view event.
-	- Event contains minimum information, like videoId and timestamp.
+	- Event contains minimum information, like videoId and timestamp. It doesn't need to contain video title or channel name or video creation date. There information is going to be coming from somewhere else, like some Embedded Database.
+	- But the trick here is that this database lives on the same machine as the `ProcessingSe
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ5MDg2MTYxLC0xMzUyMDA2NjI1LC0xNz
+eyJoaXN0b3J5IjpbNTEzODk5NTU1LC0xMzUyMDA2NjI1LC0xNz
 g0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3
 NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyND
 UsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0
