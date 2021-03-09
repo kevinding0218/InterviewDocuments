@@ -421,14 +421,14 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 - Blocking vs non-blocking I/O
 	1. When client makes a request to a server, server processes the request and sends back a response.
 	2. The client initiates the connection by using sockets. When a client makes a request, the socket that handles that connection on the server-side is blocked. This happens within a single execution thread. So the thread that handles that connection is blocked as well.
-	3. When another client sends a request at the same time, we need to create one more thread to process that request.
+	3. When another client sends a request at the same time, we need to create one more thread to process that request. This is how blocking systems work.They create one thread per connection.
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMT
-M1MjAwNjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0
-MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyOD
-k3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0
-Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMz
-c4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMTg1ODc0Mjc0NiwtMTkxMDYzMjk0NywtNj
+IxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEw
+MDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2Mj
+Y4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3
+MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNT
+Q3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
