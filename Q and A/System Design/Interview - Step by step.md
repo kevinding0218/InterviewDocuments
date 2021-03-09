@@ -395,12 +395,13 @@
 		```
 	- LinkedIn for example uses this concept for the "who viewed your profile" feature, when they show additional information about people who viewed your profile, e.g: how many viewers have recruiter job title.
 - State Management
-	- Since we keep counters in memory for some period of time, either in in-memory store or internal queue, and everytime we keep anything in memory we need to unders
+	- Since we keep counters in memory for some period of time, either in in-memory store or internal queue, and everytime we keep anything in memory we need to understand what to do when machine fails and this in-memory state is lost.
+	- We have events stored in the partition, let's just re-create the state from the point where we failed and re-process one more time, this approach will work well if we store data in-memory for a relatively short pe
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MjczODcyLC0xMzUyMDA2NjI1LC0xNz
-g0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3
-NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyND
-UsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0
-NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0OD
-NdfQ==
+eyJoaXN0b3J5IjpbLTI3NTA4ODU2MSwtMTM1MjAwNjYyNSwtMT
+c4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIy
+NzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1Mj
+Q1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5
+NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5ND
+gzXX0=
 -->
