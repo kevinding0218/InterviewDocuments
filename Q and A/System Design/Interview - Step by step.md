@@ -419,14 +419,16 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 #### Ingestion Path Components
 ##### Partition Service Client
 - Blocking vs non-blocking I/O
-	- When client makes a request to a server, server processes the request and sends back a response.
+	1. When client makes a request to a server, server processes the request and sends back a response.
+	2. The client initiates the connection by using sockets. When a client makes a request, the socket that handles that connection on the server-side is blocked. This happens within a single execution thread. So the thread that handles that connection is blocked as well.
+	3. When another client sends a request at th
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIxNjQzMzk4LC02MjE3MjY4NDAsLTEzNT
-IwMDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1
-MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5Nz
-QsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3
-NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3OD
-k0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMTI0MzE1ODE0NSwtNjIxNzI2ODQwLC0xMz
+UyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQy
+NTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OT
+c0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2
+NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNz
+g5NCw0NjQ2Mzk0ODNdfQ==
 -->
