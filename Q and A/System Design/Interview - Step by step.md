@@ -407,11 +407,18 @@
 							Deduplicate Cache			State Store	
 		```
 	- New machine just re-loads this state into its memory when started.
+### Data Ingestion Path
+```
+																Queue A		ProcessingServiceI
+User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	ProcessingServiceII		=> 
+																Queue C		ProcessingServiceIII
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU0MjQxMzYwLC0xMzUyMDA2NjI1LC0xNz
-g0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3
-NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyND
-UsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0
-NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0OD
-NdfQ==
+eyJoaXN0b3J5IjpbLTEzMjU4NTkzMzgsLTEzNTIwMDY2MjUsLT
+E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
+Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
+I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
+OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOT
+Q4M119
 -->
