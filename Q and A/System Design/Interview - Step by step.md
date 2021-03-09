@@ -375,19 +375,18 @@
 		- Each thread takes a message from the internal queue and stores pre-aggregated views count into database.
 	- Single Thread vs Multi Threads
 		- Single Thread makes checkpointing easier, but multi-threaded version increases throughput.
-- Deal with undeliverable message
-	- Deadletter Queue
-		- The DLQ is a queu to which messages are sent if they cannot be routed to their correct destination
-		- Why need it? To protect ourselves from database performance or availability issues. If database becomes slow or we cannot reach database due to network issues, we simply push messages to the dead letter queue.
-		- There is a separate process that reads messages from this queue and sends them to the database
-		- The DLQ is widely used when you need to preserve data in case of downstream services degradation.
-	- Local disk
-		- 
+- Deadletter Queue
+	- The DLQ is a queu to which messages are sent if they cannot be routed to their correct destination
+	- Why need it? To protect ourselves from database performance or availability issues. If database becomes slow or we cannot reach database due to network issues, we simply push messages to the dead letter queue.
+	- There is a separate process that reads messages from this queue and sends them to the database
+	- The DLQ is widely used when you need to preserve data in case of downstream services degradation, but you can also store the undeliverable messages in local disk
+- Data Enrichment
+	- Like Cassandra, we store data the way it would be queried. For example, if we
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg5ODQ0NzE0LC0xMzUyMDA2NjI1LC0xNz
-g0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3
-NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyND
-UsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0
-NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0OD
-NdfQ==
+eyJoaXN0b3J5IjpbLTE3OTk3ODA3ODUsLTEzNTIwMDY2MjUsLT
+E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
+Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
+I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
+OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOT
+Q4M119
 -->
