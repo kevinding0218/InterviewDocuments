@@ -373,10 +373,14 @@
 	- Database Write
 		- either a single-thread or a multi-threaded component.
 		- Each thread takes a message from the internal queue and stores pre-aggregated views count into database.
+	- Single Thread vs Multi Threads
+		- Single Thread makes checkpointing easier, but multi-threaded version increases throughput.
+	- Deadletter Queue
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAxOTE0MDM4LC0xNzg0NzcxMTU4LDIxMj
-EwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2
-MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMS
-w3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkx
-NTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMj
+EyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMw
+MTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2Nj
+MxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkw
+OTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
 -->
