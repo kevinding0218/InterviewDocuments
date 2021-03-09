@@ -437,16 +437,18 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 	- We should somehow combine events together and send several of them in a single request to the partitioner service. This is what batching is about.
 - How it works then
 	- Instead of sending each event individually, we first put events into a buffer. We then wait up to several seconds before sending buffer's content or until batch fills up, whichever comes first.
-	- There are many benefits of batching: it increases throughput, it helps to save on cost, request compression is more effective. But there are drawbacks as well. It introduces some complexity both on the client and the server side.
+	- There are many benefits of batching: it increases throughput, it helps to save on cost, request compression is more effective. 
+- Cons
+	- It introduces some complexity both on the client and the server side.
 	- For example think of a scenario when partitioner service processes a batch request and several events from the batch fail, while other succeed. Should we re-send the whole batch? Or only failed events?
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODQ3NTM2NTcsMTY2MDc0NDEwLC0xOT
-EwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3
-NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MD
-kyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwx
-NDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1Nz
-Y0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMzMzNDIxMzU5LDE2NjA3NDQxMCwtMTkxMD
+YzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0Nzcx
+MTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5Mi
+wtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQx
+OTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NC
+wtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 
 -->
