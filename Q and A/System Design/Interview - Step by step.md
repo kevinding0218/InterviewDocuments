@@ -357,9 +357,9 @@
 		```
 												In-memory Store	
 														|
-		Partition/Shard	=> Partition Consumer	=>	Aggregator	=>	Internal Queue	=>  Database Writer =>	Database								
-									^
-								    |
+		Partition/Shard	=> Partition Consumer	=>	Aggregator	=>	Internal Queue	=>  Database Writer =>	Database																					^
+									^														|
+								    |													Dead-letter Queue
 							Deduplicate Cache				
 		```
 	- Aggregator
@@ -376,11 +376,12 @@
 	- Single Thread vs Multi Threads
 		- Single Thread makes checkpointing easier, but multi-threaded version increases throughput.
 	- Deadletter Queue
-		- 
+		- The DLQ is a queu to which messages are sent if they cannot be routed to their correct destination
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMj
-EyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMw
-MTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2Nj
-MxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkw
-OTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbOTE5Njc5OTg1LC0xMzUyMDA2NjI1LC0xNz
+g0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3
+NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyND
+UsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0
+NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0OD
+NdfQ==
 -->
