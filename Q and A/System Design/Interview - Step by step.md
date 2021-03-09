@@ -418,13 +418,15 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 ```
 #### Ingestion Path Components
 ##### Partition Service Client
+- Blocking vs non-blocking I/O
+	- When client makes a request to a server, server processes the request and sends back a response.
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MTI3MjY3NiwtNjIxNzI2ODQwLC0xMz
-UyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQy
-NTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OT
-c0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2
-NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNz
-g5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbMzIxNjQzMzk4LC02MjE3MjY4NDAsLTEzNT
+IwMDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1
+MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5Nz
+QsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3
+NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3OD
+k0LDQ2NDYzOTQ4M119
 -->
