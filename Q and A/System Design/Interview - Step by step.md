@@ -408,17 +408,19 @@
 		```
 	- New machine just re-loads this state into its memory when started.
 ### Data Ingestion Path
+- When user opens a video, request goes through API gateway, component that represents a single-entry point into a video content delivery system
+- API Gateway routes client requests to backend services.
 ```
 																Queue A		ProcessingServiceI
-User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	ProcessingServiceII		=> 
+User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	ProcessingServiceII		=> Database
 																Queue C		ProcessingServiceIII
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjU4NTkzMzgsLTEzNTIwMDY2MjUsLT
-E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
-Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
-I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
-OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOT
-Q4M119
+eyJoaXN0b3J5IjpbMTMzMTkyOTgsLTEzNTIwMDY2MjUsLTE3OD
+Q3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0
+MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NS
+wxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1
+NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M1
+19
 -->
