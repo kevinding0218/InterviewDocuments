@@ -402,12 +402,12 @@
 										In-memory Store							Embedded Database
 												|										|
 Partition/Shard	=> Partition Consumer	=>	Aggregator	=>	Internal Queue	=>  Database Writer =>	Database																					^
-							^														|
-						    |													Dead-letter Queue
+							^	     \______________|_________|________________/									|
+						    |						|							Dead-letter Queue
 					Deduplicate Cache			State Store	
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDA0Mzk4MjAsLTEzNTIwMDY2MjUsLT
+eyJoaXN0b3J5IjpbLTE4NzU2NzgyNzgsLTEzNTIwMDY2MjUsLT
 E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
 Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
 I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
