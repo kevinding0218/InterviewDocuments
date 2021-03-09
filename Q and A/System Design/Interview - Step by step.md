@@ -330,11 +330,11 @@ B
 - This offset indicates event position in the sequence. 
 	- Events are alwasy consumed sequentially.
 	- Every time an event is read from the storage, the current offset moves forwards.
-	- After we processed several events and successfully stored them in the database, we write checkpoint to some persistent storage.
+	- After we processed several events and successfully stored them in the database, we write checkpoint to some persistent storage. If pr
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOT
-UyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgw
-NTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMT
-M2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYz
-OTQ4M119
+eyJoaXN0b3J5IjpbLTE4ODk2MzMzOTksMjEyMTAwNzM3NCwtNj
+E4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkx
+Mjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OS
+w0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2
+MzM3ODk0LDQ2NDYzOTQ4M119
 -->
