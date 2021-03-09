@@ -364,11 +364,11 @@
 		- Think of it as a hash table that accumulates data for some period of time.
 		- Periodically, we stop writing to the current hash table and create a new one, the new hash table keeps accumulating incoming data, while old hash table is no longer counting any data and each counter from the old hash table is sent to the internal queue for further processing.
 	- Why do we need this internal queue? Why can't we send data directly to the database?
-		- Remember we have a single thread that reads events from the partition.
+		- Remember we have a single thread that reads events from the partition, but nothing stops us fr
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0Njg4ODIxMywyMTIxMDA3Mzc0LC02MT
-g0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEy
-ODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LD
-Q0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYz
-Mzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNj
+E4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkx
+Mjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OS
+w0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2
+MzM3ODk0LDQ2NDYzOTQ4M119
 -->
