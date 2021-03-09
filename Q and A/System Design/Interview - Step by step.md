@@ -416,9 +416,9 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 																Queue C		ProcessingServiceIII
 
 ```
-#### Ingestion Path Components
-##### Partition Service Client
-- Blocking vs non-blocking I/O
+### Ingestion Path Components
+#### Partition Service Client
+##### Blocking vs non-blocking I/O
 	1. When client makes a request to a server, server processes the request and sends back a response.
 	2. The client initiates the connection by using sockets. When a client makes a request, the socket that handles that connection on the server-side is blocked. This happens within a single execution thread. So the thread that handles that connection is blocked as well.
 	3. When another client sends a request at the same time, we need to create one more thread to process that request. This is how blocking systems work.They create one thread per connection. 
@@ -430,13 +430,17 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 - Blocking Pros
 	- Blocking systems are easy to debug.And this is a big deal.
 	- In blocking systems we have a thread per request and we can easily track progress of the request by looking into the thread's stack. Exceptions pop up the stack and it is easy to catch and handle them. We can use thread local variables in blocking systems.
+##### Buffering and Batching
+- There are thousands of video view events happening on Youtube every second. To process all these requests, API Gateway cluster has to be big in size. Thousands of machines.
+- 
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQyNjE1MDgsMTY2MDc0NDEwLC0xOTEwNj
-MyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzEx
-NTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC
-0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5
-MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2OTQ1NzY0LC
-0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMTQ1Nzc1MjE3MiwxNjYwNzQ0MTAsLTE5MT
+A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
+MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOT
+IsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0
+MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3Nj
+QsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+
 -->
