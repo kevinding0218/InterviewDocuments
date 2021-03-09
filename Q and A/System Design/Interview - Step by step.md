@@ -333,9 +333,10 @@ B
 	- After we processed several events and successfully stored them in the database, we write checkpoint to some persistent storage. If `Processing Service` machine fails, it will be replaced with another machine, and this new machine will resume processing where the failed machine left off.
 	- This is a very important concept in stream processing
 ##### Partitioning
-
+- Instead of putting all events into a single queue, we could have several queues.
+- Each queue is independent from 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE3NTk0MDQyLDIxMjEwMDczNzQsLTYxOD
+eyJoaXN0b3J5IjpbODgwNTk1ODk3LDIxMjEwMDczNzQsLTYxOD
 QyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4
 OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksND
 Q2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMz
