@@ -455,29 +455,11 @@ To choose a request timeout value we need to analyze latency percentiles.
 the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
 		- But we should be smart when retry. Because if all clients retry at the same time or do it aggressively, we may create a so-called retry storm event and overload sever with too many requests.
 		- To prevent this, we should use exponential backoff and jitter algorithms.
-			- Exponential backoff algorithm increases the
-waiting time between retries up to a maximum
-backoff time.
-We retry requests several times, but wait
-a bit longer with every retry attempt.
-And jitter adds randomness to retry intervals
-to spread out the load.
-If we do not add jitter, backoff algorithm
-will retry requests at the same time.
-And jitter helps to separate retries.
-Even with exponential backoff and jitter we
-may still be in danger of too many retries.
-For example when partitioner service is down
-or degraded.
-And majority of requests are retried.
-The Circuit Breaker pattern stops a client
-from repeatedly trying to execute an operation
-that's likely to fail.
-We simply calculate how many requests have
-failed recently and if error threshold is
-exceeded we stop calling a downstream service.
-Some time later, limited number of requests
-from the client are allowed to pass through
+			- Exponential backoff algorithm increases the waiting time between retries up to a maximum backoff time. We retry requests several times, but wait a bit longer with every retry attempt.
+			- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
+			- Even with exponential backoff and jitter we may still be in danger of too many retries.
+				- For example when partitioner service is down or degraded. And majority of requests are retried. The Circuit Breaker pattern stops a client from repeatedly trying to execute an operation that's likely to fail.
+				- We simply calculate how many requests have failed recently and if error threshold is exceeded we stop calling a downstream service. Some time later, limited number of requestsfrom the client are allowed to pass through
 and invoke the operation.
 If these requests are successful, it's assumed
 that the fault that was previously causing
@@ -493,7 +475,7 @@ and timers.
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQzNDAzNDQ1LDE0NzM1MTU3NSwxNDU1MT
+eyJoaXN0b3J5IjpbMjczOTQyOTkyLDE0NzM1MTU3NSwxNDU1MT
 Y0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQw
 LC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLT
 YxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5
