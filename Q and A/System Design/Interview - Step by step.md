@@ -345,10 +345,13 @@ Partitioning			  B B B		=> 	B = 3	=> Database
 ``
 	- As you may see, partitioning allows us to parrallelize events processing
 	- More events we get, more partitions we create.
+### Processing Service Detail Design
+- `Processing Service` reads events from partition one by one, count events in memory, and flushes this counted values to the database periodically, so we need a component to read events.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyOTEyODQxNSwyMTIxMDA3Mzc0LC02MT
-g0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEy
-ODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LD
-Q0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYz
-Mzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbOTcwNDk0Nzc3LDIxMjEwMDczNzQsLTYxOD
+QyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4
+OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksND
+Q2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMz
+Nzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
