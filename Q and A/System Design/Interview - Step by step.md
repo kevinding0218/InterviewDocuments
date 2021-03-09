@@ -426,10 +426,13 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 -  non-blockingI/O
 	- When we can use a single thread on the server side to handle multiple concurrent connections. Server just queues the request and the actual I/O is then processed at some later point. Piling up requests in the queue are far less expensive than piling up threads. Non-blocking systems are more efficient and as a result has higher throughput. 
 	- You may be wondering that if non-blocking systems are so great, why we still have so many blocking systems out there? Because everything has a price. And the price of non-blocking systems is increased complexity of operations. Blocking systems are easy to debug. And this is a big deal.
+- Blocking Pros
+	- Blocking systems are easy to debug.And this is a big deal.
+	- In blocking systems we have a thread per request and we can easily track progress of the request by looking into the thread's stack. Exceptions pop up the stack and it is easy to catch and handle them. We can use thread local variables in blocking systems.
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MDk0MDUxNCwxNjYwNzQ0MTAsLTE5MT
+eyJoaXN0b3J5IjpbMTkxOTE1Mjg4OSwxNjYwNzQ0MTAsLTE5MT
 A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
 MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOT
 IsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0
