@@ -372,11 +372,11 @@
 			- By sending data to the internal queue we decouple consumption and processing.
 	- Database Write
 		- either a single-thread or a multi-threaded component.
-		- Each thread
+		- Each thread takes a message from the internal queue and stores pre-aggregated views count into database.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDYyNTcyNSwtMTc4NDc3MTE1OCwyMT
-IxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAx
-NjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2Mz
-EsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5
-MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbMzAxOTE0MDM4LC0xNzg0NzcxMTU4LDIxMj
+EwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2
+MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMS
+w3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkx
+NTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0ODNdfQ==
 -->
