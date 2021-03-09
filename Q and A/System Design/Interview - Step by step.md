@@ -396,12 +396,21 @@
 	- LinkedIn for example uses this concept for the "who viewed your profile" feature, when they show additional information about people who viewed your profile, e.g: how many viewers have recruiter job title.
 - State Management
 	- Since we keep counters in memory for some period of time, either in in-memory store or internal queue, and everytime we keep anything in memory we need to understand what to do when machine fails and this in-memory state is lost.
-	- We have events stored in the partition, let's just re-create the state from the point where we failed and re-process one more time, this approach will work well if we store data in-memory for a relatively short pe
+	- We have events stored in the partition, let's just re-create the state from the point where we failed and re-process one more time, this approach will work well if we store data in-memory for a relatively short period of time and state is small.
+	- But sometimes it may be hard to re-create the state from raw events from scratch. The solution in this case is to periodically save the entire in-memory data to a durable storage.
+```
+										In-memory Store							Embedded Database
+												|										|
+Partition/Shard	=> Partition Consumer	=>	Aggregator	=>	Internal Queue	=>  Database Writer =>	Database																					^
+							^														|
+						    |													Dead-letter Queue
+					Deduplicate Cache			State Store	
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NTA4ODU2MSwtMTM1MjAwNjYyNSwtMT
-c4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIy
-NzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1Mj
-Q1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5
-NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYzMzc4OTQsNDY0NjM5ND
-gzXX0=
+eyJoaXN0b3J5IjpbLTE4MDA0Mzk4MjAsLTEzNTIwMDY2MjUsLT
+E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
+Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
+I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
+OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOT
+Q4M119
 -->
