@@ -323,14 +323,17 @@ B
 ##### Checkpointing
 - Intentionally draw the storage as a queue, because when events arrive we put them in that storage in order, one by one.
 - Fixed order allows us to assign an offset for each event in the storage
-``
-Checkpointing					C	B	A
-					offset		2	1	0
-``
+	``
+	Checkpointing					C	B	A		=>		Processing Service Machine
+						offset		2	1	0					A = 1, B = 1, C = 1
+	``
+- This offset indicates event position in the sequence. 
+	- Events are alwasy consumed sequentially.
+	- Every time an event is read from the storage, the current offset moves forwards.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMTU2NDkzMiwtNjE4NDI1MTUxLC0xOT
-UyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgw
-NTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMT
-M2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYz
-OTQ4M119
+eyJoaXN0b3J5IjpbLTEyODI1NTA4NTYsLTYxODQyNTE1MSwtMT
+k1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4
+MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLD
+EzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2
+Mzk0ODNdfQ==
 -->
