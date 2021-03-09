@@ -418,9 +418,10 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 ```
 #### Ingestion Path Components
 ##### Partition Service Client
-- 
+#### Load Balancer
+#### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNDY0MTExOSwtNjIxNzI2ODQwLC0xMz
+eyJoaXN0b3J5IjpbLTY3MTI3MjY3NiwtNjIxNzI2ODQwLC0xMz
 UyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQy
 NTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OT
 c0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2
