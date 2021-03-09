@@ -347,11 +347,13 @@ Partitioning			  B B B		=> 	B = 3	=> Database
 	- More events we get, more partitions we create.
 ### Processing Service Detail Design
 - `Processing Service` reads events from partition one by one, count events in memory, and flushes this counted values to the database periodically, so we need a component to read events.
-- 
+- The consumer establishes and maintains TCP connection with the partition to fetch data, we can think of it as an infinite loop that polls data from the partition.
+	- When consumer reads event, it deserializes it, meaning it converts byte array into the actual object.
+	- Usually 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcwNDk0Nzc3LDIxMjEwMDczNzQsLTYxOD
-QyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4
-OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksND
-Q2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMz
-Nzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTg5MTM3MTM3NSwyMTIxMDA3Mzc0LC02MT
+g0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEy
+ODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LD
+Q0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYz
+Mzc4OTQsNDY0NjM5NDgzXX0=
 -->
