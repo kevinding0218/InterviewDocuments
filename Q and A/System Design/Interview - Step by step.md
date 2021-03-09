@@ -351,9 +351,15 @@ Partitioning			  B B B		=> 	B = 3	=> Database
 	- When consumer reads event, it deserializes it, meaning it converts byte array into the actual object.
 	- Usually, consumer is a single threaded component, we can also implement multi-threaded access. When several threads read from the partition in parallel, but this approach comes with a cost, checkpointing becomes more complicated and it's hard to perserve order of events if needed.
 	- Consumer does one more important thing - helps to eliminate duplicate events. If the same message was submitted to the partition several times, we need a mechanism to avoid double counting.
-	- To achieve this we use a distributed cache that stores unique event identifiers for 
+	- To achieve this we use a distributed cache that stores unique event identifiers for, let's say last 10 minutes, and if several identical messages arrived within a 10 minutes interval, only one of them (the first one) will be processed.
+``
+Partition/Shard	=> Partition Consumer	
+												^
+												||
+								Deduplicate Cache				
+``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDEwMTk5ODIsMjEyMTAwNzM3NCwtNj
+eyJoaXN0b3J5IjpbLTE3NjY5MDgxNDUsMjEyMTAwNzM3NCwtNj
 E4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkx
 Mjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OS
 w0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2
