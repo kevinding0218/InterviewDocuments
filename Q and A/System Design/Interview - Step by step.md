@@ -349,11 +349,13 @@ Partitioning			  B B B		=> 	B = 3	=> Database
 - `Processing Service` reads events from partition one by one, count events in memory, and flushes this counted values to the database periodically, so we need a component to read events.
 - The consumer establishes and maintains TCP connection with the partition to fetch data, we can think of it as an infinite loop that polls data from the partition.
 	- When consumer reads event, it deserializes it, meaning it converts byte array into the actual object.
-	- Usually, consumer is a single threaded component, we can also implement multi-threaded access. When several threads read from the partition in parallel, but this approach comes with a cost, checkpointing becomes more complicated and it's hard to perserv
+	- Usually, consumer is a single threaded component, we can also implement multi-threaded access. When several threads read from the partition in parallel, but this approach comes with a cost, checkpointing becomes more complicated and it's hard to perserve order of events if needed.
+	- Consumer does one more important thing - helps to eliminate duplicate events. If the same message was submitted to the partition several times, we need a mechanism to avoid double counting.
+	- To achieve this we use a distributed cache that stores unique event identifiers for 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NTc2MzM1MCwyMTIxMDA3Mzc0LC02MT
-g0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEy
-ODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LD
-Q0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYz
-Mzc4OTQsNDY0NjM5NDgzXX0=
+eyJoaXN0b3J5IjpbLTE0MDEwMTk5ODIsMjEyMTAwNzM3NCwtNj
+E4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkx
+Mjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OS
+w0NDY3NjIyNDEsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2
+MzM3ODk0LDQ2NDYzOTQ4M119
 -->
