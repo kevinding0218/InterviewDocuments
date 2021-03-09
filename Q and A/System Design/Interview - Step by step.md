@@ -398,19 +398,20 @@
 	- Since we keep counters in memory for some period of time, either in in-memory store or internal queue, and everytime we keep anything in memory we need to understand what to do when machine fails and this in-memory state is lost.
 	- We have events stored in the partition, let's just re-create the state from the point where we failed and re-process one more time, this approach will work well if we store data in-memory for a relatively short period of time and state is small.
 	- But sometimes it may be hard to re-create the state from raw events from scratch. The solution in this case is to periodically save the entire in-memory data to a durable storage.
-```
-										In-memory Store							Embedded Database
-												|										|
-Partition/Shard	=> Partition Consumer	=>	Aggregator	=>	Internal Queue	=>  Database Writer =>	Database																					^
-							^	     \______________|_________|________________/									|
-						    |						|							Dead-letter Queue
-					Deduplicate Cache			State Store	
-```
+		```
+												In-memory Store							Embedded Database
+														|										|
+		Partition/Shard	=> Partition Consumer	=>	Aggregator	=>	Internal Queue	=>  Database Writer =>	Database																					^
+									^	     \______________|_________|________________/									|
+								    |						|							Dead-letter Queue
+							Deduplicate Cache			State Store	
+		```
+	- New machine just re-loads this state into its memory when started.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzU2NzgyNzgsLTEzNTIwMDY2MjUsLT
-E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
-Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
-I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
-OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2NDYzOT
-Q4M119
+eyJoaXN0b3J5IjpbODU0MjQxMzYwLC0xMzUyMDA2NjI1LC0xNz
+g0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1MjI3
+NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MDUyND
+UsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEzNjk0
+NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMzNzg5NCw0NjQ2Mzk0OD
+NdfQ==
 -->
