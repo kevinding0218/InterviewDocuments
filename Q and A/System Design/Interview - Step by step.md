@@ -445,15 +445,59 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 	- It introduces some complexity both on the client and the server side.
 	- For example think of a scenario when partitioner service processes a batch request and several events from the batch fail, while other succeed. Should we re-send the whole batch? Or only failed events?
 ##### Timeout
-
+- Timeouts define how much time a client is willing to wait for a response from a server.
+- We have two types of timeouts: connection timeout and request timeout.
+	- Connection timeout defines how much time a client is willing to wait for a connection to establish. Usually this value is relatively small, tens of milliseconds. Because we only try to establish a connection, no heavy request processing is happening just yet.
+	- Request timeout happens when request processing takes too much time, and a client is not willing to wait any longer.
+To choose a request timeout value we need to analyze latency percentiles.
+		- For example we measure latency of 1% of the slowest requests in the system. And set this value as a request timeout. It means that about 1% of requests in the system will timeout.
+		- And what should we do with these failed requests? Let's retry them. May be we just hit a bad server machine with
+the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
+		- But we should be smart when retry. Because if all clients retry at the same time or do it aggressively, we may create a so-called retry storm event and overload sever with too many requests.
+		- To prevent this, we should use exponential backoff and jitter algorithms.
+			- Exponential backoff algorithm increases the
+waiting time between retries up to a maximum
+backoff time.
+We retry requests several times, but wait
+a bit longer with every retry attempt.
+And jitter adds randomness to retry intervals
+to spread out the load.
+If we do not add jitter, backoff algorithm
+will retry requests at the same time.
+And jitter helps to separate retries.
+Even with exponential backoff and jitter we
+may still be in danger of too many retries.
+For example when partitioner service is down
+or degraded.
+And majority of requests are retried.
+The Circuit Breaker pattern stops a client
+from repeatedly trying to execute an operation
+that's likely to fail.
+We simply calculate how many requests have
+failed recently and if error threshold is
+exceeded we stop calling a downstream service.
+Some time later, limited number of requests
+from the client are allowed to pass through
+and invoke the operation.
+If these requests are successful, it's assumed
+that the fault that was previously causing
+the failure has been fixed.
+We allow all requests at this point and start
+counting failed requests from scratch.
+The loop completes.
+The Circuit Breaker pattern also has drawbacks.
+For example, it makes the system more difficult
+to test.
+And it may be hard to properly set error threshold
+and timers.
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MD
-c0NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2
-MjUsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC
-0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTcz
-MDgwNTI0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyND
-EsMTM2OTQ1NzY0LC0xNTkwOTE1NDcwLC0xMzQ2MzM3ODk0LDQ2
-NDYzOTQ4M119
+eyJoaXN0b3J5IjpbMzQzNDAzNDQ1LDE0NzM1MTU3NSwxNDU1MT
+Y0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQw
+LC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLT
+YxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5
+MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2OD
+ksNDQ2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0
+NjMzNzg5NF19
 -->
