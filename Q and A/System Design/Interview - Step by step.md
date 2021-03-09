@@ -334,11 +334,18 @@ B
 	- This is a very important concept in stream processing
 ##### Partitioning
 - Instead of putting all events into a single queue, we could have several queues.
-- Each queue is independent from 
+- Each queue is independent from the others
+- Every queue physically lives on its own machine and stores a subset of all events.
+	- For example, we compute a hash based on video Identifier and use the hash number to pick a queue
+``
+							A A
+Partitioning			  B B B
+						
+``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgwNTk1ODk3LDIxMjEwMDczNzQsLTYxOD
-QyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4
-OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksND
-Q2NzYyMjQxLDEzNjk0NTc2NCwtMTU5MDkxNTQ3MCwtMTM0NjMz
-Nzg5NCw0NjQ2Mzk0ODNdfQ==
+eyJoaXN0b3J5IjpbLTU0NDg5NDgyMCwyMTIxMDA3Mzc0LC02MT
+g0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEy
+ODk3NCwtNzMwODA1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LD
+Q0Njc2MjI0MSwxMzY5NDU3NjQsLTE1OTA5MTU0NzAsLTEzNDYz
+Mzc4OTQsNDY0NjM5NDgzXX0=
 -->
