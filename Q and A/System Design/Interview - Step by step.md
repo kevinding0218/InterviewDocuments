@@ -476,9 +476,14 @@ cores, memory and they are optimized to handle very high throughput, e.g million
 - Software Load Balancers are only softwares that we install on hardware we choose. Load balancers provided by public clouds (for example ELB from AWS) are examples of software load balancer type as well.
 ##### TCP Load Balancer
 - TCP Load Balancers simply forward network packets without inspecting the content of the packets. Think of it as if we established a single end-to-end TCP connection between a client and a server. This allows TCP load balancers to be super fast and handle millions of requests per second.
+##### HTTP Load Balancer
+- HTTP load balancers, on contrast, terminate the connection. Load balancer gets an HTTP request from a client, establishes a connection to a server and sends request to this server. HTTP load balancer can look inside a message and make a load‑balancing decision based on the content of the message.
+- For example based on a cookie information or a header.
+##### Load balancers algorithms
+
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY3MDg4ODQ5LDE1OTMzOTUzNSwtMTc1OT
+eyJoaXN0b3J5IjpbNDY2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OT
 U0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0
 LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMz
 UyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQy
