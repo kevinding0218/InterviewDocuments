@@ -456,11 +456,11 @@ To choose a request timeout value we need to analyze latency percentiles.
 the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
 		- But we should be smart when retry. Because if all clients retry at the same time or do it aggressively, we may create a so-called retry storm event and overload sever with too many requests.
 	- Exponential backoff and jitter 
-		- To prevent this, we should use exponential backoff and jitter algorithms.
-			- Exponential backoff algorithm increases the waiting time between retries up to a maximum backoff time. We retry requests several times, but wait a bit longer with every retry attempt.
-			- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
-			- Even with exponential backoff and jitter we may still be in danger of too many retries.
-				- For example when partitioner service is down or degraded. And majority of requests are retried. 
+		- Exponential backoff algorithm increases the waiting time between retries up to a maximum backoff time. We retry requests several times, but wait a bit longer with every retry attempt.
+		- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
+		- Even with exponential backoff and jitter we may still be in danger of too many retries.
+			- For example when partitioner service is down or degraded. And majority of requests are retried. 
+	- Circuit Breaker Pattern
 		- The Circuit Breaker pattern stops a client from repeatedly trying to execute an operation that's likely to fail.
 			- We simply calculate how many requests have failed recently and if error threshold is exceeded we stop calling a downstream service. Some time later, limited number of requests from the client are allowed to pass through and invoke the operation.
 			- If these requests are successful, it's assumed that the fault that was previously causing the failure has been fixed. We allow all requests at this point and start counting failed requests from scratch. The loop completes. 
@@ -469,11 +469,11 @@ the first request. And the second attempt may hit a different server machine, in
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTA0NTY0MzUsLTE3NTk1NDMwMTAsLT
-IxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0
-MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNS
-wtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5
-NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwOD
-A1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwx
-MzY5NDU3NjRdfQ==
+eyJoaXN0b3J5IjpbODAxMTAwMDA5LC0xNzU5NTQzMDEwLC0yMT
+M1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEw
+LC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLT
+E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
+Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
+I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
+OTQ1NzY0XX0=
 -->
