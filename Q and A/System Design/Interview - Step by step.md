@@ -467,9 +467,11 @@ the first request. And the second attempt may hit a different server machine, in
 		- Drawbacks. 
 			- For example, it makes the system more difficult to test. And it may be hard to properly set error threshold and timers.
 #### Load Balancer
+- distribute datatraffic between multiple servers. There are two types of load balancers: hardware and software.
+- 
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQyODExMTQyLC0xNzU5NTQzMDEwLC0yMT
+eyJoaXN0b3J5IjpbMjY3NzMwNzM1LC0xNzU5NTQzMDEwLC0yMT
 M1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEw
 LC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLT
 E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
