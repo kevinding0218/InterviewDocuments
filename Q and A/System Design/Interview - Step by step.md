@@ -455,9 +455,9 @@ To choose a request timeout value we need to analyze latency percentiles.
 ##### Retires
 - What should we do with these failed requests? Let's retry them. May be we just hit a bad server machine with
 the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
-- But we should be smart when retry. Because if all clients retry at the same time or do it aggressively, we may create a so-called retry storm event and overload sever with too many requests.
+- But we should be smart when retry. Because if all clients retry at the same time or do it aggressively, we may create a so-called **retry storm event** and **overload sever** with too many requests.
 ##### Exponential backoff and jitter 
-- Exponential backoff algorithm increases the waiting time between retries up to a maximum backoff time. We retry requests several times, but wait a bit longer with every retry attempt.
+- Exponential backoff algorithm increases the waiting time between retries up to a maximum backoff time. We retry requests several times, but wait a bit longer with every retry attempt(1s, 2s, 4s, 8s, etc).
 - Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
 - Even with exponential backoff and jitter we may still be in danger of too many retries.
 	- For example when partitioner service is down or degraded. And majority of requests are retried. 
@@ -472,7 +472,7 @@ the first request. And the second attempt may hit a different server machine, in
 - 
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNjE5NDg5MCwtMTc1OTU0MzAxMCwtMj
+eyJoaXN0b3J5IjpbMTg1MTI2OTI3OCwtMTc1OTU0MzAxMCwtMj
 EzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQx
 MCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC
 0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1
