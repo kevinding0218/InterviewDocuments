@@ -452,9 +452,10 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 To choose a request timeout value we need to analyze latency percentiles.
 		- For example we measure latency of 1% of the slowest requests in the system. And set this value as a request timeout. It means that about 1% of requests in the system will timeout.
 	- Retires
-		- And what should we do with these failed requests? Let's retry them. May be we just hit a bad server machine with
+		- What should we do with these failed requests? Let's retry them. May be we just hit a bad server machine with
 the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
 		- But we should be smart when retry. Because if all clients retry at the same time or do it aggressively, we may create a so-called retry storm event and overload sever with too many requests.
+	- Exponential backoff and jitter 
 		- To prevent this, we should use exponential backoff and jitter algorithms.
 			- Exponential backoff algorithm increases the waiting time between retries up to a maximum backoff time. We retry requests several times, but wait a bit longer with every retry attempt.
 			- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
@@ -468,11 +469,11 @@ the first request. And the second attempt may hit a different server machine, in
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzODA4NjQ0NywtMTc1OTU0MzAxMCwtMj
-EzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQx
-MCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC
-0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1
-MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MD
-UyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEz
-Njk0NTc2NF19
+eyJoaXN0b3J5IjpbLTE1MTA0NTY0MzUsLTE3NTk1NDMwMTAsLT
+IxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0
+MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNS
+wtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5
+NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwOD
+A1MjQ1LDE0MTkxODY2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwx
+MzY5NDU3NjRdfQ==
 -->
