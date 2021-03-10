@@ -451,6 +451,7 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 	- Request timeout happens when request processing takes too much time, and a client is not willing to wait any longer.
 To choose a request timeout value we need to analyze latency percentiles.
 		- For example we measure latency of 1% of the slowest requests in the system. And set this value as a request timeout. It means that about 1% of requests in the system will timeout.
+	- Retires
 		- And what should we do with these failed requests? Let's retry them. May be we just hit a bad server machine with
 the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
 		- But we should be smart when retry. Because if all clients retry at the same time or do it aggressively, we may create a so-called retry storm event and overload sever with too many requests.
@@ -467,11 +468,11 @@ the first request. And the second attempt may hit a different server machine, in
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTk1NDMwMTAsLTIxMzU1OTM2NCwxND
-czNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLTE5MTA2MzI5
-NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3MTE1OC
-wyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOTIsLTE3
-MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0MTkxOD
-Y2MzEsNzEwMDU5Njg5LDQ0Njc2MjI0MSwxMzY5NDU3NjQsLTE1
-OTA5MTU0NzBdfQ==
+eyJoaXN0b3J5IjpbLTQzODA4NjQ0NywtMTc1OTU0MzAxMCwtMj
+EzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQx
+MCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC
+0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1
+MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MD
+UyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEz
+Njk0NTc2NF19
 -->
