@@ -462,14 +462,14 @@ the first request. And the second attempt may hit a different server machine, in
 			- For example when partitioner service is down or degraded. And majority of requests are retried. 
 	- Circuit Breaker Pattern
 		- The Circuit Breaker pattern stops a client from repeatedly trying to execute an operation that's likely to fail.
-			- We simply calculate how many requests have failed recently and if error threshold is exceeded we stop calling a downstream service. Some time later, limited number of requests from the client are allowed to pass through and invoke the operation.
-			- If these requests are successful, it's assumed that the fault that was previously causing the failure has been fixed. We allow all requests at this point and start counting failed requests from scratch. The loop completes. 
-			- The Circuit Breaker pattern also has drawbacks. 
-				- For example, it makes the system more difficult to test. And it may be hard to properly set error threshold and timers.
+		- We simply calculate how many requests have failed recently and if error threshold is exceeded we stop calling a downstream service. Some time later, limited number of requests from the client are allowed to pass through and invoke the operation.
+		- If these requests are successful, it's assumed that the fault that was previously causing the failure has been fixed. We allow all requests at this point and start counting failed requests from scratch. The loop completes. 
+		- Drawbacks. 
+			- For example, it makes the system more difficult to test. And it may be hard to properly set error threshold and timers.
 #### Load Balancer
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAxMTAwMDA5LC0xNzU5NTQzMDEwLC0yMT
+eyJoaXN0b3J5IjpbNzQyODExMTQyLC0xNzU5NTQzMDEwLC0yMT
 M1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEw
 LC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLT
 E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
