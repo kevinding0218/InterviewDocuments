@@ -445,12 +445,13 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 	- It introduces some complexity both on the client and the server side.
 	- For example think of a scenario when partitioner service processes a batch request and several events from the batch fail, while other succeed. Should we re-send the whole batch? Or only failed events?
 ##### Timeout
-- Timeouts define how much time a client is willing to wait for a response from a server.
-- We have two types of timeouts: connection timeout and request timeout.
-	- Connection timeout defines how much time a client is willing to wait for a connection to establish. Usually this value is relatively small, tens of milliseconds. Because we only try to establish a connection, no heavy request processing is happening just yet.
-	- Request timeout happens when request processing takes too much time, and a client is not willing to wait any longer.
+- Timeouts define how much time a client is willing to wait for a response from a server. We have two types of timeouts: connection timeout and request timeout.
+- Connection timeout 
+	- defines how much time a client is willing to wait for a connection to establish. Usually this value is relatively small, tens of milliseconds. Because we only try to establish a connection, no heavy request processing is happening just yet.
+- Request timeout 
+	- happens when request processing takes too much time, and a client is not willing to wait any longer.
 To choose a request timeout value we need to analyze latency percentiles.
-		- For example we measure latency of 1% of the slowest requests in the system. And set this value as a request timeout. It means that about 1% of requests in the system will timeout.
+	- For example we measure latency of 1% of the slowest requests in the system. And set this value as a request timeout. It means that about 1% of requests in the system will timeout.
 ##### Retires
 - What should we do with these failed requests? Let's retry them. May be we just hit a bad server machine with
 the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
@@ -471,7 +472,7 @@ the first request. And the second attempt may hit a different server machine, in
 - 
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MjE1MDY3NSwtMTc1OTU0MzAxMCwtMj
+eyJoaXN0b3J5IjpbLTMwNjE5NDg5MCwtMTc1OTU0MzAxMCwtMj
 EzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQx
 MCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC
 0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1
