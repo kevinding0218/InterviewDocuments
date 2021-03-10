@@ -472,9 +472,12 @@ the first request. And the second attempt may hit a different server machine, in
 ##### Hardware Load Balancer
 - They are network devices we buy from known organizations. Theses are powerful machines with many CPU
 cores, memory and they are optimized to handle very high throughput, e.g millions of requests per second.
+##### Software Load Balancer
+- They are only softwares that we install on hardware we choose. Load balancers provided by public clouds (for
+example ELB from AWS) are examples of software load balancer type as well.
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM4MTc5NzA1LC0xNzU5NTQzMDEwLC0yMT
+eyJoaXN0b3J5IjpbMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMT
 M1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEw
 LC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLT
 E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
