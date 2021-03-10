@@ -469,10 +469,12 @@ the first request. And the second attempt may hit a different server machine, in
 	- For example, it makes the system more difficult to test. And it may be hard to properly set error threshold and timers.
 #### Load Balancer
 - distribute datatraffic between multiple servers. There are two types of load balancers: hardware and software.
-- 
+##### Hardware Load Balancer
+- They are network devices we buy from known organizations. Theses are powerful machines with many CPU
+cores, memory and they are optimized to handle very high throughput millions of requests per second.
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MTI2OTI3OCwtMTc1OTU0MzAxMCwtMj
+eyJoaXN0b3J5IjpbMTQ1ODcwMzMyNywtMTc1OTU0MzAxMCwtMj
 EzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQx
 MCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC
 0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1
