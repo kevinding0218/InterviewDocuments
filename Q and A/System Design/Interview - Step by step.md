@@ -470,18 +470,19 @@ the first request. And the second attempt may hit a different server machine, in
 #### Load Balancer
 - distribute datatraffic between multiple servers. There are two types of load balancers: hardware and software.
 ##### Hardware Load Balancer
-- They are network devices we buy from known organizations. Theses are powerful machines with many CPU
+- Hardware Load Balancer are network devices we buy from known organizations. Theses are powerful machines with many CPU
 cores, memory and they are optimized to handle very high throughput, e.g millions of requests per second.
 ##### Software Load Balancer
-- They are only softwares that we install on hardware we choose. Load balancers provided by public clouds (for
-example ELB from AWS) are examples of software load balancer type as well.
+- Software Load Balancers are only softwares that we install on hardware we choose. Load balancers provided by public clouds (for example ELB from AWS) are examples of software load balancer type as well.
+##### TCP Load Balancer
+- TCP Load Balancers simply forward network packets without inspecting the content of the packets. Think of it as if we established a single end-to-end TCP connection between a client and a server. This allows TCP load balancers to be super fast and handle millions of requests per second.
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMT
-M1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEw
-LC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLT
-E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
-Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
-I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
-OTQ1NzY0XX0=
+eyJoaXN0b3J5IjpbMzY3MDg4ODQ5LDE1OTMzOTUzNSwtMTc1OT
+U0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0
+LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMz
+UyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQy
+NTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OT
+c0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2
+NzYyMjQxXX0=
 -->
