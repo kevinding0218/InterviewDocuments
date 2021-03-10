@@ -471,14 +471,14 @@ the first request. And the second attempt may hit a different server machine, in
 - distribute datatraffic between multiple servers. There are two types of load balancers: hardware and software.
 ##### Hardware Load Balancer
 - They are network devices we buy from known organizations. Theses are powerful machines with many CPU
-cores, memory and they are optimized to handle very high throughput millions of requests per second.
+cores, memory and they are optimized to handle very high throughput, e.g millions of requests per second.
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODcwMzMyNywtMTc1OTU0MzAxMCwtMj
-EzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQx
-MCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC
-0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MSwtMTk1
-MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03MzA4MD
-UyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2NzYyMjQxLDEz
-Njk0NTc2NF19
+eyJoaXN0b3J5IjpbMjM4MTc5NzA1LC0xNzU5NTQzMDEwLC0yMT
+M1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEw
+LC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLT
+E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
+Mjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNT
+I0NSwxNDE5MTg2NjMxLDcxMDA1OTY4OSw0NDY3NjIyNDEsMTM2
+OTQ1NzY0XX0=
 -->
