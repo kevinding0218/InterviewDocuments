@@ -480,14 +480,17 @@ cores, memory and they are optimized to handle very high throughput, e.g million
 - HTTP load balancers, on contrast, terminate the connection. Load balancer gets an HTTP request from a client, establishes a connection to a server and sends request to this server. HTTP load balancer can look inside a message and make a load‑balancing decision based on the content of the message.
 - For example based on a cookie information or a header.
 ##### Load balancers algorithms
-
+- Round robin algorithm distributes requests in order across the list of servers.
+- Least connections algorithm sends requests to the server with the lowest number of active connections.
+- Least response time algorithm sends requests to the server with the fastest response time.
+- Hash-based algorithms distribute requests based on a key we define, such as the client IP address or the request URL.
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OT
-U0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0
-LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMz
-UyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQy
-NTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OT
-c0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3MTAwNTk2ODksNDQ2
-NzYyMjQxXX0=
+eyJoaXN0b3J5IjpbLTE1MDczNTYyODEsNDY2OTI2MjcwLDE1OT
+MzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3
+NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNj
+IxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEw
+MDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2Mj
+Y4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3
+MTAwNTk2ODldfQ==
 -->
