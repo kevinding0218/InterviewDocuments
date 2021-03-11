@@ -498,21 +498,23 @@ translate them to IP addresses. We register our partitioner service in DNS, spec
 #### Partitioner Service and Partitions
 - Partitioner Service is a web service that gets requests from clients, looks inside each request to retrieve individual video view events (because remember we batch events on the client side), and routs each such event/message to some partition.
 - what partitions are? Partitions is also a web service, that gets messages and stores them on disk in the form of the append-only log file. So, we have a totally-ordered sequence of messages ordered by time. This is not a single very large log file, but a set of log files of the predefined size.
-##### Partition Strategy
+##### Partition Strategy - Hash based on Id
 - Partitioner service has to use some rule, partition strategy, that defines which partition gets what messages. A simple strategy is to **calculate a hash function based on some key**, let's say `videoId` and chose a machine based on this hash.
 - This simple strategy does not work very well with large scale. As it may lead to so called "hot partitions". For example when we have a very popular video or set of videos and all view events for them go to the same partition.
+##### Partition Strategy - Include event time
 - One approach to deal with hot partitions is to include event time, for example in minutes, into partition key. All video events within the current minute interval are forwarded to some partition. 
-	- Next minute, all events go to a different
-partition. Within one minute interval a single partition gets a lot of data, but over several minutes data is spread more evenly among partitions.
+	- Next minute, all events go to a different partition. Within one minute interval a single partition gets a lot of data, but over several minutes data is spread more evenly among partitions.
 - Another solution to hot partitions problem is to split hot partition into two new partitions. To get an idea how this approach might work, remember consistent hashing algorithm and how adding a new node to the consistent hashing
 ring splits a range of keys into two new ranges. 
 	- And if to push this idea of partition split even further, we may explicitly allocate dedicated partitions for some popular video channels. All video view events from such channels go to their allocated partitions. And view events from all other channels never go to those partitions.
+##### Service Discover
+- To send messages to partitions, partitionerservice needs to know about every partition.This is where the concept of service discovery comes on stage.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwOTM1NTU5OSwtMTUyMzYyNzcxMiwxMz
-kyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMw
-MTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNj
-YwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAw
-NjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNT
-EsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwt
-NzMwODA1MjQ1XX0=
+eyJoaXN0b3J5IjpbODI4NDA3Mjc5LC0xNTIzNjI3NzEyLDEzOT
+I1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAx
+MCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2Nj
+A3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2
+NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MS
+wtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03
+MzA4MDUyNDVdfQ==
 -->
