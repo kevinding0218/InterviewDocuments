@@ -516,13 +516,15 @@ ring splits a range of keys into two new ranges.
 - Example of such registry service is Zookeeper. In our case each partition registers itself in Zookeeper, while every partitioner service instance queries Zookeeper for the list of partitions.
 - One more option for service discovery is similar to what Cassandra does. Remember we mentioned before that Cassandra nodes talk to each other? So, every node in the cluster knows about other nodes. It means clients only need to contact one node from the server cluster to figure out information about the whole cluster. Think about this.
 ##### Replication
-- We must not lose events when store them in partitions. So, when event is persisted in a partition, we need to replicate it. If this partition machine goes down, events are not lost. There are three main approaches to replication:
+- We must not lose events when store them in partitions. So, when event is persisted in a partition, we need to replicate it. If this partition machine goes down, events are not lost. There are three main approaches to replication: single leader replication, multi leader replication and leaderless replication.
+	1. We use single leader replication discussed how to scale a
+SQL database.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDY1NDAwNzgsLTYzMzYwNDU5NSwtMT
-UyMzYyNzcxMiwxMzkyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1
-MzUsLTE3NTk1NDMwMTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMT
-Q1NTE2NDgwNCwxNjYwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcy
-Njg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mz
-c0LC02MTg0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQs
-LTY1OTEyODk3NF19
+eyJoaXN0b3J5IjpbMjE1MTk4OTQ3LC02MzM2MDQ1OTUsLTE1Mj
+M2Mjc3MTIsMTM5MjUwMjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1
+LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NT
+UxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4
+NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NC
+wtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02
+NTkxMjg5NzRdfQ==
 -->
