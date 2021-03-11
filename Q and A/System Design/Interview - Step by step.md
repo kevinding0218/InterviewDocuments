@@ -621,36 +621,13 @@ real life, we usually bring several options to discuss with the team, right? And
 #### how to make sure it counts things correctly?
 - This becomes critical when we not just count video views, but, for example, number of times some ad was played in a video. As we need to properly charge an ad owner and pay money to a video owner. This problem is typically addressed by building an audit system.
 - There can be two flavors of audit systems. Let's call them weak and strong.
-- Weak audit system is a continuosly running end-to-end test.
-When let's say once a minute we generate several
-video view events in the system, call query
-service and validate that returned value equals
-to the expected count.
-This simple test gives us a high confidence
-that the system counts correctly.
-And it is easy to implement and maintain such
-test.
-But unfortunately, this test is not 100% reliable.
-What if our system loses events in some rare
-scenarios?
-And weak audit test may not identify this
-issue for a long period of time.
-That is why we may need a better approach.
-Strong audit system calculates video views
-using a completely different path then out
-main system.
-For example we store raw events in Hadoop
-and use MapReduce to count events.
-And then compare results of both systems.
-Having two different systems doing almost
-the same may seem like an overkill, right?
-You may be surprised but this is not so uncommon
-in practice.
-Not such a long time ago it was quite a popular
-idea.
-And it even has a name - Lambda Architecture.
-The key idea is to send events to a batch
-system and a stream processing system in parallel.
+##### Weak audit system
+- Weak audit system is a continuosly running end-to-end test. When let's say once a minute we generate several video view events in the system, call query service and validate that returned value equals to the expected count.  This simple test gives us a high confidence that the system counts correctly. And it is easy to implement and maintain such test.
+- But unfortunately, this test is not 100% reliable. What if our system loses events in some rare scenarios? And weak audit test may not identify this issue for a long period of time. That is why we may need a better approach.
+##### Strong audit system
+- Strong audit system calculates video views using a completely different path then out main system.
+- For example we store raw events in Hadoop and use MapReduce to count events. And then compare results of both systems. Having two different systems doing almost the same may seem like an overkill, right? You may be surprised but this is not so uncommon in practice.
+- Not such a long time ago it was quite a popular idea. And it even has a name - Lambda Architecture. The key idea is to send events to a batch system and a stream processing system in parallel.
 And stitch together the results from both
 systems at query time.
 You can get a better understanding of this
@@ -799,7 +776,7 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTM3ODYxMDYsMTg1NDM5OTgwMiwtOT
+eyJoaXN0b3J5IjpbLTIwMTMwNTg4NDEsMTg1NDM5OTgwMiwtOT
 g5ODcyNTk2LC00ODIzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAy
 NjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NC
 w0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1
