@@ -528,12 +528,15 @@ ring splits a range of keys into two new ranges.
 - When we write to a leader only, we may still lose data if leader goes down before replication really happened. When we wait for the replication to complete, we increase durability of the system, but latency will increase. Plus, if required number of replicas is not available at the moment, availability will suffer. Tradeoffs, as usual. 
 ##### Message Format
 - We can use either textual or binary formats for messages. Popular textual formats are XML, CSV, JSON. Popular binary formats are Thrift, Protocol Buffers and Avro.
+	- Popular textual formats are XML, CSV, JSON. Popular binary formats are Thrift, 
+	- Protocol Buffers and Avro.
+- What's great about textual formats - they are human-readable. They are well-known, widely supported andn heavily used by many distributed systems. But for the large scale real-time processing systems binary formats provide much more benefits. Messages in binary format are more compact and faster to parse.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODY2NjU3ODMsLTY3MjkzOTY2MywyMT
-Q0NTAyNjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUw
-MjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC
-0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0
-NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2Mj
-UsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0x
-OTUyMjc0MDkyXX0=
+eyJoaXN0b3J5IjpbNjY3NTcwOTUsLTY3MjkzOTY2MywyMTQ0NT
+AyNjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3
+NCw0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMT
+M1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEw
+LC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLT
+E3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUy
+Mjc0MDkyXX0=
 -->
