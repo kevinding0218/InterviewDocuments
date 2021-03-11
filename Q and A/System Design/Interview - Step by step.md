@@ -489,10 +489,11 @@ cores, memory and they are optimized to handle very high throughput, e.g million
 translate them to IP addresses. We register our partitioner service in DNS, specify domain name, for example partitionerservice.domain.com and associate it with IP address of the load balancer device.
 ##### How does Partitioner Service interact with LB and how LB gurantee availability
 - when clients hit domain name, requests are forwarded to the load balancer device. For the load balancer to know about partitioner service machines, we need to explicitly tell the load balancer the IP address of each machine.
-- 
+- Both software and hardware load balancers provides API to register and unregister servers. Load balancers need to know which server from the registered list are healthy and which are unavailable at the moment. This way load balancers ensure that traffic is routed to healthy servers only.
+- Load balancer pings each server periodically and if unhealthy server is identified, load balancer stops to send traffic to it. It will then resume routing traffic to that server when it detects that the server is healthy again.
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjUxNzk5NzcsNDY2OTI2MjcwLDE1OT
+eyJoaXN0b3J5IjpbLTIwNjQ4NjM0MDYsNDY2OTI2MjcwLDE1OT
 MzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3
 NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNj
 IxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEw
