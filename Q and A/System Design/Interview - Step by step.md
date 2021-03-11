@@ -633,32 +633,11 @@ systems at query time.
 are, but not to try to do both at the same time unless we absolutely must.
 - And please note that out today's problem can indeed be solved with MapReduce. But MapReduce-based system would have a much higher latency.
 - Imaging a situation when the processing service cannot keep up with the load. Maybe because number of events is huge, maybe because processing of a single event is complicated and time consuming. I will not dive too much into details, but describe the main idea of the solution.
-- We batch events and store them in the Object Storage service, for example AWS S3. Every time we persist a batch of events, we send a message to a message broker. For example SQS. Then we have a big cluster of machines, for
-example EC2, that retrieve messages from SQS,
-read a corresponding batch of events from
-S3 and process each event.
-This approach is a bit slower than stream
-processing, but faster than batch processing.
-Everything is a tradeoff.
-Let's summarize what we have discussed.
-We start with requirements clarification.
-And more specifically, we need to define APIs,
-what exactly our system is supposed to do.
-We then discuss non-functional requirements
-with the interviewer and figure out what qualities
-of the system she is most interested in.
-We can now outline a high-level architecture
-of the system.
-Draw some key components on the whiteboard.
-At the next stage we should dive deep into
-several of those components.
-Our interviewer will help us understand what
-components we should focus on.
-And the last important step is to discuss
-bottlenecks and how to deal with them.
-And let me quickly remind you some specifics
-we discussed for each of these steps.
-To define APIs, we discuss with the interviewer
+- We batch events and store them in the Object Storage service, for example AWS S3. Every time we persist a batch of events, we send a message to a message broker. For example SQS. Then we have a big cluster of machines, for example EC2, that retrieve messages from SQS, read a corresponding batch of events from S3 and process each event. This approach is a bit slower than stream processing, but faster than batch processing.
+- Everything is a tradeoff.
+### Summary
+1. We start with requirements clarification. And more specifically, we need to define APIs, what exactly our system is supposed to do.
+	- To define APIs, we discuss with the interviewer
 what specific behaviors or functions of the
 system we need to design.
 We write down verbs characterizing these functions
@@ -668,6 +647,11 @@ We then can make several iterations to brush
 up the APIs.
 After this step we should be clear on what
 the scope of the design is.
+2. We then discuss non-functional requirements with the interviewer and figure out what qualities of the system she is most interested in. We can now outline a high-level architecture of the system. Draw some key components on the whiteboard.
+3. At the next stage we should dive deep into several of those components. Our interviewer will help us understand what components we should focus on. 
+4. And the last important step is to discuss bottlenecks and how to deal with them.
+
+
 To define non-functional requirements, just
 know what your options are.
 Open a list of non-functional requirements
@@ -741,11 +725,11 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NzQ3NDg1MiwxODU0Mzk5ODAyLC05OD
-k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
-NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
-Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
-OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
-E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
-NDc3MTE1OF19
+eyJoaXN0b3J5IjpbNzc0NzExNzcsMTg1NDM5OTgwMiwtOTg5OD
+cyNTk2LC00ODIzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAyNjY2
+LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NCw0Nj
+Y5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1NTkz
+NjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC0xOT
+EwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3
+NzExNThdfQ==
 -->
