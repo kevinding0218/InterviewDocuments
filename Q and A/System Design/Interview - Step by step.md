@@ -543,8 +543,11 @@ Important to mention that schemas may and will change over time. We may want to 
 - We can retrieve the total count number directly from the database. Remember we discussed before how both SQL
 and NoSQL databases scale for reads. But total views count scenario is probably the simplest one. This is just a single value in the database per video.
 - The more interesting use case is when users retrieve time-series data, which is a sequence of data points ordered in time. For example, when channel owner wants to see statistics for her videos.
+- As discussed before, we aggregate data in the database per some time interval, let's say per hour. Every hour for every video. That is a lot of data, right? And it grows over time. Fortunately, this is not a new problem and solution is known. Monitoring systems, for example, aggregate data for every 1 minute interval or even 1 second. You can imaging how huge those data sets can be. So, we cannot afford storing time series data at this low granularity for a long period of time. The solution to this problem is to rollup the data.
+For example, we store per minute count for several days. After let's say one week, per minute data is aggregated into per hour data. And we store per hour count for several months. Then we rollup counts even further and data
+that is older than let's say 3 months, is stored with 1 day granularity. And the trick here is that we do not need to store old data in the database. We keep data for the last several days in the database, but the older data can be stored somewhere else, for example, object storage like AWS S3.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwMTc4NzA5OCwtNjcyOTM5NjYzLDIxND
+eyJoaXN0b3J5IjpbLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxND
 Q1MDI2NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAy
 Mjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLT
 IxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0
