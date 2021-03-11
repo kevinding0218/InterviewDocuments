@@ -639,14 +639,14 @@ are, but not to try to do both at the same time unless we absolutely must.**
 3. Then we have a big cluster of machines, for example EC2, that retrieve messages from SQS, read a corresponding batch of events from S3 and process each event. 
 4. This approach is a bit slower than stream processing, but faster than batch processing. Everything is a tradeoff.
 ### Summary
-1. We start with requirements clarification. And more specifically, we need to define APIs, what exactly our system is supposed to do.
+1. We start with **requirements clarification**. And more specifically, we need to **define APIs**, what exactly our system is supposed to do.
 	- To define APIs, we discuss with the interviewer what specific behaviors or functions of the system we need to design. 
 	- We write down verbs characterizing these functions and start thinking about input parameters and return values. 
 	- We then can make several iterations to brush up the APIs. 
 	- After this step we should be clear on what the scope of the design is.
-2. We then discuss non-functional requirements with the interviewer and figure out what qualities of the system she is most interested in. We can now outline a high-level architecture of the system. Draw some key components on the whiteboard.
-3. At the next stage we should dive deep into several of those components. Our interviewer will help us understand what components we should focus on. 
-4. And the last important step is to discuss bottlenecks and how to deal with them.
+2. We then discuss **non-functional requirements** with the interviewer and figure out what **qualities of the system** she is most interested in. We can now **outline a high-level architecture** of the system. Draw some **key components** on the whiteboard.
+3. At the next stage we should **dive deep** into several of those components. Our interviewer will help us understand what components we should focus on. 
+4. And the last important step is to **discuss bottlenecks** and how to deal with them.
 
 
 To define non-functional requirements, just
@@ -722,11 +722,11 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjA4NDc2NjksMTg1NDM5OTgwMiwtOT
-g5ODcyNTk2LC00ODIzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAy
-NjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NC
-w0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1
-NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC
-0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3
-ODQ3NzExNThdfQ==
+eyJoaXN0b3J5IjpbMTUwODY3MjEzOSwxODU0Mzk5ODAyLC05OD
+k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
+NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
+Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
+OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
+E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
+NDc3MTE1OF19
 -->
