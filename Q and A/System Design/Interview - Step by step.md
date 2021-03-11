@@ -556,18 +556,19 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 2. Partitioner service client batches all three events and sends them in a single request to the partitioner service.
 3. This request hits the load balancer first. And load balancer routes it to one of the partitioner service machines.
 4. Partitioner service gets all three events from the request and sends them to some partition. All three events end up in the same partition, as we partition data based on the video identifier.
-5. Here is where processing service appears on the stage. Partition consumer reads all three messages from the partition one by one and sends them to the aggregator.
-6. Aggregator counts messages for a one minute period and flushes calculated values to the internal queue at the end of that minute. 
-7. Database writer picks count from the internal queue and sends it to the database.
-8. In the database we store count per hour and the total number of views for each video.
-9. So, we just add a one minute value to the current hour count as well as the total count. Total count was 7 prior to this minute and we add 3 for the current minute. And during data retrieval, when user opens video A, API Gateway sends request to the Query service. 
-10. Query service checks the cache. And if data is not found in the cache, or cache value has expired, we call the database. Total count value is then stored in the cache and Query service returns the total count back to the user.
+5. Here is where processing service appears on the stage. 
+	1. Partition consumer reads all three messages from the partition one by one and sends them to the aggregator.
+	2. Aggregator counts messages for a one minute period and flushes calculated values to the internal queue at the end of that minute. 
+	3. Database writer picks count from the internal queue and sends it to the database.
+6. In the database we store count per hour and the total number of views for each video.
+7. So, we just add a one minute value to the current hour count as well as the total count. Total count was 7 prior to this minute and we add 3 for the current minute. And during data retrieval, when user opens video A, API Gateway sends request to the Query service. 
+8. Query service checks the cache. And if data is not found in the cache, or cache value has expired, we call the database. Total count value is then stored in the cache and Query service returns the total count back to the user.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMjA0NjYzMywtNDgyMzQ4MDIzLC02Nz
-I5Mzk2NjMsMjE0NDUwMjY2NiwtNjMzNjA0NTk1LC0xNTIzNjI3
-NzEyLDEzOTI1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUzNSwtMT
-c1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0
-ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC
-0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYx
-ODQyNTE1MV19
+eyJoaXN0b3J5IjpbLTIwMTI0NTA2ODcsLTQ4MjM0ODAyMywtNj
+cyOTM5NjYzLDIxNDQ1MDI2NjYsLTYzMzYwNDU5NSwtMTUyMzYy
+NzcxMiwxMzkyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLT
+E3NTk1NDMwMTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2
+NDgwNCwxNjYwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MC
+wtMTM1MjAwNjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02
+MTg0MjUxNTFdfQ==
 -->
