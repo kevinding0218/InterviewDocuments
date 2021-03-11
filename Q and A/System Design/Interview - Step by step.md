@@ -644,10 +644,10 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 ```
 1. We start with **requirements clarification**. And more specifically, we need to **define APIs**, what exactly our system is supposed to do.
 	- To define APIs, we discuss with the interviewer what specific behaviors or functions of the system we need to design. 
-	- We write down verbs characterizing these functions and start thinking about input parameters and return values. 
-	- We then can make several iterations to brush up the APIs. 
-	- After this step we should be clear on what the scope of the design is.
+	- We **write down verbs** characterizing these functions and start thinking about **input parameters and return values**. 
+	- We then can **make several iterations** to brush up the APIs.  After this step we should be clear on what the scope of the design is.
 2. We then discuss **non-functional requirements** with the interviewer and figure out what **qualities of the system** she is most interested in. We can now **outline a high-level architecture** of the system. Draw some **key components** on the whiteboard.
+	- focus on **scalability, availabilityand performance**.
 3. At the next stage we should **dive deep** into several of those components. Our interviewer will help us understand what components we should focus on. 
 4. And the last important step is to **discuss bottlenecks** and how to deal with them.
 
@@ -657,10 +657,8 @@ know what your options are.
 Open a list of non-functional requirements
 on wiki and read the list.
 There are many of them.
-I recommend to focus on scalability, availability
-and performance.
-Among other popular choices we have consistency,
-durability, maintainability and cost.
+I recommend to 
+
 Try to pick not more than 3 qualities.
 To outline a high-level design, think about
 how data gets into the system, how it gets
@@ -725,7 +723,7 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjcwNTI0MiwxODU0Mzk5ODAyLC05OD
+eyJoaXN0b3J5IjpbMTE3NDIwNDg1MSwxODU0Mzk5ODAyLC05OD
 k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
 NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
 Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
