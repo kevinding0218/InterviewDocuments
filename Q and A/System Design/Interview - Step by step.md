@@ -659,60 +659,18 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 5. And the last important step is to **discuss bottlenecks** and how to deal with them.
 	- Listen carefully to the interviewer. She sees bottlenecks of our design and in her questions there will be hints what those bottlenecks are. And what can really help us here is the knowledge of different tradeoffs in system design.
 	- We just need to pick and apply a proper one.
-
-
-
-To outline a high-level design, think about
-how data gets into the system, how it gets
-out of the system and where data is stored
-inside the system.
-
-And although it is not easy, try to drive
-the conversation.
-
-While designing specific components, 
-
-After technical details are discussed, we
-can move to discussing other important aspects
-of the system.
-
-
-Today we covered a big topic.
-If you are still with me watching this video
-you should be proud of yourself.
-Seriously.
-There were many system design concepts covered
-in the video.
-And I hope you have a better understanding
-right now why I consider knowledge the key
-to the successful system design interview.
-And system design in general.
-And although we talked about a specific problem
-today, like video views counting, the same
-ideas can be applied to other problems, for
-example counting likes, shares, reposts, ad
-impressions and clicks.
-The same ideas can be applied to designing
-monitoring systems, when we count metrics.
-When we design a fraud prevention system we
-need to count number of times each credit
-card was used recently.
-When we design recommendation service we may
-use counts as input to machine learning models.
-When we design "what's trending" service,
-we count all sorts of different reactions:
-views, re-tweets, comments, likes.
-And many other applications.
-There are plenty of other important system
-design concepts we have not covered today.
-As it is practically impossible to do in a
-single video.
+- although we talked about a specific problem today, like video views counting, 
+	- The same ideas can be applied to other problems, for example counting likes, shares, reposts, ad impressions and clicks.
+	- The same ideas can be applied to designing monitoring systems, when we count metrics.
+	- When we design a fraud prevention system we need to count number of times each credit card was used recently.
+	- When we design recommendation service we may use counts as input to machine learning models.
+	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NDU4MDI2NCwxODU0Mzk5ODAyLC05OD
-k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
-NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
-Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
-OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
-E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
-NDc3MTE1OF19
+eyJoaXN0b3J5IjpbNjg3MDMwMTc2LDE4NTQzOTk4MDIsLTk4OT
+g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
+NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
+Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
+MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMT
+kxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0
+NzcxMTU4XX0=
 -->
