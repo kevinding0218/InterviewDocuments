@@ -547,28 +547,49 @@ and NoSQL databases scale for reads. But total views count scenario is probably 
 For example, we store per minute count for several days. After let's say one week, per minute data is aggregated into per hour data. And we store per hour count for several months. Then we rollup counts even further and data
 that is older than let's say 3 months, is stored with 1 day granularity. And the trick here is that we do not need to store old data in the database. We keep data for the last several days in the database, but the older data can be stored somewhere else, for example, object storage like AWS S3.
 #### hot storage and a cold storage.
-- Hot storage represents frequently used data
-that must be accessed fast.
-Cold storage doesn’t require fast access.
-It mostly represents archived and infrequently
-accessed data.
-When request comes to the Query service, it
-does so-called data federation, when it may
-need to call several storages to fulfill the
-request.
-Most recent statistics is retrieved from the
-database, while older statistics is retrieved
-from the Object Storage.
-Query service then stitches the data.
-And this is ideal use case for the cache.
-We should store query results in a distributed
-cache.
+- Hot storage represents frequently used data that must be accessed fast.
+- Cold storage doesn’t require fast access. It mostly represents archived and infrequently accessed data.
+- When request comes to the Query service, it does so-called data federation, when it may need to call several storages to fulfill the request. Most recent statistics is retrieved from the database, while older statistics is retrieved from the Object Storage.
+- Query service then stitches the data. And this is ideal use case for the cache. We should store query results in a distributed cache.
+### Data flow simulation
+1. Three users opened some video A. And API Gateway got 3 requests.
+2. Partitioner service client batches all three events and sends them in a single request to the partitioner service.
+3. This request hits the load balancer first. And load balancer routes it to one of the partitioner service machines.
+Partitioner service gets all three events
+from the request and sends them to some partition.
+All three events end up in the same partition,
+as we partition data based on the video identifier.
+Here is where processing service appears on
+the stage.
+Partition consumer reads all three messages
+from the partition one by one and sends them
+to the aggregator.
+Aggregator counts messages for a one minute
+period and flushes calculated values to the
+internal queue at the end of that minute.
+Database writer picks count from the internal
+queue and sends it to the database.
+In the database we store count per hour and
+the total number of views for each video.
+So, we just add a one minute value to the
+current hour count as well as the total count.
+Total count was 7 prior to this minute and
+we add 3 for the current minute.
+And during data retrieval, when user opens
+video A, API Gateway sends request to the
+Query service.
+Query service checks the cache.
+And if data is not found in the cache, or
+cache value has expired, we call the database.
+Total count value is then stored in the cache
+and Query service returns the total count
+back to the user.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MjU3MzgxMiwtNDgyMzQ4MDIzLC02Nz
-I5Mzk2NjMsMjE0NDUwMjY2NiwtNjMzNjA0NTk1LC0xNTIzNjI3
-NzEyLDEzOTI1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUzNSwtMT
-c1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0
-ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC
-0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYx
-ODQyNTE1MV19
+eyJoaXN0b3J5IjpbNDc3Nzk2ODMsLTQ4MjM0ODAyMywtNjcyOT
+M5NjYzLDIxNDQ1MDI2NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcx
+MiwxMzkyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NT
+k1NDMwMTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgw
+NCwxNjYwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMT
+M1MjAwNjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0
+MjUxNTFdfQ==
 -->
