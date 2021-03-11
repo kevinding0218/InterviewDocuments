@@ -625,13 +625,12 @@ real life, we usually bring several options to discuss with the team, right? And
 - But unfortunately, this test is not 100% reliable. What if our system loses events in some rare scenarios? And weak audit test may not identify this issue for a long period of time. That is why we may need a better approach.
 ##### Strong audit system
 - Strong audit system calculates video views using a completely different path then out main system.
-- For example we store raw events in Hadoop and use MapReduce to count events. And then compare results of both systems. Having two different systems doing almost the same may seem like an overkill, right? You may be surprised but this is not so uncommon in practice.
+- For example **we store raw events in Hadoop and use MapReduce to count events. And then compare results of both systems.** Having two different systems doing almost the same may seem like an overkill, right? You may be surprised but this is not so uncommon in practice.
 - Not such a long time ago it was quite a popular idea. And it even has a name - Lambda Architecture. The key idea is to send events to a batch system and a stream processing system in parallel. And stitch together the results from both
 systems at query time.
-- Let me share with you advice from Jay Kreps, who is one of the authors of Apache Kafka. We should use a batch processing framework like MapReduce if we aren’t latency sensitive, and use a stream processing framework if we
-are, but not to try to do both at the same time unless we absolutely must.
-- And please note that out today's problem can indeed be solved with MapReduce. But MapReduce-based system would have a much higher latency.
-- Imaging a situation when the processing service cannot keep up with the load. Maybe because number of events is huge, maybe because processing of a single event is complicated and time consuming. I will not dive too much into details, but describe the main idea of the solution.
+- Let me share with you advice from Jay Kreps, who is one of the authors of Apache Kafka. **We should use a batch processing framework like MapReduce if we aren’t latency sensitive, and use a stream processing framework if we
+are, but not to try to do both at the same time unless we absolutely must.**
+- And please note that out today's problem can indeed be solved with MapReduce. But **MapReduce-based system would have a much higher latency.** Imaging a situation when the processing service cannot keep up with the load. Maybe because number of events is huge, maybe because processing of a single event is complicated and time consuming. I will not dive too much into details, but describe the main idea of the solution.
 - We batch events and store them in the Object Storage service, for example AWS S3. Every time we persist a batch of events, we send a message to a message broker. For example SQS. Then we have a big cluster of machines, for example EC2, that retrieve messages from SQS, read a corresponding batch of events from S3 and process each event. This approach is a bit slower than stream processing, but faster than batch processing.
 - Everything is a tradeoff.
 ### Summary
@@ -718,11 +717,11 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MDYwNzQ3NywxODU0Mzk5ODAyLC05OD
-k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
-NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
-Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
-OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
-E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
-NDc3MTE1OF19
+eyJoaXN0b3J5IjpbLTExMTY0NTY1NTIsMTg1NDM5OTgwMiwtOT
+g5ODcyNTk2LC00ODIzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAy
+NjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NC
+w0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1
+NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC
+0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3
+ODQ3NzExNThdfQ==
 -->
