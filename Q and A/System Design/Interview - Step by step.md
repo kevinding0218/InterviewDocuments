@@ -646,32 +646,26 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- To define APIs, we discuss with the interviewer what specific behaviors or functions of the system we need to design. 
 	- We **write down verbs** characterizing these functions and start thinking about **input parameters and return values**. 
 	- We then can **make several iterations** to brush up the APIs.  After this step we should be clear on what the scope of the design is.
-2. We then discuss **non-functional requirements** with the interviewer and figure out what **qualities of the system** she is most interested in. We can now **outline a high-level architecture** of the system. Draw some **key components** on the whiteboard.
+2. We then discuss **non-functional requirements** with the interviewer and figure out what **qualities of the system** she is most interested in.
 	- focus on **scalability, availabilityand performance**.
-3. At the next stage we should **dive deep** into several of those components. Our interviewer will help us understand what components we should focus on. 
-4. And the last important step is to **discuss bottlenecks** and how to deal with them.
+	- Among other popular choices we have consistency, durability, maintainability and cost, Try to pick not more than 3 qualities.
+3.  We can now **outline a high-level architecture** of the system. Draw some **key components** on the whiteboard.
+	- think about how data gets into the system, how it gets out of the system and where data is stored inside the system.
+	- Draw these components on the whiteboard. It is ok to be rather generic at this stage. Details will follow later.
+	- 
+4. At the next stage we should **dive deep** into several of those components. Our interviewer will help us understand what components we should focus on. 
+5. And the last important step is to **discuss bottlenecks** and how to deal with them.
 
 
-To define non-functional requirements, just
-know what your options are.
-Open a list of non-functional requirements
-on wiki and read the list.
-There are many of them.
-I recommend to 
 
-Try to pick not more than 3 qualities.
 To outline a high-level design, think about
 how data gets into the system, how it gets
 out of the system and where data is stored
 inside the system.
-Draw these components on the whiteboard.
-It is ok to be rather generic at this stage.
-Details will follow later.
+
 And although it is not easy, try to drive
 the conversation.
-Our goal here is to get understanding of what
-components to focus on next.
-And the interviewer will help us.
+
 While designing specific components, start
 with data.
 How it is stored, transferred and processed.
@@ -723,11 +717,11 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NDIwNDg1MSwxODU0Mzk5ODAyLC05OD
-k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
-NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
-Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
-OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
-E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
-NDc3MTE1OF19
+eyJoaXN0b3J5IjpbOTc5NTc2NzkzLDE4NTQzOTk4MDIsLTk4OT
+g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
+NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
+Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
+MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMT
+kxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0
+NzcxMTU4XX0=
 -->
