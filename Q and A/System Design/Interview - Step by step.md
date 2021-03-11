@@ -538,9 +538,13 @@ ring splits a range of keys into two new ranges.
 	- So, schemas are usually stored in some shared database where both producers and consumers can retrieve them.
 Important to mention that schemas may and will change over time. We may want to add more attributes into messages and use them later for counting or filtering. Apache Avro is a good choice for our counting system.
 ### Data Retrieval Path
-- 
+- When users open a video on Youtube, we need to show total views count for this video. To build a video web page, several web services are called. A web service that retrieves information about the video, a web service that retrieves comments, another one for recommendations. Among them there is our Query web service that is responsible for video statistics.
+- All these web services are typically hidden behind an API Gateway service, a single-entry point. API Gateway routes client requests to backend services. So, get total views count request comes to the Query service.
+- We can retrieve the total count number directly from the database. Remember we discussed before how both SQL
+and NoSQL databases scale for reads. But total views count scenario is probably the simplest one. This is just a single value in the database per video.
+- The more interesting use case is when users retrieve time-series data, which is a sequence of data points ordered in time. For example, when channel owner wants to see statistics for her videos.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NDQ0NzQ1NiwtNjcyOTM5NjYzLDIxND
+eyJoaXN0b3J5IjpbLTkwMTc4NzA5OCwtNjcyOTM5NjYzLDIxND
 Q1MDI2NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAy
 Mjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLT
 IxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0
