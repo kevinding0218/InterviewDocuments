@@ -518,7 +518,8 @@ ring splits a range of keys into two new ranges.
 ##### Replication
 - We must not lose events when store them in partitions. So, when event is persisted in a partition, we need to replicate it. If this partition machine goes down, events are not lost. There are three main approaches to replication: single leader replication, multi leader replication and leaderless replication.
 	1. We use single leader replication when discussed how to scale a SQL database.
-	2. multi leader replication is mostly used to replicate between several data centers.
+	2. We use leaderless replication when discussed how Cassandra works
+	3. multi leader replication is mostly used to replicate between several data centers.
 - Let's go with single leader replication. Each partition will have a leader and several followers.
 	- We always write events and read them from the leader only.
 	- While a leader stays alive, all followers copy events from their leader. And if the leader dies, we choose a new leader from its followers.
@@ -526,11 +527,11 @@ ring splits a range of keys into two new ranges.
 - Remember a concept of a quorum write in Cassandra? We consider a write to be successful, when predefined number of replicas acknowledge the write. Similar concept applies to partitions. When partitioner service makes a call to a partition, we may send response back as soon as leader partition persisted the message, or only when message was replicated to a specified number of replicas.
 - When we write to a leader only, we may still lose data if leader goes down before replication really happened. When we wait for the replication to complete, we increase durability of the system, but latency will increase. Plus, if required number of replicas is not available at the moment, availability will suffer. Tradeoffs, as usual. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MDQ4ODEwLDIxNDQ1MDI2NjYsLTYzMz
-YwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LDQ2NjkyNjI3
-MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1OTM2NCwxND
-czNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLTE5MTA2MzI5
-NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3MTE1OC
-wyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOTIsLTE3
-MzAxNjI2ODRdfQ==
+eyJoaXN0b3J5IjpbLTY3MjkzOTY2MywyMTQ0NTAyNjY2LC02Mz
+M2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NCw0NjY5MjYy
+NzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMT
+Q3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMy
+OTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNT
+gsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0x
+NzMwMTYyNjg0XX0=
 -->
