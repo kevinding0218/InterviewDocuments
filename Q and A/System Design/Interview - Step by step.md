@@ -523,8 +523,13 @@ ring splits a range of keys into two new ranges.
 	- We always write events and read them from the leader only.
 	- While a leader stays alive, all followers copy events from their leader. And if the leader dies, we choose a new leader from its followers.
 	- The leader keeps track of its followers: checks whether the followers are alive and whether any of the followers is too far behind. If a follower dies, gets stuck, or falls behind, the leader will remove it from the list of its followers.
+- Remember a concept of a quorum write in Cassandra? We consider a write to be successful, when predefined number of replicas acknowledge the write. Similar concept applies to partitions. When partitioner service makes a call to a partition, we may send response back as soon as leader partition persisted the message, or only when message was replicated to a specified number of replicas.
+- When we write to a leader only, we may still lose data if leader goes down before replication really happened. When we wait for the replication to complete, we increase durability of the system, but latency will increase.
+Plus, if required number of replicas is not
+available at the moment, availability will
+suffer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNTg3MDA4NiwtNjMzNjA0NTk1LC0xNT
+eyJoaXN0b3J5IjpbMTY1MTEyMjE4MCwtNjMzNjA0NTk1LC0xNT
 IzNjI3NzEyLDEzOTI1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUz
 NSwtMTc1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxND
 U1MTY0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2
