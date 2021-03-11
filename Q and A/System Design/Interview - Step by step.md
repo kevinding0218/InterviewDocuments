@@ -514,13 +514,15 @@ ring splits a range of keys into two new ranges.
 - But we do not need a load balancer between partitioner service and partitions. Partitioner service itself acts like a load balancer by distributing events over partitions. This is a perfect match for the client-side discovery pattern.
 - With client-side discovery every server instance registers itself in some common place, named service registry. Service registry is another highly available web service, which can perform health checks to determine health of each registered instance. Clients then query service registry and obtain a list of available servers.
 - Example of such registry service is Zookeeper. In our case each partition registers itself in Zookeeper, while every partitioner service instance queries Zookeeper for the list of partitions.
-- 
+- One more option for service discovery is similar to what Cassandra does. Remember we mentioned before that Cassandra nodes talk to each other? So, every node in the cluster knows about other nodes. It means clients only need to contact one node from the server cluster to figure out information about the whole cluster. Think about this.
+##### Replication
+- We must not lose events when store them in partitions. So, when event is persisted in a partition, we need to replicate it. If this partition machine goes down, events are not lost. There are three main approaches to replication:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5ODQxNDYyNiwtNjMzNjA0NTk1LC0xNT
-IzNjI3NzEyLDEzOTI1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUz
-NSwtMTc1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxND
-U1MTY0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2
-ODQwLC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNz
-QsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwt
-NjU5MTI4OTc0XX0=
+eyJoaXN0b3J5IjpbLTEwMDY1NDAwNzgsLTYzMzYwNDU5NSwtMT
+UyMzYyNzcxMiwxMzkyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1
+MzUsLTE3NTk1NDMwMTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMT
+Q1NTE2NDgwNCwxNjYwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcy
+Njg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mz
+c0LC02MTg0MjUxNTEsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQs
+LTY1OTEyODk3NF19
 -->
