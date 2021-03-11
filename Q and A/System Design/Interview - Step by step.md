@@ -572,35 +572,27 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 - Frameworks such as Hystrix from Netflix
 - Polly simplify implementation of many client-side concepts we discussed before: timeouts, retries, circuit breaker pattern.
 #### Load balancing
-Citrix Netscaler is probably the most famous
-hardware load balancer.
-Among software load balancers NGINX is a very
-popular choice.
-And if we run our counting system in the cloud,
-for example Amazon cloud, then Elastic Load
-Balancer is a good pick.
-Instead of using our custom Partitioner service
-and partitions, we could use Apache Kafka
-instead.
-Or Kafka's public cloud counterpart, like
-Amazon Kinesis.
-To process events and aggregate them in memory
-we can use stream-processing frameworks such
-as Apache Spark or Flink.
-Or cloud-based solutions, such as Kinesis
-Data Analytics.
-We already talked about Apache Cassandra.
-Another popular choice for storing time-series
-data is Apache HBase database.
-These are wide column databases.
-There are also databases optimized for handling
-time series data, like InfluxDB.
+- Citrix Netscaler is probably the most famous hardware load balancer.
+- Among software load balancers NGINX is a very popular choice.
+- And if we run our counting system in the cloud, for example Amazon cloud, then Elastic Load Balancer is a good pick.
+#### Messaging systems
+- Instead of using our custom Partitioner service and partitions, we could use Apache Kafkainstead.
+- Or Kafka's public cloud counterpart, like Amazon Kinesis.
+#### Data processing
+- To process events and aggregate them in memory we can use stream-processing frameworks such as Apache Spark or Flink.
+- Or cloud-based solutions, such as Kinesis Data Analytics.
+#### Storage
+- We already talked about Apache Cassandra.
+- Another popular choice for storing time-series data is Apache HBase database. These are wide column databases.
+- There are also databases optimized for handling time series data, like InfluxDB.
+#### Other
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTI1NzA5OCwxODU0Mzk5ODAyLC05OD
-k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
-NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
-Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
-OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
-E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
-NDc3MTE1OF19
+eyJoaXN0b3J5IjpbNjQ1NjYyODEzLDE4NTQzOTk4MDIsLTk4OT
+g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
+NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
+Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
+MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMT
+kxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0
+NzcxMTU4XX0=
 -->
