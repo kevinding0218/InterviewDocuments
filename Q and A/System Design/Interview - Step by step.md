@@ -609,32 +609,19 @@ real life, we usually bring several options to discuss with the team, right? And
 	- We have **load testing**, when we measure behavior of a system under a specific expected load.
 		- With load testing we want to **understand that our system is indeed scalable and can handle a load we expect.** For example, a two or three times increase in traffic.
 	- We have **stress testing**, when we test beyond normal operational capacity, often to a breaking point. 
-		- With stress testing we want to **identify a breaking point in the system**. Which component will start to suffer first. And what resource it will be: memory, CPU, network, disk IO.
+		- With stress testing we want to **identify a breaking point in the system. Which component will start to suffer first**. And what resource it will be: memory, CPU, network, disk IO.
 	- We have **soak testing**, when we test a system with a typical production load for an extended period of time.
-		- with soak testing we want to find leaks in resources. For example, memory leaks. So, generating high load is the key. Tools like Apache JMeter can be used to generate a desired load.
+		- with soak testing we want to **find leaks in resources**. For example, **memory leaks.** So, generating high load is the key. Tools like Apache JMeter can be used to generate a desired load.
 #### Health monitoring (how to make sure system running healthy)
 - All the components of our system must be instrumented with monitoring of their health. **Metrics, dashboards and alerts** should be our friends all the time.
 	- Metric is a variable that we measure, like error count or processing time.
 	- Dashboard provides a summary view of a service’s core metrics.
 	- And alert is a notification sent to service owners in a reaction to some issue happening in the service.
 - Remember about the four golden signals of monitoring, which are **latency, traffic, errors, and saturation.**
-Let's leave details for a separate video.
-Ok, we designed a system and deployed all
-the components.
-We know it is running healthy and can handle
-a high load.
-But how to make sure it counts things correctly?
-This becomes critical when we not just count
-video views, but, for example, number of times
-some ad was played in a video.
-As we need to properly charge an ad owner
-and pay money to a video owner.
-This problem is typically addressed by building
-an audit system.
-There can be two flavors of audit systems.
-Let's call them weak and strong.
-Weak audit system is a continuosly running
-end-to-ed test.
+#### how to make sure it counts things correctly?
+- This becomes critical when we not just count video views, but, for example, number of times some ad was played in a video. As we need to properly charge an ad owner and pay money to a video owner. This problem is typically addressed by building an audit system.
+- There can be two flavors of audit systems. Let's call them weak and strong.
+- Weak audit system is a continuosly running end-to-end test.
 When let's say once a minute we generate several
 video view events in the system, call query
 service and validate that returned value equals
@@ -812,11 +799,11 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMzkyOTAxMiwxODU0Mzk5ODAyLC05OD
-k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
-NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
-Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
-OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
-E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
-NDc3MTE1OF19
+eyJoaXN0b3J5IjpbLTExMTM3ODYxMDYsMTg1NDM5OTgwMiwtOT
+g5ODcyNTk2LC00ODIzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAy
+NjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NC
+w0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1
+NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC
+0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3
+ODQ3NzExNThdfQ==
 -->
