@@ -609,13 +609,11 @@ real life, we usually bring several options to discuss with the team, right? And
 	- We have load testing, when we measure behavior of a system under a specific expected load.
 		- With load testing we want to understand that our system is indeed scalable and can handle a load we expect. For example, a two or three times increase in traffic.
 	- We have stress testing, when we test beyond normal operational capacity, often to a breaking point. 
+		- With stress testing we want to identify a breaking point in the system. Which component will start to suffer first. And what resource it will be: memory, CPU, network, disk IO.
 	- We have soak testing, when we test a system with a typical production load for an extended period of time.
+		- with soak testing we want to find leaks in resources. For example, memory leaks. So, generating high load is the key. Tools like Apache JMeter can be used to generate a desired load.
 
-With stress testing we want to identify a
-breaking point in the system.
-Which component will start to suffer first.
-And what resource it will be: memory, CPU,
-network, disk IO.
+
 And with soak testing we want to find leaks
 in resources.
 For example, memory leaks.
@@ -831,11 +829,11 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE3NjI1NjI2LDE4NTQzOTk4MDIsLTk4OT
-g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
-NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
-Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
-MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMT
-kxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0
-NzcxMTU4XX0=
+eyJoaXN0b3J5IjpbMTA3MDYwNDk2NCwxODU0Mzk5ODAyLC05OD
+k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
+NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
+Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
+OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
+E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
+NDc3MTE1OF19
 -->
