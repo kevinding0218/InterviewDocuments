@@ -628,7 +628,7 @@ real life, we usually bring several options to discuss with the team, right? And
 - For example **we store raw events in Hadoop and use MapReduce to count events. And then compare results of both systems.** Having two different systems doing almost the same may seem like an overkill, right? You may be surprised but this is not so uncommon in practice.
 - Not such a long time ago it was quite a popular idea. And it even has a name - Lambda Architecture. The key idea is to send events to a batch system and a stream processing system in parallel. And stitch together the results from both
 systems at query time.
-##### Why not use Map
+##### Why not use Map Reduce
 - Let me share with you advice from Jay Kreps, who is one of the authors of Apache Kafka. **We should use a batch processing framework like MapReduce if we aren’t latency sensitive, and use a stream processing framework if we
 are, but not to try to do both at the same time unless we absolutely must.**
 - And please note that out today's problem can indeed be solved with MapReduce. But **MapReduce-based system would have a much higher latency.**
@@ -720,7 +720,7 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjQwNzg0NDcsMTg1NDM5OTgwMiwtOT
+eyJoaXN0b3J5IjpbLTEzMDcxOTU0ODksMTg1NDM5OTgwMiwtOT
 g5ODcyNTk2LC00ODIzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAy
 NjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NC
 w0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1
