@@ -634,8 +634,10 @@ are, but not to try to do both at the same time unless we absolutely must.**
 - And please note that out today's problem can indeed be solved with MapReduce. But **MapReduce-based system would have a much higher latency.**
 ##### Bottleneck (what to do if processing service cannot keep up with the speed new message arrive)
 -  Imaging a situation when the processing service cannot keep up with the load. Maybe because number of events is huge, maybe because processing of a single event is complicated and time consuming. I will not dive too much into details, but describe the main idea of the solution.
-- We batch events and store them in the Object Storage service, for example AWS S3. Every time we persist a batch of events, we send a message to a message broker. For example SQS. Then we have a big cluster of machines, for example EC2, that retrieve messages from SQS, read a corresponding batch of events from S3 and process each event. This approach is a bit slower than stream processing, but faster than batch processing.
-- Everything is a tradeoff.
+1. We batch events and store them in the Object Storage service, for example AWS S3. 
+2. Every time we persist a batch of events, we send a message to a message broker. For example SQS. 
+3. Then we have a big cluster of machines, for example EC2, that retrieve messages from SQS, read a corresponding batch of events from S3 and process each event. 
+4. This approach is a bit slower than stream processing, but faster than batch processing. Everything is a tradeoff.
 ### Summary
 1. We start with requirements clarification. And more specifically, we need to define APIs, what exactly our system is supposed to do.
 	- To define APIs, we discuss with the interviewer what specific behaviors or functions of the system we need to design. 
@@ -720,7 +722,7 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDcxOTU0ODksMTg1NDM5OTgwMiwtOT
+eyJoaXN0b3J5IjpbLTE4NjA4NDc2NjksMTg1NDM5OTgwMiwtOT
 g5ODcyNTk2LC00ODIzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAy
 NjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NC
 w0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1
