@@ -497,13 +497,13 @@ translate them to IP addresses. We register our partitioner service in DNS, spec
 - The primary load balancer accepts connections and serves requests, while the secondary load balancer monitors the primary. If, for any reason, the primary load balancer is unable to accept connections, the secondary one takes over. Primary and secondary also live in different data centers, in case one data center goes down.
 #### Partitioner Service and Partitions
 - Partitioner Service is a web service that gets requests from clients, looks inside each request to retrieve individual video view events (because remember we batch events on the client side), and routs each such event/message to some partition.
-- 
+- what partitions are? Partitions is also a web service, that gets messages and stores them on disk in the form of the append-only log file. So, we have a totally-ordered sequence of messages ordered by time.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NjExMjIzNywxMzkyNTAyMjc0LDQ2Nj
-kyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1OTM2
-NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLTE5MT
-A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
-MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOT
-IsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0
-MTkxODY2MzFdfQ==
+eyJoaXN0b3J5IjpbLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NCw0Nj
+Y5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1NTkz
+NjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC0xOT
+EwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3
+NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MD
+kyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwx
+NDE5MTg2NjMxXX0=
 -->
