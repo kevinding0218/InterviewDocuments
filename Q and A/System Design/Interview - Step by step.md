@@ -526,12 +526,14 @@ ring splits a range of keys into two new ranges.
 	- The leader keeps track of its followers: checks whether the followers are alive and whether any of the followers is too far behind. If a follower dies, gets stuck, or falls behind, the leader will remove it from the list of its followers.
 - Remember a concept of a quorum write in Cassandra? We consider a write to be successful, when predefined number of replicas acknowledge the write. Similar concept applies to partitions. When partitioner service makes a call to a partition, we may send response back as soon as leader partition persisted the message, or only when message was replicated to a specified number of replicas.
 - When we write to a leader only, we may still lose data if leader goes down before replication really happened. When we wait for the replication to complete, we increase durability of the system, but latency will increase. Plus, if required number of replicas is not available at the moment, availability will suffer. Tradeoffs, as usual. 
+##### Message Format
+- We can use either textual or binary formats for messages. Popular textual formats are XML, CSV, JSON. Popular binary formats are Thrift, Protocol Buffers and Avro.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MjkzOTY2MywyMTQ0NTAyNjY2LC02Mz
-M2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NCw0NjY5MjYy
-NzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMT
-Q3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMy
-OTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNT
-gsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0x
-NzMwMTYyNjg0XX0=
+eyJoaXN0b3J5IjpbLTEyODY2NjU3ODMsLTY3MjkzOTY2MywyMT
+Q0NTAyNjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUw
+MjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC
+0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0
+NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2Mj
+UsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0x
+OTUyMjc0MDkyXX0=
 -->
