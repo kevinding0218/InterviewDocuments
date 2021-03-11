@@ -496,8 +496,10 @@ translate them to IP addresses. We register our partitioner service in DNS, spec
 - As for high availability of load balancers, they utilize a concept of primary and secondary nodes. 
 - The primary load balancer accepts connections and serves requests, while the secondary load balancer monitors the primary. If, for any reason, the primary load balancer is unable to accept connections, the secondary one takes over. Primary and secondary also live in different data centers, in case one data center goes down.
 #### Partitioner Service and Partitions
+- Partitioner Service is a web service that gets requests from clients, looks inside each request to retrieve individual video view events (because remember we batch events on the client side), and routs each such event/message to some partition.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyODg3NTEwOCwxMzkyNTAyMjc0LDQ2Nj
+eyJoaXN0b3J5IjpbMTA2NjExMjIzNywxMzkyNTAyMjc0LDQ2Nj
 kyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1OTM2
 NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLTE5MT
 A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
