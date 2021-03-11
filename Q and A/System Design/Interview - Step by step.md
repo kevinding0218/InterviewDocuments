@@ -531,25 +531,15 @@ ring splits a range of keys into two new ranges.
 	- Popular textual formats are XML, CSV, JSON. Popular binary formats are Thrift, 
 	- Protocol Buffers and Avro.
 - What's great about textual formats - they are human-readable. They are well-known, widely supported andn heavily used by many distributed systems. But for the large scale real-time processing systems binary formats provide much more benefits. Messages in binary format are more compact and faster to parse.
-- Why As mentioned before, messages contain several attributes, such as video identifier, timestamp,
-user related information.
-When represented in JSON format, for example,
-every message contains field names, which
-greatly increases total message size.
-Binary formats are smarter.
-Formats we mentioned before require a schema.
-And when schema is defined we no longer need
-to keep field names.
-For example Apache Thrift and Protocol Buffers
-use field tags instead of field names.
-Tags are just numbers and they act like aliases
-for fields.
+- Why binary format works better?
+	- As mentioned before, messages contain several attributes, such as video identifier, timestamp, user related information. When represented in JSON format, for example, every message contains field names, which greatly increases total message size. 
+	- Binary formats are smarter. Formats we mentioned before require a schema. And when schema is defined we no longer need to keep field names. For example Apache Thrift and Protocol Buffers use field tags instead of field names. Tags are just numbers and they act like aliases for fields.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzUxNTIzODIsLTY3MjkzOTY2MywyMT
-Q0NTAyNjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUw
-MjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC
-0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0
-NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2Mj
-UsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0x
-OTUyMjc0MDkyXX0=
+eyJoaXN0b3J5IjpbLTMxNzcwODc5MSwtNjcyOTM5NjYzLDIxND
+Q1MDI2NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAy
+Mjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLT
+IxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0
+MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNS
+wtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5
+NTIyNzQwOTJdfQ==
 -->
