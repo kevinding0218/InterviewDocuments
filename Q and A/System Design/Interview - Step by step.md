@@ -510,16 +510,18 @@ ring splits a range of keys into two new ranges.
 	- And if to push this idea of partition split even further, we may explicitly allocate dedicated partitions for some popular video channels. All video view events from such channels go to their allocated partitions. And view events from all other channels never go to those partitions.
 ##### Service Discover
 - To send messages to partitions, partitionerservice needs to know about every partition.This is where the concept of service discovery comes on stage.
+- In the world of microservices there are two main service discovery patterns: server-side discovery and client-side discovery. We already looked at server-side discovery when talked about load balancers. Clients know about load balancer, load balancer
+knows about server-side instances.
 - But we do not need a load balancer between partitioner service and partitions. Partitioner service itself acts like a load balancer by distributing events over partitions. This is a perfect match for the client-side discovery pattern.
 - With client-side discovery every server instance registers itself in some common place, named service registry. Service registry is another highly available web service, which can perform health checks to determine health of each registered instance. Clients then query service registry and obtain a list of available servers.
 - Example of such registry service is Zookeeper. In our case each partition registers itself in Zookeeper, while every partitioner service instance queries Zookeeper for the list of partitions.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMz
-kyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMw
-MTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNj
-YwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAw
-NjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNT
-EsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwt
-NzMwODA1MjQ1XX0=
+eyJoaXN0b3J5IjpbNjI5OTgwNjI2LC02MzM2MDQ1OTUsLTE1Mj
+M2Mjc3MTIsMTM5MjUwMjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1
+LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NT
+UxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4
+NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NC
+wtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02
+NTkxMjg5NzRdfQ==
 -->
