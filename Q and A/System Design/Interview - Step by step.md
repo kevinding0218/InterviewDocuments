@@ -511,20 +511,15 @@ ring splits a range of keys into two new ranges.
 ##### Service Discover
 - To send messages to partitions, partitionerservice needs to know about every partition.This is where the concept of service discovery comes on stage.
 - But we do not need a load balancer between partitioner service and partitions. Partitioner service itself acts like a load balancer by distributing events over partitions. This is a perfect match for the client-side discovery pattern.
-- With client-side discovery every server instance registers itself in some common place, named service registry. Service registry is another highly available web service, which can perform health checks to determine health of each registered instance.
-Clients then query service registry and obtain
-a list of available servers.
-Example of such registry service is Zookeeper.
-In our case each partition registers itself
-in Zookeeper, while every partitioner service
-instance queries Zookeeper for the list of
-partitions.
+- With client-side discovery every server instance registers itself in some common place, named service registry. Service registry is another highly available web service, which can perform health checks to determine health of each registered instance. Clients then query service registry and obtain a list of available servers.
+- Example of such registry service is Zookeeper. In our case each partition registers itself in Zookeeper, while every partitioner service instance queries Zookeeper for the list of partitions.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjkwNTA3NDEsLTE1MjM2Mjc3MTIsMT
-M5MjUwMjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQz
-MDEwLC0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMT
-Y2MDc0NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIw
-MDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MT
-UxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQs
-LTczMDgwNTI0NV19
+eyJoaXN0b3J5IjpbLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMz
+kyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMw
+MTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNj
+YwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAw
+NjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNT
+EsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwt
+NzMwODA1MjQ1XX0=
 -->
