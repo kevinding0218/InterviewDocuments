@@ -598,12 +598,16 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 - Or use a popular stack of open source frameworks: Elasticsearch, Logstash, Kibana. Or ELK for short.
 - We discussed before that binary message format is preferred for our system. Popular choices are Thrift, Protobuf and Avro.
 - For Partitioner service to partition the data, we should use a good hashing function, for example a MurmurHash.
+### Additional interview notes
+- Have you noticed that I usually use verbs like may or can and rarely use must or have
+to? This is because we usually have several options to choose from. When we design a system or a part of it in
+real life, we usually bring several options to discuss with the team, right? And very important is not only know your options, but be able to explain pros and cons of each one.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAzNjM1NDA1LDE4NTQzOTk4MDIsLTk4OT
-g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
-NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
-Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
-MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMT
-kxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0
-NzcxMTU4XX0=
+eyJoaXN0b3J5IjpbLTM2MjMzMTIxOSwxODU0Mzk5ODAyLC05OD
+k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
+NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
+Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
+OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
+E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
+NDc3MTE1OF19
 -->
