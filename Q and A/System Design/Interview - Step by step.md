@@ -602,12 +602,240 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 - Have you noticed that I usually use verbs like may or can and rarely use must or have
 to? This is because we usually have several options to choose from. When we design a system or a part of it in
 real life, we usually bring several options to discuss with the team, right? And very important is not only know your options, but be able to explain pros and cons of each one.
+- Let's see what else the interviewer may want to discuss with us.
+#### How to identify bottleneck?
+- To identify bottlenecks in the system we need to test it under a heavy load. This is what performance testing is about.
+- There are several types of performance testing. 
+	- We have load testing, when we measure behavior of a system under a specific expected load.
+		- With load testing we want to understand that our system is indeed scalable and can handle a load we expect. For example, a two or three times increase in traffic.
+	- We have stress testing, when we test beyond normal operational capacity, often to a breaking point. 
+	- We have soak testing, when we test a system with a typical production load for an extended period of time.
+
+With stress testing we want to identify a
+breaking point in the system.
+Which component will start to suffer first.
+And what resource it will be: memory, CPU,
+network, disk IO.
+And with soak testing we want to find leaks
+in resources.
+For example, memory leaks.
+So, generating high load is the key.
+Tools like Apache JMeter can be used to generate
+a desired load.
+Health monitoring.
+All the components of our system must be instrumented
+with monitoring of their health.
+Metrics, dashboards and alerts should be our
+friends all the time.
+Metric is a variable that we measure, like
+error count or processing time.
+Dashboard provides a summary view of a service’s
+core metrics.
+And alert is a notification sent to service
+owners in a reaction to some issue happening
+in the service.
+Remember about the four golden signals of
+monitoring, which are latency, traffic, errors,
+and saturation.
+Let's leave details for a separate video.
+Ok, we designed a system and deployed all
+the components.
+We know it is running healthy and can handle
+a high load.
+But how to make sure it counts things correctly?
+This becomes critical when we not just count
+video views, but, for example, number of times
+some ad was played in a video.
+As we need to properly charge an ad owner
+and pay money to a video owner.
+This problem is typically addressed by building
+an audit system.
+There can be two flavors of audit systems.
+Let's call them weak and strong.
+Weak audit system is a continuosly running
+end-to-ed test.
+When let's say once a minute we generate several
+video view events in the system, call query
+service and validate that returned value equals
+to the expected count.
+This simple test gives us a high confidence
+that the system counts correctly.
+And it is easy to implement and maintain such
+test.
+But unfortunately, this test is not 100% reliable.
+What if our system loses events in some rare
+scenarios?
+And weak audit test may not identify this
+issue for a long period of time.
+That is why we may need a better approach.
+Strong audit system calculates video views
+using a completely different path then out
+main system.
+For example we store raw events in Hadoop
+and use MapReduce to count events.
+And then compare results of both systems.
+Having two different systems doing almost
+the same may seem like an overkill, right?
+You may be surprised but this is not so uncommon
+in practice.
+Not such a long time ago it was quite a popular
+idea.
+And it even has a name - Lambda Architecture.
+The key idea is to send events to a batch
+system and a stream processing system in parallel.
+And stitch together the results from both
+systems at query time.
+You can get a better understanding of this
+idea if you watch the previous video on the
+channel, where we designed a system for finding
+the top k most frequent items.
+Ideally, we should have a single system.
+Let me share with you advice from Jay Kreps,
+who is one of the authors of Apache Kafka.
+We should use a batch processing framework
+like MapReduce if we aren’t latency sensitive,
+and use a stream processing framework if we
+are, but not to try to do both at the same
+time unless we absolutely must.
+And please note that out today's problem can
+indeed be solved with MapReduce.
+But MapReduce-based system would have a much
+higher latency.
+We already discussed the problem with popular
+videos.
+I will just reiterate the key idea.
+We have to spread events coming for a popular
+video across several partitions.
+Otherwise, a single consumer of a single "hot"
+partition may not be able to keep up with
+the load.
+And will fall behind.
+Let's talk more about this.
+Imaging a situation when the processing service
+cannot keep up with the load.
+Maybe because number of events is huge, maybe
+because processing of a single event is complicated
+and time consuming.
+I will not dive too much into details, but
+describe the main idea of the solution.
+We batch events and store them in the Object
+Storage service, for example AWS S3.
+Every time we persist a batch of events, we
+send a message to a message broker.
+For example SQS.
+Then we have a big cluster of machines, for
+example EC2, that retrieve messages from SQS,
+read a corresponding batch of events from
+S3 and process each event.
+This approach is a bit slower than stream
+processing, but faster than batch processing.
+Everything is a tradeoff.
+Let's summarize what we have discussed.
+We start with requirements clarification.
+And more specifically, we need to define APIs,
+what exactly our system is supposed to do.
+We then discuss non-functional requirements
+with the interviewer and figure out what qualities
+of the system she is most interested in.
+We can now outline a high-level architecture
+of the system.
+Draw some key components on the whiteboard.
+At the next stage we should dive deep into
+several of those components.
+Our interviewer will help us understand what
+components we should focus on.
+And the last important step is to discuss
+bottlenecks and how to deal with them.
+And let me quickly remind you some specifics
+we discussed for each of these steps.
+To define APIs, we discuss with the interviewer
+what specific behaviors or functions of the
+system we need to design.
+We write down verbs characterizing these functions
+and start thinking about input parameters
+and return values.
+We then can make several iterations to brush
+up the APIs.
+After this step we should be clear on what
+the scope of the design is.
+To define non-functional requirements, just
+know what your options are.
+Open a list of non-functional requirements
+on wiki and read the list.
+There are many of them.
+I recommend to focus on scalability, availability
+and performance.
+Among other popular choices we have consistency,
+durability, maintainability and cost.
+Try to pick not more than 3 qualities.
+To outline a high-level design, think about
+how data gets into the system, how it gets
+out of the system and where data is stored
+inside the system.
+Draw these components on the whiteboard.
+It is ok to be rather generic at this stage.
+Details will follow later.
+And although it is not easy, try to drive
+the conversation.
+Our goal here is to get understanding of what
+components to focus on next.
+And the interviewer will help us.
+While designing specific components, start
+with data.
+How it is stored, transferred and processed.
+Here is where our knowledge and experience
+becomes critical.
+By using fundamental concepts of system design
+and by knowing how to combine these concepts
+together, we can make small incremental improvements.
+And apply relevant technologies along the
+way.
+After technical details are discussed, we
+can move to discussing other important aspects
+of the system.
+Listen carefully to the interviewer.
+She sees bottlenecks of our design and in
+her questions there will be hints what those
+bottlenecks are.
+And what can really help us here is the knowledge
+of different tradeoffs in system design.
+We just need to pick and apply a proper one.
+Today we covered a big topic.
+If you are still with me watching this video
+you should be proud of yourself.
+Seriously.
+There were many system design concepts covered
+in the video.
+And I hope you have a better understanding
+right now why I consider knowledge the key
+to the successful system design interview.
+And system design in general.
+And although we talked about a specific problem
+today, like video views counting, the same
+ideas can be applied to other problems, for
+example counting likes, shares, reposts, ad
+impressions and clicks.
+The same ideas can be applied to designing
+monitoring systems, when we count metrics.
+When we design a fraud prevention system we
+need to count number of times each credit
+card was used recently.
+When we design recommendation service we may
+use counts as input to machine learning models.
+When we design "what's trending" service,
+we count all sorts of different reactions:
+views, re-tweets, comments, likes.
+And many other applications.
+There are plenty of other important system
+design concepts we have not covered today.
+As it is practically impossible to do in a
+single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MjMzMTIxOSwxODU0Mzk5ODAyLC05OD
-k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
-NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
-Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
-OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
-E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
-NDc3MTE1OF19
+eyJoaXN0b3J5IjpbNTE3NjI1NjI2LDE4NTQzOTk4MDIsLTk4OT
+g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
+NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
+Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
+MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMT
+kxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0
+NzcxMTU4XX0=
 -->
