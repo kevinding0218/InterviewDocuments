@@ -503,13 +503,15 @@ translate them to IP addresses. We register our partitioner service in DNS, spec
 - This simple strategy does not work very well with large scale. As it may lead to so called "hot partitions". For example when we have a very popular video or set of videos and all view events for them go to the same partition.
 - One approach to deal with hot partitions is to include event time, for example in minutes, into partition key. All video events within the current minute interval are forwarded to some partition. Next minute, all events go to a different
 partition. Within one minute interval a single partition gets a lot of data, but over several minutes data is spread more evenly among partitions.
-
+- Another solution to hot partitions problem is to split hot partition into two new partitions. To get an idea how this approach might work, remember consistent hashing algorithm and how adding a new node to the consistent hashing
+ring splits a range of keys into two new ranges. 
+	- And if to push this idea of partition split even further, we may explicitly allocate dedicated partitions for some popular video channels. All video view events from such channels go to their allocated partitions. And view events from all other channels never go to those partitions.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjQwMDQyOTcsLTE1MjM2Mjc3MTIsMT
-M5MjUwMjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQz
-MDEwLC0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMT
-Y2MDc0NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIw
-MDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MT
-UxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQs
-LTczMDgwNTI0NV19
+eyJoaXN0b3J5IjpbMTg0NTkwODMwNiwtMTUyMzYyNzcxMiwxMz
+kyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMw
+MTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNj
+YwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAw
+NjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNT
+EsLTE5NTIyNzQwOTIsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwt
+NzMwODA1MjQ1XX0=
 -->
