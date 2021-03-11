@@ -639,6 +639,9 @@ are, but not to try to do both at the same time unless we absolutely must.**
 3. Then we have a big cluster of machines, for example EC2, that retrieve messages from SQS, read a corresponding batch of events from S3 and process each event. 
 4. This approach is a bit slower than stream processing, but faster than batch processing. Everything is a tradeoff.
 ### Summary
+```
+Function Requirements (API) => Non-functional requirements (qualities) => High-level design => Detailed design => Bottleneck and tradeoffs
+```
 1. We start with **requirements clarification**. And more specifically, we need to **define APIs**, what exactly our system is supposed to do.
 	- To define APIs, we discuss with the interviewer what specific behaviors or functions of the system we need to design. 
 	- We write down verbs characterizing these functions and start thinking about input parameters and return values. 
@@ -722,7 +725,7 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwODY3MjEzOSwxODU0Mzk5ODAyLC05OD
+eyJoaXN0b3J5IjpbMTM5NjcwNTI0MiwxODU0Mzk5ODAyLC05OD
 k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
 NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
 Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
