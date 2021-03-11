@@ -546,12 +546,29 @@ and NoSQL databases scale for reads. But total views count scenario is probably 
 - As discussed before, we aggregate data in the database per some time interval, let's say per hour. Every hour for every video. That is a lot of data, right? And it grows over time. Fortunately, this is not a new problem and solution is known. Monitoring systems, for example, aggregate data for every 1 minute interval or even 1 second. You can imaging how huge those data sets can be. So, we cannot afford storing time series data at this low granularity for a long period of time. The solution to this problem is to rollup the data.
 For example, we store per minute count for several days. After let's say one week, per minute data is aggregated into per hour data. And we store per hour count for several months. Then we rollup counts even further and data
 that is older than let's say 3 months, is stored with 1 day granularity. And the trick here is that we do not need to store old data in the database. We keep data for the last several days in the database, but the older data can be stored somewhere else, for example, object storage like AWS S3.
+#### hot storage and a cold storage.
+- Hot storage represents frequently used data
+that must be accessed fast.
+Cold storage doesn’t require fast access.
+It mostly represents archived and infrequently
+accessed data.
+When request comes to the Query service, it
+does so-called data federation, when it may
+need to call several storages to fulfill the
+request.
+Most recent statistics is retrieved from the
+database, while older statistics is retrieved
+from the Object Storage.
+Query service then stitches the data.
+And this is ideal use case for the cache.
+We should store query results in a distributed
+cache.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxND
-Q1MDI2NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAy
-Mjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLT
-IxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0
-MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNS
-wtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5
-NTIyNzQwOTJdfQ==
+eyJoaXN0b3J5IjpbLTc2MjU3MzgxMiwtNDgyMzQ4MDIzLC02Nz
+I5Mzk2NjMsMjE0NDUwMjY2NiwtNjMzNjA0NTk1LC0xNTIzNjI3
+NzEyLDEzOTI1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUzNSwtMT
+c1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0
+ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC
+0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYx
+ODQyNTE1MV19
 -->
