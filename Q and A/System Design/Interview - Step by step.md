@@ -487,17 +487,19 @@ cores, memory and they are optimized to handle very high throughput, e.g million
 ##### DNS
 - DomainName System. DNS is like a phone book for the internet. It maintains a directory of domain names and
 translate them to IP addresses. We register our partitioner service in DNS, specify domain name, for example partitionerservice.domain.com and associate it with IP address of the load balancer device.
-##### How does Partitioner Service interact with LB and how LB gurantee availability
+##### How does Partitioner Service interact with LB
 - when clients hit domain name, requests are forwarded to the load balancer device. For the load balancer to know about partitioner service machines, we need to explicitly tell the load balancer the IP address of each machine.
 - Both software and hardware load balancers provides API to register and unregister servers. Load balancers need to know which server from the registered list are healthy and which are unavailable at the moment. This way load balancers ensure that traffic is routed to healthy servers only.
 - Load balancer pings each server periodically and if unhealthy server is identified, load balancer stops to send traffic to it. It will then resume routing traffic to that server when it detects that the server is healthy again.
+##### How LB gurantee availability
+- As for high availability of load balancers, they utilize a concept of primary and secondary nodes. The primary load balancer accepts connections and serves requests, while the secondary load balancer monitors the primary. If, for any reason, the primary load balancer is unable to accept connections, the secondary one takes over. Primary and secondary also live in different data centers, in case one data center goes down.
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjQ4NjM0MDYsNDY2OTI2MjcwLDE1OT
-MzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3
-NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNj
-IxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEw
-MDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2Mj
-Y4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3
-MTAwNTk2ODldfQ==
+eyJoaXN0b3J5IjpbMTM5MjUwMjI3NCw0NjY5MjYyNzAsMTU5Mz
+M5NTM1LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMTQ3MzUxNTc1
+LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMyOTQ3LC02Mj
+E3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAw
+NzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNj
+g0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcx
+MDA1OTY4OV19
 -->
