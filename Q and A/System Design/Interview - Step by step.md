@@ -564,12 +564,16 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 7. So, we just add a one minute value to the current hour count as well as the total count. Total count was 7 prior to this minute and we add 3 for the current minute. 
 8. And during data retrieval, when user opens video A, API Gateway sends request to the Query service. 
 9. Query service checks the cache. And if data is not found in the cache, or cache value has expired, we call the database. Total count value is then stored in the cache and Query service returns the total count back to the user.
+### Technology Stack
+- We rely on some well-regarded technologies. Either open source or commercial. Public cloud services.
+- During the interview do not forget to discuss these technologies. You may do this along the way or at the end of the interview. 
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4OTg3MjU5NiwtNDgyMzQ4MDIzLC02Nz
-I5Mzk2NjMsMjE0NDUwMjY2NiwtNjMzNjA0NTk1LC0xNTIzNjI3
-NzEyLDEzOTI1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUzNSwtMT
-c1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0
-ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC
-0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYx
-ODQyNTE1MV19
+eyJoaXN0b3J5IjpbMTg1NDM5OTgwMiwtOTg5ODcyNTk2LC00OD
+IzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAyNjY2LC02MzM2MDQ1
+OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NCw0NjY5MjYyNzAsMT
+U5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMTQ3MzUx
+NTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMyOTQ3LC
+02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMjEy
+MTAwNzM3NF19
 -->
