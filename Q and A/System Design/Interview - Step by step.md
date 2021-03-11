@@ -534,8 +534,11 @@ ring splits a range of keys into two new ranges.
 - Why binary format works better?
 	- As mentioned before, messages contain several attributes, such as video identifier, timestamp, user related information. When represented in JSON format, for example, every message contains field names, which greatly increases total message size. 
 	- Binary formats are smarter. Formats we mentioned before require a schema. And when schema is defined we no longer need to keep field names. For example Apache Thrift and Protocol Buffers use field tags instead of field names. Tags are just numbers and they act like aliases for fields.
+	- Tags occupy less space when encoded. Schemas are crucial for binary formats. Message producers (or clients) need to know the schema to serialize the data. Message consumers (processing service in our case) require the schema to deserialize the message.
+	- So, schemas are usually stored in some shared database where both producers and consumers can retrieve them.
+Important to mention that schemas may and will change over time. We may want to add more attributes into messages and use them later for counting or filtering. Apache Avro is a good choice for our counting system.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNzcwODc5MSwtNjcyOTM5NjYzLDIxND
+eyJoaXN0b3J5IjpbLTU0MzQ4MDE5NSwtNjcyOTM5NjYzLDIxND
 Q1MDI2NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAy
 Mjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLT
 IxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0
