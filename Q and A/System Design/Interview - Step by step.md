@@ -585,10 +585,12 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 - We already talked about Apache Cassandra.
 - Another popular choice for storing time-series data is Apache HBase database. These are wide column databases.
 - There are also databases optimized for handling time series data, like InfluxDB.
+- We can store raw events in Apache Hadoop or in a cloud data warehouse, such as AWS Redshift.
+- And when we roll up the data and need to archive it, AWS S3 is a natural choice.
 #### Other
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ1NjYyODEzLDE4NTQzOTk4MDIsLTk4OT
+eyJoaXN0b3J5IjpbNDU3Mzk1OTY4LDE4NTQzOTk4MDIsLTk4OT
 g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
 NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
 Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
