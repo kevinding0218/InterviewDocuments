@@ -603,23 +603,21 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 to? This is because we usually have several options to choose from. When we design a system or a part of it in
 real life, we usually bring several options to discuss with the team, right? And very important is not only know your options, but be able to explain pros and cons of each one.
 - Let's see what else the interviewer may want to discuss with us.
-#### How to identify bottleneck?
+#### Performance Testing (how to identify bottleneck)
 - To identify bottlenecks in the system we need to test it under a heavy load. This is what performance testing is about.
 - There are several types of performance testing. 
-	- We have load testing, when we measure behavior of a system under a specific expected load.
-		- With load testing we want to understand that our system is indeed scalable and can handle a load we expect. For example, a two or three times increase in traffic.
-	- We have stress testing, when we test beyond normal operational capacity, often to a breaking point. 
-		- With stress testing we want to identify a breaking point in the system. Which component will start to suffer first. And what resource it will be: memory, CPU, network, disk IO.
-	- We have soak testing, when we test a system with a typical production load for an extended period of time.
+	- We have **load testing**, when we measure behavior of a system under a specific expected load.
+		- With load testing we want to **understand that our system is indeed scalable and can handle a load we expect.** For example, a two or three times increase in traffic.
+	- We have **stress testing**, when we test beyond normal operational capacity, often to a breaking point. 
+		- With stress testing we want to **identify a breaking point in the system**. Which component will start to suffer first. And what resource it will be: memory, CPU, network, disk IO.
+	- We have **soak testing**, when we test a system with a typical production load for an extended period of time.
 		- with soak testing we want to find leaks in resources. For example, memory leaks. So, generating high load is the key. Tools like Apache JMeter can be used to generate a desired load.
 #### Health monitoring (how to make sure system running healthy)
-- All the components of our system must be instrumented with monitoring of their health. Metrics, dashboards and alerts should be our friends all the time.
+- All the components of our system must be instrumented with monitoring of their health. **Metrics, dashboards and alerts** should be our friends all the time.
 	- Metric is a variable that we measure, like error count or processing time.
 	- Dashboard provides a summary view of a service’s core metrics.
 	- And alert is a notification sent to service owners in a reaction to some issue happening in the service.
-Remember about the four golden signals of
-monitoring, which are latency, traffic, errors,
-and saturation.
+- Remember about the four golden signals of monitoring, which are **latency, traffic, errors, and saturation.**
 Let's leave details for a separate video.
 Ok, we designed a system and deployed all
 the components.
@@ -814,11 +812,11 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NDk1NjQ1LDE4NTQzOTk4MDIsLTk4OT
-g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
-NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
-Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
-MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMT
-kxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0
-NzcxMTU4XX0=
+eyJoaXN0b3J5IjpbMTIwMzkyOTAxMiwxODU0Mzk5ODAyLC05OD
+k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
+NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
+Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
+OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
+E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
+NDc3MTE1OF19
 -->
