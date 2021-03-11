@@ -656,7 +656,9 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 4. At the next stage we should **dive deep** into several of those components. Our interviewer will help us understand what components we should focus on. 
 	- start with data. How it is stored, transferred and processed.
 	- Here is where our knowledge and experience becomes critical. By using fundamental concepts of system design and by knowing how to combine these concepts together, we can make small incremental improvements. And apply relevant technologies along the way.
-6. And the last important step is to **discuss bottlenecks** and how to deal with them.
+5. And the last important step is to **discuss bottlenecks** and how to deal with them.
+	- Listen carefully to the interviewer. She sees bottlenecks of our design and in her questions there will be hints what those bottlenecks are. And what can really help us here is the knowledge of different tradeoffs in system design.
+	- We just need to pick and apply a proper one.
 
 
 
@@ -673,13 +675,8 @@ While designing specific components,
 After technical details are discussed, we
 can move to discussing other important aspects
 of the system.
-Listen carefully to the interviewer.
-She sees bottlenecks of our design and in
-her questions there will be hints what those
-bottlenecks are.
-And what can really help us here is the knowledge
-of different tradeoffs in system design.
-We just need to pick and apply a proper one.
+
+
 Today we covered a big topic.
 If you are still with me watching this video
 you should be proud of yourself.
@@ -711,11 +708,11 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjUzNDI2MTksMTg1NDM5OTgwMiwtOT
-g5ODcyNTk2LC00ODIzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAy
-NjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NC
-w0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1
-NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC
-0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3
-ODQ3NzExNThdfQ==
+eyJoaXN0b3J5IjpbMTg2NDU4MDI2NCwxODU0Mzk5ODAyLC05OD
+k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
+NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
+Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
+OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
+E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
+NDc3MTE1OF19
 -->
