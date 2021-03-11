@@ -489,17 +489,19 @@ cores, memory and they are optimized to handle very high throughput, e.g million
 translate them to IP addresses. We register our partitioner service in DNS, specify domain name, for example partitionerservice.domain.com and associate it with IP address of the load balancer device.
 ##### How does Partitioner Service interact with LB
 - when clients hit domain name, requests are forwarded to the load balancer device. For the load balancer to know about partitioner service machines, we need to explicitly tell the load balancer the IP address of each machine.
-- Both software and hardware load balancers provides API to register and unregister servers. Load balancers need to know which server from the registered list are healthy and which are unavailable at the moment. This way load balancers ensure that traffic is routed to healthy servers only.
+- Both software and hardware load balancers provides API to register and unregister servers.
+##### Health checking 
+- Load balancers need to know which server from the registered list are healthy and which are unavailable at the moment. This way load balancers ensure that traffic is routed to healthy servers only.
 - Load balancer pings each server periodically and if unhealthy server is identified, load balancer stops to send traffic to it. It will then resume routing traffic to that server when it detects that the server is healthy again.
 ##### How LB gurantee availability
 - As for high availability of load balancers, they utilize a concept of primary and secondary nodes. The primary load balancer accepts connections and serves requests, while the secondary load balancer monitors the primary. If, for any reason, the primary load balancer is unable to accept connections, the secondary one takes over. Primary and secondary also live in different data centers, in case one data center goes down.
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MjUwMjI3NCw0NjY5MjYyNzAsMTU5Mz
-M5NTM1LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMTQ3MzUxNTc1
-LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMyOTQ3LC02Mj
-E3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAw
-NzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNj
-g0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcx
-MDA1OTY4OV19
+eyJoaXN0b3J5IjpbMTEzODQ4OTA5NCwxMzkyNTAyMjc0LDQ2Nj
+kyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1OTM2
+NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLTE5MT
+A2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4NDc3
+MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5NTIyNzQwOT
+IsLTE3MzAxNjI2ODQsLTY1OTEyODk3NCwtNzMwODA1MjQ1LDE0
+MTkxODY2MzFdfQ==
 -->
