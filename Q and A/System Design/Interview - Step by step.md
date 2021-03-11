@@ -484,13 +484,15 @@ cores, memory and they are optimized to handle very high throughput, e.g million
 - Least connections algorithm sends requests to the server with the lowest number of active connections.
 - Least response time algorithm sends requests to the server with the fastest response time.
 - Hash-based algorithms distribute requests based on a key we define, such as the client IP address or the request URL.
+##### DNS
+- 
 #### Partitioner Service and Partitions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDczNTYyODEsNDY2OTI2MjcwLDE1OT
-MzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3
-NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNj
-IxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEw
-MDczNzQsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2Mj
-Y4NCwtNjU5MTI4OTc0LC03MzA4MDUyNDUsMTQxOTE4NjYzMSw3
-MTAwNTk2ODldfQ==
+eyJoaXN0b3J5IjpbMTcwMzYxNzcwMCw0NjY5MjYyNzAsMTU5Mz
+M5NTM1LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMTQ3MzUxNTc1
+LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMyOTQ3LC02Mj
+E3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAw
+NzM3NCwtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNj
+g0LC02NTkxMjg5NzQsLTczMDgwNTI0NSwxNDE5MTg2NjMxLDcx
+MDA1OTY4OV19
 -->
