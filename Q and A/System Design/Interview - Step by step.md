@@ -652,9 +652,11 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 3.  We can now **outline a high-level architecture** of the system. Draw some **key components** on the whiteboard.
 	- think about how data gets into the system, how it gets out of the system and where data is stored inside the system.
 	- Draw these components on the whiteboard. It is ok to be rather generic at this stage. Details will follow later.
-	- 
+	- Our goal here is to get understanding of what components to focus on next. And the interviewer will help us.
 4. At the next stage we should **dive deep** into several of those components. Our interviewer will help us understand what components we should focus on. 
-5. And the last important step is to **discuss bottlenecks** and how to deal with them.
+	- start with data. How it is stored, transferred and processed.
+	- Here is where our knowledge and experience becomes critical. By using fundamental concepts of system design and by knowing how to combine these concepts together, we can make small incremental improvements. And apply relevant technologies along the way.
+6. And the last important step is to **discuss bottlenecks** and how to deal with them.
 
 
 
@@ -666,16 +668,8 @@ inside the system.
 And although it is not easy, try to drive
 the conversation.
 
-While designing specific components, start
-with data.
-How it is stored, transferred and processed.
-Here is where our knowledge and experience
-becomes critical.
-By using fundamental concepts of system design
-and by knowing how to combine these concepts
-together, we can make small incremental improvements.
-And apply relevant technologies along the
-way.
+While designing specific components, 
+
 After technical details are discussed, we
 can move to discussing other important aspects
 of the system.
@@ -717,11 +711,11 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc5NTc2NzkzLDE4NTQzOTk4MDIsLTk4OT
-g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
-NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
-Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
-MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2NjA3NDQxMCwtMT
-kxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2NjI1LC0xNzg0
-NzcxMTU4XX0=
+eyJoaXN0b3J5IjpbLTExNjUzNDI2MTksMTg1NDM5OTgwMiwtOT
+g5ODcyNTk2LC00ODIzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAy
+NjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NC
+w0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1
+NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC
+0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3
+ODQ3NzExNThdfQ==
 -->
