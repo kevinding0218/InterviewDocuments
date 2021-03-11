@@ -619,8 +619,7 @@ real life, we usually bring several options to discuss with the team, right? And
 	- And alert is a notification sent to service owners in a reaction to some issue happening in the service.
 - Remember about the four golden signals of monitoring, which are **latency, traffic, errors, and saturation.**
 #### how to make sure it counts things correctly?
-- This becomes critical when we not just count video views, but, for example, number of times some ad was played in a video. As we need to properly charge an ad owner and pay money to a video owner. This problem is typically addressed by building an audit system.
-- There can be two flavors of audit systems. Let's call them weak and strong.
+- This becomes critical when we not just count video views, but, for example, number of times some ad was played in a video. As we need to properly charge an ad owner and pay money to a video owner. This problem is typically addressed by building an audit system. There can be two flavors of audit systems. Let's call them weak and strong.
 ##### Weak audit system
 - Weak audit system is a continuosly running end-to-end test. When let's say once a minute we generate several video view events in the system, call query service and validate that returned value equals to the expected count.  This simple test gives us a high confidence that the system counts correctly. And it is easy to implement and maintain such test.
 - But unfortunately, this test is not 100% reliable. What if our system loses events in some rare scenarios? And weak audit test may not identify this issue for a long period of time. That is why we may need a better approach.
@@ -719,7 +718,7 @@ design concepts we have not covered today.
 As it is practically impossible to do in a
 single video.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNzkxNjgyNCwxODU0Mzk5ODAyLC05OD
+eyJoaXN0b3J5IjpbLTY5MDYwNzQ3NywxODU0Mzk5ODAyLC05OD
 k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
 NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
 Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
