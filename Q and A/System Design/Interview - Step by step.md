@@ -517,14 +517,18 @@ ring splits a range of keys into two new ranges.
 - One more option for service discovery is similar to what Cassandra does. Remember we mentioned before that Cassandra nodes talk to each other? So, every node in the cluster knows about other nodes. It means clients only need to contact one node from the server cluster to figure out information about the whole cluster. Think about this.
 ##### Replication
 - We must not lose events when store them in partitions. So, when event is persisted in a partition, we need to replicate it. If this partition machine goes down, events are not lost. There are three main approaches to replication: single leader replication, multi leader replication and leaderless replication.
-	1. We use single leader replication discussed how to scale a
-SQL database.
+	1. We use single leader replication when discussed how to scale a SQL database.
+	2. multi leader replication is mostly used to replicate between several data centers.
+- Let's go with single leader replication. Each partition will have a leader and several followers.
+	- We always write events and read them from the leader only.
+	- While a leader stays alive, all followers copy events from their leader. And if the leader dies, we choose a new leader from its followers.
+	- The leader keeps track of its followers: checks whether the followers are alive and whether any of the followers is too far behind. If a follower dies, gets stuck, or falls behind, the leader will remove it from the list of its followers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE1MTk4OTQ3LC02MzM2MDQ1OTUsLTE1Mj
-M2Mjc3MTIsMTM5MjUwMjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1
-LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NT
-UxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4
-NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NC
-wtNjE4NDI1MTUxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02
-NTkxMjg5NzRdfQ==
+eyJoaXN0b3J5IjpbMTYxNTg3MDA4NiwtNjMzNjA0NTk1LC0xNT
+IzNjI3NzEyLDEzOTI1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUz
+NSwtMTc1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxND
+U1MTY0ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2
+ODQwLC0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNz
+QsLTYxODQyNTE1MSwtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwt
+NjU5MTI4OTc0XX0=
 -->
