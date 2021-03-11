@@ -501,13 +501,14 @@ translate them to IP addresses. We register our partitioner service in DNS, spec
 ##### Partition Strategy
 - Partitioner service has to use some rule, partition strategy, that defines which partition gets what messages. A simple strategy is to **calculate a hash function based on some key**, let's say `videoId` and chose a machine based on this hash.
 - This simple strategy does not work very well with large scale. As it may lead to so called "hot partitions". For example when we have a very popular video or set of videos and all view events for them go to the same partition.
-- One approach to deal with hot partitions is to include event time, for example in minutes, into partition key. All video events within the current minute interval are forwarded to some partition. Next minute, all events go to a different
+- One approach to deal with hot partitions is to include event time, for example in minutes, into partition key. All video events within the current minute interval are forwarded to some partition. 
+	- Next minute, all events go to a different
 partition. Within one minute interval a single partition gets a lot of data, but over several minutes data is spread more evenly among partitions.
 - Another solution to hot partitions problem is to split hot partition into two new partitions. To get an idea how this approach might work, remember consistent hashing algorithm and how adding a new node to the consistent hashing
 ring splits a range of keys into two new ranges. 
 	- And if to push this idea of partition split even further, we may explicitly allocate dedicated partitions for some popular video channels. All video view events from such channels go to their allocated partitions. And view events from all other channels never go to those partitions.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0NTkwODMwNiwtMTUyMzYyNzcxMiwxMz
+eyJoaXN0b3J5IjpbMTcwOTM1NTU5OSwtMTUyMzYyNzcxMiwxMz
 kyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMw
 MTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNj
 YwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAw
