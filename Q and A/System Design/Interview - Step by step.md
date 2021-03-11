@@ -588,9 +588,18 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 - We can store raw events in Apache Hadoop or in a cloud data warehouse, such as AWS Redshift.
 - And when we roll up the data and need to archive it, AWS S3 is a natural choice.
 #### Other
-- 
+- Vitess is a database solution for scaling and managing large clusters of MySQL instances. Vitess has been serving all Youtube database traffic since 2011.
+- In several places of our design we rely on a distributed cache: for message deduplication and to scale read data queries. Redis is a good option.
+- For a dead-letter queue mechanism, when we need to temporarily queue undelivered messages, we may use an open-source message-broker such as RabbitMQ. Or public cloud alternative, such as Amazon SQS.
+- For data enrichment, when we store video and channel related information locally on the machine and inject this information in real-time, we may use RocksDB, a high performance embedded database for key-value data.
+- To do leader election for partitions and to manage service discovery, we may rely on Apache Zookeeper, which is a distributed configuration service.
+- For the service discovery piece we actually have an alternative, Eureka web service from Netflix.
+- To monitor each of our system design components we may rely on monitoring solutions provided by public cloud services, such as AWS CloudWatch.
+- Or use a popular stack of open source frameworks: Elasticsearch, Logstash, Kibana. Or ELK for short.
+- We discussed before that binary message format is preferred for our system. Popular choices are Thrift, Protobuf and Avro.
+- For Partitioner service to partition the data, we should use a good hashing function, for example a MurmurHash.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU3Mzk1OTY4LDE4NTQzOTk4MDIsLTk4OT
+eyJoaXN0b3J5IjpbNzAzNjM1NDA1LDE4NTQzOTk4MDIsLTk4OT
 g3MjU5NiwtNDgyMzQ4MDIzLC02NzI5Mzk2NjMsMjE0NDUwMjY2
 NiwtNjMzNjA0NTk1LC0xNTIzNjI3NzEyLDEzOTI1MDIyNzQsND
 Y2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAxMCwtMjEzNTU5
