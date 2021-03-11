@@ -537,12 +537,14 @@ ring splits a range of keys into two new ranges.
 	- Tags occupy less space when encoded. Schemas are crucial for binary formats. Message producers (or clients) need to know the schema to serialize the data. Message consumers (processing service in our case) require the schema to deserialize the message.
 	- So, schemas are usually stored in some shared database where both producers and consumers can retrieve them.
 Important to mention that schemas may and will change over time. We may want to add more attributes into messages and use them later for counting or filtering. Apache Avro is a good choice for our counting system.
+### Data Retrieval Path
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjkwMDA1NTMsLTY3MjkzOTY2MywyMT
-Q0NTAyNjY2LC02MzM2MDQ1OTUsLTE1MjM2Mjc3MTIsMTM5MjUw
-MjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQzMDEwLC
-0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMTY2MDc0
-NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIwMDY2Mj
-UsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MTUxLC0x
-OTUyMjc0MDkyXX0=
+eyJoaXN0b3J5IjpbMTA1NDQ0NzQ1NiwtNjcyOTM5NjYzLDIxND
+Q1MDI2NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAy
+Mjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLT
+IxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0
+MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNS
+wtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02MTg0MjUxNTEsLTE5
+NTIyNzQwOTJdfQ==
 -->
