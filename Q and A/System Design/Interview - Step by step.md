@@ -499,30 +499,17 @@ translate them to IP addresses. We register our partitioner service in DNS, spec
 - Partitioner Service is a web service that gets requests from clients, looks inside each request to retrieve individual video view events (because remember we batch events on the client side), and routs each such event/message to some partition.
 - what partitions are? Partitions is also a web service, that gets messages and stores them on disk in the form of the append-only log file. So, we have a totally-ordered sequence of messages ordered by time. This is not a single very large log file, but a set of log files of the predefined size.
 ##### Partition Strategy
-- Partitioner service has to use some rule, partition strategy, that defines which partition gets what messages. A simple strategy is to **calculate a hash function based on some key**, let's say `videoId`
-and chose a machine based on this hash.
-This simple strategy does not work very well
-with large scale.
-As it may lead to so called "hot partitions".
-For example when we have a very popular video
-or set of videos and all view events for them
-go to the same partition.
-One approach to deal with hot partitions is
-to include event time, for example in minutes,
-into partition key.
-All video events within the current minute
-interval are forwarded to some partition.
-Next minute, all events go to a different
-partition.
-Within one minute interval a single partition
-gets a lot of data, but over several minutes
-data is spread more evenly among partitions.
+- Partitioner service has to use some rule, partition strategy, that defines which partition gets what messages. A simple strategy is to **calculate a hash function based on some key**, let's say `videoId` and chose a machine based on this hash.
+- This simple strategy does not work very well with large scale. As it may lead to so called "hot partitions". For example when we have a very popular video or set of videos and all view events for them go to the same partition.
+- One approach to deal with hot partitions is to include event time, for example in minutes, into partition key. All video events within the current minute interval are forwarded to some partition. Next minute, all events go to a different
+partition. Within one minute interval a single partition gets a lot of data, but over several minutes data is spread more evenly among partitions.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQxNDI1NDczLC0xNTIzNjI3NzEyLDEzOT
-I1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUzNSwtMTc1OTU0MzAx
-MCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0ODA0LDE2Nj
-A3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC0xMzUyMDA2
-NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYxODQyNTE1MS
-wtMTk1MjI3NDA5MiwtMTczMDE2MjY4NCwtNjU5MTI4OTc0LC03
-MzA4MDUyNDVdfQ==
+eyJoaXN0b3J5IjpbLTEwNjQwMDQyOTcsLTE1MjM2Mjc3MTIsMT
+M5MjUwMjI3NCw0NjY5MjYyNzAsMTU5MzM5NTM1LC0xNzU5NTQz
+MDEwLC0yMTM1NTkzNjQsMTQ3MzUxNTc1LDE0NTUxNjQ4MDQsMT
+Y2MDc0NDEwLC0xOTEwNjMyOTQ3LC02MjE3MjY4NDAsLTEzNTIw
+MDY2MjUsLTE3ODQ3NzExNTgsMjEyMTAwNzM3NCwtNjE4NDI1MT
+UxLC0xOTUyMjc0MDkyLC0xNzMwMTYyNjg0LC02NTkxMjg5NzQs
+LTczMDgwNTI0NV19
 -->
