@@ -567,13 +567,40 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 ### Technology Stack
 - We rely on some well-regarded technologies. Either open source or commercial. Public cloud services.
 - During the interview do not forget to discuss these technologies. You may do this along the way or at the end of the interview. 
-- 
+#### Client side
+- Netty is a high-performance non-blocking IO framework for developing network applications, both clients and servers.
+- Frameworks such as Hystrix from Netflix
+- Polly simplify implementation of many client-side concepts we discussed before: timeouts, retries, circuit breaker pattern.
+#### Load balancing
+Citrix Netscaler is probably the most famous
+hardware load balancer.
+Among software load balancers NGINX is a very
+popular choice.
+And if we run our counting system in the cloud,
+for example Amazon cloud, then Elastic Load
+Balancer is a good pick.
+Instead of using our custom Partitioner service
+and partitions, we could use Apache Kafka
+instead.
+Or Kafka's public cloud counterpart, like
+Amazon Kinesis.
+To process events and aggregate them in memory
+we can use stream-processing frameworks such
+as Apache Spark or Flink.
+Or cloud-based solutions, such as Kinesis
+Data Analytics.
+We already talked about Apache Cassandra.
+Another popular choice for storing time-series
+data is Apache HBase database.
+These are wide column databases.
+There are also databases optimized for handling
+time series data, like InfluxDB.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NDM5OTgwMiwtOTg5ODcyNTk2LC00OD
-IzNDgwMjMsLTY3MjkzOTY2MywyMTQ0NTAyNjY2LC02MzM2MDQ1
-OTUsLTE1MjM2Mjc3MTIsMTM5MjUwMjI3NCw0NjY5MjYyNzAsMT
-U5MzM5NTM1LC0xNzU5NTQzMDEwLC0yMTM1NTkzNjQsMTQ3MzUx
-NTc1LDE0NTUxNjQ4MDQsMTY2MDc0NDEwLC0xOTEwNjMyOTQ3LC
-02MjE3MjY4NDAsLTEzNTIwMDY2MjUsLTE3ODQ3NzExNTgsMjEy
-MTAwNzM3NF19
+eyJoaXN0b3J5IjpbLTE5OTI1NzA5OCwxODU0Mzk5ODAyLC05OD
+k4NzI1OTYsLTQ4MjM0ODAyMywtNjcyOTM5NjYzLDIxNDQ1MDI2
+NjYsLTYzMzYwNDU5NSwtMTUyMzYyNzcxMiwxMzkyNTAyMjc0LD
+Q2NjkyNjI3MCwxNTkzMzk1MzUsLTE3NTk1NDMwMTAsLTIxMzU1
+OTM2NCwxNDczNTE1NzUsMTQ1NTE2NDgwNCwxNjYwNzQ0MTAsLT
+E5MTA2MzI5NDcsLTYyMTcyNjg0MCwtMTM1MjAwNjYyNSwtMTc4
+NDc3MTE1OF19
 -->
