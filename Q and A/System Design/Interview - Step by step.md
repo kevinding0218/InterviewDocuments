@@ -561,14 +561,15 @@ that is older than let's say 3 months, is stored with 1 day granularity. And the
 	2. Aggregator counts messages for a one minute period and flushes calculated values to the internal queue at the end of that minute. 
 	3. Database writer picks count from the internal queue and sends it to the database.
 6. In the database we store count per hour and the total number of views for each video.
-7. So, we just add a one minute value to the current hour count as well as the total count. Total count was 7 prior to this minute and we add 3 for the current minute. And during data retrieval, when user opens video A, API Gateway sends request to the Query service. 
-8. Query service checks the cache. And if data is not found in the cache, or cache value has expired, we call the database. Total count value is then stored in the cache and Query service returns the total count back to the user.
+7. So, we just add a one minute value to the current hour count as well as the total count. Total count was 7 prior to this minute and we add 3 for the current minute. 
+8. And during data retrieval, when user opens video A, API Gateway sends request to the Query service. 
+9. Query service checks the cache. And if data is not found in the cache, or cache value has expired, we call the database. Total count value is then stored in the cache and Query service returns the total count back to the user.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTI0NTA2ODcsLTQ4MjM0ODAyMywtNj
-cyOTM5NjYzLDIxNDQ1MDI2NjYsLTYzMzYwNDU5NSwtMTUyMzYy
-NzcxMiwxMzkyNTAyMjc0LDQ2NjkyNjI3MCwxNTkzMzk1MzUsLT
-E3NTk1NDMwMTAsLTIxMzU1OTM2NCwxNDczNTE1NzUsMTQ1NTE2
-NDgwNCwxNjYwNzQ0MTAsLTE5MTA2MzI5NDcsLTYyMTcyNjg0MC
-wtMTM1MjAwNjYyNSwtMTc4NDc3MTE1OCwyMTIxMDA3Mzc0LC02
-MTg0MjUxNTFdfQ==
+eyJoaXN0b3J5IjpbLTk4OTg3MjU5NiwtNDgyMzQ4MDIzLC02Nz
+I5Mzk2NjMsMjE0NDUwMjY2NiwtNjMzNjA0NTk1LC0xNTIzNjI3
+NzEyLDEzOTI1MDIyNzQsNDY2OTI2MjcwLDE1OTMzOTUzNSwtMT
+c1OTU0MzAxMCwtMjEzNTU5MzY0LDE0NzM1MTU3NSwxNDU1MTY0
+ODA0LDE2NjA3NDQxMCwtMTkxMDYzMjk0NywtNjIxNzI2ODQwLC
+0xMzUyMDA2NjI1LC0xNzg0NzcxMTU4LDIxMjEwMDczNzQsLTYx
+ODQyNTE1MV19
 -->
