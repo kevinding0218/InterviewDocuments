@@ -159,9 +159,14 @@ https://www.baeldung.com/java-static-default-methods
 	- **We should know that we can retrieve a value of the version attribute via entity, but we mustn't update or increment it.** Only the persistence provider can do that, so data stays consistent.
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
+### HashMap vs LinkedHashMap vs TreeMap
+1.  **HashMap**  :-  `HashMap`  never preserves your Insertion Order. It Internally Use a hashing Concept by which it generate a  `HashCode`  to the Corresponding  `key`  and add it to the  `HashMap`.
+2.  **LinkedHashMap**  :-  `LinkedHashMap`  It preserves your Insertion Order. and  `keys`  will be found as same order you Insert into this  `LinkedHashMap`.
+3.  **TreeMap**  :- The  `TreeMap`  class implements the  `Map`  **interface**  by using a  **Tree**. A  `TreeMap`  provides an efficient means of storing  **key/value**  pairs in sorted order, and allows rapid retrieval.
+	- unlike a `HashMap`, a tree map guarantees that its elements will be sorted in ascending key order
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5Mzc2MjcxOCwtNjkxNzQ0MzU1LDE4OD
-QxNzMxMjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMzk1Nzg5
-MSwxNTIyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLT
-E0MDI2NjQ3OTMsMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbMTcwNzU3MzU4MywtNTkzNzYyNzE4LC02OT
+E3NDQzNTUsMTg4NDE3MzEyNiwyMDQ4MzA1NTAyLDM1OTY4NjE3
+NiwxMTEzOTU3ODkxLDE1MjIyMzUyNTAsMTYxNDUzNzg2MCwtMT
+czMDQ5NTAzOSwtMTQwMjY2NDc5MywxODc0MDIxMjU0XX0=
 -->
