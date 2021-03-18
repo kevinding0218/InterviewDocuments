@@ -160,16 +160,18 @@ https://www.baeldung.com/java-static-default-methods
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 ### HashTable vs HashMap vs HashSet
-- HashTable for multi thread, that it's safe to visit h
+- HashTable for multi thread, that it's safe to visit HashTable across multi thread
+- HashMap for single thread
+- HashSet no value
 ### HashMap vs LinkedHashMap vs TreeMap
 1.  **HashMap**  :-  `HashMap`  never preserves your Insertion Order. It Internally Use a hashing Concept by which it generate a  `HashCode`  to the Corresponding  `key`  and add it to the  `HashMap`.
 2.  **LinkedHashMap**  :-  `LinkedHashMap`  It preserves your Insertion Order. and  `keys`  will be found as same order you Insert into this  `LinkedHashMap`.
 3.  **TreeMap**  :- The  `TreeMap`  class implements the  `Map`  **interface**  by using a  **Tree**. A  `TreeMap`  provides an efficient means of storing  **key/value**  pairs in sorted order, and allows rapid retrieval.
 	- unlike a `HashMap`, a tree map guarantees that its elements will be sorted in ascending key order
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ3MzI0NjgwLDE3MDc1NzM1ODMsLTU5Mz
-c2MjcxOCwtNjkxNzQ0MzU1LDE4ODQxNzMxMjYsMjA0ODMwNTUw
-MiwzNTk2ODYxNzYsMTExMzk1Nzg5MSwxNTIyMjM1MjUwLDE2MT
-Q1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2NjQ3OTMsMTg3NDAy
-MTI1NF19
+eyJoaXN0b3J5IjpbLTM2MTkwMTgwNSwxNzA3NTczNTgzLC01OT
+M3NjI3MTgsLTY5MTc0NDM1NSwxODg0MTczMTI2LDIwNDgzMDU1
+MDIsMzU5Njg2MTc2LDExMTM5NTc4OTEsMTUyMjIzNTI1MCwxNj
+E0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAyNjY0NzkzLDE4NzQw
+MjEyNTRdfQ==
 -->
