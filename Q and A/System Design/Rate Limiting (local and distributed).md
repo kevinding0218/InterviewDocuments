@@ -10,7 +10,7 @@
 #### Rate Limiting/Throttling
 - Throttling helps to limit the number of requests a client can submit in a given amount of time. Requests submitted over the limit are either immediately rejected or their processing is delayed.
 ### Question to Interviewer
-- 
+- Can it be solved by scaling out the cluster of hosts that run our web service, by some kind of auto-scaling, right?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MDM5NTAxMV19
+eyJoaXN0b3J5IjpbLTU4NzcwNDE5NF19
 -->
