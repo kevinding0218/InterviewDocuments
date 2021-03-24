@@ -7,12 +7,10 @@
 	- Or this is just a malicious client who tried to DDoS our service.
 - All these situations may lead to a so called “noisy neighbor problem”, when one client utilizes too much shared resources on a service host, like CPU, memory, disk or network I/O. And because of this, other clients of our application start to experience higher latency for their requests, or higher rate of failed requests.
 - One of the ways to solve a “noisy neighbor problem” is to introduce a rate limiting (also known as throttling).
-### Rate Limiting/Throttling
-- Throttling helps to limit the number of requests a client can submit in a given amount of time.
-
-Requests submitted over the limit are either immediately rejected or their processing is
-
-delayed.
+#### Rate Limiting/Throttling
+- Throttling helps to limit the number of requests a client can submit in a given amount of time. Requests submitted over the limit are either immediately rejected or their processing is delayed.
+### Question to Interviewer
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODA5MDMwMDFdfQ==
+eyJoaXN0b3J5IjpbMTA3MDM5NTAxMV19
 -->
