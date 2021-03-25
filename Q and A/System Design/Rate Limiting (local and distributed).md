@@ -122,16 +122,16 @@ public class RateLimiterTokenBucket {
 - Job Scheduler interface is responsible for scheduling a job that runs every several seconds and retrieves rules from Rules service.
 	- RetrieveJobScheduler class implements JobScheduler interface. Its responsibility is to instantiate, start and stop the 	scheduler. And to run retrieve rules task periodically.
 - RulesCache interface is responsible for storing rules in memory.
-	- TokenBucketCache class implements RulesCache, it's used to store token bucket objects, Map / ConcurrentHashMap / Google Guava Cache
-- ClientIdentifier builds a key that uniquely identifies a client.
+	- TokenBucketCache class implements RulesCache, it is responsible for storing token bucket objects, Map / ConcurrentHashMap / Google Guava Cache
+- ClientIdentifier Interface builds a key that uniquely identifies a client.
+	- ClientIdentifierBuilder implements ClientIdentifier, it is responsible for building a key based on user identity information (for example login). There can be other implementations as well, for example based on IP address or retrieve client identity information from request context
 - RateLimiter is responsible for decision making.
 
 	- In Java, for example, we can utilize ScheduledExecutorService interface as a scheduler.
 - TokenBucketCache stores token buckets. 
 	- We can use something simple, for example Map to store buckets.
 	- Or utilize 3-rd party cache implementation, like Google Guava cache.
-- ClientIdentifierBuilder is responsible for building a key based on user identity information (for example login).
-	- There can be other implementations as well, for example based on IP address.
+- 
 - For the RateLimiter interface lets introduce a TokenBucketRateLimiter class, which is responsible for calling allow request on the correspondent bucket for that client.
 - And the last important piece is the RetrieveRulesTask, which is responsible for retrieving all the rules for this service.
 #### Interaction
@@ -162,7 +162,7 @@ public class RateLimiterTokenBucket {
 #### Ways of sharing between hosts
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NjkzNzg1MSwtNTA5OTgwNzEyLC0xMT
+eyJoaXN0b3J5IjpbLTEzOTQ5ODk2NSwtNTA5OTgwNzEyLC0xMT
 AzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2NDAxLC02MTMx
 OTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC0xMDc4MjY3Mj
 M0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0MzY1Nywz
