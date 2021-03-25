@@ -155,10 +155,13 @@ public class RateLimiterTokenBucket {
 - By the way, the token bucket algorithm will still handle this use case well. We just need to slightly modify it to allow negative number of available tokens. 
 - When 12 requests hit the system, buckets will start sharing this information. After sharing, every bucket will have -8 tokens and for the duration of the next 2 seconds all requests will be throttled. So, on average we processed 12 requests within 3 seconds.
 - Although in reality all 12 were processed within the first second. So, communication between hosts is the key. Let’s see how this communication can be implemented.
+#### Ways of sharing between hosts
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjY4NzU5NDIsLTExNjc5MjY0MDEsLT
-YxMzE5NTkxMSwtMTQyMzExMTcxMCw0ODk2MzAxMjYsLTEwNzgy
-NjcyMzQsLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0xMzk3NDQzNj
-U3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcyLDEzMzEz
-NTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbLTExMDM5MTY5NzIsLTE2MjY4NzU5NDIsLT
+ExNjc5MjY0MDEsLTYxMzE5NTkxMSwtMTQyMzExMTcxMCw0ODk2
+MzAxMjYsLTEwNzgyNjcyMzQsLTE3NjkzMzAzNTcsODQ5NDczND
+gxLC0xMzk3NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2
+MTQ3NTcyLDEzMzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MT
+k0XX0=
 -->
