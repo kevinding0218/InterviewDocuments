@@ -49,10 +49,10 @@
 - You may argue whether we need the client identifier builder as a separate component or should it just be a part of the decision-making component. It is up to you.
 ### Algorithm
 - Google Guava RateLimiter class.
-- Fixed and sliding window paradigms can be applied
+- Fixed and sliding window paradigms
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM0MjM0NTkxLC0xMzk3NDQzNjU3LDM0MT
-czNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcyLDEzMzEzNTAzODUs
-MjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbLTIyNzUzODQ2MywtMTM5NzQ0MzY1NywzND
+E3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMzMxMzUwMzg1
+LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
 -->
