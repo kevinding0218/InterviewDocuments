@@ -120,10 +120,11 @@ public class RateLimiterTokenBucket {
 ### Object-Oriented Design
 #### Class and Interface
 - Job Scheduler interface is responsible for scheduling a job that runs every several seconds and retrieves rules from Rules service.
+- \
 - RulesCache interface is responsible for storing rules in memory.
 - ClientIdentifier builds a key that uniquely identifies a client.
 - RateLimiter is responsible for decision making.
-- RetrieveJobScheduler class implements JobScheduler interface. Its responsibility is to instantiate, start and stop the scheduler. And to run retrieve rules task.
+
 	- In Java, for example, we can utilize ScheduledExecutorService interface as a scheduler.
 - TokenBucketCache stores token buckets. 
 	- We can use something simple, for example Map to store buckets.
@@ -160,10 +161,10 @@ public class RateLimiterTokenBucket {
 #### Ways of sharing between hosts
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwOTk4MDcxMiwtMTEwMzkxNjk3MiwtMT
-YyNjg3NTk0MiwtMTE2NzkyNjQwMSwtNjEzMTk1OTExLC0xNDIz
-MTExNzEwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMzMD
-M1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1MzIsNzk1
-MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3NT
-MwLC01ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbMTQwMDkzMjE3MiwtNTA5OTgwNzEyLC0xMT
+AzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2NDAxLC02MTMx
+OTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC0xMDc4MjY3Mj
+M0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0MzY1Nywz
+NDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMzMxMzUwMz
+g1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
 -->
