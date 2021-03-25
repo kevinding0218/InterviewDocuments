@@ -31,8 +31,9 @@
 ### Build Solution
 #### Start from Simple
 - let’s implement a rate limiting solution for a single server first. So, no communication between servers just yet
-#### rules retriever
+#### Rules Retriever
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MjAxMTUwMywxNTg2MTQ3NTcyLDEzMz
+eyJoaXN0b3J5IjpbLTk3OTc5ODIwOSwxNTg2MTQ3NTcyLDEzMz
 EzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
