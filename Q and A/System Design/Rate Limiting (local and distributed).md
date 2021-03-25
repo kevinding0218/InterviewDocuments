@@ -151,15 +151,15 @@ public class RateLimiterTokenBucket {
 - We gave each bucket 4 tokens. If many requests for the same bucket hit our cluster exactly at the same second. Does this mean that 12 requests may be processed, instead of only 4 allowed? Or may be a more realistic scenario. Because communication between hosts takes time, until all hosts agree on what that final number of tokens must be, may there be any requests that slip into the system at that time?
 - Yes. Unfortunately, this is the case. We should expect that sometimes our system may be processing more requests than we expect and we need to scale out our cluster accordingly.
 - By the way, the token bucket algorithm will still handle this use case well. We just need to slightly modify it to allow negative number of available tokens. 
-- When 12 requests hit the system, buckets will start sharing this information. After sharing, every bucket will have -8 tokens and for the duration of the next 2 seconds all requests will be throttled. So, on average we processed 12 requests within 3 seconds.
+- When 12 requests hit the system, buckets will start sharing this information. After sharing, every bucket will have -8 (4-12) tokens and for the duration of the next 2 seconds all requests will be throttled. So, on average we processed 12 requests within 3 seconds.
 - Although in reality all 12 were processed within the first second. So, communication between hosts is the key. Let’s see how this communication can be implemented.
 #### Ways of sharing between hosts
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDA0NjYxMywtNTA5OTgwNzEyLC0xMT
-AzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2NDAxLC02MTMx
-OTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC0xMDc4MjY3Mj
-M0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0MzY1Nywz
-NDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMzMxMzUwMz
-g1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbNDg3NDYyNDMyLC01MDk5ODA3MTIsLTExMD
+M5MTY5NzIsLTE2MjY4NzU5NDIsLTExNjc5MjY0MDEsLTYxMzE5
+NTkxMSwtMTQyMzExMTcxMCw0ODk2MzAxMjYsLTEwNzgyNjcyMz
+QsLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0xMzk3NDQzNjU3LDM0
+MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcyLDEzMzEzNTAzOD
+UsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
