@@ -33,12 +33,12 @@
 - let’s implement a rate limiting solution for a single server first. So, no communication between servers just yet
 #### Rules Retriever
 - Each rule specifies a number of requests allowed for a particular client per second.
-These rules are defined by service owners and stored in a database.
-And there is a web service that manages all the operation with rules.
+- These rules are defined by service owners and stored in a database.
+- And there is a web service that manages all the operation with rules.
 Rules retriever is a background process that polls Rules service periodically to check
 if there are any new or modified rules.
 Rules retriever stores rules in memory on the host.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NjA5MTcwMCwxNTg2MTQ3NTcyLDEzMz
-EzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbLTE5NjcwNTgzMjQsMTU4NjE0NzU3MiwxMz
+MxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
 -->
