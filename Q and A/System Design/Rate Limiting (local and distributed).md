@@ -9,7 +9,7 @@
 - One of the ways to solve a “noisy neighbor problem” is to introduce a rate limiting (also known as throttling).
 #### Rate Limiting/Throttling
 - Throttling helps to limit the number of requests a client can submit in a given amount of time. Requests submitted over the limit are either immediately rejected or their processing is delayed.
-### Question to Interviewer
+### Pre-Question to Interviewer
 #### What about auto-scaling?
 	- problem with scaling up or scaling out is that it is not happening immediately, even autoscaling takes time.
 	- And by the time scaling process completes it may already be late. Our service may already crash.
@@ -19,7 +19,11 @@
 	- Load balancer does not have knowledge about a cost of each operation. And if we want to limit number of requests for a particular operation, we can do this on application server only, not at a load balancer level.
 	- If we have a load balancer in front of our web service and this load balancer spreads requests evenly across application servers and each request takes the same amount of time to complete - you are right. In this case this is a single instance problem and there is no need in any distributed solution. Application servers do not need to talk to each other. They throttle requests independently.
 	- But in the real-world load balancers cannot distribute requests in a perfectly even manner. Plus, as we discussed before different web service operations cost differently. And each application server itself may become slow due to software failures or overheated due to some other background process running on it. All this leads to a conclusion that we will need a solution where application servers will communicate with each other and share information about how many client requests each one of them processed so far.
+### Formalize Requirements
+#### Functional Requirements
+- For a given request our rate limiting solution should return a boolean value, whether request is throttled or not.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01OD
-c3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbNzg1NzY1OTI1LDEzMzEzNTAzODUsMjA2Mz
+IzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
