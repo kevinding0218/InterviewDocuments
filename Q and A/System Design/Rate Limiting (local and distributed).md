@@ -132,9 +132,10 @@ public class RateLimiterTokenBucket {
 	- There can be other implementations as well, for example based on IP address.
 - For the RateLimiter interface lets introduce a TokenBucketRateLimiter class, which is responsible for calling allow request on the correspondent bucket for that client.
 - And the last important piece is the RetrieveRulesTask, which is responsible for retrieving all the rules for this service.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg5NjMwMTI2LC0xMDc4MjY3MjM0LC0xNz
-Y5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0MzY1NywzNDE3MzUz
-Miw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMzMxMzUwMzg1LDIwNj
-MyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbNDQxMzE0MzQ1LDQ4OTYzMDEyNiwtMTA3OD
+I2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2
+NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMT
+M1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
 -->
