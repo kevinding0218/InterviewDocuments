@@ -66,12 +66,12 @@ public class RateLimiterTokenBucket {
   
     public RateLimiterTokenBucket(long maxBucketSize, long refillRate) {  
   this.maxBucketSize = maxBucketSize;  
-        this.refillRate = refillRate;  
+      this.refillRate = refillRate;  
   
         // Numbers of tokens initially is equal to the maximum capacity  
-  currentBucketSize = maxBucketSize;  
+	  currentBucketSize = maxBucketSize;  
         // Current time in nanoseconds  
-  lastRefillTimestamp = System.nanoTime();  
+	  lastRefillTimestamp = System.nanoTime();  
     }  
   
   /**  
@@ -108,7 +108,8 @@ public class RateLimiterTokenBucket {
 	- Otherwise, we need to decrease number of available tokens by the cost of the request. 
 	- And the last piece is the refill method. It calculates how many tokens accumulated since the last refill and increases currently available tokens in the bucket by this number.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0xMz
-k3NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcy
-LDEzMzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbLTkxNjk2OTA2MSwtMTc2OTMzMDM1Nyw4ND
+k0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OTc2
+LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01OD
+c3MDQxOTRdfQ==
 -->
