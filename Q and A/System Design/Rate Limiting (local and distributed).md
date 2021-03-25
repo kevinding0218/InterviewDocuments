@@ -125,14 +125,8 @@ public class RateLimiterTokenBucket {
 	- TokenBucketCache class implements RulesCache, it is responsible for storing token bucket objects, Map / ConcurrentHashMap / Google Guava Cache
 - ClientIdentifier Interface builds a key that uniquely identifies a client.
 	- ClientIdentifierBuilder implements ClientIdentifier, it is responsible for building a key based on user identity information (for example login). There can be other implementations as well, for example based on IP address or retrieve client identity information from request context
-- RateLimiter is responsible for decision making.
-
-	- In Java, for example, we can utilize ScheduledExecutorService interface as a scheduler.
-- TokenBucketCache stores token buckets. 
-	- We can use something simple, for example Map to store buckets.
-	- Or utilize 3-rd party cache implementation, like Google Guava cache.
-- 
-- For the RateLimiter interface lets introduce a TokenBucketRateLimiter class, which is responsible for calling allow request on the correspondent bucket for that client.
+- RateLimiter Interface is responsible for decision making.
+	-	TokenBucketRateLimiter class implements RateLimiter, it is responsible for retrieves token bucket from cache, and calls allowRequest() on the bucket
 - And the last important piece is the RetrieveRulesTask, which is responsible for retrieving all the rules for this service.
 #### Interaction
 - RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service. It then creates token buckets and puts them into the cache.
@@ -162,7 +156,7 @@ public class RateLimiterTokenBucket {
 #### Ways of sharing between hosts
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTQ5ODk2NSwtNTA5OTgwNzEyLC0xMT
+eyJoaXN0b3J5IjpbMTAyNDYyNzkwMSwtNTA5OTgwNzEyLC0xMT
 AzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2NDAxLC02MTMx
 OTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC0xMDc4MjY3Mj
 M0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0MzY1Nywz
