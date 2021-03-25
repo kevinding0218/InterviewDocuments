@@ -23,7 +23,11 @@
 #### Functional Requirements
 - For a given request our rate limiting solution should return a boolean value, whether request is throttled or not.
 #### Non-functional Requirements
+- we need rate limiter to be fast (as it will be called on every request to the service), 
+- accurate (as we do not want to throttle customers unless it is absolutely required)
+- scalable (so that rate limiter scales out together with the service itself). If we need to add more hosts to the web service cluster, this should not be a problem for the rate limiter.
+##
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NTA1NTU2MywxMzMxMzUwMzg1LDIwNj
-MyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbNjYxNjQ2NzE3LDEzMzEzNTAzODUsMjA2Mz
+IzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
