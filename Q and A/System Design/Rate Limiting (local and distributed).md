@@ -138,9 +138,11 @@ public class RateLimiterTokenBucket {
 - And then it passes this key to the cache and retrieves the bucket.
 - And the last step to do is to call allow request on the bucket.
 ### Distributed World
-#### how we can make rate limiting work across many machines in a cluster.
+#### How we can make rate limiting work across many machines in a cluster.
 - We have a cluster that consists of 3 hosts. And we want rate limiting solution to allow 4 requests per second for each client. How many tokens should we give to a bucket on every host? Should we give 4 divided by 3?
-- Answer is 4. Each bucket should have 4 tokens initially. The reason for this is that all requests for the same bucket may in theory land on the same host. Load balancers try to distributed requests evenly, but they do not know anything about keys, and requests for the same key will not be evenly distributed.  Let's add load balancer into the picture and run a very simple simulation. 
+- Answer is 4. Each bucket should have 4 tokens initially. The reason for this is that all requests for the same bucket may in theory land on the same host. Load balancers try to distributed requests evenly, but they do not know anything about keys, and requests for the same key will not be evenly distributed.  
+#### Simulation
+- Let's add load balancer into the picture and run a very simple simulation. 
 	- The first request goes to host A, one token is consumed. Remaining 3 tokens
 	- The second request goes to host C and one token is consumed there.  Remaining 3 tokens
 	- Two other requests, within the same 1 second interval, go to host B. And take two tokens from the bucket.  Remaining 2 tokens
@@ -158,10 +160,10 @@ public class RateLimiterTokenBucket {
 #### Ways of sharing between hosts
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDM5MTY5NzIsLTE2MjY4NzU5NDIsLT
-ExNjc5MjY0MDEsLTYxMzE5NTkxMSwtMTQyMzExMTcxMCw0ODk2
-MzAxMjYsLTEwNzgyNjcyMzQsLTE3NjkzMzAzNTcsODQ5NDczND
-gxLC0xMzk3NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2
-MTQ3NTcyLDEzMzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MT
-k0XX0=
+eyJoaXN0b3J5IjpbLTExNDA3NjE1NzYsLTExMDM5MTY5NzIsLT
+E2MjY4NzU5NDIsLTExNjc5MjY0MDEsLTYxMzE5NTkxMSwtMTQy
+MzExMTcxMCw0ODk2MzAxMjYsLTEwNzgyNjcyMzQsLTE3NjkzMz
+AzNTcsODQ5NDczNDgxLC0xMzk3NDQzNjU3LDM0MTczNTMyLDc5
+NTA4ODk3NiwxNTg2MTQ3NTcyLDEzMzEzNTAzODUsMjA2MzIzNz
+UzMCwtNTg3NzA0MTk0XX0=
 -->
