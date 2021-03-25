@@ -30,7 +30,9 @@
 - Two common requirements for many distributed systems but not so much important to a rate limiter
 ### Build Solution
 #### Start from Simple
+- let’s implement a rate limiting solution for a single server first. So, no communication between servers just yet
+#### rules retriever
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NjE0NzU3MiwxMzMxMzUwMzg1LDIwNj
-MyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbLTU1MjAxMTUwMywxNTg2MTQ3NTcyLDEzMz
+EzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
