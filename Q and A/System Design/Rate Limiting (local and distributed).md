@@ -109,17 +109,16 @@ public class RateLimiterTokenBucket {
 	- And the last piece is the refill method. It calculates how many tokens accumulated since the last refill and increases currently available tokens in the bucket by this number.
 #### Examples
 - Maximum capacity is set to 10 and refill rate is set to 10 tokens per second. So, the bucket currently has 10 tokens available.
-- In time T1, which is 300 milliseconds later, allow request method call was initiated and
-the cost of that request is 6 tokens. How many tokens have remained in the bucket after allow request method completed
+- In time T1, which is 300 milliseconds later, allow request method call was initiated and the cost of that request is 6 tokens. How many tokens have remained in the bucket after allow request method completed
 	- The answer is 4. Bucket was full all this time, no new tokens have been added to the bucket. So, we simply subtract 6
-	tokens.
+	tokens. (10 - 6 = 4)
 - 200 milliseconds later one more allow request call was initiated with the 5 tokens cost. How many tokens have remained after this call?
 	- And the answer is 1.
 	- First, two more tokens have been added to the bucket by the refill method.
 	- And then 5 tokens have been subtracted.
 - And 1 second later, actually 900 milliseconds, bucket is full again.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTcwNzM2NDIsLTE3NjkzMzAzNTcsOD
+eyJoaXN0b3J5IjpbLTEwNzgyNjcyMzQsLTE3NjkzMzAzNTcsOD
 Q5NDczNDgxLC0xMzk3NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3
 NiwxNTg2MTQ3NTcyLDEzMzEzNTAzODUsMjA2MzIzNzUzMCwtNT
 g3NzA0MTk0XX0=
