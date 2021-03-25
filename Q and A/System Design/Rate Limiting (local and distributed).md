@@ -40,9 +40,12 @@
 - Let’s call it a key, for short. This may be a login for registered clients or remote IP address or some combination of attributes that uniquely identify the client.
 - The key is then passed to the Rate Limiter component, that is responsible for making a decision. Rate Limiter checks the key against rules in the cache. And if match is found, Rate Limiter checks if number of requests made by the client for the last second is below a limit specified in the rule.
 	- If threshold is not exceeded, request is passed further for processing.
-	- If threshold is exceeded, the request is rejected.
+	- If threshold is exceeded, the request is rejected. Our service may return a specific response status code, for example service unavailable or too many requests.
+Or we can queue this request and process it later.
+Or we can simply drop this request on the floor.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMT
-M1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbMTk2NjAwMDMzOCw3OTUwODg5NzYsMTU4Nj
+E0NzU3MiwxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5
+NF19
 -->
