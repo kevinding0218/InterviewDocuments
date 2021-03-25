@@ -119,20 +119,19 @@ public class RateLimiterTokenBucket {
 - And 1 second later, actually 900 milliseconds, bucket is full again.
 ### Object-Oriented Design
 #### Class and Interface
-- Job Scheduler interface is responsible for scheduling a job that runs every several seconds and retrieves rules from Rules service.
-	- RetrieveJobScheduler class implements JobScheduler interface. Its responsibility is to instantiate, start and stop the 	scheduler. And to run retrieve rules task periodically.
-	- RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service. It then creates token buckets and puts them into the cache.
-- RulesCache interface is responsible for storing rules in memory.
+1. Job Scheduler interface is responsible for scheduling a job that runs every several seconds and retrieves rules from Rules service.
+	1.2 RetrieveJobScheduler class implements JobScheduler interface. Its responsibility is to instantiate, start and stop the 	scheduler. And to run retrieve rules task periodically.
+	1.3 RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service for retrieving all the rules for this service. It then creates token buckets and puts them into the cache.
+2. RulesCache interface is responsible for storing rules in memory.
 	- TokenBucketCache class implements RulesCache, it is responsible for storing token bucket objects, Map / ConcurrentHashMap / Google Guava Cache
-- ClientIdentifier Interface builds a key that uniquely identifies a client.
+3. ClientIdentifier Interface builds a key that uniquely identifies a client.
 	- ClientIdentifierBuilder implements ClientIdentifier, it is responsible for building a key based on user identity information (for example login). There can be other implementations as well, for example based on IP address or retrieve client identity information from request context
-- RateLimiter Interface is responsible for decision making.
+4. RateLimiter Interface is responsible for decision making.
 	-	TokenBucketRateLimiter class implements RateLimiter, it is responsible for retrieves token bucket from cache, and calls allowRequest() on the bucket
-- And the last important piece is the RetrieveRulesTask, which is responsible for retrieving all the rules for this service.
 #### Interaction
 1. RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service. It then creates token buckets and puts them into the cache.
 2. When client request comes to the host, RateLimiter first makes a call to the ClientIdentifierBuilder to build a unique identifier for the client.
-3. And then it passes this key to the cache and retrieves the bucket.
+3. And then it passes this key to the cache in TokenBucketCache and retrieves the bucket.
 4. And the last step to do is to call allow request on the bucket.
 ### Distributed World
 #### How we can make rate limiting work across many machines in a cluster.
@@ -157,10 +156,10 @@ public class RateLimiterTokenBucket {
 #### Ways of sharing between hosts
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ2OTgzNzYsLTUwOTk4MDcxMiwtMTEwMz
-kxNjk3MiwtMTYyNjg3NTk0MiwtMTE2NzkyNjQwMSwtNjEzMTk1
-OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNC
-wtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQx
-NzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NS
-wyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbLTE1NjU5OTk3NDgsLTUwOTk4MDcxMiwtMT
+EwMzkxNjk3MiwtMTYyNjg3NTk0MiwtMTE2NzkyNjQwMSwtNjEz
+MTk1OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNiwtMTA3ODI2Nz
+IzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcs
+MzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MD
+M4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
 -->
