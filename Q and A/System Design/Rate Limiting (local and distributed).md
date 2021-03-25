@@ -57,12 +57,54 @@
 - Every time request comes, we take a token from the bucket. If there are no more tokens available in the bucket, request is rejected. And the bucket is refilled with a constant rate.
 ##### Implementation
 ```
-
+public class RateLimiterTokenBucket {  
+  private final long maxBucketSize;  
+    private final long refillRate;  
+  
+    private double currentBucketSize;  
+    private long lastRefillTimestamp;  
+  
+    public RateLimiterTokenBucket(long maxBucketSize, long refillRate) {  
+  this.maxBucketSize = maxBucketSize;  
+        this.refillRate = refillRate;  
+  
+        // Numbers of tokens initially is equal to the maximum capacity  
+  currentBucketSize = maxBucketSize;  
+        // Current time in nanoseconds  
+  lastRefillTimestamp = System.nanoTime();  
+    }  
+  
+  /**  
+ * Synchronized, as several threads may be calling the method concurrently */  public synchronized boolean allowRequest(int tokens) {  
+  // First, refill bucket with tokens accumulated since the last call  
+  refill();  
+        // If bucket has enough tokens, call is allowed  
+  if (currentBucketSize > tokens) {  
+  currentBucketSize -= tokens;  
+  
+            return true;  
+        }  
+  // Request is throttled as bucket does not have enough tokens  
+  return false;  
+    }  
+  
+  private void refill() {  
+  long now = System.nanoTime();  
+        // These many tokens accumulated since the last refill  
+ // 1e9 ~ 10^9  double tokensToAdd = (now - lastRefillTimestamp) * refillRate / 1e9;  
+        // Number of tokens should never exceed maximum capacity  
+  currentBucketSize = Math.min(currentBucketSize + tokensToAdd, maxBucketSize);  
+        lastRefillTimestamp = now;  
+    }  
+}
 ```
 - There are 4 class fields: maximum bucket size, refill rate, number of currently available, tokens and timestamp that indicates when bucket was last refilled.
 - Constructor accepts two arguments: maximum bucket size and refill rate. Number of currently available tokens is set to the maximum bucket size. And timestamp is set to the current time in nanoseconds.
+- Allow request method has one argument - number of tokens that represent a cost of the operation. Usually, the cost is equal to 1. Meaning that with every request we take a single token from the bucket. But it may be a larger value as well.
+	- For example, when we have a slow operation in the web service and each request to that
+operation may cost several tokens.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIzMTI1OTYsODQ5NDczNDgxLC0xMzk3ND
-QzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcyLDEz
-MzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbLTg5MTM3NDY1LDg0OTQ3MzQ4MSwtMTM5Nz
+Q0MzY1NywzNDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3Miwx
+MzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
 -->
