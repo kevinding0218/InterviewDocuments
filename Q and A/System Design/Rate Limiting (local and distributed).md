@@ -44,10 +44,12 @@
 #### Summary
 - The thinking process has been pretty straightforward. We know we need a database to store the rules. And we need a service on top of this database for all the so-called CRUD operations (create, read, update, delete).
 - We know we need a process to retrieve rules periodically. 
-- And store rules in memory. And we need a component that makes a decision. You may argue whether we need the client identifier builder as a separate component or should it just be a part of the decision-making component. It is up to you.
+- And store rules in memory. 
+- And we need a component that makes a decision. 
+- You may argue whether we need the client identifier builder as a separate component or should it just be a part of the decision-making component. It is up to you.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MTA1MTkyNywzNDE3MzUzMiw3OTUwOD
-g5NzYsMTU4NjE0NzU3MiwxMzMxMzUwMzg1LDIwNjMyMzc1MzAs
-LTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbLTEzOTc0NDM2NTcsMzQxNzM1MzIsNzk1MD
+g4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3NTMw
+LC01ODc3MDQxOTRdfQ==
 -->
