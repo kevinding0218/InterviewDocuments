@@ -125,18 +125,15 @@ public class RateLimiterTokenBucket {
 - RateLimiter is responsible for decision making.
 - RetrieveJobScheduler class implements JobScheduler interface. Its responsibility is to instantiate, start and stop the scheduler. And to run retrieve rules task.
 	- In Java, for example, we can utilize ScheduledExecutorService interface as a scheduler.
-TokenBucketCache stores token buckets.
-We can use something simple, for example Map to store buckets.
-Or utilize 3-rd party cache implementation, like Google Guava cache.
-ClientIdentifierBuilder is responsible for building a key based on user identity information
-(for example login).
-There can be other implementations as well, for example based on IP address.
-And for the RateLimiter interface lets introduce a TokenBucketRateLimiter class, which is responsible
-for calling allow request on the correspondent bucket for that client.
-And the last important piece is the RetrieveRulesTask, which is responsible for retrieving all the
-rules for this service.
+- TokenBucketCache stores token buckets. 
+	- We can use something simple, for example Map to store buckets.
+	- Or utilize 3-rd party cache implementation, like Google Guava cache.
+- ClientIdentifierBuilder is responsible for building a key based on user identity information (for example login).
+	- There can be other implementations as well, for example based on IP address.
+- For the RateLimiter interface lets introduce a TokenBucketRateLimiter class, which is responsible for calling allow request on the correspondent bucket for that client.
+- And the last important piece is the RetrieveRulesTask, which is responsible for retrieving all the rules for this service.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcwMTgyMzEyLC0xMDc4MjY3MjM0LC0xNz
+eyJoaXN0b3J5IjpbNDg5NjMwMTI2LC0xMDc4MjY3MjM0LC0xNz
 Y5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0MzY1NywzNDE3MzUz
 Miw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMzMxMzUwMzg1LDIwNj
 MyMzc1MzAsLTU4NzcwNDE5NF19
