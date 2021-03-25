@@ -140,22 +140,16 @@ public class RateLimiterTokenBucket {
 ### Distributed World
 #### how we can make rate limiting work across many machines in a cluster.
 - We have a cluster that consists of 3 hosts. And we want rate limiting solution to allow 4 requests per second for each client. How many tokens should we give to a bucket on every host? Should we give 4 divided by 3?
-- Answer is 4. Each bucket should have 4 tokens initially. The reason for this is that all requests for the same bucket may in theory land on the same host. Load balancers try to distributed requests evenly, but they do not know anything about keys, and requests for the same key will not be evenly distributed. 
-- Let's add load balancer into the picture and run a very simple simulation. 
-- The first request goes to host A, one token is consumed. 
-- The second request goes to host C and one token is consumed there.
-- Two other requests, within the same 1 second interval, go to host B. And take two tokens from the bucket.
-- All 4 allowed requests hit the cluster; we should throttle all the remaining requests for this second.
-But we still have tokens available.
-What should we do?
-We must allow hosts to talk to each other and share how many tokens they consumed altogether.
-In this case host A will see that other two hosts consumed 3 tokens.
-And host A will subtract this number from its bucket.
-Leaving it with 0 tokens available.
-Host B will find out that A and C consumed two tokens already.
-Leaving host B with 0 tokens as well.
-And the same logic applies to host C. Now everything looks correct.
-4 requests have been processed and no more requests allowed.
+- Answer is 4. Each bucket should have 4 tokens initially. The reason for this is that all requests for the same bucket may in theory land on the same host. Load balancers try to distributed requests evenly, but they do not know anything about keys, and requests for the same key will not be evenly distributed.  Let's add load balancer into the picture and run a very simple simulation. 
+	- The first request goes to host A, one token is consumed. 
+	- The second request goes to host C and one token is consumed there.
+	- Two other requests, within the same 1 second interval, go to host B. And take two tokens from the bucket.
+	- All 4 allowed requests hit the cluster; we should throttle all the remaining requests for this second. But we still have tokens available. What should we do?
+	- We must allow hosts to talk to each other and share how many tokens they consumed altogether.
+		- In this case host A will see that other two hosts consumed 3 tokens. And host A will subtract this number from its bucket. Leaving it with 0 tokens available. 
+		- Host B will find out that A and C consumed two tokens already. Leaving host B with 0 tokens as well.
+		- And the same logic applies to host C. Now everything looks correct.
+		- 4 requests have been processed and no more requests allowed.
 I bet you have a question.
 We gave each bucket 4 tokens.
 If many requests for the same bucket hit our cluster exactly at the same second.
@@ -175,7 +169,7 @@ After sharing, every bucket will have -8 tokens and for the duration of the next
 all requests will be throttled.
 So, on average we processed 12 requests within 3 seconds.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MjE2OTE1NCwtNjEzMTk1OTExLC0xND
+eyJoaXN0b3J5IjpbMTgzMzk5Nzg5NiwtNjEzMTk1OTExLC0xND
 IzMTExNzEwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMz
 MDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1MzIsNz
 k1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3
