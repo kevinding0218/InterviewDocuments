@@ -131,7 +131,7 @@ public class RateLimiterTokenBucket {
 #### Interaction
 1. RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service. It then creates token buckets and puts them into the cache.
 2. When client request comes to the host, RateLimiter first makes a call to the ClientIdentifierBuilder to build a unique identifier for the client.
-3. And then it passes this key to the cache in TokenBucketCache and retrieves the bucket.
+3. And then RateLimiter passes this key to the cache in TokenBucketCache and retrieves the bucket.
 4. And the last step to do is to call allow request on the bucket.
 ### Distributed World
 #### How we can make rate limiting work across many machines in a cluster.
@@ -156,10 +156,10 @@ public class RateLimiterTokenBucket {
 #### Ways of sharing between hosts
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjU5OTk3NDgsLTUwOTk4MDcxMiwtMT
-EwMzkxNjk3MiwtMTYyNjg3NTk0MiwtMTE2NzkyNjQwMSwtNjEz
-MTk1OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNiwtMTA3ODI2Nz
-IzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcs
-MzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MD
-M4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbLTEzNDA0NjYxMywtNTA5OTgwNzEyLC0xMT
+AzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2NDAxLC02MTMx
+OTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC0xMDc4MjY3Mj
+M0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0MzY1Nywz
+NDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMzMxMzUwMz
+g1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
 -->
