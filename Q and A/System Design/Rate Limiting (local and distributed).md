@@ -10,13 +10,16 @@
 #### Rate Limiting/Throttling
 - Throttling helps to limit the number of requests a client can submit in a given amount of time. Requests submitted over the limit are either immediately rejected or their processing is delayed.
 ### Question to Interviewer
-- What about auto-scaling?
+#### What about auto-scaling?
 	- problem with scaling up or scaling out is that it is not happening immediately, even autoscaling takes time.
 	- And by the time scaling process completes it may already be late. Our service may already crash.
-- What about load balancer?
+#### What about load balancer?
 	- Load balancer will either reject any request over the limit or send the request to a queue, so that it can be processed later, but rate limiter cannot be applied on load balancer level
 	- Let’s say our web service exposes several different operations. Some of them are fast operations, they take little time to complete. But some operations are slow and heavy and each request may take a lot of processing power.
 	- Load balancer does not have knowledge about a cost of each operation. And if we want to limit number of requests for a particular operation, we can do this on application server only, not at a load balancer level.
+	- If we have a load balancer in front of our web service and this load balancer spreads requests evenly across application servers and each request takes the same amount of time to complete - you are right. In this case this is a single instance problem and there is no need in any distributed solution. Application servers do not need to talk to each other. They throttle requests independently.
+	- But in the real-world load balancers cannot distribute requests in a perfectly even manner. Plus, as we discussed before different web service operations cost differently. And each application server itself may become slow due to software failures or overheated due to some other background process running on it. All this leads to a conclusion that we will need a solution where application servers will communicate with each other and share information about how many client requests each one of them processed so far.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01OD
+c3MDQxOTRdfQ==
 -->
