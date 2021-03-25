@@ -100,11 +100,15 @@ public class RateLimiterTokenBucket {
 ```
 - There are 4 class fields: maximum bucket size, refill rate, number of currently available, tokens and timestamp that indicates when bucket was last refilled.
 - Constructor accepts two arguments: maximum bucket size and refill rate. Number of currently available tokens is set to the maximum bucket size. And timestamp is set to the current time in nanoseconds.
-- Allow request method has one argument - number of tokens that represent a cost of the operation. Usually, the cost is equal to 1. Meaning that with every request we take a single token from the bucket. But it may be a larger value as well.
-	- For example, when we have a slow operation in the web service and each request to that
-operation may cost several tokens.
+- Allow request method has one argument - number of tokens that represent a cost of the operation. 
+	- Usually, the cost is equal to 1. Meaning that with every request we take a single token from the bucket. But it may be a larger value as well.
+	- For example, when we have a slow operation in the web service and each request to that operation may cost several tokens.
+	- The first thing we do is refilling the bucket. And right after that we check if there are enough tokens in the bucket.
+	- In case there are not enough tokens, method return false, indicating that request must be throttled.
+	- Otherwise, we need to decrease number of available tokens by the cost of the request. 
+	- And the last piece is the refill method. It calculates how many tokens accumulated since the last refill and increases currently available tokens in the bucket by this number.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MTM3NDY1LDg0OTQ3MzQ4MSwtMTM5Nz
-Q0MzY1NywzNDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3Miwx
-MzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbLTU1Njc4NTczOSw4NDk0NzM0ODEsLTEzOT
+c0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIs
+MTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
 -->
