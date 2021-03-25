@@ -14,9 +14,9 @@
 	- problem with scaling up or scaling out is that it is not happening immediately, even autoscaling takes time.
 	- And by the time scaling process completes it may already be late. Our service may already crash.
 - What about load balancer?
-	- Load balancer will either reject any request over the limit or send the request to a queue, so that it can be processed later.
+	- Load balancer will either reject any request over the limit or send the request to a queue, so that it can be processed later, but rate limiter cannot be applied on load balancer level
 	- Let’s say our web service exposes several different operations. Some of them are fast operations, they take little time to complete. But some operations are slow and heavy and each request may take a lot of processing power.
 	- Load balancer does not have knowledge about a cost of each operation. And if we want to limit number of requests for a particular operation, we can do this on application server only, not at a load balancer level.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MzAwODY1MywtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
