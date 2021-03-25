@@ -137,9 +137,13 @@ public class RateLimiterTokenBucket {
 - When client request comes to the host, RateLimiter first makes a call to the ClientIdentifierBuilder to build a unique identifier for the client.
 - And then it passes this key to the cache and retrieves the bucket.
 - And the last step to do is to call allow request on the bucket.
+### Distributed World
+- how we can make rate limiting work across many machines in a cluster.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC0xMD
-c4MjY3MjM0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0
-MzY1NywzNDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMz
-MxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbODE4NjMwMzYwLC0xNDIzMTExNzEwLDQ4OT
+YzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0
+ODEsLTEzOTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1OD
+YxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQx
+OTRdfQ==
 -->
