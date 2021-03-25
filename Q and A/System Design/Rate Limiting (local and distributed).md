@@ -40,12 +40,13 @@
 - Let’s call it a key, for short. This may be a login for registered clients or remote IP address or some combination of attributes that uniquely identify the client.
 - The key is then passed to the Rate Limiter component, that is responsible for making a decision. Rate Limiter checks the key against rules in the cache. And if match is found, Rate Limiter checks if number of requests made by the client for the last second is below a limit specified in the rule.
 	- If threshold is not exceeded, request is passed further for processing.
-	- If threshold is exceeded, the request is rejected. Our service may return a specific response status code, for example service unavailable or too many requests.
-Or we can queue this request and process it later.
-Or we can simply drop this request on the floor.
-- 
+	- If threshold is exceeded, the request is rejected. Our service may return a specific response status code, for example service unavailable or too many requests. Or we can queue this request and process it later. Or we can simply drop this request on the floor.
+#### Summary
+- The thinking process has been pretty straightforward. We know we need a database to store the rules. And we need a service on top of this database for all the so-called CRUD operations (create, read, update, delete).
+- We know we need a process to retrieve rules periodically. And store rules in memory. And we need a component that makes a decision. You may argue whether we need the client identifier builder as a separate component or should it just be a part of the decision-making component. It is up to you.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NjAwMDMzOCw3OTUwODg5NzYsMTU4Nj
-E0NzU3MiwxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5
-NF19
+eyJoaXN0b3J5IjpbMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxND
+c1NzIsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRd
+fQ==
 -->
