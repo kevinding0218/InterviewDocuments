@@ -22,8 +22,8 @@
 ### Formalize Requirements
 #### Functional Requirements
 - For a given request our rate limiting solution should return a boolean value, whether request is throttled or not.
-- 
+#### Non-functional Requirements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg1NzY1OTI1LDEzMzEzNTAzODUsMjA2Mz
-IzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbMTU2NTA1NTU2MywxMzMxMzUwMzg1LDIwNj
+MyMzc1MzAsLTU4NzcwNDE5NF19
 -->
