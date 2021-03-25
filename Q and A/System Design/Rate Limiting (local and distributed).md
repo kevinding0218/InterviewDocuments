@@ -117,9 +117,12 @@ public class RateLimiterTokenBucket {
 	- First, two more tokens have been added to the bucket by the refill method.
 	- And then 5 tokens have been subtracted.
 - And 1 second later, actually 900 milliseconds, bucket is full again.
+### Object-Oriented Design
+#### Class and Interface
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjA5MjUxMTcsLTEwNzgyNjcyMzQsLT
-E3NjkzMzAzNTcsODQ5NDczNDgxLC0xMzk3NDQzNjU3LDM0MTcz
-NTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcyLDEzMzEzNTAzODUsMj
-A2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbMTU5OTk3NjUwOCwtMTA3ODI2NzIzNCwtMT
+c2OTMzMDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1
+MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMD
+YzMjM3NTMwLC01ODc3MDQxOTRdfQ==
 -->
