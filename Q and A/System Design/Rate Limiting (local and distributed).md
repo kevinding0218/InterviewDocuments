@@ -50,10 +50,13 @@
 ### Algorithm
 - Google Guava RateLimiter class.
 - Fixed and sliding window paradigms
-- Simplest Token Bucket
-
+#### Simplest Token Bucket
+- The token bucket algorithm is based on an analogy of a bucket filled with tokens.
+- Each bucket has three characteristics: a maximum amount of tokens it can hold, amount of tokens currently available and a refill rate, the rate at which tokens are added to the bucket.
+- Every time request comes, we take a token from the bucket. If there are no more tokens available in the bucket, request is rejected. And the bucket is refilled with a constant rate.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDcyOTA4NTgsLTEzOTc0NDM2NTcsMz
-QxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4
-NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbODQ5NDczNDgxLC0xMzk3NDQzNjU3LDM0MT
+czNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcyLDEzMzEzNTAzODUs
+MjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
