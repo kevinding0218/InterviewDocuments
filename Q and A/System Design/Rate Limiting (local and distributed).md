@@ -155,23 +155,26 @@ public class RateLimiterTokenBucket {
 - Although in reality all 12 were processed within the first second. So, communication between hosts is the key. Let’s see how this communication can be implemented.
 #### Ways of sharing between hosts
 1. Tell every host everything
-	- It means that every host in the cluster knows about every other host in the cluster and
-share messages with each one of them.
-You may also heard a term full mesh that describes this network topology.
-How do hosts discover each other?
-When a new host is added, how does everyone else know?
-And there are several approaches used for hosts discovery.
-One option is to use a 3-rd party service which will listen to heartbeats coming from
-every host.
-As long as heartbeats come, host is keep registered in the system.
-If heartbeats stop coming, the service unregister host that is no longer alive.
-And all hosts in our cluster ask this 3-rd party service for the full list of members.
-2. 
+	- It means that every host in the cluster knows about every other host in the cluster and share messages with each one of them.
+	- You may also heard a term full mesh that describes this network topology. How do hosts discover each other? When a new host is added, how does everyone else know? And there are several approaches used for hosts discovery.
+	- One option is to use a 3-rd party service which will listen to heartbeats coming from every host. As long as heartbeats come, host is keep registered in the system. If heartbeats stop coming, the service unregister host that is no longer alive. And all hosts in our cluster ask this 3-rd party service for the full list of members.
+	- Another option is to resolve some user provided information. For example, user specifies a VIP and because VIP knows about all the hosts behind it, we
+can use this information to obtain all the members.
+Or we can rely on a less flexible but still a good option when user provides a list of
+hosts via some configuration file.
+We then need a way to deploy this file across all cluster nodes every time this list changes.
+Full mesh broadcasting is relatively straightforward to implement.
+But the main problem with this approach is that it is not scalable.
+Number of messages grows quadratically with respect to the number of hosts in a cluster.
+Approach works well for small clusters, but we will not be able to support big clusters.
+So, let’s investigate some other options that may require less messages to be broadcasted
+within the cluster.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg0ODY1MTc5LC01MDk5ODA3MTIsLTExMD
-M5MTY5NzIsLTE2MjY4NzU5NDIsLTExNjc5MjY0MDEsLTYxMzE5
-NTkxMSwtMTQyMzExMTcxMCw0ODk2MzAxMjYsLTEwNzgyNjcyMz
-QsLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0xMzk3NDQzNjU3LDM0
-MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcyLDEzMzEzNTAzOD
-UsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbLTI0MzAwNzc4OCw3ODQ4NjUxNzksLTUwOT
+k4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3NTk0MiwtMTE2Nzky
+NjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNi
+wtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEz
+OTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1Nz
+IsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
+
 -->
