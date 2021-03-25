@@ -132,10 +132,14 @@ public class RateLimiterTokenBucket {
 	- There can be other implementations as well, for example based on IP address.
 - For the RateLimiter interface lets introduce a TokenBucketRateLimiter class, which is responsible for calling allow request on the correspondent bucket for that client.
 - And the last important piece is the RetrieveRulesTask, which is responsible for retrieving all the rules for this service.
-- 
+#### Interaction
+- RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service. It then creates token buckets and puts them into the cache.
+- When client request comes to the host, RateLimiter first makes a call to the ClientIdentifierBuilder to build a unique identifier for the client.
+- And then it passes this key to the cache and retrieves the bucket.
+- And the last step to do is to call allow request on the bucket.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQxMzE0MzQ1LDQ4OTYzMDEyNiwtMTA3OD
-I2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2
-NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMT
-M1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC0xMD
+c4MjY3MjM0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0
+MzY1NywzNDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMz
+MxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
 -->
