@@ -139,7 +139,7 @@ public class RateLimiterTokenBucket {
 - And the last step to do is to call allow request on the bucket.
 ### Distributed World
 #### How we can make rate limiting work across many machines in a cluster.
-- We have a cluster that consists of 3 hosts. And we want rate limiting solution to allow 4 requests per second for each client. How many tokens should we give to a bucket on every host? Should we give 4 divided by 3?
+- We have a cluster that consists of 3 hosts. And we want rate limiting solution to **allow 4 requests per second for each client**. How many tokens should we give to a bucket on every host? Should we give 4 divided by 3?
 - Answer is 4. Each bucket should have 4 tokens initially. The reason for this is that all requests for the same bucket may in theory land on the same host. Load balancers try to distributed requests evenly, but they do not know anything about keys, and requests for the same key will not be evenly distributed.  
 #### Simulation
 - Let's add load balancer into the picture and run a very simple simulation. 
@@ -160,10 +160,10 @@ public class RateLimiterTokenBucket {
 #### Ways of sharing between hosts
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDA3NjE1NzYsLTExMDM5MTY5NzIsLT
-E2MjY4NzU5NDIsLTExNjc5MjY0MDEsLTYxMzE5NTkxMSwtMTQy
-MzExMTcxMCw0ODk2MzAxMjYsLTEwNzgyNjcyMzQsLTE3NjkzMz
-AzNTcsODQ5NDczNDgxLC0xMzk3NDQzNjU3LDM0MTczNTMyLDc5
-NTA4ODk3NiwxNTg2MTQ3NTcyLDEzMzEzNTAzODUsMjA2MzIzNz
-UzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbLTUwOTk4MDcxMiwtMTEwMzkxNjk3MiwtMT
+YyNjg3NTk0MiwtMTE2NzkyNjQwMSwtNjEzMTk1OTExLC0xNDIz
+MTExNzEwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMzMD
+M1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1MzIsNzk1
+MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3NT
+MwLC01ODc3MDQxOTRdfQ==
 -->
