@@ -38,13 +38,11 @@
 - Rules retriever is a background process that polls Rules service periodically to check if there are any new or modified rules. Rules retriever stores rules in memory on the host.
 #### Client Identifier
 - Let’s call it a key, for short. This may be a login for registered clients or remote IP address or some combination of attributes that uniquely identify the client.
-- The key is then passed to the Rate Limiter component, that is responsible for making a decision.
-Rate Limiter checks the key against rules in the cache.
-And if match is found, Rate Limiter checks if number of requests made by the client for
-the last second is below a limit specified in the rule.
-If threshold is not exceeded, request is passed further for processing.
-If threshold is exceeded, the request is rejected.
+- The key is then passed to the Rate Limiter component, that is responsible for making a decision. Rate Limiter checks the key against rules in the cache. And if match is found, Rate Limiter checks if number of requests made by the client for the last second is below a limit specified in the rule.
+	- If threshold is not exceeded, request is passed further for processing.
+	- If threshold is exceeded, the request is rejected.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0NjU4Mjk3MSwxNTg2MTQ3NTcyLDEzMz
-EzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMT
+M1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
 -->
