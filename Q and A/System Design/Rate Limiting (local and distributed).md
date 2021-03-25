@@ -75,21 +75,21 @@ public class RateLimiterTokenBucket {
     }  
   
   /**  
- * Synchronized, as several threads may be calling the method concurrently */  public synchronized boolean allowRequest(int tokens) {  
-  // First, refill bucket with tokens accumulated since the last call  
-  refill();  
-        // If bucket has enough tokens, call is allowed  
-  if (currentBucketSize > tokens) {  
-  currentBucketSize -= tokens;  
-  
+ * Synchronized, as several threads may be calling the method concurrently */  
+ public synchronized boolean allowRequest(int tokens) {  
+	  // First, refill bucket with tokens accumulated since the last call  
+	  refill();  
+      // If bucket has enough tokens, call is allowed  
+	  if (currentBucketSize > tokens) {  
+		  currentBucketSize -= tokens;  
             return true;  
-        }  
-  // Request is throttled as bucket does not have enough tokens  
-  return false;  
-    }  
+      }  
+      // Request is throttled as bucket does not have enough tokens  
+      return false;  
+}  
   
   private void refill() {  
-  long now = System.nanoTime();  
+		  long now = System.nanoTime();  
         // These many tokens accumulated since the last refill  
  // 1e9 ~ 10^9  double tokensToAdd = (now - lastRefillTimestamp) * refillRate / 1e9;  
         // Number of tokens should never exceed maximum capacity  
@@ -108,7 +108,7 @@ public class RateLimiterTokenBucket {
 	- Otherwise, we need to decrease number of available tokens by the cost of the request. 
 	- And the last piece is the refill method. It calculates how many tokens accumulated since the last refill and increases currently available tokens in the bucket by this number.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1Njc4NTczOSw4NDk0NzM0ODEsLTEzOT
-c0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIs
-MTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0xMz
+k3NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcy
+LDEzMzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
