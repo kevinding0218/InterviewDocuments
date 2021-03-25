@@ -121,6 +121,7 @@ public class RateLimiterTokenBucket {
 #### Class and Interface
 - Job Scheduler interface is responsible for scheduling a job that runs every several seconds and retrieves rules from Rules service.
 	- RetrieveJobScheduler class implements JobScheduler interface. Its responsibility is to instantiate, start and stop the 	scheduler. And to run retrieve rules task periodically.
+	- RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service. It then creates token buckets and puts them into the cache.
 - RulesCache interface is responsible for storing rules in memory.
 	- TokenBucketCache class implements RulesCache, it is responsible for storing token bucket objects, Map / ConcurrentHashMap / Google Guava Cache
 - ClientIdentifier Interface builds a key that uniquely identifies a client.
@@ -129,10 +130,10 @@ public class RateLimiterTokenBucket {
 	-	TokenBucketRateLimiter class implements RateLimiter, it is responsible for retrieves token bucket from cache, and calls allowRequest() on the bucket
 - And the last important piece is the RetrieveRulesTask, which is responsible for retrieving all the rules for this service.
 #### Interaction
-- RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service. It then creates token buckets and puts them into the cache.
-- When client request comes to the host, RateLimiter first makes a call to the ClientIdentifierBuilder to build a unique identifier for the client.
-- And then it passes this key to the cache and retrieves the bucket.
-- And the last step to do is to call allow request on the bucket.
+1. RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service. It then creates token buckets and puts them into the cache.
+2. When client request comes to the host, RateLimiter first makes a call to the ClientIdentifierBuilder to build a unique identifier for the client.
+3. And then it passes this key to the cache and retrieves the bucket.
+4. And the last step to do is to call allow request on the bucket.
 ### Distributed World
 #### How we can make rate limiting work across many machines in a cluster.
 - We have a cluster that consists of 3 hosts. And we want rate limiting solution to **allow 4 requests per second for each client**. How many tokens should we give to a bucket on every host? Should we give 4 divided by 3?
@@ -156,10 +157,10 @@ public class RateLimiterTokenBucket {
 #### Ways of sharing between hosts
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNDYyNzkwMSwtNTA5OTgwNzEyLC0xMT
-AzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2NDAxLC02MTMx
-OTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC0xMDc4MjY3Mj
-M0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5NzQ0MzY1Nywz
-NDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMzMxMzUwMz
-g1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbNzQ2OTgzNzYsLTUwOTk4MDcxMiwtMTEwMz
+kxNjk3MiwtMTYyNjg3NTk0MiwtMTE2NzkyNjQwMSwtNjEzMTk1
+OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNC
+wtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQx
+NzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NS
+wyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
 -->
