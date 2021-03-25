@@ -11,6 +11,9 @@
 - Throttling helps to limit the number of requests a client can submit in a given amount of time. Requests submitted over the limit are either immediately rejected or their processing is delayed.
 ### Question to Interviewer
 - Can it be solved by scaling out the cluster of hosts that run our web service, by some kind of auto-scaling, right?
+	- problem with scaling up or scaling out is that it is not happening immediately, even autoscaling takes time.
+	- And by the time scaling process completes it may already be late. Our service may already crash.
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbMTAwNDc1NjE2MiwtNTg3NzA0MTk0XX0=
 -->
