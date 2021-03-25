@@ -148,28 +148,16 @@ public class RateLimiterTokenBucket {
 	- We must allow hosts to talk to each other and share how many tokens they consumed altogether.
 		- In this case host A will see that other two hosts consumed 3 tokens. And host A will subtract this number from its bucket. Leaving it with 0 tokens available. 
 		- Host B will find out that A and C consumed two tokens already. Leaving host B with 0 tokens as well.
-		- And the same logic applies to host C, C will foind ou. Now everything looks correct.
+		- And the same logic applies to host C, C will find out that A and B consumed 3 tokens already, leaving host C with 0 tokens. Now everything looks correct.
 		- 4 requests have been processed and no more requests allowed.
-- We gave each bucket 4 tokens. If many requests for the same bucket hit our cluster exactly at the same second.
-Does this mean that 12 requests may be processed, instead of only 4 allowed?
-Or may be a more realistic scenario.
-Because communication between hosts takes time, until all hosts agree on what that final
-number of tokens must be, may there be any requests that slip into the system at that
-time?
-Yes.
-Unfortunately, this is the case.
-We should expect that sometimes our system may be processing more requests than we expect
-and we need to scale out our cluster accordingly.
-By the way, the token bucket algorithm will still handle this use case well.
-We just need to slightly modify it to allow negative number of available tokens.
-When 12 requests hit the system, buckets will start sharing this information.
-After sharing, every bucket will have -8 tokens and for the duration of the next 2 seconds
-all requests will be throttled.
-So, on average we processed 12 requests within 3 seconds.
+- We gave each bucket 4 tokens. If many requests for the same bucket hit our cluster exactly at the same second. Does this mean that 12 requests may be processed, instead of only 4 allowed? Or may be a more realistic scenario. Because communication between hosts takes time, until all hosts agree on what that final number of tokens must be, may there be any requests that slip into the system at that time?
+- Yes. Unfortunately, this is the case. We should expect that sometimes our system may be processing more requests than we expect and we need to scale out our cluster accordingly.
+- By the way, the token bucket algorithm will still handle this use case well. We just need to slightly modify it to allow negative number of available tokens. 
+- When 12 requests hit the system, buckets will start sharing this information. After sharing, every bucket will have -8 tokens and for the duration of the next 2 seconds all requests will be throttled. So, on average we processed 12 requests within 3 seconds.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MjA0Mjg2MCwtNjEzMTk1OTExLC0xND
-IzMTExNzEwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMz
-MDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1MzIsNz
-k1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3
-NTMwLC01ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbLTExNjc5MjY0MDEsLTYxMzE5NTkxMSwtMT
+QyMzExMTcxMCw0ODk2MzAxMjYsLTEwNzgyNjcyMzQsLTE3Njkz
+MzAzNTcsODQ5NDczNDgxLC0xMzk3NDQzNjU3LDM0MTczNTMyLD
+c5NTA4ODk3NiwxNTg2MTQ3NTcyLDEzMzEzNTAzODUsMjA2MzIz
+NzUzMCwtNTg3NzA0MTk0XX0=
 -->
