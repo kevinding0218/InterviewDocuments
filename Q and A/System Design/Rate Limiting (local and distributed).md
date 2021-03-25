@@ -27,8 +27,10 @@
 - accurate (as we do not want to throttle customers unless it is absolutely required)
 - scalable (so that rate limiter scales out together with the service itself). If we need to add more hosts to the web service cluster, this should not be a problem for the rate limiter.
 #### What about high availability and fault tolerance?
-- Two common requirements for many distributed systems but not so much importan
+- Two common requirements for many distributed systems but not so much important to a rate limiter
+### Build Solution
+#### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA5OTc0MjUwLDEzMzEzNTAzODUsMjA2Mz
-IzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbMjkxMjUxNzQsMTMzMTM1MDM4NSwyMDYzMj
+M3NTMwLC01ODc3MDQxOTRdfQ==
 -->
