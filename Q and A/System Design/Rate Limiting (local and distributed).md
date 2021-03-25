@@ -50,9 +50,10 @@
 ### Algorithm
 - Google Guava RateLimiter class.
 - Fixed and sliding window paradigms
+- Simplest Token Bucket
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNzUzODQ2MywtMTM5NzQ0MzY1NywzND
-E3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3MiwxMzMxMzUwMzg1
-LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbLTE3MDcyOTA4NTgsLTEzOTc0NDM2NTcsMz
+QxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4
+NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
 -->
