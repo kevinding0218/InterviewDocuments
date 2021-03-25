@@ -119,9 +119,26 @@ public class RateLimiterTokenBucket {
 - And 1 second later, actually 900 milliseconds, bucket is full again.
 ### Object-Oriented Design
 #### Class and Interface
-
+- Job Scheduler interface is responsible for scheduling a job that runs every several seconds and retrieves rules from Rules service.
+RulesCache interface is responsible for storing rules in memory.
+ClientIdentifier builds a key that uniquely identifies a client.
+And RateLimiter is responsible for decision making.
+RetrieveJobScheduler class implements JobScheduler interface.
+Its responsibility is to instantiate, start and stop the scheduler.
+And to run retrieve rules task.
+In Java, for example, we can utilize ScheduledExecutorService interface as a scheduler.
+TokenBucketCache stores token buckets.
+We can use something simple, for example Map to store buckets.
+Or utilize 3-rd party cache implementation, like Google Guava cache.
+ClientIdentifierBuilder is responsible for building a key based on user identity information
+(for example login).
+There can be other implementations as well, for example based on IP address.
+And for the RateLimiter interface lets introduce a TokenBucketRateLimiter class, which is responsible
+for calling allow request on the correspondent bucket for that client.
+And the last important piece is the RetrieveRulesTask, which is responsible for retrieving all the
+rules for this service.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5OTk3NjUwOCwtMTA3ODI2NzIzNCwtMT
+eyJoaXN0b3J5IjpbMTI4NDM5OTkyOCwtMTA3ODI2NzIzNCwtMT
 c2OTMzMDM1Nyw4NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1
 MzIsNzk1MDg4OTc2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMD
 YzMjM3NTMwLC01ODc3MDQxOTRdfQ==
