@@ -158,19 +158,14 @@ public class RateLimiterTokenBucket {
 	- It means that every host in the cluster knows about every other host in the cluster and share messages with each one of them.
 	- You may also heard a term full mesh that describes this network topology. How do hosts discover each other? When a new host is added, how does everyone else know? And there are several approaches used for hosts discovery.
 	- One option is to use a 3-rd party service which will listen to heartbeats coming from every host. As long as heartbeats come, host is keep registered in the system. If heartbeats stop coming, the service unregister host that is no longer alive. And all hosts in our cluster ask this 3-rd party service for the full list of members.
-	- Another option is to resolve some user provided information. For example, user specifies a VIP and because VIP knows about all the hosts behind it, we
-can use this information to obtain all the members.
-Or we can rely on a less flexible but still a good option when user provides a list of
-hosts via some configuration file.
-We then need a way to deploy this file across all cluster nodes every time this list changes.
-Full mesh broadcasting is relatively straightforward to implement.
-But the main problem with this approach is that it is not scalable.
-Number of messages grows quadratically with respect to the number of hosts in a cluster.
-Approach works well for small clusters, but we will not be able to support big clusters.
-So, let’s investigate some other options that may require less messages to be broadcasted
-within the cluster.
+	- Another option is to resolve some user provided information. For example, user specifies a VIP and because VIP knows about all the hosts behind it, we can use this information to obtain all the members.
+		- Or we can rely on a less flexible but still a good option when user provides a list of hosts via some configuration file. We then need a way to deploy this file across all cluster nodes every time this list changes. Full mesh broadcasting is relatively straightforward to implement.
+		- But the main problem with this approach is that it is not scalable. Number of messages grows quadratically with respect to the number of hosts in a cluster. Approach works well for small clusters, but we will not be able to support big clusters. So, let’s investigate some other options that may require less messages to be broadcasted within the cluster.
+	- And one such option is to use a gossip protocol. This protocol is based on the way that epidemics spread.
+Computer systems typically implement this type of protocol with a form of random "peer selection": with a given frequency, each machine picks another machine at random and shares data. By the way, rate limiting solution at Yahoo uses this approach.
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MzAwNzc4OCw3ODQ4NjUxNzksLTUwOT
+eyJoaXN0b3J5IjpbLTEyMzY2MjQwOCw3ODQ4NjUxNzksLTUwOT
 k4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3NTk0MiwtMTE2Nzky
 NjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNi
 wtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEz
