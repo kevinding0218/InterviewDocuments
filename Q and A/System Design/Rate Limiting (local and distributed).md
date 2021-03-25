@@ -35,10 +35,9 @@
 - Each rule specifies a number of requests allowed for a particular client per second.
 - These rules are defined by service owners and stored in a database.
 - And there is a web service that manages all the operation with rules.
-Rules retriever is a background process that polls Rules service periodically to check
-if there are any new or modified rules.
-Rules retriever stores rules in memory on the host.
+- Rules retriever is a background process that polls Rules service periodically to check if there are any new or modified rules. Rules retriever stores rules in memory on the host.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjcwNTgzMjQsMTU4NjE0NzU3MiwxMz
-MxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbLTI3OTcyMTMyNCwxNTg2MTQ3NTcyLDEzMz
+EzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
