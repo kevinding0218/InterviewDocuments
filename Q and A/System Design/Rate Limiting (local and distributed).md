@@ -154,9 +154,21 @@ public class RateLimiterTokenBucket {
 - When 12 requests hit the system, buckets will start sharing this information. After sharing, every bucket will have -8 (4-12) tokens and for the duration of the next 2 seconds all requests will be throttled. So, on average we processed 12 requests within 3 seconds.
 - Although in reality all 12 were processed within the first second. So, communication between hosts is the key. Let’s see how this communication can be implemented.
 #### Ways of sharing between hosts
-
+1. Tell every host everything
+	- It means that every host in the cluster knows about every other host in the cluster and
+share messages with each one of them.
+You may also heard a term full mesh that describes this network topology.
+How do hosts discover each other?
+When a new host is added, how does everyone else know?
+And there are several approaches used for hosts discovery.
+One option is to use a 3-rd party service which will listen to heartbeats coming from
+every host.
+As long as heartbeats come, host is keep registered in the system.
+If heartbeats stop coming, the service unregister host that is no longer alive.
+And all hosts in our cluster ask this 3-rd party service for the full list of members.
+2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg3NDYyNDMyLC01MDk5ODA3MTIsLTExMD
+eyJoaXN0b3J5IjpbNzg0ODY1MTc5LC01MDk5ODA3MTIsLTExMD
 M5MTY5NzIsLTE2MjY4NzU5NDIsLTExNjc5MjY0MDEsLTYxMzE5
 NTkxMSwtMTQyMzExMTcxMCw0ODk2MzAxMjYsLTEwNzgyNjcyMz
 QsLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0xMzk3NDQzNjU3LDM0
