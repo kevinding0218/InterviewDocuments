@@ -225,12 +225,16 @@ from memory. And bucket will be re-created again when client makes a new request
 	- So, we may need to use concurrent hash map, which is a thread safe equivalent of the hash map in Java.
 - In general, no need to be afraid of the synchronization in both those places. It may become a bottleneck eventually, but only for services with insanely large requests per second rate.
 - For most services out there even the simplest synchronization implementation does not add to much overhead.
+#### Todo with Throttled Calls
+- There are several options, as always. Clients may queue such requests and re-send them later. Or they can retry throttled requests. But do it in a smart way, and this smart way is called exponential backoff and jitter. 
+	- An exponential backoff algorithm retries requests exponentially, increasing the waiting time between retries up to a maximum backoff time. In other words, we retry requests several times, but wait a bit longer with every retry attempt.
+	- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDU3ODEyNzIsLTE4Njk0NTczMDEsNz
-g0ODY1MTc5LC01MDk5ODA3MTIsLTExMDM5MTY5NzIsLTE2MjY4
-NzU5NDIsLTExNjc5MjY0MDEsLTYxMzE5NTkxMSwtMTQyMzExMT
-cxMCw0ODk2MzAxMjYsLTEwNzgyNjcyMzQsLTE3NjkzMzAzNTcs
-ODQ5NDczNDgxLC0xMzk3NDQzNjU3LDM0MTczNTMyLDc5NTA4OD
-k3NiwxNTg2MTQ3NTcyLDEzMzEzNTAzODUsMjA2MzIzNzUzMCwt
-NTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbOTc1MjYyMjY4LC0xODY5NDU3MzAxLDc4ND
+g2NTE3OSwtNTA5OTgwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1
+OTQyLC0xMTY3OTI2NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MT
+AsNDg5NjMwMTI2LC0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0
+OTQ3MzQ4MSwtMTM5NzQ0MzY1NywzNDE3MzUzMiw3OTUwODg5Nz
+YsMTU4NjE0NzU3MiwxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4
+NzcwNDE5NF19
 -->
