@@ -182,12 +182,15 @@ Computer systems typically implement this type of protocol with a form of random
 ##### Which one to choose?
 - If we want rate limiting solution to be more accurate, but with a little bit of performance overhead, we need to go with TCP.
 - If we ok to have a bit less accurate solution, but the one that works faster, UDP should be our choice.
-
+### Integrate everything
+- We have implemented the algorithm, created a set of classes and interfaces, discussed message broadcasting. But how do we integrate all this cool solution with the service? Let’s see what options we have.
+#### Solution 1 - as a library
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMxNDQ4NDc3LDc4NDg2NTE3OSwtNTA5OT
-gwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2
-NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC
-0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5
-NzQ0MzY1NywzNDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3Mi
-wxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbMTEwNzY3NTYsNzg0ODY1MTc5LC01MDk5OD
+A3MTIsLTExMDM5MTY5NzIsLTE2MjY4NzU5NDIsLTExNjc5MjY0
+MDEsLTYxMzE5NTkxMSwtMTQyMzExMTcxMCw0ODk2MzAxMjYsLT
+EwNzgyNjcyMzQsLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0xMzk3
+NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NTcyLD
+EzMzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
 -->
