@@ -230,25 +230,19 @@ from memory. And bucket will be re-created again when client makes a new request
 	- An exponential backoff algorithm retries requests exponentially, increasing the waiting time between retries up to a maximum backoff time. In other words, we retry requests several times, but wait a bit longer with every retry attempt.
 	- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
 #### Scalable? Fast? Accurate?
-- For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip
-communication over UDP will work really fast and is quite accurate.
-In case of a rally large clusters, like tens of thousands of hosts, we may no longer rely
-on host-to-host communication in the service cluster as it becomes costly.
-And we need a separate cluster for making a throttling decision.
-This is a distributed cache option we discussed above.
-But the drawback of this approach is that it increases latency and operational cost.
-It would be good to have these tradeoff discussions with your interviewer.
+- For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
+- In case of a rally large clusters, like tens of thousands of hosts, we may no longer rely on host-to-host communication in the service cluster as it becomes costly. And we need a separate cluster for making a throttling decision. This is a distributed cache option we discussed above. But the drawback of this approach is that it increases latency and operational cost. It would be good to have these tradeoff discussions with your interviewer.
 ### Summary
 - Service owners can use a self-service tools for rules management. Rules are stored in the database.
 - On the service host we have rules retriever that stores retrieved rules in the local cache.
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgzOTU4MjU2LC0xODY5NDU3MzAxLDc4ND
-g2NTE3OSwtNTA5OTgwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1
-OTQyLC0xMTY3OTI2NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MT
-AsNDg5NjMwMTI2LC0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0
-OTQ3MzQ4MSwtMTM5NzQ0MzY1NywzNDE3MzUzMiw3OTUwODg5Nz
-YsMTU4NjE0NzU3MiwxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4
-NzcwNDE5NF19
+eyJoaXN0b3J5IjpbMTI2ODkzNjQzMywtMTg2OTQ1NzMwMSw3OD
+Q4NjUxNzksLTUwOTk4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3
+NTk0MiwtMTE2NzkyNjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNz
+EwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4
+NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OT
+c2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01
+ODc3MDQxOTRdfQ==
 -->
