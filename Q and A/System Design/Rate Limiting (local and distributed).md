@@ -216,8 +216,21 @@ from memory. And bucket will be re-created again when client makes a new request
 	- If hosts talk to each other, only 4 requests are allowed across all of them. 
 	- If hosts do not talk to each other due to let’s say network issues, each host will allow 4 requests, 12 in total.
 - So, in case of failures in our rate limiter solution, more requests are allowed and less requests are throttled.
+#### Rule Management
+- With regards to rule management, we may need to introduce a self-service tool, so that service teams may create, update and delete their rules when needed.
+#### Synchronization
+- As for synchronization, there may be several places where we need it. 
+- First, we have synchronization in the token bucket. There is a better way to implement thread-safety in that class, using for example atomic references. 
+- Another place that may require synchronization is the token bucket cache. As we mentioned before, if there are too many buckets stored in the cache and we want to delete unused buckets and re-create them when needed, we will end up with synchronization.
+- So, we may need to use concurrent hash map, which is a thread safe equivalent of the hash
+map in Java.
+In general, no need to be afraid of the synchronization in both those places.
+It may become a bottleneck eventually, but only for services with insanely large requests
+per second rate.
+For most services out there even the simplest synchronization implementation does not add
+to much overhead.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNDM4ODAwMiwtMTg2OTQ1NzMwMSw3OD
+eyJoaXN0b3J5IjpbMTEwMzg5OTg0MCwtMTg2OTQ1NzMwMSw3OD
 Q4NjUxNzksLTUwOTk4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3
 NTk0MiwtMTE2NzkyNjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNz
 EwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4
