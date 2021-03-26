@@ -173,13 +173,14 @@ Computer systems typically implement this type of protocol with a form of random
 - A coordination service that helps to choose a leader. Choosing a leader helps to decrease number of messages broadcasted within the cluster. Leader asks everyone to send it all the information. And then it calculates and sends back the final result. E.g: Cordination Service choose Host C and let C be responsible for A, B & D, So, each host only needs to talk to a leader or a set of leaders, where each leader is responsible for its own range of keys.  
 - but the main drawback is that we need to setup and maintain Coordination Service. Coordination service is typically a very sophisticated component that has to be very reliable and make sure one and only one leader is elected.
 5. Random Leader Selection
+- Let’s say we use a simple algorithm to elect a leader. But because of the simplicity of the algorithm it may not guarantee one and only one leader. So that we may end up with multiple leaders being elected.
+- Is this an issue? Actually, no. Each leader will calculate rate and share with everyone else. This will cause unnecessary messaging overhead, but each leader will have its own correct view of the overall rate. And to finish message broadcasting discussion, I want to talk about communication protocols, how hosts talk to each other.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MDA1NjI3NCw3ODQ4NjUxNzksLTUwOT
-k4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3NTk0MiwtMTE2Nzky
-NjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNi
-wtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEz
-OTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1Nz
-IsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
-
+eyJoaXN0b3J5IjpbNjAwMTMyOTUxLDc4NDg2NTE3OSwtNTA5OT
+gwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2
+NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC
+0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5
+NzQ0MzY1NywzNDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3Mi
+wxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
 -->
