@@ -200,12 +200,13 @@ may be in the Rate Limiter library.
 #### Summary
 - Both are good options and it really depends on the use cases and needs of a particular service team. 
 - By the way, the second approach, when we have a daemon that communicates with other hosts in the cluster is a quite popular pattern in distributed systems. For example, it is widely used to implement auto discovery of service hosts, when hosts in a cluster identify each other.
+### Other question
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Njk0NTczMDEsNzg0ODY1MTc5LC01MD
-k5ODA3MTIsLTExMDM5MTY5NzIsLTE2MjY4NzU5NDIsLTExNjc5
-MjY0MDEsLTYxMzE5NTkxMSwtMTQyMzExMTcxMCw0ODk2MzAxMj
-YsLTEwNzgyNjcyMzQsLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0x
-Mzk3NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NT
-cyLDEzMzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
-
+eyJoaXN0b3J5IjpbNDM5MjUwNjYyLC0xODY5NDU3MzAxLDc4ND
+g2NTE3OSwtNTA5OTgwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1
+OTQyLC0xMTY3OTI2NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MT
+AsNDg5NjMwMTI2LC0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0
+OTQ3MzQ4MSwtMTM5NzQ0MzY1NywzNDE3MzUzMiw3OTUwODg5Nz
+YsMTU4NjE0NzU3MiwxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4
+NzcwNDE5NF19
 -->
