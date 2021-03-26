@@ -169,6 +169,7 @@ Computer systems typically implement this type of protocol with a form of random
 - Next option is to use distributed cache cluster. For example, Redis. Or we can implement custom distributed cache solution.
 - The pros for this approach is that distributed cache cluster is relatively small and our service cluster can scale out independently.
 - This cluster can be shared among many different service teams in the organization. Or each team can setup their own small cluster.
+- - In case of a rally large clusters, like tens of thousands of hosts, we may no longer rely on host-to-host communication in the service cluster as it becomes costly. And we need a separate cluster for making a throttling decision. This is a distributed cache option we discussed above. But the drawback of this approach is that it increases latency and operational cost. It would be good to have these tradeoff discussions with your interviewer.
 4. Coordination Service
 - A coordination service that helps to choose a leader. Choosing a leader helps to decrease number of messages broadcasted within the cluster. Leader asks everyone to send it all the information. And then it calculates and sends back the final result. E.g: Cordination Service choose Host C and let C be responsible for A, B & D, So, each host only needs to talk to a leader or a set of leaders, where each leader is responsible for its own range of keys.  
 - but the main drawback is that we need to setup and maintain Coordination Service. Coordination service is typically a very sophisticated component that has to be very reliable and make sure one and only one leader is elected.
@@ -231,18 +232,18 @@ from memory. And bucket will be re-created again when client makes a new request
 	- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
 #### Scalable? Fast? Accurate?
 - For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
-- In case of a rally large clusters, like tens of thousands of hosts, we may no longer rely on host-to-host communication in the service cluster as it becomes costly. And we need a separate cluster for making a throttling decision. This is a distributed cache option we discussed above. But the drawback of this approach is that it increases latency and operational cost. It would be good to have these tradeoff discussions with your interviewer.
+
 ### Summary
 - Service owners can use a self-service tools for rules management. Rules are stored in the database.
 - On the service host we have rules retriever that stores retrieved rules in the local cache.
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2ODkzNjQzMywtMTg2OTQ1NzMwMSw3OD
-Q4NjUxNzksLTUwOTk4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3
-NTk0MiwtMTE2NzkyNjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNz
-EwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4
-NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OT
-c2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01
-ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbNDYzNDQ4OTIwLC0xODY5NDU3MzAxLDc4ND
+g2NTE3OSwtNTA5OTgwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1
+OTQyLC0xMTY3OTI2NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MT
+AsNDg5NjMwMTI2LC0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0
+OTQ3MzQ4MSwtMTM5NzQ0MzY1NywzNDE3MzUzMiw3OTUwODg5Nz
+YsMTU4NjE0NzU3MiwxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4
+NzcwNDE5NF19
 -->
