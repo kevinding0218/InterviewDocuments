@@ -169,13 +169,13 @@ Computer systems typically implement this type of protocol with a form of random
 - Next option is to use distributed cache cluster. For example, Redis. Or we can implement custom distributed cache solution.
 - The pros for this approach is that distributed cache cluster is relatively small and our service cluster can scale out independently.
 - This cluster can be shared among many different service teams in the organization. Or each team can setup their own small cluster.
-4. 3-rd party component
-- A coordination service that helps to choose a leader. Choosing a leader helps to decrease number of messages broadcasted within the cluster. Leader asks everyone to send it all the information. And then it calculates and sends back the final result. E.g: Cordination Service choose Host C and let C be responsible for A, B & D
-- So, each host only needs to talk to a leader or a set of leaders, where each leader is responsible for its own range of keys. Consensus algorithms such as Paxos and Raft can be used to implement Coordination Service.
-Great option, 
-but the main drawback is that we need to setup and maintain Coordination Service. Coordination service is typically a very sophisticated component that has to be very reliable and make sure one and only one leader is elected.
+4. Coordination Service
+- A coordination service that helps to choose a leader. Choosing a leader helps to decrease number of messages broadcasted within the cluster. Leader asks everyone to send it all the information. And then it calculates and sends back the final result. E.g: Cordination Service choose Host C and let C be responsible for A, B & D, So, each host only needs to talk to a leader or a set of leaders, where each leader is responsible for its own range of keys.  
+- but the main drawback is that we need to setup and maintain Coordination Service. Coordination service is typically a very sophisticated component that has to be very reliable and make sure one and only one leader is elected.
+5. Random Leader Selection
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwOTUwNTQwOSw3ODQ4NjUxNzksLTUwOT
+eyJoaXN0b3J5IjpbMTY1MDA1NjI3NCw3ODQ4NjUxNzksLTUwOT
 k4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3NTk0MiwtMTE2Nzky
 NjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNi
 wtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEz
