@@ -201,12 +201,21 @@ may be in the Rate Limiter library.
 - Both are good options and it really depends on the use cases and needs of a particular service team. 
 - By the way, the second approach, when we have a daemon that communicates with other hosts in the cluster is a quite popular pattern in distributed systems. For example, it is widely used to implement auto discovery of service hosts, when hosts in a cluster identify each other.
 ### Other question
+#### Bucket in memory
+- In theory, it is possible that many token buckets will be created and stored in memory.
+	- For example, when millions of clients send requests at the same second.
+- In practice though, we do not need to keep buckets in memory if there are no requests coming from the client for some period of time.
+	- For example, client made its first request and we created a bucket. As long as this client continues to send requests and interval between these requests is less than a second or couple of seconds, we keep the bucket in memory.
+	- If there are no requests coming for this bucket for several seconds, we can remove the bucket
+from memory. And bucket will be re-created again when client makes a new request.
+#### Failure Modes
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM5MjUwNjYyLC0xODY5NDU3MzAxLDc4ND
-g2NTE3OSwtNTA5OTgwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1
-OTQyLC0xMTY3OTI2NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MT
-AsNDg5NjMwMTI2LC0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0
-OTQ3MzQ4MSwtMTM5NzQ0MzY1NywzNDE3MzUzMiw3OTUwODg5Nz
-YsMTU4NjE0NzU3MiwxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4
-NzcwNDE5NF19
+eyJoaXN0b3J5IjpbMTkwODUwNTEwMSwtMTg2OTQ1NzMwMSw3OD
+Q4NjUxNzksLTUwOTk4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3
+NTk0MiwtMTE2NzkyNjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNz
+EwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4
+NDk0NzM0ODEsLTEzOTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OT
+c2LDE1ODYxNDc1NzIsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01
+ODc3MDQxOTRdfQ==
 -->
