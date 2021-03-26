@@ -163,14 +163,15 @@ public class RateLimiterTokenBucket {
 		- But the main problem with this approach is that it is not scalable. Number of messages grows quadratically with respect to the number of hosts in a cluster. Approach works well for small clusters, but we will not be able to support big clusters. So, let’s investigate some other options that may require less messages to be broadcasted within the cluster.
 2. Gossip Communication
 	- And one such option is to use a gossip protocol. This protocol is based on the way that epidemics spread.
-Computer systems typically implement this type of protocol with a form of random "peer selection": with a given frequency, each machine picks another machine at random and shares data. By the way, rate limiting solution at Yahoo uses this approach.
+Computer systems typically implement this type of protocol with a form of random "peer selection": with a given frequency, each machine picks another machine at random and shares data. B picks A, A picks C, C picks D
+	- By the way, rate limiting solution at Yahoo uses this approach.
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NTIwNjU5NSw3ODQ4NjUxNzksLTUwOT
-k4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3NTk0MiwtMTE2Nzky
-NjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNi
-wtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEz
-OTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1Nz
-IsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
+eyJoaXN0b3J5IjpbLTE5ODg3NTE4ODgsNzg0ODY1MTc5LC01MD
+k5ODA3MTIsLTExMDM5MTY5NzIsLTE2MjY4NzU5NDIsLTExNjc5
+MjY0MDEsLTYxMzE5NTkxMSwtMTQyMzExMTcxMCw0ODk2MzAxMj
+YsLTEwNzgyNjcyMzQsLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0x
+Mzk3NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NT
+cyLDEzMzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
 
 -->
