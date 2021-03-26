@@ -209,9 +209,15 @@ may be in the Rate Limiter library.
 	- If there are no requests coming for this bucket for several seconds, we can remove the bucket
 from memory. And bucket will be re-created again when client makes a new request.
 #### Failure Modes
-
+- As for failure modes, there may be several of them.
+- Daemon can fail, causing other hosts in the cluster lose visibility of this failed daemon. In the result, the host with a failed daemon leaves the group and continues to throttle requests without talking to other hosts in the cluster.
+- Nothing really bad happens. Just less requests will be throttled in total. And we will have similar results in case of a network partition, when several hosts in the cluster may not be able to broadcast messages to the rest of the group. Just less requests throttled in total.
+- And if you wonder why, just remember our previous example with 3 hosts and 4 tokens. 
+	- If hosts talk to each other, only 4 requests are allowed across all of them. 
+	- If hosts do not talk to each other due to let’s say network issues, each host will allow 4 requests, 12 in total.
+- So, in case of failures in our rate limiter solution, more requests are allowed and less requests are throttled.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwODUwNTEwMSwtMTg2OTQ1NzMwMSw3OD
+eyJoaXN0b3J5IjpbLTgxNDM4ODAwMiwtMTg2OTQ1NzMwMSw3OD
 Q4NjUxNzksLTUwOTk4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3
 NTk0MiwtMTE2NzkyNjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNz
 EwLDQ4OTYzMDEyNiwtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4
