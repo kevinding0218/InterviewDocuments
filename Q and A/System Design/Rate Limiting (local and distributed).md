@@ -183,6 +183,7 @@ Computer systems typically implement this type of protocol with a form of random
 ##### Which one to choose?
 - If we want rate limiting solution to be more accurate, but with a little bit of performance overhead, we need to go with TCP.
 - If we ok to have a bit less accurate solution, but the one that works faster, UDP should be our choice.
+- For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
 ### Integrate everything
 - We have implemented the algorithm, created a set of classes and interfaces, discussed message broadcasting. But how do we integrate all this cool solution with the service? Let’s see what options we have.
 #### Solution 1 - as a library (Daemon)
@@ -230,16 +231,13 @@ from memory. And bucket will be re-created again when client makes a new request
 - There are several options, as always. Clients may queue such requests and re-send them later. Or they can retry throttled requests. But do it in a smart way, and this smart way is called exponential backoff and jitter. 
 	- An exponential backoff algorithm retries requests exponentially, increasing the waiting time between retries up to a maximum backoff time. In other words, we retry requests several times, but wait a bit longer with every retry attempt.
 	- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
-#### Scalable? Fast? Accurate?
-- For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
-
 ### Summary
 - Service owners can use a self-service tools for rules management. Rules are stored in the database.
 - On the service host we have rules retriever that stores retrieved rules in the local cache.
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYzNDQ4OTIwLC0xODY5NDU3MzAxLDc4ND
+eyJoaXN0b3J5IjpbODIzNzY0NTAyLC0xODY5NDU3MzAxLDc4ND
 g2NTE3OSwtNTA5OTgwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1
 OTQyLC0xMTY3OTI2NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MT
 AsNDg5NjMwMTI2LC0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0
