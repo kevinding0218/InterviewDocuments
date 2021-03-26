@@ -155,23 +155,27 @@ public class RateLimiterTokenBucket {
 - Although in reality all 12 were processed within the first second. So, communication between hosts is the key. Let’s see how this communication can be implemented.
 #### Ways of sharing between hosts
 1. Tell every host everything
-	- It means that every host in the cluster knows about every other host in the cluster and share messages with each one of them. For cluster A, B, C & D, each cluster will communicate the other
-	- You may also heard a term full mesh that describes this network topology. How do hosts discover each other? When a new host is added, how does everyone else know? And there are several approaches used for hosts discovery.
-	- One option is to use a 3-rd party service which will listen to heartbeats coming from every host. As long as heartbeats come, host is keep registered in the system. If heartbeats stop coming, the service unregister host that is no longer alive. And all hosts in our cluster ask this 3-rd party service for the full list of members.
-	- Another option is to resolve some user provided information. For example, user specifies a VIP and because VIP knows about all the hosts behind it, we can use this information to obtain all the members.
-		- Or we can rely on a less flexible but still a good option when user provides a list of hosts via some configuration file. We then need a way to deploy this file across all cluster nodes every time this list changes. Full mesh broadcasting is relatively straightforward to implement.
-		- But the main problem with this approach is that it is not scalable. Number of messages grows quadratically with respect to the number of hosts in a cluster. Approach works well for small clusters, but we will not be able to support big clusters. So, let’s investigate some other options that may require less messages to be broadcasted within the cluster.
+- It means that every host in the cluster knows about every other host in the cluster and share messages with each one of them. For cluster A, B, C & D, each cluster will communicate the other
+- You may also heard a term full mesh that describes this network topology. How do hosts discover each other? When a new host is added, how does everyone else know? And there are several approaches used for hosts discovery.
+- One option is to use a 3-rd party service which will listen to heartbeats coming from every host. As long as heartbeats come, host is keep registered in the system. If heartbeats stop coming, the service unregister host that is no longer alive. And all hosts in our cluster ask this 3-rd party service for the full list of members.
+- Another option is to resolve some user provided information. For example, user specifies a VIP and because VIP knows about all the hosts behind it, we can use this information to obtain all the members.
+- Or we can rely on a less flexible but still a good option when user provides a list of hosts via some configuration file. We then need a way to deploy this file across all cluster nodes every time this list changes. Full mesh broadcasting is relatively straightforward to implement.
+- But the main problem with this approach is that it is not scalable. Number of messages grows quadratically with respect to the number of hosts in a cluster. Approach works well for small clusters, but we will not be able to support big clusters. So, let’s investigate some other options that may require less messages to be broadcasted within the cluster.
 2. Gossip Communication
-	- And one such option is to use a gossip protocol. This protocol is based on the way that epidemics spread.
+- And one such option is to use a gossip protocol. This protocol is based on the way that epidemics spread.
 Computer systems typically implement this type of protocol with a form of random "peer selection": with a given frequency, each machine picks another machine at random and shares data. B picks A, A picks C, C picks D
-	- By the way, rate limiting solution at Yahoo uses this approach.
-	- 
+- By the way, rate limiting solution at Yahoo uses this approach.
+3. Distributed Cache
+- Next option is to use distributed cache cluster. For example, Redis. Or we can implement custom distributed cache solution.
+- The pros for this approach is that distributed cache cluster is relatively small and our service cluster can scale out independently.
+- This cluster can be shared among many different service teams in the organization. Or each team can setup their own small cluster.
+4. 3-rd party component
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODg3NTE4ODgsNzg0ODY1MTc5LC01MD
-k5ODA3MTIsLTExMDM5MTY5NzIsLTE2MjY4NzU5NDIsLTExNjc5
-MjY0MDEsLTYxMzE5NTkxMSwtMTQyMzExMTcxMCw0ODk2MzAxMj
-YsLTEwNzgyNjcyMzQsLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0x
-Mzk3NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NT
-cyLDEzMzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+eyJoaXN0b3J5IjpbLTk1MDEwMzU5NSw3ODQ4NjUxNzksLTUwOT
+k4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3NTk0MiwtMTE2Nzky
+NjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNi
+wtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEz
+OTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1Nz
+IsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
 
 -->
