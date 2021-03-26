@@ -175,9 +175,16 @@ Computer systems typically implement this type of protocol with a form of random
 5. Random Leader Selection
 - Let’s say we use a simple algorithm to elect a leader. But because of the simplicity of the algorithm it may not guarantee one and only one leader. So that we may end up with multiple leaders being elected.
 - Is this an issue? Actually, no. Each leader will calculate rate and share with everyone else. This will cause unnecessary messaging overhead, but each leader will have its own correct view of the overall rate. And to finish message broadcasting discussion, I want to talk about communication protocols, how hosts talk to each other.
+#### Communication Protocol
+##### TCP and UDP
+- TCP protocol guarantees delivery of data and also guarantees that packets will be delivered in the same order in which they were sent.
+- UDP protocol does not guarantee you are getting all the packets and order is not guaranteed. But because UDP throws all the error-checking stuff out, it is faster.
+##### Which one to choose?
+- If we want rate limiting solution to be more accurate, but with a little bit of performance overhead, we need to go with TCP.
+- If we ok to have a bit less accurate solution, but the one that works faster, UDP should be our choice.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAwMTMyOTUxLDc4NDg2NTE3OSwtNTA5OT
+eyJoaXN0b3J5IjpbNjMxNDQ4NDc3LDc4NDg2NTE3OSwtNTA5OT
 gwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2
 NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC
 0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5
