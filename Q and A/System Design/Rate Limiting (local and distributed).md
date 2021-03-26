@@ -184,19 +184,37 @@ Computer systems typically implement this type of protocol with a form of random
 - If we ok to have a bit less accurate solution, but the one that works faster, UDP should be our choice.
 ### Integrate everything
 - We have implemented the algorithm, created a set of classes and interfaces, discussed message broadcasting. But how do we integrate all this cool solution with the service? Let’s see what options we have.
-#### Solution 1 - as a library
+#### Solution 1 - as a library (Daemon)
 - We can run Rate Limiter as a part of the service process or as its own process (daemon). In the first option, Rate Limiter is distributed as a collection of classes, a library that should be integrated with the service code.
 ##### Pros
-- 
+- It is faster, as we do not need to do any inter-process call.
+- It is also resilient to the inter-process call failures, because there are no such calls.
 #### Solution 2 - as external client
 - In the second option we have two libraries: the daemon itself and the client, that is responsible for inter-process communication between the service process and the daemon. Client is integrated with the service code.
-#### Pros & Cons
+##### Pros
+- programming language agnostic. It means that Rate Limiter daemon can be written on a programming language that may be different from the language we use for the service implementation. As we do not need to do integration on the code level. Yes, we need to have Rate Limiter client compatible with the service code language. But not the daemon itself.
+- Also, Rate Limiter process uses its own memory space. This isolation helps to better control behavior for both the service and the daemon. For example, daemon my store many buckets in memory, but because the service process has its own memory space, the service memory does not need to allocate space for these
+buckets.
+Which makes service memory allocation more predictable.
+Another good reason, and you may see it happening a lot in practice, service teams tend to be
+very cautious when you come to them and ask to integrate their service with your super
+cool library.
+You will hear tons of questions.
+Like how much memory and CPU your library consumes?
+What will happen in case of a network partition or any other exceptional scenario?
+Can we see results of the load testing for your library?
+What are your mom’s favorite flowers?
+And many many other questions.
+These questions are also applicable to the daemon solution.
+But it is easier to guarantee that the service itself will not be impacted by any bugs that
+may be in the Rate Limiter library.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4MDA4MDk5LDc4NDg2NTE3OSwtNTA5OT
-gwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2
-NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC
-0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5
-NzQ0MzY1NywzNDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3Mi
-wxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbLTEyNDgyOTQ5NSw3ODQ4NjUxNzksLTUwOT
+k4MDcxMiwtMTEwMzkxNjk3MiwtMTYyNjg3NTk0MiwtMTE2Nzky
+NjQwMSwtNjEzMTk1OTExLC0xNDIzMTExNzEwLDQ4OTYzMDEyNi
+wtMTA3ODI2NzIzNCwtMTc2OTMzMDM1Nyw4NDk0NzM0ODEsLTEz
+OTc0NDM2NTcsMzQxNzM1MzIsNzk1MDg4OTc2LDE1ODYxNDc1Nz
+IsMTMzMTM1MDM4NSwyMDYzMjM3NTMwLC01ODc3MDQxOTRdfQ==
+
 -->
