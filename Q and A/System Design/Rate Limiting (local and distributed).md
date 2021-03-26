@@ -196,13 +196,16 @@ Computer systems typically implement this type of protocol with a form of random
 - Also, Rate Limiter process uses its own memory space. This isolation helps to better control behavior for both the service and the daemon. For example, daemon my store many buckets in memory, but because the service process has its own memory space, the service memory does not need to allocate space for these buckets. Which makes service memory allocation more predictable.
 - Another good reason, and you may see it happening a lot in practice, service teams tend to be very cautious when you come to them and ask to integrate their service with your super cool library. You will hear tons of questions. Like how much memory and CPU your library consumes? What will happen in case of a network partition or any other exceptional scenario? Can we see results of the load testing for your library? What are your mom’s favorite flowers? And many many other questions. These questions are also applicable to the daemon solution. But it is easier to guarantee that the service itself will not be impacted by any bugs that
 may be in the Rate Limiter library.
-- As you may see, strengths of the first approach become weaknesses of the second approach.
-And vice versa.
+- As you may see, strengths of the first approach become weaknesses of the second approach. And vice versa.
+#### Summary
+- Both are good options and it really depends on the use cases and needs of a particular service team. 
+- By the way, the second approach, when we have a daemon that communicates with other hosts in the cluster is a quite popular pattern in distributed systems. For example, it is widely used to implement auto discovery of service hosts, when hosts in a cluster identify each other.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM4MTQ2MTk0LDc4NDg2NTE3OSwtNTA5OT
-gwNzEyLC0xMTAzOTE2OTcyLC0xNjI2ODc1OTQyLC0xMTY3OTI2
-NDAxLC02MTMxOTU5MTEsLTE0MjMxMTE3MTAsNDg5NjMwMTI2LC
-0xMDc4MjY3MjM0LC0xNzY5MzMwMzU3LDg0OTQ3MzQ4MSwtMTM5
-NzQ0MzY1NywzNDE3MzUzMiw3OTUwODg5NzYsMTU4NjE0NzU3Mi
-wxMzMxMzUwMzg1LDIwNjMyMzc1MzAsLTU4NzcwNDE5NF19
+eyJoaXN0b3J5IjpbLTE4Njk0NTczMDEsNzg0ODY1MTc5LC01MD
+k5ODA3MTIsLTExMDM5MTY5NzIsLTE2MjY4NzU5NDIsLTExNjc5
+MjY0MDEsLTYxMzE5NTkxMSwtMTQyMzExMTcxMCw0ODk2MzAxMj
+YsLTEwNzgyNjcyMzQsLTE3NjkzMzAzNTcsODQ5NDczNDgxLC0x
+Mzk3NDQzNjU3LDM0MTczNTMyLDc5NTA4ODk3NiwxNTg2MTQ3NT
+cyLDEzMzEzNTAzODUsMjA2MzIzNzUzMCwtNTg3NzA0MTk0XX0=
+
 -->
