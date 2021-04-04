@@ -107,11 +107,12 @@ list.sort(Point.PointComparator);
 	}
 	```
 ### Median
-- Using maxHeap : maxHeap will always have the largest element on top, by cons
-	1.  
+- Using maxHeap : maxHeap is A (child) node can't have a value greater than that of its parent. Hence, in a _max-heap_, the root node always has the largest value.
+	1.  calculate the mid length of nums as `(nums.length + 1) / 2`
+	2. initiate a max heap using Priorit
 ### [PriorityQueue/MinHeap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTY2OTQxMDUsNzI3NDI4MDI3LDIwND
+eyJoaXN0b3J5IjpbLTExOTYwMjc1NjIsNzI3NDI4MDI3LDIwND
 EwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMzYzMTQ3
 MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQwNTUsMT
 YxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUx
