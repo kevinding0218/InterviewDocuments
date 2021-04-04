@@ -122,7 +122,11 @@ list.sort(Point.PointComparator);
 	- Time:   O(n + m)
 	- Space: O(n + m)
 2. Two pointers
-	- p1 with array A, p2 with array B, iterate `0 ~ (n + m) / 2` times
+	- p1 with array A, p2 with array B, iterate `0 ~ (n + m) / 2 + 1` times
+	- every time move forward pointer which element is smaller, if one pointer has reached the end of array, move another pointer
+	``
+	ssdf
+	``
 ### Merge
 #### Merge 2 sorted array
 #### Merge k sorted arrays
@@ -156,11 +160,11 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMTA2MjY3MCwxMjcwMzk0MDM1LDEzNz
-E2MzgyNjgsNjUwMjA2NTYwLDU2MTM1ODE4OCwtMjAzNzUxODA2
-MSw3Mjc0MjgwMjcsMjA0MTA2MDM3MiwtODY5MjgzNDEyLC0xNj
-E0NTY4NjI3LDEzNjMxNDcxMiwtMzgwMTI5NTMxLDcyODYwNTg2
-OCwtMTA5MjExNDA1NSwxNjExNTA5MDA3LDEwMDA3OTcxNjQsMz
-c1NjI4MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5NzUsMjkwNDYz
-OTVdfQ==
+eyJoaXN0b3J5IjpbLTE2NjQ2NTM2MTgsMTIxMTA2MjY3MCwxMj
+cwMzk0MDM1LDEzNzE2MzgyNjgsNjUwMjA2NTYwLDU2MTM1ODE4
+OCwtMjAzNzUxODA2MSw3Mjc0MjgwMjcsMjA0MTA2MDM3MiwtOD
+Y5MjgzNDEyLC0xNjE0NTY4NjI3LDEzNjMxNDcxMiwtMzgwMTI5
+NTMxLDcyODYwNTg2OCwtMTA5MjExNDA1NSwxNjExNTA5MDA3LD
+EwMDA3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0ODY0LC0yMzM2
+NjM5NzVdfQ==
 -->
