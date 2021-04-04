@@ -107,6 +107,7 @@ list.sort(Point.PointComparator);
 	}
 	```
 ### Median
+#### Find Median of unsorted array
 - Using **maxHeap/PriorityQueue** :  Time:O(n), Space:O(n/2)
 	- let `maxHeap` to maintain 1/2 of array sized smaller items, the top element in heap would be the largest element of 1/2 array smaller ones.
 	- maxHeap is A (child) node can't have a value greater than that of its parent. Hence, in a _max-heap_, the root node always has the largest value.
@@ -116,6 +117,8 @@ list.sort(Point.PointComparator);
 	4. return `maxheap.peek()`
 - Using **Partition**: Time:O(n), Space:O(1)
 	- refer to Partition
+#### Median of two sorted array
+
 ### Partition
 #### Idea
 - choose a pivot (could be any item in the array, head or tail or middle), at the end of while loop is to partition items in array so that all numbers smaller than pivot will be on its left side and all numbers greater than pivot will be on its right side.
@@ -143,7 +146,7 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MjE5ODU5MiwxMzcxNjM4MjY4LDY1MD
+eyJoaXN0b3J5IjpbLTUyMDExNjk3MCwxMzcxNjM4MjY4LDY1MD
 IwNjU2MCw1NjEzNTgxODgsLTIwMzc1MTgwNjEsNzI3NDI4MDI3
 LDIwNDEwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMz
 YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
