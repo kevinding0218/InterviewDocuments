@@ -34,7 +34,9 @@
 	2. Do merge again
 - Remove overlap interval
 	1. define `end` as 1st interval end in sorted list 
-	2. compare with each incoming interval from 2nd, if `incoming start < end`, meaning we have an overlapped interval, incremeen
+	2. compare with each incoming interval from 2nd
+		- if `incoming.start < end`, meaning incoming would be an overlapped interval, increment result count, and update the `end` as `Math.min(end, incoming.end)`
+		- otherwise, meaning the incoming interval is not overlap, update `end = incoming.end`
 - Find missing interval
 	1. use helper method `addRange(result, start, upper)` to add each interval into result
 	2. add head interval as lower to head `nums[0] - 1` as 
@@ -102,9 +104,9 @@ list.sort(Point.PointComparator);
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NzQyNTk0MSwtMTYxNDU2ODYyNywxMz
-YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
-NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
-g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
-ODcwLC01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbLTE1ODAxODEwMDAsLTE2MTQ1Njg2MjcsMT
+M2MzE0NzEyLC0zODAxMjk1MzEsNzI4NjA1ODY4LC0xMDkyMTE0
+MDU1LDE2MTE1MDkwMDcsMTAwMDc5NzE2NCwzNzU2MjgyMTcsLT
+E4NTM1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5
+Mjg3MCwtNTAwMzU4MTE1XX0=
 -->
