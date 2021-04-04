@@ -116,13 +116,17 @@ list.sort(Point.PointComparator);
 	4. return `maxheap.peek()`
 - Using **Partition**
 	- refer to Partition
-###
+### Partition
+- Template:
+```
+
+```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4OTI0OTM3Miw3Mjc0MjgwMjcsMjA0MT
-A2MDM3MiwtODY5MjgzNDEyLC0xNjE0NTY4NjI3LDEzNjMxNDcx
-MiwtMzgwMTI5NTMxLDcyODYwNTg2OCwtMTA5MjExNDA1NSwxNj
-ExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0
-ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLT
-UwMDM1ODExNV19
+eyJoaXN0b3J5IjpbLTIwMzc1MTgwNjEsNzI3NDI4MDI3LDIwND
+EwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMzYzMTQ3
+MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQwNTUsMT
+YxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUx
+NDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC
+01MDAzNTgxMTVdfQ==
 -->
