@@ -42,10 +42,30 @@
 			2. iterative through the list, use `map.ceilingKey(interval.end)` to check if its right interval existed or not
 				- if null, meaning there is no right interval, return -1
 				- otherwise, use `map.get(interval.end)` to find its right interval's index
-		- using 
+		- using SweepLine
+	#### SweepLine
+	- Define `Point` template
+```
+static class Point{  
+    int time;  
+    int flag;  
+  
+    Point(int t, int s) {  
+	    this.time = t;  
+        this.flag = s;  
+    }  
+  
+    public static Comparator<Point> PointComparator = (p1, p2) -> {  
+	  if(p1.time == p2.time)  
+  return p1.flag - p2.flag;  
+        else  
+ return p1.time - p2.time;  
+    };  
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTIxMTQwNTUsMTYxMTUwOTAwNywxMD
-AwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYz
-OTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ
-==
+eyJoaXN0b3J5IjpbLTQ4MzUwOTUzNCwtMTA5MjExNDA1NSwxNj
+ExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0
+ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLT
+UwMDM1ODExNV19
 -->
