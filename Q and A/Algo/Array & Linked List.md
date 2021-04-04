@@ -121,7 +121,6 @@ list.sort(Point.PointComparator);
 
 ### Merge
 #### Merge 2 sorted array
-- 
 #### Merge k sorted arrays
 #### Merge 2 sorted list
 #### Merge k sorted list
@@ -153,11 +152,11 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjE0NDEzODQsMTM3MTYzODI2OCw2NT
-AyMDY1NjAsNTYxMzU4MTg4LC0yMDM3NTE4MDYxLDcyNzQyODAy
-NywyMDQxMDYwMzcyLC04NjkyODM0MTIsLTE2MTQ1Njg2MjcsMT
-M2MzE0NzEyLC0zODAxMjk1MzEsNzI4NjA1ODY4LC0xMDkyMTE0
-MDU1LDE2MTE1MDkwMDcsMTAwMDc5NzE2NCwzNzU2MjgyMTcsLT
-E4NTM1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5
-Mjg3MF19
+eyJoaXN0b3J5IjpbMTI3MDM5NDAzNSwxMzcxNjM4MjY4LDY1MD
+IwNjU2MCw1NjEzNTgxODgsLTIwMzc1MTgwNjEsNzI3NDI4MDI3
+LDIwNDEwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMz
+YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
+NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
+g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
+ODcwXX0=
 -->
