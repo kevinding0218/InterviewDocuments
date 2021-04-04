@@ -114,7 +114,7 @@ list.sort(Point.PointComparator);
 	2. initiate a max heap using PriorityQueue, note that in Java PriorityQueue by default is minHeap, so we need to take the reverse order `Queue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());`
 	3. iterate over array, keep `maxheap.offer(nums[i])` items into the queue, whenever the queue reached its size, check if the current item is smaller than `maxheap.peek()`, if so, `poll` it out.
 	4. return `maxheap.peek()`
-- Using **Partition**
+- Using **Partition**: Time:O(n), Space:O(1)
 	- refer to Partition
 ### Partition
 #### Idea
@@ -143,7 +143,7 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNTQ5MDM1OCwxMzcxNjM4MjY4LDY1MD
+eyJoaXN0b3J5IjpbLTI3MjE5ODU5MiwxMzcxNjM4MjY4LDY1MD
 IwNjU2MCw1NjEzNTgxODgsLTIwMzc1MTgwNjEsNzI3NDI4MDI3
 LDIwNDEwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMz
 YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
