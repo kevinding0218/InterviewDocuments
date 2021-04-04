@@ -131,8 +131,8 @@ while (start <= end) {
   while (nums[end] > pivot && start <= end) {  
 	  end--;  
   }  
-  if (start <= end) {  
-  int temp = nums[start];  
+  if (start <= end) {  //swap(start, end)
+	    int temp = nums[start];  
         nums[start] = nums[end];  
         nums[end] = temp;  
         start++;  
@@ -142,10 +142,11 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjUwMjA2NTYwLDU2MTM1ODE4OCwtMjAzNz
-UxODA2MSw3Mjc0MjgwMjcsMjA0MTA2MDM3MiwtODY5MjgzNDEy
-LC0xNjE0NTY4NjI3LDEzNjMxNDcxMiwtMzgwMTI5NTMxLDcyOD
-YwNTg2OCwtMTA5MjExNDA1NSwxNjExNTA5MDA3LDEwMDA3OTcx
-NjQsMzc1NjI4MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5NzUsMj
-kwNDYzOTUsLTE1NjI1OTI4NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbLTEzMTU3NDExNzcsNjUwMjA2NTYwLDU2MT
+M1ODE4OCwtMjAzNzUxODA2MSw3Mjc0MjgwMjcsMjA0MTA2MDM3
+MiwtODY5MjgzNDEyLC0xNjE0NTY4NjI3LDEzNjMxNDcxMiwtMz
+gwMTI5NTMxLDcyODYwNTg2OCwtMTA5MjExNDA1NSwxNjExNTA5
+MDA3LDEwMDA3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0ODY0LC
+0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLTUwMDM1
+ODExNV19
 -->
