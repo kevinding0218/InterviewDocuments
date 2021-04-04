@@ -44,7 +44,8 @@
 				- otherwise, use `map.get(interval.end)` to find its right interval's index
 		- using SweepLine + PriorityQueue
 			- define heap as `Queue<Point> minheap = new PriorityQueue<>(Point.PointComparator);`
-			- Enqueue if start point
+			- Enqueue if it's start point
+			- If `minHeap.size() == 0`, meaning there is no right interval, return -1, otherwise return 
 	#### SweepLine
 	1. Define `Point` template, 
 		- time as each interval's start or end, 
@@ -97,8 +98,8 @@ list.sort(Point.PointComparator);
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNzczMjAxMCwtMzgwMTI5NTMxLDcyOD
-YwNTg2OCwtMTA5MjExNDA1NSwxNjExNTA5MDA3LDEwMDA3OTcx
-NjQsMzc1NjI4MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5NzUsMj
-kwNDYzOTUsLTE1NjI1OTI4NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbOTU3NDQwMzQsLTM4MDEyOTUzMSw3Mjg2MD
+U4NjgsLTEwOTIxMTQwNTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0
+LDM3NTYyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MD
+Q2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ==
 -->
