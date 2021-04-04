@@ -118,7 +118,7 @@ list.sort(Point.PointComparator);
 2. Using **Partition**: Time:O(n), Space:O(1)
 	- refer to Partition
 #### Median of two sorted array
-1. 
+1. merge
 ### Merge
 #### Merge 2 sorted array
 #### Merge k sorted arrays
@@ -152,11 +152,11 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTk1Njc0NDUsMTI3MDM5NDAzNSwxMz
-cxNjM4MjY4LDY1MDIwNjU2MCw1NjEzNTgxODgsLTIwMzc1MTgw
-NjEsNzI3NDI4MDI3LDIwNDEwNjAzNzIsLTg2OTI4MzQxMiwtMT
-YxNDU2ODYyNywxMzYzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4
-NjgsLTEwOTIxMTQwNTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LD
-M3NTYyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2
-Mzk1XX0=
+eyJoaXN0b3J5IjpbODc5NjQ2NTAxLDEyNzAzOTQwMzUsMTM3MT
+YzODI2OCw2NTAyMDY1NjAsNTYxMzU4MTg4LC0yMDM3NTE4MDYx
+LDcyNzQyODAyNywyMDQxMDYwMzcyLC04NjkyODM0MTIsLTE2MT
+Q1Njg2MjcsMTM2MzE0NzEyLC0zODAxMjk1MzEsNzI4NjA1ODY4
+LC0xMDkyMTE0MDU1LDE2MTE1MDkwMDcsMTAwMDc5NzE2NCwzNz
+U2MjgyMTcsLTE4NTM1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5
+NV19
 -->
