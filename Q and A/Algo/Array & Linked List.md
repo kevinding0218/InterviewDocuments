@@ -1,6 +1,8 @@
 ### Summary
 #### Validation
-- input as `String`, check if `null or length == 0`
+ - check if `null or length`
+	 - if input as `String, Array`
+ - 
 #### HashMap
 - deal with `Character Array` or `String.toCharArray()` that needs to check appearance
 	- use `int count = int[26]` to store character appearance count `count[ch - 'a'] ++`
@@ -16,6 +18,7 @@
 - Space: (K * N)
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTM1MTQ4NjQsLTIzMzY2Mzk3NSwyOT
-A0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4MTE1XX0=
+eyJoaXN0b3J5IjpbMjA0Mzg5NzIxNCwtMTg1MzUxNDg2NCwtMj
+MzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgx
+MTVdfQ==
 -->
