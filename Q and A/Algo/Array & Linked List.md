@@ -18,10 +18,11 @@
 - Space: (K * N)
 ### Interval/Sweepline
 - Sort List by start `Arrays.sort(intervals, (a, b) -> a.start - b.start)`
-- Check if conflict
-	- define `maxEnd = Math.max(m
+- Interater the list
+	- Check if conflict
+	- use `maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end, compare with each incoming interval's start `interval.start < maxEnd`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTAwNzgzMDMsLTE4NTM1MTQ4NjQsLT
+eyJoaXN0b3J5IjpbLTExNjE1MjM3NjIsLTE4NTM1MTQ4NjQsLT
 IzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4
 MTE1XX0=
 -->
