@@ -18,7 +18,8 @@
 - Space: (K * N)
 ### Interval
 #### Sort List by start 
-- `Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]))` or `intervals.sort(Comparator.comparing(i -> i.start));`
+- if it's `int[][] intervals`, then use  `Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]))` 
+- if it's `List<Interval>` then use `intervals.sort(Comparator.comparing(i -> i.start));`
 #### Interater the list
 - Check if conflict
 	1. define`maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end
@@ -104,7 +105,7 @@ list.sort(Point.PointComparator);
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NjYyMTAyNCwtMTYxNDU2ODYyNywxMz
+eyJoaXN0b3J5IjpbLTcxODI2Mzk3NCwtMTYxNDU2ODYyNywxMz
 YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
 NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
 g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
