@@ -108,14 +108,15 @@ list.sort(Point.PointComparator);
 	```
 ### Median
 - Using maxHeap : maxHeap is A (child) node can't have a value greater than that of its parent. Hence, in a _max-heap_, the root node always has the largest value.
-	1.  calculate the mid length of nums as `(nums.length + 1) / 2`
-	2. initiate a max heap using Priorit
+	1.  calculate the mid length of array as `(nums.length + 1) / 2`
+	2. initiate a max heap using PriorityQueue, note that in Java PriorityQueue by default is minHeap, so we need to take the reverse order `Queue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());`
+	3. iterate over array, keep `offer` items into the queue, whenever the queue reached its size, check if the
 ### [PriorityQueue/MinHeap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTYwMjc1NjIsNzI3NDI4MDI3LDIwND
-EwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMzYzMTQ3
-MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQwNTUsMT
-YxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUx
-NDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC
-01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbLTU2ODA0ODc0LDcyNzQyODAyNywyMDQxMD
+YwMzcyLC04NjkyODM0MTIsLTE2MTQ1Njg2MjcsMTM2MzE0NzEy
+LC0zODAxMjk1MzEsNzI4NjA1ODY4LC0xMDkyMTE0MDU1LDE2MT
+E1MDkwMDcsMTAwMDc5NzE2NCwzNzU2MjgyMTcsLTE4NTM1MTQ4
+NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNT
+AwMzU4MTE1XX0=
 -->
