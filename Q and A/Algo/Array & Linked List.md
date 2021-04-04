@@ -36,9 +36,10 @@
 		2. add head interval as lower to head `nums[0] - 1` as 
 		3. iterator from 2nd element to end of list, add each `addRange(result, nums[i - 1] + 1, nums[i] - 1)`
 		4. add tail interval as `addRange(ans, nums[size - 1] + 1, end)`
-	- 
+	- Find right interval
+		- using TreeMap
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMDc5NzE2NCwzNzU2MjgyMTcsLTE4NT
-M1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3
-MCwtNTAwMzU4MTE1XX0=
+eyJoaXN0b3J5IjpbMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NT
+YyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1
+LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ==
 -->
