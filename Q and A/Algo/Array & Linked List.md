@@ -77,15 +77,17 @@ for (Interval i : intervals) {
 3. **Sort** the `list`
 ```
 /*
-input: [(1, 2), (2, 3), (3, 4)]
-list:  [(1, 1), (2, 0), (2, 1), (3, 0), (3, 1), (4, 0)]
+input: [(1, 10), (2, 3), (5, 8), (4, 7)]
+list:  [(1, 1), (10, 0), (2, 1), (3, 0), (5, 1), (8, 0), (4, 1), (7, 0)]
+sorted:[(1, 1), (2, 1), (3, 0), (4, 1), (5, 1), (7, 0), (8, 0), (10, 0)]
 */
 list.sort(Point.PointComparator);
 ```
 4. Iterative over the list
+	- Check how many overlap, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI4NjA1ODY4LC0xMDkyMTE0MDU1LDE2MT
-E1MDkwMDcsMTAwMDc5NzE2NCwzNzU2MjgyMTcsLTE4NTM1MTQ4
-NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNT
-AwMzU4MTE1XX0=
+eyJoaXN0b3J5IjpbLTUyNTkwMzAyMyw3Mjg2MDU4NjgsLTEwOT
+IxMTQwNTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIx
+NywtMTg1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNT
+YyNTkyODcwLC01MDAzNTgxMTVdfQ==
 -->
