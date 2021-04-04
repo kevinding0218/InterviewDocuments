@@ -73,8 +73,12 @@ for (Interval i : intervals) {
     list.add(new Point(i.end, 0));  
 }
 ```
+3. **Sort** the `list`
+```
+list.sort(Point.PointComparator);
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MTI3NDE3NCwtMTA5MjExNDA1NSwxNj
+eyJoaXN0b3J5IjpbMTE1NjMxMzA2NCwtMTA5MjExNDA1NSwxNj
 ExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0
 ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLT
 UwMDM1ODExNV19
