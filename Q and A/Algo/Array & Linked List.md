@@ -30,8 +30,9 @@
 				-  if `existedInterval` has already been added into result, update its end will also update the added interval's end in result, e.g(we're adding the 1st interval in result as `existedInterval is null` initially)
 	- Insert if conflict
 		- Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
+		- Do merge again
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMDA2Nzk2OCwzNzU2MjgyMTcsLTE4NT
-M1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3
-MCwtNTAwMzU4MTE1XX0=
+eyJoaXN0b3J5IjpbNzU0OTQwMzkyLDM3NTYyODIxNywtMTg1Mz
+UxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcw
+LC01MDAzNTgxMTVdfQ==
 -->
