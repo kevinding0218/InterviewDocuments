@@ -65,7 +65,7 @@ static class Point{
     };  
 }
 ```
-2. Define a List<Point> list asPut all intervals' start & end as a Point into List<Point>
+2. Define a `List<Point> list` with **double size of the interval list**, then put **each interval's start & end as one Point** into list
 ```
 List<Point> list = new ArrayList<>(intervals.size() * 2);
 for (Interval i : intervals) {  
@@ -74,7 +74,7 @@ for (Interval i : intervals) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3ODA3NDMwNywtMTA5MjExNDA1NSwxNj
+eyJoaXN0b3J5IjpbMTY5MTI3NDE3NCwtMTA5MjExNDA1NSwxNj
 ExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0
 ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLT
 UwMDM1ODExNV19
