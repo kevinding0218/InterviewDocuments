@@ -38,9 +38,11 @@
 		4. add tail interval as `addRange(ans, nums[size - 1] + 1, end)`
 	- Find right interval
 		- using TreeMap
+			1. treeMap to store all **interval.start as key** and its **index in array as value**
+			2. iterative through the list, use 
 		- using 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjk5NzU2MzQsMTYxMTUwOTAwNywxMD
+eyJoaXN0b3J5IjpbLTEwMDIxNjgxNDIsMTYxMTUwOTAwNywxMD
 AwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYz
 OTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ
 ==
