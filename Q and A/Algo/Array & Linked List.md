@@ -7,10 +7,10 @@
 	- Put sorted result into Map as Key and value as List<String>
 	- Time: O(K * NLogN) 
 		- K is count of input Strings
-		- NLogN is sorted time
+		- nLogN is sorted time
 	- Space: (K * N)
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjQyNjY3NTIsMjkwNDYzOTUsLTE1Nj
-I1OTI4NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbMTkyMTYyNjkxMiwyOTA0NjM5NSwtMTU2Mj
+U5Mjg3MCwtNTAwMzU4MTE1XX0=
 -->
