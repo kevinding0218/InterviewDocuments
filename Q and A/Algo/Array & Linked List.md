@@ -5,9 +5,12 @@
 - HashMap and Sort
 	- Sort String Characters
 	- Put sorted result into Map as Key and value as List<String>
-	- Time: O(k*nLogN) 
+	- Time: O(K * NLogN) 
+		- K is count of input Strings
+		- NLogN is sorted time
+	- Space: (K * N)
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MjU0MDc3NiwyOTA0NjM5NSwtMTU2Mj
-U5Mjg3MCwtNTAwMzU4MTE1XX0=
+eyJoaXN0b3J5IjpbLTExNjQyNjY3NTIsMjkwNDYzOTUsLTE1Nj
+I1OTI4NzAsLTUwMDM1ODExNV19
 -->
