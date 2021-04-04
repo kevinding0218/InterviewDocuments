@@ -23,12 +23,12 @@
 		- define`maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end
 		- compare with each incoming interval's start `interval.start < maxEnd`
 	- Merge if conflict
-		- define`existedInterval` as 1st element in sorted list to maintain an interval that could be cu
+		- define`existedInterval` as 1st element in sorted list to maintain an interval that could be cut off
 		- compare with each incoming interval by using `existedInterval.end >= incomingInterval.start`
 			- if true, meaning those two intervals can be merged, update `existedInterval.end = Math.max(existedInterval.end, incomingInterval.end)`
 			- if false, meaning existedInterval can be cut off, add into result and update `existedInterval = incomingInterval`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE1MDMwNTU2LC0xODUzNTE0ODY0LC0yMz
+eyJoaXN0b3J5IjpbMzc1NjI4MjE3LC0xODUzNTE0ODY0LC0yMz
 M2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLTUwMDM1ODEx
 NV19
 -->
