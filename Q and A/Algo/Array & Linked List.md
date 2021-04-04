@@ -44,7 +44,9 @@
 				- otherwise, use `map.get(interval.end)` to find its right interval's index
 		- using SweepLine
 	#### SweepLine
-	- Define `Point` template, time as each interval's start or end, flag using `1` as start and `0` as end
+	1. Define `Point` template, 
+		- time as each interval's start or end, 
+		- flag using `1` as start and `0` as end
 ```
 static class Point{  
     int time;  
@@ -63,9 +65,17 @@ static class Point{
     };  
 }
 ```
+2. Define a List<Point> list asPut all intervals' start & end as a Point into List<Point>
+```
+List<Point> list = new ArrayList<>(intervals.size() * 2);
+for (Interval i : intervals) {  
+    list.add(new Point(i.start, 1));  
+    list.add(new Point(i.end, 0));  
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDcwNDE0MTgsLTEwOTIxMTQwNTUsMT
-YxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUx
-NDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC
-01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbMTI3ODA3NDMwNywtMTA5MjExNDA1NSwxNj
+ExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0
+ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLT
+UwMDM1ODExNV19
 -->
