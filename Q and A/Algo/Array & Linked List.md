@@ -78,7 +78,7 @@ for (Interval i : intervals) {
     list.add(new Point(i.end, 0));  
 }
 ```
-3. **Sort** the `list`
+#### **Sort** the `list`
 ```
 /*
 input: [(1, 10), (2, 3), (5, 8), (4, 7)]
@@ -87,21 +87,21 @@ sorted:[(1, 1), (2, 1), (3, 0), (4, 1), (5, 1), (7, 0), (8, 0), (10, 0)]
 */
 list.sort(Point.PointComparator);
 ```
-4. Iterative over the list
-	- Check how many overlap
-		```
-	  for (Point p : list) {  
-		  if(p.flag == 1)  
-			  count++;  
-	      else  
-			  count--;  
-	      ans = Math.max(ans, count);  
-		}
-		```
+#### Iterative over the list
+- Check how many overlap
+	```
+  for (Point p : list) {  
+	  if(p.flag == 1)  
+		  count++;  
+      else  
+		  count--;  
+      ans = Math.max(ans, count);  
+	}
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNDY4ODc0OCwxMzYzMTQ3MTIsLTM4MD
-EyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQwNTUsMTYxMTUwOTAw
-NywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUxNDg2NCwtMj
-MzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgx
-MTVdfQ==
+eyJoaXN0b3J5IjpbLTE2MTQ1Njg2MjcsMTM2MzE0NzEyLC0zOD
+AxMjk1MzEsNzI4NjA1ODY4LC0xMDkyMTE0MDU1LDE2MTE1MDkw
+MDcsMTAwMDc5NzE2NCwzNzU2MjgyMTcsLTE4NTM1MTQ4NjQsLT
+IzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4
+MTE1XX0=
 -->
