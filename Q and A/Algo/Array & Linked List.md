@@ -108,17 +108,17 @@ list.sort(Point.PointComparator);
 	```
 ### Median
 #### Find Median of unsorted array
-- Using **maxHeap/PriorityQueue** :  Time:O(n), Space:O(n/2)
+1. Using **maxHeap/PriorityQueue** :  Time:O(n), Space:O(n/2)
 	- let `maxHeap` to maintain 1/2 of array sized smaller items, the top element in heap would be the largest element of 1/2 array smaller ones.
 	- maxHeap is A (child) node can't have a value greater than that of its parent. Hence, in a _max-heap_, the root node always has the largest value.
 	1.  calculate the mid length of array as `(nums.length + 1) / 2`
 	2. initiate a max heap using PriorityQueue, note that in Java PriorityQueue by default is minHeap, so we need to take the reverse order `Queue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());`
 	3. iterate over array, keep `maxheap.offer(nums[i])` items into the queue, whenever the queue reached its size, check if the current item is smaller than `maxheap.peek()`, if so, `poll` it out.
 	4. return `maxheap.peek()`
-- Using **Partition**: Time:O(n), Space:O(1)
+2. Using **Partition**: Time:O(n), Space:O(1)
 	- refer to Partition
 #### Median of two sorted array
-
+1. 
 ### Merge
 #### Merge 2 sorted array
 #### Merge k sorted arrays
@@ -152,11 +152,11 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MDM5NDAzNSwxMzcxNjM4MjY4LDY1MD
-IwNjU2MCw1NjEzNTgxODgsLTIwMzc1MTgwNjEsNzI3NDI4MDI3
-LDIwNDEwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMz
-YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
-NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
-g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
-ODcwXX0=
+eyJoaXN0b3J5IjpbLTE4OTk1Njc0NDUsMTI3MDM5NDAzNSwxMz
+cxNjM4MjY4LDY1MDIwNjU2MCw1NjEzNTgxODgsLTIwMzc1MTgw
+NjEsNzI3NDI4MDI3LDIwNDEwNjAzNzIsLTg2OTI4MzQxMiwtMT
+YxNDU2ODYyNywxMzYzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4
+NjgsLTEwOTIxMTQwNTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LD
+M3NTYyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2
+Mzk1XX0=
 -->
