@@ -106,10 +106,11 @@ list.sort(Point.PointComparator);
       ans = Math.max(ans, count);  
 	}
 	```
+### [PriorityQueue/MinHeap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMz
-YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
-NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
-g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
-ODcwLC01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbMjA0MTA2MDM3MiwtODY5MjgzNDEyLC0xNj
+E0NTY4NjI3LDEzNjMxNDcxMiwtMzgwMTI5NTMxLDcyODYwNTg2
+OCwtMTA5MjExNDA1NSwxNjExNTA5MDA3LDEwMDA3OTcxNjQsMz
+c1NjI4MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5NzUsMjkwNDYz
+OTUsLTE1NjI1OTI4NzAsLTUwMDM1ODExNV19
 -->
