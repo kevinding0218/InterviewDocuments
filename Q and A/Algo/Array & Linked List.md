@@ -76,11 +76,15 @@ for (Interval i : intervals) {
 ```
 3. **Sort** the `list`
 ```
+/*
+input: [(1, 2), (2, 3), (3, 4)]
+list:  [(1, 1), (2, 0), (2, 1), (3, 0), (3, 1), (4, 0)]
+*/
 list.sort(Point.PointComparator);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzU5NzM3MjQsLTEwOTIxMTQwNTUsMT
-YxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUx
-NDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC
-01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbNDU2NDI4MDk0LC0xMDkyMTE0MDU1LDE2MT
+E1MDkwMDcsMTAwMDc5NzE2NCwzNzU2MjgyMTcsLTE4NTM1MTQ4
+NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNT
+AwMzU4MTE1XX0=
 -->
