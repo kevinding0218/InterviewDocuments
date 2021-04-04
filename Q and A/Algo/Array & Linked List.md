@@ -84,10 +84,19 @@ sorted:[(1, 1), (2, 1), (3, 0), (4, 1), (5, 1), (7, 0), (8, 0), (10, 0)]
 list.sort(Point.PointComparator);
 ```
 4. Iterative over the list
-	- Check how many overlap, 
+	- Check how many overlap
+	```
+	for (Point p : list) {  
+  if(p.flag == 1)  
+  count++;  
+    else  
+  count--;  
+    ans = Math.max(ans, count);  
+}
+	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNTkwMzAyMyw3Mjg2MDU4NjgsLTEwOT
-IxMTQwNTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIx
-NywtMTg1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNT
-YyNTkyODcwLC01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbODc3NjkwNzcsNzI4NjA1ODY4LC0xMDkyMT
+E0MDU1LDE2MTE1MDkwMDcsMTAwMDc5NzE2NCwzNzU2MjgyMTcs
+LTE4NTM1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2Mj
+U5Mjg3MCwtNTAwMzU4MTE1XX0=
 -->
