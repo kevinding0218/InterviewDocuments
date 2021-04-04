@@ -107,16 +107,19 @@ list.sort(Point.PointComparator);
 	}
 	```
 ### Median
-- Using maxHeap : 
+- Using **maxHeap/PriorityQueue** : 
 	- let `maxHeap` to maintain 1/2 of array sized smaller items, the top element in heap would be the largest element of 1/2 array smaller ones.
 	- maxHeap is A (child) node can't have a value greater than that of its parent. Hence, in a _max-heap_, the root node always has the largest value.
 	1.  calculate the mid length of array as `(nums.length + 1) / 2`
 	2. initiate a max heap using PriorityQueue, note that in Java PriorityQueue by default is minHeap, so we need to take the reverse order `Queue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());`
 	3. iterate over array, keep `maxheap.offer(nums[i])` items into the queue, whenever the queue reached its size, check if the current item is smaller than `maxheap.peek()`, if so, `poll` it out.
 	4. return `maxheap.peek()`
-### [PriorityQueue/MinHeap](https://www.baeldung.com/java-queue)
+- Using **Partition**
+	- refer to Partition
+###
+### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MzYyNjIzOCw3Mjc0MjgwMjcsMjA0MT
+eyJoaXN0b3J5IjpbMjA4OTI0OTM3Miw3Mjc0MjgwMjcsMjA0MT
 A2MDM3MiwtODY5MjgzNDEyLC0xNjE0NTY4NjI3LDEzNjMxNDcx
 MiwtMzgwMTI5NTMxLDcyODYwNTg2OCwtMTA5MjExNDA1NSwxNj
 ExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0
