@@ -137,11 +137,12 @@ list.sort(Point.PointComparator);
 		  p1 ++;
 		}
 		```
-		- return `(m + n) % 2 == 1 ? right : (left + right) / 2.0`
-		- Time: O(m+n)
-		- Space:O(1)
+	- return `(m + n) % 2 == 1 ? right : (left + right) / 2.0`
+	- Time: O(m+n)
+	- Space:O(1)
 3. Binary Search
-	- Time:
+	- Time: O(log(m+n))
+	- Space:O(1)
 ### Merge
 #### Merge 2 sorted array
 #### Merge k sorted arrays
@@ -175,7 +176,7 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0Mzg3Mzk0NiwxMjExMDYyNjcwLDEyNz
+eyJoaXN0b3J5IjpbLTYwNTUxMjg2MSwxMjExMDYyNjcwLDEyNz
 AzOTQwMzUsMTM3MTYzODI2OCw2NTAyMDY1NjAsNTYxMzU4MTg4
 LC0yMDM3NTE4MDYxLDcyNzQyODAyNywyMDQxMDYwMzcyLC04Nj
 kyODM0MTIsLTE2MTQ1Njg2MjcsMTM2MzE0NzEyLC0zODAxMjk1
