@@ -4,7 +4,6 @@
 #### HashMap
 - deal with `Character` or `String.toCharArray()`
 	- use `int count = int[26]` to store character appearance count `count[ch - 'a'] ++`
-	- use `chars = char[26] or ` **array** to store character appearance count (``chars[c - 'a'] ++``)
 ###  Anagrams
 - Check if Anagrams
 	I. **Sort** String Characters 
@@ -17,6 +16,6 @@
 - Space: (K * N)
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjczNTQwMzEsLTIzMzY2Mzk3NSwyOT
-A0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4MTE1XX0=
+eyJoaXN0b3J5IjpbLTQxMDI5Mzk0NiwtMjMzNjYzOTc1LDI5MD
+Q2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ==
 -->
