@@ -58,7 +58,7 @@ static class Point{
     }  
   
     public static Comparator<Point> PointComparator = (p1, p2) -> {  
-	  if(p1.time == p2.time)  
+	  if(p1.time == p2.time)  	// if interval1.end = interval2.end, put whichever is end in front of start
 		  return p1.flag - p2.flag;  
       else  
 		  return p1.time - p2.time;  
@@ -78,7 +78,7 @@ for (Interval i : intervals) {
 list.sort(Point.PointComparator);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NjMxMzA2NCwtMTA5MjExNDA1NSwxNj
+eyJoaXN0b3J5IjpbMTk1OTA2MjM1NywtMTA5MjExNDA1NSwxNj
 ExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0
 ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLT
 UwMDM1ODExNV19
