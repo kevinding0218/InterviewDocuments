@@ -40,10 +40,12 @@
 		- using TreeMap
 			1. `map` to store all **interval.start as key** and its **index in array as value**
 			2. iterative through the list, use `map.ceilingKey(interval.end)` to check if its right interval existed or not
-				- if null, meaning there i
+				- if null, meaning there is no right interval, return -1
+				- otherwise, use `map.get(interval.end)` to find its right interval's index
 		- using 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMzE2NTQ3NywxNjExNTA5MDA3LDEwMD
-A3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5
-NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbLTE2MjczMzE0NTQsMTYxMTUwOTAwNywxMD
+AwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYz
+OTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ
+==
 -->
