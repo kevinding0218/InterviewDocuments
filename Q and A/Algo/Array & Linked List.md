@@ -107,7 +107,7 @@ list.sort(Point.PointComparator);
 	}
 	```
 ### Median
-- Using **maxHeap/PriorityQueue** : 
+- Using **maxHeap/PriorityQueue** :  Time:O(n), Space:O(n/2)
 	- let `maxHeap` to maintain 1/2 of array sized smaller items, the top element in heap would be the largest element of 1/2 array smaller ones.
 	- maxHeap is A (child) node can't have a value greater than that of its parent. Hence, in a _max-heap_, the root node always has the largest value.
 	1.  calculate the mid length of array as `(nums.length + 1) / 2`
@@ -143,11 +143,11 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MTYzODI2OCw2NTAyMDY1NjAsNTYxMz
-U4MTg4LC0yMDM3NTE4MDYxLDcyNzQyODAyNywyMDQxMDYwMzcy
-LC04NjkyODM0MTIsLTE2MTQ1Njg2MjcsMTM2MzE0NzEyLC0zOD
-AxMjk1MzEsNzI4NjA1ODY4LC0xMDkyMTE0MDU1LDE2MTE1MDkw
-MDcsMTAwMDc5NzE2NCwzNzU2MjgyMTcsLTE4NTM1MTQ4NjQsLT
-IzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4
-MTE1XX0=
+eyJoaXN0b3J5IjpbMjExNTQ5MDM1OCwxMzcxNjM4MjY4LDY1MD
+IwNjU2MCw1NjEzNTgxODgsLTIwMzc1MTgwNjEsNzI3NDI4MDI3
+LDIwNDEwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMz
+YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
+NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
+g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
+ODcwXX0=
 -->
