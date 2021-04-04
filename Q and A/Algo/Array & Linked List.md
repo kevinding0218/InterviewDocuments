@@ -25,8 +25,10 @@
 	- Merge if conflict
 		- use `prevInterval` as 1st element in sorted list
 		- compare with each incoming interval by using `prevInterval.end >= incomingInterval.start`
+			- if true, meaning those two intervals can be merged, update `preInterval.end = Math.max(preInterval.end, incomingInterval.end)`
+			- if false, meaning 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTgyNzc5NDMsLTE4NTM1MTQ4NjQsLT
+eyJoaXN0b3J5IjpbLTE0MjQwNTUzMjEsLTE4NTM1MTQ4NjQsLT
 IzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4
 MTE1XX0=
 -->
