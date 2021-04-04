@@ -32,13 +32,13 @@
 		1. Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
 		2. Do merge again
 	- Find missing interval
-		1. use helper method `addRange(result, lower, upper)` to add each interval into result
+		1. use helper method `addRange(result, start, upper)` to add each interval into result
 		2. add head interval as lower to head `nums[0] - 1` as 
 		3. iterator from 2nd element to end of list, add each `addRange(result, nums[i - 1] + 1, nums[i] - 1)`
-		4. add tail interval as `addRange(ans, nums[nums.length - 1] + 1, upper)`
+		4. add tail interval as `addRange(ans, nums[size - 1] + 1, end)`
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODM0MDk4OTQsMzc1NjI4MjE3LC0xOD
-UzNTE0ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4
-NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbMTAwMDc5NzE2NCwzNzU2MjgyMTcsLTE4NT
+M1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3
+MCwtNTAwMzU4MTE1XX0=
 -->
