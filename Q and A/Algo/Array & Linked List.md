@@ -117,37 +117,35 @@ list.sort(Point.PointComparator);
 - Using **Partition**
 	- refer to Partition
 ### Partition
+- Idea: choose a pivot (could be any item in the array, head or tail or middle), each round of partition is to swap element if 
 - Template:
 ```
-int start = left;  
-int end = right;  
+int start = 0;  
+int end = nums.length - 1;  
 int mid = start + (end - start) / 2;  
 int pivot = nums[mid];  
-System.out.println("start: " + start + ", end: " + end + ", k: " + k);  
-System.out.println("pivot: " + pivot);  
 while (start <= end) {  
   while (nums[start] < pivot && start <= end) {  
-  start++;  
-    }  
+	  start++;  
+  }  
   while (nums[end] > pivot && start <= end) {  
-  end--;  
-    }  
+	  end--;  
+  }  
   if (start <= end) {  
   int temp = nums[start];  
         nums[start] = nums[end];  
         nums[end] = temp;  
         start++;  
         end--;  
-    }  
-  System.out.println(Arrays.toString(nums));  
+    }   
 }
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNjAzMzU1MywtMjAzNzUxODA2MSw3Mj
-c0MjgwMjcsMjA0MTA2MDM3MiwtODY5MjgzNDEyLC0xNjE0NTY4
-NjI3LDEzNjMxNDcxMiwtMzgwMTI5NTMxLDcyODYwNTg2OCwtMT
-A5MjExNDA1NSwxNjExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4
-MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLT
-E1NjI1OTI4NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbNTYxMzU4MTg4LC0yMDM3NTE4MDYxLDcyNz
+QyODAyNywyMDQxMDYwMzcyLC04NjkyODM0MTIsLTE2MTQ1Njg2
+MjcsMTM2MzE0NzEyLC0zODAxMjk1MzEsNzI4NjA1ODY4LC0xMD
+kyMTE0MDU1LDE2MTE1MDkwMDcsMTAwMDc5NzE2NCwzNzU2Mjgy
+MTcsLTE4NTM1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMT
+U2MjU5Mjg3MCwtNTAwMzU4MTE1XX0=
 -->
