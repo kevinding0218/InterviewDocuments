@@ -33,7 +33,8 @@
 	1. Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
 	2. Do merge again
 - Remove overlap interval
-	1. define `end` as 1st element in sorted list 
+	1. define `end` as 1st interval end in sorted list 
+	2. compare with each incoming interval from 2nd, if `incoming start < end`, meaning we have an overlapped interval, incremeen
 - Find missing interval
 	1. use helper method `addRange(result, start, upper)` to add each interval into result
 	2. add head interval as lower to head `nums[0] - 1` as 
@@ -101,7 +102,7 @@ list.sort(Point.PointComparator);
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NzI5OTA1NSwtMTYxNDU2ODYyNywxMz
+eyJoaXN0b3J5IjpbMjA2NzQyNTk0MSwtMTYxNDU2ODYyNywxMz
 YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
 NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
 g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
