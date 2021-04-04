@@ -2,7 +2,7 @@
 #### Validation
 - input as `String`, check if `null or length == 0`
 #### HashMap
-- deal with `Character` or `String.toCharArray()`
+- deal with `Character Array` or `String.toCharArray()` that needs to check appearance
 	- use `int count = int[26]` to store character appearance count `count[ch - 'a'] ++`
 ###  Anagrams
 - Check if Anagrams
@@ -16,6 +16,6 @@
 - Space: (K * N)
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxOTYwMzU1LC0yMzM2NjM5NzUsMjkwND
-YzOTUsLTE1NjI1OTI4NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbMTI3MDYxNDkwNSwtMjMzNjYzOTc1LDI5MD
+Q2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ==
 -->
