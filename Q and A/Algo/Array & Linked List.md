@@ -21,38 +21,38 @@
 - if it's `int[][] intervals`, then use  `Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]))` 
 - if it's `List<Interval>` then use `intervals.sort(Comparator.comparing(i -> i.start));`
 #### Interater the list
-- Check if conflict
-	1. define`maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end
-	2. compare with each incoming interval's start `interval.start < maxEnd`
-- Merge if conflict
-	1. define`existedInterval` as 1st element/null in sorted list to maintain an interval that could be cut off
-	2. compare with each incoming interval by using `prev == null || existedInterval.end < incomingInterval.start`
-		- if true, meaning existedInterval can be cut off, add into result `result.add(existedInterval)` and update `existedInterval = incomingInterval`
-		- if false, meaning those two intervals can be merged, update `existedInterval.end = Math.max(existedInterval.end, incomingInterval.end)`
-			-  if `existedInterval` has already been added into result, update its end will also update the added interval's end in result, e.g(we're adding the 1st interval in result as `existedInterval is null` initially)
-- Insert if conflict
-	1. Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
-	2. Do merge again
-- Remove overlap interval
-	1. define `end` as 1st interval end in sorted list 
-	2. compare with each incoming interval from 2nd
-		- if `incoming.start < end`, meaning incoming would be an overlapped interval, increment result count, and update the `end` as `end = Math.min(end, incoming.end)`
-		- otherwise, meaning the incoming interval is not overlap, update `end = incoming.end`
-- Find missing interval
-	1. use helper method `addRange(result, start, upper)` to add each interval into result
-	2. add head interval as lower to head `nums[0] - 1` as 
-	3. iterator from 2nd element to end of list, add each `addRange(result, nums[i - 1] + 1, nums[i] - 1)`
-	4. add tail interval as `addRange(ans, nums[size - 1] + 1, end)`
-- Find right interval
-	- using TreeMap: Time:O(nlogN), Space:O(n)
-		1. `map` to store all **interval.start as key** and its **index in array as value**
-		2. iterative through the list, use `map.ceilingKey(interval.end)` to check if its right interval existed or not
-			- if null, meaning there is no right interval, return -1
-			- otherwise, use `map.get(interval.end)` to find its right interval's index
-	- using SweepLine + PriorityQueue
-		- define heap as `Queue<Point> minheap = new PriorityQueue<>(Point.PointComparator);`
-		- Enqueue when it's start point, check when it's end point
-		- If `minHeap.size() == 0`, meaning there is no right interval, `return -1`, otherwise meaning current heap top element would be the right interval, `return minheap.peek().index`
+##### Check if conflict
+1. define`maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end
+2. compare with each incoming interval's start `interval.start < maxEnd`
+##### Merge if conflict
+1. define`existedInterval` as 1st element/null in sorted list to maintain an interval that could be cut off
+2. compare with each incoming interval by using `prev == null || existedInterval.end < incomingInterval.start`
+	- if true, meaning existedInterval can be cut off, add into result `result.add(existedInterval)` and update `existedInterval = incomingInterval`
+	- if false, meaning those two intervals can be merged, update `existedInterval.end = Math.max(existedInterval.end, incomingInterval.end)`
+		-  if `existedInterval` has already been added into result, update its end will also update the added interval's end in result, e.g(we're adding the 1st interval in result as `existedInterval is null` initially)
+##### Insert if conflict
+1. Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
+2. Do merge again
+##### Remove overlap interval
+1. define `end` as 1st interval end in sorted list 
+2. compare with each incoming interval from 2nd
+	- if `incoming.start < end`, meaning incoming would be an overlapped interval, increment result count, and update the `end` as `end = Math.min(end, incoming.end)`
+	- otherwise, meaning the incoming interval is not overlap, update `end = incoming.end`
+##### Find missing interval
+1. use helper method `addRange(result, start, upper)` to add each interval into result
+2. add head interval as lower to head `nums[0] - 1` as 
+3. iterator from 2nd element to end of list, add each `addRange(result, nums[i - 1] + 1, nums[i] - 1)`
+4. add tail interval as `addRange(ans, nums[size - 1] + 1, end)`
+##### Find right interval
+- using TreeMap: Time:O(nlogN), Space:O(n)
+	1. `map` to store all **interval.start as key** and its **index in array as value**
+	2. iterative through the list, use `map.ceilingKey(interval.end)` to check if its right interval existed or not
+		- if null, meaning there is no right interval, return -1
+		- otherwise, use `map.get(interval.end)` to find its right interval's index
+- using SweepLine + PriorityQueue
+	- define heap as `Queue<Point> minheap = new PriorityQueue<>(Point.PointComparator);`
+	- Enqueue when it's start point, check when it's end point
+	- If `minHeap.size() == 0`, meaning there is no right interval, `return -1`, otherwise meaning current heap top element would be the right interval, `return minheap.peek().index`
 ### SweepLine
 #### Define `Point` template, 
 - time as each interval's start or end, 
@@ -105,7 +105,7 @@ list.sort(Point.PointComparator);
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxODI2Mzk3NCwtMTYxNDU2ODYyNywxMz
+eyJoaXN0b3J5IjpbLTQzNTIwMTkxNCwtMTYxNDU2ODYyNywxMz
 YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
 NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
 g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
