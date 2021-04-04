@@ -31,8 +31,11 @@
 	- Insert if conflict
 		- Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
 		- Do merge again
+	- Find missing interval
+		- use helper method `addRange(result,
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU0OTQwMzkyLDM3NTYyODIxNywtMTg1Mz
-UxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcw
-LC01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbLTEyMzc4NzU2MDQsMzc1NjI4MjE3LC0xOD
+UzNTE0ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4
+NzAsLTUwMDM1ODExNV19
 -->
