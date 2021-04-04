@@ -20,9 +20,11 @@
 - Sort List by start `Arrays.sort(intervals, (a, b) -> a.start - b.start)`
 - Interater the list
 	- Check if conflict
-	- use `maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end, compare with each incoming interval's start `interval.start < maxEnd`
+		- use `maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end, and compare with each incoming interval's start `interval.start < maxEnd`
+	- Merge if conflict
+		- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjE1MjM3NjIsLTE4NTM1MTQ4NjQsLT
-IzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4
-MTE1XX0=
+eyJoaXN0b3J5IjpbLTMzNDA5ODI3MiwtMTg1MzUxNDg2NCwtMj
+MzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgx
+MTVdfQ==
 -->
