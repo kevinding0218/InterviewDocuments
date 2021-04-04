@@ -117,7 +117,7 @@ list.sort(Point.PointComparator);
 - Using **Partition**
 	- refer to Partition
 ### Partition
-- Idea: choose a pivot (could be any item in the array, head or tail or middle), at the end of while loop is to partition items in array so that all numbers will be on pivot left side if it's smaller, 
+- Idea: choose a pivot (could be any item in the array, head or tail or middle), at the end of while loop is to partition items in array so that all numbers smaller than pivot will be on its left side and all numbers greater than pivot will be on its right side.
 - Template:
 ```
 int start = 0;  
@@ -142,7 +142,7 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NDU4NjQzNCw2NTAyMDY1NjAsNTYxMz
+eyJoaXN0b3J5IjpbLTU3MTA5NzE0NSw2NTAyMDY1NjAsNTYxMz
 U4MTg4LC0yMDM3NTE4MDYxLDcyNzQyODAyNywyMDQxMDYwMzcy
 LC04NjkyODM0MTIsLTE2MTQ1Njg2MjcsMTM2MzE0NzEyLC0zOD
 AxMjk1MzEsNzI4NjA1ODY4LC0xMDkyMTE0MDU1LDE2MTE1MDkw
