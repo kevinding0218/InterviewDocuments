@@ -119,6 +119,10 @@ list.sort(Point.PointComparator);
 	- refer to Partition
 #### Median of two sorted array
 
+### Merge
+#### merge 2 sorted array
+- 
+
 ### Partition
 #### Idea
 - choose a pivot (could be any item in the array, head or tail or middle), at the end of while loop is to partition items in array so that all numbers smaller than pivot will be on its left side and all numbers greater than pivot will be on its right side.
@@ -146,11 +150,11 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMDExNjk3MCwxMzcxNjM4MjY4LDY1MD
-IwNjU2MCw1NjEzNTgxODgsLTIwMzc1MTgwNjEsNzI3NDI4MDI3
-LDIwNDEwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMz
-YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
-NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
-g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
-ODcwXX0=
+eyJoaXN0b3J5IjpbMjY3OTcyNzAyLDEzNzE2MzgyNjgsNjUwMj
+A2NTYwLDU2MTM1ODE4OCwtMjAzNzUxODA2MSw3Mjc0MjgwMjcs
+MjA0MTA2MDM3MiwtODY5MjgzNDEyLC0xNjE0NTY4NjI3LDEzNj
+MxNDcxMiwtMzgwMTI5NTMxLDcyODYwNTg2OCwtMTA5MjExNDA1
+NSwxNjExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4MjE3LC0xOD
+UzNTE0ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4
+NzBdfQ==
 -->
