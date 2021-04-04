@@ -2,7 +2,7 @@
 #### Validation
 - input as `String`, check if `null or length == 0`
 #### HashMap
-- deal with `Character` or `String.toCharArray()`, use `char[26]` **array** to store character appearance count
+- deal with `Character` or `String.toCharArray()`, use `char[26]` **array** to store character appearance count (``chars[c - 'a'] ++``)
 ###  Anagrams
 - HashMap and Sort
 	- **Sort** String Characters or using `char[26] as map` to store number of character appearance count in a String
@@ -13,6 +13,6 @@
 	- Space: (K * N)
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1ODcwNDcsMjkwNDYzOTUsLTE1NjI1OT
-I4NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbMTAxMjg1MzMyMiwyOTA0NjM5NSwtMTU2Mj
+U5Mjg3MCwtNTAwMzU4MTE1XX0=
 -->
