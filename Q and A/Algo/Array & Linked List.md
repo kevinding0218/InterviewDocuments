@@ -119,14 +119,35 @@ list.sort(Point.PointComparator);
 ### Partition
 - Template:
 ```
-
+int start = left;  
+int end = right;  
+int mid = start + (end - start) / 2;  
+int pivot = nums[mid];  
+System.out.println("start: " + start + ", end: " + end + ", k: " + k);  
+System.out.println("pivot: " + pivot);  
+while (start <= end) {  
+  while (nums[start] < pivot && start <= end) {  
+  start++;  
+    }  
+  while (nums[end] > pivot && start <= end) {  
+  end--;  
+    }  
+  if (start <= end) {  
+  int temp = nums[start];  
+        nums[start] = nums[end];  
+        nums[end] = temp;  
+        start++;  
+        end--;  
+    }  
+  System.out.println(Arrays.toString(nums));  
+}
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzc1MTgwNjEsNzI3NDI4MDI3LDIwND
-EwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMzYzMTQ3
-MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQwNTUsMT
-YxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUx
-NDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC
-01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbMTUzNjAzMzU1MywtMjAzNzUxODA2MSw3Mj
+c0MjgwMjcsMjA0MTA2MDM3MiwtODY5MjgzNDEyLC0xNjE0NTY4
+NjI3LDEzNjMxNDcxMiwtMzgwMTI5NTMxLDcyODYwNTg2OCwtMT
+A5MjExNDA1NSwxNjExNTA5MDA3LDEwMDA3OTcxNjQsMzc1NjI4
+MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLT
+E1NjI1OTI4NzAsLTUwMDM1ODExNV19
 -->
