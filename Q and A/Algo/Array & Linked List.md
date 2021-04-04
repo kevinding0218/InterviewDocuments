@@ -16,9 +16,10 @@
 	- O(K * nLogN)  if sorted
 	- O(K* N) if using char[] as dictionary
 - Space: (K * N)
-- 
+### Interval/Sweepline
+- Sort List by start `Arrays.sort(intervals, (a, b) -> a - b)`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0Mzg5NzIxNCwtMTg1MzUxNDg2NCwtMj
-MzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgx
-MTVdfQ==
+eyJoaXN0b3J5IjpbLTE0NzU5MDM3MzYsLTE4NTM1MTQ4NjQsLT
+IzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4
+MTE1XX0=
 -->
