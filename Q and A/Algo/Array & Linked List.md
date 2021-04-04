@@ -37,15 +37,14 @@
 		3. iterator from 2nd element to end of list, add each `addRange(result, nums[i - 1] + 1, nums[i] - 1)`
 		4. add tail interval as `addRange(ans, nums[size - 1] + 1, end)`
 	- Find right interval
-		- using TreeMap
+		- using TreeMap (Time:O(nlogN), Space:O(n)
 			1. `map` to store all **interval.start as key** and its **index in array as value**
 			2. iterative through the list, use `map.ceilingKey(interval.end)` to check if its right interval existed or not
 				- if null, meaning there is no right interval, return -1
 				- otherwise, use `map.get(interval.end)` to find its right interval's index
 		- using 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjczMzE0NTQsMTYxMTUwOTAwNywxMD
-AwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYz
-OTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ
-==
+eyJoaXN0b3J5IjpbMjA0OTg0NzkxLDE2MTE1MDkwMDcsMTAwMD
+c5NzE2NCwzNzU2MjgyMTcsLTE4NTM1MTQ4NjQsLTIzMzY2Mzk3
+NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4MTE1XX0=
 -->
