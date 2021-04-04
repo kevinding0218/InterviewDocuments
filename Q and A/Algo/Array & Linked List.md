@@ -16,41 +16,42 @@
 	- O(K * nLogN)  if sorted
 	- O(K* N) if using char[] as dictionary
 - Space: (K * N)
-### Interval/Sweepline
-- Sort List by start `Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]))` or `intervals.sort(Comparator.comparing(i -> i.start));`
-- Interater the list
-	- Check if conflict
-		1. define`maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end
-		2. compare with each incoming interval's start `interval.start < maxEnd`
-	- Merge if conflict
-		1. define`existedInterval` as 1st element/null in sorted list to maintain an interval that could be cut off
-		2. compare with each incoming interval by using `prev == null || existedInterval.end < incomingInterval.start`
-			- if true, meaning existedInterval can be cut off, add into result `result.add(existedInterval)` and update `existedInterval = incomingInterval`
-			- if false, meaning those two intervals can be merged, update `existedInterval.end = Math.max(existedInterval.end, incomingInterval.end)`
-				-  if `existedInterval` has already been added into result, update its end will also update the added interval's end in result, e.g(we're adding the 1st interval in result as `existedInterval is null` initially)
-	- Insert if conflict
-		1. Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
-		2. Do merge again
-	- Find missing interval
-		1. use helper method `addRange(result, start, upper)` to add each interval into result
-		2. add head interval as lower to head `nums[0] - 1` as 
-		3. iterator from 2nd element to end of list, add each `addRange(result, nums[i - 1] + 1, nums[i] - 1)`
-		4. add tail interval as `addRange(ans, nums[size - 1] + 1, end)`
-	- Find right interval
-		- using TreeMap: Time:O(nlogN), Space:O(n)
-			1. `map` to store all **interval.start as key** and its **index in array as value**
-			2. iterative through the list, use `map.ceilingKey(interval.end)` to check if its right interval existed or not
-				- if null, meaning there is no right interval, return -1
-				- otherwise, use `map.get(interval.end)` to find its right interval's index
-		- using SweepLine + PriorityQueue
-			- define heap as `Queue<Point> minheap = new PriorityQueue<>(Point.PointComparator);`
-			- Enqueue when it's start point, check when it's end point
-			- If `minHeap.size() == 0`, meaning there is no right interval, `return -1`, otherwise meaning current heap top element would be the right interval, `return minheap.peek().index`
-	#### SweepLine
-	1. Define `Point` template, 
-		- time as each interval's start or end, 
-		- flag using `1` as start and `0` as end
-		- if interval1.end = interval2.end, put **whichever is end in front of start**
+### Interval
+#### Sort List by start 
+- `Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]))` or `intervals.sort(Comparator.comparing(i -> i.start));`
+#### Interater the list
+- Check if conflict
+	1. define`maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end
+	2. compare with each incoming interval's start `interval.start < maxEnd`
+- Merge if conflict
+	1. define`existedInterval` as 1st element/null in sorted list to maintain an interval that could be cut off
+	2. compare with each incoming interval by using `prev == null || existedInterval.end < incomingInterval.start`
+		- if true, meaning existedInterval can be cut off, add into result `result.add(existedInterval)` and update `existedInterval = incomingInterval`
+		- if false, meaning those two intervals can be merged, update `existedInterval.end = Math.max(existedInterval.end, incomingInterval.end)`
+			-  if `existedInterval` has already been added into result, update its end will also update the added interval's end in result, e.g(we're adding the 1st interval in result as `existedInterval is null` initially)
+- Insert if conflict
+	1. Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
+	2. Do merge again
+- Find missing interval
+	1. use helper method `addRange(result, start, upper)` to add each interval into result
+	2. add head interval as lower to head `nums[0] - 1` as 
+	3. iterator from 2nd element to end of list, add each `addRange(result, nums[i - 1] + 1, nums[i] - 1)`
+	4. add tail interval as `addRange(ans, nums[size - 1] + 1, end)`
+- Find right interval
+	- using TreeMap: Time:O(nlogN), Space:O(n)
+		1. `map` to store all **interval.start as key** and its **index in array as value**
+		2. iterative through the list, use `map.ceilingKey(interval.end)` to check if its right interval existed or not
+			- if null, meaning there is no right interval, return -1
+			- otherwise, use `map.get(interval.end)` to find its right interval's index
+	- using SweepLine + PriorityQueue
+		- define heap as `Queue<Point> minheap = new PriorityQueue<>(Point.PointComparator);`
+		- Enqueue when it's start point, check when it's end point
+		- If `minHeap.size() == 0`, meaning there is no right interval, `return -1`, otherwise meaning current heap top element would be the right interval, `return minheap.peek().index`
+### SweepLine
+#### Define `Point` template, 
+- time as each interval's start or end, 
+- flag using `1` as start and `0` as end
+- if interval1.end = interval2.end, put **whichever is end in front of start**
 ```
 static class Point{  
     int time;  
@@ -69,7 +70,7 @@ static class Point{
     };  
 }
 ```
-2. Define a `List<Point> list` with **double size of the interval list**, then put **each interval's start & end as one Point** into list
+#### Define a `List<Point> list` with **double size of the interval list**, then put **each interval's start & end as one Point** into list
 ```
 List<Point> list = new ArrayList<>(intervals.size() * 2);
 for (Interval i : intervals) {  
@@ -98,8 +99,9 @@ list.sort(Point.PointComparator);
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MzE0NzEyLC0zODAxMjk1MzEsNzI4Nj
-A1ODY4LC0xMDkyMTE0MDU1LDE2MTE1MDkwMDcsMTAwMDc5NzE2
-NCwzNzU2MjgyMTcsLTE4NTM1MTQ4NjQsLTIzMzY2Mzk3NSwyOT
-A0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4MTE1XX0=
+eyJoaXN0b3J5IjpbMTkzNDY4ODc0OCwxMzYzMTQ3MTIsLTM4MD
+EyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQwNTUsMTYxMTUwOTAw
+NywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUxNDg2NCwtMj
+MzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgx
+MTVdfQ==
 -->
