@@ -107,12 +107,14 @@ list.sort(Point.PointComparator);
 	}
 	```
 ### Median
+- Using maxHeap : maxHeap will always have the largest element on top, by cons
+	1.  
 ### [PriorityQueue/MinHeap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI3NDI4MDI3LDIwNDEwNjAzNzIsLTg2OT
-I4MzQxMiwtMTYxNDU2ODYyNywxMzYzMTQ3MTIsLTM4MDEyOTUz
-MSw3Mjg2MDU4NjgsLTEwOTIxMTQwNTUsMTYxMTUwOTAwNywxMD
-AwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYz
-OTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ
-==
+eyJoaXN0b3J5IjpbLTEwNTY2OTQxMDUsNzI3NDI4MDI3LDIwND
+EwNjAzNzIsLTg2OTI4MzQxMiwtMTYxNDU2ODYyNywxMzYzMTQ3
+MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQwNTUsMT
+YxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUx
+NDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC
+01MDAzNTgxMTVdfQ==
 -->
