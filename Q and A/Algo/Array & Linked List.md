@@ -125,6 +125,7 @@ list.sort(Point.PointComparator);
 	- p1 with array A, p2 with array B, iterate `0 ~ (n + m) / 2 + 1` times
 	- every time move forward pointer which element is smaller, if one pointer has reached the end of array, move another pointer
 		```
+		left = right;
 		// p2 右移  
 		if (p1 >= A.length || p2 < B.length && A[p1] > B[p2]){  
 		  right = B[p2];  
@@ -136,6 +137,11 @@ list.sort(Point.PointComparator);
 		  p1 ++;
 		}
 		```
+		- return `(m + n) % 2 == 1 ? right : (left + right) / 2.0`
+		- Time: O(m+n)
+		- Space:O(1)
+3. Binary Search
+	- Time:
 ### Merge
 #### Merge 2 sorted array
 #### Merge k sorted arrays
@@ -169,7 +175,7 @@ while (start <= end) {
 ```
 ### [PriorityQueue/Heap](https://www.baeldung.com/java-queue)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1ODQwNzIyNCwxMjExMDYyNjcwLDEyNz
+eyJoaXN0b3J5IjpbLTU0Mzg3Mzk0NiwxMjExMDYyNjcwLDEyNz
 AzOTQwMzUsMTM3MTYzODI2OCw2NTAyMDY1NjAsNTYxMzU4MTg4
 LC0yMDM3NTE4MDYxLDcyNzQyODAyNywyMDQxMDYwMzcyLC04Nj
 kyODM0MTIsLTE2MTQ1Njg2MjcsMTM2MzE0NzEyLC0zODAxMjk1
