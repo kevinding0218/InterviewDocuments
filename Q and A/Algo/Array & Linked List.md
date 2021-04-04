@@ -26,9 +26,9 @@
 		- define`existedInterval` as 1st element/null in sorted list to maintain an interval that could be cut off
 		- compare with each incoming interval by using `prev == null || existedInterval.end < incomingInterval.start`
 			- if true, meaning existedInterval can be cut off, add into result `result.add(existedInterval)` and update `existedInterval = incomingInterval`
-			- if false, meaning those two intervals can be merged, update `existedInterval.end = Math.max(existedInterval.end, incomingInterval.end)`, if `existedInterval` has already been added into result, update its end will also update the added interval's end in result
+			- if false, meaning those two intervals can be merged, update `existedInterval.end = Math.max(existedInterval.end, incomingInterval.end)`, if `existedInterval` has already been added into result, update its end will also update the added interval's end in result, e.g(we're adding the 1st interval in result as existedInterval is null)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MDg0MjQ1NiwzNzU2MjgyMTcsLTE4NT
+eyJoaXN0b3J5IjpbLTgxODAwODc2MiwzNzU2MjgyMTcsLTE4NT
 M1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3
 MCwtNTAwMzU4MTE1XX0=
 -->
