@@ -17,7 +17,7 @@
 	- O(K* N) if using char[] as dictionary
 - Space: (K * N)
 ### Interval/Sweepline
-- Sort List by start `Arrays.sort(intervals, (a, b) -> a.start - b.start)`
+- Sort List by start `Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]))` or `intervals.sort(Comparator.comparing(i -> i.start));`
 - Interater the list
 	- Check if conflict
 		1. define`maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end
@@ -40,7 +40,8 @@
 		- using TreeMap
 		- using 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NTA3MTkzNCwxNjExNTA5MDA3LDEwMD
-A3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5
-NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbLTEwMjk5NzU2MzQsMTYxMTUwOTAwNywxMD
+AwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYz
+OTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ
+==
 -->
