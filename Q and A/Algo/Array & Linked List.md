@@ -42,7 +42,9 @@
 			2. iterative through the list, use `map.ceilingKey(interval.end)` to check if its right interval existed or not
 				- if null, meaning there is no right interval, return -1
 				- otherwise, use `map.get(interval.end)` to find its right interval's index
-		- using SweepLine
+		- using SweepLine + PriorityQueue
+			- define heap as `Queue<Point> minheap = new PriorityQueue<>(Point.PointComparator);`
+			- Enqueue if start point
 	#### SweepLine
 	1. Define `Point` template, 
 		- time as each interval's start or end, 
@@ -95,8 +97,8 @@ list.sort(Point.PointComparator);
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOT
-IxMTQwNTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIx
-NywtMTg1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNT
-YyNTkyODcwLC01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbMTkzNzczMjAxMCwtMzgwMTI5NTMxLDcyOD
+YwNTg2OCwtMTA5MjExNDA1NSwxNjExNTA5MDA3LDEwMDA3OTcx
+NjQsMzc1NjI4MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5NzUsMj
+kwNDYzOTUsLTE1NjI1OTI4NzAsLTUwMDM1ODExNV19
 -->
