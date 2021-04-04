@@ -20,22 +20,24 @@
 - Sort List by start `Arrays.sort(intervals, (a, b) -> a.start - b.start)`
 - Interater the list
 	- Check if conflict
-		- define`maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end
-		- compare with each incoming interval's start `interval.start < maxEnd`
+		1. define`maxEnd = Math.max(maxEnd, interval.end)` to maintain current interval end
+		2. compare with each incoming interval's start `interval.start < maxEnd`
 	- Merge if conflict
-		- define`existedInterval` as 1st element/null in sorted list to maintain an interval that could be cut off
-		- compare with each incoming interval by using `prev == null || existedInterval.end < incomingInterval.start`
+		1. define`existedInterval` as 1st element/null in sorted list to maintain an interval that could be cut off
+		2. compare with each incoming interval by using `prev == null || existedInterval.end < incomingInterval.start`
 			- if true, meaning existedInterval can be cut off, add into result `result.add(existedInterval)` and update `existedInterval = incomingInterval`
 			- if false, meaning those two intervals can be merged, update `existedInterval.end = Math.max(existedInterval.end, incomingInterval.end)`
 				-  if `existedInterval` has already been added into result, update its end will also update the added interval's end in result, e.g(we're adding the 1st interval in result as `existedInterval is null` initially)
 	- Insert if conflict
-		- Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
-		- Do merge again
+		1. Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
+		2. Do merge again
 	- Find missing interval
-		- use helper method `addRange(result,
+		1. use helper method `addRange(result, lower, upper) to add each interval into result
+		2. add lower to head `nums[0]` interval
+		3. iterator from 2nd element to end of l 
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzc4NzU2MDQsMzc1NjI4MjE3LC0xOD
-UzNTE0ODY0LC0yMzM2NjM5NzUsMjkwNDYzOTUsLTE1NjI1OTI4
-NzAsLTUwMDM1ODExNV19
+eyJoaXN0b3J5IjpbLTgxNDc1NDI4OSwzNzU2MjgyMTcsLTE4NT
+M1MTQ4NjQsLTIzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3
+MCwtNTAwMzU4MTE1XX0=
 -->
