@@ -38,8 +38,9 @@
 		4. add tail interval as `addRange(ans, nums[size - 1] + 1, end)`
 	- Find right interval
 		- using TreeMap
+		- using 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NT
-YyODIxNywtMTg1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1
-LC0xNTYyNTkyODcwLC01MDAzNTgxMTVdfQ==
+eyJoaXN0b3J5IjpbMTk1NTA3MTkzNCwxNjExNTA5MDA3LDEwMD
+A3OTcxNjQsMzc1NjI4MjE3LC0xODUzNTE0ODY0LC0yMzM2NjM5
+NzUsMjkwNDYzOTUsLTE1NjI1OTI4NzAsLTUwMDM1ODExNV19
 -->
