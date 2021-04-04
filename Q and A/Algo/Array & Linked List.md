@@ -47,7 +47,7 @@
 	1. Define `Point` template, 
 		- time as each interval's start or end, 
 		- flag using `1` as start and `0` as end
-		- if interval1.end = interval2.end, put whichever is end in front of start
+		- if interval1.end = interval2.end, put **whichever is end in front of start**
 ```
 static class Point{  
     int time;  
@@ -59,7 +59,7 @@ static class Point{
     }  
   
     public static Comparator<Point> PointComparator = (p1, p2) -> {  
-	  if(p1.time == p2.time)  	// 
+	  if(p1.time == p2.time)  
 		  return p1.flag - p2.flag;  
       else  
 		  return p1.time - p2.time;  
@@ -79,7 +79,7 @@ for (Interval i : intervals) {
 list.sort(Point.PointComparator);
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzM1ODgxMjgsLTEwOTIxMTQwNTUsMT
+eyJoaXN0b3J5IjpbLTIwNzU5NzM3MjQsLTEwOTIxMTQwNTUsMT
 YxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMTg1MzUx
 NDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTkyODcwLC
 01MDAzNTgxMTVdfQ==
