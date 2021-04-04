@@ -32,6 +32,8 @@
 - Insert if conflict
 	1. Find insert index in List by comparing `while(idx < intervals.size() && intervals.get(idx).start < newInterval.start) { idx ++; }`
 	2. Do merge again
+- Remove overlap interval
+	1. define `end` as 1st element in sorted list 
 - Find missing interval
 	1. use helper method `addRange(result, start, upper)` to add each interval into result
 	2. add head interval as lower to head `nums[0] - 1` as 
@@ -99,9 +101,9 @@ list.sort(Point.PointComparator);
 	}
 	```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTQ1Njg2MjcsMTM2MzE0NzEyLC0zOD
-AxMjk1MzEsNzI4NjA1ODY4LC0xMDkyMTE0MDU1LDE2MTE1MDkw
-MDcsMTAwMDc5NzE2NCwzNzU2MjgyMTcsLTE4NTM1MTQ4NjQsLT
-IzMzY2Mzk3NSwyOTA0NjM5NSwtMTU2MjU5Mjg3MCwtNTAwMzU4
-MTE1XX0=
+eyJoaXN0b3J5IjpbLTc0NzI5OTA1NSwtMTYxNDU2ODYyNywxMz
+YzMTQ3MTIsLTM4MDEyOTUzMSw3Mjg2MDU4NjgsLTEwOTIxMTQw
+NTUsMTYxMTUwOTAwNywxMDAwNzk3MTY0LDM3NTYyODIxNywtMT
+g1MzUxNDg2NCwtMjMzNjYzOTc1LDI5MDQ2Mzk1LC0xNTYyNTky
+ODcwLC01MDAzNTgxMTVdfQ==
 -->
