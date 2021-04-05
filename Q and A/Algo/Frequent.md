@@ -214,6 +214,9 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 - Remaining would be Kth Point with smallest distance
 #### Time: O(logK*n) - offer/poll of Heap is logK
 #### Space:O(K)
+### 最优解法：基于 quick select 的 O(n + klogk)
+- 先用 Quick Select 找到 kth closest point：O(n)；
+- 对 top k 个点按 distance metric sort 一遍：O(klogk)
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
 
 ### read-n-characters-given-read4
@@ -271,11 +274,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyODY3MzY5NiwyMDY5ODg4NDEyLDIwMD
-Y3MjMwNTEsNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUs
-LTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMD
-U5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIw
-MzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2Mz
-E4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NF19
+eyJoaXN0b3J5IjpbMjk4NzQxMzQ0LDIwNjk4ODg0MTIsMjAwNj
+cyMzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwt
+MTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNT
+kzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAz
+MSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMT
+gxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0XX0=
 
 -->
