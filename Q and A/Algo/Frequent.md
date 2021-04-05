@@ -57,6 +57,7 @@ etcode.com/problems/max-points-on-a-line/)
 	- When met with left parentheses such as **`'(', '[','{'`**, push its right parenthese into stack **`stack.push(')', ']', '}')`**
 	- otherwise when met with right parentheses , check if **`stack.pop() != ch` or `stack.isEmpty`**, meaning there is no left matching parentheses, **`return false`**
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
+
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
@@ -120,11 +121,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI0OTEwMTExLDEyNzU0MjkzMTAsNTY4Mz
-QyMDMxLDc2MjkzMzc2Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5
-NjMxODE3LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMjQwNT
-QsLTEzMjAwMzExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5
-MDc5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NT
-Q5NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNV19
-
+eyJoaXN0b3J5IjpbLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1Nj
+gzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4Njcs
+NDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyND
+A1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwt
+MjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIsMTEyND
+Y1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcwLC0yMDQyNzI0NjE1
+XX0=
 -->
