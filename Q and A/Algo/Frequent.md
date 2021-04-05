@@ -12,6 +12,7 @@ etcode.com/problems/max-points-on-a-line/)
 - Time: O(n^2)
 - Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
+#### PrefixSum
 - define a `result` and initialize as `Integer.MIN_VALUE`, a `sum` as **prefixSum** and a `minSum` as **min prefixSum** at current element 
 - iterate each element in array, 
 	- adds up `num` to `sum`, 
@@ -94,7 +95,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNTIzNTcwLDg3MTczMzkyNSw2MzIxNT
+eyJoaXN0b3J5IjpbNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNT
 c4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTEx
 MjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMj
 kxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIs
