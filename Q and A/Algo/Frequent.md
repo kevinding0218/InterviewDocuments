@@ -46,9 +46,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
     left -= df;
 }
 ```
+### [510. inorder-successor-in-bst-ii](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg3MjE5NDcwLC0yMDQyNzI0NjE1LDM3Nz
-M3ODUwNSw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbMzk4MTA1NzI0LDg4NzIxOTQ3MCwtMjA0Mj
+cyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
 -->
