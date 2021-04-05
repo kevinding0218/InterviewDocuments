@@ -10,8 +10,8 @@ etcode.com/problems/max-points-on-a-line/)
 3. in outer loop
 	- increment maxPoints with duplicates, **`maxPoints += duplicates`**
 	- update ans with **`Max(ans, maxPoints)`**
-- Time: O(n^2)
-- Space:O(n)
+##### Time: O(n^2)
+##### Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
 #### PrefixSum
 - define a `result` and initialize as `Integer.MIN_VALUE`, a `sum` as **prefixSum** and a `minSum` as **min prefixSum** at current element 
@@ -19,8 +19,8 @@ etcode.com/problems/max-points-on-a-line/)
 	- sum up `num` to `sum`, 
 	- update `result` with **`Math.max(result, sum - minSum)`**, 
 	- update `minSum` with **`Math.min(minSum, sum)`**
-- Time:  O(n)
-- Space:O(1)
+##### Time:  O(n)
+##### Space:O(1)
 #### DP
 - max subarray sum at element i can be formalized as **`f(i) = max(f(i-1) + A[i], A[i])**
 - we can just use array `num` as `dp` array because we're always iterating forward and never come back
@@ -28,8 +28,8 @@ etcode.com/problems/max-points-on-a-line/)
 - iterate each element in array from 2nd element
 	- calculate current max subarray sum at element i as **`dp[i] = Math.max(nums[i], dp[i-1]+nums[i])`**
 	- update result with `Math.max(max, nums[i])`
-- Time:  O(n)
-- Space:O(1)
+##### Time:  O(n)
+##### Space:O(1)
 #### Follow up: Divide and Conquer
 - using  **Divide and Conquer**  approach, we can find the maximum subarray sum in O(nLogn) time. Following is the Divide and Conquer algorithm.
 1.  Divide the given array in two halves
@@ -38,8 +38,8 @@ etcode.com/problems/max-points-on-a-line/)
     -   Maximum subarray sum in right half (Make a recursive call)
     -   Maximum subarray sum such that the subarray crosses the midpoint
  - The idea is simple, find the maximum sum starting from mid point and ending at some point on left of mid, then find the maximum sum starting from mid + 1 and ending with sum point on right of mid + 1. Finally, combine the two and return.
- - Time: O(nlogN)
- - Space:O(1)
+##### Time: O(nlogN)
+##### Space:O(1)
 ### [1186. Maximum Subarray Sum with One Deletion(Medium)](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)
 #### DP
 - define `max0` as max sub array ending with arr[i] without skipping any element, initialize as 1st element
@@ -48,8 +48,8 @@ etcode.com/problems/max-points-on-a-line/)
 	- update `max1` as `max1 = Math.max(max1 + arr[i], max0) `, meaning skipping array[i-1] or array[i]
 	- update `max0` as `Math.max(max0 + arr[i], arr[i])` meaning not skipping any element, same as without deleting element
 	- update `result` as `max(result, max0, max1)`
-- Time: O(n)
-- Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 #### Stack
 - since we know the parenthese character, we use a stack to track when there is non matching parenthese.
@@ -161,7 +161,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NTgwNzc4MCwtMTk2Nzk4OTEzNSwxMj
+eyJoaXN0b3J5IjpbMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMj
 c1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1
 LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4Mj
 Y2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYs
