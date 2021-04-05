@@ -151,8 +151,17 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 			- 例从ab --> cd: 我们可以计算从 ab --> c 的距离，也就是 f[i][j - 1]，最后再在尾部加上d，距离+1
 		- 删除word1的最后一个字母, 此时编辑距离等于1（删除操作） + word1去掉最后一个字母到word2的编辑距离 **`f[i][j] = f[i - 1][j] + 1`**, 
 			- 例从ab --> cd: 我们计算先删除b，先+1，再加上从 a --> cd 的距离： f[i - 1][j] ，
-		- 把word1的最后一个字母替换成word2的最后一个字母, 此时编辑距离等于 1（替换操作） + word1和word2去掉最后一个字母的编辑距离。为f[i][j] = f[i - 1][j - 1] + 1`
+		- 把word1的最后一个字母替换成word2的最后一个字母, 此时编辑距离等于 1（替换操作） + word1和word2去掉最后一个字母的编辑距离。为 **`f[i][j] = f[i - 1][j - 1] + 1`**
 	- 三者取最小值即可
+		```
+		if (word1.charAt(i - 1) == word2.charAt(j - 1)) {  
+		  // case 1.  
+		  dp[i][j] = dp[i - 1][j - 1];  
+		}else{  
+		  // case 2, 3 & 4  
+		  dp[i][j] = 1 + Math.min(dp[i - 1][j - 1], Math.min(dp[i - 1][j], dp[i][j - 1]));  
+		}
+		```
 - 初始条件
 	- 当word1和word2都为空：f[0][0] = 0
 	- dp[0][i ~ length2] = i; dp[i ~ length1][0] = i
@@ -216,11 +225,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MDUyNDI2OSwtMTAyMTkzOTgxNiwxNj
-g0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4
-OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsOD
-cxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5
-LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMj
-k2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0
-MDhdfQ==
+eyJoaXN0b3J5IjpbMzUzNjg2NzM0LC0xMDIxOTM5ODE2LDE2OD
+Q5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5
+MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2Myw4Nz
+E3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5Nzks
+MzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjMsLTEyOT
+Y2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwtMTYzMzU2NjQw
+OF19
 -->
