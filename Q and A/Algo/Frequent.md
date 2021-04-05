@@ -46,11 +46,12 @@ for(int i = 1; i < max.length && left > 0; i++) {
     left -= df;
 }
 ```
-### [448. ]
 ### [510. # Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
+### [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0Mj
-cyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbMTE0NjI0NTQ1MCw1NzA4ODM1NDgsODg3Mj
+E5NDcwLC0yMDQyNzI0NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
+
 -->
