@@ -197,9 +197,9 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - Else meaning S is palindrome, return 1
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 #### MaxHeap/PriorityQueue
-- condition check when input is empty or input size less or equals than K
-- define a Point class for better comparing
-- Define a MaxHeap by using custom comparator 
+1. condition check when input is empty or input size less or equals than K
+2.  define a Point class for better comparing
+- define a MaxHeap by using custom comparator 
 	- asking for Kth smallest we use MaxHeap, so that top of MaxHeap stores the max element and all its children nodes stores element smaller than itself
 	- asking for Kth greatest use MinHeap, so that top of MinHeap stores the min element and all its children nodes stores element greater than itself
 ```
@@ -268,11 +268,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkwNzU5NDI0LDIwMDY3MjMwNTEsNTI3OT
-AxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUsLTEwMjE5Mzk4MTYs
-MTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Nj
-c5ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYz
-LDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNz
-k3OSwzNTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2M119
-
+eyJoaXN0b3J5IjpbLTE0MTIyNzg0OTMsMjAwNjcyMzA1MSw1Mj
+c5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMTAyMTkzOTgx
+NiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMT
+k2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3
+NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4OD
+M3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYz
+XX0=
 -->
