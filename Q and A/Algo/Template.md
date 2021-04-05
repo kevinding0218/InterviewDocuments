@@ -49,9 +49,9 @@ PriorityQueue<P> minHeap = new PriorityQueue<>(K);
 // maxHeap
 PriorityQueue<P> minHeap = new PriorityQueue<>(K, Comparator.reverseOrder());
 // customHeap
-PriorityQueue<P> minHeap = new PriorityQueue<>(K, Comparator.Comparator.comparing((Point p) -> )
+PriorityQueue<P> minHeap = new PriorityQueue<>(K, Comparator.Comparator.comparing((Point p) -> p.x - p.)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDk0MDY1NTAsLTE1MDU4NDcwNTQsLT
-E2MjUzMDEwNDZdfQ==
+eyJoaXN0b3J5IjpbODk0NjUwODM1LC0xNTA1ODQ3MDU0LC0xNj
+I1MzAxMDQ2XX0=
 -->
