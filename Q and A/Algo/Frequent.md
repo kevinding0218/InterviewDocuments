@@ -164,13 +164,11 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - 初始条件
 	- 当word1和word2都为空：f[0][0] = 0
 	- dp[0][i ~ length2] = i; dp[i ~ length1][0] = i
-### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
 ### [680. Valid Palindrome II(Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
 ### [1332. Remove Pallindrome Subsequence(Medium)](https://leetcode.com/problems/remove-palindromic-subsequences/)
-### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
-#### follow up - nary
+
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
@@ -182,6 +180,9 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [102. Binary Tree Level Order Traversal(Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
+### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+#### follow up - nary
 ### Calculate salary tax
 -  Calculate tax if Salary and Tax Brackets are given as list in the form  
    [ [10000, 0.3],[20000, 0.2], [30000, 0.1], [null, .1]]  
@@ -223,11 +224,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDI0ODkzNTksLTEwMjE5Mzk4MTYsMT
-Y4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5
-ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLD
-g3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3
-OSwzNTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMT
-I5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2
-NDA4XX0=
+eyJoaXN0b3J5IjpbMTAzMjY2ODg5NSwtMTAyMTkzOTgxNiwxNj
+g0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4
+OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsOD
+cxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5
+LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMj
+k2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0
+MDhdfQ==
 -->
