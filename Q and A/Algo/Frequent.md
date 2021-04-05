@@ -69,10 +69,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
 ### [560. Subarray Sum Equals K(Medium)](https://leetcode.com/problems/subarray-sum-equals-k/)
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
-### 
+### [426. Convert the binary search tree into a sorted doubly linked list(Medium)](https://www.jiuzhang.com/solutions/convert-binary-search-tree-to-sorted-doubly-linked-list)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMTgzNDYyNSwtMTI5NjY4Mjk2LDQyMD
+eyJoaXN0b3J5IjpbMTI1ODE4MzcyMiwtMTI5NjY4Mjk2LDQyMD
 gzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4
 MjIsMTEyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcwLC0yMD
 QyNzI0NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
