@@ -1,5 +1,5 @@
 ## LinkedList
-### reverse a linked list
+### Reverse a linked list
 ```
 private static ListNode reverseList(ListNode head) {  
   ListNode prev = null;  
@@ -14,6 +14,20 @@ private static ListNode reverseList(ListNode head) {
   return prev;  
 }
 ```
+### Find Middle Node
+```
+private static ListNode findMiddleNode(ListNode head) {  
+  ListNode dummy = new ListNode(-1);  
+    dummy.next = head;  
+    ListNode slow = dummy, fast = dummy;  
+    while (fast != null && fast.next != null) {  
+  slow = slow.next;  
+        fast = fast.next.next;  
+    }  
+  
+  return slow;  
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDcyMjk1N119
+eyJoaXN0b3J5IjpbLTEzNzczMDQ4NTZdfQ==
 -->
