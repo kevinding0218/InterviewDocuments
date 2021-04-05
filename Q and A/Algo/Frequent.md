@@ -186,8 +186,12 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - `helper` will continue moving two pointers and compare, return false as long as we found another unmatched character
 ##### Time: O(n)
 ##### Space:O(1)
-### [1332. Remove Pallindrome Subsequence(Easy)](https://leetcode.com/problems/remove-palindromic-subsequences/)
-
+### [1332. Remove Palindrome Subsequence(Easy)](https://leetcode.com/problems/remove-palindromic-subsequences/)
+#### Check if s was a palindrome
+- 回文子序列不是回文子字符串，比如"aababdaba"，"aaaaa"就是他的回文子序列。
+- 也就是顶多删两次，一次全删掉"a"，一次全删掉"b"。
+- 如果是回文字符串，就删一次。
+- 空字符串就0次。
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
@@ -243,11 +247,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Nj
-g4OTUsLTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1
-LDIxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1Nj
-gzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4Njcs
-NDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyND
-A1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMl19
-
+eyJoaXN0b3J5IjpbLTE1NjIzMzM2NTIsNTI3OTAxNzgsNzg4Mj
+gzMjg0LDEwMzI2Njg4OTUsLTEwMjE5Mzk4MTYsMTY4NDkxOTgx
+OSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMT
+I3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzky
+NSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzOD
+I2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2
+XX0=
 -->
