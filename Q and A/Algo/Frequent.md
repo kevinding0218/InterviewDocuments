@@ -129,7 +129,18 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 ##### Time: O(n)
 ##### Space:O(n)
 #### Double Loop
-
+- 我们利用两个计数器 left 和 right 。  
+- 首先，我们从左到右遍历字符串，  
+	 - 对于遇到的每个 ‘(’，我们增加 left 计数器，  
+	- 对于遇到的每个 ‘)’ ，我们增加 right 计数器。  
+	- 每当 left 计数器与 right 计数器相等时，我们计算当前有效字符串的长度，并且记录目前为止找到的最长子字符串。  
+	- 当 right 计数器比 left 计数器大时，我们将 left 和 right 计数器同时变回 0。  
+- 这样的做法贪心地考虑了以当前字符下标结尾的有效括号长度，  
+	- 每次当右括号数量多于左括号数量的时候之前的字符我们都扔掉不再考虑，重新从下一个字符开始计算，  
+	- 但这样会漏掉一种情况，就是遍历的时候左括号的数量始终大于右括号的数量，即 (((() ，这种时候最长有效括号是求不出来的。  
+- 我们只需要从右往左遍历用类似的方法计算即可，只是这个时候判断条件反了过来：  
+	- 当 left 计数器比 right 计数器大时，我们将 left 和 right 计数器同时变回 0  
+	- 当 left 计数器与 right 计数器相等时，我们计算当前有效字符串的长度，并且记录目前为止找到的最长子字符串
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
@@ -191,7 +202,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTIzNjAyNDgsMTY4NDkxOTgxOSwxMT
+eyJoaXN0b3J5IjpbLTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMT
 g2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQy
 OTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2Mz
 IxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIs
