@@ -10,6 +10,7 @@
 	- update ans with `Max(ans, maxPoints)`
 - Time: O(n^2)
 - Space:O(n)
+### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
@@ -33,5 +34,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc3Mzc4NTA1LDY3NTE2MzYxXX0=
+eyJoaXN0b3J5IjpbLTIwNDI3MjQ2MTUsMzc3Mzc4NTA1LDY3NT
+E2MzYxXX0=
 -->
