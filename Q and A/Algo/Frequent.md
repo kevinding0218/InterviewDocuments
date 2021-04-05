@@ -166,6 +166,10 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 	- dp[0][i ~ length2] = i; dp[i ~ length1][0] = i
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
+#### Two pointers
+- start and end, moving towards each other when current char is letter or digit `while (start <= end && !Character.isLetterOrDigit(s.charAt(start))) {  
+  start ++;  
+}`
 ### [680. Valid Palindrome II(Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
 ### [1332. Remove Pallindrome Subsequence(Medium)](https://leetcode.com/problems/remove-palindromic-subsequences/)
 
@@ -224,11 +228,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMjY2ODg5NSwtMTAyMTkzOTgxNiwxNj
-g0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4
-OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsOD
-cxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5
-LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMj
-k2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0
-MDhdfQ==
+eyJoaXN0b3J5IjpbLTE0MjkxMTY0NjUsMTAzMjY2ODg5NSwtMT
+AyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkz
+ODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMS
+w3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgx
+NywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMz
+IwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0
+OTRdfQ==
 -->
