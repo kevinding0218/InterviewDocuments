@@ -1,4 +1,4 @@
-### [Max Points in one Line (Hard)](https://leetcode.com/problems/max-points-on-a-line/)
+### [149. Max Points in one Line (Hard)](https://leetcode.com/problems/max-points-on-a-line/)
 1. loop from each Point I with another Point j in 2 for loop
 2. in inner loop, **the goal is to get the max point with Point i of same lines when end of the inner loop**
 	- define `maxPoints = 1, duplicates = 0, horizontalLines = 1`
@@ -31,5 +31,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDk2NjQ2MDcsNjc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbNDgyMzE1MzM3LDY3NTE2MzYxXX0=
 -->
