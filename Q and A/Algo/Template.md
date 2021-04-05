@@ -41,7 +41,15 @@ private static ListNode findMiddleNode(ListNode head) {
   return slow;  
 }
 ```
+### Heap/Priority Queue
+#### Top K
+```
+// minHeap
+PriorityQueue<P> minHeap = new PriorityQueue<>();
+// maxHeap
+PriorityQueue<P> minHeap = new PriorityQueue<>(Comparator.reverseOrder());
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ
-==
+eyJoaXN0b3J5IjpbLTE0Mjg1MDk1NTYsLTE1MDU4NDcwNTQsLT
+E2MjUzMDEwNDZdfQ==
 -->
