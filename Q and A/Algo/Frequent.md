@@ -27,6 +27,8 @@ etcode.com/problems/max-points-on-a-line/)
     -   Maximum subarray sum in right half (Make a recursive call)
     -   Maximum subarray sum such that the subarray crosses the midpoint
  - The idea is simple, find the maximum sum starting from mid point and ending at some point on left of mid, then find the maximum sum starting from mid + 1 and ending with sum point on right of mid + 1. Finally, combine the two and return.
+ - Time: O(nlogN)
+ - Space:O(1)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
@@ -92,10 +94,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NjMxOTM4Niw4NzE3MzM5MjUsNjMyMT
-U3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDEx
-MTIxMjQwNTQsLTEzMjAwMzExNjMsLTEyOTY2ODI5Niw0MjA4Mz
-I5MTIsLTI5MDc5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIy
-LDExMjQ2NTQ5NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0Mj
-cyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbLTgwNTIzNTcwLDg3MTczMzkyNSw2MzIxNT
+c4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTEx
+MjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMj
+kxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIs
+MTEyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcwLC0yMDQyNz
+I0NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
 -->
