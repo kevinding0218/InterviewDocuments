@@ -52,10 +52,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 #### follow up, what if input is stream
 ### [283. Move Zeroes(Easy)](https://leetcode.com/problems/move-zeroes/)
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+### [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc2NzIwMTgxLDExMjQ2NTQ5NjUsNTcwOD
-gzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNzczNzg1MDUs
-Njc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbMTM2OTkxOTgyMiwxMTI0NjU0OTY1LDU3MD
+g4MzU0OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMzc3Mzc4NTA1
+LDY3NTE2MzYxXX0=
 -->
