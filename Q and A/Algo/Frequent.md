@@ -51,7 +51,7 @@ etcode.com/problems/max-points-on-a-line/)
 - Space:O(n)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 
-### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
+### [1249. Minimum Remove to Make Valid Parentheses(Medium)**](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
@@ -115,11 +115,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOT
-MzNzYzLDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0
-ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMDAzMT
-E2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0x
-NjMzNTY2NDA4LDEzNjk5MTk4MjIsMTEyNDY1NDk2NSw1NzA4OD
-M1NDgsODg3MjE5NDcwLC0yMDQyNzI0NjE1LDM3NzM3ODUwNV19
+eyJoaXN0b3J5IjpbMzU5NTU2MTI5LDEyNzU0MjkzMTAsNTY4Mz
+QyMDMxLDc2MjkzMzc2Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5
+NjMxODE3LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMjQwNT
+QsLTEzMjAwMzExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5
+MDc5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NT
+Q5NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNV19
 
 -->
