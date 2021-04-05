@@ -143,7 +143,7 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 	- 当 left 计数器与 right 计数器相等时，我们计算当前有效字符串的长度，并且记录目前为止找到的最长子字符串
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
 #### DP
-- 定义f[i][j]为word1前i个字符到word2的前j个字符的转化的最小步。
+- 定义f[i][j]为word1前i个字符到word2的前j个字符的转化的最小步。**`int[][] dp = new int[length1+1][length2+1];`**
 - 假设对于f[i][j]以前的之都已知，考虑f[i][j]的情形
 	- 若word1[i] = word2[j]，那么说明只要word1的前i-1个能转换到word2的前j-1个即可，所以 **`f[i][j] = f[i-1][j-1`]**
 	- 反之，若不等
@@ -151,10 +151,11 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 			- 例从ab --> cd: 我们可以计算从 ab --> c 的距离，也就是 f[i][j - 1]，最后再在尾部加上d，距离+1
 		- 删除word1的最后一个字母, 此时编辑距离等于1（删除操作） + word1去掉最后一个字母到word2的编辑距离 **`f[i][j] = f[i - 1][j] + 1`**, 
 			- 例从ab --> cd: 我们计算先删除b，先+1，再加上从 a --> cd 的距离： f[i - 1][j] ，
-		- 把word1的最后一个字母替换成word2的最后一个字母, 此时编辑距离等于 1（替换操作） + word1和word2去掉最后一个字母的编辑距离。为f[i][j] = f[i - 1][j - 1] + 1
+		- 把word1的最后一个字母替换成word2的最后一个字母, 此时编辑距离等于 1（替换操作） + word1和word2去掉最后一个字母的编辑距离。为f[i][j] = f[i - 1][j - 1] + 1`
 	- 三者取最小值即可
 - 初始条件
 	- 当word1和word2都为空：f[0][0] = 0
+	- dp[0][i ~ length2] = i; dp[i ~ length1][0] = i
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
@@ -215,7 +216,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MjM5ODQ2MywtMTAyMTkzOTgxNiwxNj
+eyJoaXN0b3J5IjpbMTg4MDUyNDI2OSwtMTAyMTkzOTgxNiwxNj
 g0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4
 OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsOD
 cxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5
