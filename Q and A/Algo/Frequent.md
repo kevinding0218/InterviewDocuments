@@ -1,4 +1,4 @@
-### Max Points in one Line (Hard)
+### [Max Points in one Line (Hard)](https://leetcode.com/problems/max-points-on-a-line/)
 1. loop from each Point I with another Point j in 2 for loop
 2. in inner loop, **the goal is to get the max point with Point i of same lines when end of the inner loop**
 	- define `maxPoints = 1, duplicates = 0, horizontalLines = 1`
@@ -12,6 +12,7 @@
 - Space:O(n)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
+### [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
 ### [72. Edit Distance (Hard)](https://leetcode.com/problems/edit-distance/)
 ### [199. Binary Tree Right Side View (Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List (Easy)](https://leetcode.com/problems/palindrome-linked-list/)
@@ -30,5 +31,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNTY1NDI4OCw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbLTE2NDk2NjQ2MDcsNjc1MTYzNjFdfQ==
 -->
