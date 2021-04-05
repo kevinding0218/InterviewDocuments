@@ -10,7 +10,8 @@
 	- update ans with `Max(ans, maxPoints)`
 - Time: O(n^2)
 - Space:O(n)
-### 72. Edit Distance (Hard)
+### [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+### [72. Edit Distance (Hard)
 ### [199. Binary Tree Right Side View (Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List (Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 ### [125. Valid Palindrome (Easy)](https://leetcode.com/problems/valid-palindrome/)
@@ -28,5 +29,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTQwMzI2NDAsNjc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbNTM0NDk2ODMwLDY3NTE2MzYxXX0=
 -->
