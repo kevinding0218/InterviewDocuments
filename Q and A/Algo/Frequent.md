@@ -223,10 +223,13 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [102. Binary Tree Level Order Traversal(Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
+### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
-- ### [510. # Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
+
+### [510. # Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 ### Calculate salary tax
 -  Calculate tax if Salary and Tax Brackets are given as list in the form  
    [ [10000, 0.3],[20000, 0.2], [30000, 0.1], [null, .1]]  
@@ -248,8 +251,6 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 #### follow up, what if input is stream
 ### [283. Move Zeroes(Easy)](https://leetcode.com/problems/move-zeroes/)
-### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
-### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 ### [31. Next Permutation(Medium)](https://leetcode.com/problems/next-permutation/)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 ### Check if contiguous subarray sum can be equals to K
@@ -269,11 +270,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NzMyMjc5MywyMDY5ODg4NDEyLDIwMD
-Y3MjMwNTEsNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUs
-LTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMD
-U5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIw
-MzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2Mz
-E4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NF19
+eyJoaXN0b3J5IjpbODQyNDAyNjM4LDIwNjk4ODg0MTIsMjAwNj
+cyMzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwt
+MTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNT
+kzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAz
+MSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMT
+gxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0XX0=
 
 -->
