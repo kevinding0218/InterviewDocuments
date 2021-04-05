@@ -12,7 +12,7 @@
 - Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
-### [1249. Minimum Remove to Make Valid Parentheses(Medium)](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
+### [1249. Minimum Remove to Make Valid Parentheses(Medium)**](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
@@ -74,9 +74,9 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [347. Top K Frequent Elements(Medium)](https://leetcode.com/problems/top-k-frequent-elements/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMT
-I5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2
-NDA4LDEzNjk5MTk4MjIsMTEyNDY1NDk2NSw1NzA4ODM1NDgsOD
-g3MjE5NDcwLC0yMDQyNzI0NjE1LDM3NzM3ODUwNSw2NzUxNjM2
-MV19
+eyJoaXN0b3J5IjpbMTE2ODMyNzI1NCwxMTEyMTI0MDU0LC0xMz
+IwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0
+OTQsLTE2MzM1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1LD
+U3MDg4MzU0OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMzc3Mzc4
+NTA1LDY3NTE2MzYxXX0=
 -->
