@@ -27,10 +27,10 @@
 ### read-n-characters-given-read4-stream-II
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
-### [1428. Leftmost Column with at Least a One](https://www.cnblogs.com/cnoodle/p/12759214.html)
-### 
+### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
+### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2OTI3NzU5NCw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbLTU0ODg5OTIxNyw2NzUxNjM2MV19
 -->
