@@ -16,17 +16,17 @@ etcode.com/problems/max-points-on-a-line/)
 #### PrefixSum
 - define a `result` and initialize as `Integer.MIN_VALUE`, a `sum` as **prefixSum** and a `minSum` as **min prefixSum** at current element 
 - iterate each element in array, 
-	- adds up `num` to `sum`, 
+	- sum up `num` to `sum`, 
 	- update `result` with `Math.max(result, sum - minSum)`, 
 	- update `minSum` with `Math.min(minSum, sum)`
 - Time:  O(n)
 - Space:O(1)
 #### DP
-- max subarray sum at element i can be formalized as `f(i) = max(f(i-1) + A[i], A[i])
+- max subarray sum at element i can be formalized as **`f(i) = max(f(i-1) + A[i], A[i])**
 - we can just use array `num` as `dp` array because we're always iterating forward and never come back
 - initialize result as 1st element in array
 - iterate each element in array from 2nd element
-	- calculate current max subarray sum at element i as `dp[i] = Math.max(nums[i], dp[i-1]+nums[i])`
+	- calculate current max subarray sum at element i as **`dp[i] = Math.max(nums[i], dp[i-1]+nums[i])`**
 	- update result with `Math.max(max, nums[i])`
 - Time:  O(n)
 - Space:O(1)
@@ -117,7 +117,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMzEwMDcwMiwxMjc1NDI5MzEwLDU2OD
+eyJoaXN0b3J5IjpbMjAyNzA4MzM4NywxMjc1NDI5MzEwLDU2OD
 M0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0
 OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MD
 U0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0y
