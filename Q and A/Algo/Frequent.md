@@ -48,11 +48,12 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ```
 ### [510. # Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
-### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/)
+### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
+#### follow up, what if input is stream
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NTg2ODcxNSw1NzA4ODM1NDgsODg3Mj
-E5NDcwLC0yMDQyNzI0NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbNzg3ODUxNTQsNTcwODgzNTQ4LDg4NzIxOT
+Q3MCwtMjA0MjcyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
 
 -->
