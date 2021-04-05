@@ -15,6 +15,7 @@ private static ListNode reverseList(ListNode head) {
 }
 ```
 ### Find Middle Node
+- hint: when find middle node, use a dummy head that points next to head,  then slow and fast can both be started at dummy head, this is to avoid if list only has two nodes
 ```
 private static ListNode findMiddleNode(ListNode head) {  
   ListNode dummy = new ListNode(-1);  
@@ -28,5 +29,5 @@ private static ListNode findMiddleNode(ListNode head) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjUzMDEwNDZdfQ==
+eyJoaXN0b3J5IjpbMTc4OTEzMDQ0NSwtMTYyNTMwMTA0Nl19
 -->
