@@ -181,9 +181,9 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 ### [680. Valid Palindrome II(Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
 #### Two Pointers
 - start and end, moving towards each other as long as current characters are same
-- since we only may delete one character, when there is unmatched character, we skip that condition by moving start and end one more index.
+- since we only may delete one character, when there is unmatched character, we skip that condition by moving start and end one more index **`return helper(s, start + 1, end) || helper(s, start, end - 1);`**
 	- why need both? consider a string like "abcdca", just moving start wouldn't work
-- continue moving two pointers and compare, return false as long as we found another unmatched character
+- `helper` will continue moving two pointers and compare, return false as long as we found another unmatched character
 ##### Time: O(n)
 ##### Space:O(1)
 ### [1332. Remove Pallindrome Subsequence(Medium)](https://leetcode.com/problems/remove-palindromic-subsequences/)
@@ -243,11 +243,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDM2NjcwMDIsNzg4MjgzMjg0LDEwMz
-I2Njg4OTUsLTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcx
-NzI1LDIxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMC
-w1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4
-NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMj
-EyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkx
-Ml19
+eyJoaXN0b3J5IjpbLTQ2OTAyMjI4NSw3ODgyODMyODQsMTAzMj
+Y2ODg5NSwtMTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3
+MjUsMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLD
+U2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2
+Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMT
+I0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEy
+XX0=
 -->
