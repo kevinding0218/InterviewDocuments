@@ -164,6 +164,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - 初始条件
 	- 当word1和word2都为空：f[0][0] = 0
 	- dp[0][i ~ length2] = i; dp[i ~ length1][0] = i
+#### Time: O(n*m)
+#### Space:O(n*m)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
 #### Two pointers
@@ -230,11 +232,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMDcwMDY3NywxMDMyNjY4ODk1LC0xMD
-IxOTM5ODE2LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4
-ODQ0LC0xOTY3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLD
-c2MjkzMzc2Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3
-LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMj
-AwMzExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5
-NF19
+eyJoaXN0b3J5IjpbMTAwNjgxNjM2LDEwMzI2Njg4OTUsLTEwMj
+E5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4
+NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIwMzEsNz
+YyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcs
+MTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMD
+AzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0
+XX0=
 -->
