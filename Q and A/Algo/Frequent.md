@@ -214,7 +214,6 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 - Remaining would be Kth Point with smallest distance
 #### Time: O(logK*n) - offer/poll of Heap is logK
 #### Space:O(K)
-### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
 ### read-n-characters-given-read4
 ### read-n-characters-given-read4-stream-II
@@ -227,6 +226,7 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
+- ### [510. # Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 ### Calculate salary tax
 -  Calculate tax if Salary and Tax Brackets are given as list in the form  
    [ [10000, 0.3],[20000, 0.2], [30000, 0.1], [null, .1]]  
@@ -242,7 +242,8 @@ for(int i = 1; i < max.length && left > 0; i++) {
     left -= df;
 }
 ```
-### [510. # Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
+### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
+
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 #### follow up, what if input is stream
@@ -268,11 +269,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUyNz
-kwMTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2
-LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOT
-Y3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2
-Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mz
-c5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjNd
-fQ==
+eyJoaXN0b3J5IjpbLTI4NzMyMjc5MywyMDY5ODg4NDEyLDIwMD
+Y3MjMwNTEsNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUs
+LTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMD
+U5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIw
+MzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2Mz
+E4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NF19
+
 -->
