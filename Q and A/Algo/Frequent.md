@@ -31,9 +31,24 @@
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [102. Binary Tree Level Order Traversal(Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+### Calculate salary tax
+-  Calculate tax if Salary and Tax Brackets are given as list in the form  
+   [ [10000, 0.3],[20000, 0.2], [30000, 0.1], [null, .1]]  
+   null being rest of the salary  
+```
+double[] max = {0,9075,36900,89350,186350,405100};
+double[] rate = {0,0.10,0.15,0.25,0.28,0.33};
+double left = income;
+double tax = 0.0d;
+for(int i = 1; i < max.length && left > 0; i++) {
+    double df = Math.min(max[i]-max[i-1],left);
+    tax += rate[i]*df;
+    left -= df;
+}
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDI3MjQ2MTUsMzc3Mzc4NTA1LDY3NT
-E2MzYxXX0=
+eyJoaXN0b3J5IjpbODg3MjE5NDcwLC0yMDQyNzI0NjE1LDM3Nz
+M3ODUwNSw2NzUxNjM2MV19
 -->
