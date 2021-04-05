@@ -202,7 +202,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - Define a MaxHeap by using custom comparator 
 	- asking for Kth smallest we use MaxHeap, so that top of MaxHeap stores the max element and all its children nodes stores element smaller than itself
 	- asking for Kth greatest use MinHeap, so that top of MinHeap stores the min element and all its children nodes stores element greater than itself
-- 
+- Offer element into MaxHeap until it reaches capacity of K, poll elements out
+- Remaining would be Kth Point with smallest distance
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
 ### read-n-characters-given-read4
@@ -257,7 +258,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTgyMDAyMzMsMjAwNjcyMzA1MSw1Mj
+eyJoaXN0b3J5IjpbLTE4MjgyNDQ0NTksMjAwNjcyMzA1MSw1Mj
 c5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMTAyMTkzOTgx
 NiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMT
 k2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3
