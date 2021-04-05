@@ -47,6 +47,8 @@ etcode.com/problems/max-points-on-a-line/)
 	- update `max1` as `max1 = Math.max(max1 + arr[i], max0) `, meaning skipping array[i-1] or array[i]
 	- update `max0` as `Math.max(max0 + arr[i], arr[i])` meaning not skipping any element, same as without deleting element
 	- update `result` as `max(result, max0, max1)`
+- Time: O(n)
+- Space:O(n)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
@@ -112,7 +114,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDA0NTc3MDksNTY4MzQyMDMxLDc2Mj
+eyJoaXN0b3J5IjpbLTE1OTEyNDA2NjAsNTY4MzQyMDMxLDc2Mj
 kzMzc2Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEw
 NDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMz
 ExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwt
