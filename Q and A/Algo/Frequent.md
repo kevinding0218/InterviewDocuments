@@ -15,6 +15,7 @@
 ### 234. Palindrome Linked List (Easy)
 ### [125. Valid Palindrome (Easy)](https://leetcode.com/problems/valid-palindrome/)
 ### [680. Valid Palindrome II (Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
+### [1332. Remove Pallindrome Subsequence](https://leetcode.com/problems/remove-palindromic-subsequences/)
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
@@ -26,5 +27,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNzczNzY0NSw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbMTMwOTczODkxOCw2NzUxNjM2MV19
 -->
