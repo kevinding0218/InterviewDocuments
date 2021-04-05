@@ -12,7 +12,8 @@
 - Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
-### [1249. Minimum Remove to Make Valid Parentheses(Medium)**](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
+### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
+### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
@@ -63,7 +64,6 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
-### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 ### [304. Range Sum Query 2D - Immutable(Medium)](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
@@ -74,9 +74,9 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [347. Top K Frequent Elements(Medium)](https://leetcode.com/problems/top-k-frequent-elements/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2ODMyNzI1NCwxMTEyMTI0MDU0LC0xMz
-IwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0
-OTQsLTE2MzM1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1LD
-U3MDg4MzU0OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMzc3Mzc4
-NTA1LDY3NTE2MzYxXX0=
+eyJoaXN0b3J5IjpbMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMj
+AwMzExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5
+NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5NjUsNT
+cwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNzczNzg1
+MDUsNjc1MTYzNjFdfQ==
 -->
