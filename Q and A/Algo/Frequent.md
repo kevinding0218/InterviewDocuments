@@ -54,10 +54,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 ### [31. Next Permutation(Medium)](https://leetcode.com/problems/next-permutation/)
+### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNTE2NjY5MSwxMzY5OTE5ODIyLDExMj
-Q2NTQ5NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYx
-NSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbLTE2MzM1NjY0MDgsMTM2OTkxOTgyMiwxMT
+I0NjU0OTY1LDU3MDg4MzU0OCw4ODcyMTk0NzAsLTIwNDI3MjQ2
+MTUsMzc3Mzc4NTA1LDY3NTE2MzYxXX0=
 -->
