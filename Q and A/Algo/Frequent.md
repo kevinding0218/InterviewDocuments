@@ -59,10 +59,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### Check if contiguous subarray sum can be equals to K
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
-
+### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MzY5ODk3NCw0MjA4MzI5MTIsLTI5MD
-c5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5
-NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNz
-czNzg1MDUsNjc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbOTU4Nzg3ODc1LDQyMDgzMjkxMiwtMjkwNz
+kwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIsMTEyNDY1NDk2
+NSw1NzA4ODM1NDgsODg3MjE5NDcwLC0yMDQyNzI0NjE1LDM3Nz
+M3ODUwNSw2NzUxNjM2MV19
 -->
