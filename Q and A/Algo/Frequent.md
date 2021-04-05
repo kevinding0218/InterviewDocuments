@@ -69,7 +69,7 @@ etcode.com/problems/max-points-on-a-line/)
 - Time: O(n)
 - Space:O(n)
 #### StringBuilder 2 loop
-1. 从左到右扫描，删除不匹配的")",记录一共出现的'('次数openSeen和'()'匹配的次数balance
+1. 从左到右扫描，StringBuilder sb 删除不匹配的")",记录一共出现的**'('次数openSeen**和'()'匹配的次数balance **`if (ch == ')') { if (balance == 0）{ continue; } balance --;}`**
 2. 计算openToKeep = openSeen - balance
 3. 从左到右扫描，每次遇到"("，decrease openToKeep, 如果openToKeep > 0则保留不然删除
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
@@ -135,7 +135,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NzE4MTM3MCwtMTk2Nzk4OTEzNSwxMj
+eyJoaXN0b3J5IjpbMjExOTUyMzk3OCwtMTk2Nzk4OTEzNSwxMj
 c1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1
 LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4Mj
 Y2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYs
