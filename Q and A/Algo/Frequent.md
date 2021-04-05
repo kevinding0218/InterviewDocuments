@@ -57,7 +57,12 @@ etcode.com/problems/max-points-on-a-line/)
 	- When met with left parentheses such as **`'(', '[','{'`**, push its right parenthese into stack **`stack.push(')', ']', '}')`**
 	- otherwise when met with right parentheses , check if **`stack.pop() != ch` or `stack.isEmpty`**, meaning there is no left matching parentheses, **`return false`**
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
-
+#### Stack + StringBuilder
+- 确定所有需要删除字符的索引。
+- 根据删除字符的索引创建一个新字符串。
+- 如上所述，使用 栈 存储所有 "(" 的索引。
+	- 每次遇到 "("，都将它的索引压入栈中。
+	- 
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
@@ -121,11 +126,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1Nj
-gzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4Njcs
-NDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyND
-A1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwt
-MjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIsMTEyND
-Y1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcwLC0yMDQyNzI0NjE1
+eyJoaXN0b3J5IjpbLTE4ODg5NDE4MTgsLTE5Njc5ODkxMzUsMT
+I3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzky
+NSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzOD
+I2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2
+LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNj
+k5MTk4MjIsMTEyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcw
 XX0=
 -->
