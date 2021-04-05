@@ -48,9 +48,9 @@ private static ListNode findMiddleNode(ListNode head) {
 - Ask Kth Smallest then use maxHeap
 ```
 // minHeap
-PriorityQueue<P> minHeap = new PriorityQueue<>(K);
+PriorityQueue<P> minHeap = new PriorityQueue<>();
 // maxHeap
-PriorityQueue<P> minHeap = new PriorityQueue<>(K, Comparator.reverseOrder());
+PriorityQueue<P> minHeap = new PriorityQueue<>( Comparator.reverseOrder());
 // customHeap
 Comparator<Integer> comparator = (o1, o2) -> {  
   if(o1 < o2) {  
@@ -61,7 +61,7 @@ Comparator<Integer> comparator = (o1, o2) -> {
 	  return 0;  
   }  
 };
-PriorityQueue<P> minHeap = new PriorityQueue<>(K, comparator);
+PriorityQueue<P> minHeap = new PriorityQueue<>(comparator);
 ```
 ##### Top K
 ```
@@ -75,6 +75,7 @@ for (var num: nums) {
 ##### Time: O(logK) offer/poll
 ##### Space: O(K)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNDU0NzkzNCwtNjAxNzc0NTg3LDg5ND
-Y1MDgzNSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbMTc1NjAxNjg0NSwyMDM0NTQ3OTM0LC02MD
+E3NzQ1ODcsODk0NjUwODM1LC0xNTA1ODQ3MDU0LC0xNjI1MzAx
+MDQ2XX0=
 -->
