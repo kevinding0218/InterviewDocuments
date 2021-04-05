@@ -44,6 +44,8 @@ private static ListNode findMiddleNode(ListNode head) {
 ### Heap/Priority Queue
 #### Top K
 ##### Define a Heap
+- Ask Kth Largest then use minHeap
+- Ask Kth Smallest then use maxHeap
 ```
 // minHeap
 PriorityQueue<P> minHeap = new PriorityQueue<>(K);
@@ -73,6 +75,6 @@ for (var num: nums) {
 ##### Time: O(logK) offer/poll
 ##### Space: O(K)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLTE1MD
-U4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
+eyJoaXN0b3J5IjpbMjAzNDU0NzkzNCwtNjAxNzc0NTg3LDg5ND
+Y1MDgzNSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
 -->
