@@ -43,6 +43,7 @@ private static ListNode findMiddleNode(ListNode head) {
 ```
 ### Heap/Priority Queue
 #### Top K
+##### Define a Heap
 ```
 // minHeap
 PriorityQueue<P> minHeap = new PriorityQueue<>(K);
@@ -51,16 +52,27 @@ PriorityQueue<P> minHeap = new PriorityQueue<>(K, Comparator.reverseOrder());
 // customHeap
 Comparator<Integer> comparator = (o1, o2) -> {  
   if(o1 < o2) {  
-  return 1;  
-    } else if(o1 > o2) {  
-  return -1;  
-    } else {  
-  return 0;  
-    }  
+	  return 1;  
+  } else if(o1 > o2) {  
+	  return -1;  
+  } else {  
+	  return 0;  
+  }  
 };
 PriorityQueue<P> minHeap = new PriorityQueue<>(K, comparator);
 ```
+##### Top K
+```
+for (var num: nums) {  
+  heap.offer(num);  
+  if (heap.size() > k) {  
+	  heap.poll();  
+  }  
+}
+```
+##### Time: O(logK) offer/poll
+##### Space: O(K)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg0OTA2Nzg4LDg5NDY1MDgzNSwtMTUwNT
-g0NzA1NCwtMTYyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLTE1MD
+U4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
 -->
