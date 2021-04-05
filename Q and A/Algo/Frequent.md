@@ -10,11 +10,13 @@
 	- update ans with `Max(ans, maxPoints)`
 - Time: O(n^2)
 - Space:O(n)
-### 72. Edit Distance
-### 199. Binary Tree Right Side View
-### Palindrome Linked List
-### Valid Palindrome II
+### 72. Edit Distance (Hard)
+### 199. Binary Tree Right Side View (Medium)
+### 234. Palindrome Linked List (Easy)
+### 125. Valid Palindrome (Easy)
+### 680. Valid Palindrome II (Medium)
 ### BinaryTreeMaximumPathSum (Hard)
+### 973. K Closest Points to Origin
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NzA0OTU2Niw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbLTgxODc2Njc3Nyw2NzUxNjM2MV19
 -->
