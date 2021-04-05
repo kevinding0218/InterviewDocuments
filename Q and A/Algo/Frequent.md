@@ -196,6 +196,10 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - Otherwise check if S is palindrome by using two pointers, as long as there is unmatched character, meaning S is not palindrome, return 2
 - Else meaning S is palindrome, return 1
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
+#### MaxHeap/PriorityQueue
+- condition check when input is empty or input size less or equals than K
+- define a Point class for better comparing
+- Define a MaxHeap by using custom comparator (asking for Kth smaller
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
 ### read-n-characters-given-read4
@@ -250,11 +254,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNjcyMzA1MSw1Mjc5MDE3OCw3ODgyOD
-MyODQsMTAzMjY2ODg5NSwtMTAyMTkzOTgxNiwxNjg0OTE5ODE5
-LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMj
-c1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1
-LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4Mj
-Y2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTZd
+eyJoaXN0b3J5IjpbMTYwODcwNTI3NywyMDA2NzIzMDUxLDUyNz
+kwMTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2
+LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOT
+Y3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2
+Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mz
+c5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjNd
 fQ==
 -->
