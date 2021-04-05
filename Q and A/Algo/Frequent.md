@@ -199,7 +199,10 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 #### MaxHeap/PriorityQueue
 - condition check when input is empty or input size less or equals than K
 - define a Point class for better comparing
-- Define a MaxHeap by using custom comparator (asking for Kth smaller
+- Define a MaxHeap by using custom comparator 
+	- asking for Kth smallest we use MaxHeap, so that top of MaxHeap stores the max element and all its children nodes stores e
+	- asking for Kth largest use MinHeap
+- 
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
 ### read-n-characters-given-read4
@@ -254,7 +257,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwODcwNTI3NywyMDA2NzIzMDUxLDUyNz
+eyJoaXN0b3J5IjpbLTIzNTEwMTE4NSwyMDA2NzIzMDUxLDUyNz
 kwMTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2
 LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOT
 Y3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2
