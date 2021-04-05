@@ -145,9 +145,11 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 #### DP
 - 定义f[i][j]为word1前i个字符到word2的前j个字符的转化的最小步。
 - 假设对于f[i][j]以前的之都已知，考虑f[i][j]的情形
-	- 若word1[i] = word2[j]，那么说明只要word1的前i-1个能转换到word2的前j-1个即可，所以 f[i][j] = f[i-1][j-1]
+	- 若word1[i] = word2[j]，那么说明只要word1的前i-1个能转换到word2的前j-1个即可，所以 **`f[i][j] = f[i-1][j-1`]**
 	- 反之，若不等
-		- 给word1插入一个和word2最后的字母相同的字母，这时word1和word2的最后一个字母就一样了，此时编辑距离等于1（插入操作） + 插入前的word1到word2去掉最后一个字母后的编辑距离 f[i][j] = f[i][j - 1] + 1
+		- 给word1插入一个和word2最后的字母相同的字母，这时word1和word2的最后一个字母就一样了，此时编辑距离等于1（插入操作） + 插入前的word1到word2去掉最后一个字母后的编辑距离 **`f[i][j] = f[i][j - 1] + 1`;** 
+		- 删除word1的最后一个字母, 此时编辑距离等于1（删除操作） + word1去掉最后一个字母到word2的编辑距离 **`f[i][j] = f[i - 1][j] + 1`**
+		- 
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
@@ -208,11 +210,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODM5MTg2NDIsLTEwMjE5Mzk4MTYsMT
-Y4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5
-ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLD
-g3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3
-OSwzNTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMT
-I5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2
-NDA4XX0=
+eyJoaXN0b3J5IjpbMTg4ODk0ODcxNSwtMTAyMTkzOTgxNiwxNj
+g0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4
+OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsOD
+cxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5
+LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMj
+k2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0
+MDhdfQ==
 -->
