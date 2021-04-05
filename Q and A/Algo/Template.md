@@ -15,7 +15,7 @@ private static ListNode reverseList(ListNode head) {
   return prev;  
 }
 // Time: O(n)
-// Space:O(n) he extra space comes from implicit stack space due to recursion.
+// Space:O(n) the extra space comes from implicit stack space due to recursion.
 public static ListNode reverseListRecursive(ListNode head) {  
   if (head == null || head.next == null) return head;  
   
@@ -42,6 +42,5 @@ private static ListNode findMiddleNode(ListNode head) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzczMTgyNTYsLTE2MjUzMDEwNDZdfQ
-==
+eyJoaXN0b3J5IjpbMTA5MDY2NTU3MiwtMTYyNTMwMTA0Nl19
 -->
