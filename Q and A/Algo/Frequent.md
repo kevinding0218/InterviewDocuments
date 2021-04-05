@@ -21,7 +21,10 @@ etcode.com/problems/max-points-on-a-line/)
 - Time:  O(n)
 - Space:O(1)
 #### DP
-- 
+- max subarray sum at element i can be formalized as `f(i) = max(f(i-1) + A[i], A[i])
+- we can just use array as dp array because we're always iterating forward and never come back
+- iterate each element in array,
+	- calculate current 
 #### Divide and Conquer
 - using  **Divide and Conquer**  approach, we can find the maximum subarray sum in O(nLogn) time. Following is the Divide and Conquer algorithm.
 1.  Divide the given array in two halves
@@ -97,11 +100,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MjQ2NDAzMiw3NjI5MzM3NjMsODcxNz
-MzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1
-MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMjk2Nj
-gyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0MDgs
-MTM2OTkxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0OCw4ODcyMT
-k0NzAsLTIwNDI3MjQ2MTUsMzc3Mzc4NTA1LDY3NTE2MzYxXX0=
+eyJoaXN0b3J5IjpbOTQ1ODA3NDQyLDc2MjkzMzc2Myw4NzE3Mz
+M5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5NzksMzUx
+MzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjMsLTEyOTY2OD
+I5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwtMTYzMzU2NjQwOCwx
+MzY5OTE5ODIyLDExMjQ2NTQ5NjUsNTcwODgzNTQ4LDg4NzIxOT
+Q3MCwtMjA0MjcyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
 
 -->
