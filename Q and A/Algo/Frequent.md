@@ -56,10 +56,12 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [31. Next Permutation(Medium)](https://leetcode.com/problems/next-permutation/)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 ### [266. palindrome-permutation(Easy)](https://www.jiuzhang.com/solutions/palindrome-permutation)
+### Check if contiguous subarray sum can be equals to K
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MDc5MDQ5NCwtMTYzMzU2NjQwOCwxMz
-Y5OTE5ODIyLDExMjQ2NTQ5NjUsNTcwODgzNTQ4LDg4NzIxOTQ3
-MCwtMjA0MjcyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2Mz
+M1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0
+OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMzc3Mzc4NTA1LDY3NT
+E2MzYxXX0=
 -->
