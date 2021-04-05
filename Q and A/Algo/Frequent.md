@@ -119,7 +119,15 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 ```
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
 #### Stack
-
+- 我们始终保持栈底元素为当前已经遍历过的元素中「最后一个没有被匹配的右括号的下标」，这样的做法主要是考虑了边界条件的处理，栈里其他元素维护左括号的下标：
+	- 对于遇到的每个‘(’ ，我们将它的下标放入栈中
+	- 对于遇到的每个 ‘)’ ，我们先弹出栈顶元素表示匹配了当前右括号：
+		- 如果栈为空，说明当前的右括号为没有被匹配的右括号，我们将其下标放入栈中来更新我们之前提到的「最后一个没有被匹配的右括号的下标」
+		- 如果栈不为空，当前右括号的下标减去栈顶元素即为「以该右括号为结尾的最长有效括号的长度」
+- 我们从前往后遍历字符串并更新答案即可。
+- 需要注意的是，如果一开始栈为空，第一个字符为左括号的时候我们会将其放入栈中，这样就不满足提及的「最后一个没有被匹配的右括号的下标」，为了保持统一，我们在一开始的时候往栈中放入一个值为 -1−1 的元素。
+##### Time: O(n)
+##### Space:O(n)
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
@@ -181,11 +189,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMD
-U5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIw
-MzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2Mz
-E4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NCwt
-MTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNz
-kwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIsMTEyNDY1NDk2
-NV19
+eyJoaXN0b3J5IjpbLTkyODcyMDA3OSwxNjg0OTE5ODE5LDExOD
+Y5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5
+MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMj
+E1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4MjY2Miwx
+MTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwOD
+MyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0MDgsMTM2OTkxOTgy
+Ml19
 -->
