@@ -58,11 +58,20 @@ etcode.com/problems/max-points-on-a-line/)
 	- otherwise when met with right parentheses , check if **`stack.pop() != ch` or `stack.isEmpty`**, meaning there is no left matching parentheses, **`return false`**
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 #### Stack + StringBuilder
+- 使用StringBuilder, 在 字符串 的 任意一个位置 添加、删除或更改一个字符的操作都是 O(n)O(n) 的，因为 String 是 不可变的。每次修改整个字符串都会重建。
 - 确定所有需要删除字符的索引。
 - 根据删除字符的索引创建一个新字符串。
 - 如上所述，使用 栈 存储所有 "(" 的索引。
 	- 每次遇到 "("，都将它的索引压入栈中。
-	- 
+	-  每次遇到 ")"，都从栈中移除一个索引，用该 ")" 与栈顶的 "(" 匹配。栈的深度等于余量。
+	- 扫描到字符串末尾时，栈中剩余的所有索引都是没有匹配的 "("。还需要使用一个 集合 跟踪不匹配的 ")"。
+- 然后根据索引删除每个需要删除的字符，返回重新创建的字符串
+- Time: O(n)
+- Space:O(n)
+#### StringBuilder 2 loop
+1. 从左到右扫描，删除不匹配的")",记录一共出现的'('次数openSeen和'()'匹配的次数balance
+2. 计算openToKeep = openSeen - balance
+3. 从左到右扫描，每次遇到"("，decrease openToKeep, 如果openToKeep > 0则保留不然删除
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
@@ -126,11 +135,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODg5NDE4MTgsLTE5Njc5ODkxMzUsMT
-I3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzky
-NSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzOD
-I2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2
-LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNj
-k5MTk4MjIsMTEyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcw
-XX0=
+eyJoaXN0b3J5IjpbMTg5NzE4MTM3MCwtMTk2Nzk4OTEzNSwxMj
+c1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1
+LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4Mj
+Y2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYs
+NDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0MDgsMTM2OT
+kxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0OCw4ODcyMTk0NzBd
+fQ==
 -->
