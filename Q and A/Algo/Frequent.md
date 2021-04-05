@@ -62,8 +62,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)
+### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
+### [304. Range Sum Query 2D - Immutable(Medium)](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NTQzMzY5Myw0MjA4MzI5MTIsLTI5MD
+eyJoaXN0b3J5IjpbLTgwOTkwODk1MCw0MjA4MzI5MTIsLTI5MD
 c5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5
 NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNz
 czNzg1MDUsNjc1MTYzNjFdfQ==
