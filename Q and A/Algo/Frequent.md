@@ -142,6 +142,7 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 	- 当 left 计数器比 right 计数器大时，我们将 left 和 right 计数器同时变回 0  
 	- 当 left 计数器与 right 计数器相等时，我们计算当前有效字符串的长度，并且记录目前为止找到的最长子字符串
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
+
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
@@ -202,11 +203,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMT
-g2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQy
-OTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2Mz
-IxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIs
-MTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMD
-gzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4
-MjJdfQ==
+eyJoaXN0b3J5IjpbLTUxNTUwODE1NCwtMTAyMTkzOTgxNiwxNj
+g0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4
+OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsOD
+cxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5
+LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMj
+k2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0
+MDhdfQ==
 -->
