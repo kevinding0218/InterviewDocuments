@@ -98,7 +98,9 @@ result.append(c);
 ```
 ##### Time: O(n)
 ##### Space:O(n)
-### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
+### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)
+#### DFS
+
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
@@ -161,11 +163,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMj
-c1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1
-LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4Mj
-Y2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYs
-NDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0MDgsMTM2OT
-kxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0OCw4ODcyMTk0NzBd
-fQ==
+eyJoaXN0b3J5IjpbMzU1OTg2MjIsMjEwNTkzODg0NCwtMTk2Nz
+k4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMs
+ODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OT
+c5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0x
+Mjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1Nj
+Y0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0OF19
+
 -->
