@@ -40,7 +40,13 @@ etcode.com/problems/max-points-on-a-line/)
  - Time: O(nlogN)
  - Space:O(1)
 ### [1186. Maximum Subarray Sum with One Deletion(Medium)](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)
-- 
+#### DP
+- define `max0` as max sub array ending with arr[i] without skipping any element, initialize as 1st element
+- define `max1`: max sub array ending with arr[i] or array[i-1] with skipping one element, , initialize as 1st element
+- iterate through array and update max1 then max0 (because max1 uses previous max0 and we start from 2nd element)
+	- update `max1` as `max1 = Math.max(max1 + arr[i], max0) `, meaning skipping array[i-1] or array[i]
+	- update `max0` as `Math.max(max0 + arr[i], arr[i])` meaning not skipping any element
+	- update `result` as `max(result, max0, max1)`
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
@@ -106,11 +112,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY4MzQyMDMxLDc2MjkzMzc2Myw4NzE3Mz
-M5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5NzksMzUx
-MzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjMsLTEyOTY2OD
-I5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwtMTYzMzU2NjQwOCwx
-MzY5OTE5ODIyLDExMjQ2NTQ5NjUsNTcwODgzNTQ4LDg4NzIxOT
-Q3MCwtMjA0MjcyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbMTU3MTMyMDMzNSw1NjgzNDIwMzEsNzYyOT
+MzNzYzLDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0
+ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMDAzMT
+E2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0x
+NjMzNTY2NDA4LDEzNjk5MTk4MjIsMTEyNDY1NDk2NSw1NzA4OD
+M1NDgsODg3MjE5NDcwLC0yMDQyNzI0NjE1LDM3NzM3ODUwNV19
 
 -->
