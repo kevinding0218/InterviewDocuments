@@ -1,6 +1,8 @@
 ## LinkedList
 ### Reverse a linked list
 ```
+// Time: O(n)
+// Space:O(1)
 private static ListNode reverseList(ListNode head) {  
   ListNode prev = null;  
     ListNode cur = head;  
@@ -12,6 +14,18 @@ private static ListNode reverseList(ListNode head) {
         cur = next;  
     }  
   return prev;  
+}
+// Time: O(n)
+// Space:O(n)
+public static ListNode reverseListRecursive(ListNode head) {  
+  if (head == null || head.next == null) return head;  
+  
+    ListNode last = reverseListRecursive(head.next);  
+    // reverse - work backward with stacked pop node  
+ // make current node next node points to itself, a cycle was found here  head.next.next = head;  
+    // break the cycle so that current node not points to any node  
+  head.next = null;  
+    return last;  
 }
 ```
 ### Find Middle Node
@@ -29,5 +43,6 @@ private static ListNode findMiddleNode(ListNode head) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4OTEzMDQ0NSwtMTYyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbLTE4MTI1NDYxMDIsLTE2MjUzMDEwNDZdfQ
+==
 -->
