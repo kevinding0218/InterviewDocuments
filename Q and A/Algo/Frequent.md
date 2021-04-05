@@ -72,11 +72,13 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
 ### [426. Convert the binary search tree into a sorted doubly linked list(Medium)](https://www.jiuzhang.com/solutions/convert-binary-search-tree-to-sorted-doubly-linked-list)
 ### [347. Top K Frequent Elements(Medium)](https://leetcode.com/problems/top-k-frequent-elements/)
-
+### Find median in BST without extra space
+- 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
+### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMj
-AwMzExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5
-NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5NjUsNT
-cwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNzczNzg1
-MDUsNjc1MTYzNjFdfQ==
+eyJoaXN0b3J5IjpbMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMj
+EyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkx
+MiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIsMT
+EyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcwLC0yMDQyNzI0
+NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
 -->
