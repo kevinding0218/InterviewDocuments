@@ -27,7 +27,9 @@ etcode.com/problems/max-points-on-a-line/)
 - iterate each element in array from 2nd element
 	- calculate current max subarray sum at element i as `nums[i] = Math.max(nums[i], nums[i-1]+nums[i])`
 	- update result with `Math.max(max, nums[i])`
-#### Divide and Conquer
+- Time:  O(n)
+- Space:O(1)
+#### Follow up: Divide and Conquer
 - using  **Divide and Conquer**  approach, we can find the maximum subarray sum in O(nLogn) time. Following is the Divide and Conquer algorithm.
 1.  Divide the given array in two halves
 2.  Return the maximum of following three
@@ -37,6 +39,8 @@ etcode.com/problems/max-points-on-a-line/)
  - The idea is simple, find the maximum sum starting from mid point and ending at some point on left of mid, then find the maximum sum starting from mid + 1 and ending with sum point on right of mid + 1. Finally, combine the two and return.
  - Time: O(nlogN)
  - Space:O(1)
+### [1186. Maximum Subarray Sum with One Deletion(Medium)](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)
+- 
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
@@ -102,11 +106,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTUzODYyMzEsNzYyOTMzNzYzLDg3MT
-czMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwz
-NTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5Nj
-Y4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4
-LDEzNjk5MTk4MjIsMTEyNDY1NDk2NSw1NzA4ODM1NDgsODg3Mj
-E5NDcwLC0yMDQyNzI0NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbNTY4MzQyMDMxLDc2MjkzMzc2Myw4NzE3Mz
+M5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5NzksMzUx
+MzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjMsLTEyOTY2OD
+I5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwtMTYzMzU2NjQwOCwx
+MzY5OTE5ODIyLDExMjQ2NTQ5NjUsNTcwODgzNTQ4LDg4NzIxOT
+Q3MCwtMjA0MjcyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
 
 -->
