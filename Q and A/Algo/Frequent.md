@@ -17,6 +17,8 @@ etcode.com/problems/max-points-on-a-line/)
 	- adds up `num` to `sum`, 
 	- update `result` with `Math.max(result, sum - minSum)`, 
 	- update `minSum` with `Math.min(minSum, sum)`
+- Time:  O(n)
+- Space:O(1)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
@@ -82,10 +84,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMTc5NDE4MSw2MzIxNTc4NjcsNDk2Mz
-E4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NCwt
-MTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNz
-kwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIsMTEyNDY1NDk2
-NSw1NzA4ODM1NDgsODg3MjE5NDcwLC0yMDQyNzI0NjE1LDM3Nz
-M3ODUwNSw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMT
+gxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0x
+MzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OT
+A0OTQsLTE2MzM1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1
+LDU3MDg4MzU0OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMzc3Mz
+c4NTA1LDY3NTE2MzYxXX0=
 -->
