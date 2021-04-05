@@ -117,8 +117,9 @@ result.append(c);
 * */
 void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemove, StringBuilder path)
 ```
-
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
+#### Stack
+
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
@@ -180,11 +181,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOT
-Y3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2
-Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mz
-c5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjMs
-LTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwtMTYzMz
-U2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5NjUsNTcwODgzNTQ4
-XX0=
+eyJoaXN0b3J5IjpbMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMD
+U5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIw
+MzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2Mz
+E4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NCwt
+MTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNz
+kwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIsMTEyNDY1NDk2
+NV19
 -->
