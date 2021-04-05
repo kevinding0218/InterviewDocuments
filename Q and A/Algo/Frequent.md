@@ -68,12 +68,13 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [304. Range Sum Query 2D - Immutable(Medium)](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
 ### [560. Subarray Sum Equals K(Medium)](https://leetcode.com/problems/subarray-sum-equals-k/)
+### [71. Simplify Path(Medium)](https://leetcode.com/problems/simplify-path/)
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
 ### [426. Convert the binary search tree into a sorted doubly linked list(Medium)](https://www.jiuzhang.com/solutions/convert-binary-search-tree-to-sorted-doubly-linked-list)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1ODE4MzcyMiwtMTI5NjY4Mjk2LDQyMD
-gzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4
-MjIsMTEyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcwLC0yMD
-QyNzI0NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbLTEzMjAwMzExNjMsLTEyOTY2ODI5Niw0Mj
+A4MzI5MTIsLTI5MDc5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5
+ODIyLDExMjQ2NTQ5NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMj
+A0MjcyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
 -->
