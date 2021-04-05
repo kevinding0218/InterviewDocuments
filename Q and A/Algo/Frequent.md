@@ -12,7 +12,7 @@ etcode.com/problems/max-points-on-a-line/)
 - Time: O(n^2)
 - Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
-- define a max as result and initialize as Integer.MIN_VALUE
+- define a `result` and initialize as `Integer.MIN_VALUE`, a `sum` as **prefixSum** and a `minSum` as **min prefixSum** at current element 
 - define a sum as prefixSum that adds up each element, since we don't need output index, we don't need to use an prefixSum array
 - define a minSum to track min prefix sum of current element
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
@@ -80,10 +80,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzODc1NzMzLDYzMjE1Nzg2Nyw0OTYzMT
-gxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0x
-MzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OT
-A0OTQsLTE2MzM1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1
-LDU3MDg4MzU0OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMzc3Mz
-c4NTA1LDY3NTE2MzYxXX0=
+eyJoaXN0b3J5IjpbLTEwNzgwMzM2OTYsNjMyMTU3ODY3LDQ5Nj
+MxODE3LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQs
+LTEzMjAwMzExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MD
+c5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5
+NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNz
+czNzg1MDUsNjc1MTYzNjFdfQ==
 -->
