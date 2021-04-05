@@ -198,8 +198,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 #### MaxHeap/PriorityQueue
 1. condition check when input is empty or input size less or equals than K
-2.  define a Point class for better comparing
-- define a MaxHeap by using custom comparator 
+2. define a Point class for better comparing
+3. define a MaxHeap by using custom comparator 
 	- asking for Kth smallest we use MaxHeap, so that top of MaxHeap stores the max element and all its children nodes stores element smaller than itself
 	- asking for Kth greatest use MinHeap, so that top of MinHeap stores the min element and all its children nodes stores element greater than itself
 ```
@@ -210,7 +210,7 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
   .reversed()  
 );
 ```
-- Offer element into MaxHeap until it reaches capacity of K, poll elements out
+4. Offer element into MaxHeap until it reaches capacity of K, poll elements out
 - Remaining would be Kth Point with smallest distance
 #### Time: O(logK*n) - offer/poll of Heap is logK
 #### Space:O(K)
@@ -268,11 +268,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTIyNzg0OTMsMjAwNjcyMzA1MSw1Mj
-c5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMTAyMTkzOTgx
-NiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMT
-k2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3
-NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4OD
-M3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYz
-XX0=
+eyJoaXN0b3J5IjpbMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUyNz
+kwMTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2
+LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOT
+Y3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2
+Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mz
+c5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjNd
+fQ==
 -->
