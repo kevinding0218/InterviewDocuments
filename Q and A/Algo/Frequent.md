@@ -1,4 +1,5 @@
-### [149. Max Points in one Line (Hard)](https://leetcode.com/problems/max-points-on-a-line/)
+### [149. Max Points in one Line (Hard)](https://le
+etcode.com/problems/max-points-on-a-line/)
 1. loop from each Point I with another Point j in 2 for loop
 2. in inner loop, **the goal is to get the max point with Point i of same lines when end of the inner loop**
 	- define `maxPoints = 1, duplicates = 0, horizontalLines = 1`
@@ -76,9 +77,9 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0ODgzNzk3OSwzNTEzODI2NjIsMTExMj
-EyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMDgzMjkx
-MiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4MjIsMT
-EyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcwLC0yMDQyNzI0
-NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzOD
+I2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2
+LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNj
+k5MTk4MjIsMTEyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcw
+LC0yMDQyNzI0NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
 -->
