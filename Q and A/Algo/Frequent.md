@@ -182,7 +182,9 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 #### Two Pointers
 ### [1332. Remove Pallindrome Subsequence(Medium)](https://leetcode.com/problems/remove-palindromic-subsequences/)
 - start and end, moving towards each other as long as current characters are same
-- since we only may delete one character, when there is unmatched character, we skip that condition by moving start and by moving end backward
+- since we only may delete one character, when there is unmatched character, we skip that condition by moving start and end one more index.
+	- why need both? consider a string like "abcdca", just moving start wouldn't work
+- continue moving two pointers and compare, return false as long as we found another unmatched character
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
@@ -238,11 +240,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NjkyNDg4MSw3ODgyODMyODQsMTAzMj
-Y2ODg5NSwtMTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3
-MjUsMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLD
-U2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2
-Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMT
-I0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEy
-XX0=
+eyJoaXN0b3J5IjpbOTMzMzAzNDE2LDc4ODI4MzI4NCwxMDMyNj
+Y4ODk1LC0xMDIxOTM5ODE2LDE2ODQ5MTk4MTksMTE4Njk3MTcy
+NSwyMTA1OTM4ODQ0LC0xOTY3OTg5MTM1LDEyNzU0MjkzMTAsNT
+Y4MzQyMDMxLDc2MjkzMzc2Myw4NzE3MzM5MjUsNjMyMTU3ODY3
+LDQ5NjMxODE3LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMj
+QwNTQsLTEzMjAwMzExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTJd
+fQ==
 -->
