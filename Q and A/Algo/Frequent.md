@@ -13,7 +13,8 @@ etcode.com/problems/max-points-on-a-line/)
 - Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
 - define a max as result and initialize as Integer.MIN_VALUE
-- 
+- define a sum as prefixSum that adds up each element, since we don't need output index, we don't need to use an prefixSum array
+- define a minSum to track min prefix sum of current element
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
@@ -79,10 +80,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mz
-c5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjMs
-LTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwtMTYzMz
-U2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5NjUsNTcwODgzNTQ4
-LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNzczNzg1MDUsNjc1MT
-YzNjFdfQ==
+eyJoaXN0b3J5IjpbNzYzODc1NzMzLDYzMjE1Nzg2Nyw0OTYzMT
+gxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0x
+MzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OT
+A0OTQsLTE2MzM1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1
+LDU3MDg4MzU0OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMzc3Mz
+c4NTA1LDY3NTE2MzYxXX0=
 -->
