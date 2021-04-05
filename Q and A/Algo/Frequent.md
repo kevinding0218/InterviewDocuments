@@ -168,6 +168,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 #### Space:O(n*m)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 #### Find Mid and Reverse 2nd half
+#### Time: O(n)
+#### Space:O(1)
 - Refer to Template LinkedList
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
 #### Two pointers
@@ -234,11 +236,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjAzNTE5MDAsMTAzMjY2ODg5NSwtMT
-AyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkz
-ODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMS
-w3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgx
-NywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMz
-IwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0
-OTRdfQ==
+eyJoaXN0b3J5IjpbMTMxNTY5MzU0MiwxMDMyNjY4ODk1LC0xMD
+IxOTM5ODE2LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4
+ODQ0LC0xOTY3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLD
+c2MjkzMzc2Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3
+LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMj
+AwMzExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5
+NF19
 -->
