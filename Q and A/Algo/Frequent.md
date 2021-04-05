@@ -19,6 +19,14 @@ etcode.com/problems/max-points-on-a-line/)
 	- update `minSum` with `Math.min(minSum, sum)`
 - Time:  O(n)
 - Space:O(1)
+#### Divide and Conquer
+- using  **Divide and Conquer**  approach, we can find the maximum subarray sum in O(nLogn) time. Following is the Divide and Conquer algorithm.
+1.  Divide the given array in two halves
+2.  Return the maximum of following three
+    -   Maximum subarray sum in left half (Make a recursive call)
+    -   Maximum subarray sum in right half (Make a recursive call)
+    -   Maximum subarray sum such that the subarray crosses the midpoint
+ - The idea is simple, find the maximum sum starting from mid point and ending at some point on left of mid, then find the maximum sum starting from mid + 1 and ending with sum point on right of mid + 1. Finally, combine the two and return.
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
@@ -84,10 +92,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMT
-gxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0x
-MzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OT
-A0OTQsLTE2MzM1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1
-LDU3MDg4MzU0OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMzc3Mz
-c4NTA1LDY3NTE2MzYxXX0=
+eyJoaXN0b3J5IjpbLTQ1NjMxOTM4Niw4NzE3MzM5MjUsNjMyMT
+U3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDEx
+MTIxMjQwNTQsLTEzMjAwMzExNjMsLTEyOTY2ODI5Niw0MjA4Mz
+I5MTIsLTI5MDc5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIy
+LDExMjQ2NTQ5NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0Mj
+cyNDYxNSwzNzczNzg1MDUsNjc1MTYzNjFdfQ==
 -->
