@@ -12,11 +12,11 @@
 - Space:O(n)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
-### [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
-### [72. Edit Distance (Hard)](https://leetcode.com/problems/edit-distance/)
-### [199. Binary Tree Right Side View (Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
-### [234. Palindrome Linked List (Easy)](https://leetcode.com/problems/palindrome-linked-list/)
-### [125. Valid Palindrome (Easy)](https://leetcode.com/problems/valid-palindrome/)
+### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
+### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
+### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
+### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
+### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
 ### [680. Valid Palindrome II(Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
 ### [1332. Remove Pallindrome Subsequence(Medium)](https://leetcode.com/problems/remove-palindromic-subsequences/)
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
@@ -32,5 +32,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0Mjk2MTkwNiw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbLTM4MTM1MTkyLDY3NTE2MzYxXX0=
 -->
