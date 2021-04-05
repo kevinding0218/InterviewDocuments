@@ -69,7 +69,21 @@ etcode.com/problems/max-points-on-a-line/)
 - Time: O(n)
 - Space:O(n)
 #### StringBuilder 2 loop
-1. 从左到右扫描String s，StringBuilder sb 删除不匹配的")",记录一共出现的**'('次数openSeen**和**'()'匹配的次数balance** **`if (ch == ')') { if (balance == 0）{ continue; } balance --;}`**
+1. 从左到右扫描String s，StringBuilder sb 删除不匹配的")",记录一共出现的**'('次数openSeen**和**'()'匹配的次数balance** 
+```
+char c = s.charAt(i);
+if (c == '(') {
+    openSeen++;
+    balance++;
+} if (c == ')') {
+    if (balance == 0) {
+        // skip current ')', do not add into sb
+        continue;
+    }
+    balance--;
+}
+sb.append(c);
+```
 2. 计算openToKeep = openSeen - balance
 3. 从左到右扫描StringBuilder sb，StringBuilder result每次遇到"("，decrease openToKeep, 如果openToKeep < 0则删除 
 ```
@@ -143,11 +157,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNDg3NTUzNiwtMTk2Nzk4OTEzNSwxMj
-c1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1
-LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4Mj
-Y2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYs
-NDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0MDgsMTM2OT
-kxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0OCw4ODcyMTk0NzBd
-fQ==
+eyJoaXN0b3J5IjpbLTEyODEwMjQ5MjYsLTE5Njc5ODkxMzUsMT
+I3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzky
+NSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzOD
+I2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2
+LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNj
+k5MTk4MjIsMTEyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcw
+XX0=
 -->
