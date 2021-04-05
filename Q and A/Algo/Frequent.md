@@ -188,7 +188,6 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 ##### Space:O(1)
 ### [1332. Remove Pallindrome Subsequence(Medium)](https://leetcode.com/problems/remove-palindromic-subsequences/)
 
-- 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
@@ -202,6 +201,7 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 #### follow up - nary
+- 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 ### Calculate salary tax
 -  Calculate tax if Salary and Tax Brackets are given as list in the form  
    [ [10000, 0.3],[20000, 0.2], [30000, 0.1], [null, .1]]  
@@ -243,7 +243,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2OTAyMjI4NSw3ODgyODMyODQsMTAzMj
+eyJoaXN0b3J5IjpbMTE5NDY3NzQ1NSw3ODgyODMyODQsMTAzMj
 Y2ODg5NSwtMTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3
 MjUsMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLD
 U2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2
