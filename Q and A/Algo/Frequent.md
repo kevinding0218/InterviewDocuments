@@ -128,6 +128,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - 需要注意的是，如果一开始栈为空，第一个字符为左括号的时候我们会将其放入栈中，这样就不满足提及的「最后一个没有被匹配的右括号的下标」，为了保持统一，我们在一开始的时候往栈中放入一个值为 -1−1 的元素。
 ##### Time: O(n)
 ##### Space:O(n)
+#### Double Loop
+
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
@@ -189,11 +191,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyODcyMDA3OSwxNjg0OTE5ODE5LDExOD
-Y5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5
-MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMj
-E1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4MjY2Miwx
-MTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwOD
-MyOTEyLC0yOTA3OTA0OTQsLTE2MzM1NjY0MDgsMTM2OTkxOTgy
-Ml19
+eyJoaXN0b3J5IjpbLTEzOTIzNjAyNDgsMTY4NDkxOTgxOSwxMT
+g2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQy
+OTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2Mz
+IxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjIs
+MTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2LDQyMD
+gzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNjk5MTk4
+MjJdfQ==
 -->
