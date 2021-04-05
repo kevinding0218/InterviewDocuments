@@ -3,13 +3,13 @@ etcode.com/problems/max-points-on-a-line/)
 #### HashMap - slope
 1. loop from each Point I with another Point j in 2 for loop
 2. in inner loop, **the goal is to get the max point with Point i of same lines when end of the inner loop**
-	- define `maxPoints = 1, duplicates = 0, horizontalLines = 1`
-	- increment duplicates if Point i and Point j are same coordinates `duplicates ++`
-	- increment horizontalLines if i.y == j.y, update maxPoint with `Max(maxPoint, horizontalLines)`
-	- calculate slope then increment count in map, update maxPoint `Max(maxPoint, map.get(slope))`
+	- define **`maxPoints = 1, duplicates = 0, horizontalLines = 1`**
+	- increment duplicates if Point i and Point j are same coordinates **`duplicates ++`**
+	- increment horizontalLines if i.y == j.y, update maxPoint with **`Max(maxPoint, horizontalLines)`**
+	- calculate slope then increment count in map, update maxPoint **`Max(maxPoint, map.get(slope))`**
 3. in outer loop
-	- increment maxPoints with duplicates, `maxPoints += duplicates`
-	- update ans with `Max(ans, maxPoints)`
+	- increment maxPoints with duplicates, **`maxPoints += duplicates`**
+	- update ans with **`Max(ans, maxPoints)`**
 - Time: O(n^2)
 - Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
@@ -17,8 +17,8 @@ etcode.com/problems/max-points-on-a-line/)
 - define a `result` and initialize as `Integer.MIN_VALUE`, a `sum` as **prefixSum** and a `minSum` as **min prefixSum** at current element 
 - iterate each element in array, 
 	- sum up `num` to `sum`, 
-	- update `result` with `Math.max(result, sum - minSum)`, 
-	- update `minSum` with `Math.min(minSum, sum)`
+	- update `result` with **`Math.max(result, sum - minSum)`**, 
+	- update `minSum` with **`Math.min(minSum, sum)`**
 - Time:  O(n)
 - Space:O(1)
 #### DP
@@ -117,7 +117,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNzA4MzM4NywxMjc1NDI5MzEwLDU2OD
+eyJoaXN0b3J5IjpbMTA1NDYwNTQ5OSwxMjc1NDI5MzEwLDU2OD
 M0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0
 OTYzMTgxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MD
 U0LC0xMzIwMDMxMTYzLC0xMjk2NjgyOTYsNDIwODMyOTEyLC0y
