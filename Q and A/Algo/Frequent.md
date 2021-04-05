@@ -12,6 +12,7 @@ etcode.com/problems/max-points-on-a-line/)
 - Time: O(n^2)
 - Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
+- define a max as result and initai
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)(https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
@@ -77,9 +78,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzOD
-I2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMTI5NjY4Mjk2
-LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2NDA4LDEzNj
-k5MTk4MjIsMTEyNDY1NDk2NSw1NzA4ODM1NDgsODg3MjE5NDcw
-LC0yMDQyNzI0NjE1LDM3NzM3ODUwNSw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbLTE0Nzc2ODMwMjgsNDk2MzE4MTcsMTA0OD
+gzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2
+MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNj
+MzNTY2NDA4LDEzNjk5MTk4MjIsMTEyNDY1NDk2NSw1NzA4ODM1
+NDgsODg3MjE5NDcwLC0yMDQyNzI0NjE1LDM3NzM3ODUwNSw2Nz
+UxNjM2MV19
 -->
