@@ -107,7 +107,15 @@ result.append(c);
 - 当遍历到「左括号」的时候，「左括号」数量加 1
 2. 我们设计变量 leftCount 和 rightCount 分别表示在遍历的过程中已经遍历到的左括号和右括号的数量，统计它们是为了方便 剪枝。这是因为 只有当「已经遍历到的左括号的数量」严格大于「已经遍历到的右括号的数量」的时候，才可以继续添加「右括号」
 ```
-
+/*
+* @param index 当前遍历到的下标  
+* @param leftCount 已经遍历到的左括号的个数  
+* @param rightCount 已经遍历到的右括号的个数  
+* @param leftRemove 最少应该删除的左括号的个数  
+* @param rightRemove 最少应该删除的右括号的个数  
+* @param path 一个可能的结果
+* */
+void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemove, StringBuilder path)
 ```
 
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
@@ -172,11 +180,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTA2MzAyODgsMjEwNTkzODg0NCwtMT
-k2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3
-NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4OD
-M3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYz
-LC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2Mz
-M1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0
-OF19
+eyJoaXN0b3J5IjpbMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOT
+Y3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2
+Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mz
+c5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjMs
+LTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwtMTYzMz
+U2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5NjUsNTcwODgzNTQ4
+XX0=
 -->
