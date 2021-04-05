@@ -145,13 +145,12 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 #### DP
 - 定义f[i][j]为word1前i个字符到word2的前j个字符的转化的最小步。**`int[][] dp = new int[length1+1][length2+1];`**
 - 假设对于f[i][j]以前的之都已知，考虑f[i][j]的情形
-	- 若word1[i] = word2[j]，那么说明只要word1的前i-1个能转换到word2的前j-1个即可，所以 **`f[i][j] = f[i-1][j-1`]**
-	- 反之，若不等
-		- 给word1插入一个和word2最后的字母相同的字母，这时word1和word2的最后一个字母就一样了，此时编辑距离等于1（插入操作） + 插入前的word1到word2去掉最后一个字母后的编辑距离 **`f[i][j] = f[i][j - 1] + 1`;** , 
-			- 例从ab --> cd: 我们可以计算从 ab --> c 的距离，也就是 f[i][j - 1]，最后再在尾部加上d，距离+1
-		- 删除word1的最后一个字母, 此时编辑距离等于1（删除操作） + word1去掉最后一个字母到word2的编辑距离 **`f[i][j] = f[i - 1][j] + 1`**, 
-			- 例从ab --> cd: 我们计算先删除b，先+1，再加上从 a --> cd 的距离： f[i - 1][j] ，
-		- 把word1的最后一个字母替换成word2的最后一个字母, 此时编辑距离等于 1（替换操作） + word1和word2去掉最后一个字母的编辑距离。为 **`f[i][j] = f[i - 1][j - 1] + 1`**
+	1. 若word1[i] = word2[j]，那么说明只要word1的前i-1个能转换到word2的前j-1个即可，所以 **`f[i][j] = f[i-1][j-1`]**, 反之，若不等
+	2. 给word1插入一个和word2最后的字母相同的字母，这时word1和word2的最后一个字母就一样了，此时编辑距离等于1（插入操作） + 插入前的word1到word2去掉最后一个字母后的编辑距离 **`f[i][j] = f[i][j - 1] + 1`;** , 
+		- 例从ab --> cd: 我们可以计算从 ab --> c 的距离，也就是 f[i][j - 1]，最后再在尾部加上d，距离+1
+	3. 删除word1的最后一个字母, 此时编辑距离等于1（删除操作） + word1去掉最后一个字母到word2的编辑距离 **`f[i][j] = f[i - 1][j] + 1`**, 
+		- 例从ab --> cd: 我们计算先删除b，先+1，再加上从 a --> cd 的距离： f[i - 1][j] ，
+	4. 把word1的最后一个字母替换成word2的最后一个字母, 此时编辑距离等于 1（替换操作） + word1和word2去掉最后一个字母的编辑距离。为 **`f[i][j] = f[i - 1][j - 1] + 1`**
 	- 三者取最小值即可
 		```
 		if (word1.charAt(i - 1) == word2.charAt(j - 1)) {  
@@ -207,7 +206,6 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 ### [31. Next Permutation(Medium)](https://leetcode.com/problems/next-permutation/)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
-### [266. palindrome-permutation(Easy)](https://www.jiuzhang.com/solutions/palindrome-permutation)
 ### Check if contiguous subarray sum can be equals to K
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
@@ -225,11 +223,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUzNjg2NzM0LC0xMDIxOTM5ODE2LDE2OD
-Q5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5
-MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2Myw4Nz
-E3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5Nzks
-MzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMzExNjMsLTEyOT
-Y2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwtMTYzMzU2NjQw
-OF19
+eyJoaXN0b3J5IjpbLTExNDI0ODkzNTksLTEwMjE5Mzk4MTYsMT
+Y4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5
+ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLD
+g3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3
+OSwzNTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMDAzMTE2MywtMT
+I5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0xNjMzNTY2
+NDA4XX0=
 -->
