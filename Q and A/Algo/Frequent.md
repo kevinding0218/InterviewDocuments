@@ -58,9 +58,10 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [266. palindrome-permutation(Easy)](https://www.jiuzhang.com/solutions/palindrome-permutation)
 ### Check if contiguous subarray sum can be equals to K
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
+### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MTkxNzU3OCw0MjA4MzI5MTIsLTI5MD
+eyJoaXN0b3J5IjpbMTc0MzY5ODk3NCw0MjA4MzI5MTIsLTI5MD
 c5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5
 NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNz
 czNzg1MDUsNjc1MTYzNjFdfQ==
