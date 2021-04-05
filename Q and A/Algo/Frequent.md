@@ -22,7 +22,7 @@
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
-### [349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
+### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
 ### read-n-characters-given-read4
 ### read-n-characters-given-read4-stream-II
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
@@ -32,5 +32,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0ODg5OTIxNyw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbLTE4MDUzMjg1OTIsNjc1MTYzNjFdfQ==
 -->
