@@ -100,6 +100,15 @@ result.append(c);
 ##### Space:O(n)
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)
 #### DFS
+1. 一次遍历计算出多余的「左括号」和「右括号」
+- 当遍历到「右括号」的时候，
+	- 如果此时「左括号」的数量不为 0，因为 「右括号」可以与之前遍历到的「左括号」匹配，此时「左括号」出现的次数 -1；
+	- 如果此时「左括号」的数量为 00，「右括号」数量加 1；
+- 当遍历到「左括号」的时候，「左括号」数量加 1
+2. 我们设计变量 leftCount 和 rightCount 分别表示在遍历的过程中已经遍历到的左括号和右括号的数量，统计它们是为了方便 剪枝。这是因为 只有当「已经遍历到的左括号的数量」严格大于「已经遍历到的右括号的数量」的时候，才可以继续添加「右括号」
+```
+
+```
 
 ### [32. Longest Valid Parentheses(Hard)](https://leetcode.com/problems/longest-valid-parentheses/)
 ### [72. Edit Distance(Hard)](https://leetcode.com/problems/edit-distance/)
@@ -163,11 +172,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1OTg2MjIsMjEwNTkzODg0NCwtMTk2Nz
-k4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMs
-ODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4ODM3OT
-c5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYzLC0x
-Mjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2MzM1Nj
-Y0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0OF19
-
+eyJoaXN0b3J5IjpbLTEzOTA2MzAyODgsMjEwNTkzODg0NCwtMT
+k2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3
+NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgxNywxMDQ4OD
+M3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0LC0xMzIwMDMxMTYz
+LC0xMjk2NjgyOTYsNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2Mz
+M1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0
+OF19
 -->
