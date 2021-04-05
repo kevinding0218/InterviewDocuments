@@ -57,11 +57,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 ### [266. palindrome-permutation(Easy)](https://www.jiuzhang.com/solutions/palindrome-permutation)
 ### Check if contiguous subarray sum can be equals to K
-
+### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIwODMyOTEyLC0yOTA3OTA0OTQsLTE2Mz
-M1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0OTY1LDU3MDg4MzU0
-OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMzc3Mzc4NTA1LDY3NT
-E2MzYxXX0=
+eyJoaXN0b3J5IjpbLTI1MTkxNzU3OCw0MjA4MzI5MTIsLTI5MD
+c5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5
+NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNz
+czNzg1MDUsNjc1MTYzNjFdfQ==
 -->
