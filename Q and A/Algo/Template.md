@@ -6,12 +6,11 @@
 private static ListNode reverseList(ListNode head) {  
   ListNode prev = null;  
     ListNode cur = head;  
-  
     while (cur != null) {  
-  ListNode next = cur.next;  
-        cur.next = prev;  
-        prev = cur;  
-        cur = next;  
+	  ListNode next = cur.next;  
+      cur.next = prev;  
+      prev = cur;  
+      cur = next;  
     }  
   return prev;  
 }
@@ -43,6 +42,5 @@ private static ListNode findMiddleNode(ListNode head) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTI1NDYxMDIsLTE2MjUzMDEwNDZdfQ
-==
+eyJoaXN0b3J5IjpbLTU1ODYwNzEzNiwtMTYyNTMwMTA0Nl19
 -->
