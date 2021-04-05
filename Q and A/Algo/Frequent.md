@@ -22,10 +22,10 @@ etcode.com/problems/max-points-on-a-line/)
 - Space:O(1)
 #### DP
 - max subarray sum at element i can be formalized as `f(i) = max(f(i-1) + A[i], A[i])
-- we can just use array as dp array because we're always iterating forward and never come back
+- we can just use array `num` as `dp` array because we're always iterating forward and never come back
 - initialize result as 1st element in array
 - iterate each element in array from 2nd element
-	- calculate current max subarray sum at element i as `nums[i] = Math.max(nums[i], nums[i-1]+nums[i])`
+	- calculate current max subarray sum at element i as `dp[i] = Math.max(nums[i], dp[i-1]+nums[i])`
 	- update result with `Math.max(max, nums[i])`
 - Time:  O(n)
 - Space:O(1)
@@ -45,7 +45,7 @@ etcode.com/problems/max-points-on-a-line/)
 - define `max1`: max sub array ending with arr[i] or array[i-1] with skipping one element, , initialize as 1st element
 - iterate through array and update max1 then max0 (because max1 uses previous max0 and we start from 2nd element)
 	- update `max1` as `max1 = Math.max(max1 + arr[i], max0) `, meaning skipping array[i-1] or array[i]
-	- update `max0` as `Math.max(max0 + arr[i], arr[i])` meaning not skipping any element
+	- update `max0` as `Math.max(max0 + arr[i], arr[i])` meaning not skipping any element, same as without deleting element
 	- update `result` as `max(result, max0, max1)`
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**]
@@ -112,11 +112,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MTMyMDMzNSw1NjgzNDIwMzEsNzYyOT
-MzNzYzLDg3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0
-ODgzNzk3OSwzNTEzODI2NjIsMTExMjEyNDA1NCwtMTMyMDAzMT
-E2MywtMTI5NjY4Mjk2LDQyMDgzMjkxMiwtMjkwNzkwNDk0LC0x
-NjMzNTY2NDA4LDEzNjk5MTk4MjIsMTEyNDY1NDk2NSw1NzA4OD
-M1NDgsODg3MjE5NDcwLC0yMDQyNzI0NjE1LDM3NzM3ODUwNV19
-
+eyJoaXN0b3J5IjpbLTE1NDA0NTc3MDksNTY4MzQyMDMxLDc2Mj
+kzMzc2Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEw
+NDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMjQwNTQsLTEzMjAwMz
+ExNjMsLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MDc5MDQ5NCwt
+MTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5NjUsNTcwOD
+gzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNzczNzg1MDVd
+fQ==
 -->
