@@ -21,13 +21,12 @@ private static ListNode findMiddleNode(ListNode head) {
     dummy.next = head;  
     ListNode slow = dummy, fast = dummy;  
     while (fast != null && fast.next != null) {  
-  slow = slow.next;  
+		slow = slow.next;  
         fast = fast.next.next;  
     }  
-  
   return slow;  
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzczMDQ4NTZdfQ==
+eyJoaXN0b3J5IjpbLTE2MjUzMDEwNDZdfQ==
 -->
