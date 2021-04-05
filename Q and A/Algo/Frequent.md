@@ -17,6 +17,8 @@
 ### [680. Valid Palindrome II (Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
 ### 124. BinaryTreeMaximumPathSum (Hard)
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
+### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
+### [349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MjMwOTg0Niw2NzUxNjM2MV19
+eyJoaXN0b3J5IjpbLTYxMTM3NDY1Myw2NzUxNjM2MV19
 -->
