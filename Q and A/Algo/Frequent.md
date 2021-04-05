@@ -21,6 +21,8 @@
 ### [680. Valid Palindrome II(Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
 ### [1332. Remove Pallindrome Subsequence(Medium)](https://leetcode.com/problems/remove-palindromic-subsequences/)
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+#### follow up - nary
+- 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
@@ -65,11 +67,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 ### [304. Range Sum Query 2D - Immutable(Medium)](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
-### [560. Subarray Sum Equals K]
+### [560. Subarray Sum Equals K(Medium)](https://leetcode.com/problems/subarray-sum-equals-k/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTExNTY4MTEsNDIwODMyOTEyLC0yOT
-A3OTA0OTQsLTE2MzM1NjY0MDgsMTM2OTkxOTgyMiwxMTI0NjU0
-OTY1LDU3MDg4MzU0OCw4ODcyMTk0NzAsLTIwNDI3MjQ2MTUsMz
-c3Mzc4NTA1LDY3NTE2MzYxXX0=
+eyJoaXN0b3J5IjpbLTEyOTY2ODI5Niw0MjA4MzI5MTIsLTI5MD
+c5MDQ5NCwtMTYzMzU2NjQwOCwxMzY5OTE5ODIyLDExMjQ2NTQ5
+NjUsNTcwODgzNTQ4LDg4NzIxOTQ3MCwtMjA0MjcyNDYxNSwzNz
+czNzg1MDUsNjc1MTYzNjFdfQ==
 -->
