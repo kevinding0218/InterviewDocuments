@@ -76,8 +76,24 @@ for (var num: nums) {
 ##### Space: O(K)
 ### HashSet/HashMap
 #### When asked about find duplicate element or given a known target and known element A, find if there is another elment B that can formulized with A to be target
+
+
+### Remove Duplicate that only can appeark K times
+```
+public static int removeDuplicatesMoreThanKTimes(int[] nums, int k) {  
+  if (nums == null || nums.length == 0) return 0;  
+    if (nums.length < k + 1) return nums.length;  
+    int count = k;  
+    for (int read = k; read < nums.length; read++) {  
+  if (nums[read] > nums[count - k]) {  
+  nums[count] = nums[read];  
+            count ++;  
+        }  
+ }  return count;  
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MzMwMDkzNCwxNzU2MDE2ODQ1LDIwMz
-Q1NDc5MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLTE1MDU4NDcw
-NTQsLTE2MjUzMDEwNDZdfQ==
+eyJoaXN0b3J5IjpbLTEwOTYwODM4MjksMTc1NjAxNjg0NSwyMD
+M0NTQ3OTM0LC02MDE3NzQ1ODcsODk0NjUwODM1LC0xNTA1ODQ3
+MDU0LC0xNjI1MzAxMDQ2XX0=
 -->
