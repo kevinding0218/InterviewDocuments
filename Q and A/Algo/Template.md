@@ -77,7 +77,8 @@ for (var num: nums) {
 ### HashSet/HashMap
 #### When asked about find duplicate element or given a known target and known element A, find if there is another elment B that can formulized with A to be target
 #### When asked about frequency of character/string appearances, usually combined usage with Priority Queue to sort by appearance count
-### Sliding Win
+### Sliding Window
+#### Find something/scenario in continuing sub string 
 
 ### Remove Duplicate that only can appeark K times
 ```
@@ -95,7 +96,7 @@ public static int removeDuplicatesMoreThanKTimes(int[] nums, int k) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMDcwMzQ0OSwtOTgwNDc3NjQ5LDE3NT
-YwMTY4NDUsMjAzNDU0NzkzNCwtNjAxNzc0NTg3LDg5NDY1MDgz
-NSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbMzI0NTQ3OTQ3LC05ODA0Nzc2NDksMTc1Nj
+AxNjg0NSwyMDM0NTQ3OTM0LC02MDE3NzQ1ODcsODk0NjUwODM1
+LC0xNTA1ODQ3MDU0LC0xNjI1MzAxMDQ2XX0=
 -->
