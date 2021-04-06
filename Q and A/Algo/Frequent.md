@@ -281,7 +281,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - declare a global int `bufCount` to indicate total characters read count from read4 each time
 - declare a global int `offset` to indicate how many characters left in last time that needs to continue reading
 - while (!eof && total < n) we keep read from file by `read4`， each time 
-	- read
+	- `(bufCount == 0` meaning all elements have been finished reading last time
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -334,11 +334,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYxMzIzNzgsMTY3MjA2NTY5MywtODc4OT
-QxMTA3LDc1NTM0MDg4NiwtMTYyMjA3MDgxOSwxODM0OTkwMzAw
-LC0yMDgwMjgzNjU0LC0xNjg3MDcwNjY2LDIxMzE1NzkxMDksMj
-A2OTg4ODQxMiwyMDA2NzIzMDUxLDUyNzkwMTc4LDc4ODI4MzI4
-NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2LDE2ODQ5MTk4MTksMT
-E4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5MTM1LDEyNzU0
-MjkzMTBdfQ==
+eyJoaXN0b3J5IjpbLTEwMTUzMTYwNjAsMTY3MjA2NTY5MywtOD
+c4OTQxMTA3LDc1NTM0MDg4NiwtMTYyMjA3MDgxOSwxODM0OTkw
+MzAwLC0yMDgwMjgzNjU0LC0xNjg3MDcwNjY2LDIxMzE1NzkxMD
+ksMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUyNzkwMTc4LDc4ODI4
+MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2LDE2ODQ5MTk4MT
+ksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5MTM1LDEy
+NzU0MjkzMTBdfQ==
 -->
