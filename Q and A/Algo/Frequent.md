@@ -195,6 +195,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - Check if S is empty, return 0
 - Otherwise check if S is palindrome by using two pointers, as long as there is unmatched character, meaning S is not palindrome, return 2
 - Else meaning S is palindrome, return 1
+##### Time: O(n)
+##### Space:O(1)
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 #### MaxHeap/PriorityQueue
 1. condition check when input is empty or input size less or equals than K
@@ -275,11 +277,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzEwMjI3NzIsMjA2OTg4ODQxMiwyMD
-A2NzIzMDUxLDUyNzkwMTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1
-LC0xMDIxOTM5ODE2LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMT
-A1OTM4ODQ0LC0xOTY3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQy
-MDMxLDc2MjkzMzc2Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5Nj
-MxODE3LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMjQwNTRd
-fQ==
+eyJoaXN0b3J5IjpbNDgwNzEwNDY2LDIwNjk4ODg0MTIsMjAwNj
+cyMzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwt
+MTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNT
+kzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAz
+MSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMT
+gxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0XX0=
+
 -->
