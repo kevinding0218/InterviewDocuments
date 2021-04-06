@@ -301,6 +301,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 4. 使用StringBuilder构造队列里面一个个poll出来的character组成String, 每次都decrement frequency[ch]
 #### Time: O(n)
 #### Space:O(n)
+#### Check TopKFrequentElements, TopKFrequentWords
 #### follow up, what if input is stream
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
@@ -340,5 +341,5 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjk0Mzg5ODFdfQ==
+eyJoaXN0b3J5IjpbLTczMDM2ODk0OV19
 -->
