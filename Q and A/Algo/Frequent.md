@@ -222,8 +222,9 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
 #### HashSet
 1. Validation about both inputs is null or length is 0
-2. Create a HashSet to store all element of nums1
-3. Iterator through nums2 check if any element contains in Set, if there is, meaning current element is duplicate, add into result
+2. Create HashSet1 to store all element of nums1, Create HashSet2 to store duplicate number if found
+3. Iterator through nums2 check if any element contains in HashSet1 , if there is, meaning current element is duplicate, add into HashSet2 
+4. Initialize result array of HashSet2.size(), add item into results
 ##### Time: O(n + m)
 ##### Space:O(min(n + m))
 #### Sort & Two Pointers
@@ -282,11 +283,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODcwNzA2NjYsMjEzMTU3OTEwOSwyMD
-Y5ODg4NDEyLDIwMDY3MjMwNTEsNTI3OTAxNzgsNzg4MjgzMjg0
-LDEwMzI2Njg4OTUsLTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMT
-g2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQy
-OTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTczMzkyNSw2Mz
-IxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3OSwzNTEzODI2NjJd
+eyJoaXN0b3J5IjpbMTgzODAxODQ0LC0xNjg3MDcwNjY2LDIxMz
+E1NzkxMDksMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUyNzkwMTc4
+LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2LDE2OD
+Q5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5
+MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2Myw4Nz
+E3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5Nzld
 fQ==
 -->
