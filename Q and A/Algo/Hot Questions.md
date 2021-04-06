@@ -312,7 +312,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	3. increment right
 	4. check current sliding window length if it's able to allow **`right - left > maxCount + k`**
 		- **if true, meaning current k is not enough**, move left point by decrement appearance of current left character **`freq[s.charAt(left) - 'A']--`** , then increment left **`left++`**
-		- if false, meaning current window can allow `maxCount + k` range
+		- **if false, meaning current window can allow** `maxCount + k` range, left remain same
 	5. update result by **`max(res, right - left)`**
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
@@ -351,6 +351,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMjQ5Mzc1NCwtNzIyNDE2ODM1LDQ5MD
+eyJoaXN0b3J5IjpbMTExNDkzODY2MSwtNzIyNDE2ODM1LDQ5MD
 g3NjY1Ml19
 -->
