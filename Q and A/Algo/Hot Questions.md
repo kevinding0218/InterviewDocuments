@@ -348,7 +348,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	1.我们需要将一个左边的「较小数」与一个右边的「较大数」交换，以能够让当前排列变大，从而得到下一个排列, 同时我们要让这个「较小数」尽量靠右，而「较大数」尽可能小。当交换完成后，「较大数」右边的数需要按照升序重新排列。
 	2.这样可以在保证新排列大于原来排列的情况下，使变大的幅度尽可能小。
 - 具体地，我们这样描述该算法，对于长度为 n 的排列a：
-	1.首先从后向前查找第一个顺序对 (i,i+1)，满足 a[i] < a[i+1]。这样「较小数」即为 a[i]。此时 [i+1,n) 必然是下降序列。
+	1.首先从后向前查找第一个顺序对 (descStart,descStart+1)，满足 `if (nums[descStart] < nums[descStart + 1])`。这样「较小数」即为 a[descStart]。**此时 [descStart+1,n) 必然是下降序列**。
 	2.如果找到了顺序对，那么在区间 [i+1,n) 中从后向前查找第一个元素 j 满足 a[i] < a[j]。这样「较大数」即为 a[j]a[j]。
 	3.交换 a[i] 与 a[j]，此时可以证明区间 [i+1,n) 必为降序。
 	4.我们可以直接使用双指针反转区间 [i+1,n) 使其变为升序，而无需对该区间进行排序。
@@ -357,11 +357,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Space:O(1)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 - 一次交换后字典序就变小，交换的两个数，肯定原先是大数在前，小数在后。交换后，小数换到前面来，大数换到后面去。那么有
-1. 从后向前查找第一个顺序对 (ascStart,ascStart+1)，满足 **`if (nums[ascStart] > nums[ascStart + 1])`**, 这样「较大数」即为 a[ascStart]。此时 [ascStart+1,n) 必然是上升序列
-2. 寻找在 A[ascStart] 最右边且小于 A[ascStart] 的最大的数字 A[smallerAscStart], 由于 A[smallerAscStart] < A[ascStart], 交换 A[ascStart] 与 A[smallerAscStart] 后的序列字典序一定小于当前字典序
-	- the second check to skip duplicate numbers **`if (nums[smallerAscStart] < nums[ascStart]  
-&& nums[smallerAscStart] != nums[smallerAscStart - 1])`**
-	- swap(nums, ascStart, smallerAscStart);
+	1. 从后向前查找第一个顺序对 (ascStart,ascStart+1)，满足 **`if (nums[ascStart] > nums[ascStart + 1])`**, 这样「较大数」即为 a[ascStart]。**此时 [ascStart+1,n) 必然是上升序列**
+	2. 寻找在 nums[ascStart] 最右边且小于 A[ascStart] 的最大的数字 nums[smallerAscStart], 由于 **`nums[smallerAscStart] < nums[ascStart]`**, 交换 nums[ascStart] 与 nums[smallerAscStart] 后的序列字典序一定小于当前字典序
+		- the second check to skip duplicate numbers **`if (nums[smallerAscStart] < nums[ascStart]  
+	&& nums[smallerAscStart] != nums[smallerAscStart - 1])`**
+		- swap(nums, ascStart, smallerAscStart);
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
@@ -378,7 +378,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyOTU4OTM5MSwxNjEwOTUxOTk2LC0yMj
-c0MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MDc3MTU2
-NjYsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
+eyJoaXN0b3J5IjpbNjg3MDY3ODA5LDE2MTA5NTE5OTYsLTIyNz
+QxNDY4NywtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2
+NiwtNzIyNDE2ODM1LDQ5MDg3NjY1Ml19
 -->
