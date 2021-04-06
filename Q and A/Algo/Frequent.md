@@ -292,6 +292,12 @@ if (index == 0 || num1 != intersection[index - 1]) {
 2. get tax to pay in current period that `tax += bracket[i][1] * payout` and add to result
 3. decrease salary by payout `salary -= payout;`
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
+1. 根据 s 构造 HashMap, 因为面向字母所以我们可以用int[]来存储每个character出现的个数,下标可以转换为(char[i])
+2. 然后我们构造一个priority queue/maxHeap用来排序, heap top store max appearance character,with comparetor can be `(a, b) -> frequency[b] - frequency[a]`
+3. 把所有frequency中不为0的character进队列
+4. 使用StringBuilder构造队列里面一个个poll出来的character组成String, 每次都decrement frequency[ch]
+#### Time: O(n)
+#### Space:O(n)
 #### follow up, what if input is stream
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
@@ -331,11 +337,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgyNDU2MjUsLTE0MTgwOTU2MTksMTY3Mj
-A2NTY5MywtODc4OTQxMTA3LDc1NTM0MDg4NiwtMTYyMjA3MDgx
-OSwxODM0OTkwMzAwLC0yMDgwMjgzNjU0LC0xNjg3MDcwNjY2LD
-IxMzE1NzkxMDksMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUyNzkw
-MTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2LD
-E2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOTY3
-OTg5MTM1XX0=
+eyJoaXN0b3J5IjpbNTkwMDY3MzIwLDM4MjQ1NjI1LC0xNDE4MD
+k1NjE5LDE2NzIwNjU2OTMsLTg3ODk0MTEwNyw3NTUzNDA4ODYs
+LTE2MjIwNzA4MTksMTgzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMT
+Y4NzA3MDY2NiwyMTMxNTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcy
+MzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMT
+AyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkz
+ODg0NF19
 -->
