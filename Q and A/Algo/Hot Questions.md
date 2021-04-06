@@ -362,6 +362,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- 注意:  the second check to skip duplicate numbers **`if (..
 	&& nums[smallerAscStart] != nums[smallerAscStart - 1])`**
 		- swap(nums, ascStart, smallerAscStart); 序列字典序一定小于当前字典序
+#### Time: O(n)
+#### Space:O(1)
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
@@ -378,7 +380,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMTM1OTkzMSwxNjEwOTUxOTk2LC0yMj
-c0MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MDc3MTU2
-NjYsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
+eyJoaXN0b3J5IjpbLTE4MzU2MDI5NTEsMTYxMDk1MTk5NiwtMj
+I3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3NzE1
+NjY2LC03MjI0MTY4MzUsNDkwODc2NjUyXX0=
 -->
