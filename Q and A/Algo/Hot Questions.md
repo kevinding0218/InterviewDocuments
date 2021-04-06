@@ -361,7 +361,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	2. 寻找在 nums[ascStart] 最右边且小于 A[ascStart] 的最大的数字 nums[smallerAscStart], 由于 **`nums[smallerAscStart] < nums[ascStart]`**, 交换 nums[ascStart] 与 nums[smallerAscStart] 后的序列字典序一定小于当前字典序
 		- 注意:  the second check to skip duplicate numbers **`if (..
 	&& nums[smallerAscStart] != nums[smallerAscStart - 1])`**
-		- swap(nums, ascStart, smallerAscStart);
+		- swap(nums, ascStart, smallerAscStart); 序列字典序一定小于当前字典序
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
@@ -378,7 +378,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDUzOTY0NDYsMTYxMDk1MTk5NiwtMj
-I3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3NzE1
-NjY2LC03MjI0MTY4MzUsNDkwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbMTIzMTM1OTkzMSwxNjEwOTUxOTk2LC0yMj
+c0MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MDc3MTU2
+NjYsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
 -->
