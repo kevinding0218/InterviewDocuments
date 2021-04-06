@@ -263,7 +263,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Queue Idea using array
 - declare an boolean `eof` to indicate if current read4 has read till end of file
 - declare a pointer `total` to indicate current position that reads from beginning to current length
-- define a char array `tmp` of size 4 to store `read4` content
+- declare a char array `tmp` of size 4 to store `read4` content
 - while (!eof && total < n) we keep read from file by `read4`， each time 
 	- declare a local int `count` to indicate total characters count from read4, 
 	- check `eof = count < 4`
@@ -272,7 +272,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(n/4)
 #### Space:O(1)
 ### [158. Read-n-characters-given-read4-stream-II]()
-
+- declare an boolean `eof` to indicate if current read4 has read till end of file
+- declare a pointer `total` to indicate current position that reads from beginning to current length
+- declare a char array `tmp` of size 4 to store `read4` content
+- 
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -325,11 +328,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3ODk0MTEwNyw3NTUzNDA4ODYsLTE2Mj
-IwNzA4MTksMTgzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMTY4NzA3
-MDY2NiwyMTMxNTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcyMzA1MS
-w1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMTAyMTkz
-OTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NC
-wtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5
-MzM3NjNdfQ==
+eyJoaXN0b3J5IjpbOTgyODgzODQ3LC04Nzg5NDExMDcsNzU1Mz
+QwODg2LC0xNjIyMDcwODE5LDE4MzQ5OTAzMDAsLTIwODAyODM2
+NTQsLTE2ODcwNzA2NjYsMjEzMTU3OTEwOSwyMDY5ODg4NDEyLD
+IwMDY3MjMwNTEsNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4
+OTUsLTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LD
+IxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1Njgz
+NDIwMzFdfQ==
 -->
