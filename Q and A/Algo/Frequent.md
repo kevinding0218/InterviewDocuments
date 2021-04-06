@@ -218,7 +218,8 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 - 先用 Quick Select 找到 kth closest point：O(n)；
 - 对 top k 个点按 distance metric sort 一遍：O(klogk)
 ### [349. Intersection of Two Arrays(Easy)](https://leetcode.com/problems/intersection-of-two-arrays/)
-
+#### HashSet
+#### Sort & Two Pointers
 ### read-n-characters-given-read4
 ### read-n-characters-given-read4-stream-II
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
@@ -274,11 +275,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk4NzQxMzQ0LDIwNjk4ODg0MTIsMjAwNj
-cyMzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwt
-MTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNT
-kzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAz
-MSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMT
-gxNywxMDQ4ODM3OTc5LDM1MTM4MjY2MiwxMTEyMTI0MDU0XX0=
-
+eyJoaXN0b3J5IjpbLTE5MzEwMjI3NzIsMjA2OTg4ODQxMiwyMD
+A2NzIzMDUxLDUyNzkwMTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1
+LC0xMDIxOTM5ODE2LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMT
+A1OTM4ODQ0LC0xOTY3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQy
+MDMxLDc2MjkzMzc2Myw4NzE3MzM5MjUsNjMyMTU3ODY3LDQ5Nj
+MxODE3LDEwNDg4Mzc5NzksMzUxMzgyNjYyLDExMTIxMjQwNTRd
+fQ==
 -->
