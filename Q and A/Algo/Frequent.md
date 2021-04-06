@@ -265,9 +265,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - declare a pointer `total` to indicate current position that reads from beginning to current length
 - declare a char array `tmp` of size 4 to store `read4` content
 - while (!eof && total < n) we keep read from file by `read4`， each time 
-	- declare a local int `count` to indicate total characters count from read4, 
-	- check `eof = count < 4`
-	- update `count = Math.min(count, n - total)` in case current read4 returns more than what we need
+	- declare a local int `bufCount` to indicate total characters count from read4, 
+	- check `eof = bufCount< 4`
+	- update `bufCount= Math.min(bufCount, n - total)` in case current read4 returns more than what we need to just total of n characters
 	- update result as `buf[total++] = tmp[0 ~ count]`
 #### Time: O(n/4)
 #### Space:O(1)
@@ -328,11 +328,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgyODgzODQ3LC04Nzg5NDExMDcsNzU1Mz
-QwODg2LC0xNjIyMDcwODE5LDE4MzQ5OTAzMDAsLTIwODAyODM2
-NTQsLTE2ODcwNzA2NjYsMjEzMTU3OTEwOSwyMDY5ODg4NDEyLD
-IwMDY3MjMwNTEsNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4
-OTUsLTEwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LD
-IxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1Njgz
-NDIwMzFdfQ==
+eyJoaXN0b3J5IjpbLTE1NTE2MzE0MywtODc4OTQxMTA3LDc1NT
+M0MDg4NiwtMTYyMjA3MDgxOSwxODM0OTkwMzAwLC0yMDgwMjgz
+NjU0LC0xNjg3MDcwNjY2LDIxMzE1NzkxMDksMjA2OTg4ODQxMi
+wyMDA2NzIzMDUxLDUyNzkwMTc4LDc4ODI4MzI4NCwxMDMyNjY4
+ODk1LC0xMDIxOTM5ODE2LDE2ODQ5MTk4MTksMTE4Njk3MTcyNS
+wyMTA1OTM4ODQ0LC0xOTY3OTg5MTM1LDEyNzU0MjkzMTAsNTY4
+MzQyMDMxXX0=
 -->
