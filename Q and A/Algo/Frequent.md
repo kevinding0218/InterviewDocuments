@@ -245,17 +245,20 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 1. 要求每个元素至少出现1次，即数组大小至少得从`2`开始遍历有意义, **`validation about null/length = 0/length < 2`**
 2. Initiate count = 1, 即前1个元素不用管, 从第2个元素（以1为下标）开始read，每次和之前（read - 1）的元素比较, read每次移一步，包括遇到相同的元素
-3. 遇到不同的元素时，此时read已经跳过之前在[count - 1 ~ read - 1]区间内重复的元素,  写入那个元素(写指针为0时即数组的第一个元素，写指针开始于1)并递增count
+3. 遇到不同的元素时，此时read已经跳过之前在[count - 1 ~ read - 1]区间内重复的元素,  写入那个元素并递增count
 5. 最后数组下标 0 - count 部分即为去重后的数组,数组长度为count
 #### Time: O(n)
 #### Space:O(1)
-#### Remove duplicate that only allow duplicate appears at k times
+#### Follow up: Remove duplicate that only allow duplicate appears at k times
 1. 要求每个元素至少出现1次，即数组大小至少得从`k+1`开始遍历有意义, **`validation about null/length = 0/length < k`**
 2. Initiate count = k, 即前k个元素不用管, 从第k+1个元素(以k为下标)开始read，每次和之前的元素比较, read每次移一步，包括遇到相同的元素
 3. compare current iteration element with its prev (read - k) index value
 	- if the values are equal, do nothing and move forward
 	- otherwise, replace with array[count] once different value found, count++
-	- 
+	- initially the 1st different value will be replaced at array[k]
+4. eventually array element from index 0 to count - 1 will be replaced with number of k times of
+#### Time: O(n)
+#### Space:O(1)
 ### read-n-characters-given-read4
 ### read-n-characters-given-read4-stream-II
 
@@ -311,11 +314,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMDQ4MjI4OSwxODM0OTkwMzAwLC0yMD
-gwMjgzNjU0LC0xNjg3MDcwNjY2LDIxMzE1NzkxMDksMjA2OTg4
-ODQxMiwyMDA2NzIzMDUxLDUyNzkwMTc4LDc4ODI4MzI4NCwxMD
-MyNjY4ODk1LC0xMDIxOTM5ODE2LDE2ODQ5MTk4MTksMTE4Njk3
-MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5MTM1LDEyNzU0MjkzMT
-AsNTY4MzQyMDMxLDc2MjkzMzc2Myw4NzE3MzM5MjUsNjMyMTU3
-ODY3XX0=
+eyJoaXN0b3J5IjpbLTE2MjIwNzA4MTksMTgzNDk5MDMwMCwtMj
+A4MDI4MzY1NCwtMTY4NzA3MDY2NiwyMTMxNTc5MTA5LDIwNjk4
+ODg0MTIsMjAwNjcyMzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMT
+AzMjY2ODg5NSwtMTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5
+NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5Mz
+EwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1
+Nzg2N119
 -->
