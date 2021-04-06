@@ -291,6 +291,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 1. loop through brackets starting from index 1 and while salary > 0, calculate in current brancket range, how much salary needs to pay out by `double payout = min(bracket[i][0] - bracket[i-1][0], salary);`
 2. get tax to pay in current period that `tax += bracket[i][1] * payout` and add to result
 3. decrease salary by payout `salary -= payout;`
+#### Time:O(bracket.size())
+#### Space:O(1)
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 1. 根据 s 构造 HashMap, 因为面向字母所以我们可以用int[]来存储每个character出现的个数,下标可以转换为(char[i])
 2. 然后我们构造一个priority queue/maxHeap用来排序, heap top store max appearance character,with comparetor can be `(a, b) -> frequency[b] - frequency[a]`
@@ -337,11 +339,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MTMwMzUwMiwzODI0NTYyNSwtMTQxOD
-A5NTYxOSwxNjcyMDY1NjkzLC04Nzg5NDExMDcsNzU1MzQwODg2
-LC0xNjIyMDcwODE5LDE4MzQ5OTAzMDAsLTIwODAyODM2NTQsLT
-E2ODcwNzA2NjYsMjEzMTU3OTEwOSwyMDY5ODg4NDEyLDIwMDY3
-MjMwNTEsNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUsLT
-EwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5
-Mzg4NDRdfQ==
+eyJoaXN0b3J5IjpbNDQ5OTc3NzY4LDM4MjQ1NjI1LC0xNDE4MD
+k1NjE5LDE2NzIwNjU2OTMsLTg3ODk0MTEwNyw3NTUzNDA4ODYs
+LTE2MjIwNzA4MTksMTgzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMT
+Y4NzA3MDY2NiwyMTMxNTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcy
+MzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMT
+AyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkz
+ODg0NF19
 -->
