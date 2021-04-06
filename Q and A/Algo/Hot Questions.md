@@ -295,7 +295,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Space:O(1)
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 #### HashMap & PriorityQueue
-1. 根据 s 构造 HashMap, 因为面向字母所以我们可以用int[]来存储每个character出现的个数,下标可以转换为(char[i])
+1. 根据 s 构造 HashMap, 因为面向字母所以我们可以用int[]来存储每个character出现的个数,下标可以直接(char[i])
 2. 然后我们构造一个priority queue/maxHeap用来排序, heap top store max appearance character,with comparetor can be `(a, b) -> frequency[b] - frequency[a]`
 3. 把所有frequency中不为0的character进队列, 此时队列里面最顶端为出现次数最大的character
 4. 使用StringBuilder构造队列里面一个个poll出来的character组成String, 每次都decrement frequency[ch]
@@ -305,7 +305,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### follow up, what if input is stream
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
 #### HashMap & Sliding Window
-- 
+- declare a HashMap to store character with its appearance count in current window
+- Move right pointer from 0 ~ len, 
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -343,5 +344,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
+eyJoaXN0b3J5IjpbLTEzMTg4NTIwMywtNzIyNDE2ODM1LDQ5MD
+g3NjY1Ml19
 -->
