@@ -261,7 +261,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Space:O(1)
 ### [Read-n-characters-given-read4](https://aaronice.gitbook.io/lintcode/data_structure/read-n-characters-given-read4)
 #### Queue Idea using array
-
+- declare an boolean `eof` to indicate if current read4 has read till end of fi
 ### Read-n-characters-given-read4-stream-II
 
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
@@ -316,11 +316,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NzQ3Mzc4Nyw3NTUzNDA4ODYsLTE2Mj
-IwNzA4MTksMTgzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMTY4NzA3
-MDY2NiwyMTMxNTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcyMzA1MS
-w1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMTAyMTkz
-OTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NC
-wtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5
-MzM3NjNdfQ==
+eyJoaXN0b3J5IjpbNTE0MjkxNzAxLDc1NTM0MDg4NiwtMTYyMj
+A3MDgxOSwxODM0OTkwMzAwLC0yMDgwMjgzNjU0LC0xNjg3MDcw
+NjY2LDIxMzE1NzkxMDksMjA2OTg4ODQxMiwyMDA2NzIzMDUxLD
+UyNzkwMTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5
+ODE2LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC
+0xOTY3OTg5MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2Mjkz
+Mzc2M119
 -->
