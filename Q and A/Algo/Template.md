@@ -74,8 +74,10 @@ for (var num: nums) {
 ```
 ##### Time: O(logK) offer/poll
 ##### Space: O(K)
+### HashSet/HashMap
+#### When asked about find duplicate
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MzIyNDAzLDE3NTYwMTY4NDUsMjAzND
-U0NzkzNCwtNjAxNzc0NTg3LDg5NDY1MDgzNSwtMTUwNTg0NzA1
-NCwtMTYyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbLTg3NDczMDE4NiwxNzU2MDE2ODQ1LDIwMz
+Q1NDc5MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLTE1MDU4NDcw
+NTQsLTE2MjUzMDEwNDZdfQ==
 -->
