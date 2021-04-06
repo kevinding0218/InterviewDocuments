@@ -334,6 +334,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 
 
 ### [283. Move Zeroes(Easy)](https://leetcode.com/problems/move-zeroes/)
+####  Two Pointers
+- 使用两个指针right和left
+	1. 将两个指针先指向0，即数组头部
+	2. right向后扫描，当遇到非0数即nums[right] != 0时，将其赋值给left指针指向的位置，即nums[left] = nums[right]，并将left向后移动一位
+	3. 
 ### [31. Next Permutation(Medium)](https://leetcode.com/problems/next-permutation/)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 ### Check if contiguous subarray sum can be equals to K
@@ -353,6 +358,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA3NzE1NjY2LC03MjI0MTY4MzUsNDkwOD
-c2NjUyXX0=
+eyJoaXN0b3J5IjpbMTY4NTMxNTA2Myw0MDc3MTU2NjYsLTcyMj
+QxNjgzNSw0OTA4NzY2NTJdfQ==
 -->
