@@ -231,7 +231,17 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 1. Sort two arrays: O(nlogN + mlogM)
 2. Create HashSet1 to store duplicate number if found
 3. Two pointers iterative through each array
-	- if num1 < num2, increase index
+	- if num1 < num2, increase index1
+	- if num1 > num2, increase index2
+	- otherwise insert into result array also check if current element was in array before
+```
+// 保证加入元素的唯一性  
+if (index == 0 || num1 != intersection[index - 1]) {  
+  intersection[index++] = num1;  
+}
+```
+#### Time: O(mlogm+nlogn)
+#### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
 ### read-n-characters-given-read4
 ### read-n-characters-given-read4-stream-II
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
@@ -287,7 +297,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYyOTQ2MDU4LC0xNjg3MDcwNjY2LDIxMz
+eyJoaXN0b3J5IjpbOTA5MjE1MjYyLC0xNjg3MDcwNjY2LDIxMz
 E1NzkxMDksMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUyNzkwMTc4
 LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2LDE2OD
 Q5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5
