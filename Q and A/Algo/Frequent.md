@@ -268,7 +268,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- declare a local int `bufCount` to indicate total characters read count from read4 as `int bufCount = read4(buffer);`
 	- check `eof = bufCount< 4`
 	- update `bufCount= Math.min(bufCount, n - total)` in case current read4 returns more than what we need to just total of n characters
-	- update result as `buf[total++] = tmp[0 ~ count]`
+	- update result as `buf[total++] = buffer[0 ~ count]`
 #### Time: O(n/4)
 #### Space:O(1)
 ### [158. Read-n-characters-given-read4-stream-II]()
@@ -283,7 +283,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - while (!eof && total < n) we keep read from file by `read4`， each time 
 	- `(bufCount == 0` meaning all elements have been finished reading last time, if so, we continue calling `bufCount = read4(buffer);` and check `eof = bufCount < 4`
 	- declare a local variable `used = min(bufCount, n - total)` to indicate how many character should be used current round
-	- update result as `buf[total+] = tmp[0 ~ count]`
+	- update result as `buf[total+i] = buffer[offset + i]`
+	- update `total += used`, `bufCount -= used` and `offset = (offset + used) % 4`
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -336,11 +337,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUxNjE4MjU4LDE2NzIwNjU2OTMsLTg3OD
-k0MTEwNyw3NTUzNDA4ODYsLTE2MjIwNzA4MTksMTgzNDk5MDMw
-MCwtMjA4MDI4MzY1NCwtMTY4NzA3MDY2NiwyMTMxNTc5MTA5LD
-IwNjk4ODg0MTIsMjAwNjcyMzA1MSw1Mjc5MDE3OCw3ODgyODMy
-ODQsMTAzMjY2ODg5NSwtMTAyMTkzOTgxNiwxNjg0OTE5ODE5LD
-ExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMjc1
-NDI5MzEwXX0=
+eyJoaXN0b3J5IjpbMTMzNTY3MDY1MywxNjcyMDY1NjkzLC04Nz
+g5NDExMDcsNzU1MzQwODg2LC0xNjIyMDcwODE5LDE4MzQ5OTAz
+MDAsLTIwODAyODM2NTQsLTE2ODcwNzA2NjYsMjEzMTU3OTEwOS
+wyMDY5ODg4NDEyLDIwMDY3MjMwNTEsNTI3OTAxNzgsNzg4Mjgz
+Mjg0LDEwMzI2Njg4OTUsLTEwMjE5Mzk4MTYsMTY4NDkxOTgxOS
+wxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5ODkxMzUsMTI3
+NTQyOTMxMF19
 -->
