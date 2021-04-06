@@ -268,7 +268,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- declare a local int `count` to indicate total characters count from read4, 
 	- check `eof = count < 4`
 	- update `count = Math.min(count, n - total)` in case current read4 returns more than what we need
-	- update resu
+	- update result as `buf[total++] = tmp[0 ~ count]`
+#### Time: O(n/k)
 ### Read-n-characters-given-read4-stream-II
 
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
@@ -323,7 +324,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTk2MTc3NDIsNzU1MzQwODg2LC0xNj
+eyJoaXN0b3J5IjpbLTEwODAzNTEwNjUsNzU1MzQwODg2LC0xNj
 IyMDcwODE5LDE4MzQ5OTAzMDAsLTIwODAyODM2NTQsLTE2ODcw
 NzA2NjYsMjEzMTU3OTEwOSwyMDY5ODg4NDEyLDIwMDY3MjMwNT
 EsNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUsLTEwMjE5
