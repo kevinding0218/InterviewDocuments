@@ -356,7 +356,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(n)
 #### Space:O(1)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
-- 这道题目的关键是 按字典序排列小于 A 的最大可能排列， 那么有对当前序列进行逆序查找，找到第一个降序的位置 i，使得 A[i]>A[i+1]
+- 一次交换后字典序就变小，交换的两个数，肯定原先是大数在前，小数在后。交换后，小数换到前面来，大数换到后面去。那么有
 	- 由于 A[i]>A[i+1]，必能构造比当前字典序小的序列
 	- 由于逆序查找，交换 A[i] 为最优解
 - 寻找在 A[i] 最左边且小于 A[i] 的最大的数字 A[j]
@@ -379,7 +379,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mj
-g5MDAyNjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4
-MzUsNDkwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbOTE0NjYyMDk4LDE2MTA5NTE5OTYsLTIyNz
+QxNDY4NywtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2
+NiwtNzIyNDE2ODM1LDQ5MDg3NjY1Ml19
 -->
