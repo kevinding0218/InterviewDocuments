@@ -242,9 +242,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ```
 #### Time: O(mlogm+nlogn)
 #### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
+### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+
 ### read-n-characters-given-read4
 ### read-n-characters-given-read4-stream-II
-### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -297,11 +299,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA5MjE1MjYyLC0xNjg3MDcwNjY2LDIxMz
-E1NzkxMDksMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUyNzkwMTc4
-LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2LDE2OD
-Q5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5
-MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2Myw4Nz
-E3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5Nzld
-fQ==
+eyJoaXN0b3J5IjpbLTIwODAyODM2NTQsLTE2ODcwNzA2NjYsMj
+EzMTU3OTEwOSwyMDY5ODg4NDEyLDIwMDY3MjMwNTEsNTI3OTAx
+NzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUsLTEwMjE5Mzk4MTYsMT
+Y4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5
+ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLD
+g3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3
+OV19
 -->
