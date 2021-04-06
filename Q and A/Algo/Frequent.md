@@ -226,8 +226,10 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 3. Iterator through nums2 check if any element contains in HashSet1 , if there is, meaning current element is duplicate, add into HashSet2 
 4. Initialize result array of HashSet2.size(), add item into results
 ##### Time: O(n + m)
-##### Space:O(min(n + m))
+##### Space:O(n or m)) - can improve by choosing min(n, m)
 #### Sort & Two Pointers
+1. Sort two arrays: O(nlogN + mlogM)
+2. Two pointers
 ### read-n-characters-given-read4
 ### read-n-characters-given-read4-stream-II
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
@@ -283,11 +285,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzODAxODQ0LC0xNjg3MDcwNjY2LDIxMz
-E1NzkxMDksMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUyNzkwMTc4
-LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5ODE2LDE2OD
-Q5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5
-MTM1LDEyNzU0MjkzMTAsNTY4MzQyMDMxLDc2MjkzMzc2Myw4Nz
-E3MzM5MjUsNjMyMTU3ODY3LDQ5NjMxODE3LDEwNDg4Mzc5Nzld
-fQ==
+eyJoaXN0b3J5IjpbLTE2MzAxMjIyMzQsLTE2ODcwNzA2NjYsMj
+EzMTU3OTEwOSwyMDY5ODg4NDEyLDIwMDY3MjMwNTEsNTI3OTAx
+NzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUsLTEwMjE5Mzk4MTYsMT
+Y4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5
+ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLD
+g3MTczMzkyNSw2MzIxNTc4NjcsNDk2MzE4MTcsMTA0ODgzNzk3
+OV19
 -->
