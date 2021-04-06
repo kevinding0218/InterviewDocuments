@@ -243,7 +243,13 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(mlogm+nlogn)
 #### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
-- 用一个读指针，一个写指针遍历数组。
+1. 用一个读指针，一个写指针遍历数组。
+2. read每次移一步，包括遇到相同的元素
+3. 遇到不同的元素时，此时read已经跳过之前在[write ~ read - ]区间内重复的元素
+4. 写指针 就前移一步，写入那个元素(写指针为0时即数组的第一个元素，写指针开始于1)
+5. 最后数组下标 0 - write 部分即为去重后的数组,数组长度为write + 1
+#### Time: O(n)
+#### Space:O(1)
 ### read-n-characters-given-read4
 ### read-n-characters-given-read4-stream-II
 
@@ -299,11 +305,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMT
-Y4NzA3MDY2NiwyMTMxNTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcy
-MzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMT
-AyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkz
-ODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMS
-w3NjI5MzM3NjMsODcxNzMzOTI1LDYzMjE1Nzg2Nyw0OTYzMTgx
-N119
+eyJoaXN0b3J5IjpbLTkwNDQ1OTkyMywxODM0OTkwMzAwLC0yMD
+gwMjgzNjU0LC0xNjg3MDcwNjY2LDIxMzE1NzkxMDksMjA2OTg4
+ODQxMiwyMDA2NzIzMDUxLDUyNzkwMTc4LDc4ODI4MzI4NCwxMD
+MyNjY4ODk1LC0xMDIxOTM5ODE2LDE2ODQ5MTk4MTksMTE4Njk3
+MTcyNSwyMTA1OTM4ODQ0LC0xOTY3OTg5MTM1LDEyNzU0MjkzMT
+AsNTY4MzQyMDMxLDc2MjkzMzc2Myw4NzE3MzM5MjUsNjMyMTU3
+ODY3XX0=
 -->
