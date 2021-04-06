@@ -95,8 +95,24 @@ public static int removeDuplicatesMoreThanKTimes(int[] nums, int k) {
     return count;  
 }
 ```
+### Matrix
+#### 基础
+设一维数组下标为index，二维数组长度为m * n，则：
+
+一维数组转换为二维数组
+
+row = index / n 
+col = index % n
+二维数组转换为一维数组
+
+index = col + row * n
+
+作者：a-fei-8
+链接：https://leetcode-cn.com/problems/making-a-large-island/solution/dao-yu-wen-ti-zhi-zui-da-ren-gong-dao-danaus-genut/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI0NTQ3OTQ3LC05ODA0Nzc2NDksMTc1Nj
+eyJoaXN0b3J5IjpbNzc0MjA5MDgwLC05ODA0Nzc2NDksMTc1Nj
 AxNjg0NSwyMDM0NTQ3OTM0LC02MDE3NzQ1ODcsODk0NjUwODM1
 LC0xNTA1ODQ3MDU0LC0xNjI1MzAxMDQ2XX0=
 -->
