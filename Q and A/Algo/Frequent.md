@@ -259,8 +259,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 4. eventually array element from index 0 to count - 1 will be replaced with number of k times of
 #### Time: O(n)
 #### Space:O(1)
-### read-n-characters-given-read4
-### read-n-characters-given-read4-stream-II
+### [Read-n-characters-given-read4](https://aaronice.gitbook.io/lintcode/data_structure/read-n-characters-given-read4)
+
+### Read-n-characters-given-read4-stream-II
 
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
@@ -314,11 +315,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTA3NTM4NTcsLTE2MjIwNzA4MTksMT
-gzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMTY4NzA3MDY2NiwyMTMx
-NTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcyMzA1MSw1Mjc5MDE3OC
-w3ODgyODMyODQsMTAzMjY2ODg5NSwtMTAyMTkzOTgxNiwxNjg0
-OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2Nzk4OT
-EzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5MzM3NjMsODcx
-NzMzOTI1XX0=
+eyJoaXN0b3J5IjpbNzU1MzQwODg2LC0xNjIyMDcwODE5LDE4Mz
+Q5OTAzMDAsLTIwODAyODM2NTQsLTE2ODcwNzA2NjYsMjEzMTU3
+OTEwOSwyMDY5ODg4NDEyLDIwMDY3MjMwNTEsNTI3OTAxNzgsNz
+g4MjgzMjg0LDEwMzI2Njg4OTUsLTEwMjE5Mzk4MTYsMTY4NDkx
+OTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5Njc5ODkxMz
+UsMTI3NTQyOTMxMCw1NjgzNDIwMzEsNzYyOTMzNzYzLDg3MTcz
+MzkyNV19
 -->
