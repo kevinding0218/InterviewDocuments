@@ -357,12 +357,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Space:O(1)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 - 一次交换后字典序就变小，交换的两个数，肯定原先是大数在前，小数在后。交换后，小数换到前面来，大数换到后面去。那么有
-	- 由于 A[i]>A[i+1]，必能构造比当前字典序小的序列
-	- 由于逆序查找，交换 A[i] 为最优解
-- 寻找在 A[i] 最左边且小于 A[i] 的最大的数字 A[j]
-	- 由于 A[j] < A[]i]A[j]<A[]i], 交换 A[i] 与 A[j] 后的序列字典序一定小于当前字典序
-	- 由于 A[j] 是满足关系的最大的最左的，因此一定是满足小于关系的交换后字典序最大的
-- 这里的两条，最大和最左边缺一不可，可以结合样例理解
+1. 从后向前查找第一个顺序对 (ascStart,ascStart+1)，满足 a[ascStart] > a[ascStart+1], 这样「较大数」即为 a[i]。此时 [i+1,n) 必然是上升序列
+2. 寻找在 A[i] 最右边且小于 A[i] 的最大的数字 A[j], 由于 A[j] < A[i], 交换 A[i] 与 A[j] 后的序列字典序一定小于当前字典序
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
@@ -379,7 +375,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE0NjYyMDk4LDE2MTA5NTE5OTYsLTIyNz
-QxNDY4NywtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2
-NiwtNzIyNDE2ODM1LDQ5MDg3NjY1Ml19
+eyJoaXN0b3J5IjpbLTg1NTA5MTg1OCwxNjEwOTUxOTk2LC0yMj
+c0MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MDc3MTU2
+NjYsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
 -->
