@@ -269,7 +269,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- check `eof = count < 4`
 	- update `count = Math.min(count, n - total)` in case current read4 returns more than what we need
 	- update result as `buf[total++] = tmp[0 ~ count]`
-#### Time: O(n/k)
+#### Time: O(n/4)
+#### Space:O(1)
 ### Read-n-characters-given-read4-stream-II
 
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
@@ -324,11 +325,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODAzNTEwNjUsNzU1MzQwODg2LC0xNj
-IyMDcwODE5LDE4MzQ5OTAzMDAsLTIwODAyODM2NTQsLTE2ODcw
-NzA2NjYsMjEzMTU3OTEwOSwyMDY5ODg4NDEyLDIwMDY3MjMwNT
-EsNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUsLTEwMjE5
-Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4ND
-QsLTE5Njc5ODkxMzUsMTI3NTQyOTMxMCw1NjgzNDIwMzEsNzYy
-OTMzNzYzXX0=
+eyJoaXN0b3J5IjpbLTkwMjY0MjI3Nyw3NTUzNDA4ODYsLTE2Mj
+IwNzA4MTksMTgzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMTY4NzA3
+MDY2NiwyMTMxNTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcyMzA1MS
+w1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMTAyMTkz
+OTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NC
+wtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2ODM0MjAzMSw3NjI5
+MzM3NjNdfQ==
 -->
