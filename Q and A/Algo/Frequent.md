@@ -292,18 +292,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 1. loop through brackets starting from index 1 and while salary > 0, calculate in current brancket range, how much salary needs to pay out by `double payout = min(bracket[i][0] - bracket[i-1][0], salary);`
 2. get tax to pay in current period that `tax += bracket[i][1] * payout` and add to result
 3. decrease salary by payout `salary -= payout;`
-```
-
-double[] max = {0,9075,36900,89350,186350,405100};
-double[] rate = {0,0.10,0.15,0.25,0.28,0.33};
-double left = income;
-double tax = 0.0d;
-for(int i = 1; i < max.length && left > 0; i++) {
-    double df = Math.min(max[i]-max[i-1],left);
-    tax += rate[i]*df;
-    left -= df;
-}
-```
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -341,11 +329,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1ODg2MzIxMSwtMTQxODA5NTYxOSwxNj
-cyMDY1NjkzLC04Nzg5NDExMDcsNzU1MzQwODg2LC0xNjIyMDcw
-ODE5LDE4MzQ5OTAzMDAsLTIwODAyODM2NTQsLTE2ODcwNzA2Nj
-YsMjEzMTU3OTEwOSwyMDY5ODg4NDEyLDIwMDY3MjMwNTEsNTI3
-OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUsLTEwMjE5Mzk4MT
-YsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5
-Njc5ODkxMzVdfQ==
+eyJoaXN0b3J5IjpbNTE0NDk2Mjg3LC0xNDE4MDk1NjE5LDE2Nz
+IwNjU2OTMsLTg3ODk0MTEwNyw3NTUzNDA4ODYsLTE2MjIwNzA4
+MTksMTgzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMTY4NzA3MDY2Ni
+wyMTMxNTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcyMzA1MSw1Mjc5
+MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMTAyMTkzOTgxNi
+wxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2
+Nzk4OTEzNV19
 -->
