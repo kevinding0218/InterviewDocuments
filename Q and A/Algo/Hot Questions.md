@@ -308,10 +308,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - declare a HashMap to store character with its appearance count in current window **`int[] freq = new int[26]`**
 - Move right pointer from 0 ~ len
 	1. add frequency count of current **`freq[s.charAt(right) - 'A']++;`**
-	2. calculate current window's max frequent character count **`maxCount = Math.max(maxCount, freq[rightCharIdx])`**
+	2. calculate current window's max frequent character count **`maxCount = Math.max(maxCount, freq[s.charAt(right) - 'A'])`**
 	3. increment right
 	4. check current sliding window length if it's able to allow `right - left > maxCount + k`
-		- if true, meaning current k is not enough, move lef
+		- if true, meaning current k is not enough, move left point by decremenet `freq[s.charAt(left) - 'A']--`
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -349,6 +349,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ1NzIyMTkxLC03MjI0MTY4MzUsNDkwOD
-c2NjUyXX0=
+eyJoaXN0b3J5IjpbMjA2Nzc5NzgwNCwtNzIyNDE2ODM1LDQ5MD
+g3NjY1Ml19
 -->
