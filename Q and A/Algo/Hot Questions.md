@@ -305,11 +305,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### follow up, what if input is stream
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
 #### HashMap & Sliding Window
-- declare a HashMap to store character with its appearance count in current window **`int[] freq = new int[26]`**
-- Move right pointer from 0 ~ len
+- declare a HashMap **`int[] freq = new int[26]`** to store character with its appearance count in current window `(left, right) 内最多替换 k 个字符可以得到只有一种字符的子串`
+- Move right pointer from **0 ~ len**
 	1. add frequency count of current **`freq[s.charAt(right) - 'A']++;`**
 	2. calculate current window's max frequent character count **`maxCount = Math.max(maxCount, freq[s.charAt(right) - 'A'])`**
-	3. increment right
+	3. increment right by **`right ++`**
 	4. check current sliding window length if it's able to allow **`right - left > maxCount + k`**
 		- **if true, meaning current k is not enough**, move left point by decrement appearance of current left character **`freq[s.charAt(left) - 'A']--`** , then increment left **`left++`**
 		- **if false, meaning current window can allow** `maxCount + k` range, left remain same
@@ -351,6 +351,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNDkzODY2MSwtNzIyNDE2ODM1LDQ5MD
+eyJoaXN0b3J5IjpbMTEzNjk2NTUxNCwtNzIyNDE2ODM1LDQ5MD
 g3NjY1Ml19
 -->
