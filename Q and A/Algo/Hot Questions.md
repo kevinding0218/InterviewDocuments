@@ -315,7 +315,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- **if false, meaning current window can allow** `maxCount + k` range, left remain same
 	5. update result by **`max(res, right - left)`**
 #### Time: O(n)
-#### Space:O(1)
+#### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -353,6 +353,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU0NTU2NDI4LC03MjI0MTY4MzUsNDkwOD
+eyJoaXN0b3J5IjpbNDA3NzE1NjY2LC03MjI0MTY4MzUsNDkwOD
 c2NjUyXX0=
 -->
