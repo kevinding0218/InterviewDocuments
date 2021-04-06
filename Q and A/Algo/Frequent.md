@@ -265,7 +265,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - declare a pointer `total` to indicate current position that reads from beginning to current length
 - declare a char array `tmp` of size 4 to store `read4` content
 - while (!eof && total < n) we keep read from file by `read4`， each time 
-	- declare a local int `bufCount` to indicate total characters count from read4, 
+	- declare a local int `bufCount` to indicate total characters read count from read4, 
 	- check `eof = bufCount< 4`
 	- update `bufCount= Math.min(bufCount, n - total)` in case current read4 returns more than what we need to just total of n characters
 	- update result as `buf[total++] = tmp[0 ~ count]`
@@ -275,7 +275,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - declare an boolean `eof` to indicate if current read4 has read till end of file
 - declare a pointer `total` to indicate current position that reads from beginning to current length
 - declare a char array `tmp` of size 4 to store `read4` content
-- 
+- declare a global int `bufCount` to indicate total characters read count from read4
+- declare a global int `bufPtr` and `bufEnd` to indic
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -328,11 +329,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTE2MzE0MywtODc4OTQxMTA3LDc1NT
-M0MDg4NiwtMTYyMjA3MDgxOSwxODM0OTkwMzAwLC0yMDgwMjgz
-NjU0LC0xNjg3MDcwNjY2LDIxMzE1NzkxMDksMjA2OTg4ODQxMi
-wyMDA2NzIzMDUxLDUyNzkwMTc4LDc4ODI4MzI4NCwxMDMyNjY4
-ODk1LC0xMDIxOTM5ODE2LDE2ODQ5MTk4MTksMTE4Njk3MTcyNS
-wyMTA1OTM4ODQ0LC0xOTY3OTg5MTM1LDEyNzU0MjkzMTAsNTY4
-MzQyMDMxXX0=
+eyJoaXN0b3J5IjpbLTE3Njg3OTcxODUsLTg3ODk0MTEwNyw3NT
+UzNDA4ODYsLTE2MjIwNzA4MTksMTgzNDk5MDMwMCwtMjA4MDI4
+MzY1NCwtMTY4NzA3MDY2NiwyMTMxNTc5MTA5LDIwNjk4ODg0MT
+IsMjAwNjcyMzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2
+ODg5NSwtMTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3Mj
+UsMjEwNTkzODg0NCwtMTk2Nzk4OTEzNSwxMjc1NDI5MzEwLDU2
+ODM0MjAzMV19
 -->
