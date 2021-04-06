@@ -245,9 +245,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 1. 要求每个元素至少出现，即数组大小得大于1开始遍历, validation about null/length = 0/length < 2
 2. 前1个元素不用管, 从第2个元素开始read，每次和之前的元素比较, read每次移一步，包括遇到相同的元素
-3. 遇到不同的元素时，此时read已经跳过之前在[count ~ read - 1]区间内重复的元素, 
-4. 写指针 就前移一步，写入那个元素(写指针为0时即数组的第一个元素，写指针开始于1)
-5. 最后数组下标 0 - write 部分即为去重后的数组,数组长度为write + 1
+3. 遇到不同的元素时，此时read已经跳过之前在[count - 1 ~ read - 1]区间内重复的元素,  写入那个元素(写指针为0时即数组的第一个元素，写指针开始于1)并递增count
+5. 最后数组下标 0 - count 部分即为去重后的数组,数组长度为count
 #### Time: O(n)
 #### Space:O(1)
 ### read-n-characters-given-read4
@@ -305,7 +304,7 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODUwNTQ2MzMsMTgzNDk5MDMwMCwtMj
+eyJoaXN0b3J5IjpbLTE5NTU2NDE5MjAsMTgzNDk5MDMwMCwtMj
 A4MDI4MzY1NCwtMTY4NzA3MDY2NiwyMTMxNTc5MTA5LDIwNjk4
 ODg0MTIsMjAwNjcyMzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMT
 AzMjY2ODg5NSwtMTAyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5
