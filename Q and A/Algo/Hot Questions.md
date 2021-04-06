@@ -304,6 +304,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Check TopKFrequentElements, TopKFrequentWordsI && II
 #### follow up, what if input is stream
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
+#### HashMap & Sliding Window
+- 
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -341,5 +343,5 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
 -->
