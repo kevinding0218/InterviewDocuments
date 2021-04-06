@@ -294,7 +294,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 1. 根据 s 构造 HashMap, 因为面向字母所以我们可以用int[]来存储每个character出现的个数,下标可以转换为(char[i])
 2. 然后我们构造一个priority queue/maxHeap用来排序, heap top store max appearance character,with comparetor can be `(a, b) -> frequency[b] - frequency[a]`
-3. 把所有frequency中不为0的character进队列
+3. 把所有frequency中不为0的character进队列, 此时队列里面最顶端为出现次数最大的character
 4. 使用StringBuilder构造队列里面一个个poll出来的character组成String, 每次都decrement frequency[ch]
 #### Time: O(n)
 #### Space:O(n)
@@ -337,11 +337,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkwMDY3MzIwLDM4MjQ1NjI1LC0xNDE4MD
-k1NjE5LDE2NzIwNjU2OTMsLTg3ODk0MTEwNyw3NTUzNDA4ODYs
-LTE2MjIwNzA4MTksMTgzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMT
-Y4NzA3MDY2NiwyMTMxNTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcy
-MzA1MSw1Mjc5MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMT
-AyMTkzOTgxNiwxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkz
-ODg0NF19
+eyJoaXN0b3J5IjpbLTY1MTMwMzUwMiwzODI0NTYyNSwtMTQxOD
+A5NTYxOSwxNjcyMDY1NjkzLC04Nzg5NDExMDcsNzU1MzQwODg2
+LC0xNjIyMDcwODE5LDE4MzQ5OTAzMDAsLTIwODAyODM2NTQsLT
+E2ODcwNzA2NjYsMjEzMTU3OTEwOSwyMDY5ODg4NDEyLDIwMDY3
+MjMwNTEsNTI3OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUsLT
+EwMjE5Mzk4MTYsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5
+Mzg4NDRdfQ==
 -->
