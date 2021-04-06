@@ -289,8 +289,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 -  Calculate tax if Salary and Tax Brackets are given as list in the form  
    [ [10000, 0.3],[20000, 0.2], [30000, 0.1], [null, .1]]  
    null being rest of the salary  
+1. loop through brackets starting from index 1 and while salary > 0, calculate in current brancket range, how much salary needs to pay out by `double payout = min(bracket[i][0] - bracket[i-1][0], salary);`
+2. get tax to pay in current period that `tax += bracket[i][1] * payout` and add to result
+3. decrease salary by payout `salary -= payout;`
 ```
-1. loop through brackets starting from index 1, calculate in current brancket range, how much salary needs to pay out by `double payout = min(bracket[i][0] - bracket[i-1][0], left);
+
 double[] max = {0,9075,36900,89350,186350,405100};
 double[] rate = {0,0.10,0.15,0.25,0.28,0.33};
 double left = income;
@@ -338,11 +341,11 @@ for(int i = 1; i < max.length && left > 0; i++) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTEzODI4MjIsLTE0MTgwOTU2MTksMT
-Y3MjA2NTY5MywtODc4OTQxMTA3LDc1NTM0MDg4NiwtMTYyMjA3
-MDgxOSwxODM0OTkwMzAwLC0yMDgwMjgzNjU0LC0xNjg3MDcwNj
-Y2LDIxMzE1NzkxMDksMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUy
-NzkwMTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5OD
-E2LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0x
-OTY3OTg5MTM1XX0=
+eyJoaXN0b3J5IjpbLTg1ODg2MzIxMSwtMTQxODA5NTYxOSwxNj
+cyMDY1NjkzLC04Nzg5NDExMDcsNzU1MzQwODg2LC0xNjIyMDcw
+ODE5LDE4MzQ5OTAzMDAsLTIwODAyODM2NTQsLTE2ODcwNzA2Nj
+YsMjEzMTU3OTEwOSwyMDY5ODg4NDEyLDIwMDY3MjMwNTEsNTI3
+OTAxNzgsNzg4MjgzMjg0LDEwMzI2Njg4OTUsLTEwMjE5Mzk4MT
+YsMTY4NDkxOTgxOSwxMTg2OTcxNzI1LDIxMDU5Mzg4NDQsLTE5
+Njc5ODkxMzVdfQ==
 -->
