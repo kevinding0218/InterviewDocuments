@@ -345,7 +345,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Simulate
 - 注意到下一个排列总是比当前排列要大，除非该排列已经是最大的排列。
 - 我们希望找到一种方法，能够找到一个大于当前序列的新序列，且变大的幅度尽可能小. 具体地：
-	- 1.我们需要将一个左边的「较小数」与一个右边的「较大数」交换，以能够让当前排列变大，从而得到下一个排列
+	1.我们需要将一个左边的「较小数」与一个右边的「较大数」交换，以能够让当前排列变大，从而得到下一个排列, 同时我们要让这个「较小数」尽量靠右，而「较大数」尽可能小。当交换完成后，「较大数」右边的数需要按照升序重新排列。
+	2.这样可以在保证新排列大于原来排列的情况下，使变大的幅度尽可能小。
+
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 ### Check if contiguous subarray sum can be equals to K
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
@@ -364,7 +366,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMTUyMjQ0MCwtNTI4OTAwMjYyLC0xNz
+eyJoaXN0b3J5IjpbLTIwNTgyMTE1MCwtNTI4OTAwMjYyLC0xNz
 I1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LDQ5MDg3NjY1
 Ml19
 -->
