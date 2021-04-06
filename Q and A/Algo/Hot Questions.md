@@ -356,7 +356,13 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(n)
 #### Space:O(1)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
-### Check if contiguous subarray sum can be equals to K
+- 这道题目的关键是 按字典序排列小于 A 的最大可能排列， 那么有对当前序列进行逆序查找，找到第一个降序的位置 i，使得 A[i]>A[i+1]
+	- 由于 A[i]>A[i+1]，必能构造比当前字典序小的序列
+	- 由于逆序查找，交换 A[i] 为最优解
+- 寻找在 A[i] 最左边且小于 A[i] 的最大的数字 A[j]
+	- 由于 A[j] < A[]i]A[j]<A[]i], 交换 A[i] 与 A[j] 后的序列字典序一定小于当前字典序
+	- 由于 A[j] 是满足关系的最大的最左的，因此一定是满足小于关系的交换后字典序最大的
+- 这里的两条，最大和最左边缺一不可，可以结合样例理解
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
@@ -373,7 +379,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNzQxNDY4NywtNTI4OTAwMjYyLC0xNz
-I1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LDQ5MDg3NjY1
-Ml19
+eyJoaXN0b3J5IjpbMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mj
+g5MDAyNjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4
+MzUsNDkwODc2NjUyXX0=
 -->
