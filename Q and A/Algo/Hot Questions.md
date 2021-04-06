@@ -337,8 +337,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ####  Two Pointers
 - 使用两个指针right和left
 	1. 将两个指针先指向0，即数组头部
-	2. right向后扫描，当遇到非0数即nums[right] != 0时，将其赋值给left指针指向的位置，即nums[left] = nums[right]，并将left向后移动一位
-	3. 若left指针还未指向尾部，即剩余的位置都是0，将剩余数组赋值为0
+	2. right向后扫描 **`right++`**，当遇到非0数即 **`nums[right] != 0`**时，将其赋值给left指针指向的位置，即**`nums[left] = nums[right]`**，并将left向后移动一位 **`left ++`**
+	3. 若left指针还未指向尾部 **`while(left < length)`**，即剩余的位置都是0，将剩余数组赋值为0 **`nums[left] = 0`**
 #### Time: O(n)
 #### Space:O(1)
 ### [31. Next Permutation(Medium)](https://leetcode.com/problems/next-permutation/)
@@ -360,6 +360,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03Mj
-I0MTY4MzUsNDkwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MD
+c3MTU2NjYsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
 -->
