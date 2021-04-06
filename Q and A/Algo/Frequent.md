@@ -286,12 +286,12 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- update result as `buf[total+i] = buffer[offset + i]`
 	- update `total += used`, `bufCount -= used` and `offset = (offset + used) % 4`
 ### Calculate salary tax
--  Calculate tax if Salary and Tax Brackets are given as list in the form  
-   [ [10000, 0.3],[20000, 0.2], [30000, 0.1], [null, .1]]  
-   null being rest of the salary  
+#### Question
+-  Calculate tax if Salary and Tax Brackets are given as list in the form   [ [10000, 0.3],[20000, 0.2], [30000, 0.1], [null, .1]] , null being rest of the salary  
 1. loop through brackets starting from index 1 and while salary > 0, calculate in current brancket range, how much salary needs to pay out by `double payout = min(bracket[i][0] - bracket[i-1][0], salary);`
 2. get tax to pay in current period that `tax += bracket[i][1] * payout` and add to result
 3. decrease salary by payout `salary -= payout;`
+### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
@@ -306,7 +306,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [510. # Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 
-### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
+
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 #### follow up, what if input is stream
 ### [283. Move Zeroes(Easy)](https://leetcode.com/problems/move-zeroes/)
@@ -329,11 +329,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE0NDk2Mjg3LC0xNDE4MDk1NjE5LDE2Nz
-IwNjU2OTMsLTg3ODk0MTEwNyw3NTUzNDA4ODYsLTE2MjIwNzA4
-MTksMTgzNDk5MDMwMCwtMjA4MDI4MzY1NCwtMTY4NzA3MDY2Ni
-wyMTMxNTc5MTA5LDIwNjk4ODg0MTIsMjAwNjcyMzA1MSw1Mjc5
-MDE3OCw3ODgyODMyODQsMTAzMjY2ODg5NSwtMTAyMTkzOTgxNi
-wxNjg0OTE5ODE5LDExODY5NzE3MjUsMjEwNTkzODg0NCwtMTk2
-Nzk4OTEzNV19
+eyJoaXN0b3J5IjpbLTE3MDA3Njg0ODMsLTE0MTgwOTU2MTksMT
+Y3MjA2NTY5MywtODc4OTQxMTA3LDc1NTM0MDg4NiwtMTYyMjA3
+MDgxOSwxODM0OTkwMzAwLC0yMDgwMjgzNjU0LC0xNjg3MDcwNj
+Y2LDIxMzE1NzkxMDksMjA2OTg4ODQxMiwyMDA2NzIzMDUxLDUy
+NzkwMTc4LDc4ODI4MzI4NCwxMDMyNjY4ODk1LC0xMDIxOTM5OD
+E2LDE2ODQ5MTk4MTksMTE4Njk3MTcyNSwyMTA1OTM4ODQ0LC0x
+OTY3OTg5MTM1XX0=
 -->
