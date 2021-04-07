@@ -368,6 +368,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### HashMap & Double LinkedList
 - LRU 缓存机制可以通过哈希表辅以双向链表实现，我们用一个哈希表和一个双向链表维护所有在缓存中的键值对。
 - 双向链表按照被使用的顺序存储了这些键值对，靠近尾部的键值对是最近使用的，而靠近头部的键值对是最久未使用的 **` dummyHead <-> least used <-> most used <-> dummyTail`**
+	- 在双向链表的实现中，使用一个伪头部（dummy head）和伪尾部（dummy tail）标记界限, 这样在添加节点和删除节点的时候就不需要检查相邻的节点是否存在
 - 我们首先使用哈希表进行定位，找出缓存项在双向链表中的位置，随后将其移动到双向链表的尾部，
 - 对于 get 操作，首先判断 key 是否存在：
 	- 如果 key 不存在，则返回 -1；
@@ -381,7 +382,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		1. 判断双向链表的节点数是否超出容量
 		2. 如果超出容量，则删除哈希表中最靠近头部的项
 		3. 并删除双向链表的尾部节点
-		4. 
+		4. 使用 key 和 value 创建一个新的节点，将 key 和该节点添加进哈希表中。
+		5. 在双向链表的尾部添加该节点
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
@@ -397,8 +399,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzYxNjY4MDAsLTE4MzU2MDI5NTEsMT
-YxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUx
-NzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4MzUsNDkwODc2NjUyXX
-0=
+eyJoaXN0b3J5IjpbLTQ4NjkzMDI1NCwtMTgzNTYwMjk1MSwxNj
+EwOTUxOTk2LC0yMjc0MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3
+NjAzNyw0MDc3MTU2NjYsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ
+==
 -->
