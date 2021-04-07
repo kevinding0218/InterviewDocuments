@@ -461,7 +461,15 @@ if (index == 0 || num1 != intersection[index - 1]) {
  - 还需要考虑两个单词长度不等的情况。例如，当比较 "app" 和 "apply" 的时候，前三个字母都是相等的，但 "app" 比 "apply" 更短，所以满足 a <= b。
 ### [560. Subarray Sum Equals K(Medium)](https://leetcode.com/problems/subarray-sum-equals-k/)
 #### PrefixSum & HashMap
-
+- 我们定义pre[i]为[0..i]里所有数的和，则pre[i]可以由pre[i−1]递推而来，即：pre[i] = pre[i - 1] + nums[i]
+- 那么[j..i] 这个子数组和为k这个条件我们可以转化为 pre[i] - pre[j-1] == k
+- 移项可得符合条件的下标j需要满足 pre[j - 1] = pre[i] - k
+- 所以我们考虑以i结尾的和为k的连续子数组个数时只要统计有多少个前缀和为pre[i]−k的pre[j]即可。
+- 我们建立哈希表mp，以和为键，出现次数为对应的值，记录pre[i]出现的次数，从左往右边更新mp边计算答案
+- 那么以i结尾的答案mp[pre[i]−k]即可在 O(1)O(1) 时间内得到。最后的答案即为所有下标结尾的和为k的子数组个数之和。
+- 由于pre[i]的计算只与前一项的答案有关，因此我们可以不用建立pre数组，直接用pre变量来记录pre[i−1]的答案即可。
+#### Time: O(n)
+#### Space: O(n)
 ### [71. Simplify Path(Medium)](https://leetcode.com/problems/simplify-path/)
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
 ### [426. Convert the binary search tree into a sorted doubly linked list(Medium)](https://www.jiuzhang.com/solutions/convert-binary-search-tree-to-sorted-doubly-linked-list)
@@ -497,10 +505,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyOTA0OTU0LDIxMTM4OTk0NjUsMTI3Nj
-k4MzIzMCwxODYxNzE0MzU0LC0xNzI2ODk1NTIwLDUyODE1NDY4
-NywtMTMxMjYyMjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0NTk0LD
-UyODIwMjU3MCwtMTgzNTYwMjk1MSwxNjEwOTUxOTk2LC0yMjc0
-MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MDc3MTU2Nj
-YsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
+eyJoaXN0b3J5IjpbLTE5NjU2NDAwNiwxMTI5MDQ5NTQsMjExMz
+g5OTQ2NSwxMjc2OTgzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1
+MjAsNTI4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMjA4MDMyMDY1LC
+01MDM1ODQ1OTQsNTI4MjAyNTcwLC0xODM1NjAyOTUxLDE2MTA5
+NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAwMjYyLC0xNzI1MTc2MD
+M3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LDQ5MDg3NjY1Ml19
 -->
