@@ -527,6 +527,16 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Space: O(n)
 ### [71. Simplify Path(Medium)](https://leetcode.com/problems/simplify-path/)
 - Split("/"), 遇到.. pop， 遇到string push， 其余情况不用管
+	```
+	for(String str: path.split("/+")){  
+	  if(!str.equals("..") && !str.equals(".") && !str.equals("")){  
+	  stack.push(str);  
+	    }  
+	  if(str.equals("..") && !stack.isEmpty()){  
+	  stack.pop();  
+	    }  
+	}
+	```
 - 遍历完成后把所得到的stack 反着拼接即可
 	```
 	while(!stack.isEmpty()){  
@@ -592,11 +602,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxODYwNzQ5MSwxNzI2MjU3OTQ5LC0xND
-YyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0
-ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUsMTI3Njk4MzIzMCwxOD
-YxNzE0MzU0LC0xNzI2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYy
-MjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MC
-wtMTgzNTYwMjk1MSwxNjEwOTUxOTk2LC0yMjc0MTQ2ODcsLTUy
-ODkwMDI2Ml19
+eyJoaXN0b3J5IjpbOTkzOTIyMTEsMTcyNjI1Nzk0OSwtMTQ2Mj
+c4Nzk5NywtMTUwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgw
+LDExMjkwNDk1NCwyMTEzODk5NDY1LDEyNzY5ODMyMzAsMTg2MT
+cxNDM1NCwtMTcyNjg5NTUyMCw1MjgxNTQ2ODcsLTEzMTI2MjIz
+ODIsLTEyMDgwMzIwNjUsLTUwMzU4NDU5NCw1MjgyMDI1NzAsLT
+E4MzU2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5
+MDAyNjJdfQ==
 -->
