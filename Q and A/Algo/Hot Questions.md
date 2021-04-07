@@ -517,6 +517,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	}  
 	return sum;
 	```
+#### Time: O(mn)
+#### Space:O(mn) - 需要创建一个m行n+1列的前缀和数组
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
 #### Iterator
  - store the order in a hash using int[] array
@@ -619,7 +621,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU3OTQ5NzE2LDk5MzkyMjExLDE3MjYyNT
+eyJoaXN0b3J5IjpbOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNT
 c5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIs
 MTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OT
 gzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3
