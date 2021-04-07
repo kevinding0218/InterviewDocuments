@@ -193,9 +193,27 @@ public static List<Integer> iteration(TreeNode root) {
  } }  return list;  
 }
 ```
+### Binary Tree
+#### DFS Save Parent Node and Visited
+```
+Map<Integer, TreeNode> parent = new HashMap<Integer, TreeNode>();
+Set<Integer> visited = new HashSet<Integer>();
+
+public void dfs(TreeNode root) {
+    if (root.left != null) {
+        parent.put(root.left.val, root);
+        dfs(root.left);
+    }
+    if (root.right != null) {
+        parent.put(root.right.val, root);
+        dfs(root.right);
+    }
+}
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDc1NzMwMjUsMjc0MDQ3MjIxLC0zNj
-A2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2ODQ1LDIwMzQ1NDc5
-MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLTE1MDU4NDcwNTQsLT
-E2MjUzMDEwNDZdfQ==
+eyJoaXN0b3J5IjpbMTY0NzI0NTg2NiwtMjAwNzU3MzAyNSwyNz
+QwNDcyMjEsLTM2MDYyOTQ5MywtOTgwNDc3NjQ5LDE3NTYwMTY4
+NDUsMjAzNDU0NzkzNCwtNjAxNzc0NTg3LDg5NDY1MDgzNSwtMT
+UwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
 -->
