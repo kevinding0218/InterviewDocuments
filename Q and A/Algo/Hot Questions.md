@@ -436,6 +436,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(n^2)
 #### Space:O(n) 需要使用数组visited记录每个城市是否被访问过，数组长度是n，广度优先搜索使用的队列的元素个数不会超过n。
 #### DFS 
+- 遍历所有城市，对于每个城市，如果该城市尚未被访问过，则从该城市开始深度优先搜索
+- 通过矩阵isConnected得到与该城市直接相连的城市有哪些，这些城市和该城市属于同一个连通分量，
+- 然后对这些城市继续深度优先搜索，直到同一个连通分量的所有城市都被访问到，即可得到一个circle。
+- 遍历完全部城市以后，即可得到连通分量的总数，即circle的总数。
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
@@ -478,9 +482,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMz
-EyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAy
-NTcwLC0xODM1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4Ny
-wtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIy
-NDE2ODM1LDQ5MDg3NjY1Ml19
+eyJoaXN0b3J5IjpbMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1Mj
+gxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4
+NDU5NCw1MjgyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1MTk5Ni
+wtMjI3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3
+NzE1NjY2LC03MjI0MTY4MzUsNDkwODc2NjUyXX0=
 -->
