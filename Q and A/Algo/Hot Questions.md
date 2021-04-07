@@ -353,11 +353,28 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### Coordinate Class and DFS
 -  该解决方案有两个步骤：首先，找出每个节点所在的坐标，然后报告他们的坐标。
-- 我们可以使用深度优先搜索找到每个节点的坐标。保持当前节点 (x, y)，移动的过程中
-- 坐标变化为左孩子(x-1, y+1) 或 右孩子(x+1, y+1)
--  我们通过 x 坐标排序，再根据 y 坐标排序，这样确保以正确的顺序添加到答案中。
+1. Create a class `Coordinate` to store `x`, `y` and `val`, also implement the `compareTo` by compare `x` first then `y` then `val`
+2. 我们可以使用深度优先搜索找到每个节点的坐标。保持当前节点 (x, y)，移动的过程中, 坐标变化为左孩子(x-1, y+1) 或 右孩子(x+1, y+1), 
+3.  我们通过 x 坐标排序，再根据 y 坐标排序，这样确保以正确的顺序添加到答案中。
 ```
-
+static class Coordinate implements Comparable<Coordinate>{  
+  int x, y, val;  
+    Coordinate(int x, int y, int val) {  
+  this.x = x;  
+        this.y = y;  
+        this.val = val;  
+    }  
+  
+  @Override  
+  public int compareTo(Coordinate that) {  
+  if (this.x != that.x)  
+  return Integer.compare(this.x, that.x);  
+        else if (this.y != that.y)  
+  return Integer.compare(this.y, that.y);  
+        else  
+ return Integer.compare(this.val, that.val);  
+    }  
+}
 ```
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 #### DFS + BFS
@@ -2082,11 +2099,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMxOTUxODg1LC05ODA4MTI3NjUsMTIzMT
-I4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEz
-LDk5MzkyMjExLDE3MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MD
-Y1NTQ1MzksNjIxNzEzNTIsMTg3MDcyNzQ4MCwxMTI5MDQ5NTQs
-MjExMzg5OTQ2NSwxMjc2OTgzMjMwLDE4NjE3MTQzNTQsLTE3Mj
-Y4OTU1MjAsNTI4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMjA4MDMy
-MDY1XX0=
+eyJoaXN0b3J5IjpbNDQzNTMwNDAxLDQzMTk1MTg4NSwtOTgwOD
+EyNzY1LDEyMzEyODA5ODQsLTk2NTQyNjEwNCwxNjc3ODYwNzY3
+LDkyMzAxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5LC0xNDYyNz
+g3OTk3LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0ODAs
+MTEyOTA0OTU0LDIxMTM4OTk0NjUsMTI3Njk4MzIzMCwxODYxNz
+E0MzU0LC0xNzI2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYyMjM4
+Ml19
 -->
