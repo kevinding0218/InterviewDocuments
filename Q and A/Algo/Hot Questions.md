@@ -481,6 +481,12 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [71. Simplify Path(Medium)](https://leetcode.com/problems/simplify-path/)
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
 ### [426. Convert the binary search tree into a sorted doubly linked list(Medium)](https://www.jiuzhang.com/solutions/convert-binary-search-tree-to-sorted-doubly-linked-list)
+#### Inorder execution
+1. 用pre来保存之前的节点，因为是中序遍历，所以刚好能把当前节点跟之前的节点连接起来。
+2. 再利用dummy node来保存头结点，这样就不需要对NULL进行判断了。
+3. 中序遍历完之后，就是一个头尾暂时不相连的双向链表. 此时pre指向的尾节点，dummy的right指向头结点, 对收尾节点进行连接即可。
+#### Time: 
+#### Space: O(1)
 ### [347. Top K Frequent Elements(Medium)](https://leetcode.com/problems/top-k-frequent-elements/)
 ### Find median in BST without extra space
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
@@ -513,10 +519,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMz
-g5OTQ2NSwxMjc2OTgzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1
-MjAsNTI4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMjA4MDMyMDY1LC
-01MDM1ODQ1OTQsNTI4MjAyNTcwLC0xODM1NjAyOTUxLDE2MTA5
-NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAwMjYyLC0xNzI1MTc2MD
-M3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LDQ5MDg3NjY1Ml19
+eyJoaXN0b3J5IjpbLTIwMzYwMTk4NjUsMTg3MDcyNzQ4MCwxMT
+I5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMwLDE4NjE3MTQz
+NTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMzEyNjIyMzgyLC
+0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAyNTcwLC0xODM1
+NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAwMj
+YyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LDQ5
+MDg3NjY1Ml19
 -->
