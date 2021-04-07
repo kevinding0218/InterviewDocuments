@@ -76,6 +76,18 @@ for (var num: nums) {
 ## HashSet/HashMap
 - When asked about find duplicate element or given a known target and known element A, find if there is another elment B that can formulized with A to be target
 - When asked about frequency of character/string appearances, usually combined usage with Priority Queue to sort by appearance count
+## Binary Search
+### Template
+```
+public int binarySearch(int[] nums, int target) {  
+ if (nums == null || nums.length == 0) { 			      return -1; }    
+  int start = 0, end = nums.length - 1;  
+ while (start + 1 < end) { 
+ int mid = start + (end - start) / 2; 
+ if (nums[mid] == target) { 
+ end = mid; } else if (nums[mid] < target) { start = mid; // or start = mid + 1 } else { end = mid; // or end = mid - 1 } }     if (nums[start] == target) {  
+ return start; } if (nums[end] == target) { return end; } return -1;}  
+```
 ## Sliding Window
 ### Find something/scenario in continuing sub string 
 
@@ -148,8 +160,8 @@ public static List<Integer> iteration(TreeNode root) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MD
-Q3NzY0OSwxNzU2MDE2ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4
-Nyw4OTQ2NTA4MzUsLTE1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ
-==
+eyJoaXN0b3J5IjpbMTUzMjkwMjk2MCwyNzQwNDcyMjEsLTM2MD
+YyOTQ5MywtOTgwNDc3NjQ5LDE3NTYwMTY4NDUsMjAzNDU0Nzkz
+NCwtNjAxNzc0NTg3LDg5NDY1MDgzNSwtMTUwNTg0NzA1NCwtMT
+YyNTMwMTA0Nl19
 -->
