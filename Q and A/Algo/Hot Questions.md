@@ -1,4 +1,5 @@
 
+
 ### [149. Max Points in one Line (Hard)](https://le
 etcode.com/problems/max-points-on-a-line/)
 #### HashMap - slope
@@ -11,8 +12,8 @@ etcode.com/problems/max-points-on-a-line/)
 3. in outer loop
 	- increment maxPoints with duplicates, **`maxPoints += duplicates`**
 	- update ans with **`Max(ans, maxPoints)`**
-###### Time: O(n^2)
-###### Space:O(n)
+##### Time: O(n^2)
+##### Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
 #### PrefixSum
 - define a `result` and initialize as `Integer.MIN_VALUE`, a `sum` as **prefixSum** and a `minSum` as **min prefixSum** at current element 
@@ -20,8 +21,8 @@ etcode.com/problems/max-points-on-a-line/)
 	- sum up `num` to `sum`, 
 	- update `result` with **`Math.max(result, sum - minSum)`**, 
 	- update `minSum` with **`Math.min(minSum, sum)`**
-###### Time:  O(n)
-###### Space:O(1)
+##### Time:  O(n)
+##### Space:O(1)
 #### DP
 - max subarray sum at element i can be formalized as **`f(i) = max(f(i-1) + A[i], A[i])**
 - we can just use array `num` as `dp` array because we're always iterating forward and never come back
@@ -29,8 +30,8 @@ etcode.com/problems/max-points-on-a-line/)
 - iterate each element in array from 2nd element
 	- calculate current max subarray sum at element i as **`dp[i] = Math.max(nums[i], dp[i-1]+nums[i])`**
 	- update result with `Math.max(max, nums[i])`
-###### Time:  O(n)
-###### Space:O(1)
+##### Time:  O(n)
+##### Space:O(1)
 #### Follow up: Divide and Conquer
 - using  **Divide and Conquer**  approach, we can find the maximum subarray sum in O(nLogn) time. Following is the Divide and Conquer algorithm.
 1.  Divide the given array in two halves
@@ -39,8 +40,8 @@ etcode.com/problems/max-points-on-a-line/)
     -   Maximum subarray sum in right half (Make a recursive call)
     -   Maximum subarray sum such that the subarray crosses the midpoint
  - The idea is simple, find the maximum sum starting from mid point and ending at some point on left of mid, then find the maximum sum starting from mid + 1 and ending with sum point on right of mid + 1. Finally, combine the two and return.
-###### Time: O(nlogN)
-###### Space:O(1)
+##### Time: O(nlogN)
+##### Space:O(1)
 ### [1186. Maximum Subarray Sum with One Deletion(Medium)](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)
 #### DP
 - define `max0` as max sub array ending with arr[i] without skipping any element, initialize as 1st element
@@ -49,16 +50,16 @@ etcode.com/problems/max-points-on-a-line/)
 	- update `max1` as `max1 = Math.max(max1 + arr[i], max0) `, meaning skipping array[i-1] or array[i]
 	- update `max0` as `Math.max(max0 + arr[i], arr[i])` meaning not skipping any element, same as without deleting element
 	- update `result` as `max(result, max0, max1)`
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 #### Stack
 - since we know the parenthese character, we use a stack to track when there is non matching parenthese.
 - iterate through charaters
 	- When met with left parentheses such as **`'(', '[','{'`**, push its right parenthese into stack **`stack.push(')', ']', '}')`**
 	- otherwise when met with right parentheses , check if **`stack.pop() != ch` or `stack.isEmpty`**, meaning there is no left matching parentheses, **`return false`**
-###### Time: O(n)
-###### Space: O(n)
+##### Time: O(n)
+##### Space: O(n)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 #### Stack + StringBuilder
 - 使用StringBuilder, 在 字符串 的 任意一个位置 添加、删除或更改一个字符的操作都是 O(n)O(n) 的，因为 String 是 不可变的。每次修改整个字符串都会重建。
@@ -69,8 +70,8 @@ etcode.com/problems/max-points-on-a-line/)
 	-  每次遇到 ")"，都从栈中移除一个索引，用该 ")" 与栈顶的 "(" 匹配。栈的深度等于余量。
 	- 扫描到字符串末尾时，栈中剩余的所有索引都是没有匹配的 "("。还需要使用一个 集合 跟踪不匹配的 ")"。
 - 然后根据索引删除每个需要删除的字符，返回重新创建的字符串
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### StringBuilder 2 loop
 1. 从左到右扫描String s，StringBuilder sb 删除不匹配的")",记录一共出现的**'('次数openSeen**和**'()'匹配的次数balance** 
 ```
@@ -97,8 +98,8 @@ if (c == '(') {
 } 
 result.append(c);
 ```
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)
 #### DFS
 1. 一次遍历计算出多余的「左括号」和「右括号」
@@ -127,8 +128,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 		- 如果栈不为空，当前右括号的下标减去栈顶元素即为「以该右括号为结尾的最长有效括号的长度」
 - 我们从前往后遍历字符串并更新答案即可。
 - 需要注意的是，如果一开始栈为空，第一个字符为左括号的时候我们会将其放入栈中，这样就不满足提及的「最后一个没有被匹配的右括号的下标」，为了保持统一，我们在一开始的时候往栈中放入一个值为 -1−1 的元素。
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### Double Loop
 - 我们利用两个计数器 left 和 right 。  
 - 首先，我们从左到右遍历字符串，  
@@ -165,28 +166,28 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - 初始条件
 	- 当word1和word2都为空：f[0][0] = 0
 	- dp[0][i ~ length2] = i; dp[i ~ length1][0] = i
-###### Time: O(n*m)
-###### Space:O(n*m)
+##### Time: O(n*m)
+##### Space:O(n*m)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 #### Find Mid and Reverse 2nd half
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 - Refer to Template LinkedList
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
 #### Two Pointers
 - start and end, moving towards each other when current char is letter or digit `while (start <= end && !Character.isLetterOrDigit(s.charAt(start))) {  start ++; }`
 - return false as long as character not matching
 ##### Always check `start <= end` inside while loop
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [680. Valid Palindrome II(Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
 #### Two Pointers
 - start and end, moving towards each other as long as current characters are same
 - since we only may delete one character, when there is unmatched character, we skip that condition by moving start and end one more index **`return helper(s, start + 1, end) || helper(s, start, end - 1);`**
 	- why need both? consider a string like "abcdca", just moving start wouldn't work
 - `helper` will continue moving two pointers and compare, return false as long as we found another unmatched character
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [1332. Remove Palindrome Subsequence(Easy)](https://leetcode.com/problems/remove-palindromic-subsequences/)
 #### Check if s was a palindrome
 - 回文子序列不是回文子字符串，比如"aababdaba"，"aaaaa"就是他的回文子序列。
@@ -196,8 +197,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - Check if S is empty, return 0
 - Otherwise check if S is palindrome by using two pointers, as long as there is unmatched character, meaning S is not palindrome, return 2
 - Else meaning S is palindrome, return 1
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 #### MaxHeap/PriorityQueue
 1. condition check when input is empty or input size less or equals than K
@@ -215,8 +216,8 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 ```
 4. Offer element into MaxHeap until it reaches capacity of K, poll elements out
 - Remaining would be Kth Point with smallest distance
-###### Time: O(logK*n) - offer/poll of Heap is logK
-###### Space:O(K)
+##### Time: O(logK*n) - offer/poll of Heap is logK
+##### Space:O(K)
 ### 最优解法：基于 quick select 的 O(n + klogk)
 - 先用 Quick Select 找到 kth closest point：O(n)；
 - 对 top k 个点按 distance metric sort 一遍：O(klogk)
@@ -226,8 +227,8 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 2. Create HashSet1 to store all element of nums1, Create HashSet2 to store duplicate number if found
 3. Iterator through nums2 check if any element contains in HashSet1 , if there is, meaning current element is duplicate, add into HashSet2 
 4. Initialize result array of HashSet2.size(), add item into results
-###### Time: O(n + m)
-###### Space:O(n or m)) - can improve by choosing min(n, m)
+##### Time: O(n + m)
+##### Space:O(n or m)) - can improve by choosing min(n, m)
 #### Sort & Two Pointers
 1. Sort two arrays: O(nlogN + mlogM)
 2. Create HashSet1 to store duplicate number if found
@@ -241,15 +242,15 @@ if (index == 0 || num1 != intersection[index - 1]) {
   intersection[index++] = num1;  
 }
 ```
-###### Time: O(mlogm+nlogn)
-###### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
+##### Time: O(mlogm+nlogn)
+##### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 1. 要求每个元素至少出现1次，即数组大小至少得从`2`开始遍历有意义, **`validation about null/length = 0/length < 2`**
 2. Initiate count = 1, 即前1个元素不用管, 从第2个元素（以1为下标）开始read，每次和之前（read - 1）的元素比较, read每次移一步，包括遇到相同的元素
 3. 遇到不同的元素时，此时read已经跳过之前在[count - 1 ~ read - 1]区间内重复的元素,  写入那个元素并递增count
 5. 最后数组下标 0 - count 部分即为去重后的数组,数组长度为count
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 #### [Follow up](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/): Remove duplicate that only allow duplicate appears at k times
 1. 要求每个元素至少出现1次，即数组大小至少得从`k+1`开始遍历有意义, **`validation about null/length = 0/length < k`**
 2. Initiate count = k, 即前k个元素不用管, 从第k+1个元素(以k为下标)开始read，每次和之前的元素比较, read每次移一步，包括遇到相同的元素
@@ -258,8 +259,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- otherwise, replace with array[count] once different value found, count++
 	- initially the 1st different value will be replaced at array[k]
 4. eventually array element from index 0 to count - 1 will be replaced with number of k times of
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [157. Read-n-characters-given-read4](https://aaronice.gitbook.io/lintcode/data_structure/read-n-characters-given-read4)
 #### Queue Idea using array
 - declare an boolean `eof` to indicate if current read4 has read till end of file
@@ -270,8 +271,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- check `eof = bufCount< 4`
 	- update `bufCount= Math.min(bufCount, n - total)` in case current read4 returns more than what we need to just total of n characters
 	- update result as `buf[total++] = buffer[0 ~ count]`
-###### Time: O(n/4)
-###### Space:O(1)
+##### Time: O(n/4)
+##### Space:O(1)
 ### [158. Read-n-characters-given-read4-stream-II]()
 - declare an boolean `eof` to indicate if current read4 has read till end of file
 - declare a pointer `total` to indicate current position that reads from beginning to current length
@@ -292,16 +293,16 @@ if (index == 0 || num1 != intersection[index - 1]) {
 1. loop through brackets starting from index 1 and while salary > 0, calculate in current brancket range, how much salary needs to pay out by `double payout = min(bracket[i][0] - bracket[i-1][0], salary);`
 2. get tax to pay in current period that `tax += bracket[i][1] * payout` and add to result
 3. decrease salary by payout `salary -= payout;`
-###### Time:O(bracket.size())
-###### Space:O(1)
+##### Time:O(bracket.size())
+##### Space:O(1)
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 #### HashMap & PriorityQueue
 1. 根据 s 构造 HashMap, 因为面向字母所以我们可以用int[]来存储每个character出现的个数,下标可以直接(char[i])
 2. 然后我们构造一个priority queue/maxHeap用来排序, heap top store max appearance character,with comparetor can be `(a, b) -> frequency[b] - frequency[a]`
 3. 把所有frequency中不为0的character进队列, 此时队列里面最顶端为出现次数最大的character
 4. 使用StringBuilder构造队列里面一个个poll出来的character组成String, 每次都decrement frequency[ch]
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### Check TopKFrequentElements, TopKFrequentWordsI && II
 #### follow up, what if input is stream
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
@@ -315,22 +316,22 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- **if true, meaning current k is not enough**, move left point by decrement appearance of current left character **`freq[s.charAt(left) - 'A']--`** , then increment left **`left++`**
 		- **if false, meaning current window can allow** `maxCount + k` range, left remain same
 	5. update result by **`max(res, right - left)`**
-###### Time: O(n)
-###### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
+##### Time: O(n)
+##### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 #### BST Inorder & Merge 2 sorted arrays
 - 这两棵树都是二叉搜索树（BST），而一颗BST中序遍历的结果就是排好序的
 1. 新建两个list，分别对两棵树进行中序遍历得到分别排好序的list1，list2;
 2. 已知list1和list2有序，那么将二者归并即可的到一个排好序的总list。
-###### Time: O(m+n) 
+##### Time: O(m+n) 
 - 其中m和n是两棵树中的节点个数。中序遍历的时间复杂度为O(m+n)，归并排序的时间复杂度同样为O(m+n)。
 ##### Space:O(m+n)
 - 我们需要使用额外的空间存储数组 v1 和 v2
 ### follow up - what about Binary Tree
 1. Preorder/Inorder traversal
 2. Sort List
-###### Time: O((m+n)*log(M+N)) 
-###### Space:O(Hm + Hn + log(M+N)
+##### Time: O((m+n)*log(M+N)) 
+##### Space:O(Hm + Hn + log(M+N)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 #### Binary Search
 - 对于本题，由于每一行上的数字已经按照升序排列，因此我们可以通过二分查找的方法找到每一行上第一个大于等于1的数字
@@ -348,8 +349,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	 }  return low;  
 	}
 	```
-###### Time: O(row*logCol)
-###### Space:(1)
+##### Time: O(row*logCol)
+##### Space:(1)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 #### Coordinate Class and DFS
 -  该解决方案有两个步骤：首先，找出每个节点所在的坐标，然后报告他们的坐标。
@@ -391,8 +392,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- 若等于，则把剩余queue中节点加进去，
 		- 若不等则重新加入null并`dist++`
 	- 若pop不是null则说明应该继续BFS遍历以当前pop节点为中心的左右父三个结点，加入queue之前用Set<TreeNode> 来过滤掉已经visited过的下一个可能的结点
-###### Time: O(N) N 是树中节点个数
-###### Space:O(N)
+##### Time: O(N) N 是树中节点个数
+##### Space:O(N)
 ### [102. Binary Tree Level Order Traversal(Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 #### BFS
 - use `queue.size()` to identify how many nodes in current level
@@ -493,8 +494,8 @@ for (int i = 0; i < size; i++) {
 	  root = root.left;  
 	}
 	```
-###### Time: O(logN) worst O(n)
-###### Space:O(1)
+##### Time: O(logN) worst O(n)
+##### Space:O(1)
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
@@ -505,8 +506,8 @@ for (int i = 0; i < size; i++) {
 	1. 将两个指针先指向0，即数组头部
 	2. right向后扫描 **`right++`**，当遇到非0数即 **`nums[right] != 0`**时，将其赋值给left指针指向的位置，即**`nums[left] = nums[right]`**，并将left向后移动一位 **`left ++`**
 	3. 若left指针还未指向尾部 **`while(left < length)`**，即剩余的位置都是0，将剩余数组赋值为0 **`nums[left] = 0`**
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [31. Next Permutation(Medium)](https://leetcode.com/problems/next-permutation/)
 #### Simulate
 - 注意到下一个排列总是比当前排列要大，除非该排列已经是最大的排列。
@@ -519,7 +520,7 @@ for (int i = 0; i < size; i++) {
 	3.**`swap(nums, descStart, greaterDescStart)`**，此时可以证明区间 **[i+1,n) 必为降序**。
 	4.我们可以直接使用双指针 **`reverse(nums, descStart + 1)`** 使其变为升序，而无需对该区间进行排序。
 - 注意: 如果在步骤 1 找不到顺序对，说明当前序列已经是一个降序序列，即最大的序列，我们直接跳过步骤 2 执行步骤 3，即可得到最小的升序序列
-###### Time: O(n)
+##### Time: O(n)
 ##### Space:O(1)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 - 一次交换后字典序就变小，交换的两个数，肯定原先是大数在前，小数在后。交换后，小数换到前面来，大数换到后面去。那么有
@@ -744,8 +745,8 @@ etcode.com/problems/max-points-on-a-line/)
 3. in outer loop
 	- increment maxPoints with duplicates, **`maxPoints += duplicates`**
 	- update ans with **`Max(ans, maxPoints)`**
-###### Time: O(n^2)
-###### Space:O(n)
+##### Time: O(n^2)
+##### Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
 #### PrefixSum
 - define a `result` and initialize as `Integer.MIN_VALUE`, a `sum` as **prefixSum** and a `minSum` as **min prefixSum** at current element 
@@ -753,8 +754,8 @@ etcode.com/problems/max-points-on-a-line/)
 	- sum up `num` to `sum`, 
 	- update `result` with **`Math.max(result, sum - minSum)`**, 
 	- update `minSum` with **`Math.min(minSum, sum)`**
-###### Time:  O(n)
-###### Space:O(1)
+##### Time:  O(n)
+##### Space:O(1)
 #### DP
 - max subarray sum at element i can be formalized as **`f(i) = max(f(i-1) + A[i], A[i])**
 - we can just use array `num` as `dp` array because we're always iterating forward and never come back
@@ -762,8 +763,8 @@ etcode.com/problems/max-points-on-a-line/)
 - iterate each element in array from 2nd element
 	- calculate current max subarray sum at element i as **`dp[i] = Math.max(nums[i], dp[i-1]+nums[i])`**
 	- update result with `Math.max(max, nums[i])`
-###### Time:  O(n)
-###### Space:O(1)
+##### Time:  O(n)
+##### Space:O(1)
 #### Follow up: Divide and Conquer
 - using  **Divide and Conquer**  approach, we can find the maximum subarray sum in O(nLogn) time. Following is the Divide and Conquer algorithm.
 1.  Divide the given array in two halves
@@ -772,8 +773,8 @@ etcode.com/problems/max-points-on-a-line/)
     -   Maximum subarray sum in right half (Make a recursive call)
     -   Maximum subarray sum such that the subarray crosses the midpoint
  - The idea is simple, find the maximum sum starting from mid point and ending at some point on left of mid, then find the maximum sum starting from mid + 1 and ending with sum point on right of mid + 1. Finally, combine the two and return.
-###### Time: O(nlogN)
-###### Space:O(1)
+##### Time: O(nlogN)
+##### Space:O(1)
 ### [1186. Maximum Subarray Sum with One Deletion(Medium)](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)
 #### DP
 - define `max0` as max sub array ending with arr[i] without skipping any element, initialize as 1st element
@@ -782,16 +783,16 @@ etcode.com/problems/max-points-on-a-line/)
 	- update `max1` as `max1 = Math.max(max1 + arr[i], max0) `, meaning skipping array[i-1] or array[i]
 	- update `max0` as `Math.max(max0 + arr[i], arr[i])` meaning not skipping any element, same as without deleting element
 	- update `result` as `max(result, max0, max1)`
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 #### Stack
 - since we know the parenthese character, we use a stack to track when there is non matching parenthese.
 - iterate through charaters
 	- When met with left parentheses such as **`'(', '[','{'`**, push its right parenthese into stack **`stack.push(')', ']', '}')`**
 	- otherwise when met with right parentheses , check if **`stack.pop() != ch` or `stack.isEmpty`**, meaning there is no left matching parentheses, **`return false`**
-###### Time: O(n)
-###### Space: O(n)
+##### Time: O(n)
+##### Space: O(n)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 #### Stack + StringBuilder
 - 使用StringBuilder, 在 字符串 的 任意一个位置 添加、删除或更改一个字符的操作都是 O(n)O(n) 的，因为 String 是 不可变的。每次修改整个字符串都会重建。
@@ -802,8 +803,8 @@ etcode.com/problems/max-points-on-a-line/)
 	-  每次遇到 ")"，都从栈中移除一个索引，用该 ")" 与栈顶的 "(" 匹配。栈的深度等于余量。
 	- 扫描到字符串末尾时，栈中剩余的所有索引都是没有匹配的 "("。还需要使用一个 集合 跟踪不匹配的 ")"。
 - 然后根据索引删除每个需要删除的字符，返回重新创建的字符串
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### StringBuilder 2 loop
 1. 从左到右扫描String s，StringBuilder sb 删除不匹配的")",记录一共出现的**'('次数openSeen**和**'()'匹配的次数balance** 
 ```
@@ -830,8 +831,8 @@ if (c == '(') {
 } 
 result.append(c);
 ```
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)
 #### DFS
 1. 一次遍历计算出多余的「左括号」和「右括号」
@@ -860,8 +861,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 		- 如果栈不为空，当前右括号的下标减去栈顶元素即为「以该右括号为结尾的最长有效括号的长度」
 - 我们从前往后遍历字符串并更新答案即可。
 - 需要注意的是，如果一开始栈为空，第一个字符为左括号的时候我们会将其放入栈中，这样就不满足提及的「最后一个没有被匹配的右括号的下标」，为了保持统一，我们在一开始的时候往栈中放入一个值为 -1−1 的元素。
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### Double Loop
 - 我们利用两个计数器 left 和 right 。  
 - 首先，我们从左到右遍历字符串，  
@@ -898,28 +899,28 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - 初始条件
 	- 当word1和word2都为空：f[0][0] = 0
 	- dp[0][i ~ length2] = i; dp[i ~ length1][0] = i
-###### Time: O(n*m)
-###### Space:O(n*m)
+##### Time: O(n*m)
+##### Space:O(n*m)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 #### Find Mid and Reverse 2nd half
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 - Refer to Template LinkedList
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
 #### Two Pointers
 - start and end, moving towards each other when current char is letter or digit `while (start <= end && !Character.isLetterOrDigit(s.charAt(start))) {  start ++; }`
 - return false as long as character not matching
 ##### Always check `start <= end` inside while loop
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [680. Valid Palindrome II(Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
 #### Two Pointers
 - start and end, moving towards each other as long as current characters are same
 - since we only may delete one character, when there is unmatched character, we skip that condition by moving start and end one more index **`return helper(s, start + 1, end) || helper(s, start, end - 1);`**
 	- why need both? consider a string like "abcdca", just moving start wouldn't work
 - `helper` will continue moving two pointers and compare, return false as long as we found another unmatched character
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [1332. Remove Palindrome Subsequence(Easy)](https://leetcode.com/problems/remove-palindromic-subsequences/)
 #### Check if s was a palindrome
 - 回文子序列不是回文子字符串，比如"aababdaba"，"aaaaa"就是他的回文子序列。
@@ -929,8 +930,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - Check if S is empty, return 0
 - Otherwise check if S is palindrome by using two pointers, as long as there is unmatched character, meaning S is not palindrome, return 2
 - Else meaning S is palindrome, return 1
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 #### MaxHeap/PriorityQueue
 1. condition check when input is empty or input size less or equals than K
@@ -948,8 +949,8 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 ```
 4. Offer element into MaxHeap until it reaches capacity of K, poll elements out
 - Remaining would be Kth Point with smallest distance
-###### Time: O(logK*n) - offer/poll of Heap is logK
-###### Space:O(K)
+##### Time: O(logK*n) - offer/poll of Heap is logK
+##### Space:O(K)
 ### 最优解法：基于 quick select 的 O(n + klogk)
 - 先用 Quick Select 找到 kth closest point：O(n)；
 - 对 top k 个点按 distance metric sort 一遍：O(klogk)
@@ -959,8 +960,8 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 2. Create HashSet1 to store all element of nums1, Create HashSet2 to store duplicate number if found
 3. Iterator through nums2 check if any element contains in HashSet1 , if there is, meaning current element is duplicate, add into HashSet2 
 4. Initialize result array of HashSet2.size(), add item into results
-###### Time: O(n + m)
-###### Space:O(n or m)) - can improve by choosing min(n, m)
+##### Time: O(n + m)
+##### Space:O(n or m)) - can improve by choosing min(n, m)
 #### Sort & Two Pointers
 1. Sort two arrays: O(nlogN + mlogM)
 2. Create HashSet1 to store duplicate number if found
@@ -974,15 +975,15 @@ if (index == 0 || num1 != intersection[index - 1]) {
   intersection[index++] = num1;  
 }
 ```
-###### Time: O(mlogm+nlogn)
-###### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
+##### Time: O(mlogm+nlogn)
+##### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 1. 要求每个元素至少出现1次，即数组大小至少得从`2`开始遍历有意义, **`validation about null/length = 0/length < 2`**
 2. Initiate count = 1, 即前1个元素不用管, 从第2个元素（以1为下标）开始read，每次和之前（read - 1）的元素比较, read每次移一步，包括遇到相同的元素
 3. 遇到不同的元素时，此时read已经跳过之前在[count - 1 ~ read - 1]区间内重复的元素,  写入那个元素并递增count
 5. 最后数组下标 0 - count 部分即为去重后的数组,数组长度为count
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 #### [Follow up](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/): Remove duplicate that only allow duplicate appears at k times
 1. 要求每个元素至少出现1次，即数组大小至少得从`k+1`开始遍历有意义, **`validation about null/length = 0/length < k`**
 2. Initiate count = k, 即前k个元素不用管, 从第k+1个元素(以k为下标)开始read，每次和之前的元素比较, read每次移一步，包括遇到相同的元素
@@ -991,8 +992,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- otherwise, replace with array[count] once different value found, count++
 	- initially the 1st different value will be replaced at array[k]
 4. eventually array element from index 0 to count - 1 will be replaced with number of k times of
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [157. Read-n-characters-given-read4](https://aaronice.gitbook.io/lintcode/data_structure/read-n-characters-given-read4)
 #### Queue Idea using array
 - declare an boolean `eof` to indicate if current read4 has read till end of file
@@ -1003,8 +1004,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- check `eof = bufCount< 4`
 	- update `bufCount= Math.min(bufCount, n - total)` in case current read4 returns more than what we need to just total of n characters
 	- update result as `buf[total++] = buffer[0 ~ count]`
-###### Time: O(n/4)
-###### Space:O(1)
+##### Time: O(n/4)
+##### Space:O(1)
 ### [158. Read-n-characters-given-read4-stream-II]()
 - declare an boolean `eof` to indicate if current read4 has read till end of file
 - declare a pointer `total` to indicate current position that reads from beginning to current length
@@ -1025,16 +1026,16 @@ if (index == 0 || num1 != intersection[index - 1]) {
 1. loop through brackets starting from index 1 and while salary > 0, calculate in current brancket range, how much salary needs to pay out by `double payout = min(bracket[i][0] - bracket[i-1][0], salary);`
 2. get tax to pay in current period that `tax += bracket[i][1] * payout` and add to result
 3. decrease salary by payout `salary -= payout;`
-###### Time:O(bracket.size())
-###### Space:O(1)
+##### Time:O(bracket.size())
+##### Space:O(1)
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 #### HashMap & PriorityQueue
 1. 根据 s 构造 HashMap, 因为面向字母所以我们可以用int[]来存储每个character出现的个数,下标可以直接(char[i])
 2. 然后我们构造一个priority queue/maxHeap用来排序, heap top store max appearance character,with comparetor can be `(a, b) -> frequency[b] - frequency[a]`
 3. 把所有frequency中不为0的character进队列, 此时队列里面最顶端为出现次数最大的character
 4. 使用StringBuilder构造队列里面一个个poll出来的character组成String, 每次都decrement frequency[ch]
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### Check TopKFrequentElements, TopKFrequentWordsI && II
 #### follow up, what if input is stream
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
@@ -1048,22 +1049,22 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- **if true, meaning current k is not enough**, move left point by decrement appearance of current left character **`freq[s.charAt(left) - 'A']--`** , then increment left **`left++`**
 		- **if false, meaning current window can allow** `maxCount + k` range, left remain same
 	5. update result by **`max(res, right - left)`**
-###### Time: O(n)
-###### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
+##### Time: O(n)
+##### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 #### BST Inorder & Merge 2 sorted arrays
 - 这两棵树都是二叉搜索树（BST），而一颗BST中序遍历的结果就是排好序的
 1. 新建两个list，分别对两棵树进行中序遍历得到分别排好序的list1，list2;
 2. 已知list1和list2有序，那么将二者归并即可的到一个排好序的总list。
-###### Time: O(m+n) 
+##### Time: O(m+n) 
 - 其中m和n是两棵树中的节点个数。中序遍历的时间复杂度为O(m+n)，归并排序的时间复杂度同样为O(m+n)。
 ##### Space:O(m+n)
 - 我们需要使用额外的空间存储数组 v1 和 v2
 ### follow up - what about Binary Tree
 1. Preorder/Inorder traversal
 2. Sort List
-###### Time: O((m+n)*log(M+N)) 
-###### Space:O(Hm + Hn + log(M+N)
+##### Time: O((m+n)*log(M+N)) 
+##### Space:O(Hm + Hn + log(M+N)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 #### Binary Search
 - 对于本题，由于每一行上的数字已经按照升序排列，因此我们可以通过二分查找的方法找到每一行上第一个大于等于1的数字
@@ -1081,8 +1082,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	 }  return low;  
 	}
 	```
-###### Time: O(row*logCol)
-###### Space:(1)
+##### Time: O(row*logCol)
+##### Space:(1)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 #### DFS + BFS
@@ -1103,8 +1104,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- 若等于，则把剩余queue中节点加进去，
 		- 若不等则重新加入null并`dist++`
 	- 若pop不是null则说明应该继续BFS遍历以当前pop节点为中心的左右父三个结点，加入queue之前用Set<TreeNode> 来过滤掉已经visited过的下一个可能的结点
-###### Time: O(N) N 是树中节点个数
-###### Space:O(N)
+##### Time: O(N) N 是树中节点个数
+##### Space:O(N)
 ### [102. Binary Tree Level Order Traversal(Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
@@ -1160,8 +1161,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	  root = root.left;  
 	}
 	```
-###### Time: O(logN) worst O(n)
-###### Space:O(1)
+##### Time: O(logN) worst O(n)
+##### Space:O(1)
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
@@ -1172,8 +1173,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	1. 将两个指针先指向0，即数组头部
 	2. right向后扫描 **`right++`**，当遇到非0数即 **`nums[right] != 0`**时，将其赋值给left指针指向的位置，即**`nums[left] = nums[right]`**，并将left向后移动一位 **`left ++`**
 	3. 若left指针还未指向尾部 **`while(left < length)`**，即剩余的位置都是0，将剩余数组赋值为0 **`nums[left] = 0`**
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [31. Next Permutation(Medium)](https://leetcode.com/problems/next-permutation/)
 #### Simulate
 - 注意到下一个排列总是比当前排列要大，除非该排列已经是最大的排列。
@@ -1186,7 +1187,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	3.**`swap(nums, descStart, greaterDescStart)`**，此时可以证明区间 **[i+1,n) 必为降序**。
 	4.我们可以直接使用双指针 **`reverse(nums, descStart + 1)`** 使其变为升序，而无需对该区间进行排序。
 - 注意: 如果在步骤 1 找不到顺序对，说明当前序列已经是一个降序序列，即最大的序列，我们直接跳过步骤 2 执行步骤 3，即可得到最小的升序序列
-###### Time: O(n)
+##### Time: O(n)
 ##### Space:O(1)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 - 一次交换后字典序就变小，交换的两个数，肯定原先是大数在前，小数在后。交换后，小数换到前面来，大数换到后面去。那么有
@@ -1411,8 +1412,8 @@ etcode.com/problems/max-points-on-a-line/)
 3. in outer loop
 	- increment maxPoints with duplicates, **`maxPoints += duplicates`**
 	- update ans with **`Max(ans, maxPoints)`**
-###### Time: O(n^2)
-###### Space:O(n)
+##### Time: O(n^2)
+##### Space:O(n)
 ### [53. Maximum Subarray(Easy)](https://leetcode.com/problems/maximum-subarray/)
 #### PrefixSum
 - define a `result` and initialize as `Integer.MIN_VALUE`, a `sum` as **prefixSum** and a `minSum` as **min prefixSum** at current element 
@@ -1420,8 +1421,8 @@ etcode.com/problems/max-points-on-a-line/)
 	- sum up `num` to `sum`, 
 	- update `result` with **`Math.max(result, sum - minSum)`**, 
 	- update `minSum` with **`Math.min(minSum, sum)`**
-###### Time:  O(n)
-###### Space:O(1)
+##### Time:  O(n)
+##### Space:O(1)
 #### DP
 - max subarray sum at element i can be formalized as **`f(i) = max(f(i-1) + A[i], A[i])**
 - we can just use array `num` as `dp` array because we're always iterating forward and never come back
@@ -1429,8 +1430,8 @@ etcode.com/problems/max-points-on-a-line/)
 - iterate each element in array from 2nd element
 	- calculate current max subarray sum at element i as **`dp[i] = Math.max(nums[i], dp[i-1]+nums[i])`**
 	- update result with `Math.max(max, nums[i])`
-###### Time:  O(n)
-###### Space:O(1)
+##### Time:  O(n)
+##### Space:O(1)
 #### Follow up: Divide and Conquer
 - using  **Divide and Conquer**  approach, we can find the maximum subarray sum in O(nLogn) time. Following is the Divide and Conquer algorithm.
 1.  Divide the given array in two halves
@@ -1439,8 +1440,8 @@ etcode.com/problems/max-points-on-a-line/)
     -   Maximum subarray sum in right half (Make a recursive call)
     -   Maximum subarray sum such that the subarray crosses the midpoint
  - The idea is simple, find the maximum sum starting from mid point and ending at some point on left of mid, then find the maximum sum starting from mid + 1 and ending with sum point on right of mid + 1. Finally, combine the two and return.
-###### Time: O(nlogN)
-###### Space:O(1)
+##### Time: O(nlogN)
+##### Space:O(1)
 ### [1186. Maximum Subarray Sum with One Deletion(Medium)](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)
 #### DP
 - define `max0` as max sub array ending with arr[i] without skipping any element, initialize as 1st element
@@ -1449,16 +1450,16 @@ etcode.com/problems/max-points-on-a-line/)
 	- update `max1` as `max1 = Math.max(max1 + arr[i], max0) `, meaning skipping array[i-1] or array[i]
 	- update `max0` as `Math.max(max0 + arr[i], arr[i])` meaning not skipping any element, same as without deleting element
 	- update `result` as `max(result, max0, max1)`
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 ### [20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/)
 #### Stack
 - since we know the parenthese character, we use a stack to track when there is non matching parenthese.
 - iterate through charaters
 	- When met with left parentheses such as **`'(', '[','{'`**, push its right parenthese into stack **`stack.push(')', ']', '}')`**
 	- otherwise when met with right parentheses , check if **`stack.pop() != ch` or `stack.isEmpty`**, meaning there is no left matching parentheses, **`return false`**
-###### Time: O(n)
-###### Space: O(n)
+##### Time: O(n)
+##### Space: O(n)
 ### [1249. Minimum Remove to Make Valid Parentheses(Medium)**](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 #### Stack + StringBuilder
 - 使用StringBuilder, 在 字符串 的 任意一个位置 添加、删除或更改一个字符的操作都是 O(n)O(n) 的，因为 String 是 不可变的。每次修改整个字符串都会重建。
@@ -1469,8 +1470,8 @@ etcode.com/problems/max-points-on-a-line/)
 	-  每次遇到 ")"，都从栈中移除一个索引，用该 ")" 与栈顶的 "(" 匹配。栈的深度等于余量。
 	- 扫描到字符串末尾时，栈中剩余的所有索引都是没有匹配的 "("。还需要使用一个 集合 跟踪不匹配的 ")"。
 - 然后根据索引删除每个需要删除的字符，返回重新创建的字符串
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### StringBuilder 2 loop
 1. 从左到右扫描String s，StringBuilder sb 删除不匹配的")",记录一共出现的**'('次数openSeen**和**'()'匹配的次数balance** 
 ```
@@ -1497,8 +1498,8 @@ if (c == '(') {
 } 
 result.append(c);
 ```
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 ### [301. Remove Invalid Parentheses(Hard)](https://leetcode.com/problems/remove-invalid-parentheses/)
 #### DFS
 1. 一次遍历计算出多余的「左括号」和「右括号」
@@ -1527,8 +1528,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 		- 如果栈不为空，当前右括号的下标减去栈顶元素即为「以该右括号为结尾的最长有效括号的长度」
 - 我们从前往后遍历字符串并更新答案即可。
 - 需要注意的是，如果一开始栈为空，第一个字符为左括号的时候我们会将其放入栈中，这样就不满足提及的「最后一个没有被匹配的右括号的下标」，为了保持统一，我们在一开始的时候往栈中放入一个值为 -1−1 的元素。
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### Double Loop
 - 我们利用两个计数器 left 和 right 。  
 - 首先，我们从左到右遍历字符串，  
@@ -1565,28 +1566,28 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - 初始条件
 	- 当word1和word2都为空：f[0][0] = 0
 	- dp[0][i ~ length2] = i; dp[i ~ length1][0] = i
-###### Time: O(n*m)
-###### Space:O(n*m)
+##### Time: O(n*m)
+##### Space:O(n*m)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 #### Find Mid and Reverse 2nd half
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 - Refer to Template LinkedList
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
 #### Two Pointers
 - start and end, moving towards each other when current char is letter or digit `while (start <= end && !Character.isLetterOrDigit(s.charAt(start))) {  start ++; }`
 - return false as long as character not matching
 ##### Always check `start <= end` inside while loop
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [680. Valid Palindrome II(Medium)](https://leetcode.com/problems/valid-palindrome-ii/)
 #### Two Pointers
 - start and end, moving towards each other as long as current characters are same
 - since we only may delete one character, when there is unmatched character, we skip that condition by moving start and end one more index **`return helper(s, start + 1, end) || helper(s, start, end - 1);`**
 	- why need both? consider a string like "abcdca", just moving start wouldn't work
 - `helper` will continue moving two pointers and compare, return false as long as we found another unmatched character
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [1332. Remove Palindrome Subsequence(Easy)](https://leetcode.com/problems/remove-palindromic-subsequences/)
 #### Check if s was a palindrome
 - 回文子序列不是回文子字符串，比如"aababdaba"，"aaaaa"就是他的回文子序列。
@@ -1596,8 +1597,8 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - Check if S is empty, return 0
 - Otherwise check if S is palindrome by using two pointers, as long as there is unmatched character, meaning S is not palindrome, return 2
 - Else meaning S is palindrome, return 1
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [973. K Closest Points to Origin (Medium)](https://leetcode.com/problems/k-closest-points-to-origin/)
 #### MaxHeap/PriorityQueue
 1. condition check when input is empty or input size less or equals than K
@@ -1615,8 +1616,8 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 ```
 4. Offer element into MaxHeap until it reaches capacity of K, poll elements out
 - Remaining would be Kth Point with smallest distance
-###### Time: O(logK*n) - offer/poll of Heap is logK
-###### Space:O(K)
+##### Time: O(logK*n) - offer/poll of Heap is logK
+##### Space:O(K)
 ### 最优解法：基于 quick select 的 O(n + klogk)
 - 先用 Quick Select 找到 kth closest point：O(n)；
 - 对 top k 个点按 distance metric sort 一遍：O(klogk)
@@ -1626,8 +1627,8 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 2. Create HashSet1 to store all element of nums1, Create HashSet2 to store duplicate number if found
 3. Iterator through nums2 check if any element contains in HashSet1 , if there is, meaning current element is duplicate, add into HashSet2 
 4. Initialize result array of HashSet2.size(), add item into results
-###### Time: O(n + m)
-###### Space:O(n or m)) - can improve by choosing min(n, m)
+##### Time: O(n + m)
+##### Space:O(n or m)) - can improve by choosing min(n, m)
 #### Sort & Two Pointers
 1. Sort two arrays: O(nlogN + mlogM)
 2. Create HashSet1 to store duplicate number if found
@@ -1641,15 +1642,15 @@ if (index == 0 || num1 != intersection[index - 1]) {
   intersection[index++] = num1;  
 }
 ```
-###### Time: O(mlogm+nlogn)
-###### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
+##### Time: O(mlogm+nlogn)
+##### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 1. 要求每个元素至少出现1次，即数组大小至少得从`2`开始遍历有意义, **`validation about null/length = 0/length < 2`**
 2. Initiate count = 1, 即前1个元素不用管, 从第2个元素（以1为下标）开始read，每次和之前（read - 1）的元素比较, read每次移一步，包括遇到相同的元素
 3. 遇到不同的元素时，此时read已经跳过之前在[count - 1 ~ read - 1]区间内重复的元素,  写入那个元素并递增count
 5. 最后数组下标 0 - count 部分即为去重后的数组,数组长度为count
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 #### [Follow up](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/): Remove duplicate that only allow duplicate appears at k times
 1. 要求每个元素至少出现1次，即数组大小至少得从`k+1`开始遍历有意义, **`validation about null/length = 0/length < k`**
 2. Initiate count = k, 即前k个元素不用管, 从第k+1个元素(以k为下标)开始read，每次和之前的元素比较, read每次移一步，包括遇到相同的元素
@@ -1658,8 +1659,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- otherwise, replace with array[count] once different value found, count++
 	- initially the 1st different value will be replaced at array[k]
 4. eventually array element from index 0 to count - 1 will be replaced with number of k times of
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [157. Read-n-characters-given-read4](https://aaronice.gitbook.io/lintcode/data_structure/read-n-characters-given-read4)
 #### Queue Idea using array
 - declare an boolean `eof` to indicate if current read4 has read till end of file
@@ -1670,8 +1671,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- check `eof = bufCount< 4`
 	- update `bufCount= Math.min(bufCount, n - total)` in case current read4 returns more than what we need to just total of n characters
 	- update result as `buf[total++] = buffer[0 ~ count]`
-###### Time: O(n/4)
-###### Space:O(1)
+##### Time: O(n/4)
+##### Space:O(1)
 ### [158. Read-n-characters-given-read4-stream-II]()
 - declare an boolean `eof` to indicate if current read4 has read till end of file
 - declare a pointer `total` to indicate current position that reads from beginning to current length
@@ -1692,16 +1693,16 @@ if (index == 0 || num1 != intersection[index - 1]) {
 1. loop through brackets starting from index 1 and while salary > 0, calculate in current brancket range, how much salary needs to pay out by `double payout = min(bracket[i][0] - bracket[i-1][0], salary);`
 2. get tax to pay in current period that `tax += bracket[i][1] * payout` and add to result
 3. decrease salary by payout `salary -= payout;`
-###### Time:O(bracket.size())
-###### Space:O(1)
+##### Time:O(bracket.size())
+##### Space:O(1)
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 #### HashMap & PriorityQueue
 1. 根据 s 构造 HashMap, 因为面向字母所以我们可以用int[]来存储每个character出现的个数,下标可以直接(char[i])
 2. 然后我们构造一个priority queue/maxHeap用来排序, heap top store max appearance character,with comparetor can be `(a, b) -> frequency[b] - frequency[a]`
 3. 把所有frequency中不为0的character进队列, 此时队列里面最顶端为出现次数最大的character
 4. 使用StringBuilder构造队列里面一个个poll出来的character组成String, 每次都decrement frequency[ch]
-###### Time: O(n)
-###### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### Check TopKFrequentElements, TopKFrequentWordsI && II
 #### follow up, what if input is stream
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
@@ -1715,22 +1716,22 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- **if true, meaning current k is not enough**, move left point by decrement appearance of current left character **`freq[s.charAt(left) - 'A']--`** , then increment left **`left++`**
 		- **if false, meaning current window can allow** `maxCount + k` range, left remain same
 	5. update result by **`max(res, right - left)`**
-###### Time: O(n)
-###### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
+##### Time: O(n)
+##### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 #### BST Inorder & Merge 2 sorted arrays
 - 这两棵树都是二叉搜索树（BST），而一颗BST中序遍历的结果就是排好序的
 1. 新建两个list，分别对两棵树进行中序遍历得到分别排好序的list1，list2;
 2. 已知list1和list2有序，那么将二者归并即可的到一个排好序的总list。
-###### Time: O(m+n) 
+##### Time: O(m+n) 
 - 其中m和n是两棵树中的节点个数。中序遍历的时间复杂度为O(m+n)，归并排序的时间复杂度同样为O(m+n)。
 ##### Space:O(m+n)
 - 我们需要使用额外的空间存储数组 v1 和 v2
 ### follow up - what about Binary Tree
 1. Preorder/Inorder traversal
 2. Sort List
-###### Time: O((m+n)*log(M+N)) 
-###### Space:O(Hm + Hn + log(M+N)
+##### Time: O((m+n)*log(M+N)) 
+##### Space:O(Hm + Hn + log(M+N)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 #### Binary Search
 - 对于本题，由于每一行上的数字已经按照升序排列，因此我们可以通过二分查找的方法找到每一行上第一个大于等于1的数字
@@ -1748,8 +1749,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	 }  return low;  
 	}
 	```
-###### Time: O(row*logCol)
-###### Space:(1)
+##### Time: O(row*logCol)
+##### Space:(1)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 #### DFS + BFS
@@ -1770,8 +1771,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- 若等于，则把剩余queue中节点加进去，
 		- 若不等则重新加入null并`dist++`
 	- 若pop不是null则说明应该继续BFS遍历以当前pop节点为中心的左右父三个结点，加入queue之前用Set<TreeNode> 来过滤掉已经visited过的下一个可能的结点
-###### Time: O(N) N 是树中节点个数
-###### Space:O(N)
+##### Time: O(N) N 是树中节点个数
+##### Space:O(N)
 ### [102. Binary Tree Level Order Traversal(Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
@@ -1827,8 +1828,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	  root = root.left;  
 	}
 	```
-###### Time: O(logN) worst O(n)
-###### Space:O(1)
+##### Time: O(logN) worst O(n)
+##### Space:O(1)
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
@@ -1839,8 +1840,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	1. 将两个指针先指向0，即数组头部
 	2. right向后扫描 **`right++`**，当遇到非0数即 **`nums[right] != 0`**时，将其赋值给left指针指向的位置，即**`nums[left] = nums[right]`**，并将left向后移动一位 **`left ++`**
 	3. 若left指针还未指向尾部 **`while(left < length)`**，即剩余的位置都是0，将剩余数组赋值为0 **`nums[left] = 0`**
-###### Time: O(n)
-###### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [31. Next Permutation(Medium)](https://leetcode.com/problems/next-permutation/)
 #### Simulate
 - 注意到下一个排列总是比当前排列要大，除非该排列已经是最大的排列。
@@ -1853,7 +1854,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	3.**`swap(nums, descStart, greaterDescStart)`**，此时可以证明区间 **[i+1,n) 必为降序**。
 	4.我们可以直接使用双指针 **`reverse(nums, descStart + 1)`** 使其变为升序，而无需对该区间进行排序。
 - 注意: 如果在步骤 1 找不到顺序对，说明当前序列已经是一个降序序列，即最大的序列，我们直接跳过步骤 2 执行步骤 3，即可得到最小的升序序列
-###### Time: O(n)
+##### Time: O(n)
 ##### Space:O(1)
 ### [1053. Previous Permutation With One Swap(Medium)](https://leetcode.com/problems/previous-permutation-with-one-swap/)
 - 一次交换后字典序就变小，交换的两个数，肯定原先是大数在前，小数在后。交换后，小数换到前面来，大数换到后面去。那么有
@@ -2140,11 +2141,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODUxNjcwNDcsMTE4NDk3OTIyNSw4Nj
-M5MzgwMDYsMTE0MTQxNDA5MiwtNDYyMzQ1NDksMTYxMjE3Njgz
-MCwxMjE5ODM4NTU4LDQzMTk1MTg4NSwtOTgwODEyNzY1LDEyMz
-EyODA5ODQsLTk2NTQyNjEwNCwxNjc3ODYwNzY3LDkyMzAxMDMx
-Myw5OTM5MjIxMSwxNzI2MjU3OTQ5LC0xNDYyNzg3OTk3LC0xNT
-A2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0ODAsMTEyOTA0OTU0
-XX0=
+eyJoaXN0b3J5IjpbLTE1ODU0MDUyOSwtMTk4NTE2NzA0NywxMT
+g0OTc5MjI1LDg2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0
+OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1LC05OD
+A4MTI3NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3
+NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDksLTE0Nj
+I3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MDcyNzQ4
+MF19
 -->
