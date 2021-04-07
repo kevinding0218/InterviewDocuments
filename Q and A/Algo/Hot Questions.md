@@ -444,7 +444,17 @@ for (int i = 0; i < size; i++) {
 ##### Space:O(1)
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 #### DFS HashMap of parent and visited
-
+1. 我们可以用哈希表存储所有节点的父节点，  
+2. 然后我们就可以利用节点的父节点信息从 p 结点开始不断往上跳，并记录已经访问过的节点，  
+3. 再从 q 节点开始不断往上跳，  
+4. 如果碰到已经访问过的节点，那么这个节点就是我们要找的最近公共祖先。  
+##### 算法  
+- 从根节点开始遍历整棵二叉树，用哈希表记录每个节点的父节点指针。  
+- 从 p 节点开始不断往它的祖先移动，并用数据结构记录已经访问过的祖先节点。  
+- 同样，我们再从 q 节点开始不断往它的祖先移动，如果有祖先已经被访问过，即意味着这是 p 和 q 的深度最深的公共祖先，即 LCA 节点。  
+##### Time: O(n) 二叉树的所有节点有且只会被访问一次，从 p 和 q 节点往上跳经过的祖先节点个数不会超过 NN  
+##### Space:O(n) 其中N是二叉树的节点数。递归调用的栈深度取决于二叉树的高度，二叉树最坏情况下为一条链，此时高度为N,哈希表存储  
+* 每个节点的父节点也需要O(N)的空间复杂度
 ### [510. Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 #### Node has parent
 - Case 1: if node right child is not null -> go to its right child then leftmost of that is the successor
@@ -2143,7 +2153,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk4NzMxODg0LC0xOTg1MTY3MDQ3LDExOD
+eyJoaXN0b3J5IjpbMTc5Njg2MTYxLC0xOTg1MTY3MDQ3LDExOD
 Q5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NTQ5
 LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4ODUsLTk4MD
 gxMjc2NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nzg2MDc2
