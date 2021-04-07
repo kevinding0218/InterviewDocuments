@@ -405,6 +405,16 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - next: 
 	- pop() from stack
 	- check if poped node has right child, if it has, put its right child and the leftmost nodes into stack
+	```
+	TreeNode node = stack.pop();  
+	// push all left path of right subtree  
+	TreeNode right = node.right;  
+	while (right != null) {  
+	  stack.push(right);  
+	    right = right.left;  
+	}
+	```
+- hasNext(): equals to if `stack.isNotEmpty()`
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
@@ -2106,7 +2116,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MDYzMjQ3NCwxMTQxNDE0MDkyLC00Nj
+eyJoaXN0b3J5IjpbLTM2MDA2NDgwMywxMTQxNDE0MDkyLC00Nj
 IzNDU0OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1
 LC05ODA4MTI3NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nz
 c4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDks
