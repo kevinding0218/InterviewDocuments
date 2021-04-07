@@ -1,6 +1,4 @@
-### 149. Max Points in one Line (Hard)
-#### [149. Max Points in one Line (Hard)](https://le
-etcode.com/problems/max-points-on-a-line/)
+### [149. Max Points in one Line (Hard)](https://leetcode.com/problems/max-points-on-a-line/)
 #### HashMap - slope
 1. loop from each Point I with another Point j in 2 for loop
 2. in inner loop, **the goal is to get the max point with Point i of same lines when end of the inner loop**
@@ -818,11 +816,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NjAyMjAzMyw2NDMxMzUyNjcsLTk0Nz
-A1ODU2MCwtMTk4NTE2NzA0NywxMTg0OTc5MjI1LDg2MzkzODAw
-NiwxMTQxNDE0MDkyLC00NjIzNDU0OSwxNjEyMTc2ODMwLDEyMT
-k4Mzg1NTgsNDMxOTUxODg1LC05ODA4MTI3NjUsMTIzMTI4MDk4
-NCwtOTY1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEzLDk5Mz
-kyMjExLDE3MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1
-MzldfQ==
+eyJoaXN0b3J5IjpbNTM2NzAxNjQ5LDY0MzEzNTI2NywtOTQ3MD
+U4NTYwLC0xOTg1MTY3MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2
+LDExNDE0MTQwOTIsLTQ2MjM0NTQ5LDE2MTIxNzY4MzAsMTIxOT
+gzODU1OCw0MzE5NTE4ODUsLTk4MDgxMjc2NSwxMjMxMjgwOTg0
+LC05NjU0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOT
+IyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUz
+OV19
 -->
