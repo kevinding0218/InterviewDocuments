@@ -460,6 +460,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
  - 为了检查相邻单词 a，b 是否满足 a <= b，只需要检查它们第一个不同的字母就可以了。例如，对于"applying" 和 "apples"，第一个不同的字母是 y 和 e。之后只需要比较这两个字母在 order 中的下标就可以了。
  - 还需要考虑两个单词长度不等的情况。例如，当比较 "app" 和 "apply" 的时候，前三个字母都是相等的，但 "app" 比 "apply" 更短，所以满足 a <= b。
 ### [560. Subarray Sum Equals K(Medium)](https://leetcode.com/problems/subarray-sum-equals-k/)
+#### PrefixSum & HashMap
+
 ### [71. Simplify Path(Medium)](https://leetcode.com/problems/simplify-path/)
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
 ### [426. Convert the binary search tree into a sorted doubly linked list(Medium)](https://www.jiuzhang.com/solutions/convert-binary-search-tree-to-sorted-doubly-linked-list)
@@ -495,10 +497,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMzg5OTQ2NSwxMjc2OTgzMjMwLDE4Nj
-E3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMzEyNjIy
-MzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAyNTcwLC
-0xODM1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4NywtNTI4
-OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2OD
-M1LDQ5MDg3NjY1Ml19
+eyJoaXN0b3J5IjpbMTEyOTA0OTU0LDIxMTM4OTk0NjUsMTI3Nj
+k4MzIzMCwxODYxNzE0MzU0LC0xNzI2ODk1NTIwLDUyODE1NDY4
+NywtMTMxMjYyMjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0NTk0LD
+UyODIwMjU3MCwtMTgzNTYwMjk1MSwxNjEwOTUxOTk2LC0yMjc0
+MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MDc3MTU2Nj
+YsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
 -->
