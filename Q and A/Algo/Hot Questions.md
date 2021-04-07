@@ -350,10 +350,31 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	}
 	```
 #### Node doesn't have parent
-- 三种情况：（p 为给定的节点，要找到p节点的后继）
-1. root的值 < p的值 答案就在右子树中
-2. root的值 > p的值 答案可能就是root（作为候选），也可能在左子树中
-3. root的值 = p的值 p如果有右子树，那么答案就是右子树中最小的那个
+1. keep find p from root so that root = p and successor is p's parent,  set successor to be p's parent node for now
+	```
+	TreeNode successor = null;   
+	// keep find p from root so that root = p and successor is p's parent  
+	// set successor to be p's parent node for now  
+	while (root != null && root != p) {  
+	  if (root.val > p.val) {  
+	  successor = root;  
+	        root = root.left;  
+	    } else {  
+	  root = root.right;  
+	    }  
+	}
+	```
+2. if root not found return null
+3. if root found but no right node, then its parent is the successor
+	```
+	if (root.right == null) {  
+	  return successor;  
+	}
+	```
+4. if root found and has right node, then the left most of its right node is the successor
+5. 
+#### Time: O(logN) worst O(n)
+#### Space:O(1)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 
 
@@ -556,7 +577,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMzgzODkzNywtMTUwNjU1NDUzOSw2Mj
+eyJoaXN0b3J5IjpbMTY2NzIyMjEwNiwtMTUwNjU1NDUzOSw2Mj
 E3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1
 LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1Mj
 gxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4
