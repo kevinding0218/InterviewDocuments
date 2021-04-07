@@ -74,10 +74,10 @@ for (var num: nums) {
 ```
 ##### Time: O(logK) offer/poll
 ##### Space: O(K)
-### HashSet/HashMap
-#### When asked about find duplicate element or given a known target and known element A, find if there is another elment B that can formulized with A to be target
-#### When asked about frequency of character/string appearances, usually combined usage with Priority Queue to sort by appearance count
-### Sliding Window
+## HashSet/HashMap
+- When asked about find duplicate element or given a known target and known element A, find if there is another elment B that can formulized with A to be target
+- When asked about frequency of character/string appearances, usually combined usage with Priority Queue to sort by appearance count
+## Sliding Window
 #### Find something/scenario in continuing sub string 
 
 ### Remove Duplicate that only can appeark K times
@@ -108,7 +108,8 @@ col = index % n
 index = col + row * n
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MDYyOTQ5MywtOTgwNDc3NjQ5LDE3NT
-YwMTY4NDUsMjAzNDU0NzkzNCwtNjAxNzc0NTg3LDg5NDY1MDgz
-NSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbLTIwMjk1ODM0NzEsLTM2MDYyOTQ5MywtOT
+gwNDc3NjQ5LDE3NTYwMTY4NDUsMjAzNDU0NzkzNCwtNjAxNzc0
+NTg3LDg5NDY1MDgzNSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl
+19
 -->
