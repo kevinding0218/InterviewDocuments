@@ -368,7 +368,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ```
 2. 我们可以使用深度优先搜索找到每个节点的坐标。保持当前节点 (x, y)，移动的过程中, 坐标变化为左孩子(x-1, y+1) 或 右孩子(x+1, y+1), e.g `(0,0),(1,-1),(1,1),(2,0),(2,2)`
 3.  我们通过 x 坐标排序，再根据 y 坐标排序，这样确保以正确的顺序添加到答案中 e.g:`(-1,1),(0,0),(0,2),(1,1),(2,2)`
-4. declare a prev to indicate current x, iterate through all coodinates if `prev != current.x`, meani
+4. For each coordinate, we insert into results by `ans.get(ans.size() - 1).add(coordinate.val); to identify new list depend on coordinate x, declare a prev to indicate current x, iterate through all coodinates if `prev != current.x`, meaning we'll create a new list to store coordinate in new `x`, 
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 #### DFS + BFS
 - 如果节点有指向父节点的引用，也就知道了距离该节点 1 距离的所有节点。之后就可以从 target 节点开始进行广度优先搜索了。
@@ -2092,7 +2092,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDM1OTI0MzksNDMxOTUxODg1LC05OD
+eyJoaXN0b3J5IjpbLTE5MDU4MTc3MjgsNDMxOTUxODg1LC05OD
 A4MTI3NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3
 NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDksLTE0Nj
 I3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MDcyNzQ4
