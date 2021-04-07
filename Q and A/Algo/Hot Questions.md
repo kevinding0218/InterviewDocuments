@@ -323,10 +323,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
-#### follow up - nary
-- 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
-
 ### [510. Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 #### Node has parent
 - Case 1: if node right child is not null -> go to its right child then leftmost of that is the successor
@@ -380,11 +376,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	```
 #### Time: O(logN) worst O(n)
 #### Space:O(1)
+### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+#### follow up - nary
+- 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
-
-
-
-
 ### [283. Move Zeroes(Easy)](https://leetcode.com/problems/move-zeroes/)
 ####  Two Pointers
 - 使用两个指针right和left
@@ -582,7 +577,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1Mzc5NTgxMSwtMTQ2Mjc4Nzk5NywtMT
+eyJoaXN0b3J5IjpbMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMT
 UwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1
 NCwyMTEzODk5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMT
 cyNjg5NTUyMCw1MjgxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgw
