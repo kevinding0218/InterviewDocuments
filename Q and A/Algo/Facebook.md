@@ -37,7 +37,7 @@ Medium
 977        Squares of a Sorted Array
 973        K Closest Points to Origin   
 958        Check Completeness of a Binary Tree  
-953        Verifying an Alien Dictionary
+~~953        Verifying an Alien Dictionary~~
 938        Range Sum of BST   
 921        Minimum Add to Make Parentheses Valid   
 919        Complete Binary Tree Inserter   
@@ -108,5 +108,6 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbLTE2MjE2OTI5NTAsMjAyMzEwMTIyLDE4NT
+M4OTMyNTldfQ==
 -->
