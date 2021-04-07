@@ -612,6 +612,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ### Find median in BST without extra space
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
+
 ### [278. First Bad Version(Easy)](https://leetcode.com/problems/first-bad-version/)
 #### Binary Search
 #### Time: O(logN)
@@ -640,11 +641,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NTQyNjEwNCwxNjc3ODYwNzY3LDkyMz
-AxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5LC0xNDYyNzg3OTk3
-LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0ODAsMTEyOT
-A0OTU0LDIxMTM4OTk0NjUsMTI3Njk4MzIzMCwxODYxNzE0MzU0
-LC0xNzI2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYyMjM4MiwtMT
-IwODAzMjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MCwtMTgzNTYw
-Mjk1MV19
+eyJoaXN0b3J5IjpbMTcyNzk0MzcwNiwtOTY1NDI2MTA0LDE2Nz
+c4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDks
+LTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MD
+cyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMw
+LDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMz
+EyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAy
+NTcwXX0=
 -->
