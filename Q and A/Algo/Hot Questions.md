@@ -317,6 +317,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(n)
 #### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
+#### BST Inorder & Merge 2 sorted arrays
+- 这两棵树都是二叉搜索树（BST），而一颗BST中序遍历的结果就是排好序的
+1. 新建两个list，分别对两棵树进行中序遍历得到分别排好序的list1，list2;
+2. 
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
@@ -660,11 +664,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nz
-c4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDks
-LTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MD
-cyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMw
-LDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMz
-EyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAy
-NTcwXX0=
+eyJoaXN0b3J5IjpbLTE3NjY4MzI4MDgsMTIzMTI4MDk4NCwtOT
+Y1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjEx
+LDE3MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNj
+IxNzEzNTIsMTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2
+NSwxMjc2OTgzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNT
+I4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1
+ODQ1OTRdfQ==
 -->
