@@ -421,6 +421,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 #### BFS
 - 利用广度优先搜索进行层次遍历，记录下每层的最后一个元素。
+- 左结点排在右结点之前，这样，我们对每一层都从左到右访问。因此，只保留每个深度最后访问的结点，我们就可以在遍历完整棵树后得到每个深度最右的结点
 ```
 int size = queue.size();  
 for (int i = 0; i < size; i++) {
@@ -2132,7 +2133,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NjAzNzYyNyw4NjM5MzgwMDYsMTE0MT
+eyJoaXN0b3J5IjpbMTE4NDk3OTIyNSw4NjM5MzgwMDYsMTE0MT
 QxNDA5MiwtNDYyMzQ1NDksMTYxMjE3NjgzMCwxMjE5ODM4NTU4
 LDQzMTk1MTg4NSwtOTgwODEyNzY1LDEyMzEyODA5ODQsLTk2NT
 QyNjEwNCwxNjc3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwx
