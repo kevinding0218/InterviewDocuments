@@ -110,19 +110,44 @@ index = col + row * n
 ### BST
 - Inorder will be a sorted list
 ```
+/**
 private void dfs(TreeNode root, List<Integer> ansList) {  
   if (root == null) {  
-  return;  
-    }  
+	  return;  
+  }  
   
   dfs(root.left, ansList);  
-    ansList.add(root.val);  
-    dfs(root.right, ansList);  
+  ansList.add(root.val);  
+  dfs(root.right, ansList);  
+}
+/**  
+ * 先把最左边全都加进stack，然后开始pop，每pop一次检查：  
+  * 1.右边为空就一直pop；  
+  * 2.不为空就去右边，然后再一次将左边的一条下来全加进stack里。  
+  * 重复该过程。  
+  */  
+public static List<Integer> iteration(TreeNode root) {  
+  Stack<TreeNode> stack = new Stack<>();  
+    List<Integer> list = new ArrayList<>();  
+    while (root != null) {  
+  stack.push(root);  
+        root = root.left;  
+    }  
+  while (!stack.empty()) {  
+  TreeNode curr = stack.pop();  
+        list.add(curr.val);  
+        if (curr.right != null) {  
+  TreeNode node = curr.right;  
+            while (node != null) {  
+  stack.push(node);  
+                node = node.left;  
+            }  
+ } }  return list;  
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MjQzNTA5NSwtMzYwNjI5NDkzLC05OD
-A0Nzc2NDksMTc1NjAxNjg0NSwyMDM0NTQ3OTM0LC02MDE3NzQ1
-ODcsODk0NjUwODM1LC0xNTA1ODQ3MDU0LC0xNjI1MzAxMDQ2XX
-0=
+eyJoaXN0b3J5IjpbLTE1Njg5MDkzMDksLTM2MDYyOTQ5MywtOT
+gwNDc3NjQ5LDE3NTYwMTY4NDUsMjAzNDU0NzkzNCwtNjAxNzc0
+NTg3LDg5NDY1MDgzNSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl
+19
 -->
