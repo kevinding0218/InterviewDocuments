@@ -766,61 +766,13 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 - 如果超过了n+1列则有 **`tasks.length > (maxExec - 1)*(n-1) + maxCount`**, e.g: ["A","A","A","B","B","B"] & 0
 - 最后我们pick **`max((maxExec - 1)*(n-1) + maxCount, tasks.length)`**
 ##### Time: O(number of tasks + number of different task categories)
-##### Space: O(number of different task categories): O(logN)
-##### Space:O(1)
-### [621. Task Scheduler(Medium)](https://leetcode.com/problems/task-scheduler/)
-#### Simulate
-- 我们使用一个宽为n+1的矩阵可视化地展现执行A 的时间点。其中任务以行优先的顺序执行，没有任务的格子对应 CPU 的待命状态。
-- 由于冷却时间为n，因此我们将所有的A 排布在矩阵的第一列，可以保证满足题目要求，并且容易看出这是可以使得总时间最小的排布方法，对应的总时间为即为求面积：**`(maxExec - 1)*(n+1) + 1`**
-	```
-	  <---n--->  
-	 Annn...nnn  
-	 A  
-	 A  
-	 A
-	```
-- 同理，如果还有其它也需要执行maxExec 次的任务，我们也需要将它们依次排布成列。例如，当还有任务B和C时，我们需要将它们排布在矩阵的第二、三列。如果需要执行maxExec次的任务的数量为maxCount，那么类似地可以得到对应的总时间为 **`(maxExec - 1)*(n+1) + maxCount`**
-	```
-	  <---n--->  
-	 Annn...nnn  
-	 ABC  
-	 ABC  
-	 ABC
-	```
-- 如果超过了n+1列则有 **`tasks.length > (maxExec - 1)*(n-1) + maxCount`**, e.g: ["A","A","A","B","B","B"] & 0
-- 最后我们pick **`max((maxExec - 1)*(n-1) + maxCount, tasks.length)`**
-##### Time: O(number of tasks + number of different task categories)
-##### Space: O(number of different task categories): O(logN)
-##### Space:O(1)
-### [621. Task Scheduler(Medium)](https://leetcode.com/problems/task-scheduler/)
-#### Simulate
-- 我们使用一个宽为n+1的矩阵可视化地展现执行A 的时间点。其中任务以行优先的顺序执行，没有任务的格子对应 CPU 的待命状态。
-- 由于冷却时间为n，因此我们将所有的A 排布在矩阵的第一列，可以保证满足题目要求，并且容易看出这是可以使得总时间最小的排布方法，对应的总时间为即为求面积：**`(maxExec - 1)*(n+1) + 1`**
-	```
-	  <---n--->  
-	 Annn...nnn  
-	 A  
-	 A  
-	 A
-	```
-- 同理，如果还有其它也需要执行maxExec 次的任务，我们也需要将它们依次排布成列。例如，当还有任务B和C时，我们需要将它们排布在矩阵的第二、三列。如果需要执行maxExec次的任务的数量为maxCount，那么类似地可以得到对应的总时间为 **`(maxExec - 1)*(n+1) + maxCount`**
-	```
-	  <---n--->  
-	 Annn...nnn  
-	 ABC  
-	 ABC  
-	 ABC
-	```
-- 如果超过了n+1列则有 **`tasks.length > (maxExec - 1)*(n-1) + maxCount`**, e.g: ["A","A","A","B","B","B"] & 0
-- 最后我们pick **`max((maxExec - 1)*(n-1) + maxCount, tasks.length)`**
-##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM2NzAxNjQ5LDY0MzEzNTI2NywtOTQ3MD
-U4NTYwLC0xOTg1MTY3MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2
-LDExNDE0MTQwOTIsLTQ2MjM0NTQ5LDE2MTIxNzY4MzAsMTIxOT
-gzODU1OCw0MzE5NTE4ODUsLTk4MDgxMjc2NSwxMjMxMjgwOTg0
-LC05NjU0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOT
-IyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUz
-OV19
+eyJoaXN0b3J5IjpbMTY3NzE5ODE2MSw2NDMxMzUyNjcsLTk0Nz
+A1ODU2MCwtMTk4NTE2NzA0NywxMTg0OTc5MjI1LDg2MzkzODAw
+NiwxMTQxNDE0MDkyLC00NjIzNDU0OSwxNjEyMTc2ODMwLDEyMT
+k4Mzg1NTgsNDMxOTUxODg1LC05ODA4MTI3NjUsMTIzMTI4MDk4
+NCwtOTY1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEzLDk5Mz
+kyMjExLDE3MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1
+MzldfQ==
 -->
