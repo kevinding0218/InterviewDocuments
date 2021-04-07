@@ -323,6 +323,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 2. 已知list1和list2有序，那么将二者归并即可的到一个排好序的总list。
 Time: O(n)
 Space:O(n)
+#### follow up - what about Binary Tree
+
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
@@ -666,7 +668,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMTMwNTk0OCwxMjMxMjgwOTg0LC05Nj
+eyJoaXN0b3J5IjpbMTg1NjY0ODM1MywxMjMxMjgwOTg0LC05Nj
 U0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOTIyMTEs
 MTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUzOSw2Mj
 E3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1
