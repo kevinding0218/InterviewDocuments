@@ -41,9 +41,8 @@ private static ListNode findMiddleNode(ListNode head) {
   return slow;  
 }
 ```
-### Heap/Priority Queue
-#### Top K
-##### Define a Heap
+## Heap/Priority Queue
+### Define a Heap
 - Ask Kth Largest then use minHeap, so that top of MinHeap stores the min element and all its children nodes stores element greater than itself
 - Ask Kth Smallest then use maxHeap, so that top of MaxHeap stores the max element and all its children nodes stores element smaller than itself
 ```
@@ -63,7 +62,7 @@ Comparator<Integer> comparator = (o1, o2) -> {
 };
 PriorityQueue<P> minHeap = new PriorityQueue<>(comparator);
 ```
-##### Top K
+#### Top K
 ```
 for (var num: nums) {  
   heap.offer(num);  
@@ -78,7 +77,7 @@ for (var num: nums) {
 - When asked about find duplicate element or given a known target and known element A, find if there is another elment B that can formulized with A to be target
 - When asked about frequency of character/string appearances, usually combined usage with Priority Queue to sort by appearance count
 ## Sliding Window
-#### Find something/scenario in continuing sub string 
+### Find something/scenario in continuing sub string 
 
 ### Remove Duplicate that only can appeark K times
 ```
@@ -95,8 +94,8 @@ public static int removeDuplicatesMoreThanKTimes(int[] nums, int k) {
     return count;  
 }
 ```
-### Matrix
-#### 基础
+## Matrix
+### 基础
 - 设一维数组下标为index，二维数组长度为m * n，则：
 - 一维数组转换为二维数组
 ```
@@ -107,9 +106,23 @@ col = index % n
 ```
 index = col + row * n
 ```
+## Tree
+### BST
+- Inorder will be a sorted list
+```
+private void dfs(TreeNode root, List<Integer> ansList) {  
+  if (root == null) {  
+  return;  
+    }  
+  
+  dfs(root.left, ansList);  
+    ansList.add(root.val);  
+    dfs(root.right, ansList);  
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjk1ODM0NzEsLTM2MDYyOTQ5MywtOT
-gwNDc3NjQ5LDE3NTYwMTY4NDUsMjAzNDU0NzkzNCwtNjAxNzc0
-NTg3LDg5NDY1MDgzNSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl
-19
+eyJoaXN0b3J5IjpbLTg5MjQzNTA5NSwtMzYwNjI5NDkzLC05OD
+A0Nzc2NDksMTc1NjAxNjg0NSwyMDM0NTQ3OTM0LC02MDE3NzQ1
+ODcsODk0NjUwODM1LC0xNTA1ODQ3MDU0LC0xNjI1MzAxMDQ2XX
+0=
 -->
