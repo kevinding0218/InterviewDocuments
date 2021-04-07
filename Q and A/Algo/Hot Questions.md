@@ -445,9 +445,12 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 ### [278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
+#### Binary Search
+#### Time: O(logN)
+#### Space:O(1)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMzU4NDU5NCw1MjgyMDI1NzAsLTE4Mz
-U2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAy
-NjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4MzUsND
-kwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbODEzMzQ5MDQxLC01MDM1ODQ1OTQsNTI4Mj
+AyNTcwLC0xODM1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4
+NywtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNz
+IyNDE2ODM1LDQ5MDg3NjY1Ml19
 -->
