@@ -445,9 +445,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 #### Simulate
-- for every i, **answer[i[ = product(left of num product(answer[0 ~ i-1]) * product(answer[i+1, n-1])**
-1.初始化 answer 数组，对于给定索引 i，answer[i] 代表的是 i 左侧所有数字的乘积。
-2.构造方式与之前相同，只是我们试图节省空间，先把 answer 作为方法一的 L 数组。
+- for every i, **answer[i[ = product(left of nums[i]) * product(right of nums[i]) = product(nums[0 ~ i-1]) * product(nums[i+1, n-1])**
+1.初始化 answer 数组，对于给定索引 i，answer[i] 代表的是 i 左侧所有数字的乘积L, 因为索引为 '0' 的元素左侧没有元素， 所以 answer[0] = 1. start from index 1, **`answer[i] = nums[i - 1] * answer[i - 1];`**
+2.构造方式与之前相同，只是我们试图节省空间，先
 3. 这种方法的唯一变化就是我们没有构造 R 数组。而是用一个遍历来跟踪右边元素的乘积。
 	- 并更新数组 **answer[i]=answer[i]∗R**。
 	- 然后R更新为 **`R=R∗nums[i]`**，其中变量R表示的就是索引右侧数字的乘积。
@@ -489,7 +489,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMDcyMTQ0NiwxODYxNzE0MzU0LC0xNz
+eyJoaXN0b3J5IjpbLTM0NDgyMzkyMywxODYxNzE0MzU0LC0xNz
 I2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYyMjM4MiwtMTIwODAz
 MjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MCwtMTgzNTYwMjk1MS
 wxNjEwOTUxOTk2LC0yMjc0MTQ2ODcsLTUyODkwMDI2MiwtMTcy
