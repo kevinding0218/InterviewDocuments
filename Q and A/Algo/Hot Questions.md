@@ -384,6 +384,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		3. 并删除双向链表的尾部节点
 		4. 使用 key 和 value 创建一个新的节点，将 key 和该节点添加进哈希表中。
 		5. 在双向链表的尾部添加该节点
+### [498. Diagonal Traverse(Medium)](https://leetcode.com/problems/diagonal-traverse/)
+
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
@@ -399,8 +401,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NjkzMDI1NCwtMTgzNTYwMjk1MSwxNj
-EwOTUxOTk2LC0yMjc0MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3
-NjAzNyw0MDc3MTU2NjYsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ
-==
+eyJoaXN0b3J5IjpbNTI4MjAyNTcwLC0xODM1NjAyOTUxLDE2MT
+A5NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAwMjYyLC0xNzI1MTc2
+MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LDQ5MDg3NjY1Ml19
 -->
