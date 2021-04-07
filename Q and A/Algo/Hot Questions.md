@@ -432,7 +432,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	```
 ### [547. Number of Provinces/# Friend Circles](https://leetcode.com/problems/number-of-provinces/)
 #### BFS
-- 通过广度优先搜索的方法得到省份的总数。对于每个城市，如果该城市尚未被访问过，则从该城市开始广度优先搜索, 直到同一个连通分量中的所有城市都被访问到，即可得到一个circle
+- 通过广度优先搜索的方法得到省份的总数。对于每个城市，如果该城市尚未被访问过，则从该城市开始广度优先搜索, 直到同一个连通分量中的所有城市都被访问到即可得到一个circle
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
@@ -475,9 +475,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Nzc3NDIzODgsNTI4MTU0Njg3LC0xMz
-EyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAy
-NTcwLC0xODM1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4Ny
-wtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIy
-NDE2ODM1LDQ5MDg3NjY1Ml19
+eyJoaXN0b3J5IjpbLTI2ODkyMzAyNCw1MjgxNTQ2ODcsLTEzMT
+I2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4NDU5NCw1MjgyMDI1
+NzAsLTE4MzU2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC
+01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0
+MTY4MzUsNDkwODc2NjUyXX0=
 -->
