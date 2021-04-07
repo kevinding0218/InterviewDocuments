@@ -502,21 +502,21 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [304. Range Sum Query 2D - Immutable(Medium)](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 #### PrefixSum
 - 初始化时对矩阵的每一行计算前缀和`int[][] prefixSum = new int[rows][cols + 1]`, 将sums的列数设为n+1的目的是为了方便计算每一行的子数组和，不需要对col1= 的情况特殊处理
-```
-for (int x = 0; x < rows; x++) {  
-  for (int y = 0; y < cols; y++) {  
-  // prefixSum 从第二行开始计算，类似一维数组  
-  prefixSum[x][y + 1] = prefixSum[x][y] + matrix[x][y];  
-    }  
-}
-```
+	```
+	for (int x = 0; x < rows; x++) {  
+	  for (int y = 0; y < cols; y++) {  
+	  // prefixSum 从第二行开始计算，类似一维数组  
+	  prefixSum[x][y + 1] = prefixSum[x][y] + matrix[x][y];  
+	    }  
+	}
+	```
 - 检索时对二维区域中的每一行计算子数组和，然后对每一行的子数组和计算总和。
-```
-for (int row = row1; row <= row2; row++) {  
-  sum += prefixSum[row][col2 + 1] - prefixSum[row][col1];  
-}  
-return sum;
-```
+	```
+	for (int row = row1; row <= row2; row++) {  
+	  sum += prefixSum[row][col2 + 1] - prefixSum[row][col1];  
+	}  
+	return sum;
+	```
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
 #### Iterator
  - store the order in a hash using int[] array
@@ -619,11 +619,11 @@ return sum;
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTE1ODc4MDQsOTkzOTIyMTEsMTcyNj
-I1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUzOSw2MjE3MTM1
-MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1LDEyNz
-Y5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1MjgxNTQ2
-ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4NDU5NC
-w1MjgyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1MTk5NiwtMjI3
-NDE0Njg3XX0=
+eyJoaXN0b3J5IjpbNzU3OTQ5NzE2LDk5MzkyMjExLDE3MjYyNT
+c5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIs
+MTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OT
+gzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3
+LC0xMzEyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNT
+I4MjAyNTcwLC0xODM1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQx
+NDY4N119
 -->
