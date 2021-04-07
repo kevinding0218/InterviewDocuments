@@ -435,10 +435,10 @@ for (int i = 0; i < size; i++) {
 ##### Space:O(n)。每个节点最多进队列一次，所以队列长度最大不不超过n，所以这里的空间代价为O(n)。
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 #### Traversal
-- 我们从根节点开始遍历；  
-- 如果当前节点的值大于 pp 和 qq 的值，说明 pp 和 qq 应该在当前节点的左子树，因此将当前节点移动到它的左子节点；  
-- 如果当前节点的值小于 pp 和 qq 的值，说明 pp 和 qq 应该在当前节点的右子树，因此将当前节点移动到它的右子节点；  
-- 如果当前节点的值不满足上述两条要求，那么说明当前节点就是「分岔点」。此时，pp 和 qq 要么在当前节点的不同的子树中，要么其中一个就是当前节点。  
+- 我们从根节点开始遍历；**`TreeNode ancestor = root; while(true)`** 
+- 如果当前节点的值大于 pp 和 qq 的值，说明 pp 和 qq 应该在当前节点的左子树，因此将当前节点移动到它的左子节点；**`if (ancestor.val > p.val && ancestor.val > q.val) ancestor = ancestor.left;`** 
+- 如果当前节点的值小于 pp 和 qq 的值，说明 pp 和 qq 应该在当前节点的右子树，因此将当前节点移动到它的右子节点; **`else if (ancestor.val < p.val && ancestor.val < q.val) ancestor = ancestor.right;`**
+- 如果当前节点的值不满足上述两条要求，那么说明当前节点就是「分岔点」。此时，pp 和 qq 要么在当前节点的不同的子树中，要么其中一个就是当前节点。**`else break;`**
 ##### Time: O(n) n 是给定的二叉搜索树中的节点个数  
 ##### Space:O(1)
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
@@ -2140,11 +2140,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMTQyNTI4NywxMTg0OTc5MjI1LDg2Mz
-kzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0OSwxNjEyMTc2ODMw
-LDEyMTk4Mzg1NTgsNDMxOTUxODg1LC05ODA4MTI3NjUsMTIzMT
-I4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEz
-LDk5MzkyMjExLDE3MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MD
-Y1NTQ1MzksNjIxNzEzNTIsMTg3MDcyNzQ4MCwxMTI5MDQ5NTRd
-fQ==
+eyJoaXN0b3J5IjpbLTE5ODUxNjcwNDcsMTE4NDk3OTIyNSw4Nj
+M5MzgwMDYsMTE0MTQxNDA5MiwtNDYyMzQ1NDksMTYxMjE3Njgz
+MCwxMjE5ODM4NTU4LDQzMTk1MTg4NSwtOTgwODEyNzY1LDEyMz
+EyODA5ODQsLTk2NTQyNjEwNCwxNjc3ODYwNzY3LDkyMzAxMDMx
+Myw5OTM5MjIxMSwxNzI2MjU3OTQ5LC0xNDYyNzg3OTk3LC0xNT
+A2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0ODAsMTEyOTA0OTU0
+XX0=
 -->
