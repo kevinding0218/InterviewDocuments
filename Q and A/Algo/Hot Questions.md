@@ -484,17 +484,18 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Inorder execution
 1. 利用dummy node来保存头结点，这样就不需要对NULL进行判断了。**`TreeNode dummy = new TreeNode(0);`**
 2. 用pre **`TreeNode pre = dummy;`** 来保存之前的节点，因为是中序遍历，所以刚好能把当前节点跟之前的节点连接起来。
-``` 
-private void inorder(TreeNode node) {  
-  if (node == null) return;  
-    inorder(node.left); 
-    // connect pre and node so that pre <-> node
-	// then assign node to pre 
-    exec(node);  
-    inorder(node.right);  
-}
-```
-4. 中序遍历完之后，就是一个头尾暂时不相连的双向链表. 此时pre指向的尾节点，dummy的right指向头结点, 对收尾节点进行连接即可。
+	``` 
+	private void inorder(TreeNode node) {  
+	  if (node == null) return;  
+	    inorder(node.left); 
+	    // connect pre and node so that pre <-> node
+		// then assign node to pre 
+	    exec(node);  
+	    inorder(node.right);  
+	}
+	```
+3. 中序遍历完之后，就是一个头尾暂时不相连的双向链表. **此时pre指向的尾节点，dummy的right指向头结点**, 对收尾节点进行连接即可, **`connect pre and dummy.right which is head node`**
+	- e.g dummy's right is 1. pre is 5 when tree is [4,2,5,1,3], 
 #### Time: 
 #### Space: O(1)
 ### [347. Top K Frequent Elements(Medium)](https://leetcode.com/problems/top-k-frequent-elements/)
@@ -529,11 +530,11 @@ private void inorder(TreeNode node) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NzQ5Mjc2NywxODcwNzI3NDgwLDExMj
-kwNDk1NCwyMTEzODk5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1
-NCwtMTcyNjg5NTUyMCw1MjgxNTQ2ODcsLTEzMTI2MjIzODIsLT
-EyMDgwMzIwNjUsLTUwMzU4NDU5NCw1MjgyMDI1NzAsLTE4MzU2
-MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAyNj
-IsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4MzUsNDkw
-ODc2NjUyXX0=
+eyJoaXN0b3J5IjpbLTEzNTE0MzM3NTAsMTg3MDcyNzQ4MCwxMT
+I5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMwLDE4NjE3MTQz
+NTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMzEyNjIyMzgyLC
+0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAyNTcwLC0xODM1
+NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAwMj
+YyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LDQ5
+MDg3NjY1Ml19
 -->
