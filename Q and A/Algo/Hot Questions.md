@@ -467,21 +467,13 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	 ABC  
 	 ABC
 	```
-- 如果超过了n+1列则有 **`tasks.length > (maxExec - 1)*(n-1) + maxCount`**
-	```
-	 <n+1>  
-	 ABCDFGn  
-	 ABCDEFn  
-	 ABCDEFG  
-	 ABCDEFG  
-	 ABC
-	```
+- 如果超过了n+1列则有 **`tasks.length > (maxExec - 1)*(n-1) + maxCount`**, e.g: ["A","A","A","B","B","B"] & 0
 - 最后我们pick **`max((maxExec - 1)*(n-1) + maxCount, tasks.length)`**
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDgwMzIwNjUsLTUwMzU4NDU5NCw1Mj
-gyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0
-Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC
-03MjI0MTY4MzUsNDkwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLT
+UwMzU4NDU5NCw1MjgyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1
+MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMz
+csNDA3NzE1NjY2LC03MjI0MTY4MzUsNDkwODc2NjUyXX0=
 -->
