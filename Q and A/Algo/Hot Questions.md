@@ -351,6 +351,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ###### Time: O(row*logCol)
 ###### Space:(1)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
+### Coordinate Class and DFS
+-  该解决方案有两个步骤：首先，找出每个节点所在的坐标，然后报告他们的坐标。
+- 我们可以使用深度优先搜索找到每个节点的坐标。保持当前节点 (x, y)，移动的过程中
+- 坐标变化为左孩子(x-1, y+1) 或 右孩子(x+1, y+1)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 #### DFS + BFS
 - 如果节点有指向父节点的引用，也就知道了距离该节点 1 距离的所有节点。之后就可以从 target 节点开始进行广度优先搜索了。
@@ -2074,11 +2078,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MDgxMjc2NSwxMjMxMjgwOTg0LC05Nj
-U0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOTIyMTEs
-MTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUzOSw2Mj
-E3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1
-LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1Mj
-gxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4
-NDU5NF19
+eyJoaXN0b3J5IjpbLTE0NDk5OTgwMjEsLTk4MDgxMjc2NSwxMj
+MxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAz
+MTMsOTkzOTIyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMT
+UwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1
+NCwyMTEzODk5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMT
+cyNjg5NTUyMCw1MjgxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgw
+MzIwNjVdfQ==
 -->
