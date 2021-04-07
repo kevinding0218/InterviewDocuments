@@ -421,6 +421,15 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 #### BFS
 - 利用广度优先搜索进行层次遍历，记录下每层的最后一个元素。
+```
+int size = queue.size();  
+for (int i = 0; i < size; i++) {
+	...
+	if (i == size - 1) { //将当前层的最后一个节点放入结果列表  
+	  res.add(node.val);  
+	}
+}
+```
 ##### Time: O(n)。 每个节点最多进队列一次，出队列一次，因此广度优先搜索的复杂度为线性。
 ##### Space:O(n)。每个节点最多进队列一次，所以队列长度最大不不超过n，所以这里的空间代价为O(n)。
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
@@ -2123,11 +2132,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNzY0ODAyLDg2MzkzODAwNiwxMTQxND
-E0MDkyLC00NjIzNDU0OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgs
-NDMxOTUxODg1LC05ODA4MTI3NjUsMTIzMTI4MDk4NCwtOTY1ND
-I2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3
-MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNz
-EzNTIsMTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NV19
-
+eyJoaXN0b3J5IjpbLTI5NjAzNzYyNyw4NjM5MzgwMDYsMTE0MT
+QxNDA5MiwtNDYyMzQ1NDksMTYxMjE3NjgzMCwxMjE5ODM4NTU4
+LDQzMTk1MTg4NSwtOTgwODEyNzY1LDEyMzEyODA5ODQsLTk2NT
+QyNjEwNCwxNjc3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwx
+NzI2MjU3OTQ5LC0xNDYyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMT
+cxMzUyLDE4NzA3Mjc0ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjVd
+fQ==
 -->
