@@ -444,6 +444,13 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
+#### Simulate
+- for every i, **answer[i[ = product(left of num product(answer[0 ~ i-1]) * product(answer[i+1, n-1])**
+1.初始化 answer 数组，对于给定索引 i，answer[i] 代表的是 i 左侧所有数字的乘积。
+2.构造方式与之前相同，只是我们试图节省空间，先把 answer 作为方法一的 L 数组。
+3. 这种方法的唯一变化就是我们没有构造 R 数组。而是用一个遍历来跟踪右边元素的乘积。
+	- 并更新数组 **answer[i]=answer[i]∗R**。
+	- 然后R更新为 **`R=R∗nums[i]`**，其中变量R表示的就是索引右侧数字的乘积。
 ### [304. Range Sum Query 2D - Immutable(Medium)](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
 ### [560. Subarray Sum Equals K(Medium)](https://leetcode.com/problems/subarray-sum-equals-k/)
@@ -482,9 +489,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1Mj
-gxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4
-NDU5NCw1MjgyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1MTk5Ni
-wtMjI3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3
-NzE1NjY2LC03MjI0MTY4MzUsNDkwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbLTUyMDcyMTQ0NiwxODYxNzE0MzU0LC0xNz
+I2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYyMjM4MiwtMTIwODAz
+MjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MCwtMTgzNTYwMjk1MS
+wxNjEwOTUxOTk2LC0yMjc0MTQ2ODcsLTUyODkwMDI2MiwtMTcy
+NTE3NjAzNyw0MDc3MTU2NjYsLTcyMjQxNjgzNSw0OTA4NzY2NT
+JdfQ==
 -->
