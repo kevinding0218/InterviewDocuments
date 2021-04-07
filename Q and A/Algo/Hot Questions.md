@@ -328,7 +328,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 
 ### [510. Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
-
+#### Node has parent
+- Case 1: 
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 
 
@@ -531,11 +532,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MD
-cyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMw
-LDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMz
-EyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAy
-NTcwLC0xODM1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4Ny
-wtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIy
-NDE2ODM1XX0=
+eyJoaXN0b3J5IjpbODUwODkzOTE1LC0xNTA2NTU0NTM5LDYyMT
+cxMzUyLDE4NzA3Mjc0ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUs
+MTI3Njk4MzIzMCwxODYxNzE0MzU0LC0xNzI2ODk1NTIwLDUyOD
+E1NDY4NywtMTMxMjYyMjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0
+NTk0LDUyODIwMjU3MCwtMTgzNTYwMjk1MSwxNjEwOTUxOTk2LC
+0yMjc0MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MDc3
+MTU2NjZdfQ==
 -->
