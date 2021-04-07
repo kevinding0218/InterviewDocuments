@@ -330,9 +330,16 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [510. Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 #### Node has parent
 - Case 1: if node right child is not null -> go down to get its right's left
-```
-
-```
+	```
+	TreeNode p = x.right;  
+	while(p!=null){  
+	  result = p;  
+	    p = p.left;  
+	}  
+	if(result != null){  
+	  return result;  
+	}
+	```
 - Case 2: if node right child is null -> go up to the parent until the node is a left child, return parent
 	```
 	while(p!=null){  
@@ -342,6 +349,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	  p = p.parent;  
 	}
 	```
+#### Node doesn't have parent
+- 三种情况：（p 为给定的节点，要找到p节点的后继）
+1. root的值 < p的值 答案就在右子树中
+2. root的值 > p的值 答案可能就是root（作为候选），也可能在左子树中
+3. root的值 = p的值 p如果有右子树，那么答案就是右子树中最小的那个
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 
 
@@ -544,7 +556,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MzQ5MDU4NywtMTUwNjU1NDUzOSw2Mj
+eyJoaXN0b3J5IjpbMTgyMzgzODkzNywtMTUwNjU1NDUzOSw2Mj
 E3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1
 LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1Mj
 gxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4
