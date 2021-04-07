@@ -1,4 +1,5 @@
-### [149. Max Points in one Line (Hard)](https://le
+### 149. Max Points in one Line (Hard)
+#### [149. Max Points in one Line (Hard)](https://le
 etcode.com/problems/max-points-on-a-line/)
 #### HashMap - slope
 1. loop from each Point I with another Point j in 2 for loop
@@ -817,11 +818,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5OD
-UxNjcwNDcsMTE4NDk3OTIyNSw4NjM5MzgwMDYsMTE0MTQxNDA5
-MiwtNDYyMzQ1NDksMTYxMjE3NjgzMCwxMjE5ODM4NTU4LDQzMT
-k1MTg4NSwtOTgwODEyNzY1LDEyMzEyODA5ODQsLTk2NTQyNjEw
-NCwxNjc3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwxNzI2Mj
-U3OTQ5LC0xNDYyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMTcxMzUy
-XX0=
+eyJoaXN0b3J5IjpbMTI3NjAyMjAzMyw2NDMxMzUyNjcsLTk0Nz
+A1ODU2MCwtMTk4NTE2NzA0NywxMTg0OTc5MjI1LDg2MzkzODAw
+NiwxMTQxNDE0MDkyLC00NjIzNDU0OSwxNjEyMTc2ODMwLDEyMT
+k4Mzg1NTgsNDMxOTUxODg1LC05ODA4MTI3NjUsMTIzMTI4MDk4
+NCwtOTY1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEzLDk5Mz
+kyMjExLDE3MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1
+MzldfQ==
 -->
