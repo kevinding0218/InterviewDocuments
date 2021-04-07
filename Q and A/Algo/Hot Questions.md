@@ -351,7 +351,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ###### Time: O(row*logCol)
 ###### Space:(1)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
-### Coordinate Class and DFS
+#### Coordinate Class and DFS
 -  该解决方案有两个步骤：首先，找出每个节点所在的坐标，然后报告他们的坐标。
 1. Create a class `Coordinate` to store `x`, `y` and `val`, also implement the `compareTo` by compare `x` first then `y` then `val`
 	```
@@ -368,8 +368,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	```
 2. 我们可以使用深度优先搜索找到每个节点的坐标。保持当前节点 (x, y)，移动的过程中, 坐标变化为左孩子(x-1, y+1) 或 右孩子(x+1, y+1), e.g `(0,0),(1,-1),(1,1),(2,0),(2,2)`
 3.  我们通过 x 坐标排序，再根据 y 坐标排序，这样确保以正确的顺序添加到答案中 e.g:`(-1,1),(0,0),(0,2),(1,1),(2,2)`
-4. For each coordinate, we insert into results by `ans.get(ans.size() - 1).add(coordinate.val); `
+4. For each coordinate, we insert into results by **`ans.get(ans.size() - 1).add(coordinate.val); `**
 5. To identify when new list needed depend on coordinate x, declare a `prev` to indicate current `x`, iterate through all coodinates if **`prev != current.x`**, meaning we'll create a new list to store coordinate in new `x`, 
+##### Time: O(N) N 是树中节点个数
+##### Space:O(N)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 #### DFS + BFS
 - 如果节点有指向父节点的引用，也就知道了距离该节点 1 距离的所有节点。之后就可以从 target 节点开始进行广度优先搜索了。
@@ -2093,7 +2095,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NjUzNzUxOCw0MzE5NTE4ODUsLTk4MD
+eyJoaXN0b3J5IjpbMTIxOTgzODU1OCw0MzE5NTE4ODUsLTk4MD
 gxMjc2NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nzg2MDc2
 Nyw5MjMwMTAzMTMsOTkzOTIyMTEsMTcyNjI1Nzk0OSwtMTQ2Mj
 c4Nzk5NywtMTUwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgw
