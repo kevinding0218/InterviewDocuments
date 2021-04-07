@@ -106,16 +106,20 @@ public int binarySearch(int[] nums, int target) {
 
     while(left <= right) {
         int mid = left + (right - left) / 2;
-        if(nums[mid] == target)
+        Element el = getElement(mid);
+        if(el == target) {
             return mid;
-        if (nums[mid] < target)
+        }
+        else if (el < target) {
 			// 搜索区间变为 [mid+1, right]
             left = mid + 1;
-        if (nums[mid] > target)
+        }
+        else {
             // 搜索区间变为 [left, mid - 1]
             right = mid - 1;
+        }
     }
-    return -1;
+    return notFound;
 }
 ```
 ```
@@ -191,8 +195,8 @@ public static List<Integer> iteration(TreeNode root) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MzcyMjA5NCwyNzQwNDcyMjEsLTM2MD
-YyOTQ5MywtOTgwNDc3NjQ5LDE3NTYwMTY4NDUsMjAzNDU0Nzkz
-NCwtNjAxNzc0NTg3LDg5NDY1MDgzNSwtMTUwNTg0NzA1NCwtMT
-YyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbLTE3ODYwMTEzNjUsMjc0MDQ3MjIxLC0zNj
+A2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2ODQ1LDIwMzQ1NDc5
+MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLTE1MDU4NDcwNTQsLT
+E2MjUzMDEwNDZdfQ==
 -->
