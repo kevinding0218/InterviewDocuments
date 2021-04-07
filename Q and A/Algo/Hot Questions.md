@@ -482,9 +482,14 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
 ### [426. Convert the binary search tree into a sorted doubly linked list(Medium)](https://www.jiuzhang.com/solutions/convert-binary-search-tree-to-sorted-doubly-linked-list)
 #### Inorder execution
-1. 用pre来保存之前的节点，因为是中序遍历，所以刚好能把当前节点跟之前的节点连接起来。
-2. 再利用dummy node来保存头结点，这样就不需要对NULL进行判断了。
-3. 中序遍历完之后，就是一个头尾暂时不相连的双向链表. 此时pre指向的尾节点，dummy的right指向头结点, 对收尾节点进行连接即可。
+1. 利用dummy node来保存头结点，这样就不需要对NULL进行判断了。**`TreeNode dummy = new TreeNode(0);`**
+2. 用pre **`TreeNode pre = dummy;`** 来保存之前的节点，因为是中序遍历，所以刚好能把当前节点跟之前的节点连接起来。
+```
+inorder(node.left);  
+exec(node);  	
+inorder(node.right);
+```
+4. 中序遍历完之后，就是一个头尾暂时不相连的双向链表. 此时pre指向的尾节点，dummy的right指向头结点, 对收尾节点进行连接即可。
 #### Time: 
 #### Space: O(1)
 ### [347. Top K Frequent Elements(Medium)](https://leetcode.com/problems/top-k-frequent-elements/)
@@ -519,11 +524,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzYwMTk4NjUsMTg3MDcyNzQ4MCwxMT
-I5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMwLDE4NjE3MTQz
-NTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMzEyNjIyMzgyLC
-0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAyNTcwLC0xODM1
-NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAwMj
-YyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LDQ5
-MDg3NjY1Ml19
+eyJoaXN0b3J5IjpbMTU2MjA4MzkxLDE4NzA3Mjc0ODAsMTEyOT
+A0OTU0LDIxMTM4OTk0NjUsMTI3Njk4MzIzMCwxODYxNzE0MzU0
+LC0xNzI2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYyMjM4MiwtMT
+IwODAzMjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MCwtMTgzNTYw
+Mjk1MSwxNjEwOTUxOTk2LC0yMjc0MTQ2ODcsLTUyODkwMDI2Mi
+wtMTcyNTE3NjAzNyw0MDc3MTU2NjYsLTcyMjQxNjgzNSw0OTA4
+NzY2NTJdfQ==
 -->
