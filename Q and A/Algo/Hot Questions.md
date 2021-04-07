@@ -1118,10 +1118,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- 若pop不是null则说明应该继续BFS遍历以当前pop节点为中心的左右父三个结点，加入queue之前用Set<TreeNode> 来过滤掉已经visited过的下一个可能的结点
 ##### Time: O(N) N 是树中节点个数
 ##### Space:O(N)
-### [102. Binary Tree Level Order Traversal(Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
-### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
-### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
-### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 ### [510. Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 #### Node has parent
 - Case 1: if node right child is not null -> go to its right child then leftmost of that is the successor
@@ -2153,11 +2149,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5Njg2MTYxLC0xOTg1MTY3MDQ3LDExOD
-Q5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NTQ5
-LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4ODUsLTk4MD
-gxMjc2NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nzg2MDc2
-Nyw5MjMwMTAzMTMsOTkzOTIyMTEsMTcyNjI1Nzk0OSwtMTQ2Mj
-c4Nzk5NywtMTUwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgw
-XX0=
+eyJoaXN0b3J5IjpbLTk0NzA1ODU2MCwtMTk4NTE2NzA0NywxMT
+g0OTc5MjI1LDg2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0
+OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1LC05OD
+A4MTI3NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3
+NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDksLTE0Nj
+I3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MDcyNzQ4
+MF19
 -->
