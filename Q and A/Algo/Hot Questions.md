@@ -355,6 +355,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 -  该解决方案有两个步骤：首先，找出每个节点所在的坐标，然后报告他们的坐标。
 - 我们可以使用深度优先搜索找到每个节点的坐标。保持当前节点 (x, y)，移动的过程中
 - 坐标变化为左孩子(x-1, y+1) 或 右孩子(x+1, y+1)
+-  我们通过 x 坐标排序，再根据 y 坐标排序，这样确保以正确的顺序添加到答案中。
+```
+
+```
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 #### DFS + BFS
 - 如果节点有指向父节点的引用，也就知道了距离该节点 1 距离的所有节点。之后就可以从 target 节点开始进行广度优先搜索了。
@@ -2078,11 +2082,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDk5OTgwMjEsLTk4MDgxMjc2NSwxMj
-MxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAz
-MTMsOTkzOTIyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMT
-UwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1
-NCwyMTEzODk5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMT
-cyNjg5NTUyMCw1MjgxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgw
-MzIwNjVdfQ==
+eyJoaXN0b3J5IjpbNDMxOTUxODg1LC05ODA4MTI3NjUsMTIzMT
+I4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEz
+LDk5MzkyMjExLDE3MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MD
+Y1NTQ1MzksNjIxNzEzNTIsMTg3MDcyNzQ4MCwxMTI5MDQ5NTQs
+MjExMzg5OTQ2NSwxMjc2OTgzMjMwLDE4NjE3MTQzNTQsLTE3Mj
+Y4OTU1MjAsNTI4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMjA4MDMy
+MDY1XX0=
 -->
