@@ -390,7 +390,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 将元素添加到最终结果数组之前，只需要翻转奇数对角线上的元素顺序即可。例如：从左边开始的第三条对角线 [3, 7, 11]，将这些元素添加到最后结果之前先翻转为 [11, 7, 3] 再添加即可。
 - 算法  
 	- 初始化数组 result，用于存储最后结果。  
-	- 使用一个外层循环遍历所有的对角线。第一行和最后一列的元素都是对角线的起点。  
+	- 使用一个外层循环遍历所有的对角线。第一行和最后一列的元素都是对角线的起点。**`for (int d = 0; d < rows + cols - 1; d++)`**
 	- 使用一个内层 while 循环遍历对角线上的所有元素。可以计算指定对角线上的元素数量，也可以简单迭代直到索引超出范围。  
 	- 因为不知道每条对角线上的元素数量，需要为每条对角线分配一个列表或动态数组。但是同样也可以通过计算得到当前对角线上的元素数量。  
 	- 对于奇数编号的对角线，只需要将迭代结果翻转再加入结果数组即可  
@@ -411,8 +411,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NDUyODI1NSw1MjgyMDI1NzAsLTE4Mz
-U2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAy
-NjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4MzUsND
-kwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbLTE4MzQ4NDIwODQsNTI4MjAyNTcwLC0xOD
+M1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAw
+MjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LD
+Q5MDg3NjY1Ml19
 -->
