@@ -502,6 +502,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### [304. Range Sum Query 2D - Immutable(Medium)](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 #### PrefixSum
 - 初始化时对矩阵的每一行计算前缀和`int[][] prefixSum = new int[rows][cols + 1]`, 将sums的列数设为n+1的目的是为了方便计算每一行的子数组和，不需要对col1= 的情况特殊处理
+	- * 对于0≤i<n都有 prefixSum[row][i+1]=prefixSum[row][i]+matrix[row][i]，  
+* 则当0<i≤n时，prefixSum[row][i]表示matrix从下标[row][0]到下标[row][i-1]的前缀和,  
+* prefixSum[i+1]表示matrix从下标[row][0]到下标[row][i]的前缀和,
 	```
 	for (int x = 0; x < rows; x++) {  
 	  for (int y = 0; y < cols; y++) {  
@@ -621,11 +624,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNT
-c5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIs
-MTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OT
-gzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3
-LC0xMzEyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNT
-I4MjAyNTcwLC0xODM1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQx
-NDY4N119
+eyJoaXN0b3J5IjpbMTU2MTAyMzMxNSw5MjMwMTAzMTMsOTkzOT
+IyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUz
+OSw2MjE3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzOD
+k5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUy
+MCw1MjgxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLT
+UwMzU4NDU5NCw1MjgyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1
+MTk5Nl19
 -->
