@@ -164,12 +164,12 @@ void dfs(int index, int leftCount, int rightCount, int leftRemove, int rightRemo
 - 初始条件
 	- 当word1和word2都为空：f[0][0] = 0
 	- dp[0][i ~ length2] = i; dp[i ~ length1][0] = i
-#### Time: O(n*m)
-#### Space:O(n*m)
+##### Time: O(n*m)
+##### Space:O(n*m)
 ### [234. Palindrome Linked List(Easy)](https://leetcode.com/problems/palindrome-linked-list/)
 #### Find Mid and Reverse 2nd half
-#### Time: O(n)
-#### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 - Refer to Template LinkedList
 ### [125. Valid Palindrome(Easy)](https://leetcode.com/problems/valid-palindrome/)
 #### Two Pointers
@@ -214,8 +214,8 @@ PriorityQueue<Point> maxHeap = new PriorityQueue<>(k + 1,
 ```
 4. Offer element into MaxHeap until it reaches capacity of K, poll elements out
 - Remaining would be Kth Point with smallest distance
-#### Time: O(logK*n) - offer/poll of Heap is logK
-#### Space:O(K)
+##### Time: O(logK*n) - offer/poll of Heap is logK
+##### Space:O(K)
 ### 最优解法：基于 quick select 的 O(n + klogk)
 - 先用 Quick Select 找到 kth closest point：O(n)；
 - 对 top k 个点按 distance metric sort 一遍：O(klogk)
@@ -240,15 +240,15 @@ if (index == 0 || num1 != intersection[index - 1]) {
   intersection[index++] = num1;  
 }
 ```
-#### Time: O(mlogm+nlogn)
-#### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
+##### Time: O(mlogm+nlogn)
+##### Space:O(logm+logn) 空间复杂度主要取决于排序使用的额外空间。
 ### [26. Remove Duplicates from Sorted Array(Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 1. 要求每个元素至少出现1次，即数组大小至少得从`2`开始遍历有意义, **`validation about null/length = 0/length < 2`**
 2. Initiate count = 1, 即前1个元素不用管, 从第2个元素（以1为下标）开始read，每次和之前（read - 1）的元素比较, read每次移一步，包括遇到相同的元素
 3. 遇到不同的元素时，此时read已经跳过之前在[count - 1 ~ read - 1]区间内重复的元素,  写入那个元素并递增count
 5. 最后数组下标 0 - count 部分即为去重后的数组,数组长度为count
-#### Time: O(n)
-#### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 #### [Follow up](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/): Remove duplicate that only allow duplicate appears at k times
 1. 要求每个元素至少出现1次，即数组大小至少得从`k+1`开始遍历有意义, **`validation about null/length = 0/length < k`**
 2. Initiate count = k, 即前k个元素不用管, 从第k+1个元素(以k为下标)开始read，每次和之前的元素比较, read每次移一步，包括遇到相同的元素
@@ -257,8 +257,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- otherwise, replace with array[count] once different value found, count++
 	- initially the 1st different value will be replaced at array[k]
 4. eventually array element from index 0 to count - 1 will be replaced with number of k times of
-#### Time: O(n)
-#### Space:O(1)
+##### Time: O(n)
+##### Space:O(1)
 ### [157. Read-n-characters-given-read4](https://aaronice.gitbook.io/lintcode/data_structure/read-n-characters-given-read4)
 #### Queue Idea using array
 - declare an boolean `eof` to indicate if current read4 has read till end of file
@@ -269,8 +269,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- check `eof = bufCount< 4`
 	- update `bufCount= Math.min(bufCount, n - total)` in case current read4 returns more than what we need to just total of n characters
 	- update result as `buf[total++] = buffer[0 ~ count]`
-#### Time: O(n/4)
-#### Space:O(1)
+##### Time: O(n/4)
+##### Space:O(1)
 ### [158. Read-n-characters-given-read4-stream-II]()
 - declare an boolean `eof` to indicate if current read4 has read till end of file
 - declare a pointer `total` to indicate current position that reads from beginning to current length
@@ -291,16 +291,16 @@ if (index == 0 || num1 != intersection[index - 1]) {
 1. loop through brackets starting from index 1 and while salary > 0, calculate in current brancket range, how much salary needs to pay out by `double payout = min(bracket[i][0] - bracket[i-1][0], salary);`
 2. get tax to pay in current period that `tax += bracket[i][1] * payout` and add to result
 3. decrease salary by payout `salary -= payout;`
-#### Time:O(bracket.size())
-#### Space:O(1)
+##### Time:O(bracket.size())
+##### Space:O(1)
 ### [451. Sort Characters By Frequency(Medium)](https://leetcode.com/problems/sort-characters-by-frequency/) 
 #### HashMap & PriorityQueue
 1. 根据 s 构造 HashMap, 因为面向字母所以我们可以用int[]来存储每个character出现的个数,下标可以直接(char[i])
 2. 然后我们构造一个priority queue/maxHeap用来排序, heap top store max appearance character,with comparetor can be `(a, b) -> frequency[b] - frequency[a]`
 3. 把所有frequency中不为0的character进队列, 此时队列里面最顶端为出现次数最大的character
 4. 使用StringBuilder构造队列里面一个个poll出来的character组成String, 每次都decrement frequency[ch]
-#### Time: O(n)
-#### Space:O(n)
+##### Time: O(n)
+##### Space:O(n)
 #### Check TopKFrequentElements, TopKFrequentWordsI && II
 #### follow up, what if input is stream
 ### [424. Longest Repeating Character Replacement(Medium)](https://leetcode.com/problems/longest-repeating-character-replacement/)
@@ -314,22 +314,22 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- **if true, meaning current k is not enough**, move left point by decrement appearance of current left character **`freq[s.charAt(left) - 'A']--`** , then increment left **`left++`**
 		- **if false, meaning current window can allow** `maxCount + k` range, left remain same
 	5. update result by **`max(res, right - left)`**
-#### Time: O(n)
-#### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
+##### Time: O(n)
+##### Space:  O(A)，这里 A 是输入字符串 `S` 出现的字符 ASCII 值的范围
 ### [1305. All Elements in Two BST(Medium)](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 #### BST Inorder & Merge 2 sorted arrays
 - 这两棵树都是二叉搜索树（BST），而一颗BST中序遍历的结果就是排好序的
 1. 新建两个list，分别对两棵树进行中序遍历得到分别排好序的list1，list2;
 2. 已知list1和list2有序，那么将二者归并即可的到一个排好序的总list。
-#### Time: O(m+n) 
+##### Time: O(m+n) 
 - 其中m和n是两棵树中的节点个数。中序遍历的时间复杂度为O(m+n)，归并排序的时间复杂度同样为O(m+n)。
 #### Space:O(m+n)
 - 我们需要使用额外的空间存储数组 v1 和 v2
 ### follow up - what about Binary Tree
 1. Preorder/Inorder traversal
 2. Sort List
-#### Time: O((m+n)*log(M+N)) 
-#### Space:O(Hm + Hn + log(M+N)
+##### Time: O((m+n)*log(M+N)) 
+##### Space:O(Hm + Hn + log(M+N)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 #### Binary Search
 - 对于本题，由于每一行上的数字已经按照升序排列，因此我们可以通过二分查找的方法找到每一行上第一个大于等于1的数字
@@ -369,8 +369,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		- 若等于，则把剩余queue中节点加进去，
 		- 若不等则重新加入null并`dist++`
 	- 若pop不是null则说明应该继续BFS遍历以当前pop节点为中心的左右父三个结点，加入queue之前用Set<TreeNode> 来过滤掉已经visited过的下一个可能的结点
-#### Time: O(N) N 是树中节点个数
-#### Space:O(N)
+##### Time: O(N) N 是树中节点个数
+##### Space:O(N)
 ### [102. Binary Tree Level Order Traversal(Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
@@ -691,11 +691,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDIyNDcxMzksMTIzMTI4MDk4NCwtOT
-Y1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjEx
-LDE3MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNj
-IxNzEzNTIsMTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2
-NSwxMjc2OTgzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNT
-I4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1
-ODQ1OTRdfQ==
+eyJoaXN0b3J5IjpbNzkzODI0NDk0LDEyMzEyODA5ODQsLTk2NT
+QyNjEwNCwxNjc3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwx
+NzI2MjU3OTQ5LC0xNDYyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMT
+cxMzUyLDE4NzA3Mjc0ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUs
+MTI3Njk4MzIzMCwxODYxNzE0MzU0LC0xNzI2ODk1NTIwLDUyOD
+E1NDY4NywtMTMxMjYyMjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0
+NTk0XX0=
 -->
