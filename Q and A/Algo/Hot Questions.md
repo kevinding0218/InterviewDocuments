@@ -454,6 +454,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Space:O(1)
 ### [304. Range Sum Query 2D - Immutable(Medium)](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
+#### Iterator
+ - store the order in a hash using int[] array
+ - 检查相邻单词 a 和 b 是否满足 a <= b
+ - 为了检查相邻单词 a，b 是否满足 a <= b，只需要检查它们第一个不同的字母就可以了。例如，对于"applying" 和 "apples"，第一个不同的字母是 y 和 e。之后只需要比较这两个字母在 order 中的下标就可以了。
+ - 还需要考虑两个单词长度不等的情况。例如，当比较 "app" 和 "apply" 的时候，前三个字母都是相等的，但 "app" 比 "apply" 更短，所以满足 a <= b。
 ### [560. Subarray Sum Equals K(Medium)](https://leetcode.com/problems/subarray-sum-equals-k/)
 ### [71. Simplify Path(Medium)](https://leetcode.com/problems/simplify-path/)
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
@@ -490,10 +495,10 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3Njk4MzIzMCwxODYxNzE0MzU0LC0xNz
-I2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYyMjM4MiwtMTIwODAz
-MjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MCwtMTgzNTYwMjk1MS
-wxNjEwOTUxOTk2LC0yMjc0MTQ2ODcsLTUyODkwMDI2MiwtMTcy
-NTE3NjAzNyw0MDc3MTU2NjYsLTcyMjQxNjgzNSw0OTA4NzY2NT
-JdfQ==
+eyJoaXN0b3J5IjpbMjExMzg5OTQ2NSwxMjc2OTgzMjMwLDE4Nj
+E3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMzEyNjIy
+MzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAyNTcwLC
+0xODM1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4NywtNTI4
+OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2OD
+M1LDQ5MDg3NjY1Ml19
 -->
