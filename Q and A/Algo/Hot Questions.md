@@ -629,7 +629,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 	- 每当queue pop是null时来表示以target node为中心的即将走到当前深度为dist的所有结点，并比较当前一轮BFS走过的距离是否等于k，
 		- 若等于，则把剩余queue中节点加进去，
 		- 若不等则重新加入null并`dist++`
-	- 若pop不是null则说明应该继续BFS遍历以当前pop节点为中心的左右父三个结点，我们用一个Set<TreeNode> 来过滤掉已经visited过的下一个可能的结点
+	- 若pop不是null则说明应该继续BFS遍历以当前pop节点为中心的左右父三个结点，加入queue之前用Set<TreeNode> 来过滤掉已经visited过的下一个可能的结点
 #### Time: O(N)
 #### Space:O(N)
 ### [278. First Bad Version(Easy)](https://leetcode.com/problems/first-bad-version/)
@@ -660,7 +660,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MDAzMTU4NSwtOTY1NDI2MTA0LDE2Nz
+eyJoaXN0b3J5IjpbMjEzNDUwNjgzMCwtOTY1NDI2MTA0LDE2Nz
 c4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDks
 LTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MD
 cyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMw
