@@ -195,10 +195,9 @@ public static List<Integer> iteration(TreeNode root) {
 ```
 ### Binary Tree
 #### DFS Save Parent Node and Visited
+- Save mapping of current node with its parent node
 ```
 Map<Integer, TreeNode> parent = new HashMap<Integer, TreeNode>();
-Set<Integer> visited = new HashSet<Integer>();
-
 public void dfs(TreeNode root) {
     if (root.left != null) {
         parent.put(root.left.val, root);
@@ -210,10 +209,11 @@ public void dfs(TreeNode root) {
     }
 }
 ```
+- Traversa
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NzI0NTg2NiwtMjAwNzU3MzAyNSwyNz
-QwNDcyMjEsLTM2MDYyOTQ5MywtOTgwNDc3NjQ5LDE3NTYwMTY4
-NDUsMjAzNDU0NzkzNCwtNjAxNzc0NTg3LDg5NDY1MDgzNSwtMT
-UwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbLTY2OTQxMzQwLC0yMDA3NTczMDI1LDI3ND
+A0NzIyMSwtMzYwNjI5NDkzLC05ODA0Nzc2NDksMTc1NjAxNjg0
+NSwyMDM0NTQ3OTM0LC02MDE3NzQ1ODcsODk0NjUwODM1LC0xNT
+A1ODQ3MDU0LC0xNjI1MzAxMDQ2XX0=
 -->
