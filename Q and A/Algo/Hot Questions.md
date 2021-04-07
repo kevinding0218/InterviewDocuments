@@ -405,6 +405,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		}
 		```  
 	- 对于奇数编号的对角线，只需要将迭代结果翻转再加入结果数组即可 
+		```
+		if (d % 2 == 1) {  
+		  Collections.reverse(diagonalNodes);  
+		}
+		```
 #### Time: O(n * m)  
 #### Space:O(min(m,n))
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
@@ -422,7 +427,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMjc2MDQyNCw1MjgyMDI1NzAsLTE4Mz
+eyJoaXN0b3J5IjpbLTQ0MDkzMzQ0Nyw1MjgyMDI1NzAsLTE4Mz
 U2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAy
 NjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4MzUsND
 kwODc2NjUyXX0=
