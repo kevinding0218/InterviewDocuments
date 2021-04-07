@@ -415,7 +415,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		```
 #### Time: O(n * m)  
 #### Space:O(min(m,n))
-### what if output in one diagonal direction
+### what if output in one diagonal direction (easy)
 - 只需要遍历起始点为 **`for (int d = 0; d < cols; d++)`**
 - 每次起始点由一维变二维，因为都从第一行开始所以
 	```
@@ -445,8 +445,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNjkxNjk3Nyw1MjgyMDI1NzAsLTE4Mz
-U2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAy
-NjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4MzUsND
-kwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbLTE1MTUzNDA3NDQsNTI4MjAyNTcwLC0xOD
+M1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAw
+MjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LD
+Q5MDg3NjY1Ml19
 -->
