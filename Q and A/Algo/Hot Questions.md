@@ -410,11 +410,14 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		  Collections.reverse(diagonalNodes);  
 		}
 		for (Integer diagonalNode : diagonalNodes) {  
-  result[k++] = diagonalNode;  
-}
+		  result[k++] = diagonalNode;  
+		}
 		```
 #### Time: O(n * m)  
 #### Space:O(min(m,n))
+#### change, output in one diagonal direction
+- 只需要遍历起始点为 **`for (int d = 0; d < cols; d++)`**
+- m
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
@@ -430,7 +433,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1OTQ2NzExNSw1MjgyMDI1NzAsLTE4Mz
+eyJoaXN0b3J5IjpbMTMyMDY1MTgzNiw1MjgyMDI1NzAsLTE4Mz
 U2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAy
 NjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4MzUsND
 kwODc2NjUyXX0=
