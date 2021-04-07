@@ -443,6 +443,7 @@ for (int i = 0; i < size; i++) {
 ##### Time: O(n) n 是给定的二叉搜索树中的节点个数  
 ##### Space:O(1)
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+#### HashMap of parent and visited
 ### [510. Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 #### Node has parent
 - Case 1: if node right child is not null -> go to its right child then leftmost of that is the successor
@@ -1086,7 +1087,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ##### Space:(1)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
-#### DFS + BFS
+#### DFS HashMap of parent and BFS visited + 
 - 如果节点有指向父节点的引用，也就知道了距离该节点 1 距离的所有节点。之后就可以从 target 节点开始进行广度优先搜索了。
 - DFS对所有节点添加一个指向父节点的引用，之后做BFS，找到所有距离 target 节点 K 距离的节点。
 1. DFS用一个`Map<TreeNode, TreeNode>` 存储每个节点与其父节点的mapping
@@ -2141,7 +2142,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODU0MDUyOSwtMTk4NTE2NzA0NywxMT
+eyJoaXN0b3J5IjpbLTg0ODkxMzQ1MywtMTk4NTE2NzA0NywxMT
 g0OTc5MjI1LDg2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0
 OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1LC05OD
 A4MTI3NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3
