@@ -372,7 +372,12 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	}
 	```
 4. if root found and has right node, then the left most of its right node is the successor
-5. 
+	```
+	root = root.right;  
+	while (root.left != null) {  
+	  root = root.left;  
+	}
+	```
 #### Time: O(logN) worst O(n)
 #### Space:O(1)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
@@ -577,7 +582,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NzIyMjEwNiwtMTUwNjU1NDUzOSw2Mj
+eyJoaXN0b3J5IjpbMTE4NDU5MzAxNiwtMTUwNjU1NDUzOSw2Mj
 E3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1
 LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1Mj
 gxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4
