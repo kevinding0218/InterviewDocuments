@@ -329,7 +329,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 
 ### [510. Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 #### Node has parent
-- Case 1: if node right child is not null -> go down to get its right's left
+- Case 1: if node right child is not null -> go to its right child then leftmost of that is the successor
 	```
 	TreeNode p = x.right;  
 	while(p!=null){  
@@ -582,11 +582,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NDU5MzAxNiwtMTUwNjU1NDUzOSw2Mj
-E3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1
-LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1Mj
-gxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4
-NDU5NCw1MjgyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1MTk5Ni
-wtMjI3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3
-NzE1NjY2XX0=
+eyJoaXN0b3J5IjpbLTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNj
+IxNzEzNTIsMTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2
+NSwxMjc2OTgzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNT
+I4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1
+ODQ1OTQsNTI4MjAyNTcwLC0xODM1NjAyOTUxLDE2MTA5NTE5OT
+YsLTIyNzQxNDY4NywtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQw
+NzcxNTY2Nl19
 -->
