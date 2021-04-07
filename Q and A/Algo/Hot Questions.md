@@ -325,10 +325,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 其中m和n是两棵树中的节点个数。中序遍历的时间复杂度为O(m+n)，归并排序的时间复杂度同样为O(m+n)。
 #### Space:O(m+n)
 - 我们需要使用额外的空间存储数组 v1 和 v2
-#### follow up - what about Binary Tree
+### follow up - what about Binary Tree
 1. Preorder/Inorder traversal
 2. Sort List
-T
+#### Time: O((m+n)*log(M+N)) 
+#### Space:O(Hm + Hn + log(M+N)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
@@ -672,11 +673,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDMwOTYxNiwxMjMxMjgwOTg0LC05Nj
-U0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOTIyMTEs
-MTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUzOSw2Mj
-E3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1
-LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1Mj
-gxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4
-NDU5NF19
+eyJoaXN0b3J5IjpbMTU4NTYwOTM1LDEyMzEyODA5ODQsLTk2NT
+QyNjEwNCwxNjc3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwx
+NzI2MjU3OTQ5LC0xNDYyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMT
+cxMzUyLDE4NzA3Mjc0ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUs
+MTI3Njk4MzIzMCwxODYxNzE0MzU0LC0xNzI2ODk1NTIwLDUyOD
+E1NDY4NywtMTMxMjYyMjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0
+NTk0XX0=
 -->
