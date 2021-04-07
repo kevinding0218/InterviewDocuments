@@ -452,14 +452,36 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Simulate
 - 我们使用一个宽为n+1的矩阵可视化地展现执行A 的时间点。其中任务以行优先的顺序执行，没有任务的格子对应 CPU 的待命状态。
 - 由于冷却时间为n，因此我们将所有的A 排布在矩阵的第一列，可以保证满足题目要求，并且容易看出这是可以使得总时间最小的排布方法，对应的总时间为即为求面积：**`(maxExec - 1)*(n+1) + 1`**
+	```
+	  <---n--->  
+	 Annn...nnn  
+	 A  
+	 A  
+	 A
+	```
 - 同理，如果还有其它也需要执行maxExec 次的任务，我们也需要将它们依次排布成列。例如，当还有任务B和C时，我们需要将它们排布在矩阵的第二、三列。如果需要执行maxExec次的任务的数量为maxCount，那么类似地可以得到对应的总时间为 **`(maxExec - 1)*(n+1) + maxCount`**
+	```
+	  <---n--->  
+	 Annn...nnn  
+	 ABC  
+	 ABC  
+	 ABC
+	```
 - 如果超过了n+1列则有 **`tasks.length > (maxExec - 1)*(n-1) + maxCount`**
+	```
+	 <n+1>  
+	 ABCDFGn  
+	 ABCDEFn  
+	 ABCDEFG  
+	 ABCDEFG  
+	 ABC
+	```
 - 最后我们pick **`max((maxExec - 1)*(n-1) + maxCount, tasks.length)`**
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzODY1OTU1MCwtNTAzNTg0NTk0LDUyOD
-IwMjU3MCwtMTgzNTYwMjk1MSwxNjEwOTUxOTk2LC0yMjc0MTQ2
-ODcsLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MDc3MTU2NjYsLT
-cyMjQxNjgzNSw0OTA4NzY2NTJdfQ==
+eyJoaXN0b3J5IjpbLTEyMDgwMzIwNjUsLTUwMzU4NDU5NCw1Mj
+gyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0
+Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC
+03MjI0MTY4MzUsNDkwODc2NjUyXX0=
 -->
