@@ -615,7 +615,17 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### DFS + BFS
 - 如果节点有指向父节点的引用，也就知道了距离该节点 1 距离的所有节点。之后就可以从 target 节点开始进行广度优先搜索了。
 - DFS对所有节点添加一个指向父节点的引用，之后做BFS，找到所有距离 target 节点 K 距离的节点。
-	- 用一个`Map<TreeNode, TreeNode>` 存储每个节点与其父节点的mapping
+1. DFS用一个`Map<TreeNode, TreeNode>` 存储每个节点与其父节点的mapping
+	```
+	public static void dfs(TreeNode node, TreeNode par) {  
+	  if (node != null) {  
+	  parent.put(node, par);  
+	        dfs(node.left, node);  
+	        dfs(node.right, node);  
+	    }  
+	}
+	```
+2. BFS以target 节点为中心展开, 先放入null再放入target, 每当queue pop是null时来表示
 ### [278. First Bad Version(Easy)](https://leetcode.com/problems/first-bad-version/)
 #### Binary Search
 #### Time: O(logN)
@@ -644,11 +654,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxOTUzOTA0MywtOTY1NDI2MTA0LDE2Nz
-c4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDks
-LTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MD
-cyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMw
-LDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMz
-EyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAy
-NTcwXX0=
+eyJoaXN0b3J5IjpbLTE0MzI3ODMwMjEsLTk2NTQyNjEwNCwxNj
+c3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5
+LC0xNDYyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4Nz
+A3Mjc0ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUsMTI3Njk4MzIz
+MCwxODYxNzE0MzU0LC0xNzI2ODk1NTIwLDUyODE1NDY4NywtMT
+MxMjYyMjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0NTk0LDUyODIw
+MjU3MF19
 -->
