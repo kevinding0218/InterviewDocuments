@@ -216,14 +216,14 @@ method() {
 	Set<Integer> visited = new HashSet<Integer>();
 	while(something) {
 		visited.add(root.val);
-		root = parent
+		root = parent.get(root.val);
 	}
 }
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNTkyNTQ1NSwtMjAwNzU3MzAyNSwyNz
-QwNDcyMjEsLTM2MDYyOTQ5MywtOTgwNDc3NjQ5LDE3NTYwMTY4
-NDUsMjAzNDU0NzkzNCwtNjAxNzc0NTg3LDg5NDY1MDgzNSwtMT
-UwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbLTEwOTM5NTE3MTYsLTIwMDc1NzMwMjUsMj
+c0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2
+ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLT
+E1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
 -->
