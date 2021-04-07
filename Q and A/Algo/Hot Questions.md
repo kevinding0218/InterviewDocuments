@@ -522,6 +522,14 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	```
 #### Time: O(mn)
 #### Space:O(mn) - 需要创建一个m行n+1列的前缀和数组
+#### 1D array
+```
+int[] prefixSum = new int[n + 1];
+for (int i = 0; i < n; i++) {  
+  prefixSum[i + 1] = prefixSum[i] + nums[i];  
+}
+sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
+```
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
 #### Iterator
  - store the order in a hash using int[] array
@@ -624,7 +632,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MjEzODQwOSw5MjMwMTAzMTMsOTkzOT
+eyJoaXN0b3J5IjpbMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOT
 IyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUz
 OSw2MjE3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzOD
 k5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUy
