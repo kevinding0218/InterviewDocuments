@@ -99,7 +99,6 @@ public int binarySearch(int[] nums, int target) {
 ```
 ### Template 2 - used for less computing by getting the element
 ```
-```
 public int binarySearch(int[] nums, int target) {
     // 左右都闭合的区间 [l, r]
     int left = 0;
@@ -122,7 +121,6 @@ public int binarySearch(int[] nums, int target) {
     }
     return notFound;
 }
-```
 ```
 ## Sliding Window
 ### Find something/scenario in continuing sub string 
@@ -196,7 +194,7 @@ public static List<Integer> iteration(TreeNode root) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjY0NzM3OTksMjc0MDQ3MjIxLC0zNj
+eyJoaXN0b3J5IjpbLTIwMDc1NzMwMjUsMjc0MDQ3MjIxLC0zNj
 A2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2ODQ1LDIwMzQ1NDc5
 MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLTE1MDU4NDcwNTQsLT
 E2MjUzMDEwNDZdfQ==
