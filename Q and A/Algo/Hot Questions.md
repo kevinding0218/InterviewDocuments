@@ -321,10 +321,14 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 这两棵树都是二叉搜索树（BST），而一颗BST中序遍历的结果就是排好序的
 1. 新建两个list，分别对两棵树进行中序遍历得到分别排好序的list1，list2;
 2. 已知list1和list2有序，那么将二者归并即可的到一个排好序的总list。
-Time: O(n)
-Space:O(n)
+#### Time: O(m+n) 
+- 其中m和n是两棵树中的节点个数。中序遍历的时间复杂度为O(m+n)，归并排序的时间复杂度同样为O(m+n)。
+#### Space:O(m+n)
+- 我们需要使用额外的空间存储数组 v1 和 v2
 #### follow up - what about Binary Tree
-
+1. Preorder/Inorder traversal
+2. Sort List
+T
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
@@ -668,7 +672,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NjY0ODM1MywxMjMxMjgwOTg0LC05Nj
+eyJoaXN0b3J5IjpbLTExNDMwOTYxNiwxMjMxMjgwOTg0LC05Nj
 U0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOTIyMTEs
 MTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUzOSw2Mj
 E3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1
