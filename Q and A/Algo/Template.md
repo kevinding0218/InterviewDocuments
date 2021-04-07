@@ -84,16 +84,17 @@ public int binarySearch(int[] nums, int target) {
    int start = 0, end = nums.length - 1;  
     while (start + 1 < end) { 
        int mid = start + (end - start) / 2; 
-       if (nums[mid] == target) { 
+       Element el = getElement(mid);
+       if (el == target) { 
           end = mid; 
-       } else if (nums[mid] < target) { 
+       } else if (el < target) { 
           start = mid;
        } else { 
 	       end = mid;
 	   } 
 	}     
-	if (nums[start] == target) {  return start; } 
-	if (nums[end] == target) { return end; } 
+	if (getElement(start) == target) {  return start; } 
+	if (getElement(end) == target) { return end; } 
 	return -1;}
 ```
 ### Template 2 - used for less computing by getting the element
@@ -195,7 +196,7 @@ public static List<Integer> iteration(TreeNode root) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODYwMTEzNjUsMjc0MDQ3MjIxLC0zNj
+eyJoaXN0b3J5IjpbLTE2NjY0NzM3OTksMjc0MDQ3MjIxLC0zNj
 A2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2ODQ1LDIwMzQ1NDc5
 MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLTE1MDU4NDcwNTQsLT
 E2MjUzMDEwNDZdfQ==
