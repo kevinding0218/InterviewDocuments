@@ -394,6 +394,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ###### Time: O(N) N 是树中节点个数
 ###### Space:O(N)
 ### [102. Binary Tree Level Order Traversal(Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+#### BFS
+
 ### [173. Binary Search Tree Iterator(Medium)](https://leetcode.com/problems/binary-search-tree-iterator/)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
@@ -2096,11 +2098,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMjE3NjgzMCwxMjE5ODM4NTU4LDQzMT
-k1MTg4NSwtOTgwODEyNzY1LDEyMzEyODA5ODQsLTk2NTQyNjEw
-NCwxNjc3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwxNzI2Mj
-U3OTQ5LC0xNDYyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMTcxMzUy
-LDE4NzA3Mjc0ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUsMTI3Nj
-k4MzIzMCwxODYxNzE0MzU0LC0xNzI2ODk1NTIwLDUyODE1NDY4
-N119
+eyJoaXN0b3J5IjpbLTQ2MjM0NTQ5LDE2MTIxNzY4MzAsMTIxOT
+gzODU1OCw0MzE5NTE4ODUsLTk4MDgxMjc2NSwxMjMxMjgwOTg0
+LC05NjU0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOT
+IyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUz
+OSw2MjE3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzOD
+k5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUy
+MF19
 -->
