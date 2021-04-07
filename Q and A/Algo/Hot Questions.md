@@ -415,6 +415,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	}
 	```
 - hasNext(): equals to if `stack.isNotEmpty()`
+#### Time: O(n)
+#### Space:O(h) 
+- worst case: O(n)
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
@@ -2116,11 +2119,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MDA2NDgwMywxMTQxNDE0MDkyLC00Nj
-IzNDU0OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1
-LC05ODA4MTI3NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nz
-c4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDks
-LTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MD
-cyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMw
-XX0=
+eyJoaXN0b3J5IjpbODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2Mj
+M0NTQ5LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4ODUs
+LTk4MDgxMjc2NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nz
+g2MDc2Nyw5MjMwMTAzMTMsOTkzOTIyMTEsMTcyNjI1Nzk0OSwt
+MTQ2Mjc4Nzk5NywtMTUwNjU1NDUzOSw2MjE3MTM1MiwxODcwNz
+I3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1LDEyNzY5ODMyMzBd
+fQ==
 -->
