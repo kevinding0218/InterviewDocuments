@@ -77,7 +77,7 @@ for (var num: nums) {
 - When asked about find duplicate element or given a known target and known element A, find if there is another elment B that can formulized with A to be target
 - When asked about frequency of character/string appearances, usually combined usage with Priority Queue to sort by appearance count
 ## Binary Search
-### Template 1
+### Template 1 used for find a range
 ```
 public int binarySearch(int[] nums, int target) {  
    if (nums == null || nums.length == 0) { return -1; }     
@@ -96,24 +96,28 @@ public int binarySearch(int[] nums, int target) {
 	if (nums[end] == target) { return end; } 
 	return -1;}
 ```
-### Template 2
+### Template 2 - used for less computing by getting the element
 ```
-public int binarySearch(int[] nums, int target) {  
-   if (nums == null || nums.length == 0) { return -1; }     
-   int start = 0, end = nums.length - 1;  
-    while (start + 1 < end) { 
-       int mid = start + (end - start) / 2; 
-       if (nums[mid] == target) { 
-          end = mid; 
-       } else if (nums[mid] < target) { 
-          start = mid;
-       } else { 
-	       end = mid;
-	   } 
-	}     
-	if (nums[start] == target) {  return start; } 
-	if (nums[end] == target) { return end; } 
-	return -1;}
+```
+public int binarySearch(int[] nums, int target) {
+    // 左右都闭合的区间 [l, r]
+    int left = 0;
+    int right = nums.length - 1;
+
+    while(left <= right) {
+        int mid = left + (right - left) / 2;
+        if(nums[mid] == target)
+            return mid;
+        if (nums[mid] < target)
+			// 搜索区间变为 [mid+1, right]
+            left = mid + 1;
+        if (nums[mid] > target)
+            // 搜索区间变为 [left, mid - 1]
+            right = mid - 1;
+    }
+    return -1;
+}
+```
 ```
 ## Sliding Window
 ### Find something/scenario in continuing sub string 
@@ -187,8 +191,8 @@ public static List<Integer> iteration(TreeNode root) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk0MjE0MDUxLDI3NDA0NzIyMSwtMzYwNj
-I5NDkzLC05ODA0Nzc2NDksMTc1NjAxNjg0NSwyMDM0NTQ3OTM0
-LC02MDE3NzQ1ODcsODk0NjUwODM1LC0xNTA1ODQ3MDU0LC0xNj
-I1MzAxMDQ2XX0=
+eyJoaXN0b3J5IjpbMTg5MzcyMjA5NCwyNzQwNDcyMjEsLTM2MD
+YyOTQ5MywtOTgwNDc3NjQ5LDE3NTYwMTY4NDUsMjAzNDU0Nzkz
+NCwtNjAxNzc0NTg3LDg5NDY1MDgzNSwtMTUwNTg0NzA1NCwtMT
+YyNTMwMTA0Nl19
 -->
