@@ -196,34 +196,34 @@ public static List<Integer> iteration(TreeNode root) {
 ### Binary Tree
 #### DFS Save Parent Node and Visited
 - Save mapping of current node with its parent node
-```
-Map<Integer, TreeNode> parent = new HashMap<Integer, TreeNode>();
-public void dfs(TreeNode root) {
-    if (root.left != null) {
-        parent.put(root.left.val, root);
-        dfs(root.left);
-    }
-    if (root.right != null) {
-        parent.put(root.right.val, root);
-        dfs(root.right);
-    }
-}
-```
-- Traverse with parent info
-```
-method() {
-	dfs(root);
-	Set<Integer> visited = new HashSet<Integer>();
-	while(something) {
-		visited.add(root.val);
-		root = parent.get(root.val);
+	```
+	Map<Integer, TreeNode> parent = new HashMap<Integer, TreeNode>();
+	public void dfs(TreeNode root) {
+	    if (root.left != null) {
+	        parent.put(root.left.val, root);
+	        dfs(root.left);
+	    }
+	    if (root.right != null) {
+	        parent.put(root.right.val, root);
+	        dfs(root.right);
+	    }
 	}
-}
-```
+	```
+- Traverse with parent info
+	```
+	method() {
+		dfs(root);
+		Set<Integer> visited = new HashSet<Integer>();
+		while(something) {
+			visited.add(root.val);
+			root = parent.get(root.val);
+		}
+	}
+	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTM5NTE3MTYsLTIwMDc1NzMwMjUsMj
-c0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2
-ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLT
-E1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
+eyJoaXN0b3J5IjpbMTIzNTQzNjY4LC0yMDA3NTczMDI1LDI3ND
+A0NzIyMSwtMzYwNjI5NDkzLC05ODA0Nzc2NDksMTc1NjAxNjg0
+NSwyMDM0NTQ3OTM0LC02MDE3NzQ1ODcsODk0NjUwODM1LC0xNT
+A1ODQ3MDU0LC0xNjI1MzAxMDQ2XX0=
 -->
