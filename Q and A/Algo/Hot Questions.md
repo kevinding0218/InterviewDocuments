@@ -404,7 +404,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - Initialization: put root and all its leftmost nodes into stack
 - next: 
 	- pop() from stack
-	- check if poped node has right child, if it has, put its right child 
+	- check if poped node has right child, if it has, put its right child and the leftmost nodes into stack
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 ### [235. Lowest Common Ancestor of a Binary Search Tree(Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
@@ -2106,11 +2106,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODc2MTA0NTksMTE0MTQxNDA5MiwtND
-YyMzQ1NDksMTYxMjE3NjgzMCwxMjE5ODM4NTU4LDQzMTk1MTg4
-NSwtOTgwODEyNzY1LDEyMzEyODA5ODQsLTk2NTQyNjEwNCwxNj
-c3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5
-LC0xNDYyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4Nz
-A3Mjc0ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUsMTI3Njk4MzIz
-MF19
+eyJoaXN0b3J5IjpbLTI0MDYzMjQ3NCwxMTQxNDE0MDkyLC00Nj
+IzNDU0OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1
+LC05ODA4MTI3NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nz
+c4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDks
+LTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MD
+cyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMw
+XX0=
 -->
