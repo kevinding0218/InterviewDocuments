@@ -47,7 +47,7 @@ Medium
 ~~680        Valid Palindrome II~~   
 674        Longest Continuous Increasing Subsequence  
 637        Average of Levels in Binary Tree
-621        Task Scheduler   
+~~621        Task Scheduler~~   
 ~~560        Subarray Sum Equals K~~   
 ~~547        Friend Circles~~   
 540        Single Element in a Sorted Array   
@@ -64,7 +64,7 @@ Medium
 339        Nested List Weight Sum  
 333        Largest BST Subtree
 322        Coin Change
-278        First Bad Version
+~~278        First Bad Version~~
 246        Strobogrammatic Number
 ~~238        Product of Array Except Self~~   
 ~~236        Lowest Common Ancestor of a Binary Tree~~   
@@ -98,7 +98,7 @@ Medium
 238        Product of Array Except Self   
 ~~199        Binary Tree Right Side View~~   
 1047        Remove All Adjacent Duplicates In String
-426        Convert Binary Search Tree to Sorted Doubly Linked List   
+~~426        Convert Binary Search Tree to Sorted Doubly Linked Lis~~t   
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 230        Kth Smallest Element in a BST   
 
@@ -108,6 +108,6 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTUyMjk0OTQsMjAyMzEwMTIyLDE4NT
-M4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbMTc2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mz
+g5MzI1OV19
 -->
