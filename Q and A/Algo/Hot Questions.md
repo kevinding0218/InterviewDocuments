@@ -582,6 +582,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 	}
 	```
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
+#### Greedy & Binary Search
+- 这样我们可以用二分查找来解决。二分的上界为数组 nums 中所有元素的和，下界为数组 nums 中所有元素的最大值。
+- 我先猜一个mid值，然后遍历数组划分，使每个子数组和都最接近mid（贪心地逼近mid），这样我得到的子数组数一定最少;
+- 如果即使这样子数组数量仍旧多于m个，那么说明划分的子数组多了,明显说明我mid猜小了，因此 lo = mid + 1;
+- 
 ### [426. Convert the binary search tree into a sorted doubly linked list(Medium)](https://www.jiuzhang.com/solutions/convert-binary-search-tree-to-sorted-doubly-linked-list)
 #### Inorder execution
 1. 利用dummy node来保存头结点，这样就不需要对NULL进行判断了。**`TreeNode dummy = new TreeNode(0);`**
@@ -632,11 +637,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOT
-IyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5NywtMTUwNjU1NDUz
-OSw2MjE3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzOD
-k5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUy
-MCw1MjgxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLT
-UwMzU4NDU5NCw1MjgyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1
-MTk5Nl19
+eyJoaXN0b3J5IjpbMTgyNDgxNTEzNywxNjc3ODYwNzY3LDkyMz
+AxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5LC0xNDYyNzg3OTk3
+LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0ODAsMTEyOT
+A0OTU0LDIxMTM4OTk0NjUsMTI3Njk4MzIzMCwxODYxNzE0MzU0
+LC0xNzI2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYyMjM4MiwtMT
+IwODAzMjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MCwtMTgzNTYw
+Mjk1MV19
 -->
