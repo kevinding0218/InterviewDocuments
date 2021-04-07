@@ -449,7 +449,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 1.初始化 answer 数组，对于给定索引 i，answer[i] 代表的是 i 左侧所有数字的乘积L, 因为索引为 '0' 的元素左侧没有元素， 所以 answer[0] = 1. start from index 1, **`answer[i] = nums[i - 1] * answer[i - 1];`**
 2.用一个变量R来跟踪右边元素的乘积，R 为右侧所有元素的乘积，刚开始右边没有元素，所以 **`R = 1`**
 	- 对于索引 i，左边的乘积为 answer[i]，右边的乘积为 R, 并更新数组 **answer[i]=answer[i]∗R**。
-	- 然后R更新为 **`R=R∗nums[i]`**，其中变量R表示的就是索引右侧数字的乘积。
+	- R 需要包含右边所有的乘积，所以计算下一个结果时需要将当前值乘到 R 上, R更新为 **`R=R∗nums[i]`**
+#### Time: O(n)
+#### Space:O(1)
 ### [304. Range Sum Query 2D - Immutable(Medium)](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 ### [953. Verifying an Alien Dictionary(Easy)](https://leetcode.com/problems/verifying-an-alien-dictionary/)
 ### [560. Subarray Sum Equals K(Medium)](https://leetcode.com/problems/subarray-sum-equals-k/)
@@ -488,7 +490,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MTU4NzQ0NCwxODYxNzE0MzU0LC0xNz
+eyJoaXN0b3J5IjpbMTI3Njk4MzIzMCwxODYxNzE0MzU0LC0xNz
 I2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYyMjM4MiwtMTIwODAz
 MjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MCwtMTgzNTYwMjk1MS
 wxNjEwOTUxOTk2LC0yMjc0MTQ2ODcsLTUyODkwMDI2MiwtMTcy
