@@ -611,27 +611,6 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ### [347. Top K Frequent Elements(Medium)](https://leetcode.com/problems/top-k-frequent-elements/)
 ### Find median in BST without extra space
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
-### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
-#### DFS + BFS
-- 如果节点有指向父节点的引用，也就知道了距离该节点 1 距离的所有节点。之后就可以从 target 节点开始进行广度优先搜索了。
-- DFS对所有节点添加一个指向父节点的引用，之后做BFS，找到所有距离 target 节点 K 距离的节点。
-1. DFS用一个`Map<TreeNode, TreeNode>` 存储每个节点与其父节点的mapping
-	```
-	public static void dfs(TreeNode node, TreeNode par) {  
-	  if (node != null) {  
-	  parent.put(node, par);  
-	        dfs(node.left, node);  
-	        dfs(node.right, node);  
-	    }  
-	}
-	```
-2. BFS以target 节点为中心展开, 先放入null再放入target, 
-	- 每当queue pop是null时来表示以target node为中心的即将走到当前深度为dist的所有结点，并比较当前一轮BFS走过的距离是否等于k，
-		- 若等于，则把剩余queue中节点加进去，
-		- 若不等则重新加入null并`dist++`
-	- 若pop不是null则说明应该继续BFS遍历以当前pop节点为中心的左右父三个结点，加入queue之前用Set<TreeNode> 来过滤掉已经visited过的下一个可能的结点
-#### Time: O(N)
-#### Space:O(N)
 ### [278. First Bad Version(Easy)](https://leetcode.com/problems/first-bad-version/)
 #### Binary Search
 #### Time: O(logN)
@@ -660,11 +639,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNDUwNjgzMCwtOTY1NDI2MTA0LDE2Nz
-c4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDks
-LTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MD
-cyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMw
-LDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNTI4MTU0Njg3LC0xMz
-EyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAy
-NTcwXX0=
+eyJoaXN0b3J5IjpbLTI3Nzg0Mjg3LC05NjU0MjYxMDQsMTY3Nz
+g2MDc2Nyw5MjMwMTAzMTMsOTkzOTIyMTEsMTcyNjI1Nzk0OSwt
+MTQ2Mjc4Nzk5NywtMTUwNjU1NDUzOSw2MjE3MTM1MiwxODcwNz
+I3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1LDEyNzY5ODMyMzAs
+MTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1MjgxNTQ2ODcsLTEzMT
+I2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4NDU5NCw1MjgyMDI1
+NzBdfQ==
 -->
