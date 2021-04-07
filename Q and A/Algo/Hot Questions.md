@@ -585,8 +585,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Greedy & Binary Search
 - 这样我们可以用二分查找来解决。二分的上界为数组 nums 中所有元素的和，下界为数组 nums 中所有元素的最大值。
 - 我先猜一个mid值，然后遍历数组划分，使每个子数组和都最接近mid（贪心地逼近mid），这样我得到的子数组数一定最少;
-- 如果即使这样子数组数量仍旧多于m个，那么说明划分的子数组多了,明显说明我mid猜小了，因此 lo = mid + 1;
-- 
+	- 如果即使这样子数组数量仍旧多于m个，那么说明划分的子数组多了,明显说明我mid猜小了，因此 lo = mid + 1;
+	- 如果得到的子数组数量小于等于m个，那么说明划分的子数组少了,我可能会想，mid是不是有可能更小？值得一试。因此 hi = mid;
+- 贪心地模拟分割的过程，从前到后遍历数组，用 sum 表示当前分割子数组的和，cnt 表示已经分割出的子数组的数量（包括当前子数组），那么每当 sum 加上当前值超过了x，我们就把当前取的值作为新的一段分割子数组的开头，并将cnt 加 1。遍历结束后验证是否 cnt 不超过 m
+#### Time: O(n*log(sum-max of n)) 其中 sum 表示数组 nums 中所有元素的和，maxn 表示数组所有元素的最大值。每次二分查找时，需要对数组进行一次遍历，时间复杂度为 O(n)
+#### Space:O(1)
 ### [426. Convert the binary search tree into a sorted doubly linked list(Medium)](https://www.jiuzhang.com/solutions/convert-binary-search-tree-to-sorted-doubly-linked-list)
 #### Inorder execution
 1. 利用dummy node来保存头结点，这样就不需要对NULL进行判断了。**`TreeNode dummy = new TreeNode(0);`**
@@ -637,11 +640,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNDgxNTEzNywxNjc3ODYwNzY3LDkyMz
-AxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5LC0xNDYyNzg3OTk3
-LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0ODAsMTEyOT
-A0OTU0LDIxMTM4OTk0NjUsMTI3Njk4MzIzMCwxODYxNzE0MzU0
-LC0xNzI2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYyMjM4MiwtMT
-IwODAzMjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MCwtMTgzNTYw
-Mjk1MV19
+eyJoaXN0b3J5IjpbLTEyNTExNDYzMDYsMTY3Nzg2MDc2Nyw5Mj
+MwMTAzMTMsOTkzOTIyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5
+NywtMTUwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgwLDExMj
+kwNDk1NCwyMTEzODk5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1
+NCwtMTcyNjg5NTUyMCw1MjgxNTQ2ODcsLTEzMTI2MjIzODIsLT
+EyMDgwMzIwNjUsLTUwMzU4NDU5NCw1MjgyMDI1NzAsLTE4MzU2
+MDI5NTFdfQ==
 -->
