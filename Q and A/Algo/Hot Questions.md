@@ -444,12 +444,13 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ### Find median in BST without extra space
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
-### [278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
+### [278. First Bad Version(Easy)](https://leetcode.com/problems/first-bad-version/)
 #### Binary Search
 #### Time: O(logN)
 #### Space:O(1)
+### [621. Task Scheduler(Medium)](https://leetcode.com/problems/task-scheduler/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEzMzQ5MDQxLC01MDM1ODQ1OTQsNTI4Mj
+eyJoaXN0b3J5IjpbNzg1OTIzMTg0LC01MDM1ODQ1OTQsNTI4Mj
 AyNTcwLC0xODM1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4
 NywtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNz
 IyNDE2ODM1LDQ5MDg3NjY1Ml19
