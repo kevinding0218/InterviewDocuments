@@ -329,7 +329,19 @@ if (index == 0 || num1 != intersection[index - 1]) {
 
 ### [510. Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 #### Node has parent
-- Case 1: 
+- Case 1: if node right child is not null -> go down to get its right's left
+```
+
+```
+- Case 2: if node right child is null -> go up to the parent until the node is a left child, return parent
+	```
+	while(p!=null){  
+	  if(p.parent!=null && p.parent.left==p){  
+	  return p.parent;  
+	    }  
+	  p = p.parent;  
+	}
+	```
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 
 
@@ -532,11 +544,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwODkzOTE1LC0xNTA2NTU0NTM5LDYyMT
-cxMzUyLDE4NzA3Mjc0ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUs
-MTI3Njk4MzIzMCwxODYxNzE0MzU0LC0xNzI2ODk1NTIwLDUyOD
-E1NDY4NywtMTMxMjYyMjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0
-NTk0LDUyODIwMjU3MCwtMTgzNTYwMjk1MSwxNjEwOTUxOTk2LC
-0yMjc0MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3NjAzNyw0MDc3
-MTU2NjZdfQ==
+eyJoaXN0b3J5IjpbLTY5MzQ5MDU4NywtMTUwNjU1NDUzOSw2Mj
+E3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1NCwyMTEzODk5NDY1
+LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMTcyNjg5NTUyMCw1Mj
+gxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLTUwMzU4
+NDU5NCw1MjgyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1MTk5Ni
+wtMjI3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3
+NzE1NjY2XX0=
 -->
