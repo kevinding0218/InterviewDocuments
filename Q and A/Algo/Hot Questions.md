@@ -443,7 +443,8 @@ for (int i = 0; i < size; i++) {
 ##### Time: O(n) n 是给定的二叉搜索树中的节点个数  
 ##### Space:O(1)
 ### [236. Lowest Common Ancestor of a Binary Tree(Medium)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-#### HashMap of parent and visited
+#### DFS HashMap of parent and visited
+
 ### [510. Inorder Successor in BST II(Medium)](https://junhaow.com/lc/problems/tree/bst/510_inorder-successor-in-bst-ii.html/)
 #### Node has parent
 - Case 1: if node right child is not null -> go to its right child then leftmost of that is the successor
@@ -2142,11 +2143,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODI5ODEzOTksLTE5ODUxNjcwNDcsMT
-E4NDk3OTIyNSw4NjM5MzgwMDYsMTE0MTQxNDA5MiwtNDYyMzQ1
-NDksMTYxMjE3NjgzMCwxMjE5ODM4NTU4LDQzMTk1MTg4NSwtOT
-gwODEyNzY1LDEyMzEyODA5ODQsLTk2NTQyNjEwNCwxNjc3ODYw
-NzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5LC0xND
-YyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0
-ODBdfQ==
+eyJoaXN0b3J5IjpbMzk4NzMxODg0LC0xOTg1MTY3MDQ3LDExOD
+Q5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NTQ5
+LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4ODUsLTk4MD
+gxMjc2NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nzg2MDc2
+Nyw5MjMwMTAzMTMsOTkzOTIyMTEsMTcyNjI1Nzk0OSwtMTQ2Mj
+c4Nzk5NywtMTUwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgw
+XX0=
 -->
