@@ -406,7 +406,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		```  
 	- 对于奇数编号的对角线，只需要将迭代结果翻转再加入结果数组即可 
 		```
-		if (d % 2 == 1) {  
+		if (d % 2 == 0) {  
 		  Collections.reverse(diagonalNodes);  
 		}
 		for (Integer diagonalNode : diagonalNodes) {  
@@ -445,7 +445,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTUzNDA3NDQsNTI4MjAyNTcwLC0xOD
+eyJoaXN0b3J5IjpbLTE1MDM1OTc4NjMsNTI4MjAyNTcwLC0xOD
 M1NjAyOTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAw
 MjYyLC0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LD
 Q5MDg3NjY1Ml19
