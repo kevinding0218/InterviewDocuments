@@ -1087,7 +1087,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 ##### Space:(1)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
-#### DFS HashMap of parent and BFS visited + 
+#### DFS HashMap of parent & BFS visited
 - 如果节点有指向父节点的引用，也就知道了距离该节点 1 距离的所有节点。之后就可以从 target 节点开始进行广度优先搜索了。
 - DFS对所有节点添加一个指向父节点的引用，之后做BFS，找到所有距离 target 节点 K 距离的节点。
 1. DFS用一个`Map<TreeNode, TreeNode>` 存储每个节点与其父节点的mapping
@@ -2142,11 +2142,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0ODkxMzQ1MywtMTk4NTE2NzA0NywxMT
-g0OTc5MjI1LDg2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0
-OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1LC05OD
-A4MTI3NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3
-NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDksLTE0Nj
-I3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MDcyNzQ4
-MF19
+eyJoaXN0b3J5IjpbLTE3ODI5ODEzOTksLTE5ODUxNjcwNDcsMT
+E4NDk3OTIyNSw4NjM5MzgwMDYsMTE0MTQxNDA5MiwtNDYyMzQ1
+NDksMTYxMjE3NjgzMCwxMjE5ODM4NTU4LDQzMTk1MTg4NSwtOT
+gwODEyNzY1LDEyMzEyODA5ODQsLTk2NTQyNjEwNCwxNjc3ODYw
+NzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5LC0xND
+YyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0
+ODBdfQ==
 -->
