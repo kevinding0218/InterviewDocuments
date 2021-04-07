@@ -612,7 +612,10 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ### Find median in BST without extra space
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
-
+#### DFS + BFS
+- 如果节点有指向父节点的引用，也就知道了距离该节点 1 距离的所有节点。之后就可以从 target 节点开始进行广度优先搜索了。
+- DFS对所有节点添加一个指向父节点的引用，之后做BFS，找到所有距离 target 节点 K 距离的节点。
+	- 用一个`Map<TreeNode, TreeNode>` 存储每个节点与其父节点的mapping
 ### [278. First Bad Version(Easy)](https://leetcode.com/problems/first-bad-version/)
 #### Binary Search
 #### Time: O(logN)
@@ -641,7 +644,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNzk0MzcwNiwtOTY1NDI2MTA0LDE2Nz
+eyJoaXN0b3J5IjpbMTcxOTUzOTA0MywtOTY1NDI2MTA0LDE2Nz
 c4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDks
 LTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNjIxNzEzNTIsMTg3MD
 cyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2NSwxMjc2OTgzMjMw
