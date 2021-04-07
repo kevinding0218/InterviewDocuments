@@ -26,7 +26,7 @@ Medium
 1574        Shortest Subarray to be Removed to Make Array Sorted
 1570        Dot Product of Two Sparse Vectors
 1428        Leftmost Column with at Least a One
-1249        Minimum Remove to Make Valid Parentheses   
+~~1249        Minimum Remove to Make Valid Parentheses~~
 1197        Minimum Knight Moves
 1123        Lowest Common Ancestor of Deepest Leaves  
 1029        Two City Scheduling   
@@ -108,6 +108,6 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjE2OTI5NTAsMjAyMzEwMTIyLDE4NT
-M4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbMTE4MjExMzg2NiwyMDIzMTAxMjIsMTg1Mz
+g5MzI1OV19
 -->
