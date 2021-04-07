@@ -430,6 +430,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	    --col;  
 	}
 	```
+### [547. Number of Provinces/# Friend Circles](https://leetcode.com/problems/number-of-provinces/)
+
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
@@ -472,8 +474,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTI2MjIzODIsLTEyMDgwMzIwNjUsLT
-UwMzU4NDU5NCw1MjgyMDI1NzAsLTE4MzU2MDI5NTEsMTYxMDk1
-MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMz
-csNDA3NzE1NjY2LC03MjI0MTY4MzUsNDkwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbNTI4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMj
+A4MDMyMDY1LC01MDM1ODQ1OTQsNTI4MjAyNTcwLC0xODM1NjAy
+OTUxLDE2MTA5NTE5OTYsLTIyNzQxNDY4NywtNTI4OTAwMjYyLC
+0xNzI1MTc2MDM3LDQwNzcxNTY2NiwtNzIyNDE2ODM1LDQ5MDg3
+NjY1Ml19
 -->
