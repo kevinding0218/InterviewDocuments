@@ -331,6 +331,24 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O((m+n)*log(M+N)) 
 #### Space:O(Hm + Hn + log(M+N)
 ### [1428. Leftmost Column with at Least a One(Medium)](https://www.cnblogs.com/cnoodle/p/12759214.html)
+#### Binary Search
+- 对于本题，由于每一行上的数字已经按照升序排列，因此我们可以通过二分查找的方法找到每一行上第一个大于等于1的数字
+- 在找到每一行中第一个1所在的列位置之后，我们只要找到一个最小列即是本题的结果。
+	```
+	int findFirstOne(BinaryMatrix binaryMatrix, int row){  
+	  int low = 0,high = cols - 1;  
+	    while(low <= high){  
+	  int mid = low + (high - low) / 2;  
+	        if(binaryMatrix.get(row, mid) == 1){  
+	  high = mid - 1;  
+	        }else{  
+	  low = mid + 1;  
+	        }  
+	 }  return low;  
+	}
+	```
+##### Time: O(row*logCol)
+##### Space:(1)
 ### [987. Vertical Order Traversal of a Binary Tree(Hard)](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 #### DFS + BFS
@@ -673,11 +691,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NTYwOTM1LDEyMzEyODA5ODQsLTk2NT
-QyNjEwNCwxNjc3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwx
-NzI2MjU3OTQ5LC0xNDYyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMT
-cxMzUyLDE4NzA3Mjc0ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUs
-MTI3Njk4MzIzMCwxODYxNzE0MzU0LC0xNzI2ODk1NTIwLDUyOD
-E1NDY4NywtMTMxMjYyMjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0
-NTk0XX0=
+eyJoaXN0b3J5IjpbLTEwNDIyNDcxMzksMTIzMTI4MDk4NCwtOT
+Y1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEwMzEzLDk5MzkyMjEx
+LDE3MjYyNTc5NDksLTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNj
+IxNzEzNTIsMTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2
+NSwxMjc2OTgzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNT
+I4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1
+ODQ1OTRdfQ==
 -->
