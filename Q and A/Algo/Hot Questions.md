@@ -343,7 +343,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - Case 2: if node right child is null -> go up to the parent until the node is a left child, return parent
 	```
 	while(p!=null){  
-	  if(p.parent!=null && p.parent.left==p){  
+	  if(p.parent!=null && p.parent.left == p){  
 	  return p.parent;  
 	    }  
 	  p = p.parent;  
@@ -582,11 +582,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjI3ODc5OTcsLTE1MDY1NTQ1MzksNj
-IxNzEzNTIsMTg3MDcyNzQ4MCwxMTI5MDQ5NTQsMjExMzg5OTQ2
-NSwxMjc2OTgzMjMwLDE4NjE3MTQzNTQsLTE3MjY4OTU1MjAsNT
-I4MTU0Njg3LC0xMzEyNjIyMzgyLC0xMjA4MDMyMDY1LC01MDM1
-ODQ1OTQsNTI4MjAyNTcwLC0xODM1NjAyOTUxLDE2MTA5NTE5OT
-YsLTIyNzQxNDY4NywtNTI4OTAwMjYyLC0xNzI1MTc2MDM3LDQw
-NzcxNTY2Nl19
+eyJoaXN0b3J5IjpbMTQ1Mzc5NTgxMSwtMTQ2Mjc4Nzk5NywtMT
+UwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgwLDExMjkwNDk1
+NCwyMTEzODk5NDY1LDEyNzY5ODMyMzAsMTg2MTcxNDM1NCwtMT
+cyNjg5NTUyMCw1MjgxNTQ2ODcsLTEzMTI2MjIzODIsLTEyMDgw
+MzIwNjUsLTUwMzU4NDU5NCw1MjgyMDI1NzAsLTE4MzU2MDI5NT
+EsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAyNjIsLTE3
+MjUxNzYwMzddfQ==
 -->
