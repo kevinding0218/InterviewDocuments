@@ -526,7 +526,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(n)
 #### Space: O(n)
 ### [71. Simplify Path(Medium)](https://leetcode.com/problems/simplify-path/)
-- 遇到.. pop， 遇到string push， 其余情况不用管
+- Split("/"), 遇到.. pop， 遇到string push， 其余情况不用管
 - 最后把所得到的stack 反着拼接即可
 - 最后要考虑所处在根目录下要有个"/"
 ### [410. Split Array Largest Sum(Hard)](https://leetcode.com/problems/split-array-largest-sum/)
@@ -580,11 +580,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(number of tasks + number of different task categories)
 #### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTM2OTA3MSwxNzI2MjU3OTQ5LC0xND
-YyNzg3OTk3LC0xNTA2NTU0NTM5LDYyMTcxMzUyLDE4NzA3Mjc0
-ODAsMTEyOTA0OTU0LDIxMTM4OTk0NjUsMTI3Njk4MzIzMCwxOD
-YxNzE0MzU0LC0xNzI2ODk1NTIwLDUyODE1NDY4NywtMTMxMjYy
-MjM4MiwtMTIwODAzMjA2NSwtNTAzNTg0NTk0LDUyODIwMjU3MC
-wtMTgzNTYwMjk1MSwxNjEwOTUxOTk2LC0yMjc0MTQ2ODcsLTUy
-ODkwMDI2Ml19
+eyJoaXN0b3J5IjpbNzI1NjczMDksMTcyNjI1Nzk0OSwtMTQ2Mj
+c4Nzk5NywtMTUwNjU1NDUzOSw2MjE3MTM1MiwxODcwNzI3NDgw
+LDExMjkwNDk1NCwyMTEzODk5NDY1LDEyNzY5ODMyMzAsMTg2MT
+cxNDM1NCwtMTcyNjg5NTUyMCw1MjgxNTQ2ODcsLTEzMTI2MjIz
+ODIsLTEyMDgwMzIwNjUsLTUwMzU4NDU5NCw1MjgyMDI1NzAsLT
+E4MzU2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5
+MDAyNjJdfQ==
 -->
