@@ -209,11 +209,21 @@ public void dfs(TreeNode root) {
     }
 }
 ```
-- Traversa
+- Traverse with parent info
+```
+method() {
+	dfs(root);
+	Set<Integer> visited = new HashSet<Integer>();
+	while(something) {
+		visited.add(root.val);
+		root = parent
+	}
+}
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2OTQxMzQwLC0yMDA3NTczMDI1LDI3ND
-A0NzIyMSwtMzYwNjI5NDkzLC05ODA0Nzc2NDksMTc1NjAxNjg0
-NSwyMDM0NTQ3OTM0LC02MDE3NzQ1ODcsODk0NjUwODM1LC0xNT
-A1ODQ3MDU0LC0xNjI1MzAxMDQ2XX0=
+eyJoaXN0b3J5IjpbMTgyNTkyNTQ1NSwtMjAwNzU3MzAyNSwyNz
+QwNDcyMjEsLTM2MDYyOTQ5MywtOTgwNDc3NjQ5LDE3NTYwMTY4
+NDUsMjAzNDU0NzkzNCwtNjAxNzc0NTg3LDg5NDY1MDgzNSwtMT
+UwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
 -->
