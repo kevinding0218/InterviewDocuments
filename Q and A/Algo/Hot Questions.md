@@ -409,6 +409,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 		if (d % 2 == 1) {  
 		  Collections.reverse(diagonalNodes);  
 		}
+		for (Integer diagonalNode : diagonalNodes) {  
+  result[k++] = diagonalNode;  
+}
 		```
 #### Time: O(n * m)  
 #### Space:O(min(m,n))
@@ -427,7 +430,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MDkzMzQ0Nyw1MjgyMDI1NzAsLTE4Mz
+eyJoaXN0b3J5IjpbMTE1OTQ2NzExNSw1MjgyMDI1NzAsLTE4Mz
 U2MDI5NTEsMTYxMDk1MTk5NiwtMjI3NDE0Njg3LC01Mjg5MDAy
 NjIsLTE3MjUxNzYwMzcsNDA3NzE1NjY2LC03MjI0MTY4MzUsND
 kwODc2NjUyXX0=
