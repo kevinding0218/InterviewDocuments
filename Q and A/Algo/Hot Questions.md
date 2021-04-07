@@ -365,6 +365,9 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(n)
 #### Space:O(1)
 ### [146. LRU Cache(Medium)](https://leetcode.com/problems/lru-cache/)
+#### HashMap & Double LinkedList
+- LRU 缓存机制可以通过哈希表辅以双向链表实现，我们用一个哈希表和一个双向链表维护所有在缓存中的键值对。
+- 双向链表按照被使用的顺序存储了这些键值对，靠近尾部的键值对是最近使用的，而靠近头部的键值对是最久未使用的` dummyHead <-> least used <-> most used <-> dummyTail`
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
@@ -380,7 +383,8 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - 先找出bst的size, 然后再用inorder traversal 取第 k 个值.
 ### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzU2MDI5NTEsMTYxMDk1MTk5NiwtMj
-I3NDE0Njg3LC01Mjg5MDAyNjIsLTE3MjUxNzYwMzcsNDA3NzE1
-NjY2LC03MjI0MTY4MzUsNDkwODc2NjUyXX0=
+eyJoaXN0b3J5IjpbLTg5MjgwODI2MSwtMTgzNTYwMjk1MSwxNj
+EwOTUxOTk2LC0yMjc0MTQ2ODcsLTUyODkwMDI2MiwtMTcyNTE3
+NjAzNyw0MDc3MTU2NjYsLTcyMjQxNjgzNSw0OTA4NzY2NTJdfQ
+==
 -->
