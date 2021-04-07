@@ -110,7 +110,9 @@ index = col + row * n
 ### BST
 - Inorder will be a sorted list
 ```
-/**
+/**  
+ * exit condition; left -> execution -> right 
+ * */
 private void dfs(TreeNode root, List<Integer> ansList) {  
   if (root == null) {  
 	  return;  
@@ -146,8 +148,8 @@ public static List<Integer> iteration(TreeNode root) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Njg5MDkzMDksLTM2MDYyOTQ5MywtOT
-gwNDc3NjQ5LDE3NTYwMTY4NDUsMjAzNDU0NzkzNCwtNjAxNzc0
-NTg3LDg5NDY1MDgzNSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl
-19
+eyJoaXN0b3J5IjpbMjc0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MD
+Q3NzY0OSwxNzU2MDE2ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4
+Nyw4OTQ2NTA4MzUsLTE1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ
+==
 -->
