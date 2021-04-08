@@ -916,6 +916,14 @@ ans.insert(0, carry == 1 ? carry : "");// 判断最后一次计算是否有进�
 - 定义递归DFS为找到所有以combination开头的那些和为target的组合（出口），并丢到results里面。
 	- 拆解）如果当前sum小于或等于target，继续dfs，否则中止。
 	- 并且下一个可以加入combination中的数 至少从candidate的startIdx开始，因为结果允许重复
+```
+private static void dfs(
+  int[] candidates,  
+  int target,  
+  int begin,  
+  int sum,  
+  List<Integer> combination)
+```
 ##### Time: O(S) 其中 SS 为所有可行解的长度之和
 ##### Space:O(target) 空间复杂度取决于递归的栈深度，在最差情况下需要递归O(target)层。
 ### [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
@@ -923,12 +931,20 @@ ans.insert(0, carry == 1 ? carry : "");// 判断最后一次计算是否有进�
 - 与39不同的是结果不允许重复
 - - Sort array 减少回溯次数
 - 定义递归DFS为找到所有以combination开头的那些和为target的组合（出口），并丢到results里面。
+```
+private static void dfs(
+  int[] candidates,  
+  int target,  
+  int begin,  
+  int sum,  
+  List<Integer> combination) {
+```
 	- 拆解）如果当前sum小于或等于target，继续dfs，否则中止。
-	- 并且下一个可以加入combination中的数 至少从candidate的startIdx + 1开始，因为结果不允许重复，由于数组可能有重复元素，我们需要再每次选择sum时去重 
+	- 并且下一个可以加入combination中的数 至少从candidate的startIdx + 1开始，因为结果不允许重复，由于数组可能有重复元素，我们需要再每次选择sum时去重 `if(i > begin && candidates[i] == candidates[i-1]) continue;`
 ### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTU0OTkyNywtMTI4NzkzMDY0MCwtMT
+eyJoaXN0b3J5IjpbLTU2ODc5MjkxNCwtMTI4NzkzMDY0MCwtMT
 IyNTA4NTI0MiwtNTI3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzky
 ODcyOTQsLTE0ODE0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NT
 kyLC0xNzQ5MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEs
