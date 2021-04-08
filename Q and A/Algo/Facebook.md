@@ -47,7 +47,7 @@ Medium
 322        Coin Change [Link](https://leetcode-cn.com/problems/coin-change/solution/322-ling-qian-dui-huan-by-leetcode-solution/)
 246        Strobogrammatic Number
 227        Basic Calculator II   [Link](https://leetcode-cn.com/problems/basic-calculator-ii/)
-215        Kth Largest Element in an Array   
+215        Kth Largest Element in an Array   [Link](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/shu-zu-zhong-de-di-kge-zui-da-yuan-su-by-leetcode-/)
 211        Design Add and Search Words Data Structure  
 210        Course Schedule II   
 163        Missing Ranges
@@ -109,10 +109,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTAxMDkwODYsMTk3MDgyNzgwNiwxMj
-U3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYw
-NDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MD
-I3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIw
-MTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMT
-c2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5MzI1OV19
+eyJoaXN0b3J5IjpbMTEwMzk0OTQxNywxOTcwODI3ODA2LDEyNT
+c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
+NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
+c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
+MzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3OTU2MiwxNz
+Y4MjUxNjU4LDIwMjMxMDEyMiwxODUzODkzMjU5XX0=
 -->
