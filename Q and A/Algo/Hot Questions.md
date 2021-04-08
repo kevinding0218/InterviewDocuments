@@ -975,7 +975,12 @@ private static void dfs(
 - 其中，left和right表示滑动窗口在字符串s中的索引，cur_left和cur_right表示字符串s中索引为left和right的字符在数组中的索引  
 ##### Time: O(n)  
 ##### Space:O(1)
-### [408. Valid Word Abbreviation]
+### [408. Valid Word Abbreviation]()
+#### Two Pointers
+- 2 Pointers traversal from each word starting index
+	- check if current character is digit, if it is
+		- check if character is '0', such as met with `...0a` which is not allowed, return false
+		- otherwise sum up current number with any possible digit number 
 ### [297. Serialize and Deserialize Binary Tree(Hard)](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 ### [449. Serialize and Deserialize BST (Medium)](https://leetcode.com/problems/serialize-and-deserialize-bst/solution/)
 ### [127. Word Ladder(Hard)](https://leetcode.com/problems/word-ladder/)
@@ -984,7 +989,7 @@ private static void dfs(
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MDAwMTkzNCwyNDYzMzcwMzksNTEwNj
+eyJoaXN0b3J5IjpbMTAyNjY4Njc3MiwyNDYzMzcwMzksNTEwNj
 kwNjE3LDE3NjgyMjA5NSwtMTI4NzkzMDY0MCwtMTIyNTA4NTI0
 MiwtNTI3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzkyODcyOTQsLT
 E0ODE0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5
