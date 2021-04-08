@@ -645,6 +645,20 @@ for (int i = 0; i < size; i++) {
 #### Divide and Conquer
 1. divide total list left and right until 2 or 1 sorted array with index from of 0 ~ list.length
 2. merge 2 sorted array and up
+```
+private static int [] divide(List<int[]> lists, int start, int end) {  
+  if (end - start == 1) {  
+  return merge(lists.get(start), lists.get(end));  
+    }  
+  if (end - start == 0) {  
+  return lists.get(start);  
+    }  
+  int mid = start + (end-start)/2;  
+    int [] left = divide(lists, start, mid);  
+    int [] right = divide(lists, mid+1, end);  
+    return merge(left, right);  
+}
+```
 ##### Time: O(kn×logK)
 ##### Space: O(logK) 递归会使用到的栈空间
 ### [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
@@ -816,11 +830,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjk0MTg3NjQsMTA0NDcxMTk1OCwtMT
-g4OTg3NDYyNiwtMTU2MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4
-NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4MT
-YxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LDEx
-ODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NT
-Q5LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4ODUsLTk4
-MDgxMjc2NV19
+eyJoaXN0b3J5IjpbMjc1NDU0OTEsLTE5Mjk0MTg3NjQsMTA0ND
+cxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2NiwxMTU3MDE0
+NzI4LDE2OTM4NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2NDk4MS
+wxNjc3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1
+MTY3MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOT
+IsLTQ2MjM0NTQ5LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5
+NTE4ODVdfQ==
 -->
