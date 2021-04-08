@@ -737,10 +737,12 @@ private void dfs(int[] nums, int startIndex, int remainTarget, List<Integer> lis
 - define a visited[][] to indicate if node has been visited
 - define a Coordinate class with x and y
 - define a direction array of `dx = {0, 1, -1, 0}, dy = {1, 0, 0, -1};`
-- BFS for each node which has not been visited, each node would go 4 directional, check if new node is valid by
+- BFS for each node which has not been visited, each node would go 4 directional, continue if new node is invalid by checking
 	- if new node coordinate is out of matrix
 	- if new node has been visisted already
-	- if new node 
+	- if new node is not an island
+##### Time: O(mn)
+##### Space:O(mn)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 #### Simulate
@@ -891,11 +893,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgxMzkyNjIzLC02Mzg2MDU1OTIsLTE3ND
-kxNDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQx
-ODc2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxOD
-Y2LDExNTcwMTQ3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5MTg3LC0y
-MDM5MjY0OTgxLDE2NzcxOTgxNjEsNjQzMTM1MjY3LC05NDcwNT
-g1NjAsLTE5ODUxNjcwNDcsMTE4NDk3OTIyNSw4NjM5MzgwMDYs
-MTE0MTQxNDA5Ml19
+eyJoaXN0b3J5IjpbLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNz
+Q5MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0
+MTg3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MT
+g2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1OTE4Nywt
+MjAzOTI2NDk4MSwxNjc3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MD
+U4NTYwLC0xOTg1MTY3MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2
+LDExNDE0MTQwOTJdfQ==
 -->
