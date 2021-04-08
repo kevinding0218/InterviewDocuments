@@ -397,7 +397,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - then only iterative the queue.size() node in current queue, adding their child nodes continuously
 ##### Time: O(n)
 ##### Space:O(n)
-### [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
+### [515. Find Largest Value in Each Tree Row(Medium)](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
 #### BFS
 Like level ordering
 ##### Time: O(n)
@@ -898,11 +898,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyOTkwODk2NywtMTM5Mjg3Mjk0LC0xND
-gxNDEzODQ1LC01NzExNzAyMjMsLTYzODYwNTU5MiwtMTc0OTE0
-ODUxNiwtODU4NjkwNTQ4LC0xNzc1ODQ0MjkxLC0xOTI5NDE4Nz
-Y0LDEwNDQ3MTE5NTgsLTE4ODk4NzQ2MjYsLTE1NjAyOTE4NjYs
-MTE1NzAxNDcyOCwxNjkzODQyODE2LDEwMzkxNTkxODcsLTIwMz
-kyNjQ5ODEsMTY3NzE5ODE2MSw2NDMxMzUyNjcsLTk0NzA1ODU2
-MCwtMTk4NTE2NzA0N119
+eyJoaXN0b3J5IjpbMzE2OTA1NTYzLC0xMzkyODcyOTQsLTE0OD
+E0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5MTQ4
+NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MTg3Nj
+QsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2Niwx
+MTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1OTE4NywtMjAzOT
+I2NDk4MSwxNjc3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYw
+LC0xOTg1MTY3MDQ3XX0=
 -->
