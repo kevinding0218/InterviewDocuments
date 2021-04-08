@@ -28,7 +28,7 @@ Medium
 1004        Max Consecutive Ones III  [Link](https://leetcode-cn.com/problems/max-consecutive-ones-iii/solution/zui-da-lian-xu-1de-ge-shu-iii-by-leetcod-hw12/)
 986        Interval List Intersections [Link](https://leetcode-cn.com/problems/interval-list-intersections/solution/qu-jian-lie-biao-de-jiao-ji-by-leetcode/)
 977        Squares of a Sorted Array [Link](https://leetcode-cn.com/problems/squares-of-a-sorted-array/solution/you-xu-shu-zu-de-ping-fang-by-leetcode-solution/)
-958        Check Completeness of a Binary Tree  
+958        Check Completeness of a Binary Tree  [Link](https://leetcode-cn.com/problems/check-completeness-of-a-binary-tree/solution/er-cha-shu-de-wan-quan-xing-jian-yan-by-leetcode/)
 919        Complete Binary Tree Inserter   
 824        Goat Latin
 785        Is Graph Bipartite?   
@@ -109,10 +109,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNDc4MzM1MCwxOTcwODI3ODA2LDEyNT
-c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
-NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
-c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
-MzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3OTU2MiwxNz
-Y4MjUxNjU4LDIwMjMxMDEyMiwxODUzODkzMjU5XX0=
+eyJoaXN0b3J5IjpbNDA0MDU0NDMzLDE5NzA4Mjc4MDYsMTI1Nz
+U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
+LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
+k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
+OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
+gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
 -->
