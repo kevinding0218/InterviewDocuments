@@ -648,7 +648,21 @@ for (int i = 0; i < size; i++) {
 ##### Time: O(logK*(total numbers))
 ##### Space: O(total numbers)
 ### [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
-
+#### Divide and Conquer
+```
+public ListNode divide(ListNode[] lists, int l, int r) {  
+  if (l == r) {  
+  return lists[l];  
+    }  
+  if (l > r) {  
+  return null;  
+    }  
+  int mid = (l + r) >> 1; // l + (r - l)/2  
+  ListNode left = divide(lists, l, mid);  
+    ListNode right = divide(lists, mid + 1, r);  
+    return merge(left, right);  
+}
+```
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
@@ -800,11 +814,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODE1MTI0MDgsMTA0NDcxMTk1OCwtMT
-g4OTg3NDYyNiwtMTU2MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4
-NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4MT
-YxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LDEx
-ODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NT
-Q5LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4ODUsLTk4
-MDgxMjc2NV19
+eyJoaXN0b3J5IjpbMzQ1MjQ0NDgzLDEwNDQ3MTE5NTgsLTE4OD
+k4NzQ2MjYsLTE1NjAyOTE4NjYsMTE1NzAxNDcyOCwxNjkzODQy
+ODE2LDEwMzkxNTkxODcsLTIwMzkyNjQ5ODEsMTY3NzE5ODE2MS
+w2NDMxMzUyNjcsLTk0NzA1ODU2MCwtMTk4NTE2NzA0NywxMTg0
+OTc5MjI1LDg2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0OS
+wxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1LC05ODA4
+MTI3NjVdfQ==
 -->
