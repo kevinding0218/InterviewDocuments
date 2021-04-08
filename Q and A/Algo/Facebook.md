@@ -74,7 +74,7 @@ Medium
 211        Design Add and Search Words Data Structure  
 210        Course Schedule II   
 200        Number of Islands   
-199        Binary Tree Right Side View   
+~~199        Binary Tree Right Side View~~   
 ~~173        Binary Search Tree Iterator~~   
 163        Missing Ranges
 155        Min Stack
@@ -82,7 +82,7 @@ Medium
 136        Single Number   
 130        Surrounded Regions   
 ~~125        Valid Palindrome~~   
-124        Binary Tree Maximum Path Sum   
+~~124        Binary Tree Maximum Path Sum~~   
 114        Flatten Binary Tree to Linked List   
 98        Validate Binary Search Tree   
 92        Reverse Linked List II   
@@ -108,6 +108,6 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mz
-g5MzI1OV19
+eyJoaXN0b3J5IjpbMzM0Nzk1NjIsMTc2ODI1MTY1OCwyMDIzMT
+AxMjIsMTg1Mzg5MzI1OV19
 -->
