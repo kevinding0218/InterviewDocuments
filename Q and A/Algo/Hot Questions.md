@@ -901,15 +901,23 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 #### Traversal
 - 整体思路是将两个字符串较短的用 00 补齐，使得两个字符串长度一致，然后从末尾进行遍历计算并插入结果首位，得到最终结果
 - 按照位置给结果字符赋值，最后如果有进位，则在前方进行字符串拼接添加进位
-- declare carry = 0; every 
+- declare carry = 0; every iteration sum = last carry;
+```
+// in loop
+ans.insert(0, sum % 2); // 如果二者都为1 那么sum%2应该刚好为0 否则为1
+arry = sum / 2;   //如果二者都为1 那么carry应该刚好为1 否则为0
+// finally
+ans.insert(0, carry == 1 ? carry : "");// 判断最后一次计算是否有进位  有则在最前面加上1 否则原样输出
+```
+##### Time: O(n)
 ### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMTk4MzE0NiwtNTI3MzAwMjkwLC0xOD
-I2MTE1MjQ0LC0xMzkyODcyOTQsLTE0ODE0MTM4NDUsLTU3MTE3
-MDIyMywtNjM4NjA1NTkyLC0xNzQ5MTQ4NTE2LC04NTg2OTA1ND
-gsLTE3NzU4NDQyOTEsLTE5Mjk0MTg3NjQsMTA0NDcxMTk1OCwt
-MTg4OTg3NDYyNiwtMTU2MDI5MTg2NiwxMTU3MDE0NzI4LDE2OT
-M4NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4
-MTYxLDY0MzEzNTI2N119
+eyJoaXN0b3J5IjpbLTEyMjUwODUyNDIsLTUyNzMwMDI5MCwtMT
+gyNjExNTI0NCwtMTM5Mjg3Mjk0LC0xNDgxNDEzODQ1LC01NzEx
+NzAyMjMsLTYzODYwNTU5MiwtMTc0OTE0ODUxNiwtODU4NjkwNT
+Q4LC0xNzc1ODQ0MjkxLC0xOTI5NDE4NzY0LDEwNDQ3MTE5NTgs
+LTE4ODk4NzQ2MjYsLTE1NjAyOTE4NjYsMTE1NzAxNDcyOCwxNj
+kzODQyODE2LDEwMzkxNTkxODcsLTIwMzkyNjQ5ODEsMTY3NzE5
+ODE2MSw2NDMxMzUyNjddfQ==
 -->
