@@ -20,10 +20,10 @@ Hard
 ~~32        Longest Valid Parentheses~~   
 
 Medium
-27        Remove Element   
+27        Remove Element   [Link](https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode/)
 1197        Minimum Knight Moves
 1123        Lowest Common Ancestor of Deepest Leaves  [Link](https://leetcode-cn.com/problems/lowest-common-ancestor-of-deepest-leaves/solution/liang-chong-si-lu-yi-chong-qian-xu-bian-li-yi-chon/)
-1029        Two City Scheduling   
+1029        Two City Scheduling   [Link](https://leetcode-cn.com/problems/two-city-scheduling/solution/er-cha-shu-de-chui-xu-bian-li-by-leetcode/)
 1026        Maximum Difference Between Node and Ancestor
 1004        Max Consecutive Ones III  
 986        Interval List Intersections
@@ -109,10 +109,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTI1MTI1NDAsMTk3MDgyNzgwNiwxMj
-U3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYw
-NDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MD
-I3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIw
-MTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMT
-c2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5MzI1OV19
+eyJoaXN0b3J5IjpbLTIxNzMzMTkyLDE5NzA4Mjc4MDYsMTI1Nz
+U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
+LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
+k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
+OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
+gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
 -->
