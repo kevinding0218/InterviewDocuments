@@ -21,7 +21,7 @@ Hard
 Medium
 ~~5        Longest Palindromic Substring~~   
 27        Remove Element   
-443        String Compression  
+~~443        String Compression~~  
 ~~930        Binary Subarrays With Sum~~
 1574        Shortest Subarray to be Removed to Make Array Sorted
 1570        Dot Product of Two Sparse Vectors
@@ -108,9 +108,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMT
-AwNjA0NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2
-LDUwMjc5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNj
-Y3MjAxMzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3OTU2
-MiwxNzY4MjUxNjU4LDIwMjMxMDEyMiwxODUzODkzMjU5XX0=
+eyJoaXN0b3J5IjpbMTI1NzU3MjMxOCw4MzEyMDA4NjIsLTc2NT
+UxNzYwMiwxMTAxMDA2MDQ2LDE0ODkzMzU4MzgsNDA1NTk3MDg2
+LC04NzAxNzIzODYsNTAyNzk2ODMwLDIwODU1NjM1OTQsLTE1MT
+k2ODI0MjIsMTM2NjcyMDEzOCwtMTgyMjQ2NzMxOCwxMDkwNDY2
+MDU4LDMzNDc5NTYyLDE3NjgyNTE2NTgsMjAyMzEwMTIyLDE4NT
+M4OTMyNTldfQ==
 -->
