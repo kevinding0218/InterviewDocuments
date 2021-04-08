@@ -57,11 +57,10 @@ Medium
 130        Surrounded Regions    [Link](https://leetcode.com/problems/surrounded-regions/submissions/)
 98        Validate Binary Search Tree   my
 92        Reverse Linked List II   my
-
-57        Insert Interval  
-56        Merge Intervals
-40        Combination Sum II   
-39        Combination Sum   
+57        Insert Interval  my
+56        Merge Intervals my
+40        Combination Sum II   my
+39        Combination Sum    my
 29        Divide Two Integers   
 33        Search in Rotated Sorted Array   
 238        Product of Array Except Self   
@@ -110,7 +109,7 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNDc3NTI0NiwxOTcwODI3ODA2LDEyNT
+eyJoaXN0b3J5IjpbLTk5NjQ1MDU1MiwxOTcwODI3ODA2LDEyNT
 c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
 NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
 c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
