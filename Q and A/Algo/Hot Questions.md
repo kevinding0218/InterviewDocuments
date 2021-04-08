@@ -397,6 +397,11 @@ if (index == 0 || num1 != intersection[index - 1]) {
 - then only iterative the queue.size() node in current queue, adding their child nodes continuously
 ##### Time: O(n)
 ##### Space:O(n)
+### [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
+#### BFS
+Like level ordering
+##### Time: O(n)
+##### Space:O(n)
 ### [173. Binary Search Tree Iterator(Medium)](https://leetcode.com/problems/binary-search-tree-iterator/)
 #### Stack
 - Initialization: put root and all its leftmost nodes into stack
@@ -416,8 +421,6 @@ if (index == 0 || num1 != intersection[index - 1]) {
 #### Time: O(n)
 #### Space:O(h) 
 - worst case: O(n)
-### [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
-
 ### [199. Binary Tree Right Side View(Medium)](https://leetcode.com/problems/binary-tree-right-side-view/)
 #### BFS
 - 利用广度优先搜索进行层次遍历，记录下每层的最后一个元素。
@@ -895,11 +898,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTI4NzI5NCwtMTQ4MTQxMzg0NSwtNT
-cxMTcwMjIzLC02Mzg2MDU1OTIsLTE3NDkxNDg1MTYsLTg1ODY5
-MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQxODc2NCwxMDQ0NzExOT
-U4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2LDExNTcwMTQ3Mjgs
-MTY5Mzg0MjgxNiwxMDM5MTU5MTg3LC0yMDM5MjY0OTgxLDE2Nz
-cxOTgxNjEsNjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5ODUxNjcw
-NDcsMTE4NDk3OTIyNV19
+eyJoaXN0b3J5IjpbMTAyOTkwODk2NywtMTM5Mjg3Mjk0LC0xND
+gxNDEzODQ1LC01NzExNzAyMjMsLTYzODYwNTU5MiwtMTc0OTE0
+ODUxNiwtODU4NjkwNTQ4LC0xNzc1ODQ0MjkxLC0xOTI5NDE4Nz
+Y0LDEwNDQ3MTE5NTgsLTE4ODk4NzQ2MjYsLTE1NjAyOTE4NjYs
+MTE1NzAxNDcyOCwxNjkzODQyODE2LDEwMzkxNTkxODcsLTIwMz
+kyNjQ5ODEsMTY3NzE5ODE2MSw2NDMxMzUyNjcsLTk0NzA1ODU2
+MCwtMTk4NTE2NzA0N119
 -->
