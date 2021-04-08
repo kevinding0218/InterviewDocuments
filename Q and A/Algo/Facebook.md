@@ -30,7 +30,7 @@ Medium
 977        Squares of a Sorted Array [Link](https://leetcode-cn.com/problems/squares-of-a-sorted-array/solution/you-xu-shu-zu-de-ping-fang-by-leetcode-solution/)
 958        Check Completeness of a Binary Tree  [Link](https://leetcode-cn.com/problems/check-completeness-of-a-binary-tree/solution/er-cha-shu-de-wan-quan-xing-jian-yan-by-leetcode/)
 919        Complete Binary Tree Inserter   [Link](https://leetcode-cn.com/problems/complete-binary-tree-inserter/solution/wan-quan-er-cha-shu-cha-ru-qi-by-leetcode/)
-824        Goat Latin
+824        Goat Latin [Link](https://leetcode-cn.com/problems/goat-latin/solution/shan-yang-la-ding-wen-by-leetcode/)
 785        Is Graph Bipartite?   
 766        Toeplitz Matrix
 674        Longest Continuous Increasing Subsequence  
@@ -109,7 +109,7 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMTQzMzc4LDE5NzA4Mjc4MDYsMTI1Nz
+eyJoaXN0b3J5IjpbODQ1ODg0MzE0LDE5NzA4Mjc4MDYsMTI1Nz
 U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
 LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
 k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
