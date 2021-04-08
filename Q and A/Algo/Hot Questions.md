@@ -508,9 +508,13 @@ for (int i = 0; i < size; i++) {
 ### [124. BinaryTreeMaximumPathSum (Hard)](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 #### Divide & Conquer
 - 考虑实现一个简化的函数helper,该函数计算二叉树中的一个节点的最大贡献值,  具体而言，该函数的计算如下。
-- 空节点的最大贡献值等于0。
-- 非空节点的最大贡献值等于节点值与其子节点中的最大贡献值之和（对于叶节点而言，最大贡献值等于节点值）。  
+	- 空节点的最大贡献值等于0。
+	- 非空节点的最大贡献值等于节点值与其子节点中的最大贡献值之和（对于叶节点而言，最大贡献值等于节点值。  
 - 根据函数helper得到每个节点的最大贡献值之后，如何得到二叉树的最大路径和？
+- 对于二叉树中的一个节点，该节点的最大路径和取决于该节点的值与该节点的左右子节点的最大贡献值
+- 如果子节点的最大贡献值为正，则计入该节点的最大路径和，否则不计入该节点的最大路径和。`leftMax = Math.max(helper(node.left), 0);`
+- 维护一个全局变量 maxSum 存储最大路径和，在递归过程中更新 maxSum 的值
+- 最后得到的 maxSum 的值即为二叉树中的最大路径和。
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
@@ -773,11 +777,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0OTAwMTM4NywxNjc3MTk4MTYxLDY0Mz
-EzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LDExODQ5Nzky
-MjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NTQ5LDE2MT
-IxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4ODUsLTk4MDgxMjc2
-NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nzg2MDc2Nyw5Mj
-MwMTAzMTMsOTkzOTIyMTEsMTcyNjI1Nzk0OSwtMTQ2Mjc4Nzk5
-N119
+eyJoaXN0b3J5IjpbLTIwMzkyNjQ5ODEsMTY3NzE5ODE2MSw2ND
+MxMzUyNjcsLTk0NzA1ODU2MCwtMTk4NTE2NzA0NywxMTg0OTc5
+MjI1LDg2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0OSwxNj
+EyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1LC05ODA4MTI3
+NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3NjcsOT
+IzMDEwMzEzLDk5MzkyMjExLDE3MjYyNTc5NDksLTE0NjI3ODc5
+OTddfQ==
 -->
