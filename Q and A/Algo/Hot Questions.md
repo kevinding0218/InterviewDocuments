@@ -977,10 +977,12 @@ private static void dfs(
 ##### Space:O(1)
 ### [408. Valid Word Abbreviation]()
 #### Two Pointers
-- 2 Pointers traversal from each word starting index
-	- check if current character is digit, if it is
+- 2 Pointers `s` and `t` traversal from each word starting index
+	- check if current `target string character` is digit, if it is
 		- check if character is '0', such as met with `...0a` which is not allowed, return false
-		- otherwise sum up current number with any possible digit number 
+		- otherwise sum up current number with any possible digit number after it by `while (t < tgt.length && Character.isDigit(tgt[t])) {  
+  number = number * 10 + tgt[t] - '0';   t++;  }`
+	  - move `s` pointer forward with number of positions `
 ### [297. Serialize and Deserialize Binary Tree(Hard)](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 ### [449. Serialize and Deserialize BST (Medium)](https://leetcode.com/problems/serialize-and-deserialize-bst/solution/)
 ### [127. Word Ladder(Hard)](https://leetcode.com/problems/word-ladder/)
@@ -989,11 +991,11 @@ private static void dfs(
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNjY4Njc3MiwyNDYzMzcwMzksNTEwNj
-kwNjE3LDE3NjgyMjA5NSwtMTI4NzkzMDY0MCwtMTIyNTA4NTI0
-MiwtNTI3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzkyODcyOTQsLT
-E0ODE0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5
-MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MT
-g3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2
-NiwxMTU3MDE0NzI4XX0=
+eyJoaXN0b3J5IjpbLTIwOTM1MTUwNzEsMjQ2MzM3MDM5LDUxMD
+Y5MDYxNywxNzY4MjIwOTUsLTEyODc5MzA2NDAsLTEyMjUwODUy
+NDIsLTUyNzMwMDI5MCwtMTgyNjExNTI0NCwtMTM5Mjg3Mjk0LC
+0xNDgxNDEzODQ1LC01NzExNzAyMjMsLTYzODYwNTU5MiwtMTc0
+OTE0ODUxNiwtODU4NjkwNTQ4LC0xNzc1ODQ0MjkxLC0xOTI5ND
+E4NzY0LDEwNDQ3MTE5NTgsLTE4ODk4NzQ2MjYsLTE1NjAyOTE4
+NjYsMTE1NzAxNDcyOF19
 -->
