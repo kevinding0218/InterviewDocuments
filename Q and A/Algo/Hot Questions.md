@@ -898,14 +898,18 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 ### [67. Add Binary](https://leetcode.com/problems/add-binary/)
+#### Traversal
+- 整体思路是将两个字符串较短的用 00 补齐，使得两个字符串长度一致，然后从末尾进行遍历计算并插入结果首位，得到最终结果
+- 按照位置给结果字符赋值，最后如果有进位，则在前方进行字符串拼接添加进位
+- declare carry = 0; every 
 ### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNzMwMDI5MCwtMTgyNjExNTI0NCwtMT
-M5Mjg3Mjk0LC0xNDgxNDEzODQ1LC01NzExNzAyMjMsLTYzODYw
-NTU5MiwtMTc0OTE0ODUxNiwtODU4NjkwNTQ4LC0xNzc1ODQ0Mj
-kxLC0xOTI5NDE4NzY0LDEwNDQ3MTE5NTgsLTE4ODk4NzQ2MjYs
-LTE1NjAyOTE4NjYsMTE1NzAxNDcyOCwxNjkzODQyODE2LDEwMz
-kxNTkxODcsLTIwMzkyNjQ5ODEsMTY3NzE5ODE2MSw2NDMxMzUy
-NjcsLTk0NzA1ODU2MF19
+eyJoaXN0b3J5IjpbMTYxMTk4MzE0NiwtNTI3MzAwMjkwLC0xOD
+I2MTE1MjQ0LC0xMzkyODcyOTQsLTE0ODE0MTM4NDUsLTU3MTE3
+MDIyMywtNjM4NjA1NTkyLC0xNzQ5MTQ4NTE2LC04NTg2OTA1ND
+gsLTE3NzU4NDQyOTEsLTE5Mjk0MTg3NjQsMTA0NDcxMTk1OCwt
+MTg4OTg3NDYyNiwtMTU2MDI5MTg2NiwxMTU3MDE0NzI4LDE2OT
+M4NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4
+MTYxLDY0MzEzNTI2N119
 -->
