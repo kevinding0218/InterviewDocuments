@@ -942,18 +942,30 @@ private static void dfs(
 	- 拆解）如果当前sum小于或等于target，继续dfs，否则中止。
 	- 并且下一个可以加入combination中的数 至少从candidate的startIdx + 1开始，因为结果不允许重复，由于数组可能有重复元素，我们需要再每次选择sum时去重 `if(i > begin && candidates[i] == candidates[i-1]) continue;`
 ### [216. Combination Sum III(Medium)](https://leetcode.com/problems/combination-sum-iii/)
-
+- 定义递归DFS为找到所有以combination开头的那些和为target的组合（出口），并丢到results里面。
+	```
+	private static void dfs(
+		int k, 
+		int target, 
+		int begin, 
+		int sum, 
+		List<Integer> combination)
+	```
+	- 拆解）如果当前sum小于或等于target，继续dfs，否则中止。
+	- 并且下一个可以加入combination中的数 至少从candidate的startIdx + 1开始，因为结果不允许重复
+##### Time: O(C(M/k) * k) 本题中M固定为9, 一共有C(M/k)个组合，每次判断需要的时间代价是O(k)
+##### Space:O(M) 递归的栈深度
 ### [127. Word Ladder(Hard)](https://leetcode.com/problems/word-ladder/)
 ### [126. Word Ladder II(Hard)](https://leetcode.com/problems/word-ladder/)
 ### [139. Word Break(Hard)](https://leetcode.com/problems/word-break/)
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2ODIyMDk1LC0xMjg3OTMwNjQwLC0xMj
-I1MDg1MjQyLC01MjczMDAyOTAsLTE4MjYxMTUyNDQsLTEzOTI4
-NzI5NCwtMTQ4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2MDU1OT
-IsLTE3NDkxNDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwt
-MTkyOTQxODc2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNT
-YwMjkxODY2LDExNTcwMTQ3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5
-MTg3LC0yMDM5MjY0OTgxXX0=
+eyJoaXN0b3J5IjpbLTQxMzYxNDgzNiwxNzY4MjIwOTUsLTEyOD
+c5MzA2NDAsLTEyMjUwODUyNDIsLTUyNzMwMDI5MCwtMTgyNjEx
+NTI0NCwtMTM5Mjg3Mjk0LC0xNDgxNDEzODQ1LC01NzExNzAyMj
+MsLTYzODYwNTU5MiwtMTc0OTE0ODUxNiwtODU4NjkwNTQ4LC0x
+Nzc1ODQ0MjkxLC0xOTI5NDE4NzY0LDEwNDQ3MTE5NTgsLTE4OD
+k4NzQ2MjYsLTE1NjAyOTE4NjYsMTE1NzAxNDcyOCwxNjkzODQy
+ODE2LDEwMzkxNTkxODddfQ==
 -->
