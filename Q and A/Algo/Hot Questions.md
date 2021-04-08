@@ -1001,6 +1001,7 @@ private static void dfs(
 6. 一旦 lo == hi，则当前搜索空间为 1 个元素，那么该元素为单个元素，我们将返回它。  
 ##### Time: O(logN)  
 ##### Space:O(1)
+### [1574. Shortest Subarray to be Removed to Make Array Sorted]()
 ### [408. Valid Word Abbreviation]()
 #### Two Pointers
 - 2 Pointers `s` and `t` traversal from each word starting index
@@ -1021,11 +1022,11 @@ private static void dfs(
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0OTI4Mjc5MSwtMTAyNzM3MDEwLDI0Nj
-MzNzAzOSw1MTA2OTA2MTcsMTc2ODIyMDk1LC0xMjg3OTMwNjQw
-LC0xMjI1MDg1MjQyLC01MjczMDAyOTAsLTE4MjYxMTUyNDQsLT
-EzOTI4NzI5NCwtMTQ4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2
-MDU1OTIsLTE3NDkxNDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0ND
-I5MSwtMTkyOTQxODc2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2
-LC0xNTYwMjkxODY2XX0=
+eyJoaXN0b3J5IjpbMTA3MzAxNDU5NCwxMjQ5MjgyNzkxLC0xMD
+I3MzcwMTAsMjQ2MzM3MDM5LDUxMDY5MDYxNywxNzY4MjIwOTUs
+LTEyODc5MzA2NDAsLTEyMjUwODUyNDIsLTUyNzMwMDI5MCwtMT
+gyNjExNTI0NCwtMTM5Mjg3Mjk0LC0xNDgxNDEzODQ1LC01NzEx
+NzAyMjMsLTYzODYwNTU5MiwtMTc0OTE0ODUxNiwtODU4NjkwNT
+Q4LC0xNzc1ODQ0MjkxLC0xOTI5NDE4NzY0LDEwNDQ3MTE5NTgs
+LTE4ODk4NzQ2MjZdfQ==
 -->
