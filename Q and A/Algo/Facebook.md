@@ -55,6 +55,13 @@ Medium
 138        Copy List with Random Pointer   my
 136        Single Number   [Link](https://leetcode-cn.com/problems/single-number/solution/zhi-chu-xian-yi-ci-de-shu-zi-by-leetcode-solution/)
 130        Surrounded Regions    [Link](https://leetcode.com/problems/surrounded-regions/submissions/)
+
+29        Divide Two Integers   [Link](https://leetcode-cn.com/problems/divide-two-integers/solution/shua-chuan-lc-er-fen-bei-zeng-cheng-fa-j-m73b/)
+1047        Remove All Adjacent Duplicates In String [Link](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/solution/shan-chu-zi-fu-chuan-zhong-de-suo-you-xi-4ohr/)
+~~426        Convert Binary Search Tree to Sorted Doubly Linked Lis~~t   
+https://www.1point3acres.com/bbs/thread-679908-1-1.html
+230        Kth Smallest Element in a BST   
+
 98        Validate Binary Search Tree   my
 92        Reverse Linked List II   my
 57        Insert Interval  my
@@ -62,12 +69,6 @@ Medium
 40        Combination Sum II   my
 39        Combination Sum    my
 33        Search in Rotated Sorted Array   my
-29        Divide Two Integers   [Link](https://leetcode-cn.com/problems/divide-two-integers/solution/shua-chuan-lc-er-fen-bei-zeng-cheng-fa-j-m73b/)
-1047        Remove All Adjacent Duplicates In String
-~~426        Convert Binary Search Tree to Sorted Doubly Linked Lis~~t   
-https://www.1point3acres.com/bbs/thread-679908-1-1.html
-230        Kth Smallest Element in a BST   
-
 ~~238        Product of Array Except Self~~
 ~~67        Add Binary~~   
 ~~5        Longest Palindromic Substring~~   
@@ -109,7 +110,7 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjcxNDI4OTQsMTk3MDgyNzgwNiwxMj
+eyJoaXN0b3J5IjpbLTEwNjQ1MTUzNDgsMTk3MDgyNzgwNiwxMj
 U3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYw
 NDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MD
 I3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIw
