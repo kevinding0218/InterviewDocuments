@@ -965,6 +965,11 @@ private static void dfs(
 	* 需要注意的是，初始时 prev 为 null，只有在 prev 不为 null 时才能对 prev 的左右子节点进行更新。  
 ##### Time: O(n)  
 ##### Space:O(n)
+### [938. Range Sum of BST(Easy)](https://leetcode.com/problems/range-sum-of-bst/)
+#### DFS
+- 我们对树进行深度优先搜索，
+- 对于当前节点 node，如果 node.val 小于等于 L，那么只需要继续搜索它的右子树；如果 node.val 大于等于 R，那么只需要继续搜索它的左子树；如果 node.val 在区间 (L, R) 中，则需要搜索它的所有子树。
+
 ### [438. Find All Anagrams in a String(Medium)](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 ####  滑动窗口 + 双指针  
 * 除了直接比较数组是否相等外，其实还可以用双指针来表示滑动窗口的两侧边界，  
@@ -995,11 +1000,11 @@ private static void dfs(
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI5MTExNDU1LDI0NjMzNzAzOSw1MTA2OT
-A2MTcsMTc2ODIyMDk1LC0xMjg3OTMwNjQwLC0xMjI1MDg1MjQy
-LC01MjczMDAyOTAsLTE4MjYxMTUyNDQsLTEzOTI4NzI5NCwtMT
-Q4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2MDU1OTIsLTE3NDkx
-NDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQxOD
-c2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2
-LDExNTcwMTQ3MjhdfQ==
+eyJoaXN0b3J5IjpbLTU3MjQ5OTc1MiwyNDYzMzcwMzksNTEwNj
+kwNjE3LDE3NjgyMjA5NSwtMTI4NzkzMDY0MCwtMTIyNTA4NTI0
+MiwtNTI3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzkyODcyOTQsLT
+E0ODE0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5
+MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MT
+g3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2
+NiwxMTU3MDE0NzI4XX0=
 -->
