@@ -685,7 +685,10 @@ public ListNode divide(ListNode[] lists, int start, int end) {
 #### Two Pointers
 - a + b + c = 0 ==> a + b = -c
 1. Sort Array
-2. for deduplicate to locate first number
+2. 1st element can be loop through 0 ~ n with deduplicate
+3. 2nd and 3rd element can be found through 2Sum using 2 Pointers facing direction
+	- need deduplicate 2nd and 3rd when sum == target **`while (secondPtr + 1 < thirdPtr && nums[secondPtr+1] == nums[secondPtr]) secondPtr++;`**
+	- 
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 #### Simulate
@@ -836,7 +839,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzIzNTU2NjEsLTE3NzU4NDQyOTEsLT
+eyJoaXN0b3J5IjpbLTE1NjY3ODA4NTUsLTE3NzU4NDQyOTEsLT
 E5Mjk0MTg3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2
 MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1OT
 E4NywtMjAzOTI2NDk4MSwxNjc3MTk4MTYxLDY0MzEzNTI2Nywt
