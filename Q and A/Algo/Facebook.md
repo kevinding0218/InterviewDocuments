@@ -23,8 +23,8 @@ Medium
 27        Remove Element   
 ~~443        String Compression~~  
 ~~930        Binary Subarrays With Sum~~
-1574        Shortest Subarray to be Removed to Make Array Sorted
-1570        Dot Product of Two Sparse Vectors
+~~1574        Shortest Subarray to be Removed to Make Array Sorted~~
+~~1570        Dot Product of Two Sparse Vectors~~
 ~~1428        Leftmost Column with at Least a One~~
 ~~1249        Minimum Remove to Make Valid Parentheses~~
 1197        Minimum Knight Moves
@@ -108,10 +108,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NzU3MjMxOCw4MzEyMDA4NjIsLTc2NT
-UxNzYwMiwxMTAxMDA2MDQ2LDE0ODkzMzU4MzgsNDA1NTk3MDg2
-LC04NzAxNzIzODYsNTAyNzk2ODMwLDIwODU1NjM1OTQsLTE1MT
-k2ODI0MjIsMTM2NjcyMDEzOCwtMTgyMjQ2NzMxOCwxMDkwNDY2
-MDU4LDMzNDc5NTYyLDE3NjgyNTE2NTgsMjAyMzEwMTIyLDE4NT
-M4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbMTk3MDgyNzgwNiwxMjU3NTcyMzE4LDgzMT
+IwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYwNDYsMTQ4OTMzNTgz
+OCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MDI3OTY4MzAsMjA4NT
+U2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIwMTM4LC0xODIyNDY3
+MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMTc2ODI1MTY1OCwyMD
+IzMTAxMjIsMTg1Mzg5MzI1OV19
 -->
