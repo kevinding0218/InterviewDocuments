@@ -965,18 +965,27 @@ private static void dfs(
 	* 需要注意的是，初始时 prev 为 null，只有在 prev 不为 null 时才能对 prev 的左右子节点进行更新。  
 ##### Time: O(n)  
 ##### Space:O(n)
-### 
+### [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+####  滑动窗口 + 双指针  
+* 除了直接比较数组是否相等外，其实还可以用双指针来表示滑动窗口的两侧边界，  
+1. 定义滑动窗口的左右两个指针left，right  
+2. right一步一步向右走遍历s字符串  
+3. right当前遍历到的字符加入s_cnt后不满足p_cnt的字符数量要求，将滑动窗口左侧字符不断弹出，也就是left不断右移，直到符合要求为止。  
+4. 当滑动窗口的长度等于p的长度时，这时的s子字符串就是p的异位词。  
+- 其中，left和right表示滑动窗口在字符串s中的索引，cur_left和cur_right表示字符串s中索引为left和right的字符在数组中的索引  
+##### Time: O(n)  
+##### Space:O(1)
 ### [127. Word Ladder(Hard)](https://leetcode.com/problems/word-ladder/)
 ### [126. Word Ladder II(Hard)](https://leetcode.com/problems/word-ladder/)
 ### [139. Word Break(Hard)](https://leetcode.com/problems/word-break/)
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDMxODQyNiw1MTA2OTA2MTcsMTc2OD
-IyMDk1LC0xMjg3OTMwNjQwLC0xMjI1MDg1MjQyLC01MjczMDAy
-OTAsLTE4MjYxMTUyNDQsLTEzOTI4NzI5NCwtMTQ4MTQxMzg0NS
-wtNTcxMTcwMjIzLC02Mzg2MDU1OTIsLTE3NDkxNDg1MTYsLTg1
-ODY5MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQxODc2NCwxMDQ0Nz
-ExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2LDExNTcwMTQ3
-MjgsMTY5Mzg0MjgxNl19
+eyJoaXN0b3J5IjpbNjEwOTcyNjIxLDUxMDY5MDYxNywxNzY4Mj
+IwOTUsLTEyODc5MzA2NDAsLTEyMjUwODUyNDIsLTUyNzMwMDI5
+MCwtMTgyNjExNTI0NCwtMTM5Mjg3Mjk0LC0xNDgxNDEzODQ1LC
+01NzExNzAyMjMsLTYzODYwNTU5MiwtMTc0OTE0ODUxNiwtODU4
+NjkwNTQ4LC0xNzc1ODQ0MjkxLC0xOTI5NDE4NzY0LDEwNDQ3MT
+E5NTgsLTE4ODk4NzQ2MjYsLTE1NjAyOTE4NjYsMTE1NzAxNDcy
+OCwxNjkzODQyODE2XX0=
 -->
