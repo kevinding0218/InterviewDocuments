@@ -200,22 +200,22 @@ public static List<List<Integer>> bfs(TreeNode root) {
   List<List<Integer>> result = new ArrayList<>();  
     if (root == null) return result;  
     // 1. create a queue, enqueue starting node (lv1 node)  
-  Queue<TreeNode> queue = new LinkedList<>();  
+    Queue<TreeNode> queue = new LinkedList<>();  
     queue.offer(root);  
     // 2. while queue is not empty, deal with nodes in queue, and expand new nodes  
-  while (!queue.isEmpty()) {  
-  List<Integer> level = new ArrayList<>();  
+    while (!queue.isEmpty()) {  
+        List<Integer> level = new ArrayList<>();  
         // we are only iterating current level nodes at one while loop cycle  
- // for every node in current level visited, keep pushing its child nodes in queue or result  int queueSize = queue.size();  
+        // for every node in current level visited, keep pushing its child nodes in queue or result  int queueSize = queue.size();  
         for (int i = 0; i < queueSize; i ++) {  
   TreeNode node = queue.poll();  
             level.add(node.val);  
             if (node.left != null) queue.offer(node.left);  
             if (node.right != null) queue.offer(node.right);  
         }  
-  result.add(level);  
+        result.add(level);  
     }  
-  return result;  
+    return result;  
 }
 ```
 #### DFS Save Parent Node and Visited
@@ -246,8 +246,8 @@ public static List<List<Integer>> bfs(TreeNode root) {
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMDQ3OTYwMCwtMjAwNzU3MzAyNSwyNz
-QwNDcyMjEsLTM2MDYyOTQ5MywtOTgwNDc3NjQ5LDE3NTYwMTY4
-NDUsMjAzNDU0NzkzNCwtNjAxNzc0NTg3LDg5NDY1MDgzNSwtMT
-UwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
+eyJoaXN0b3J5IjpbLTExNDUxMDA3MDYsLTIwMDc1NzMwMjUsMj
+c0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2
+ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLT
+E1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
 -->
