@@ -194,6 +194,30 @@ public static List<Integer> iteration(TreeNode root) {
 }
 ```
 ### Binary Tree
+#### BFS like level order
+```
+public static List<List<Integer>> bfsWithLeveling(TreeNode root) {  
+  List<List<Integer>> result = new ArrayList<>();  
+    if (root == null) return result;  
+    // 1. create a queue, enqueue starting node (lv1 node)  
+  Queue<TreeNode> queue = new LinkedList<>();  
+    queue.offer(root);  
+    // 2. while queue is not empty, deal with nodes in queue, and expand new nodes  
+  while (!queue.isEmpty()) {  
+  List<Integer> level = new ArrayList<>();  
+        // we are only iterating current level nodes at one while loop cycle  
+ // for every node in current level visited, keep pushing its child nodes in queue or result  int queueSize = queue.size();  
+        for (int i = 0; i < queueSize; i ++) {  
+  TreeNode node = queue.poll();  
+            level.add(node.val);  
+            if (node.left != null) queue.offer(node.left);  
+            if (node.right != null) queue.offer(node.right);  
+        }  
+  result.add(level);  
+    }  
+  return result;  
+}
+```
 #### DFS Save Parent Node and Visited
 - Save mapping of current node with its parent node
 	```
@@ -222,7 +246,7 @@ public static List<Integer> iteration(TreeNode root) {
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTY5MzUxNjEsLTIwMDc1NzMwMjUsMj
+eyJoaXN0b3J5IjpbLTEyMTQzNDM1OTYsLTIwMDc1NzMwMjUsMj
 c0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2
 ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLT
 E1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
