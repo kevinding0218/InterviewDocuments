@@ -517,7 +517,8 @@ for (int i = 0; i < size; i++) {
 - 最后得到的 maxSum 的值即为二叉树中的最大路径和。
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
-### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
+### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
+
 ### [283. Move Zeroes(Easy)](https://leetcode.com/problems/move-zeroes/)
 ####  Two Pointers
 - 使用两个指针right和left
@@ -625,9 +626,9 @@ for (int i = 0; i < size; i++) {
 - 通过矩阵isConnected得到与该城市直接相连的城市有哪些，这些城市和该城市属于同一个连通分量，
 - 然后对这些城市继续深度优先搜索，直到同一个连通分量的所有城市都被访问到，即可得到一个circle。
 - 遍历完全部城市以后，即可得到连通分量的总数，即circle的总数。
-### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
+### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 #### Simulate
 - for every i, **answer[i[ = product(left of nums[i]) * product(right of nums[i]) = product(L) * product(R)**
@@ -777,11 +778,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMyMjU0NzM3LC0yMDM5MjY0OTgxLDE2Nz
-cxOTgxNjEsNjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5ODUxNjcw
-NDcsMTE4NDk3OTIyNSw4NjM5MzgwMDYsMTE0MTQxNDA5MiwtND
-YyMzQ1NDksMTYxMjE3NjgzMCwxMjE5ODM4NTU4LDQzMTk1MTg4
-NSwtOTgwODEyNzY1LDEyMzEyODA5ODQsLTk2NTQyNjEwNCwxNj
-c3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5
-XX0=
+eyJoaXN0b3J5IjpbMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNj
+c3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3
+MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLT
+Q2MjM0NTQ5LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4
+ODUsLTk4MDgxMjc2NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMT
+Y3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOTIyMTEsMTcyNjI1Nzk0
+OV19
 -->
