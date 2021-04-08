@@ -270,7 +270,7 @@ if (index == 0 || num1 != intersection[index - 1]) {
 	- update result as `buf[total++] = buffer[0 ~ count]`
 ##### Time: O(n/4)
 ##### Space:O(1)
-### [158. Read-n-characters-given-read4-stream-II]()
+### [158. Read-n-characters-given-read4-stream-II](https://aaronice.gitbook.io/lintcode/data_structure/read-n-characters-given-read4-ii-call-multiple-times)
 - declare an boolean `eof` to indicate if current read4 has read till end of file
 - declare a pointer `total` to indicate current position that reads from beginning to current length
 - declare a char array `tmp` of size 4 to store `read4` content
@@ -893,11 +893,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNz
-Q5MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0
-MTg3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MT
-g2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1OTE4Nywt
-MjAzOTI2NDk4MSwxNjc3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MD
-U4NTYwLC0xOTg1MTY3MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2
-LDExNDE0MTQwOTJdfQ==
+eyJoaXN0b3J5IjpbLTE0ODE0MTM4NDUsLTU3MTE3MDIyMywtNj
+M4NjA1NTkyLC0xNzQ5MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4
+NDQyOTEsLTE5Mjk0MTg3NjQsMTA0NDcxMTk1OCwtMTg4OTg3ND
+YyNiwtMTU2MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MTYs
+MTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4MTYxLDY0Mz
+EzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LDExODQ5Nzky
+MjUsODYzOTM4MDA2XX0=
 -->
