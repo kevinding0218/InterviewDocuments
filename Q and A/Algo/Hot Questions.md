@@ -644,7 +644,7 @@ for (int i = 0; i < size; i++) {
 ### Follow up: Merge K Sorted Array
 #### Divide and Conquer
 1. divide total list left and right until 2 or 1 sorted array with index from of 0 ~ list.length
-2. merge 2 sorted array and up
+2. merge 2 sorted arrays and up
 	```
 	private static int [] divide(List<int[]> lists, int start, int end) {  
 	  if (end - start == 1) {  
@@ -832,11 +832,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzUzMzQ0NCwtMTkyOTQxODc2NCwxMD
-Q0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2LDExNTcw
-MTQ3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5MTg3LC0yMDM5MjY0OT
-gxLDE2NzcxOTgxNjEsNjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5
-ODUxNjcwNDcsMTE4NDk3OTIyNSw4NjM5MzgwMDYsMTE0MTQxND
-A5MiwtNDYyMzQ1NDksMTYxMjE3NjgzMCwxMjE5ODM4NTU4LDQz
-MTk1MTg4NV19
+eyJoaXN0b3J5IjpbODQ1NjA2NDc5LC0xOTI5NDE4NzY0LDEwND
+Q3MTE5NTgsLTE4ODk4NzQ2MjYsLTE1NjAyOTE4NjYsMTE1NzAx
+NDcyOCwxNjkzODQyODE2LDEwMzkxNTkxODcsLTIwMzkyNjQ5OD
+EsMTY3NzE5ODE2MSw2NDMxMzUyNjcsLTk0NzA1ODU2MCwtMTk4
+NTE2NzA0NywxMTg0OTc5MjI1LDg2MzkzODAwNiwxMTQxNDE0MD
+kyLC00NjIzNDU0OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMx
+OTUxODg1XX0=
 -->
