@@ -1,4 +1,6 @@
 Hard
+340        Longest Substring with At Most K Distinct Characters   
+
 10        Regular Expression Matching   
 297        Serialize and Deserialize Binary Tree  
 282        Expression Add Operators
@@ -9,11 +11,9 @@ Hard
 139        Word Break   
 127        Word Ladder   
 126        Word Ladder II
-52        N-Queens II   
-340        Longest Substring with At Most K Distinct Characters   
 940        Distinct Subsequences II   
 329        Longest Increasing Path in a Matrix   
-
+52        N-Queens II   my
 ~~23        Merge k Sorted Lists~~   
 ~~301        Remove Invalid Parentheses~~  
 ~~158        Read N Characters Given Read4 II - Call multiple times~~
@@ -111,7 +111,7 @@ https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3OTQ1OTk4NCwtMTQ3MTM3NjUyMiwxOT
+eyJoaXN0b3J5IjpbMTE3Mzk1NzI1NiwtMTQ3MTM3NjUyMiwxOT
 cwODI3ODA2LDEyNTc1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2
 MDIsMTEwMTAwNjA0NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtOD
 cwMTcyMzg2LDUwMjc5NjgzMCwyMDg1NTYzNTk0LC0xNTE5Njgy
