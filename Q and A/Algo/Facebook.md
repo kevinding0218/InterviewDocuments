@@ -86,8 +86,8 @@ Medium
 114        Flatten Binary Tree to Linked List   
 98        Validate Binary Search Tree   
 92        Reverse Linked List II   
-88        Merge Sorted Array   
-69        Sqrt(x)   
+~~88        Merge Sorted Array~~   
+~~69        Sqrt(x)~~   
 67        Add Binary   
 57        Insert Interval  
 56        Merge Intervals
@@ -108,6 +108,6 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM0Nzk1NjIsMTc2ODI1MTY1OCwyMDIzMT
-AxMjIsMTg1Mzg5MzI1OV19
+eyJoaXN0b3J5IjpbMTA5MDQ2NjA1OCwzMzQ3OTU2MiwxNzY4Mj
+UxNjU4LDIwMjMxMDEyMiwxODUzODkzMjU5XX0=
 -->
