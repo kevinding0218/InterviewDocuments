@@ -973,6 +973,12 @@ private static void dfs(
 - 如果 node.val 在区间 (L, R) 中，则需要搜索它的所有子树。
 ##### Time: O(n)
 ##### Space:O(1)
+### [921. Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/)
+#### B
+- 保证左右括号数量的 平衡： 计算 '(' 出现的次数减去 ')' 出现的次数。
+- 如果值为 0，那就是平衡的，如果小于 0，，那就假设得在前面加上一个 '('，平衡数++同样结果++
+##### Time:O(n)
+##### Space:O(1)
 ### [438. Find All Anagrams in a String(Medium)](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 ####  滑动窗口 + 双指针  
 * 除了直接比较数组是否相等外，其实还可以用双指针来表示滑动窗口的两侧边界，  
@@ -1003,11 +1009,11 @@ private static void dfs(
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDU0OTA3NzQsMjQ2MzM3MDM5LDUxMD
-Y5MDYxNywxNzY4MjIwOTUsLTEyODc5MzA2NDAsLTEyMjUwODUy
-NDIsLTUyNzMwMDI5MCwtMTgyNjExNTI0NCwtMTM5Mjg3Mjk0LC
-0xNDgxNDEzODQ1LC01NzExNzAyMjMsLTYzODYwNTU5MiwtMTc0
-OTE0ODUxNiwtODU4NjkwNTQ4LC0xNzc1ODQ0MjkxLC0xOTI5ND
-E4NzY0LDEwNDQ3MTE5NTgsLTE4ODk4NzQ2MjYsLTE1NjAyOTE4
-NjYsMTE1NzAxNDcyOF19
+eyJoaXN0b3J5IjpbNzA1MzkzNDE2LDI0NjMzNzAzOSw1MTA2OT
+A2MTcsMTc2ODIyMDk1LC0xMjg3OTMwNjQwLC0xMjI1MDg1MjQy
+LC01MjczMDAyOTAsLTE4MjYxMTUyNDQsLTEzOTI4NzI5NCwtMT
+Q4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2MDU1OTIsLTE3NDkx
+NDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQxOD
+c2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2
+LDExNTcwMTQ3MjhdfQ==
 -->
