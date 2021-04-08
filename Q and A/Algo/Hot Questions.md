@@ -635,7 +635,10 @@ for (int i = 0; i < size; i++) {
 - 遍历完全部城市以后，即可得到连通分量的总数，即circle的总数。
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 #### Two Pointer
-- 涉及两个有序数组合并,设置i和j双指针,分别从两个数组的尾部想头部移动,并判断Ai和Bj的大小关系,从而保证最终数组有序,
+- 涉及两个有序数组合并,设置i和j双指针,分别从两个数组的尾部想头部移动,并判断Ai和Bj的大小关系,从而保证最终数组有序, `while (i >= 0 && j >= 0) {  
+  nums1[k--] = nums1[i] >= nums2[j] ? nums1[i--] : nums2[j--];  
+}`
+- Check if either of the array has left elements, keep insert into result
 ##### Time: O(m + n)
 ##### Space:O(1)
 ### Follow up: Merge K Sorted Array
@@ -796,7 +799,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTU4NjUyOTcsLTE1NjAyOTE4NjYsMT
+eyJoaXN0b3J5IjpbLTE4ODk4NzQ2MjYsLTE1NjAyOTE4NjYsMT
 E1NzAxNDcyOCwxNjkzODQyODE2LDEwMzkxNTkxODcsLTIwMzky
 NjQ5ODEsMTY3NzE5ODE2MSw2NDMxMzUyNjcsLTk0NzA1ODU2MC
 wtMTk4NTE2NzA0NywxMTg0OTc5MjI1LDg2MzkzODAwNiwxMTQx
