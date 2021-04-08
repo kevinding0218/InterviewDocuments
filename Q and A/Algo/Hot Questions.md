@@ -513,7 +513,7 @@ for (int i = 0; i < size; i++) {
 - 根据函数helper得到每个节点的最大贡献值之后，如何得到二叉树的最大路径和？
 - 对于二叉树中的一个节点，该节点的最大路径和取决于该节点的值与该节点的左右子节点的最大贡献值 `return node.val + Math.max(leftMax, rightMax);`
 - 如果子节点的最大贡献值为正，则计入该节点的最大路径和，否则不计入该节点的最大路径和。`leftMax = Math.max(helper(node.left), 0);`
-- 维护一个全局变量 maxSum 存储最大路径和，在递归过程中更新 maxSum 的值
+- 维护一个全局变量 maxSum 存储最大路径和，在递归过程中更新 maxSum 的值 `maxSum = Math.max(maxSum, node.val + leftMax + rightMax);`
 - 最后得到的 maxSum 的值即为二叉树中的最大路径和。
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
@@ -777,11 +777,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NDU2NTk3OCwtMjAzOTI2NDk4MSwxNj
-c3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3
-MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLT
-Q2MjM0NTQ5LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4
-ODUsLTk4MDgxMjc2NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMT
-Y3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOTIyMTEsMTcyNjI1Nzk0
-OV19
+eyJoaXN0b3J5IjpbMzMyMjU0NzM3LC0yMDM5MjY0OTgxLDE2Nz
+cxOTgxNjEsNjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5ODUxNjcw
+NDcsMTE4NDk3OTIyNSw4NjM5MzgwMDYsMTE0MTQxNDA5MiwtND
+YyMzQ1NDksMTYxMjE3NjgzMCwxMjE5ODM4NTU4LDQzMTk1MTg4
+NSwtOTgwODEyNzY1LDEyMzEyODA5ODQsLTk2NTQyNjEwNCwxNj
+c3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIxMSwxNzI2MjU3OTQ5
+XX0=
 -->
