@@ -638,8 +638,8 @@ for (int i = 0; i < size; i++) {
 - 涉及两个有序数组合并,设置i和j双指针,分别从两个数组的尾部想头部移动,并判断Ai和Bj的大小关系,从而保证最终数组有序,
 ##### Time: O(m + n)
 ##### Space:O(1)
-#### Merge K Sorted Array
-
+### Merge K Sorted Array
+#### Divide and Conquer
 ### [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
@@ -792,7 +792,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwMzczOTEyOSwxMTU3MDE0NzI4LDE2OT
+eyJoaXN0b3J5IjpbMTc4OTY4OTMyMywxMTU3MDE0NzI4LDE2OT
 M4NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4
 MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LD
 ExODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0
