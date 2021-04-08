@@ -41,10 +41,10 @@ Medium
 415        Add Strings  [Link](https://leetcode-cn.com/problems/add-strings/solution/zi-fu-chuan-xiang-jia-by-leetcode-solution/)
 392        Is Subsequence   [Link](https://leetcode-cn.com/problems/is-subsequence/solution/pan-duan-zi-xu-lie-by-leetcode-solution/)
 378        Kth Smallest Element in a Sorted Matrix   [Link](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/solution/you-xu-ju-zhen-zhong-di-kxiao-de-yuan-su-by-leetco/)
-348        Design Tic-Tac-Toe
+348        Design Tic-Tac-Toe 
 339        Nested List Weight Sum  
 333        Largest BST Subtree
-322        Coin Change
+322        Coin Change [Link](https://leetcode-cn.com/problems/coin-change/solution/322-ling-qian-dui-huan-by-leetcode-solution/)
 246        Strobogrammatic Number
 227        Basic Calculator II   
 215        Kth Largest Element in an Array   
@@ -109,7 +109,7 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NzY3MzQ2MywxOTcwODI3ODA2LDEyNT
+eyJoaXN0b3J5IjpbMTQ3NTA5Mzk4OSwxOTcwODI3ODA2LDEyNT
 c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
 NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
 c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
