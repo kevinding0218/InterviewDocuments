@@ -682,7 +682,10 @@ public ListNode divide(ListNode[] lists, int start, int end) {
 ##### Time: O(kn×logK)
 ##### Space: O(logK) 递归会使用到的栈空间 
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
-
+#### Two Pointers
+- a + b + c = 0 ==> a + b = -c
+1. Sort Array
+2. for deduplicate to locate first number
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 #### Simulate
@@ -833,11 +836,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzU4NDQyOTEsLTE5Mjk0MTg3NjQsMT
-A0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2NiwxMTU3
-MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2ND
-k4MSwxNjc3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0x
-OTg1MTY3MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MT
-QwOTIsLTQ2MjM0NTQ5LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0
-MzE5NTE4ODVdfQ==
+eyJoaXN0b3J5IjpbLTE1MzIzNTU2NjEsLTE3NzU4NDQyOTEsLT
+E5Mjk0MTg3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2
+MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1OT
+E4NywtMjAzOTI2NDk4MSwxNjc3MTk4MTYxLDY0MzEzNTI2Nywt
+OTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LDExODQ5NzkyMjUsODYzOT
+M4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NTQ5LDE2MTIxNzY4MzAs
+MTIxOTgzODU1OF19
 -->
