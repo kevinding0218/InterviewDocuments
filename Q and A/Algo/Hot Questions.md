@@ -640,6 +640,7 @@ for (int i = 0; i < size; i++) {
 ##### Space:O(1)
 ### Merge K Sorted Array
 #### Divide and Conquer
+#### Priority Queue
 ### [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
@@ -792,11 +793,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4OTY4OTMyMywxMTU3MDE0NzI4LDE2OT
-M4NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4
-MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LD
-ExODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0
-NTQ5LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4ODUsLT
-k4MDgxMjc2NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nzg2
-MDc2N119
+eyJoaXN0b3J5IjpbLTE1NjAyOTE4NjYsMTE1NzAxNDcyOCwxNj
+kzODQyODE2LDEwMzkxNTkxODcsLTIwMzkyNjQ5ODEsMTY3NzE5
+ODE2MSw2NDMxMzUyNjcsLTk0NzA1ODU2MCwtMTk4NTE2NzA0Ny
+wxMTg0OTc5MjI1LDg2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIz
+NDU0OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1LC
+05ODA4MTI3NjUsMTIzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4
+NjA3NjddfQ==
 -->
