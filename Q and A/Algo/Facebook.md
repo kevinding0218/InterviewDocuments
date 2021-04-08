@@ -24,7 +24,7 @@ Medium
 1197        Minimum Knight Moves
 1123        Lowest Common Ancestor of Deepest Leaves  [Link](https://leetcode-cn.com/problems/lowest-common-ancestor-of-deepest-leaves/solution/liang-chong-si-lu-yi-chong-qian-xu-bian-li-yi-chon/)
 1029        Two City Scheduling   [Link](https://leetcode-cn.com/problems/two-city-scheduling/solution/er-cha-shu-de-chui-xu-bian-li-by-leetcode/)
-1026        Maximum Difference Between Node and Ancestor
+1026        Maximum Difference Between Node and Ancestor [Link]()
 1004        Max Consecutive Ones III  
 986        Interval List Intersections
 977        Squares of a Sorted Array
@@ -109,7 +109,7 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNzMzMTkyLDE5NzA4Mjc4MDYsMTI1Nz
+eyJoaXN0b3J5IjpbLTI3MDcxMDY5LDE5NzA4Mjc4MDYsMTI1Nz
 U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
 LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
 k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
