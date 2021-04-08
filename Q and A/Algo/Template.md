@@ -196,7 +196,7 @@ public static List<Integer> iteration(TreeNode root) {
 ### Binary Tree
 #### BFS like level order
 ```
-public static List<List<Integer>> bfsWithLeveling(TreeNode root) {  
+public static List<List<Integer>> BFS(TreeNode root) {  
   List<List<Integer>> result = new ArrayList<>();  
     if (root == null) return result;  
     // 1. create a queue, enqueue starting node (lv1 node)  
@@ -246,8 +246,8 @@ public static List<List<Integer>> bfsWithLeveling(TreeNode root) {
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTQzNDM1OTYsLTIwMDc1NzMwMjUsMj
-c0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2
-ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLT
-E1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
+eyJoaXN0b3J5IjpbOTU1MjY3NDA4LC0yMDA3NTczMDI1LDI3ND
+A0NzIyMSwtMzYwNjI5NDkzLC05ODA0Nzc2NDksMTc1NjAxNjg0
+NSwyMDM0NTQ3OTM0LC02MDE3NzQ1ODcsODk0NjUwODM1LC0xNT
+A1ODQ3MDU0LC0xNjI1MzAxMDQ2XX0=
 -->
