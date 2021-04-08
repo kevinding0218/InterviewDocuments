@@ -34,7 +34,7 @@ Medium
 785        Is Graph Bipartite?   [Link](https://leetcode-cn.com/problems/is-graph-bipartite/solution/pan-duan-er-fen-tu-by-leetcode-solution/)
 766        Toeplitz Matrix [Link](https://leetcode-cn.com/problems/toeplitz-matrix/solution/tuo-pu-li-ci-ju-zhen-by-leetcode-solutio-57bb/)
 674        Longest Continuous Increasing Subsequence  [Link](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/solution/zui-chang-lian-xu-di-zeng-xu-lie-by-leet-dmb8/)
-637        Average of Levels in Binary Tree
+637        Average of Levels in Binary Tree [Link](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree/solution/er-cha-shu-de-ceng-ping-jun-zhi-by-leetcode-soluti/)
 528        Random Pick with Weight   
 485        Max Consecutive Ones
 468        Validate IP Address  [Link](https://leetcode-cn.com/problems/validate-ip-address/solution/yan-zheng-ip-di-zhi-by-leetcode/) 
@@ -109,10 +109,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNzI0Nzc5MywxOTcwODI3ODA2LDEyNT
-c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
-NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
-c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
-MzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3OTU2MiwxNz
-Y4MjUxNjU4LDIwMjMxMDEyMiwxODUzODkzMjU5XX0=
+eyJoaXN0b3J5IjpbLTE5OTMzMzA4NTgsMTk3MDgyNzgwNiwxMj
+U3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYw
+NDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MD
+I3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIw
+MTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMT
+c2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5MzI1OV19
 -->
