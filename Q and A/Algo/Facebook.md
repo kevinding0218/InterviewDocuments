@@ -1,5 +1,5 @@
 Hard
-340        Longest Substring with At Most K Distinct Characters   
+
 10        Regular Expression Matching   [Link](https://leetcode-cn.com/problems/regular-expression-matching/solution/zheng-ze-biao-da-shi-pi-pei-by-leetcode-solution/)
 282        Expression Add Operators [Link](https://leetcode-cn.com/problems/expression-add-operators/solution/gei-biao-da-shi-tian-jia-yun-suan-fu-by-leetcode/)
 273        Integer to English Words   [Link](https://leetcode-cn.com/problems/integer-to-english-words/solution/zheng-shu-zhuan-huan-ying-wen-biao-shi-by-leetcode/)
@@ -8,6 +8,7 @@ Hard
 940        Distinct Subsequences II   [Link](https://leetcode-cn.com/problems/distinct-subsequences-ii/solution/bu-tong-de-zi-xu-lie-ii-by-leetcode/)
 329        Longest Increasing Path in a Matrix   [Link](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/solution/ju-zhen-zhong-de-zui-chang-di-zeng-lu-jing-by-le-2/)
 
+340        Longest Substring with At Most K Distinct Characters   my
 297        Serialize and Deserialize Binary Tree  my
 154        Find Minimum in Rotated Sorted Array II   my
 239        Sliding Window Maximum   my
@@ -111,11 +112,11 @@ https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MDQxNDY0MCwtMTQ3MTM3NjUyMiwxOT
-cwODI3ODA2LDEyNTc1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2
-MDIsMTEwMTAwNjA0NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtOD
-cwMTcyMzg2LDUwMjc5NjgzMCwyMDg1NTYzNTk0LC0xNTE5Njgy
-NDIyLDEzNjY3MjAxMzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OC
-wzMzQ3OTU2MiwxNzY4MjUxNjU4LDIwMjMxMDEyMiwxODUzODkz
-MjU5XX0=
+eyJoaXN0b3J5IjpbMTE4MDI3NzMyMCwxOTkwNDE0NjQwLC0xND
+cxMzc2NTIyLDE5NzA4Mjc4MDYsMTI1NzU3MjMxOCw4MzEyMDA4
+NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2LDE0ODkzMzU4MzgsND
+A1NTk3MDg2LC04NzAxNzIzODYsNTAyNzk2ODMwLDIwODU1NjM1
+OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEzOCwtMTgyMjQ2NzMxOC
+wxMDkwNDY2MDU4LDMzNDc5NTYyLDE3NjgyNTE2NTgsMjAyMzEw
+MTIyXX0=
 -->
