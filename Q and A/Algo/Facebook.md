@@ -55,7 +55,7 @@ Medium
 ~~498        Diagonal Traverse~~   
 485        Max Consecutive Ones
 468        Validate IP Address  [Link](https://leetcode-cn.com/problems/validate-ip-address/solution/yan-zheng-ip-di-zhi-by-leetcode/) 
-438        Find All Anagrams in a String   
+~~438        Find All Anagrams in a String~~   
 415        Add Strings   
 408        Valid Word Abbreviation   
 392        Is Subsequence   
@@ -108,8 +108,8 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAyNzk2ODMwLDIwODU1NjM1OTQsLTE1MT
-k2ODI0MjIsMTM2NjcyMDEzOCwtMTgyMjQ2NzMxOCwxMDkwNDY2
-MDU4LDMzNDc5NTYyLDE3NjgyNTE2NTgsMjAyMzEwMTIyLDE4NT
-M4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbLTg3MDE3MjM4Niw1MDI3OTY4MzAsMjA4NT
+U2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIwMTM4LC0xODIyNDY3
+MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMTc2ODI1MTY1OCwyMD
+IzMTAxMjIsMTg1Mzg5MzI1OV19
 -->
