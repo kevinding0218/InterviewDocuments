@@ -697,7 +697,30 @@ public ListNode divide(ListNode[] lists, int start, int end) {
 ##### Time:  O(N^3)
 ##### Space:O(N^2)
 #### DFS & Backtrack
-
+1.对数组排序
+2. 对排序后的队列进行搜索每次选取当前数后的比当前值大的数压入List，当List大小为4的时候判断是否四个元素的和为target
+```
+private void dfs(int[] nums, int startIndex, int remainTarget, List<Integer> list, List<List<Integer>> results) {  
+  // exit  
+  if (list.size() == 4 && remainTarget == 0) {  
+  results.add(new ArrayList<>(list));  
+        return;  
+    }  
+  for (int i = startIndex; i < nums.length; i++) {  
+  // deduplicate  
+  if (i != startIndex && nums[i] == nums[i-1]) {  
+  continue;  
+        }  
+  // 选取当前元素  
+  list.add(nums[i]);  
+        dfs(nums,i+1, remainTarget-nums[i], list, results);  
+        // backtracking  
+  list.remove(list.size() - 1);  
+    }  
+}
+```
+##### Time:  O(N^3)
+##### Space:O(N^2)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 #### Simulate
@@ -848,11 +871,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY5NzIyNDk3LC04NTg2OTA1NDgsLTE3Nz
-U4NDQyOTEsLTE5Mjk0MTg3NjQsMTA0NDcxMTk1OCwtMTg4OTg3
-NDYyNiwtMTU2MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MT
-YsMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4MTYxLDY0
-MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LDExODQ5Nz
-kyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NTQ5LDE2
-MTIxNzY4MzBdfQ==
+eyJoaXN0b3J5IjpbLTE3NDkxNDg1MTYsLTg1ODY5MDU0OCwtMT
+c3NTg0NDI5MSwtMTkyOTQxODc2NCwxMDQ0NzExOTU4LC0xODg5
+ODc0NjI2LC0xNTYwMjkxODY2LDExNTcwMTQ3MjgsMTY5Mzg0Mj
+gxNiwxMDM5MTU5MTg3LC0yMDM5MjY0OTgxLDE2NzcxOTgxNjEs
+NjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5ODUxNjcwNDcsMTE4ND
+k3OTIyNSw4NjM5MzgwMDYsMTE0MTQxNDA5MiwtNDYyMzQ1NDks
+MTYxMjE3NjgzMF19
 -->
