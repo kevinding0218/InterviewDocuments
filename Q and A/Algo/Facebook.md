@@ -20,8 +20,14 @@ Hard
 ~~32        Longest Valid Parentheses~~   
 
 Medium
-27        Remove Element   [Link](https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode/)
+163        Missing Ranges
 1197        Minimum Knight Moves
+348        Design Tic-Tac-Toe 
+339        Nested List Weight Sum  
+333        Largest BST Subtree
+246        Strobogrammatic Number
+
+27        Remove Element   [Link](https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode/)
 1123        Lowest Common Ancestor of Deepest Leaves  [Link](https://leetcode-cn.com/problems/lowest-common-ancestor-of-deepest-leaves/solution/liang-chong-si-lu-yi-chong-qian-xu-bian-li-yi-chon/)
 1029        Two City Scheduling   [Link](https://leetcode-cn.com/problems/two-city-scheduling/solution/er-cha-shu-de-chui-xu-bian-li-by-leetcode/)
 1026        Maximum Difference Between Node and Ancestor [Link](https://leetcode-cn.com/problems/maximum-difference-between-node-and-ancestor/solution/java-dfs-by-zxy0917-4/)
@@ -41,16 +47,11 @@ Medium
 415        Add Strings  [Link](https://leetcode-cn.com/problems/add-strings/solution/zi-fu-chuan-xiang-jia-by-leetcode-solution/)
 392        Is Subsequence   [Link](https://leetcode-cn.com/problems/is-subsequence/solution/pan-duan-zi-xu-lie-by-leetcode-solution/)
 378        Kth Smallest Element in a Sorted Matrix   [Link](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/solution/you-xu-ju-zhen-zhong-di-kxiao-de-yuan-su-by-leetco/)
-348        Design Tic-Tac-Toe 
-339        Nested List Weight Sum  
-333        Largest BST Subtree
 322        Coin Change [Link](https://leetcode-cn.com/problems/coin-change/solution/322-ling-qian-dui-huan-by-leetcode-solution/)
-246        Strobogrammatic Number
 227        Basic Calculator II   [Link](https://leetcode-cn.com/problems/basic-calculator-ii/)
 215        Kth Largest Element in an Array   [Link](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/shu-zu-zhong-de-di-kge-zui-da-yuan-su-by-leetcode-/)
 211        Design Add and Search Words Data Structure  [Link](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/solution/yu-dao-tong-pei-fu-shi-di-gui-chu-li-python-dai-ma/)
 210        Course Schedule II   [Link](https://leetcode.com/problems/course-schedule-ii/)
-163        Missing Ranges
 155        Min Stack [Link](https://leetcode.com/problems/min-stack/)
 136        Single Number   [Link](https://leetcode-cn.com/problems/single-number/solution/zhi-chu-xian-yi-ci-de-shu-zi-by-leetcode-solution/)
 130        Surrounded Regions    [Link](https://leetcode.com/problems/surrounded-regions/submissions/)
@@ -59,6 +60,7 @@ Medium
 ~~426        Convert Binary Search Tree to Sorted Doubly Linked Lis~~t   
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 230        Kth Smallest Element in a BST   
+
 
 138        Copy List with Random Pointer   my
 98        Validate Binary Search Tree   my
@@ -109,10 +111,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NzU3MjM0LDE5NzA4Mjc4MDYsMTI1Nz
-U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
-LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
-k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
-OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
-gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbLTE0NzEzNzY1MjIsMTk3MDgyNzgwNiwxMj
+U3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYw
+NDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MD
+I3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIw
+MTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMT
+c2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5MzI1OV19
 -->
