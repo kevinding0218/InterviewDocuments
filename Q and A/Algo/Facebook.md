@@ -39,7 +39,7 @@ Medium
 958        Check Completeness of a Binary Tree  
 ~~953        Verifying an Alien Dictionary~~
 ~~938        Range Sum of BST~~   
-921        Minimum Add to Make Parentheses Valid   
+~~921        Minimum Add to Make Parentheses Valid~~   
 919        Complete Binary Tree Inserter   
 824        Goat Latin
 785        Is Graph Bipartite?   
@@ -57,37 +57,27 @@ Medium
 468        Validate IP Address  [Link](https://leetcode-cn.com/problems/validate-ip-address/solution/yan-zheng-ip-di-zhi-by-leetcode/) 
 ~~438        Find All Anagrams in a String~~   
 415        Add Strings   
-~~408        Valid Word Abbreviation~~   
+ 
 392        Is Subsequence   
 378        Kth Smallest Element in a Sorted Matrix   
 348        Design Tic-Tac-Toe
 339        Nested List Weight Sum  
 333        Largest BST Subtree
 322        Coin Change
-~~278        First Bad Version~~
+
 246        Strobogrammatic Number
-~~238        Product of Array Except Self~~   
-~~236        Lowest Common Ancestor of a Binary Tree~~   
-~~235        Lowest Common Ancestor of a Binary Search Tree~~
+
 227        Basic Calculator II   
 215        Kth Largest Element in an Array   
 211        Design Add and Search Words Data Structure  
 210        Course Schedule II   
-~~200        Number of Islands~~   
-~~199        Binary Tree Right Side View~~   
-~~173        Binary Search Tree Iterator~~   
 163        Missing Ranges
 155        Min Stack
 138        Copy List with Random Pointer   
 136        Single Number   
-130        Surrounded Regions   
-~~125        Valid Palindrome~~   
-~~124        Binary Tree Maximum Path Sum~~   
-~~114        Flatten Binary Tree to Linked List~~   
+130        Surrounded Regions    
 98        Validate Binary Search Tree   
 92        Reverse Linked List II   
-~~88        Merge Sorted Array~~   
-~~69        Sqrt(x)~~   
 67        Add Binary   
 57        Insert Interval  
 56        Merge Intervals
@@ -96,22 +86,34 @@ Medium
 29        Divide Two Integers   
 33        Search in Rotated Sorted Array   
 238        Product of Array Except Self   
-~~199        Binary Tree Right Side View~~   
 1047        Remove All Adjacent Duplicates In String
 ~~426        Convert Binary Search Tree to Sorted Doubly Linked Lis~~t   
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 230        Kth Smallest Element in a BST   
 
+~~408        Valid Word Abbreviation~~  
+~~238        Product of Array Except Self~~   
+~~236        Lowest Common Ancestor of a Binary Tree~~   
+~~235        Lowest Common Ancestor of a Binary Search Tree~~
+~~200        Number of Islands~~   
+~~199        Binary Tree Right Side View~~   
+~~173        Binary Search Tree Iterator~~   
+~~125        Valid Palindrome~~   
+~~124        Binary Tree Maximum Path Sum~~   
+~~114        Flatten Binary Tree to Linked List~~  
+~~88        Merge Sorted Array~~   
+~~69        Sqrt(x)~~ 
+~~199        Binary Tree Right Side View~~   
 
 Onsite
 https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MDgyNzgwNiwxMjU3NTcyMzE4LDgzMT
-IwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYwNDYsMTQ4OTMzNTgz
-OCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MDI3OTY4MzAsMjA4NT
-U2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIwMTM4LC0xODIyNDY3
-MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMTc2ODI1MTY1OCwyMD
-IzMTAxMjIsMTg1Mzg5MzI1OV19
+eyJoaXN0b3J5IjpbMTQ5NjIxMzY5NCwxOTcwODI3ODA2LDEyNT
+c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
+NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
+c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
+MzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3OTU2MiwxNz
+Y4MjUxNjU4LDIwMjMxMDEyMiwxODUzODkzMjU5XX0=
 -->
