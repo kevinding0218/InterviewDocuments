@@ -55,8 +55,8 @@ Medium
 138        Copy List with Random Pointer   my
 136        Single Number   [Link](https://leetcode-cn.com/problems/single-number/solution/zhi-chu-xian-yi-ci-de-shu-zi-by-leetcode-solution/)
 130        Surrounded Regions    [Link](https://leetcode.com/problems/surrounded-regions/submissions/)
-98        Validate Binary Search Tree   
-92        Reverse Linked List II   
+98        Validate Binary Search Tree   my
+92        Reverse Linked List II   my
 67        Add Binary   
 57        Insert Interval  
 56        Merge Intervals
@@ -109,7 +109,7 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MDY2NjExNiwxOTcwODI3ODA2LDEyNT
+eyJoaXN0b3J5IjpbMTYxOTc1ODcxNiwxOTcwODI3ODA2LDEyNT
 c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
 NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
 c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
