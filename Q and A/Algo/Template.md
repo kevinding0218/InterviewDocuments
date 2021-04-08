@@ -154,7 +154,7 @@ index = col + row * n
 ```
 ## Tree
 ### BST
-- Inorder will be a sorted list
+#### Inorder will be a sorted list
 ```
 /**  
  * exit condition; left -> execution -> right 
@@ -222,8 +222,8 @@ public static List<Integer> iteration(TreeNode root) {
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNTQzNjY4LC0yMDA3NTczMDI1LDI3ND
-A0NzIyMSwtMzYwNjI5NDkzLC05ODA0Nzc2NDksMTc1NjAxNjg0
-NSwyMDM0NTQ3OTM0LC02MDE3NzQ1ODcsODk0NjUwODM1LC0xNT
-A1ODQ3MDU0LC0xNjI1MzAxMDQ2XX0=
+eyJoaXN0b3J5IjpbLTE1OTY5MzUxNjEsLTIwMDc1NzMwMjUsMj
+c0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2
+ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLT
+E1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
 -->
