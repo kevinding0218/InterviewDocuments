@@ -985,6 +985,8 @@ private static void dfs(
 	  - move `s` pointer forward with number of positions `s += number`
   - check if character is same or not, return false if different
  - Finally check if `s` and `t` walk over entire word `return s == src.length && t == tgt.length;`
+ ##### Time: O(n)
+ ##### Space:O(1)
 ### [297. Serialize and Deserialize Binary Tree(Hard)](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 ### [449. Serialize and Deserialize BST (Medium)](https://leetcode.com/problems/serialize-and-deserialize-bst/solution/)
 ### [127. Word Ladder(Hard)](https://leetcode.com/problems/word-ladder/)
@@ -993,11 +995,11 @@ private static void dfs(
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMTI5OTEzNywyNDYzMzcwMzksNTEwNj
-kwNjE3LDE3NjgyMjA5NSwtMTI4NzkzMDY0MCwtMTIyNTA4NTI0
-MiwtNTI3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzkyODcyOTQsLT
-E0ODE0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5
-MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MT
-g3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2
-NiwxMTU3MDE0NzI4XX0=
+eyJoaXN0b3J5IjpbODI5MTExNDU1LDI0NjMzNzAzOSw1MTA2OT
+A2MTcsMTc2ODIyMDk1LC0xMjg3OTMwNjQwLC0xMjI1MDg1MjQy
+LC01MjczMDAyOTAsLTE4MjYxMTUyNDQsLTEzOTI4NzI5NCwtMT
+Q4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2MDU1OTIsLTE3NDkx
+NDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQxOD
+c2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2
+LDExNTcwMTQ3MjhdfQ==
 -->
