@@ -692,6 +692,18 @@ public ListNode divide(ListNode[] lists, int start, int end) {
 	- else move left pointer to right
 ##### Time: O(N^2)
 ##### Space:O(logN) 我们忽略存储答案的空间，额外的排序的空间复杂度为O(logN), 然而我们修改了输入的数组nums，在实际情况下不一定允许，因此也可以看成使用了一个额外的数组存储了nums的副本并进行排序空间复杂度为O(N)。
+### []
+#### Two Pointers
+1. 第一步，对数组进行排序。只有将数组转化为有序数组，我们才方便移动双指针。  
+* 第二步，在数组numbers中遍历，每次固定numbers[i]作为第一个数  
+* 建立双指针left和right，初始化分别指向i + 1和len(numbers) - 1  
+* 求出此时的三数之和sum，如果sum和target恰好相等，我们可以直接返回target。  
+* 比较sum和closest谁距离target更近，如果是curr，那么将closest更新为target  
+* 判断sum和target的大小关系，如果sum > target，那么right左移；反之，left右移。继续第二步的过程，直到left >= right。  
+* 此外，当数组中有重复元素时，为了避免重复运算，在代码中添加了三处剪枝操作。当指针指向新的位置和旧的位置的值相等时，我们继续移动指针。  
+*  
+* Time：O(n^2)  
+* Space:O（1），只需要常量空间。
 ### [18. 4Sum](https://leetcode.com/problems/4sum/)
 #### One more loop with 3Sum
 ##### Time:  O(N^3)
@@ -871,11 +883,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDkxNDg1MTYsLTg1ODY5MDU0OCwtMT
-c3NTg0NDI5MSwtMTkyOTQxODc2NCwxMDQ0NzExOTU4LC0xODg5
-ODc0NjI2LC0xNTYwMjkxODY2LDExNTcwMTQ3MjgsMTY5Mzg0Mj
-gxNiwxMDM5MTU5MTg3LC0yMDM5MjY0OTgxLDE2NzcxOTgxNjEs
-NjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5ODUxNjcwNDcsMTE4ND
-k3OTIyNSw4NjM5MzgwMDYsMTE0MTQxNDA5MiwtNDYyMzQ1NDks
-MTYxMjE3NjgzMF19
+eyJoaXN0b3J5IjpbLTIxMTEyMjgyOTEsLTE3NDkxNDg1MTYsLT
+g1ODY5MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQxODc2NCwxMDQ0
+NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2LDExNTcwMT
+Q3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5MTg3LC0yMDM5MjY0OTgx
+LDE2NzcxOTgxNjEsNjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5OD
+UxNjcwNDcsMTE4NDk3OTIyNSw4NjM5MzgwMDYsMTE0MTQxNDA5
+MiwtNDYyMzQ1NDldfQ==
 -->
