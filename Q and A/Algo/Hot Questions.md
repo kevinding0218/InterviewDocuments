@@ -518,6 +518,7 @@ for (int i = 0; i < size; i++) {
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
+####
 #### [Is Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/submissions/)
 ### [283. Move Zeroes(Easy)](https://leetcode.com/problems/move-zeroes/)
 ####  Two Pointers
@@ -778,11 +779,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTkwMDk2MTgsMTAzOTE1OTE4NywtMj
-AzOTI2NDk4MSwxNjc3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MDU4
-NTYwLC0xOTg1MTY3MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2LD
-ExNDE0MTQwOTIsLTQ2MjM0NTQ5LDE2MTIxNzY4MzAsMTIxOTgz
-ODU1OCw0MzE5NTE4ODUsLTk4MDgxMjc2NSwxMjMxMjgwOTg0LC
-05NjU0MjYxMDQsMTY3Nzg2MDc2Nyw5MjMwMTAzMTMsOTkzOTIy
-MTFdfQ==
+eyJoaXN0b3J5IjpbMTY5Mzg0MjgxNiwxMDM5MTU5MTg3LC0yMD
+M5MjY0OTgxLDE2NzcxOTgxNjEsNjQzMTM1MjY3LC05NDcwNTg1
+NjAsLTE5ODUxNjcwNDcsMTE4NDk3OTIyNSw4NjM5MzgwMDYsMT
+E0MTQxNDA5MiwtNDYyMzQ1NDksMTYxMjE3NjgzMCwxMjE5ODM4
+NTU4LDQzMTk1MTg4NSwtOTgwODEyNzY1LDEyMzEyODA5ODQsLT
+k2NTQyNjEwNCwxNjc3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIx
+MV19
 -->
