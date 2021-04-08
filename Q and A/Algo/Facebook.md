@@ -12,7 +12,7 @@ Hard
 127        Word Ladder   
 126        Word Ladder II
 940        Distinct Subsequences II   
-329        Longest Increasing Path in a Matrix   
+329        Longest Increasing Path in a Matrix   [Link](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/solution/ju-zhen-zhong-de-zui-chang-di-zeng-lu-jing-by-le-2/)
 52        N-Queens II   my
 ~~23        Merge k Sorted Lists~~   
 ~~301        Remove Invalid Parentheses~~  
@@ -111,7 +111,7 @@ https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3Mzk1NzI1NiwtMTQ3MTM3NjUyMiwxOT
+eyJoaXN0b3J5IjpbMTc3NzkyOTAyNiwtMTQ3MTM3NjUyMiwxOT
 cwODI3ODA2LDEyNTc1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2
 MDIsMTEwMTAwNjA0NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtOD
 cwMTcyMzg2LDUwMjc5NjgzMCwyMDg1NTYzNTk0LC0xNTE5Njgy
