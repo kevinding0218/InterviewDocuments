@@ -974,7 +974,7 @@ private static void dfs(
 ##### Time: O(n)
 ##### Space:O(1)
 ### [921. Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/)
-#### B
+#### Balance
 - 保证左右括号数量的 平衡： 计算 '(' 出现的次数减去 ')' 出现的次数。
 - 如果值为 0，那就是平衡的，如果小于 0，，那就假设得在前面加上一个 '('，平衡数++同样结果++
 ##### Time:O(n)
@@ -1009,11 +1009,11 @@ private static void dfs(
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA1MzkzNDE2LDI0NjMzNzAzOSw1MTA2OT
-A2MTcsMTc2ODIyMDk1LC0xMjg3OTMwNjQwLC0xMjI1MDg1MjQy
-LC01MjczMDAyOTAsLTE4MjYxMTUyNDQsLTEzOTI4NzI5NCwtMT
-Q4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2MDU1OTIsLTE3NDkx
-NDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQxOD
-c2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2
-LDExNTcwMTQ3MjhdfQ==
+eyJoaXN0b3J5IjpbLTEwMjczNzAxMCwyNDYzMzcwMzksNTEwNj
+kwNjE3LDE3NjgyMjA5NSwtMTI4NzkzMDY0MCwtMTIyNTA4NTI0
+MiwtNTI3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzkyODcyOTQsLT
+E0ODE0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5
+MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MT
+g3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2
+NiwxMTU3MDE0NzI4XX0=
 -->
