@@ -62,7 +62,7 @@ Medium
 40        Combination Sum II   my
 39        Combination Sum    my
 33        Search in Rotated Sorted Array   my
-29        Divide Two Integers   
+29        Divide Two Integers   [Link](https://leetcode-cn.com/problems/divide-two-integers/solution/shua-chuan-lc-er-fen-bei-zeng-cheng-fa-j-m73b/)
 1047        Remove All Adjacent Duplicates In String
 ~~426        Convert Binary Search Tree to Sorted Doubly Linked Lis~~t   
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
@@ -109,7 +109,7 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzU2Njk2MzgsMTk3MDgyNzgwNiwxMj
+eyJoaXN0b3J5IjpbLTE3NjcxNDI4OTQsMTk3MDgyNzgwNiwxMj
 U3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYw
 NDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MD
 I3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIw
