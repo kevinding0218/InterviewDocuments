@@ -57,7 +57,7 @@ Medium
 468        Validate IP Address  [Link](https://leetcode-cn.com/problems/validate-ip-address/solution/yan-zheng-ip-di-zhi-by-leetcode/) 
 ~~438        Find All Anagrams in a String~~   
 415        Add Strings   
-408        Valid Word Abbreviation   
+~~408        Valid Word Abbreviation~~   
 392        Is Subsequence   
 378        Kth Smallest Element in a Sorted Matrix   
 348        Design Tic-Tac-Toe
@@ -108,8 +108,8 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MDE3MjM4Niw1MDI3OTY4MzAsMjA4NT
-U2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIwMTM4LC0xODIyNDY3
-MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMTc2ODI1MTY1OCwyMD
-IzMTAxMjIsMTg1Mzg5MzI1OV19
+eyJoaXN0b3J5IjpbNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
+k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
+OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
+gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
 -->
