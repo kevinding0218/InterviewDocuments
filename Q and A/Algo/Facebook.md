@@ -20,7 +20,6 @@ Hard
 ~~32        Longest Valid Parentheses~~   
 
 Medium
-
 1197      Minimum Knight Moves (KnightShortestPath)
 348        Design Tic-Tac-Toe 
 339        Nested List Weight Sum  
@@ -111,11 +110,11 @@ https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NzcxNTU3MiwtMTg3Mjk2MTUzNCwtOD
-kxNDM4ODA1LDQ3MDE0NDcyNywxOTkwNDE0NjQwLC0xNDcxMzc2
-NTIyLDE5NzA4Mjc4MDYsMTI1NzU3MjMxOCw4MzEyMDA4NjIsLT
-c2NTUxNzYwMiwxMTAxMDA2MDQ2LDE0ODkzMzU4MzgsNDA1NTk3
-MDg2LC04NzAxNzIzODYsNTAyNzk2ODMwLDIwODU1NjM1OTQsLT
-E1MTk2ODI0MjIsMTM2NjcyMDEzOCwtMTgyMjQ2NzMxOCwxMDkw
-NDY2MDU4XX0=
+eyJoaXN0b3J5IjpbLTE0NTY0NDAxODYsLTE4NzI5NjE1MzQsLT
+g5MTQzODgwNSw0NzAxNDQ3MjcsMTk5MDQxNDY0MCwtMTQ3MTM3
+NjUyMiwxOTcwODI3ODA2LDEyNTc1NzIzMTgsODMxMjAwODYyLC
+03NjU1MTc2MDIsMTEwMTAwNjA0NiwxNDg5MzM1ODM4LDQwNTU5
+NzA4NiwtODcwMTcyMzg2LDUwMjc5NjgzMCwyMDg1NTYzNTk0LC
+0xNTE5NjgyNDIyLDEzNjY3MjAxMzgsLTE4MjI0NjczMTgsMTA5
+MDQ2NjA1OF19
 -->
