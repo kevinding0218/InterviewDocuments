@@ -24,8 +24,8 @@ Medium
 1197        Minimum Knight Moves
 1123        Lowest Common Ancestor of Deepest Leaves  [Link](https://leetcode-cn.com/problems/lowest-common-ancestor-of-deepest-leaves/solution/liang-chong-si-lu-yi-chong-qian-xu-bian-li-yi-chon/)
 1029        Two City Scheduling   [Link](https://leetcode-cn.com/problems/two-city-scheduling/solution/er-cha-shu-de-chui-xu-bian-li-by-leetcode/)
-1026        Maximum Difference Between Node and Ancestor [Link]()
-1004        Max Consecutive Ones III  
+1026        Maximum Difference Between Node and Ancestor [Link](https://leetcode-cn.com/problems/maximum-difference-between-node-and-ancestor/solution/java-dfs-by-zxy0917-4/)
+1004        Max Consecutive Ones III  [Link](https://leetcode-cn.com/problems/max-consecutive-ones-iii/solution/zui-da-lian-xu-1de-ge-shu-iii-by-leetcod-hw12/)
 986        Interval List Intersections
 977        Squares of a Sorted Array
 958        Check Completeness of a Binary Tree  
@@ -109,10 +109,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MDcxMDY5LDE5NzA4Mjc4MDYsMTI1Nz
-U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
-LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
-k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
-OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
-gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbLTEyODI4Njk1NSwxOTcwODI3ODA2LDEyNT
+c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
+NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
+c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
+MzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3OTU2MiwxNz
+Y4MjUxNjU4LDIwMjMxMDEyMiwxODUzODkzMjU5XX0=
 -->
