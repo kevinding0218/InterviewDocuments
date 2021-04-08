@@ -687,8 +687,9 @@ public ListNode divide(ListNode[] lists, int start, int end) {
 1. Sort Array
 2. 1st element can be loop through 0 ~ n with deduplicate
 3. 2nd and 3rd element can be found through 2Sum using 2 Pointers facing direction
-	- need deduplicate 2nd and 3rd when sum == target **`while (secondPtr + 1 < thirdPtr && nums[secondPtr+1] == nums[secondPtr]) secondPtr++;`**
-	- 
+	- need deduplicate 2nd and 3rd when sum == target(-first) **`while (secondPtr + 1 < thirdPtr && nums[secondPtr+1] == nums[secondPtr]) secondPtr++;`**
+	- if sum > target, move right pointer to left
+	- else move left pointer to right
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 #### Simulate
@@ -839,11 +840,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjY3ODA4NTUsLTE3NzU4NDQyOTEsLT
-E5Mjk0MTg3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2
-MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1OT
-E4NywtMjAzOTI2NDk4MSwxNjc3MTk4MTYxLDY0MzEzNTI2Nywt
-OTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LDExODQ5NzkyMjUsODYzOT
-M4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NTQ5LDE2MTIxNzY4MzAs
-MTIxOTgzODU1OF19
+eyJoaXN0b3J5IjpbODcwOTE4OTMwLC0xNzc1ODQ0MjkxLC0xOT
+I5NDE4NzY0LDEwNDQ3MTE5NTgsLTE4ODk4NzQ2MjYsLTE1NjAy
+OTE4NjYsMTE1NzAxNDcyOCwxNjkzODQyODE2LDEwMzkxNTkxOD
+csLTIwMzkyNjQ5ODEsMTY3NzE5ODE2MSw2NDMxMzUyNjcsLTk0
+NzA1ODU2MCwtMTk4NTE2NzA0NywxMTg0OTc5MjI1LDg2MzkzOD
+AwNiwxMTQxNDE0MDkyLC00NjIzNDU0OSwxNjEyMTc2ODMwLDEy
+MTk4Mzg1NThdfQ==
 -->
