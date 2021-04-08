@@ -897,12 +897,14 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 - 最后我们pick **`max((maxExec - 1)*(n-1) + maxCount, tasks.length)`**
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
+### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE2OTA1NTYzLC0xMzkyODcyOTQsLTE0OD
-E0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5MTQ4
-NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MTg3Nj
-QsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2Niwx
-MTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1OTE4NywtMjAzOT
-I2NDk4MSwxNjc3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYw
-LC0xOTg1MTY3MDQ3XX0=
+eyJoaXN0b3J5IjpbLTE4MjYxMTUyNDQsLTEzOTI4NzI5NCwtMT
+Q4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2MDU1OTIsLTE3NDkx
+NDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQxOD
+c2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2
+LDExNTcwMTQ3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5MTg3LC0yMD
+M5MjY0OTgxLDE2NzcxOTgxNjEsNjQzMTM1MjY3LC05NDcwNTg1
+NjAsLTE5ODUxNjcwNDddfQ==
 -->
