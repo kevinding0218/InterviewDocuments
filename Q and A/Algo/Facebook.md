@@ -48,7 +48,7 @@ Medium
 246        Strobogrammatic Number
 227        Basic Calculator II   [Link](https://leetcode-cn.com/problems/basic-calculator-ii/)
 215        Kth Largest Element in an Array   [Link](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/shu-zu-zhong-de-di-kge-zui-da-yuan-su-by-leetcode-/)
-211        Design Add and Search Words Data Structure  
+211        Design Add and Search Words Data Structure  [Link](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/solution/yu-dao-tong-pei-fu-shi-di-gui-chu-li-python-dai-ma/)
 210        Course Schedule II   
 163        Missing Ranges
 155        Min Stack
@@ -109,7 +109,7 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMzk0OTQxNywxOTcwODI3ODA2LDEyNT
+eyJoaXN0b3J5IjpbMTMzNzc5NjM1MywxOTcwODI3ODA2LDEyNT
 c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
 NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
 c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
