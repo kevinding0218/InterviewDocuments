@@ -690,8 +690,8 @@ public ListNode divide(ListNode[] lists, int start, int end) {
 	- need deduplicate 2nd and 3rd when sum == target(-first) before adding into result **`while (secondPtr + 1 < thirdPtr && nums[secondPtr+1] == nums[secondPtr]) secondPtr++;`**
 	- if sum > target, move right pointer to left
 	- else move left pointer to right
-#### Time: O(N^2)
-#### Space:O(logN) 我们忽略存储答案的空间，额外的排序的空间复杂度为O(logN), 然而我们修改了输入的数组nums，在实际情况下不一定允许，因此也可以看成使用了一个额外的数组存储了nums的副本并进行排序空间复杂度为O(N)。
+##### Time: O(N^2)
+##### Space:O(logN) 我们忽略存储答案的空间，额外的排序的空间复杂度为O(logN), 然而我们修改了输入的数组nums，在实际情况下不一定允许，因此也可以看成使用了一个额外的数组存储了nums的副本并进行排序空间复杂度为O(N)。
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
 #### Simulate
@@ -842,7 +842,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNDI5NzEyOCwtMTc3NTg0NDI5MSwtMT
+eyJoaXN0b3J5IjpbLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwtMT
 kyOTQxODc2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYw
 MjkxODY2LDExNTcwMTQ3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5MT
 g3LC0yMDM5MjY0OTgxLDE2NzcxOTgxNjEsNjQzMTM1MjY3LC05
