@@ -51,8 +51,8 @@ Medium
 211        Design Add and Search Words Data Structure  [Link](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/solution/yu-dao-tong-pei-fu-shi-di-gui-chu-li-python-dai-ma/)
 210        Course Schedule II   [Link](https://leetcode.com/problems/course-schedule-ii/)
 163        Missing Ranges
-155        Min Stack
-138        Copy List with Random Pointer   
+155        Min Stack [Link](https://leetcode.com/problems/min-stack/)
+138        Copy List with Random Pointer   my
 136        Single Number   
 130        Surrounded Regions    
 98        Validate Binary Search Tree   
@@ -109,10 +109,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAyMzQwNTI2LDE5NzA4Mjc4MDYsMTI1Nz
-U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
-LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
-k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
-OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
-gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbLTE3NDkxMDgwNzQsMTk3MDgyNzgwNiwxMj
+U3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYw
+NDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MD
+I3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIw
+MTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMT
+c2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5MzI1OV19
 -->
