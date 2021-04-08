@@ -518,7 +518,13 @@ for (int i = 0; i < size; i++) {
 #### follow up - nary
 - 做法是找出他们n个children中最大的两个sum，剩下的与要而思一个做法。
 ### [1382. Balance a Binary Search Tree(Medium)](https://leetcode.com/problems/balance-a-binary-search-tree/)
-####
+#### Inorder & build
+- 我们可以通过中序遍历将原来的二叉搜索树转化为一个有序序列，然后对这个有序序列递归建树，对于区间[L, R]  
+	 - 取mid=(L+R)/2, 即中心位置作为当前节点的值  
+	 - 如果L<=mid-1,那么递归地将区间[L, mid-1]作为当前节点的左子树  
+	 - 如果mid+1<=R,那么递归地将区间[mid+1, R]作为当前节点的右子树  
+##### Time: O(n) 获得中序遍历的时间代价  
+##### Space:O(n) 这里使用了一个数组作为辅助空间，存放中序遍历后的有序序列
 #### [Is Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/submissions/)
 ### [283. Move Zeroes(Easy)](https://leetcode.com/problems/move-zeroes/)
 ####  Two Pointers
@@ -779,11 +785,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5Mzg0MjgxNiwxMDM5MTU5MTg3LC0yMD
-M5MjY0OTgxLDE2NzcxOTgxNjEsNjQzMTM1MjY3LC05NDcwNTg1
-NjAsLTE5ODUxNjcwNDcsMTE4NDk3OTIyNSw4NjM5MzgwMDYsMT
-E0MTQxNDA5MiwtNDYyMzQ1NDksMTYxMjE3NjgzMCwxMjE5ODM4
-NTU4LDQzMTk1MTg4NSwtOTgwODEyNzY1LDEyMzEyODA5ODQsLT
-k2NTQyNjEwNCwxNjc3ODYwNzY3LDkyMzAxMDMxMyw5OTM5MjIx
-MV19
+eyJoaXN0b3J5IjpbLTYwNDYzMjM1MSwxNjkzODQyODE2LDEwMz
+kxNTkxODcsLTIwMzkyNjQ5ODEsMTY3NzE5ODE2MSw2NDMxMzUy
+NjcsLTk0NzA1ODU2MCwtMTk4NTE2NzA0NywxMTg0OTc5MjI1LD
+g2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0OSwxNjEyMTc2
+ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1LC05ODA4MTI3NjUsMT
+IzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEw
+MzEzXX0=
 -->
