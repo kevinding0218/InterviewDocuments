@@ -664,7 +664,7 @@ for (int i = 0; i < size; i++) {
 ### [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 #### Divide and Conquer
 1. divide total list left and right until 2 or 1 sorted array with index from of 0 ~ list.length
-2. merge 2 sorted array and up
+2. merge 2 sorted lists and up
 ```
 public ListNode divide(ListNode[] lists, int start, int end) {  
   if (start > end) {  
@@ -832,7 +832,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDc2OTQ3MiwtMTkyOTQxODc2NCwxMD
+eyJoaXN0b3J5IjpbLTEwMzUzMzQ0NCwtMTkyOTQxODc2NCwxMD
 Q0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2LDExNTcw
 MTQ3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5MTg3LC0yMDM5MjY0OT
 gxLDE2NzcxOTgxNjEsNjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5
