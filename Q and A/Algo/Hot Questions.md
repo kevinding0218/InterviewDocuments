@@ -897,7 +897,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 - 最后我们pick **`max((maxExec - 1)*(n-1) + maxCount, tasks.length)`**
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
-### [67. Add Binary](https://leetcode.com/problems/add-binary/)
+### [67. Add Binary(Easy)](https://leetcode.com/problems/add-binary/)
 #### Traversal
 - 整体思路是将两个字符串较短的用 00 补齐，使得两个字符串长度一致，然后从末尾进行遍历计算并插入结果首位，得到最终结果
 - 按照位置给结果字符赋值，最后如果有进位，则在前方进行字符串拼接添加进位
@@ -910,7 +910,7 @@ arry = sum / 2;   //如果二者都为1 那么carry应该刚好为1 否则为0
 ans.insert(0, carry == 1 ? carry : "");// 判断最后一次计算是否有进位  有则在最前面加上1 否则原样输出
 ```
 ##### Time: O(n)
-### [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
+### [39. Combination Sum(Medium)](https://leetcode.com/problems/combination-sum/)
 #### DFS & Backtrack
 - Sort array 减少回溯次数
 - 定义递归DFS为找到所有以combination开头的那些和为target的组合（出口），并丢到results里面。
@@ -926,7 +926,7 @@ private static void dfs(
 ```
 ##### Time: O(S) 其中 SS 为所有可行解的长度之和
 ##### Space:O(target) 空间复杂度取决于递归的栈深度，在最差情况下需要递归O(target)层。
-### [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
+### [40. Combination Sum II(Medium)](https://leetcode.com/problems/combination-sum-ii/)
 #### DFS & Backtrack
 - 与39不同的是结果不允许重复
 - - Sort array 减少回溯次数
@@ -941,19 +941,19 @@ private static void dfs(
 ```
 	- 拆解）如果当前sum小于或等于target，继续dfs，否则中止。
 	- 并且下一个可以加入combination中的数 至少从candidate的startIdx + 1开始，因为结果不允许重复，由于数组可能有重复元素，我们需要再每次选择sum时去重 `if(i > begin && candidates[i] == candidates[i-1]) continue;`
-### [216. Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)
+### [216. Combination Sum III(Medium)](https://leetcode.com/problems/combination-sum-iii/)
 
-### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
-### [126. Word Ladder II](https://leetcode.com/problems/word-ladder/)
+### [127. Word Ladder(Hard)](https://leetcode.com/problems/word-ladder/)
+### [126. Word Ladder II(Hard)](https://leetcode.com/problems/word-ladder/)
 ### [139. Word Break(Hard)](https://leetcode.com/problems/word-break/)
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NjI1MTI1MCwtMTI4NzkzMDY0MCwtMT
-IyNTA4NTI0MiwtNTI3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzky
-ODcyOTQsLTE0ODE0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NT
-kyLC0xNzQ5MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEs
-LTE5Mjk0MTg3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMT
-U2MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1
-OTE4NywtMjAzOTI2NDk4MV19
+eyJoaXN0b3J5IjpbMTc2ODIyMDk1LC0xMjg3OTMwNjQwLC0xMj
+I1MDg1MjQyLC01MjczMDAyOTAsLTE4MjYxMTUyNDQsLTEzOTI4
+NzI5NCwtMTQ4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2MDU1OT
+IsLTE3NDkxNDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwt
+MTkyOTQxODc2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNT
+YwMjkxODY2LDExNTcwMTQ3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5
+MTg3LC0yMDM5MjY0OTgxXX0=
 -->
