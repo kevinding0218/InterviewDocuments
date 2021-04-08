@@ -911,15 +911,17 @@ ans.insert(0, carry == 1 ? carry : "");// 判断最后一次计算是否有进�
 ```
 ##### Time: O(n)
 ### [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
-### DFS & Backtrack
+#### DFS & Backtrack
 - Sort array 减少回溯次数
 - 定义递归DFS为找到所有以combination开头的那些和为target的组合（出口），并丢到results里面。
 	- 拆解）如果当前sum小于或等于target，继续dfs，否则中止。
 	- 并且下一个可以加入combination中的数 至少从candidate的startIdx开始
+##### Time: O(S) 其中 SS 为所有可行解的长度之和
+##### Space:O(target) 空间复杂度取决于递归的栈深度，在最差情况下需要递归O(target)层。
 ### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNjA4MzAzMCwtMTIyNTA4NTI0MiwtNT
+eyJoaXN0b3J5IjpbMTE2NjAzODM5NiwtMTIyNTA4NTI0MiwtNT
 I3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzkyODcyOTQsLTE0ODE0
 MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5MTQ4NT
 E2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MTg3NjQs
