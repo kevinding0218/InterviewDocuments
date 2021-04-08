@@ -945,13 +945,15 @@ private static void dfs(
 
 ### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 ### [126. Word Ladder II](https://leetcode.com/problems/word-ladder/)
+### [139. Word Break(Hard)](https://leetcode.com/problems/word-break/)
+### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE2OTQ5NjIxLC0xMjg3OTMwNjQwLC0xMj
-I1MDg1MjQyLC01MjczMDAyOTAsLTE4MjYxMTUyNDQsLTEzOTI4
-NzI5NCwtMTQ4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2MDU1OT
-IsLTE3NDkxNDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwt
-MTkyOTQxODc2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNT
-YwMjkxODY2LDExNTcwMTQ3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5
-MTg3LC0yMDM5MjY0OTgxXX0=
+eyJoaXN0b3J5IjpbMTM3NjI1MTI1MCwtMTI4NzkzMDY0MCwtMT
+IyNTA4NTI0MiwtNTI3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzky
+ODcyOTQsLTE0ODE0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NT
+kyLC0xNzQ5MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEs
+LTE5Mjk0MTg3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMT
+U2MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1
+OTE4NywtMjAzOTI2NDk4MV19
 -->
