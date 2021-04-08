@@ -57,9 +57,9 @@ Medium
 130        Surrounded Regions    [Link](https://leetcode.com/problems/surrounded-regions/submissions/)
 29        Divide Two Integers   [Link](https://leetcode-cn.com/problems/divide-two-integers/solution/shua-chuan-lc-er-fen-bei-zeng-cheng-fa-j-m73b/)
 1047        Remove All Adjacent Duplicates In String [Link](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/solution/shan-chu-zi-fu-chuan-zhong-de-suo-you-xi-4ohr/)
-~~426        Convert Binary Search Tree to Sorted Doubly Linked Lis~~t   
+~~426        Convert Binary Search Tree to Sorted Doubly Linked Lis~~~   
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
-230        Kth Smallest Element in a BST   
+230        Kth Smallest Element in a BST   [Link](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yuan-su-by-le/)
 
 
 138        Copy List with Random Pointer   my
@@ -111,10 +111,11 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzEzNzY1MjIsMTk3MDgyNzgwNiwxMj
-U3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYw
-NDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MD
-I3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIw
-MTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMT
-c2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5MzI1OV19
+eyJoaXN0b3J5IjpbLTE5NDg3NjcxMDQsLTE0NzEzNzY1MjIsMT
+k3MDgyNzgwNiwxMjU3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3
+NjAyLDExMDEwMDYwNDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLT
+g3MDE3MjM4Niw1MDI3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4
+MjQyMiwxMzY2NzIwMTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNT
+gsMzM0Nzk1NjIsMTc2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5
+MzI1OV19
 -->
