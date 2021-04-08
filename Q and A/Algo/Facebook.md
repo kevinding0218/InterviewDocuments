@@ -39,7 +39,7 @@ Medium
 485        Max Consecutive Ones [Link](https://leetcode-cn.com/problems/max-consecutive-ones/solution/zui-da-lian-xu-1de-ge-shu-by-leetcode-so-252a/)
 468        Validate IP Address  [Link](https://leetcode-cn.com/problems/validate-ip-address/solution/yan-zheng-ip-di-zhi-by-leetcode/) 
 415        Add Strings  [Link](https://leetcode-cn.com/problems/add-strings/solution/zi-fu-chuan-xiang-jia-by-leetcode-solution/)
-392        Is Subsequence   
+392        Is Subsequence   [Link](https://leetcode-cn.com/problems/is-subsequence/solution/pan-duan-zi-xu-lie-by-leetcode-solution/)
 378        Kth Smallest Element in a Sorted Matrix   
 348        Design Tic-Tac-Toe
 339        Nested List Weight Sum  
@@ -109,10 +109,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkwNDE1MzUxLDE5NzA4Mjc4MDYsMTI1Nz
-U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
-LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
-k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
-OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
-gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbMTc5MjM3NzAwMiwxOTcwODI3ODA2LDEyNT
+c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
+NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
+c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
+MzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3OTU2MiwxNz
+Y4MjUxNjU4LDIwMjMxMDEyMiwxODUzODkzMjU5XX0=
 -->
