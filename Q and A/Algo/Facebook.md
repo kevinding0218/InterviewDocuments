@@ -20,7 +20,7 @@ Hard
 ~~32        Longest Valid Parentheses~~   
 
 Medium
-163        Missing Ranges
+
 1197      Minimum Knight Moves (KnightShortestPath)
 348        Design Tic-Tac-Toe 
 339        Nested List Weight Sum  
@@ -59,7 +59,7 @@ Medium
 1047        Remove All Adjacent Duplicates In String [Link](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/solution/shan-chu-zi-fu-chuan-zhong-de-suo-you-xi-4ohr/)
 230        Kth Smallest Element in a BST   [Link](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yuan-su-by-le/)
 
-
+163        Missing Ranges (MissingInterval)
 138        Copy List with Random Pointer   my
 98        Validate Binary Search Tree   my
 92        Reverse Linked List II   my
@@ -111,11 +111,11 @@ https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzI5NjE1MzQsLTg5MTQzODgwNSw0Nz
-AxNDQ3MjcsMTk5MDQxNDY0MCwtMTQ3MTM3NjUyMiwxOTcwODI3
-ODA2LDEyNTc1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMT
-EwMTAwNjA0NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcy
-Mzg2LDUwMjc5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLD
-EzNjY3MjAxMzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3
-OTU2Ml19
+eyJoaXN0b3J5IjpbMTE2NzcxNTU3MiwtMTg3Mjk2MTUzNCwtOD
+kxNDM4ODA1LDQ3MDE0NDcyNywxOTkwNDE0NjQwLC0xNDcxMzc2
+NTIyLDE5NzA4Mjc4MDYsMTI1NzU3MjMxOCw4MzEyMDA4NjIsLT
+c2NTUxNzYwMiwxMTAxMDA2MDQ2LDE0ODkzMzU4MzgsNDA1NTk3
+MDg2LC04NzAxNzIzODYsNTAyNzk2ODMwLDIwODU1NjM1OTQsLT
+E1MTk2ODI0MjIsMTM2NjcyMDEzOCwtMTgyMjQ2NzMxOCwxMDkw
+NDY2MDU4XX0=
 -->
