@@ -33,7 +33,7 @@ Medium
 824        Goat Latin [Link](https://leetcode-cn.com/problems/goat-latin/solution/shan-yang-la-ding-wen-by-leetcode/)
 785        Is Graph Bipartite?   [Link](https://leetcode-cn.com/problems/is-graph-bipartite/solution/pan-duan-er-fen-tu-by-leetcode-solution/)
 766        Toeplitz Matrix [Link](https://leetcode-cn.com/problems/toeplitz-matrix/solution/tuo-pu-li-ci-ju-zhen-by-leetcode-solutio-57bb/)
-674        Longest Continuous Increasing Subsequence  
+674        Longest Continuous Increasing Subsequence  [Link](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/solution/zui-chang-lian-xu-di-zeng-xu-lie-by-leet-dmb8/)
 637        Average of Levels in Binary Tree
 528        Random Pick with Weight   
 485        Max Consecutive Ones
@@ -109,7 +109,7 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NTI1OTU0NywxOTcwODI3ODA2LDEyNT
+eyJoaXN0b3J5IjpbMTQwNzI0Nzc5MywxOTcwODI3ODA2LDEyNT
 c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
 NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
 c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
