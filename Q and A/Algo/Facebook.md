@@ -24,7 +24,7 @@ Medium
 1197      Minimum Knight Moves (KnightShortestPath)
 348        Design Tic-Tac-Toe 
 339        Nested List Weight Sum  
-333        Largest BST Subtree [Link](https://baihuqian.github.io/2018-08-11-largest-bst-subtree/)
+333        Largest BST Subtree [Link](https://baihuqian.github.io/2018-08-11-largest-bst-subtree/)  {ValidateBST}
 246        Strobogrammatic Number
 
 27        Remove Element   [Link](https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode/)
@@ -111,11 +111,11 @@ https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MTQzODgwNSw0NzAxNDQ3MjcsMTk5MD
-QxNDY0MCwtMTQ3MTM3NjUyMiwxOTcwODI3ODA2LDEyNTc1NzIz
-MTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0NiwxND
-g5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMjc5Njgz
-MCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAxMzgsLT
-E4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3OTU2MiwxNzY4MjUx
-NjU4XX0=
+eyJoaXN0b3J5IjpbLTE4NzI5NjE1MzQsLTg5MTQzODgwNSw0Nz
+AxNDQ3MjcsMTk5MDQxNDY0MCwtMTQ3MTM3NjUyMiwxOTcwODI3
+ODA2LDEyNTc1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMT
+EwMTAwNjA0NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcy
+Mzg2LDUwMjc5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLD
+EzNjY3MjAxMzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3
+OTU2Ml19
 -->
