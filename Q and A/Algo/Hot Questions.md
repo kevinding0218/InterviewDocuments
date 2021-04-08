@@ -635,9 +635,9 @@ for (int i = 0; i < size; i++) {
 - 遍历完全部城市以后，即可得到连通分量的总数，即circle的总数。
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
 #### Two Pointer
-- 涉及两个有序数组合并,设置i和j双指针,分别从两个数组的尾部想头部移动,并判断Ai和Bj的大小关系,从而保证最终数组有序, `while (i >= 0 && j >= 0) {  
+- 涉及两个有序数组合并,设置i和j双指针,分别从两个数组的尾部想头部移动,并判断Ai和Bj的大小关系,从而保证最终数组有序, **`while (i >= 0 && j >= 0) {  
   nums1[k--] = nums1[i] >= nums2[j] ? nums1[i--] : nums2[j--];  
-}`
+}`**
 - Check if either of the array has left elements, keep insert into result
 ##### Time: O(m + n)
 ##### Space:O(1)
@@ -645,8 +645,8 @@ for (int i = 0; i < size; i++) {
 #### Divide and Conquer
 1. divide total list left and right until 2 or 1 sorted array with index from of 0 ~ list.length
 2. merge 2 sorted array and up
-#####Time: O(logK*(total numbers))
-#####Space: O(total numbers)
+##### Time: O(logK*(total numbers))
+##### Space: O(total numbers)
 ### [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
@@ -799,11 +799,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODk4NzQ2MjYsLTE1NjAyOTE4NjYsMT
-E1NzAxNDcyOCwxNjkzODQyODE2LDEwMzkxNTkxODcsLTIwMzky
-NjQ5ODEsMTY3NzE5ODE2MSw2NDMxMzUyNjcsLTk0NzA1ODU2MC
-wtMTk4NTE2NzA0NywxMTg0OTc5MjI1LDg2MzkzODAwNiwxMTQx
-NDE0MDkyLC00NjIzNDU0OSwxNjEyMTc2ODMwLDEyMTk4Mzg1NT
-gsNDMxOTUxODg1LC05ODA4MTI3NjUsMTIzMTI4MDk4NCwtOTY1
-NDI2MTA0XX0=
+eyJoaXN0b3J5IjpbMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMT
+U2MDI5MTg2NiwxMTU3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1
+OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4MTYxLDY0MzEzNTI2Ny
+wtOTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LDExODQ5NzkyMjUsODYz
+OTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0NTQ5LDE2MTIxNzY4Mz
+AsMTIxOTgzODU1OCw0MzE5NTE4ODUsLTk4MDgxMjc2NSwxMjMx
+MjgwOTg0XX0=
 -->
