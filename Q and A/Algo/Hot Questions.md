@@ -989,6 +989,18 @@ private static void dfs(
 - 其中，left和right表示滑动窗口在字符串s中的索引，cur_left和cur_right表示字符串s中索引为left和right的字符在数组中的索引  
 ##### Time: O(n)  
 ##### Space:O(1)
+### [540. Single Element in a Sorted Array(Medium)](https://leetcode.com/problems/single-element-in-a-sorted-array/)
+#### Binary Search
+- 事实证明我们只需要对偶数索引进行二分搜索。  
+- - 在该算法中，我们对所有偶数索引进行搜索，直到遇到第一个其后元素不相同的索引。    
+1. 奇数长度的数组首尾元素索引都为偶数，因此我们可以将 lo 和 hi 设置为数组首尾。  
+2. 我们需要确保 mid 是偶数，如果为奇数，则将其减 1。  
+3. 然后，我们检查 mid 的元素是否与其后面的索引相同。  
+4. 如果相同，则我们知道 mid 不是单个元素。且单个元素在 mid 之后。则我们将 lo 设置为 mid + 2。  
+5. 如果不是，则我们知道单个元素位于 mid，或者在 mid 之前。我们将 hi 设置为 mid。  
+6. 一旦 lo == hi，则当前搜索空间为 1 个元素，那么该元素为单个元素，我们将返回它。  
+##### Time: O(logN)  
+##### Space:O(1)
 ### [408. Valid Word Abbreviation]()
 #### Two Pointers
 - 2 Pointers `s` and `t` traversal from each word starting index
@@ -1009,11 +1021,11 @@ private static void dfs(
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjczNzAxMCwyNDYzMzcwMzksNTEwNj
-kwNjE3LDE3NjgyMjA5NSwtMTI4NzkzMDY0MCwtMTIyNTA4NTI0
-MiwtNTI3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzkyODcyOTQsLT
-E0ODE0MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5
-MTQ4NTE2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MT
-g3NjQsMTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2
-NiwxMTU3MDE0NzI4XX0=
+eyJoaXN0b3J5IjpbMTI0OTI4Mjc5MSwtMTAyNzM3MDEwLDI0Nj
+MzNzAzOSw1MTA2OTA2MTcsMTc2ODIyMDk1LC0xMjg3OTMwNjQw
+LC0xMjI1MDg1MjQyLC01MjczMDAyOTAsLTE4MjYxMTUyNDQsLT
+EzOTI4NzI5NCwtMTQ4MTQxMzg0NSwtNTcxMTcwMjIzLC02Mzg2
+MDU1OTIsLTE3NDkxNDg1MTYsLTg1ODY5MDU0OCwtMTc3NTg0ND
+I5MSwtMTkyOTQxODc2NCwxMDQ0NzExOTU4LC0xODg5ODc0NjI2
+LC0xNTYwMjkxODY2XX0=
 -->
