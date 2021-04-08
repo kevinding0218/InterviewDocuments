@@ -694,7 +694,7 @@ public ListNode divide(ListNode[] lists, int start, int end) {
 ##### Space:O(logN) 我们忽略存储答案的空间，额外的排序的空间复杂度为O(logN), 然而我们修改了输入的数组nums，在实际情况下不一定允许，因此也可以看成使用了一个额外的数组存储了nums的副本并进行排序空间复杂度为O(N)。
 ### [18. 4Sum](https://leetcode.com/problems/4sum/)
 #### One more loop with 3Sum
-#### DFS & BackTrack
+#### DFS & Backtrack
 
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
@@ -846,11 +846,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3OTMyNjk3MywtODU4NjkwNTQ4LC0xNz
-c1ODQ0MjkxLC0xOTI5NDE4NzY0LDEwNDQ3MTE5NTgsLTE4ODk4
-NzQ2MjYsLTE1NjAyOTE4NjYsMTE1NzAxNDcyOCwxNjkzODQyOD
-E2LDEwMzkxNTkxODcsLTIwMzkyNjQ5ODEsMTY3NzE5ODE2MSw2
-NDMxMzUyNjcsLTk0NzA1ODU2MCwtMTk4NTE2NzA0NywxMTg0OT
-c5MjI1LDg2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0OSwx
-NjEyMTc2ODMwXX0=
+eyJoaXN0b3J5IjpbLTE0NDIxMDY5MTUsLTg1ODY5MDU0OCwtMT
+c3NTg0NDI5MSwtMTkyOTQxODc2NCwxMDQ0NzExOTU4LC0xODg5
+ODc0NjI2LC0xNTYwMjkxODY2LDExNTcwMTQ3MjgsMTY5Mzg0Mj
+gxNiwxMDM5MTU5MTg3LC0yMDM5MjY0OTgxLDE2NzcxOTgxNjEs
+NjQzMTM1MjY3LC05NDcwNTg1NjAsLTE5ODUxNjcwNDcsMTE4ND
+k3OTIyNSw4NjM5MzgwMDYsMTE0MTQxNDA5MiwtNDYyMzQ1NDks
+MTYxMjE3NjgzMF19
 -->
