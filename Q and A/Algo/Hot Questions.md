@@ -956,18 +956,26 @@ private static void dfs(
 ##### Time: O(C(M/k) * k) 本题中M固定为9, 一共有C(M/k)个组合，每次判断需要的时间代价是O(k)
 ##### Space:O(M) 递归的栈深度
 ### [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
-
+#### PreOrder & Stack
+-  前序遍历的具体做法是，每次从栈内弹出一个节点作为当前访问的节点，获得该节点的子节点，  
+- 如果子节点不为空，则依次将右子节点和左子节点压入栈内（注意入栈顺序）。  
+- 展开为单链表的做法是，维护上一个访问的节点 prev，  
+	* 每次访问一个节点时，令当前访问的节点为 curr，将 prev 的左子节点设为 null 以及将 prev 的右子节点设为 curr，  
+	* 然后将 curr 赋值给 prev，进入下一个节点的访问，直到遍历结束。  
+	* 需要注意的是，初始时 prev 为 null，只有在 prev 不为 null 时才能对 prev 的左右子节点进行更新。  
+##### Time: O(n)  
+##### Space:O(n)
 ### [127. Word Ladder(Hard)](https://leetcode.com/problems/word-ladder/)
 ### [126. Word Ladder II(Hard)](https://leetcode.com/problems/word-ladder/)
 ### [139. Word Break(Hard)](https://leetcode.com/problems/word-break/)
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA5ODE2OTcxLDUxMDY5MDYxNywxNzY4Mj
-IwOTUsLTEyODc5MzA2NDAsLTEyMjUwODUyNDIsLTUyNzMwMDI5
-MCwtMTgyNjExNTI0NCwtMTM5Mjg3Mjk0LC0xNDgxNDEzODQ1LC
-01NzExNzAyMjMsLTYzODYwNTU5MiwtMTc0OTE0ODUxNiwtODU4
-NjkwNTQ4LC0xNzc1ODQ0MjkxLC0xOTI5NDE4NzY0LDEwNDQ3MT
-E5NTgsLTE4ODk4NzQ2MjYsLTE1NjAyOTE4NjYsMTE1NzAxNDcy
-OCwxNjkzODQyODE2XX0=
+eyJoaXN0b3J5IjpbLTIwNzQ1NDAzNDEsNTEwNjkwNjE3LDE3Nj
+gyMjA5NSwtMTI4NzkzMDY0MCwtMTIyNTA4NTI0MiwtNTI3MzAw
+MjkwLC0xODI2MTE1MjQ0LC0xMzkyODcyOTQsLTE0ODE0MTM4ND
+UsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5MTQ4NTE2LC04
+NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MTg3NjQsMTA0ND
+cxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2NiwxMTU3MDE0
+NzI4LDE2OTM4NDI4MTZdfQ==
 -->
