@@ -634,7 +634,10 @@ for (int i = 0; i < size; i++) {
 - 然后对这些城市继续深度优先搜索，直到同一个连通分量的所有城市都被访问到，即可得到一个circle。
 - 遍历完全部城市以后，即可得到连通分量的总数，即circle的总数。
 ### [88. Merge sorted array(Easy)](https://leetcode.com/problems/merge-sorted-array/)
-#### Two Po
+#### Two Pointer
+- 涉及两个有序数组合并,设置i和j双指针,分别从两个数组的尾部想头部移动,并判断Ai和Bj的大小关系,从而保证最终数组有序,
+##### Time: O(m + n)
+##### Space:O(1)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
@@ -786,7 +789,7 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NjA5MjkxMiwxNjkzODQyODE2LDEwMz
+eyJoaXN0b3J5IjpbMTE1NzAxNDcyOCwxNjkzODQyODE2LDEwMz
 kxNTkxODcsLTIwMzkyNjQ5ODEsMTY3NzE5ODE2MSw2NDMxMzUy
 NjcsLTk0NzA1ODU2MCwtMTk4NTE2NzA0NywxMTg0OTc5MjI1LD
 g2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0OSwxNjEyMTc2
