@@ -638,6 +638,9 @@ for (int i = 0; i < size; i++) {
 - 涉及两个有序数组合并,设置i和j双指针,分别从两个数组的尾部想头部移动,并判断Ai和Bj的大小关系,从而保证最终数组有序,
 ##### Time: O(m + n)
 ##### Space:O(1)
+#### Merge K Sorted Array
+
+### [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 ### [15. 3Sum(Medium)](https://leetcode.com/problems/3sum/)
 ### [827. Making a Large Island(Hard)](https://leetcode.com/problems/making-a-large-island/)
 ### [238. Product of Array Except Self(Medium)](https://leetcode.com/problems/product-of-array-except-self/)
@@ -789,11 +792,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NzAxNDcyOCwxNjkzODQyODE2LDEwMz
-kxNTkxODcsLTIwMzkyNjQ5ODEsMTY3NzE5ODE2MSw2NDMxMzUy
-NjcsLTk0NzA1ODU2MCwtMTk4NTE2NzA0NywxMTg0OTc5MjI1LD
-g2MzkzODAwNiwxMTQxNDE0MDkyLC00NjIzNDU0OSwxNjEyMTc2
-ODMwLDEyMTk4Mzg1NTgsNDMxOTUxODg1LC05ODA4MTI3NjUsMT
-IzMTI4MDk4NCwtOTY1NDI2MTA0LDE2Nzc4NjA3NjcsOTIzMDEw
-MzEzXX0=
+eyJoaXN0b3J5IjpbLTcwMzczOTEyOSwxMTU3MDE0NzI4LDE2OT
+M4NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwxNjc3MTk4
+MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MTY3MDQ3LD
+ExODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIsLTQ2MjM0
+NTQ5LDE2MTIxNzY4MzAsMTIxOTgzODU1OCw0MzE5NTE4ODUsLT
+k4MDgxMjc2NSwxMjMxMjgwOTg0LC05NjU0MjYxMDQsMTY3Nzg2
+MDc2N119
 -->
