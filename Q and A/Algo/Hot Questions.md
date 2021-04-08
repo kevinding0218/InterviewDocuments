@@ -1001,7 +1001,7 @@ private static void dfs(
 6. 一旦 lo == hi，则当前搜索空间为 1 个元素，那么该元素为单个元素，我们将返回它。  
 ##### Time: O(logN)  
 ##### Space:O(1)
-### [1574. Shortest Subarray to be Removed to Make Array Sorted]()
+### [1574. Shortest Subarray to be Removed to Make Array Sorted](https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/)
 ### [408. Valid Word Abbreviation]()
 #### Two Pointers
 - 2 Pointers `s` and `t` traversal from each word starting index
@@ -1022,7 +1022,7 @@ private static void dfs(
 ### [140. Word Break II(Hard)](https://leetcode.com/problems/word-break-ii/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MzAxNDU5NCwxMjQ5MjgyNzkxLC0xMD
+eyJoaXN0b3J5IjpbLTQ0MTg3Mzc4OCwxMjQ5MjgyNzkxLC0xMD
 I3MzcwMTAsMjQ2MzM3MDM5LDUxMDY5MDYxNywxNzY4MjIwOTUs
 LTEyODc5MzA2NDAsLTEyMjUwODUyNDIsLTUyNzMwMDI5MCwtMT
 gyNjExNTI0NCwtMTM5Mjg3Mjk0LC0xNDgxNDEzODQ1LC01NzEx
