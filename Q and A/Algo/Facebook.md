@@ -38,7 +38,7 @@ Medium
 ~~973        K Closest Points to Origin~~   
 958        Check Completeness of a Binary Tree  
 ~~953        Verifying an Alien Dictionary~~
-938        Range Sum of BST   
+~~938        Range Sum of BST~~   
 921        Minimum Add to Make Parentheses Valid   
 919        Complete Binary Tree Inserter   
 824        Goat Latin
@@ -108,8 +108,9 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
-k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
-OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
-gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
+eyJoaXN0b3J5IjpbMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MD
+E3MjM4Niw1MDI3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQy
+MiwxMzY2NzIwMTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNTgsMz
+M0Nzk1NjIsMTc2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5MzI1
+OV19
 -->
