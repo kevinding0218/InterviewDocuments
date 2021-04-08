@@ -19,7 +19,7 @@ Hard
 329        Longest Increasing Path in a Matrix   
 
 Medium
-5        Longest Palindromic Substring   
+~~5        Longest Palindromic Substring~~   
 27        Remove Element   
 443        String Compression  
 930        Binary Subarrays With Sum
@@ -108,9 +108,9 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMTAwNjA0NiwxNDg5MzM1ODM4LDQwNT
-U5NzA4NiwtODcwMTcyMzg2LDUwMjc5NjgzMCwyMDg1NTYzNTk0
-LC0xNTE5NjgyNDIyLDEzNjY3MjAxMzgsLTE4MjI0NjczMTgsMT
-A5MDQ2NjA1OCwzMzQ3OTU2MiwxNzY4MjUxNjU4LDIwMjMxMDEy
-MiwxODUzODkzMjU5XX0=
+eyJoaXN0b3J5IjpbLTc2NTUxNzYwMiwxMTAxMDA2MDQ2LDE0OD
+kzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNzk2ODMw
+LDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEzOCwtMT
+gyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3NjgyNTE2
+NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
 -->
