@@ -50,7 +50,7 @@ Medium
 ~~621        Task Scheduler~~   
 ~~560        Subarray Sum Equals K~~   
 ~~547        Friend Circles~~   
-540        Single Element in a Sorted Array   
+~~540        Single Element in a Sorted Array~~   
 528        Random Pick with Weight   
 ~~498        Diagonal Traverse~~   
 485        Max Consecutive Ones
@@ -108,9 +108,9 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MD
-E3MjM4Niw1MDI3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQy
-MiwxMzY2NzIwMTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNTgsMz
-M0Nzk1NjIsMTc2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5MzI1
-OV19
+eyJoaXN0b3J5IjpbMTEwMTAwNjA0NiwxNDg5MzM1ODM4LDQwNT
+U5NzA4NiwtODcwMTcyMzg2LDUwMjc5NjgzMCwyMDg1NTYzNTk0
+LC0xNTE5NjgyNDIyLDEzNjY3MjAxMzgsLTE4MjI0NjczMTgsMT
+A5MDQ2NjA1OCwzMzQ3OTU2MiwxNzY4MjUxNjU4LDIwMjMxMDEy
+MiwxODUzODkzMjU5XX0=
 -->
