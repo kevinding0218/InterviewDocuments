@@ -913,16 +913,17 @@ ans.insert(0, carry == 1 ? carry : "");// 判断最后一次计算是否有进�
 ### [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
 ### DFS & Backtrack
 - Sort array 减少回溯次数
-- 定义递归DFS为找到所有以combination开头的那些和为target的组合，并丢到results里面。
-- 如果当前sum小于或等于target，继续dfs，否则中止。并且下一个可以加入combination中的数 至少从candidate的startIdx开始
+- 定义递归DFS为找到所有以combination开头的那些和为target的组合（出口），并丢到results里面。
+	- 拆解）如果当前sum小于或等于target，继续dfs，否则中止。
+	- 并且下一个可以加入combination中的数 至少从candidate的startIdx开始
 ### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg2MDcxNTYxLC0xMjI1MDg1MjQyLC01Mj
-czMDAyOTAsLTE4MjYxMTUyNDQsLTEzOTI4NzI5NCwtMTQ4MTQx
-Mzg0NSwtNTcxMTcwMjIzLC02Mzg2MDU1OTIsLTE3NDkxNDg1MT
-YsLTg1ODY5MDU0OCwtMTc3NTg0NDI5MSwtMTkyOTQxODc2NCwx
-MDQ0NzExOTU4LC0xODg5ODc0NjI2LC0xNTYwMjkxODY2LDExNT
-cwMTQ3MjgsMTY5Mzg0MjgxNiwxMDM5MTU5MTg3LC0yMDM5MjY0
-OTgxLDE2NzcxOTgxNjFdfQ==
+eyJoaXN0b3J5IjpbMTEzNjA4MzAzMCwtMTIyNTA4NTI0MiwtNT
+I3MzAwMjkwLC0xODI2MTE1MjQ0LC0xMzkyODcyOTQsLTE0ODE0
+MTM4NDUsLTU3MTE3MDIyMywtNjM4NjA1NTkyLC0xNzQ5MTQ4NT
+E2LC04NTg2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MTg3NjQs
+MTA0NDcxMTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2NiwxMT
+U3MDE0NzI4LDE2OTM4NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2
+NDk4MSwxNjc3MTk4MTYxXX0=
 -->
