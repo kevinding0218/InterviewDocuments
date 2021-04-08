@@ -698,7 +698,7 @@ public ListNode divide(ListNode[] lists, int start, int end) {
 2.* 第二步，在数组numbers中遍历，每次固定numbers[i]作为第一个数  
 3. 建立双指针left和right，初始化分别指向i + 1和len(numbers) - 1  
 4. 求出此时的三数之和sum，如果sum和target恰好相等，我们可以直接返回target。  
-5. 比较sum和closest谁距离target更近，如果是sum，那么将closest更新为target  
+5. 比较sum和closest谁距离target更近，如果是sum，那么将closest更新为target   `if (Math.abs(sum - target) < Math.abs(closest - target)) { closest = sum; }`
 6. 判断sum和target的大小关系，如果sum > target，那么right左移；反之，left右移。继续第二步的过程，直到left >= right。  
 7. 此外，当数组中有重复元素时，为了避免重复运算，在代码中添加了三处剪枝操作。当指针指向新的位置和旧的位置的值相等时，我们继续移动指针。  
 ##### Time：O(n^2)  
@@ -882,11 +882,11 @@ sumRange(i, j) = prefixSum(j + 1) - prefixSum(i)
 ##### Time: O(number of tasks + number of different task categories)
 ##### Space: O(number of different task categories)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MTkyOTg2NCwtMTc0OTE0ODUxNiwtOD
-U4NjkwNTQ4LC0xNzc1ODQ0MjkxLC0xOTI5NDE4NzY0LDEwNDQ3
-MTE5NTgsLTE4ODk4NzQ2MjYsLTE1NjAyOTE4NjYsMTE1NzAxND
-cyOCwxNjkzODQyODE2LDEwMzkxNTkxODcsLTIwMzkyNjQ5ODEs
-MTY3NzE5ODE2MSw2NDMxMzUyNjcsLTk0NzA1ODU2MCwtMTk4NT
-E2NzA0NywxMTg0OTc5MjI1LDg2MzkzODAwNiwxMTQxNDE0MDky
-LC00NjIzNDU0OV19
+eyJoaXN0b3J5IjpbLTI2Mzg1MTc2LC0xNzQ5MTQ4NTE2LC04NT
+g2OTA1NDgsLTE3NzU4NDQyOTEsLTE5Mjk0MTg3NjQsMTA0NDcx
+MTk1OCwtMTg4OTg3NDYyNiwtMTU2MDI5MTg2NiwxMTU3MDE0Nz
+I4LDE2OTM4NDI4MTYsMTAzOTE1OTE4NywtMjAzOTI2NDk4MSwx
+Njc3MTk4MTYxLDY0MzEzNTI2NywtOTQ3MDU4NTYwLC0xOTg1MT
+Y3MDQ3LDExODQ5NzkyMjUsODYzOTM4MDA2LDExNDE0MTQwOTIs
+LTQ2MjM0NTQ5XX0=
 -->
