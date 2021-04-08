@@ -52,16 +52,16 @@ Medium
 210        Course Schedule II   [Link](https://leetcode.com/problems/course-schedule-ii/)
 163        Missing Ranges
 155        Min Stack [Link](https://leetcode.com/problems/min-stack/)
-138        Copy List with Random Pointer   my
+
 136        Single Number   [Link](https://leetcode-cn.com/problems/single-number/solution/zhi-chu-xian-yi-ci-de-shu-zi-by-leetcode-solution/)
 130        Surrounded Regions    [Link](https://leetcode.com/problems/surrounded-regions/submissions/)
-
 29        Divide Two Integers   [Link](https://leetcode-cn.com/problems/divide-two-integers/solution/shua-chuan-lc-er-fen-bei-zeng-cheng-fa-j-m73b/)
 1047        Remove All Adjacent Duplicates In String [Link](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/solution/shan-chu-zi-fu-chuan-zhong-de-suo-you-xi-4ohr/)
 ~~426        Convert Binary Search Tree to Sorted Doubly Linked Lis~~t   
 https://www.1point3acres.com/bbs/thread-679908-1-1.html
 230        Kth Smallest Element in a BST   
 
+138        Copy List with Random Pointer   my
 98        Validate Binary Search Tree   my
 92        Reverse Linked List II   my
 57        Insert Interval  my
@@ -110,10 +110,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjQ1MTUzNDgsMTk3MDgyNzgwNiwxMj
-U3NTcyMzE4LDgzMTIwMDg2MiwtNzY1NTE3NjAyLDExMDEwMDYw
-NDYsMTQ4OTMzNTgzOCw0MDU1OTcwODYsLTg3MDE3MjM4Niw1MD
-I3OTY4MzAsMjA4NTU2MzU5NCwtMTUxOTY4MjQyMiwxMzY2NzIw
-MTM4LC0xODIyNDY3MzE4LDEwOTA0NjYwNTgsMzM0Nzk1NjIsMT
-c2ODI1MTY1OCwyMDIzMTAxMjIsMTg1Mzg5MzI1OV19
+eyJoaXN0b3J5IjpbMjE4NzM1MDA4LDE5NzA4Mjc4MDYsMTI1Nz
+U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
+LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
+k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
+OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
+gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
 -->
