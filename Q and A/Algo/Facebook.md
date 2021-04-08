@@ -49,7 +49,7 @@ Medium
 227        Basic Calculator II   [Link](https://leetcode-cn.com/problems/basic-calculator-ii/)
 215        Kth Largest Element in an Array   [Link](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/shu-zu-zhong-de-di-kge-zui-da-yuan-su-by-leetcode-/)
 211        Design Add and Search Words Data Structure  [Link](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/solution/yu-dao-tong-pei-fu-shi-di-gui-chu-li-python-dai-ma/)
-210        Course Schedule II   
+210        Course Schedule II   [Link](https://leetcode.com/problems/course-schedule-ii/)
 163        Missing Ranges
 155        Min Stack
 138        Copy List with Random Pointer   
@@ -109,10 +109,10 @@ https://leetcode.com/discuss/interview-question/346342/
 https://leetcode.com/playground/2WvsFojG
 https://leetcode.com/problems/diagonal-traverse/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNzc5NjM1MywxOTcwODI3ODA2LDEyNT
-c1NzIzMTgsODMxMjAwODYyLC03NjU1MTc2MDIsMTEwMTAwNjA0
-NiwxNDg5MzM1ODM4LDQwNTU5NzA4NiwtODcwMTcyMzg2LDUwMj
-c5NjgzMCwyMDg1NTYzNTk0LC0xNTE5NjgyNDIyLDEzNjY3MjAx
-MzgsLTE4MjI0NjczMTgsMTA5MDQ2NjA1OCwzMzQ3OTU2MiwxNz
-Y4MjUxNjU4LDIwMjMxMDEyMiwxODUzODkzMjU5XX0=
+eyJoaXN0b3J5IjpbODAyMzQwNTI2LDE5NzA4Mjc4MDYsMTI1Nz
+U3MjMxOCw4MzEyMDA4NjIsLTc2NTUxNzYwMiwxMTAxMDA2MDQ2
+LDE0ODkzMzU4MzgsNDA1NTk3MDg2LC04NzAxNzIzODYsNTAyNz
+k2ODMwLDIwODU1NjM1OTQsLTE1MTk2ODI0MjIsMTM2NjcyMDEz
+OCwtMTgyMjQ2NzMxOCwxMDkwNDY2MDU4LDMzNDc5NTYyLDE3Nj
+gyNTE2NTgsMjAyMzEwMTIyLDE4NTM4OTMyNTldfQ==
 -->
