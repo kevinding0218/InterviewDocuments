@@ -142,15 +142,15 @@ public static int removeDuplicatesMoreThanKTimes(int[] nums, int k) {
 ```
 ## Matrix
 ### 基础
-- 设一维数组下标为index，二维数组长度为m * n，则：
+- 设一维数组下标为index，二维数组长度为rows * cols，则：
 - 一维数组转换为二维数组
 ```
-row = index / n 
-col = index % n
+row = index / cols 
+col = index % cols
 ```
 - 二维数组转换为一维数组
 ```
-index = col + row * n
+index = y+ x * n
 ```
 ## Tree
 ### BST
@@ -246,8 +246,8 @@ public static List<List<Integer>> bfs(TreeNode root) {
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDUxMDA3MDYsLTIwMDc1NzMwMjUsMj
-c0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MDQ3NzY0OSwxNzU2MDE2
-ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4Nyw4OTQ2NTA4MzUsLT
-E1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
+eyJoaXN0b3J5IjpbLTUzODAwMDYwNiwtMTE0NTEwMDcwNiwtMj
+AwNzU3MzAyNSwyNzQwNDcyMjEsLTM2MDYyOTQ5MywtOTgwNDc3
+NjQ5LDE3NTYwMTY4NDUsMjAzNDU0NzkzNCwtNjAxNzc0NTg3LD
+g5NDY1MDgzNSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
 -->
