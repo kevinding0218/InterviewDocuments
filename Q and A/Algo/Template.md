@@ -148,9 +148,9 @@ public static int removeDuplicatesMoreThanKTimes(int[] nums, int k) {
 x = index / cols 
 y = index % cols
 ```
-- 二维数组(x,y)转换为一维数组(index_
+- 二维数组(x,y)转换为一维数组index_
 ```
-index = y + x * n
+index = y + x * cols
 ```
 ## Tree
 ### BST
@@ -246,9 +246,8 @@ public static List<List<Integer>> bfs(TreeNode root) {
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjA5NTk0NzYsLTExNDUxMDA3MDYsLT
-IwMDc1NzMwMjUsMjc0MDQ3MjIxLC0zNjA2Mjk0OTMsLTk4MDQ3
-NzY0OSwxNzU2MDE2ODQ1LDIwMzQ1NDc5MzQsLTYwMTc3NDU4Ny
-w4OTQ2NTA4MzUsLTE1MDU4NDcwNTQsLTE2MjUzMDEwNDZdfQ==
-
+eyJoaXN0b3J5IjpbMTE2MDcwNjk4MSwtMTE0NTEwMDcwNiwtMj
+AwNzU3MzAyNSwyNzQwNDcyMjEsLTM2MDYyOTQ5MywtOTgwNDc3
+NjQ5LDE3NTYwMTY4NDUsMjAzNDU0NzkzNCwtNjAxNzc0NTg3LD
+g5NDY1MDgzNSwtMTUwNTg0NzA1NCwtMTYyNTMwMTA0Nl19
 -->
