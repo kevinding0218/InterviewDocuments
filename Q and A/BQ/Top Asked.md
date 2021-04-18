@@ -12,7 +12,7 @@
 1. Who you are
 2. Highlight reel
 3. Why you are here
-- I've been in the software development industry for eight plus years, and I'm currently the senior full stack software engineer at Cvent and also the team lead as part of my daily job. I've been awarded couple of times with my new movement to Cvent because I was able to dive into new tech stack quickly and become the expert, delivered more than 50% amount of the team developement work in either features work or fixing bugs, and the ability to mentor and support my team member to unblock our development progress to make things much more efficient.  That's what I love to do, I love to be the top performer and I love to bring myself up every day. 
+- I've been in the software development industry for eight plus years, and I'm currently the senior full stack software engineer at Cvent and also the team lead as part of my daily job. I've been awarded couple of times with my new movement to Cvent because I was able to dive into new tech stack quickly and become the expert, delivered more than 50% amount of the team developement work in either features work or fixing bugs, and the ability to mentor and support my team member to unblock our development progress to make things much more efficient.  That's what I love to do, I love to be the top performer and I love to bring myself up every day. My current tech stack as you see on the resume are XXX, Prior, I worked with McKesson coorporation where my tech stack would be XX. I've also got experience with 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDk2NjE1NDcsMTY2NDIwNjMxN119
+eyJoaXN0b3J5IjpbLTIwNTkxMzc4NDEsMTY2NDIwNjMxN119
 -->
