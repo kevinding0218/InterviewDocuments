@@ -12,7 +12,7 @@
 1. Who you are
 2. Highlight reel
 3. Why you are here
-- 
+- I've been in the software development industry for eight plus years, and I'm currently the senior full stack software engineer at Cvent and also the team lead as part of my daily job. I've been 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNzc1Nzc2OV19
+eyJoaXN0b3J5IjpbLTE1Mzk2MTM5ODJdfQ==
 -->
