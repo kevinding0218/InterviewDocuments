@@ -12,8 +12,8 @@
 #### For companies that don't offer a bonus
 - Hey since you don't offer me any bonuses, what I want to be mindful of this inflation, and you know living costs are just keep going up. So essentially if I don't take this into consideration now, the longer I stay with the company, essentially the less my take-home pay is going to be, and I don't want to be in a position where salary is a thing for me to have to leave the company, so I hope you understand where I'm coming from.
 #### Comminucate via Email
-- This is a lot
+- This is a lot of good information, let me just take some time to process all of this and get back to you later. Would that make sense for you/would that work for you?
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NDY2NzIxN119
+eyJoaXN0b3J5IjpbLTQwMzczNDcwOV19
 -->
