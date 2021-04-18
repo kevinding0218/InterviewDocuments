@@ -17,7 +17,12 @@
 - I've worked in a variety of environments from high pressure to casual to highly collaborative, to having to find my own way. I adapt well to most. I'm not familiar with the environment is like here. Could you tell me a bit more about it?
 - From talking to your team and everything I've read about the company. I discovered that your organization prides itself on being fast paced, high-achieving, and innovative. I thrive in those kinds of environments. Does that match up with the way you would characterize the environment?
 #### Where would you see yourself in five years?
-- 
+- This role presents new challenges for me. And I want to spend the next five years developing deep expertise in the publication space. I know this role deals a lot with XXX which is a skill I would like to fully master in the coming years. After I've built up my credibility and experience in the next two, three years at your company, I hope to mentor others coming into the publication space as mentorship is a big passion of mine.
+- I want more ownership and able to make a bigger impact in an organization.
+- I want to work in a more structured environment.
+"I'd like the potential
+"to have more resources
+"to achieve big goals.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MzUxOTY4NywxNjY0MjA2MzE3XX0=
+eyJoaXN0b3J5IjpbLTE3Mjc5NDc4NzgsMTY2NDIwNjMxN119
 -->
