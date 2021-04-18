@@ -7,7 +7,7 @@
 - Always be telling stories
 	1. Name something that maybe you aren't as good at, or a skill that is a work in progress
 	2. Describe how you're building that skill
-- About a year ago my boss mentioned that need to try just start on the work without thinking too much about every detailed, and I thought a lot about this feedback and why she was saying that. And what I realized is that I am a very detailed oriented person, 
+- About a year ago my boss mentioned that that I could try just start on the work without thinking too much about every detailed aspective, and I thought a lot about this feedback and why she was saying that. And what I realized is that I am a very detailed oriented person, I always feel we need to get everything prepared, every detailed use case or edge case fully covered, sort out all
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NjI1NzQ3MV19
+eyJoaXN0b3J5IjpbLTY4ODc5NDc1M119
 -->
