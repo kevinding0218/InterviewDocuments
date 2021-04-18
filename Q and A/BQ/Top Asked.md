@@ -20,8 +20,20 @@
 - This role presents new challenges for me. And I want to spend the next five years developing deep expertise in the publication space. I know this role deals a lot with XXX which is a skill I would like to fully master in the coming years. After I've built up my credibility and experience in the next two, three years at your company, I hope to mentor others coming into the publication space as mentorship is a big passion of mine.
 - I want more ownership and able to make a bigger impact in an organization.
 - I want to work in a more structured environment.  I'd like the potential to have more resources to achieve big goals.
-#### Why I wanted to work there
-- 
+#### Team conflict
+- I had a coworker who I was depending on for reports, but he would constantly tell me that he wouldn't be able to get it to me in time, right when the deadline was about to hit, which impacted my ability to do my job in time.
+- I respected him, so I took the concern straight to him to talk it through. I first showed empathy and said, I can imagine you have so much that you're working on right now and I can tell that you're working hard. 
+- Then I was direct about how he was affecting me, so I said, and I wanted to discuss the past three deadlines that we set that you weren't able to meet. When you don't get me the reports on time, it delays the entire production process and leads the rest of us to take several hours to readjust the schedule.
+- How can we ensure this doesn't happen in the future? And then finally you explain the result.I was nervous about the conversation
+but he opened up to me
+about how he has always tried to chase down
+the information for the report
+and so we came up with a streamlined solution
+where we now submit a form with every report request
+and he now he stopped putting off the task
+and from then on we have been getting the report on time.
+And that's it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MTk0NjAwMSwxNjY0MjA2MzE3XX0=
+eyJoaXN0b3J5IjpbMTcwNDQzMjY2OCwxNjYxOTQ2MDAxLDE2Nj
+QyMDYzMTddfQ==
 -->
