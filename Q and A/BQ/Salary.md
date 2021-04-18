@@ -10,7 +10,7 @@
 - Bouns structure: how does that work? When is the payout, is it once a year or twice a year,
 - Is there any other bonus on top of, you know, what you guys offer and things like 
 #### For companies that don't offer a bonus
-- Hey since you don't off
+- Hey since you don't offer me any bonuses, what I want to be mindful of this inflation, and you know living costs are just keep going up. So essentially if I don't take this into consideration now, the longer I stay with the company, essentially the less my take-home pay is going to be, and I don't want to be in a position where sala
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NjQyMDg3NV19
+eyJoaXN0b3J5IjpbLTE4ODM1MTY4NDddfQ==
 -->
