@@ -5,7 +5,7 @@
 - That's a really good start
 #### When got the job offer
 - Truthfully, you know, I've been really busy prepping for the interview, I haven't put much thought into this. If you don't mind, just kindly go over the compensation structure and the perks and benefits? Then we can take it from there.
-- You know, this is a little bit newer for me, and everyone has a different compensation structure, I know I'm not comparing apples to apples, if you 
+- You know, this is a little bit newer for me, and everyone has a different compensation structure, I know I'm not comparing apples to apples, if you don't mind just sharing the numbers with me first, it would be super productive/effective/helpful for me. I would greatly appreciated it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjE1MDA1MjVdfQ==
+eyJoaXN0b3J5IjpbOTMwMzY2MDM2XX0=
 -->
