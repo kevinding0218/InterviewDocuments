@@ -160,8 +160,12 @@ Temporary Storage -> Message Retriever -> MS Client -- Task Creator -- Task Exec
 	- For example, number of messages waiting for delivery, number of messages failed to deliver, etc.
 	- This usually means that integration with a monitoring system is required.
 ### Final review
-
+- Let's take one final look at our high-level architecture and evaluate whether all non-functionalrequirements are met.
+#### Did we design a scalable system?
+- Yes. Every component is horizontally scalable. Sender service also has a great potential for vertical scaling, when more powerful hosts can execute more delivery tasks.
+#### Did we design a highly available system?
+- Yes. There is no single point of failure, each component is deployed across several datacenters.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMjEyNTU2MSwtMTEzMzA2NjA5NCw4OD
-Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbLTE4NTk3NjQ5ODYsLTExMzMwNjYwOTQsOD
+g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
 -->
