@@ -74,13 +74,16 @@ request ---> Reverse Proxy			Local Disk		Cache
 FrontEnd Host				[A-G][H-N][O-T][U-Z]
 ```
 2. In the second option we do not use any coordinator. Instead, we make sure that every FrontEnd host can obtain information about all Metadata service hosts. And every FrontEnd host is notified when more Metadata service hosts are added or if any Metadata host died due to a hardware failure.
-	- Gossip protocol: 
+	- Gossip protocol: Computer systems typically implement this type of protocol with a form of random "peer selection": with a given frequency, each machine picks another machine at random and shares data.
 ```
 FrontEnd Host	---			[A-G]
 				\			[H-N]
 				\			[O-T][U-Z]
 ```
+#### Temporary Stroage Service
+- messages supposed to stay in this storage for a very short period of time. Sooner we can deliver messages to subscribers is better, unless topic is configured to deliver messages with some delay.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTYzNjcwMzIsLTExMzMwNjYwOTQsOD
-g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
+eyJoaXN0b3J5IjpbMTU1ODEwMzMzOCwtMTEzMzA2NjA5NCw4OD
+Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
