@@ -42,7 +42,13 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 ##### metrics
 - We also need to emit metrics. This is just a key-value data that may be later aggregated and used to monitor service health and gather statistics. For example, number of requests, faults, calls latency, we will need all this information for system monitoring.
 ##### Audit
+- Also, we may need to write information that may be used for audit, for example log who and when made requests to a specific API in the system.
+##### Agent
+- Important to understand here, is that FrontEnd service is responsible for writing log data. But the actual log data processing is managed by other components, usually called agents. Agents are responsible for data aggregation and transferring logs to other system, for post processing and storage. This separation of responsibilities is what helps to make FrontEnd service simpler, faster and more robust.
+#### Metadata Service
+- A web service responsible for storing information about topics and subscriptions in the database. It is a **distributed cache**.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzE4ODk5NDMsLTExMzMwNjYwOTQsOD
+eyJoaXN0b3J5IjpbLTExOTQ0Nzg1ODYsLTExMzMwNjYwOTQsOD
 g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
 -->
