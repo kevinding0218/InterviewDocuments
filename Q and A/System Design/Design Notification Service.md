@@ -129,8 +129,14 @@ FrontEnd Host	---			[A-G]
 - This approach allows to better handle slow Sender service host issues. Each task is responsible for message delivery to a single subscriber. Tasks may delegate actual delivery to other microservices.
 	- For example, a microservice responsible for sending emails or SMS messages.
 ##### How to make sure notifications will not be sent to users as spam?
-
+- We need to register subscribers. All subscribers need to confirm they agree to get notification from our service.
+- Every time new subscriber is registered, we may send a confirmation message to the HTTP endpoint or email.
+- Endpoint and email owners need to confirm the subscription request. When publishers send messages to our notification service, FrontEnd service will make sure duplicate submissions are eliminated.
+- This helps to avoid duplicates while accepting messages from publishers.
+##### Retries
+- when the Sender service delivers messages to subscribers, retries caused by network issues or subscriber’s internal issues may cause duplicate messages at the subscriber end.
+- So, subscribers also become responsible for avoiding duplicates.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNzk3ODczMSwtMTEzMzA2NjA5NCw4OD
-Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbMzM2NjUwMzc3LC0xMTMzMDY2MDk0LDg4Nj
+Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
 -->
