@@ -132,10 +132,10 @@ FrontEnd Host	---			[A-G]
 											Metadata Service							Task (send email)
 													|									/
 Temporary Storage -> Message Retriever -> MS Client -- Task Creator -- Task Executor-Task (send SMS)
-							|								|										\	
-				use counting semaphore to			use counting semaphore
+							|								|							\	
+				use counting semaphore to			use counting semaphore				Task (mobile push)
 				restirct 3 of read message			to keep track of available
-				threads								sender threads											Task (mobile push)
+				threads								sender threads						
 ```
 ##### How to make sure notifications will not be sent to users as spam?
 - We need to register subscribers. All subscribers need to confirm they agree to get notification from our service.
@@ -162,6 +162,6 @@ Temporary Storage -> Message Retriever -> MS Client -- Task Creator -- Task Exec
 ### Final review
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NTc0OTg1MywtMTEzMzA2NjA5NCw4OD
+eyJoaXN0b3J5IjpbLTQyMjEyNTU2MSwtMTEzMzA2NjA5NCw4OD
 Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
