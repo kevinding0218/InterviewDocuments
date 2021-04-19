@@ -39,6 +39,14 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 ### Component in detail
 #### FrontEnd Service
 - FrontEnd is a lightweight web service responsible for: request validation, authentication and authorization, SSL termination, server-side encryption, caching, throttling, request dispatching and deduplucation, usage data collection. Specifically, let’s take a look at a FrontEnd host and discuss what components live there. When request lands on the host, the first component that picks it up is a Reverse Proxy. 
+```
+								FrontEnd Service
+					/					|			\
+request ---> Reverse Proxy			Local Disk		Cache
+								/		|		\
+						ServiceLogs   Metris	AuditLogs
+						Agent
+```
 ##### Proxy
 	- Reverse proxy is a lightweight server responsible for several things. Such as SSL termination, when requests that come over HTTPS are decrypted and passed further in unencrypted form. At the same time proxy is responsible for encrypting responses while sending them back to clients. 
 	- Second responsibility is compression (for example with gzip), when proxy compresses responses before returning them back to clients. This way we reduce the amount of bandwidth required for data transfer.
@@ -60,6 +68,6 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 1. In the first option we introduce a component responsible for coordination. This component knows about all the Metadata service hosts, as those hosts constantly send heartbeats to it. Each FrontEnd host asks Configuration service what Metadata service host contains data for a specified hash value.
 	- Every time we scale out and add more Metadata service hosts, Configuration service becomes aware of the changes and re-maps hash key ranges.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMjkzMzg5NywtMTEzMzA2NjA5NCw4OD
-Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbOTU2OTkxOTY3LC0xMTMzMDY2MDk0LDg4Nj
+Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
 -->
