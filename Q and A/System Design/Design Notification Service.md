@@ -73,8 +73,14 @@ request ---> Reverse Proxy			Local Disk		Cache
 		/					\\\
 FrontEnd Host				[A-G][H-N][O-T][U-Z]
 ```
-2. In the second option we do not use any coordinator.
+2. In the second option we do not use any coordinator. Instead, we make sure that every FrontEnd host can obtain information about all Metadata service hosts. And every FrontEnd host is notified when more Metadata service hosts are added or if any Metadata host died due to a hardware failure.
+	- Gossip protocol: 
+```
+FrontEnd Host	---			[A-G]
+				\			[H-N]
+				\			[O-T][U-Z]
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczMTYwNDI3LC0xMTMzMDY2MDk0LDg4Nj
-Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
+eyJoaXN0b3J5IjpbLTEwMTYzNjcwMzIsLTExMzMwNjYwOTQsOD
+g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
 -->
