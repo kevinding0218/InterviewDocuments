@@ -97,8 +97,13 @@ FrontEnd Host	---			[A-G]
 - Distributed message queues have all the characteristics we require and also can be discussed in more details.
 #### Stream-Processing
 - f you want to further impress interviewer, you can talk about other options, for example stream-processing platforms. Discuss pros and cons and compare this option with a distributed queue solution. And of course, do not forget to mention some best-in-class solutions, for example Apache Kafka and Amazon Kinesis.
-#### Sender 
+#### Sender Component
+- After message is successfully published and stored in the Temporary Storage, we now can start sending this message to subscribers.
+- If you design a solution that involves data retrieval, processing and sending results in a fan-out manner, meaning that messages are sent to multiple destinations in parallel, think of the ideas we will discuss next.
+1. The first thing that Sender does is message retrieval. This is achieved by having a pool of threads, where each thread tries to read data from the Temporary Storage. We can implement a naive approach and always start a predefined number of message retrieval threads.
+	- The problem with this approach is that some threads may be idle, as there may not be enough messages to retrieve. Or another extreme, when all threads may quickly become occupied and the only way to scale message retrieval would be adding more Sender hosts.
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MzEwNDkyNywtMTEzMzA2NjA5NCw4OD
-Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbNzE2ODM3NCwtMTEzMzA2NjA5NCw4ODY0Nz
+EyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
