@@ -139,8 +139,19 @@ FrontEnd Host	---			[A-G]
 - Other option may be to send undelivered messages to a different subscriber. Or store such messages in a system that can be monitored by subscribers and subscribers then decide what to do with undelivered messages.
 - It would be great if our notification system provides a way for subscribers to define retry policy and what to do in cases when a message cannot be delivered after retries limit is reached.
 ##### First-come-first-delivered Gurantee?
+- it does not guarantee any specific order. 
+- Even if messages are published with some attribute that preserves the order, for example sequence number or timestamps, delivery of messages does not honor this.
+- Delivery tasks can be executed in any order, slower Sender hosts may fall behind, message delivery attempt may fail and retry will arrive in a wrong order.
+##### Security
+- Security always has to be a top priority. We need to make sure only authenticated publishers can publish messages, only registered subscribers can receive them, messages are always delivered to the specified set of subscribers and never to anyone else.
+- Encryption using SSL over HTTP helps to protect messages in transit. And we also need to encrypt messages while storing them.
+##### Monitoring
+- We need to setup monitoring for every microservice we discussed, as well as for the end-to-end customer experience.
+- We also need to give customers ability to track state of their topics.
+	- For example, number of messages waiting for delivery, number of messages failed to deliver, etc.
+	- This usually means that integration with a monitoring system is required.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MzAyMTcwMiwtMTEzMzA2NjA5NCw4OD
-Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbNTcxMjMwMTQ1LC0xMTMzMDY2MDk0LDg4Nj
+Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
 -->
