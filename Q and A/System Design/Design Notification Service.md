@@ -46,7 +46,7 @@ request ---> Reverse Proxy			Local Disk		Cache
 								/		|		\
 						ServiceLogs   Metris	AuditLogs	(Agents)
 							|			|			|
-						 SL Storage    M Storage	Audit Storage
+						 SL Storage    M Storage  Audit Storage
 ```
 ##### Proxy
 	- Reverse proxy is a lightweight server responsible for several things. Such as SSL termination, when requests that come over HTTPS are decrypted and passed further in unencrypted form. At the same time proxy is responsible for encrypting responses while sending them back to clients. 
@@ -66,9 +66,9 @@ request ---> Reverse Proxy			Local Disk		Cache
 - When our notification service becomes so popular that we have millions of topics, all this information cannot be loaded into a memory on a single host. Instead, information about topics is divided between hosts in a cluster.
 - Cluster represents a consistent hashing ring. Each FrontEnd host calculates a hash, for example MD5 hash, using some key, for example a combination of topic name and topic owner identifier. Based on the hash value, FrontEnd host picks a corresponding Metadata service host.
 ##### how FrontEnd hosts know which Metadata service host to call.
-1. In the first option we introduce a component responsible for coordination. This component knows about all the Metadata service hosts, as those hosts constantly send heartbeats to it. Each FrontEnd host asks Configuration service what Metadata service host contains data for a specified hash value.
+1. In the first option we introduce a component responsible for coordination(Configuration Service, e.g. ZooKeper). This component knows about all the Metadata service hosts, as those hosts constantly send heartbeats to it. Each FrontEnd host asks Configuration service what Metadata service host contains data for a specified hash value.
 	- Every time we scale out and add more Metadata service hosts, Configuration service becomes aware of the changes and re-maps hash key ranges.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzM3MDAyMDEsLTExMzMwNjYwOTQsOD
+eyJoaXN0b3J5IjpbLTIwNzQyNDA1MjAsLTExMzMwNjYwOTQsOD
 g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
 -->
