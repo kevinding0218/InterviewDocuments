@@ -14,13 +14,16 @@ message to a topic and subscribe to a topic to receive published messages.
 - highly available and survive hardware failures and network partitions; fast, so that messages are delivered to subscribers as soon as possible;and durable, so that messages are not lost and delivered to each subscriber at least once.
 #### High level architectureenter image description here```
 ```
-		
-
-Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Temporary Storage --- Sender ---
+				Metadata Database
+						|
+				Metadata Service ---------------------------------------------------------------------|	
+						|																			  |
+Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Temporary Storage --- Sender 	--- Subscribe A, B, C
 ```
-
+- All requests coming from our clients will go through a load balancer first.
+This will ensure requests are equally distributed among requests processing servers.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NDU1MzUxMiwtMTEzMzA2NjA5NCw4OD
+eyJoaXN0b3J5IjpbLTU1NTE0ODE2NSwtMTEzMzA2NjA5NCw4OD
 Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
