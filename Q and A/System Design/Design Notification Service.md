@@ -12,7 +12,7 @@ message to a topic and subscribe to a topic to receive published messages.
 - When we talk about non-functional requirements, we basically mean such system qualities as scalability, maintainability, testability and others.
 - As for non-functional requirements, we want our service to be scalable and support a big number of topics, publishers and subscribers; 
 - highly available and survive hardware failures and network partitions; fast, so that messages are delivered to subscribers as soon as possible;and durable, so that messages are not lost and delivered to each subscriber at least once.
-#### High level architectureenter image description here```
+### High level architectureenter image description here```
 ```
 				Metadata Database
 						|
@@ -28,8 +28,11 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 	- Second, Metadata service will act as a caching layer between the database and other components. We do not want to hit database with every message published to the system. We want to retrieve topic metadata from cache.
 - We need to store messages for some period of time. This period will generally be short if all subscribers are available and message was successfully sent to all of them. Or we may need to store messages a bit longer (say several days), so that messages can be retried later if some subscriber is not available right now. And one more component we need is the one that retrieves messages from the message store and sends them to subscribers.
 - Sender also needs to call Metadata service to retrieve information about subscribers. When create topic and subscribe APIs are called, we just need to store all this information in the database.
+- We followed some pretty common patterns, like having a FrontEnd service behind a load balancer. And having a database for storing metadata and hide this database behind some facade, which is a distributed cache microservice.
+#### Component in detail
+- FrontEnd is a lightweight web service responsible for: request validation, authentication and authorization, SSL termination, server-side encryption, caching, throttling, request dispatching and deduplucation, usage data collection.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTM2MzMxOTIsLTExMzMwNjYwOTQsOD
-g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
+eyJoaXN0b3J5IjpbMTE4NTY1NzYzNCwtMTEzMzA2NjA5NCw4OD
+Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
