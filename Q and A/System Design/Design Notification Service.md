@@ -93,7 +93,12 @@ FrontEnd Host	---			[A-G]
 	- we can mention several well-regarded names of these two database types. For example, Apache Cassandra and Amazon DynamoDB.
 #### In-memory storage (redis)
 - We better choose an in-memory store that supports persistence, so that messages can live for several days before being dropped. And also mention some great in-memory storage solutions like Redis.
+#### Message Queues
+- Distributed message queues have all the characteristics we require and also can be discussed in more details.
+#### Stream-Processing
+- f you want to further impress interviewer, you can talk about other options, for example stream-processing platforms. Discuss pros and cons and compare this option with a distributed queue solution. And of course, do not forget to mention some best-in-class solutions, for example Apache Kafka and Amazon Kinesis.
+#### Sender 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg3NTAyMzY1LC0xMTMzMDY2MDk0LDg4Nj
-Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
+eyJoaXN0b3J5IjpbLTI4MzEwNDkyNywtMTEzMzA2NjA5NCw4OD
+Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
