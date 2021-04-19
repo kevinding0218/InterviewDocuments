@@ -15,8 +15,10 @@ subscribe(topicName, endpoint)
 ```
 #### Non-functional
 - When we talk about non-functional requirements, we basically mean such system qualities as scalability, maintainability, testability and others.
-- As for non-functional requirements, we want our service to be scalable and support a big number of topics, publishers and subscribers; 
-- highly available and survive hardware failures and network partitions; fast, so that messages are delivered to subscribers as soon as possible;and durable, so that messages are not lost and delivered to each subscriber at least once.
+- Scalable: supports an arbitrarily large number of topics, publishers and subscribers
+- Highly Available: survives hardware/network failures, no single point of failure
+- Highly Performant: keep end-to-end latency as low as possible
+- Durable: messages must not be lost, each subscriber must receive every message at least once
 ### High level architectureenter image description here```
 ```
 				Metadata Database
@@ -58,6 +60,6 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 1. In the first option we introduce a component responsible for coordination. This component knows about all the Metadata service hosts, as those hosts constantly send heartbeats to it. Each FrontEnd host asks Configuration service what Metadata service host contains data for a specified hash value.
 	- Every time we scale out and add more Metadata service hosts, Configuration service becomes aware of the changes and re-maps hash key ranges.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3MTA4OTczMSwtMTEzMzA2NjA5NCw4OD
+eyJoaXN0b3J5IjpbMTYxMjkzMzg5NywtMTEzMzA2NjA5NCw4OD
 Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
