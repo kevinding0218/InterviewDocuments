@@ -91,8 +91,9 @@ FrontEnd Host	---			[A-G]
 - Summing all these up, it is clear that NoSQL wins for our use case.
 	- If we need to choose a particular NoSQL database type, we need to mention that messages have **limited size** (let’s say not more than 1 MB), meaning that we **do not actually need a document store**. And there is **no any specific relationship** between messages. And thus, we can **exclude graph type** as well. Which leaves us with either column or **key-value** database types.
 	- we can mention several well-regarded names of these two database types. For example, Apache Cassandra and Amazon DynamoDB.
-#### in-memory storage.
+#### In-memory storage (redis)
+- We better choose an in-memory store that supports persistence, so that messages can live for several days before being dropped. And also mention some great in-memory storage solutions like Redis.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM0MzI3OTE4LC0xMTMzMDY2MDk0LDg4Nj
+eyJoaXN0b3J5IjpbNDg3NTAyMzY1LC0xMTMzMDY2MDk0LDg4Nj
 Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
 -->
