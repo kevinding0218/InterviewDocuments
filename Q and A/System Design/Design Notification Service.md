@@ -8,6 +8,11 @@
 - The core APIs our notification service need to support are: create a topic, publish a
 message to a topic and subscribe to a topic to receive published messages. 
 - Topic represents a named resource to which messages are sent. You can think of it as a bucket that stores messages from a publisher and all subscribers receive a copy of a message from the bucket.
+```
+createTopic(topicName)
+publish(topicName, message)
+subscribe(topicName, endpoint)
+```
 #### Non-functional
 - When we talk about non-functional requirements, we basically mean such system qualities as scalability, maintainability, testability and others.
 - As for non-functional requirements, we want our service to be scalable and support a big number of topics, publishers and subscribers; 
@@ -50,8 +55,9 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 - When our notification service becomes so popular that we have millions of topics, all this information cannot be loaded into a memory on a single host. Instead, information about topics is divided between hosts in a cluster.
 - Cluster represents a consistent hashing ring. Each FrontEnd host calculates a hash, for example MD5 hash, using some key, for example a combination of topic name and topic owner identifier. Based on the hash value, FrontEnd host picks a corresponding Metadata service host.
 ##### how FrontEnd hosts know which Metadata service host to call.
-1. 
+1. In the first option we introduce a component responsible for coordination. This component knows about all the Metadata service hosts, as those hosts constantly send heartbeats to it. Each FrontEnd host asks Configuration service what Metadata service host contains data for a specified hash value.
+	- Every time we scale out and add more Metadata service hosts, Configuration service becomes aware of the changes and re-maps hash key ranges.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY2NDk0Njk1LC0xMTMzMDY2MDk0LDg4Nj
-Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
+eyJoaXN0b3J5IjpbLTk3MTA4OTczMSwtMTEzMzA2NjA5NCw4OD
+Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
