@@ -26,8 +26,10 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 - We will hide the database behind another miscroservice, Metadata service, There are several reasons for this decision.
 	- First, separation of concerns, a design principle that teaches us to provide access to the database through a well-defined interface. It greatly simplifies maintenance and ability to make changes in the future.
 	- Second, Metadata service will act as a caching layer between the database and other components. We do not want to hit database with every message published to the system. We want to retrieve topic metadata from cache.
-
+- We need to store messages for some period of time. This period will generally be short if all subscribers are available and message was successfully sent to all of them. Or we may need to store messages a bit longer (say several days), so that messages can be retried later if some subscriber is not available right now. And one more component we need is the one that retrieves messages from the message store and sends them to subscribers.
+- Sender also needs to call Metadata service to retrieve information about subscribers. When create topic and subscribe APIs are called, we just need to store all this information in the database.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NDcxMDQ4NywtMTEzMzA2NjA5NCw4OD
-Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbLTEyOTM2MzMxOTIsLTExMzMwNjYwOTQsOD
+g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
 -->
