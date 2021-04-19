@@ -10,7 +10,12 @@ message to a topic and subscribe to a topic to receive published messages.
 - Topic represents a named resource to which messages are sent. You can think of it as a bucket that stores messages from a publisher and all subscribers receive a copy of a message from the bucket.
 #### Non-functional
 - When we talk about non-functional requirements, we basically mean such system qualities as scalability, maintainability, testability and others.
-- 
+- As for non-functional requirements, we want our service to be scalable and support a big number of topics, publishers and subscribers; 
+- highly available and survive hardware failures and network partitions; fast, so that messages are delivered to subscribers as soon as possible;and durable, so that messages are not lost and delivered to each subscriber at least once.
+#### High level architecture
+```
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NTU1MzkyNiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
