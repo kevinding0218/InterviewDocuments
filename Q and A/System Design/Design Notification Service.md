@@ -82,8 +82,15 @@ FrontEnd Host	---			[A-G]
 ```
 #### Temporary Stroage Service
 - messages supposed to stay in this storage for a very short period of time. Sooner we can deliver messages to subscribers is better, unless topic is configured to deliver messages with some delay.
+- What do we expect from the Temporary Storage service?
+	- First, it must be fast, highly-available and scalable.
+	- Second, it has to guarantee data persistence, so that messages survive unavailability of a subscriber. And can be re-delivered later.
+##### start discussing databases with the interviewer
+- consider pros and cons of SQL versus NoSQL databases, evaluate different NoSQL database types and give specific names to the interviewer.
+- For example, when we consider SQL or NoSQL for storing messages, we may mention that we do not need ACID transactions, we do not need to run complex dynamic queries, we do not plan to use this storage for analytics or data warehousing. Instead, we need a database that can be easily scaled for both writes and reads. It should be highly available and tolerate network partitions.
+- Summing all these up, it is clear that NoSQL wins for our use case.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1ODEwMzMzOCwtMTEzMzA2NjA5NCw4OD
+eyJoaXN0b3J5IjpbMTM1MzQ0MjMzNSwtMTEzMzA2NjA5NCw4OD
 Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
