@@ -12,10 +12,11 @@ message to a topic and subscribe to a topic to receive published messages.
 - When we talk about non-functional requirements, we basically mean such system qualities as scalability, maintainability, testability and others.
 - As for non-functional requirements, we want our service to be scalable and support a big number of topics, publishers and subscribers; 
 - highly available and survive hardware failures and network partitions; fast, so that messages are delivered to subscribers as soon as possible;and durable, so that messages are not lost and delivered to each subscriber at least once.
-#### High level architecture```
+#### High level architectureenter image description here```
 
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY3MjU0OTM0LDE2NDI5MzY3NzIsLTUzMD
+eyJoaXN0b3J5IjpbODg2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMD
 M1NjU5M119
 -->
