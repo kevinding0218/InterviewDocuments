@@ -13,10 +13,14 @@ message to a topic and subscribe to a topic to receive published messages.
 - As for non-functional requirements, we want our service to be scalable and support a big number of topics, publishers and subscribers; 
 - highly available and survive hardware failures and network partitions; fast, so that messages are delivered to subscribers as soon as possible;and durable, so that messages are not lost and delivered to each subscriber at least once.
 #### High level architectureenter image description here```
-![enter image description here](https://drive.google.com/file/d/1Kwee88t2o2tkBcJ6sx9wTYdxw9qsj0gq/view?usp=sharing)
+```
+		
+
+Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Temporary Storage --- Sender ---
 ```
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzMwNjYwOTQsODg2NDcxMjY3LDE2ND
-I5MzY3NzIsLTUzMDM1NjU5M119
+eyJoaXN0b3J5IjpbLTM4NDU1MzUxMiwtMTEzMzA2NjA5NCw4OD
+Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
