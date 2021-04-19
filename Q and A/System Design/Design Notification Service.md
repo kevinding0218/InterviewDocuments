@@ -67,8 +67,14 @@ request ---> Reverse Proxy			Local Disk		Cache
 - Cluster represents a consistent hashing ring. Each FrontEnd host calculates a hash, for example MD5 hash, using some key, for example a combination of topic name and topic owner identifier. Based on the hash value, FrontEnd host picks a corresponding Metadata service host.
 ##### how FrontEnd hosts know which Metadata service host to call.
 1. In the first option we introduce a component responsible for coordination(Configuration Service, e.g. ZooKeper). This component knows about all the Metadata service hosts, as those hosts constantly send heartbeats to it. Each FrontEnd host asks Configuration service what Metadata service host contains data for a specified hash value.
-	- Every time we scale out and add more Metadata service hosts, Configuration service becomes aware of the changes and re-maps hash key ranges.
+	- Every time we scale out and add more Metadata service hosts, Configuration service becomes aware of the changes and re-maps hash key ranges, this is so called Central registry
+```
+		ConfigurationService	
+		/					\\\
+FrontEnd Host				[A-G][H-N][O-T][U-Z]
+```
+2. In the second option we do not use any coordinator.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzQyNDA1MjAsLTExMzMwNjYwOTQsOD
-g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
+eyJoaXN0b3J5IjpbMjczMTYwNDI3LC0xMTMzMDY2MDk0LDg4Nj
+Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
 -->
