@@ -90,13 +90,13 @@ FrontEnd Host	---			[A-G]
 - For example, when we consider SQL or NoSQL for storing messages, we may mention that we do not need ACID transactions, we do not need to run complex dynamic queries, we do not plan to use this storage for analytics or data warehousing. Instead, we need a database that can be easily scaled for both writes and reads. It should be highly available and tolerate network partitions.
 - Summing all these up, it is clear that NoSQL wins for our use case.
 	- If we need to choose a particular NoSQL database type, we need to mention that messages have **limited size** (let’s say not more than 1 MB), meaning that we **do not actually need a document store**. And there is **no any specific relationship** between messages. And thus, we can **exclude graph type** as well. Which leaves us with either column or **key-value** database types.
-	- we can mention several well-regarded names of these two database types. For example, Apache Cassandra and Amazon DynamoDB.
+	- we can mention several well-regarded names of these two database types. For example, **Apache Cassandra and Amazon DynamoDB**.
 ##### In-memory storage (redis)
-- We better choose an in-memory store that supports persistence, so that messages can live for several days before being dropped. And also mention some great in-memory storage solutions like Redis.
+- We better choose an in-memory store that supports persistence, so that messages can live for several days before being dropped. And also mention some great in-memory storage solutions like **Redis**.
 ##### Message Queues
-- Distributed message queues have all the characteristics we require and also can be discussed in more details, Apache Kafka, Amazon SQS
-#### Stream-Processing
-- f you want to further impress interviewer, you can talk about other options, for example stream-processing platforms. Discuss pros and cons and compare this option with a distributed queue solution. And of course, do not forget to mention some best-in-class solutions, for example Apache Kafka and Amazon Kinesis.
+- Distributed message queues have all the characteristics we require and also can be discussed in more details, **Apache Kafka, Amazon SQS**
+##### Stream-Processing
+- f you want to further impress interviewer, you can talk about other options, for example stream-processing platforms. Discuss pros and cons and compare this option with a distributed queue solution. And of course, do not forget to mention some best-in-class solutions, for example **Apache Kafka and Amazon Kinesis**.
 #### Sender Component
 - After message is successfully published and stored in the Temporary Storage, we now can start sending this message to subscribers.
 - If you design a solution that involves data retrieval, processing and sending results in a fan-out manner, meaning that messages are sent to multiple destinations in parallel, think of the ideas we will discuss next.
@@ -128,6 +128,10 @@ FrontEnd Host	---			[A-G]
 	- In this case, a different Sender service host may pick up this message. And that host may have enough threads to process the message.
 - This approach allows to better handle slow Sender service host issues. Each task is responsible for message delivery to a single subscriber. Tasks may delegate actual delivery to other microservices.
 	- For example, a microservice responsible for sending emails or SMS messages.
+```
+
+Temporary Storage ---> Message Retriever ---> MS Client --- Task Creator --- Task Ex
+```
 ##### How to make sure notifications will not be sent to users as spam?
 - We need to register subscribers. All subscribers need to confirm they agree to get notification from our service.
 - Every time new subscriber is registered, we may send a confirmation message to the HTTP endpoint or email.
@@ -153,6 +157,6 @@ FrontEnd Host	---			[A-G]
 ### Final review
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODUzMzY5MTQsLTExMzMwNjYwOTQsOD
+eyJoaXN0b3J5IjpbLTE3NTUzNTg3NTAsLTExMzMwNjYwOTQsOD
 g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
 -->
