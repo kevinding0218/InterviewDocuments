@@ -20,10 +20,14 @@ message to a topic and subscribe to a topic to receive published messages.
 						|																			  |
 Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Temporary Storage --- Sender 	--- Subscribe A, B, C
 ```
-- All requests coming from our clients will go through a load balancer first.
-This will ensure requests are equally distributed among requests processing servers.
+- All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
+- the component that does this initial request processing is a FrontEnd service.
+- We will use a database to store information about topics and subscriptions.
+- We will hide the database behind another miscroservice, Metadata service, There are several reasons for this decision.
+	- First, separation of concerns, a design principle that teaches us to provide access to the database through a well-defined interface. It greatly simplifies maintenance and ability to make changes in the future.
+	- Second, Metadata service will act as a caching layer between the database and other components. We do not want to hit database with every message published to the system. We want to retrieve topic metadata from cache.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NTE0ODE2NSwtMTEzMzA2NjA5NCw4OD
+eyJoaXN0b3J5IjpbLTU2NDcxMDQ4NywtMTEzMzA2NjA5NCw4OD
 Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
