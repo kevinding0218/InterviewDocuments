@@ -134,9 +134,13 @@ FrontEnd Host	---			[A-G]
 - Endpoint and email owners need to confirm the subscription request. When publishers send messages to our notification service, FrontEnd service will make sure duplicate submissions are eliminated.
 - This helps to avoid duplicates while accepting messages from publishers.
 ##### Retries
-- when the Sender service delivers messages to subscribers, retries caused by network issues or subscriber’s internal issues may cause duplicate messages at the subscriber end.
-- So, subscribers also become responsible for avoiding duplicates.
+- when the Sender service delivers messages to subscribers, retries caused by network issues or subscriber’s internal issues may cause duplicate messages at the subscriber end. So, subscribers also become responsible for avoiding duplicates.
+- Retry is one of the options to guarantee at least once message delivery. Our system may retry for hours or even days until messages is successfully delivered or maximum allowed number of retries have been reached.
+- Other option may be to send undelivered messages to a different subscriber. Or store such messages in a system that can be monitored by subscribers and subscribers then decide what to do with undelivered messages.
+- It would be great if our notification system provides a way for subscribers to define retry policy and what to do in cases when a message cannot be delivered after retries limit is reached.
+##### First-come-first-delivered Gurantee?
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM2NjUwMzc3LC0xMTMzMDY2MDk0LDg4Nj
-Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
+eyJoaXN0b3J5IjpbMTQ3MzAyMTcwMiwtMTEzMzA2NjA5NCw4OD
+Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
