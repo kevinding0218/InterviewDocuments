@@ -129,8 +129,11 @@ FrontEnd Host	---			[A-G]
 - This approach allows to better handle slow Sender service host issues. Each task is responsible for message delivery to a single subscriber. Tasks may delegate actual delivery to other microservices.
 	- For example, a microservice responsible for sending emails or SMS messages.
 ```
-
-Temporary Storage ---> Message Retriever ---> MS Client --- Task Creator --- Task Ex
+											Metadata Service							Task (send email)
+													|									/
+Temporary Storage -> Message Retriever -> MS Client -- Task Creator -- Task Executor-Task
+																						\	
+																						Task (mobile push)
 ```
 ##### How to make sure notifications will not be sent to users as spam?
 - We need to register subscribers. All subscribers need to confirm they agree to get notification from our service.
@@ -157,6 +160,6 @@ Temporary Storage ---> Message Retriever ---> MS Client --- Task Creator --- Tas
 ### Final review
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTUzNTg3NTAsLTExMzMwNjYwOTQsOD
-g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
+eyJoaXN0b3J5IjpbLTk5NTQ1NTM0NywtMTEzMzA2NjA5NCw4OD
+Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
