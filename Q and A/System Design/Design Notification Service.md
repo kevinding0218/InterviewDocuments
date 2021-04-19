@@ -102,8 +102,12 @@ FrontEnd Host	---			[A-G]
 - If you design a solution that involves data retrieval, processing and sending results in a fan-out manner, meaning that messages are sent to multiple destinations in parallel, think of the ideas we will discuss next.
 1. The first thing that Sender does is message retrieval. This is achieved by having a pool of threads, where each thread tries to read data from the Temporary Storage. We can implement a naive approach and always start a predefined number of message retrieval threads.
 	- The problem with this approach is that some threads may be idle, as there may not be enough messages to retrieve. Or another extreme, when all threads may quickly become occupied and the only way to scale message retrieval would be adding more Sender hosts.
-	- 
+	- A better approach is to keep track of idle threads and adjust number of message retrieval threads dynamically. If we have too many idle threads, no new threads should be created. If all threads are busy, more threads in the pool can start reading messages. 
+	- This not only helps to better scale the Sender service, it also protects Temporary Storage service from being constantly bombarded by Sender service. This is especially useful when Temporary Storage service experiences performance degradation, and Sender service can lower the rate of message reads to help Temporary Storage service to recover faster.
+#### Suto-Scaling Solution (Semaphores)
+- Conceptually, a semaphore maintains a set of permits. Before retrieving the next message, thread must acquire a permit from the semaphore. When the thread has finished reading the message a permit is returned to the semaphore, allowing
+another thread from the pool to start reading messages. What we can do is to adjust a number of these permits dynamically, based on the existing and desired message read rate. After message is retrieved, we need to call Metadata service to obtain information about subscribers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE2ODM3NCwtMTEzMzA2NjA5NCw4ODY0Nz
-EyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbMTEyMzg5MDI2NiwtMTEzMzA2NjA5NCw4OD
+Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
