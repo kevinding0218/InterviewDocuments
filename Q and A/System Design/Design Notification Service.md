@@ -47,8 +47,11 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 - Important to understand here, is that FrontEnd service is responsible for writing log data. But the actual log data processing is managed by other components, usually called agents. Agents are responsible for data aggregation and transferring logs to other system, for post processing and storage. This separation of responsibilities is what helps to make FrontEnd service simpler, faster and more robust.
 #### Metadata Service
 - A web service responsible for storing information about topics and subscriptions in the database. It is a **distributed cache**.
-- 
+- When our notification service becomes so popular that we have millions of topics, all this information cannot be loaded into a memory on a single host. Instead, information about topics is divided between hosts in a cluster.
+- Cluster represents a consistent hashing ring. Each FrontEnd host calculates a hash, for example MD5 hash, using some key, for example a combination of topic name and topic owner identifier. Based on the hash value, FrontEnd host picks a corresponding Metadata service host.
+##### how FrontEnd hosts know which Metadata service host to call.
+1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTQ0Nzg1ODYsLTExMzMwNjYwOTQsOD
-g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
+eyJoaXN0b3J5IjpbNjY2NDk0Njk1LC0xMTMzMDY2MDk0LDg4Nj
+Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
 -->
