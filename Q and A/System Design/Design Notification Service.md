@@ -105,9 +105,16 @@ FrontEnd Host	---			[A-G]
 	- A better approach is to keep track of idle threads and adjust number of message retrieval threads dynamically. If we have too many idle threads, no new threads should be created. If all threads are busy, more threads in the pool can start reading messages. 
 	- This not only helps to better scale the Sender service, it also protects Temporary Storage service from being constantly bombarded by Sender service. This is especially useful when Temporary Storage service experiences performance degradation, and Sender service can lower the rate of message reads to help Temporary Storage service to recover faster.
 #### Suto-Scaling Solution (Semaphores)
-- Conceptually, a semaphore maintains a set of permits. Before retrieving the next message, thread must acquire a permit from the semaphore. When the thread has finished reading the message a permit is returned to the semaphore, allowing
-another thread from the pool to start reading messages. What we can do is to adjust a number of these permits dynamically, based on the existing and desired message read rate. After message is retrieved, we need to call Metadata service to obtain information about subscribers.
+- Conceptually, a semaphore maintains a set of permits. 
+- Before retrieving the next message, thread must acquire a permit from the semaphore. 
+- When the thread has finished reading the message a permit is returned to the semaphore, allowing another thread from the pool to start reading messages. 
+- What we can do is to adjust a number of these permits dynamically, based on the existing and desired message read rate. After message is retrieved, we need to call Metadata service to obtain information about subscribers.
+##### why we need to call Metadata service here
+- if we already called it in FrontEnd service and could have passed information about subscribers along with the message.
+- One of the main reasons not to pass this information along with the message itself, is that list of subscribers may be relatively big.
+	- For example, several thousands of HTTP endpoints, or a long list of email addresses. We will need to store all this information with every incoming message and our Temporary Storage service will need to pay this price. Not all key-value and column storages can store big messages, which may require us to use document database instead.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMzg5MDI2NiwtMTEzMzA2NjA5NCw4OD
-Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbODk2MzA3MTcsLTExMzMwNjYwOTQsODg2ND
+cxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
 -->
