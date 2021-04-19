@@ -113,8 +113,15 @@ FrontEnd Host	---			[A-G]
 - if we already called it in FrontEnd service and could have passed information about subscribers along with the message.
 - One of the main reasons not to pass this information along with the message itself, is that list of subscribers may be relatively big.
 	- For example, several thousands of HTTP endpoints, or a long list of email addresses. We will need to store all this information with every incoming message and our Temporary Storage service will need to pay this price. Not all key-value and column storages can store big messages, which may require us to use document database instead.
-- 
+#### Sending Messages to Subscribers
+- Should we just iterate over a list of subscribers and make a remote call to each one of them?
+- What should we do if message delivery failed to one subscriber from the list?
+- What if one subscriber is slow and delivery to other subscribers is impacted due to this?
+- The better option is to split message delivery into tasks. Where each task is responsible for delivery to a single subscriber.
+- This way we can deliver all messages in parallel and isolate any bad subscriber.
+#### Task Creator and Executor
+- These components are responsible for creating and scheduling a single message delivery task
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk2MzA3MTcsLTExMzMwNjYwOTQsODg2ND
-cxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
+eyJoaXN0b3J5IjpbOTM4NDc0MzY2LC0xMTMzMDY2MDk0LDg4Nj
+Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
 -->
