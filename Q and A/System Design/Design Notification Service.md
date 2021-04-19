@@ -29,15 +29,20 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 - We need to store messages for some period of time. This period will generally be short if all subscribers are available and message was successfully sent to all of them. Or we may need to store messages a bit longer (say several days), so that messages can be retried later if some subscriber is not available right now. And one more component we need is the one that retrieves messages from the message store and sends them to subscribers.
 - Sender also needs to call Metadata service to retrieve information about subscribers. When create topic and subscribe APIs are called, we just need to store all this information in the database.
 - We followed some pretty common patterns, like having a FrontEnd service behind a load balancer. And having a database for storing metadata and hide this database behind some facade, which is a distributed cache microservice.
-#### Component in detail
-##### FrontEnd Service
+### Component in detail
+#### FrontEnd Service
 - FrontEnd is a lightweight web service responsible for: request validation, authentication and authorization, SSL termination, server-side encryption, caching, throttling, request dispatching and deduplucation, usage data collection. Specifically, let’s take a look at a FrontEnd host and discuss what components live there. When request lands on the host, the first component that picks it up is a Reverse Proxy. 
+##### Proxy
 	- Reverse proxy is a lightweight server responsible for several things. Such as SSL termination, when requests that come over HTTPS are decrypted and passed further in unencrypted form. At the same time proxy is responsible for encrypting responses while sending them back to clients. 
 	- Second responsibility is compression (for example with gzip), when proxy compresses responses before returning them back to clients. This way we reduce the amount of bandwidth required for data transfer.
 	- Next proxy feature we may use is to properly handle FrontEnd service slowness. We may return HTTP 503 status code (which is service unavailable) if FrontEnd service becomes slow or completely unavailable. Reverse proxy then passes request to the FrontEnd web service.
 - We know that for every message that is published, FrontEnd service needs to call Metadata service to get information about the message topic. To minimize number of calls to Metadata service, FrontEnd may use local cache. We may use some well-known cache implementations (like Google Guava) or create our own implementation of LRU cache (least recently used).
-- 
+##### Logging
+- FrontEnd service also writes a bunch of different logs. We definitely need to log information about service health, write down exceptions that happen in the service.
+##### metrics
+- We also need to emit metrics. This is just a key-value data that may be later aggregated and used to monitor service health and gather statistics. For example, number of requests, faults, calls latency, we will need all this information for system monitoring.
+##### Audit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NDY3Mjc5MywtMTEzMzA2NjA5NCw4OD
-Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbLTE3MzE4ODk5NDMsLTExMzMwNjYwOTQsOD
+g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
 -->
