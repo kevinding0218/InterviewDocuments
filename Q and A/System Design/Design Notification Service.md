@@ -44,8 +44,9 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 					/					|			\
 request ---> Reverse Proxy			Local Disk		Cache
 								/		|		\
-						ServiceLogs   Metris	AuditLogs
-						Agent
+						ServiceLogs   Metris	AuditLogs	(Agents)
+							|			|			|
+						 SL Storage    M Storage	Audit Storage
 ```
 ##### Proxy
 	- Reverse proxy is a lightweight server responsible for several things. Such as SSL termination, when requests that come over HTTPS are decrypted and passed further in unencrypted form. At the same time proxy is responsible for encrypting responses while sending them back to clients. 
@@ -68,6 +69,6 @@ request ---> Reverse Proxy			Local Disk		Cache
 1. In the first option we introduce a component responsible for coordination. This component knows about all the Metadata service hosts, as those hosts constantly send heartbeats to it. Each FrontEnd host asks Configuration service what Metadata service host contains data for a specified hash value.
 	- Every time we scale out and add more Metadata service hosts, Configuration service becomes aware of the changes and re-maps hash key ranges.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU2OTkxOTY3LC0xMTMzMDY2MDk0LDg4Nj
-Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
+eyJoaXN0b3J5IjpbLTE2NzM3MDAyMDEsLTExMzMwNjYwOTQsOD
+g2NDcxMjY3LDE2NDI5MzY3NzIsLTUzMDM1NjU5M119
 -->
