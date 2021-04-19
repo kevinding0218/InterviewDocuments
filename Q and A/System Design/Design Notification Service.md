@@ -89,8 +89,10 @@ FrontEnd Host	---			[A-G]
 - consider pros and cons of SQL versus NoSQL databases, evaluate different NoSQL database types and give specific names to the interviewer.
 - For example, when we consider SQL or NoSQL for storing messages, we may mention that we do not need ACID transactions, we do not need to run complex dynamic queries, we do not plan to use this storage for analytics or data warehousing. Instead, we need a database that can be easily scaled for both writes and reads. It should be highly available and tolerate network partitions.
 - Summing all these up, it is clear that NoSQL wins for our use case.
-- 
+	- If we need to choose a particular NoSQL database type, we need to mention that messages have **limited size** (let’s say not more than 1 MB), meaning that we **do not actually need a document store**. And there is **no any specific relationship** between messages. And thus, we can **exclude graph type** as well. Which leaves us with either column or **key-value** database types.
+	- we can mention several well-regarded names of these two database types. For example, Apache Cassandra and Amazon DynamoDB.
+#### in-memory storage.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MzQ0MjMzNSwtMTEzMzA2NjA5NCw4OD
-Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
+eyJoaXN0b3J5IjpbNDM0MzI3OTE4LC0xMTMzMDY2MDk0LDg4Nj
+Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
 -->
