@@ -121,7 +121,16 @@ FrontEnd Host	---			[A-G]
 - This way we can deliver all messages in parallel and isolate any bad subscriber.
 #### Task Creator and Executor
 - These components are responsible for creating and scheduling a single message delivery task
+- Create a pool of threads, where each thread is responsible for executing a task. In Java for example, we can use a ThreadPoolExecutor class. 
+- And similar to the Message Retriever component, we can also use semaphores to keep track of available threads in the pool.
+	- If we have enough threads to process newly created tasks, we simply submit all tasks for processing.
+	- If we do not have enough treads available at the moment, we may postpone or stop message processing and return the message back to the Temporary Storage.
+	- In this case, a different Sender service host may pick up this message. And that host may have enough threads to process the message.
+- This approach allows to better handle slow Sender service host issues. Each task is responsible for message delivery to a single subscriber. Tasks may delegate actual delivery to other microservices.
+	- For example, a microservice responsible for sending emails or SMS messages.
+##### How to make sure notifications will not be sent to users as spam?
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM4NDc0MzY2LC0xMTMzMDY2MDk0LDg4Nj
-Q3MTI2NywxNjQyOTM2NzcyLC01MzAzNTY1OTNdfQ==
+eyJoaXN0b3J5IjpbMTEwNzk3ODczMSwtMTEzMzA2NjA5NCw4OD
+Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
