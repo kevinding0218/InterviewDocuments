@@ -30,9 +30,10 @@ Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Tem
 - Sender also needs to call Metadata service to retrieve information about subscribers. When create topic and subscribe APIs are called, we just need to store all this information in the database.
 - We followed some pretty common patterns, like having a FrontEnd service behind a load balancer. And having a database for storing metadata and hide this database behind some facade, which is a distributed cache microservice.
 #### Component in detail
-- FrontEnd is a lightweight web service responsible for: request validation, authentication and authorization, SSL termination, server-side encryption, caching, throttling, request dispatching and deduplucation, usage data collection.
-- 
+- FrontEnd is a lightweight web service responsible for: request validation, authentication and authorization, SSL termination, server-side encryption, caching, throttling, request dispatching and deduplucation, usage data collection. Specifically, let’s take a look at a FrontEnd host and discuss what components live there. When request lands on the host, the first component that picks it up is a Reverse Proxy. 
+	- Reverse proxy is a lightweight server responsible for several things. Such as SSL termination, when requests that come over HTTPS are decrypted and passed further in unencrypted form. At the same time proxy is responsible for encrypting responses while sending them back to clients. 
+	- Second responsibility is compression (for example with gzip), when proxy compresses responses before returning them back to clients. This way we reduce the amount of bandwidth required for data transfer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTY1NzYzNCwtMTEzMzA2NjA5NCw4OD
+eyJoaXN0b3J5IjpbMjAyNTEwMTMwOSwtMTEzMzA2NjA5NCw4OD
 Y0NzEyNjcsMTY0MjkzNjc3MiwtNTMwMzU2NTkzXX0=
 -->
