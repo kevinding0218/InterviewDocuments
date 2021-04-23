@@ -14,10 +14,6 @@
 #### Java Heap Space [Link](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 - Java **Heap space is used by java runtime to allocate memory to Objects and JRE classes**. Whenever we create an object, it’s always created in the Heap space.
 - **Garbage Collection runs on the heap memory to free the memory** used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
-### Stack vs Heap
-- The stack is a part of memory that contains information about **nested method** calls down to the current position in the program. It also contains all **local variables and references to objects on the heap** defined in currently executing methods.
-- This structure allows the runtime to return from the method knowing the address whence it was called, and also clear all local variables after exiting the method. Every thread has its own stack.
-- The heap is a large bulk of memory intended for allocation of objects. When you create an object with the  **new**  keyword, it gets allocated on the heap. **However, the reference to this object lives on the stack.**
 #### GC
 - Garbage collection is the process of looking at heap memory, identifying which objects are in use and which are not, and deleting the unused objects.
 - An in-use object, or a referenced object, means that some part of your program still maintains a pointer to that object. An unused object, or unreferenced object, is no longer referenced by any part of your program. So the memory used by an unreferenced object can be reclaimed.
@@ -79,6 +75,10 @@ public  class  Memory {
 6.  We can use  **-Xms**  and  **-Xmx**  JVM option to define the startup size and maximum size of heap memory. We can use  **-Xss**  to define the stack memory size.
 7.  When stack memory is full, Java runtime throws  `java.lang.StackOverFlowError`  whereas if heap memory is full, it throws  `java.lang.OutOfMemoryError: Java Heap Space`  error.
 8.  Stack memory size is very less when compared to Heap memory. Because of simplicity in memory allocation (LIFO), stack memory is very fast when compared to heap memory.
+##### Stack vs Heap
+- The stack is a part of memory that contains information about **nested method** calls down to the current position in the program. It also contains all **local variables and references to objects on the heap** defined in currently executing methods.
+- This structure allows the runtime to return from the method knowing the address whence it was called, and also clear all local variables after exiting the method. Every thread has its own stack.
+- The heap is a large bulk of memory intended for allocation of objects. When you create an object with the  **new**  keyword, it gets allocated on the heap. **However, the reference to this object lives on the stack.**
 ### Array vs ArrayList
 - Array is a fixed length data structure/object whereas ArrayList is a variable length Collection class, it implements **List<E>, Collection<E>, Iterable<E>, Cloneable, and Serializable** interfaces. It extends **AbstractList<E>** class.
 - We **cannot change length of array once created** in Java but **ArrayList can be changed**.
@@ -211,9 +211,9 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzc5MDk3NzIsLTM2MTkwMTgwNSwxNz
-A3NTczNTgzLC01OTM3NjI3MTgsLTY5MTc0NDM1NSwxODg0MTcz
-MTI2LDIwNDgzMDU1MDIsMzU5Njg2MTc2LDExMTM5NTc4OTEsMT
-UyMjIzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAy
-NjY0NzkzLDE4NzQwMjEyNTRdfQ==
+eyJoaXN0b3J5IjpbMTA4NDA4MTY2NCwtMzYxOTAxODA1LDE3MD
+c1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0MzU1LDE4ODQxNzMx
+MjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMzk1Nzg5MSwxNT
+IyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2
+NjQ3OTMsMTg3NDAyMTI1NF19
 -->
