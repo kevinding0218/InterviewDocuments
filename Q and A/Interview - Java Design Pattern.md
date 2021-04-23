@@ -19,12 +19,14 @@ Another problem with conventional Singletons is that they are no longer Singleto
   }
 ```
 **3. Creation of Enum instance is thread-safe**
-
 By default, the Enum instance is thread-safe, and you don’t need to worry about double-checked locking.
-
 In summary, the Singleton pattern is the best way to create Singleton in Java 5 world, given the Serialization and thread-safety guaranteed and with some line of code enum.
 **Disadvantages of using Enum as a singleton:**
-
+**1. Coding Constraints**
+In regular classes, there are things that can be achieved but prohibited in enum classes. Accessing a static field in the constructor
+**2. Serializability**
+For singletons, it is very common to be stateful. In general, those singletons should not be serializable. There is no real example where transporting a stateful singleton from one VM to another VM makes sense; a singleton means “unique within a VM” not “unique in the universe”
+If serialization really makes sense for a stateful singleton, the singleton should specify explicitly and accurately what it means in another VM to deserialize a singleton where there may already be a singleton of the same type.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMTM1NzEzOCwtNDk2OTIwMTQzXX0=
+eyJoaXN0b3J5IjpbLTE1ODEzMTA0NCwtNDk2OTIwMTQzXX0=
 -->
