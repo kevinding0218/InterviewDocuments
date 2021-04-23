@@ -25,6 +25,9 @@
 - MTBF（Mean Time Between Failure）是平均故障间隔的意思，代表两次故障的间隔时间，也就是系统正常运转的平均时间。这个时间越长，系统稳定性越高。
 - MTTR（Mean Time To Repair）表示故障的平均恢复时间，也可以理解为平均故障时间。这个值越小，故障对于用户的影响越小
 - Availability = MTBF / (MTBF + MTTR)
+##### Design for failure
+- “Design for failure”是我们做高可用系统设计时秉持的第一原则。在承担百万 QPS 的高并发系统中，集群中机器的数量成百上千台，单机的故障是常态，几乎每一天都有发生故障的可能。我们在做系统设计的时候，要把发生故障作为一个重要的考虑点，预先考虑如何自动化地发现故障，发生故障之后要如何解决。当然了，除了要有未雨绸缪的思维之外，我们还需要掌握一些具体的优化方法，比如 failover（故障转移）、超时控制以及降级和限流。
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MjMyMDY3XX0=
+eyJoaXN0b3J5IjpbMTE0OTU1MDE5Ml19
 -->
