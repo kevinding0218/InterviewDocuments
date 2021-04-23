@@ -28,6 +28,11 @@
 ##### What Happens When There Is Not Enough Heap Space
 - If there is no memory space for creating a new object in Heap, Java Virtual Machine throws _OutOfMemoryError_ or more specifically **java.lang.OutOfMemoryError_  heap space.**
 - 
+##### How Are Strings Represented in Memory?
+- A  _String_  instance in Java is an object with two fields: a  _char[] value_  field and an  _int hash_  field. The  _value_  field is an array of chars representing the string itself, and the  _hash_  field contains the  _hashCode_  of a string which is initialized with zero, calculated during the first  _hashCode()_  call and cached ever since.
+##### What Is a Stringbuilder and What Are Its Use Cases?
+- When concatenating two  _String_  instances, a new object is created, and strings are copied. This could bring a huge garbage collector overhead if we need to create or modify a string in a loop.  _StringBuilder_  allows handling string manipulations much more efficiently.
+- _StringBuffer_  is different from  _StringBuilder_  in that it is thread-safe. If you need to manipulate a string in a single thread, use  _StringBuilder_  instead.
 ####  Java Stack Memory
 - Java **Stack memory is used for the execution of a thread**. They contain method-specific values that are short-lived and references to other objects in the heap that is getting referred from the method.
 - Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method.
@@ -196,9 +201,9 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MTQyNDI5OCwtMzYxOTAxODA1LDE3MD
-c1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0MzU1LDE4ODQxNzMx
-MjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMzk1Nzg5MSwxNT
-IyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2
-NjQ3OTMsMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTE4NzI5MDY1OTIsLTM2MTkwMTgwNSwxNz
+A3NTczNTgzLC01OTM3NjI3MTgsLTY5MTc0NDM1NSwxODg0MTcz
+MTI2LDIwNDgzMDU1MDIsMzU5Njg2MTc2LDExMTM5NTc4OTEsMT
+UyMjIzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAy
+NjY0NzkzLDE4NzQwMjEyNTRdfQ==
 -->
