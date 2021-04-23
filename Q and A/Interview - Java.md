@@ -25,6 +25,9 @@
 ##### How does it work?
 - The heap is divided up into smaller spaces or generations. These spaces are Young Generation, Old or Tenured Generation, and Permanent Generation. 
 - The  **young generation hosts most of the newly created objects**. The term **“age”** in generational garbage collection **refers to the number of collection cycles the object has survived**.
+- During the next minor GC, the same thing happens to the Eden space. Unreferenced objects are deleted and referenced objects are moved to a survivor space.
+- After every minor garbage collection cycle, the age of each object is checked.
+- Eventually, a major garbage collection will be performed on the old generation which cleans up and compacts that space. For each major GC, there are several minor GCs.
 ##### When Does an Object Become Eligible for Garbage Collection?
 - An object becomes eligible for Garbage collection or GC if it is not reachable from any live threads or by any static references.
 - The most straightforward case of an object becoming eligible for garbage collection is if all its references are null or when a parent object is set to null.
@@ -208,9 +211,9 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMDIxMTA2NSwtMzYxOTAxODA1LDE3MD
-c1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0MzU1LDE4ODQxNzMx
-MjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMzk1Nzg5MSwxNT
-IyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2
-NjQ3OTMsMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTE2Nzc5MDk3NzIsLTM2MTkwMTgwNSwxNz
+A3NTczNTgzLC01OTM3NjI3MTgsLTY5MTc0NDM1NSwxODg0MTcz
+MTI2LDIwNDgzMDU1MDIsMzU5Njg2MTc2LDExMTM5NTc4OTEsMT
+UyMjIzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAy
+NjY0NzkzLDE4NzQwMjEyNTRdfQ==
 -->
