@@ -168,10 +168,12 @@ https://www.baeldung.com/java-static-default-methods
 2.  **LinkedHashMap**  :-  `LinkedHashMap`  It preserves your Insertion Order. and  `keys`  will be found as same order you Insert into this  `LinkedHashMap`.
 3.  **TreeMap**  :- The  `TreeMap`  class implements the  `Map`  **interface**  by using a  **Tree**. A  `TreeMap`  provides an efficient means of storing  **key/value**  pairs in sorted order, and allows rapid retrieval.
 	- unlike a `HashMap`, a tree map guarantees that its elements will be sorted in ascending key order
+### How concurrenthashmap works
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MTkwMTgwNSwxNzA3NTczNTgzLC01OT
-M3NjI3MTgsLTY5MTc0NDM1NSwxODg0MTczMTI2LDIwNDgzMDU1
-MDIsMzU5Njg2MTc2LDExMTM5NTc4OTEsMTUyMjIzNTI1MCwxNj
-E0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAyNjY0NzkzLDE4NzQw
-MjEyNTRdfQ==
+eyJoaXN0b3J5IjpbMTgzNTU3ODQ2NiwtMzYxOTAxODA1LDE3MD
+c1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0MzU1LDE4ODQxNzMx
+MjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMzk1Nzg5MSwxNT
+IyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2
+NjQ3OTMsMTg3NDAyMTI1NF19
 -->
