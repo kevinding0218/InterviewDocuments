@@ -22,6 +22,9 @@
 - Garbage collection is the process of looking at heap memory, identifying which objects are in use and which are not, and deleting the unused objects.
 - An in-use object, or a referenced object, means that some part of your program still maintains a pointer to that object. An unused object, or unreferenced object, is no longer referenced by any part of your program. So the memory used by an unreferenced object can be reclaimed.
 - The biggest advantage of garbage collection is that it removes the burden of manual memory allocation/deallocation from us so that we can focus on solving the problem at hand.
+##### How does it work?
+- The heap is divided up into smaller spaces or generations. These spaces are Young Generation, Old or Tenured Generation, and Permanent Generation. 
+- The  **young generation hosts most of the newly created objects**. The term **“age”** in generational garbage collection **refers to the number of collection cycles the object has survived**.
 ##### When Does an Object Become Eligible for Garbage Collection?
 - An object becomes eligible for Garbage collection or GC if it is not reachable from any live threads or by any static references.
 - The most straightforward case of an object becoming eligible for garbage collection is if all its references are null or when a parent object is set to null.
@@ -205,9 +208,9 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzMxNDkwOTAsLTM2MTkwMTgwNSwxNz
-A3NTczNTgzLC01OTM3NjI3MTgsLTY5MTc0NDM1NSwxODg0MTcz
-MTI2LDIwNDgzMDU1MDIsMzU5Njg2MTc2LDExMTM5NTc4OTEsMT
-UyMjIzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAy
-NjY0NzkzLDE4NzQwMjEyNTRdfQ==
+eyJoaXN0b3J5IjpbMTgxMDIxMTA2NSwtMzYxOTAxODA1LDE3MD
+c1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0MzU1LDE4ODQxNzMx
+MjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMzk1Nzg5MSwxNT
+IyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2
+NjQ3OTMsMTg3NDAyMTI1NF19
 -->
