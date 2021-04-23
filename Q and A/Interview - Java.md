@@ -20,8 +20,12 @@
 - The biggest advantage of garbage collection is that it removes the burden of manual memory allocation/deallocation from us so that we can focus on solving the problem at hand.
 ##### When Does an Object Become Eligible for Garbage Collection?
 - An object becomes eligible for Garbage collection or GC if it is not reachable from any live threads or by any static references.
-
-The most straightforward case of an object becoming eligible for garbage collection is if all its references are null.
+- The most straightforward case of an object becoming eligible for garbage collection is if all its references are null or when a parent object is set to null.
+##### How Do You Trigger Garbage Collection
+- **as Java programmer, can not force garbage collection in Java**; it will only trigger if JVM thinks it needs a garbage collection based on Java heap size.
+- Before removing an object from memory garbage collection thread invokes finalize()method of that object and gives an opportunity to perform any sort of cleanup required. You can also invoke this method of an object code, however, there is no guarantee that garbage collection will occur when you call this method.
+- Additionally, there are methods like System.gc() and Runtime.gc() which is used to send request of Garbage collection to JVM but it’s not guaranteed that garbage collection will happen.
+##### ### **What Happens When There Is Not Enough Heap Space**
 ####  Java Stack Memory
 - Java **Stack memory is used for the execution of a thread**. They contain method-specific values that are short-lived and references to other objects in the heap that is getting referred from the method.
 - Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method.
@@ -190,7 +194,7 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDY5MjMwMjEsLTM2MTkwMTgwNSwxNz
+eyJoaXN0b3J5IjpbLTIwNTYwMzY4OTEsLTM2MTkwMTgwNSwxNz
 A3NTczNTgzLC01OTM3NjI3MTgsLTY5MTc0NDM1NSwxODg0MTcz
 MTI2LDIwNDgzMDU1MDIsMzU5Njg2MTc2LDExMTM5NTc4OTEsMT
 UyMjIzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAy
