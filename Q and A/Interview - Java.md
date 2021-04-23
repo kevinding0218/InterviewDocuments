@@ -14,7 +14,8 @@
 #### Java Heap Space [Link](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 - Java **Heap space is used by java runtime to allocate memory to Objects and JRE classes**. Whenever we create an object, it’s always created in the Heap space.
 - **Garbage Collection runs on the heap memory to free the memory** used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
-####
+#### GC
+
 ####  Java Stack Memory
 - Java **Stack memory is used for the execution of a thread**. They contain method-specific values that are short-lived and references to other objects in the heap that is getting referred from the method.
 - Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method.
@@ -183,9 +184,9 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc5NjE2MTI1LC0zNjE5MDE4MDUsMTcwNz
-U3MzU4MywtNTkzNzYyNzE4LC02OTE3NDQzNTUsMTg4NDE3MzEy
-NiwyMDQ4MzA1NTAyLDM1OTY4NjE3NiwxMTEzOTU3ODkxLDE1Mj
-IyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5NTAzOSwtMTQwMjY2
-NDc5MywxODc0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTQ3NDk3MTY1NSwtMzYxOTAxODA1LDE3MD
+c1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0MzU1LDE4ODQxNzMx
+MjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMzk1Nzg5MSwxNT
+IyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2
+NjQ3OTMsMTg3NDAyMTI1NF19
 -->
