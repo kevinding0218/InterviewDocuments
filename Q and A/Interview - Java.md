@@ -14,6 +14,7 @@
 #### Java Heap Space [Link](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 - Java **Heap space is used by java runtime to allocate memory to Objects and JRE classes**. Whenever we create an object, it’s always created in the Heap space.
 - **Garbage Collection runs on the heap memory to free the memory** used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
+####
 ####  Java Stack Memory
 - Java **Stack memory is used for the execution of a thread**. They contain method-specific values that are short-lived and references to other objects in the heap that is getting referred from the method.
 - Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method.
@@ -174,13 +175,17 @@ https://www.baeldung.com/java-static-default-methods
 	- **Load-Factor:** It's a threshold, used to control resizing.
 	- **Initial Capacity:** The implementation performs internal sizing to accommodate these many elements.
 - A ConcurrentHashMap has internal final class called Segment so we can say that ConcurrentHashMap is internally divided in segments of size 32, so at max 32 threads can work at a time. It means each thread can work on a each segment during high concurrency and atmost 32 threads can operate at max which simply maintains 32 locks to guard each bucket of the ConcurrentHashMap.
-#### **Inserting (Put) Element in ConcurrentHashMap:**
+#### Inserting (Put) Element in ConcurrentHashMap:
 - 1st calculate the hash of key
 - decide the Segment, Since it's all about concurrency, we need synchronized block on the above Segment
+#### Size of ConcurrentHashMap
+- return the sum of all segments' count
+#### Getting (get) Element From ConcurrentHashMap
+- When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDM1NTMzNTEsLTM2MTkwMTgwNSwxNz
-A3NTczNTgzLC01OTM3NjI3MTgsLTY5MTc0NDM1NSwxODg0MTcz
-MTI2LDIwNDgzMDU1MDIsMzU5Njg2MTc2LDExMTM5NTc4OTEsMT
-UyMjIzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAy
-NjY0NzkzLDE4NzQwMjEyNTRdfQ==
+eyJoaXN0b3J5IjpbODc5NjE2MTI1LC0zNjE5MDE4MDUsMTcwNz
+U3MzU4MywtNTkzNzYyNzE4LC02OTE3NDQzNTUsMTg4NDE3MzEy
+NiwyMDQ4MzA1NTAyLDM1OTY4NjE3NiwxMTEzOTU3ODkxLDE1Mj
+IyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5NTAzOSwtMTQwMjY2
+NDc5MywxODc0MDIxMjU0XX0=
 -->
