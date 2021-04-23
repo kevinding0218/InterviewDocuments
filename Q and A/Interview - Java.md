@@ -174,10 +174,13 @@ https://www.baeldung.com/java-static-default-methods
 	- **Load-Factor:** It's a threshold, used to control resizing.
 	- **Initial Capacity:** The implementation performs internal sizing to accommodate these many elements.
 - A ConcurrentHashMap has internal final class called Segment so we can say that ConcurrentHashMap is internally divided in segments of size 32, so at max 32 threads can work at a time. It means each thread can work on a each segment during high concurrency and atmost 32 threads can operate at max which simply maintains 32 locks to guard each bucket of the ConcurrentHashMap.
+#### **Inserting (Put) Element in ConcurrentHashMap:**
+- 1st calculate the hash of key
+- decide the Segment, Since it's all about concurrency, we need synchronized block on the above Segment
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMjY0NTgxMiwtMzYxOTAxODA1LDE3MD
-c1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0MzU1LDE4ODQxNzMx
-MjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMzk1Nzg5MSwxNT
-IyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2
-NjQ3OTMsMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTE2MDM1NTMzNTEsLTM2MTkwMTgwNSwxNz
+A3NTczNTgzLC01OTM3NjI3MTgsLTY5MTc0NDM1NSwxODg0MTcz
+MTI2LDIwNDgzMDU1MDIsMzU5Njg2MTc2LDExMTM5NTc4OTEsMT
+UyMjIzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1MDM5LC0xNDAy
+NjY0NzkzLDE4NzQwMjEyNTRdfQ==
 -->
