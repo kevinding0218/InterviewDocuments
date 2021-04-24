@@ -783,12 +783,13 @@ BadGateway = 502
 ServiceUnavailable = 503
 GatewayTimeout = 504
 HttpVersionNotSupported = 505
+## File Upload [Link](https://phil.tech/2016/http-rest-api-file-uploads/)
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNDE1MDk0OSwyMDYxMjY3MDE5LC00Nz
-Q5MzQyOTIsNzczMzg0MzMsMjM4NTQ0MzA4LC0yMDc5NjM1NzM5
-LDE3Njg0NzY2MTEsOTQ1NTU4NjY1LC03ODI3MDIzNzUsMTE2OD
-k4MjQ0LC0xOTkwMDMwNDc1XX0=
+eyJoaXN0b3J5IjpbNjg0NzI1MzM1LC03MzQxNTA5NDksMjA2MT
+I2NzAxOSwtNDc0OTM0MjkyLDc3MzM4NDMzLDIzODU0NDMwOCwt
+MjA3OTYzNTczOSwxNzY4NDc2NjExLDk0NTU1ODY2NSwtNzgyNz
+AyMzc1LDExNjg5ODI0NCwtMTk5MDAzMDQ3NV19
 -->
