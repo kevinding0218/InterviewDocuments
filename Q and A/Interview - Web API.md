@@ -764,7 +764,6 @@ OK = 200,
 Created = 201,
 Accepted = 202,
 NoContent = 204,
-PartialContent = 206,
 MultipleChoices = 300,
 Redirect = 302
 UseProxy = 305,
@@ -788,8 +787,9 @@ HttpVersionNotSupported = 505
 ## File Upload [Link](https://phil.tech/2016/http-rest-api-file-uploads/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM1OTc5MDI3LC03MzQxNTA5NDksMjA2MT
-I2NzAxOSwtNDc0OTM0MjkyLDc3MzM4NDMzLDIzODU0NDMwOCwt
-MjA3OTYzNTczOSwxNzY4NDc2NjExLDk0NTU1ODY2NSwtNzgyNz
-AyMzc1LDExNjg5ODI0NCwtMTk5MDAzMDQ3NV19
+eyJoaXN0b3J5IjpbMTkwMDI3NTE1Miw0MzU5NzkwMjcsLTczND
+E1MDk0OSwyMDYxMjY3MDE5LC00NzQ5MzQyOTIsNzczMzg0MzMs
+MjM4NTQ0MzA4LC0yMDc5NjM1NzM5LDE3Njg0NzY2MTEsOTQ1NT
+U4NjY1LC03ODI3MDIzNzUsMTE2ODk4MjQ0LC0xOTkwMDMwNDc1
+XX0=
 -->
