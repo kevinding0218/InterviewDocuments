@@ -93,8 +93,12 @@ reconnect to the master.
 - **Zookeeper** is a good candidate for a configuration service, we can use it here. **Redis also implemented Redis Sentinel for this purpose.**
 ##### Points of Failures
 - We do data replication asynchronously, to have a better performance. We do not want to wait until leader sever replicates data to all the followers. And if leader server got some data and failed before this data was replicated by any of the followers, data is lost. And this is actually an acceptable behavior in many real-life use cases, when we deal with cache.
+- The first priority of the cache is to be fast, and if it loses data in some rare scenarios, it should not be a big deal. This is just a cache miss and we should design our service in a way that such failures are expected.
+#### Inconsistency
+- Distributed cache we built favors performance and availability over consistency.
+- There are several things that lead to inconsistency. We replicate data asynchronously to have a better performance. So, a get call processed by the master node, may return a different result than a get call for the same key but processed by a read replica.
+- Another potential source of inconsistency is when clients have a different list of cache servers. Cache servers may go down and go up again, and it is possible that a client write values that no other clients can read.
 - 
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4Njk2MDM4NCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNzE5Mzg0NzE4LC0yMDg4NzQ2NjEyXX0=
 -->
