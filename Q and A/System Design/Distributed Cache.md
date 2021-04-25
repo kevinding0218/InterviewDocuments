@@ -91,9 +91,10 @@ reconnect to the master.
 - Configuration service is responsible for monitoring of both leaders and followers and failover, if some leader is not working as expected, configuration service can promote follower to leader. And as we discussed before, configuration service is a source of authority for clients.
 - Cache clients use configuration service to discover all cache servers. Configuration service is a distributed service by its nature. It usually consists of an odd number of nodes (to achieve quorum easier), nodes are located on machines that fail independently (so that configuration service remains available in case for example network partitions) and all nodes talk to each other using TCP protocol.
 - **Zookeeper** is a good candidate for a configuration service, we can use it here. **Redis also implemented Redis Sentinel for this purpose.**
-##### 
+##### Points of Failures
+- We do data replication asynchronously, to have a better performance. We do not want to wait until leader sever replicates data to all the followers. And if leader server got some data and failed before this data was replicated by any of the followers, data is lost. And this is actually an acceptable behavior in many real-life use cases, when we deal with cache.
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDE1ODY5MDQsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbMTQ4Njk2MDM4NCwtMjA4ODc0NjYxMl19
 -->
