@@ -59,11 +59,15 @@ LRU Cache			LRU Cache
 - Client stores **list of cache hosts in sorted order (for a fast host lookup) and binary search can be used to find a cache server** that owns the key.
 - Cache client talks to cache hosts using TCP or UDP protocol. And if cache host is unavailable, client proceeds as though it was a cache miss. As you may see, list of cache hosts is the most important knowledge for clients.
 #### How cache hosts list is created, maintained and shared?
-- First option we store a list of cache hosts in a file and deploy this file to service hosts using some continuous deployment pipeline. This is the simplest option but not very flexible. Every time list changes we need to make a code change and deploy it out to every service host.
-- Second option, we keep the file, but simplify the deployment process. Specifically, we may put the file to the shared storage and make service hosts poll for the file periodically.
+1. First option we store a list of cache hosts in a file and deploy this file to service hosts using some continuous deployment pipeline. This is the simplest option but not very flexible. Every time list changes we need to make a code change and deploy it out to every service host.
+2. Second option, we keep the file, but simplify the deployment process. Specifically, we may put the file to the shared storage and make service hosts poll for the file periodically. All service hosts try to retrieve the file from some common location, for example S3 storage service.
+	- To implement this option, we may introduce a daemon process that runs on each service host and polls data from the storage once a minute or several minutes.
+	- The drawback of this approach is that we still need to maintain the file manually. Make changes and deploy it to the shared storage every time cache host dies or new host is added.
+3. It would be great if we could somehow monitor cache server health and if something bad happens to the cache server, all service hosts are notified and stop sending any requests to the unavailable cache server. And if a new cache server is added, all service hosts are also notified and start sending requests to it. To implement this approach, we will need a new service, configuration service, whosepurpose is to discover cache hosts and monitor their health.
+- 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNDY1MDkzNywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbODY5NTA5OTA4LC0yMDg4NzQ2NjEyXX0=
 -->
