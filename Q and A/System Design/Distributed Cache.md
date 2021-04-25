@@ -63,7 +63,7 @@ LRU Cache			LRU Cache
 2. Second option, we keep the file, but simplify the deployment process. Specifically, we may put the file to the shared storage and make service hosts poll for the file periodically. All service hosts try to retrieve the file from some common location, for example S3 storage service.
 	- To implement this option, we may introduce a daemon process that runs on each service host and polls data from the storage once a minute or several minutes.
 	- The drawback of this approach is that we still need to maintain the file manually. Make changes and deploy it to the shared storage every time cache host dies or new host is added.
-3. It would be great if we could somehow monitor cache server health and if something bad happens to the cache server, all service hosts are notified and stop sending any requests to the unavailable cache server. And if a new cache server is added, all service hosts are also notified and start sending requests to it. To implement this approach, we will need a new service, **configuration service, whose purpose is to discover cache hosts and monitor their health.**
+3. Second option, Configuration Service (e.g ZooKeeperIt would be great if we could somehow monitor cache server health and if something bad happens to the cache server, all service hosts are notified and stop sending any requests to the unavailable cache server. And if a new cache server is added, all service hosts are also notified and start sending requests to it. To implement this approach, we will need a new service, **configuration service, whose purpose is to discover cache hosts and monitor their health.**
 	- Each cache server registers itself with the configuration service and sends heartbeats to the configuration service periodically. As long as heartbeats come, server is keep registered in the system. If heartbeats stop coming, the configuration service unregisters a cache server that is no longer alive or inaccessible. And every cache client grabs the list of registered cache servers from the configuration service.
 	- The third option is the hardest from implementation standpoint and its operational cost is higher. But it helps to fully automate the list maintenance.
 ### Summarize so far
@@ -82,9 +82,11 @@ for that shard is lost and all requests to that shard will result in a cache mis
 ### Data Replication (deal with hot shard problem)
 1. The first category includes a set of probabilistic protocols like gossip, these protocols tend to favor eventual consistency.
 2. The second category includes consensus protocols such as chain replication, these protocols tend to favor strong consistency
-#### leader follower (also known as master-slave) replication
+#### Leader Follower (also known as master-slave) replication
+- 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA0MzUwMTI0LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE4NTkwODA3OTcsLTIwODg3NDY2MTJdfQ
+==
 -->
