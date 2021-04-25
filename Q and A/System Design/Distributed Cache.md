@@ -59,11 +59,11 @@ LRU Cache			LRU Cache
 - Client stores **list of cache hosts in sorted order (for a fast host lookup) and binary search can be used to find a cache server** that owns the key.
 - Cache client talks to cache hosts using TCP or UDP protocol. And if cache host is unavailable, client proceeds as though it was a cache miss. As you may see, list of cache hosts is the most important knowledge for clients.
 #### How cache hosts list is created, maintained and shared?
-- In the first option we store a list of cache hosts in a file and deploy this file to service hosts using some continuous deployment pipeline. This is the simplest option but not very flexible. Every time list changes we need to make a code change and deploy it out to every service host.
-- 
+- First option we store a list of cache hosts in a file and deploy this file to service hosts using some continuous deployment pipeline. This is the simplest option but not very flexible. Every time list changes we need to make a code change and deploy it out to every service host.
+- Second option, we keep the file, but simplify the deployment process. Specifically, we may put the file to the shared storage and make service hosts poll for the file periodically.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNTI3MzQ4NywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMjAxNDY1MDkzNywtMjA4ODc0NjYxMl19
 -->
