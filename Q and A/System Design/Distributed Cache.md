@@ -18,13 +18,21 @@
 - The same idea, but a slightly different realization, is to use service hosts for the cache. We run cache as a separate process on a service host. And data is also split into shards. And similar to the first option, when service needs to make a call to the cache, it picks the shard that stores data and makes a call.
 - Le’ts call these options as distributed cache cluster and co-located cache.
 ```
+- Dedicated cache cluster
+- Isolation of resources between service and cache
+- Can be used by multiple services
 Service Host A		Service Host B
 
 Cache Host A		Cache Host B
-LRU Cache			
+LRU Cache			LRU Cache
+(A - M)				(N - Z)
+
+- Co-located cache
+Service Host A		Service Host B
+LRU Cache			LRU Cache
+(A - M)				(N - Z)
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDQyMjQ1MDgsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTI1NDA3NTYxNSwtMjA4ODc0NjYxMl19
 -->
