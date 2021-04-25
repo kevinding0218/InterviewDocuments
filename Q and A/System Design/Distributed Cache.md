@@ -98,7 +98,13 @@ reconnect to the master.
 - Distributed cache we built favors performance and availability over consistency.
 - There are several things that lead to inconsistency. We replicate data asynchronously to have a better performance. So, a get call processed by the master node, may return a different result than a get call for the same key but processed by a read replica.
 - Another potential source of inconsistency is when clients have a different list of cache servers. Cache servers may go down and go up again, and it is possible that a client write values that no other clients can read.
-- 
+- Introduce synchronous replication. And make sure all clients share a single view of the cache servers list. But this will increase latency and overall complexity of the system.
+#### Time to live (TTL)
+- LRU used algorithm evicts data from cache when cache is full. But if cache is not full, some items may sit there for a long time.
+And such items may become stale.
+To address this issue, we may introduce some metadata for a cache entry and include time-to-live
+attribute.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE5Mzg0NzE4LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTIxNDQyMDE5NDcsLTIwODg3NDY2MTJdfQ
+==
 -->
