@@ -22,17 +22,19 @@
 - Isolation of resources between service and cache
 - Can be used by multiple services
 Service Host A		Service Host B
-
+	...					...
 Cache Host A		Cache Host B
 LRU Cache			LRU Cache
 (A - M)				(N - Z)
 
 - Co-located cache
+- No extra hardware and operational cost
+- Scales together with the service
 Service Host A		Service Host B
 LRU Cache			LRU Cache
 (A - M)				(N - Z)
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NDA3NTYxNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTEyNzI0NDA4MywtMjA4ODc0NjYxMl19
 -->
