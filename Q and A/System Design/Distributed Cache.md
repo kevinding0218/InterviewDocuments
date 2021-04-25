@@ -106,7 +106,16 @@ reconnect to the master.
 - We can passively expire an item, when some client tries to access it, and the item is found to be expired.
 - We can actively expire, when we create a maintenance thread that runs at regular intervals and removes expired items.
 - As there may be billions of items in the cache, we cannot simply iterate over all cache items. Usually, some probabilistic algorithms are used, when several random items are tested with every run.
-- 
+#### Local Cache & Remote Cache
+- Services that use distributed (or remote) cache, often use local cache as well. If data is not found in the local cache, call to the distributed cache is initiated.
+- To make life of service teams easier, so they do not need to deal with both caches, we can implement a support for the local cache inside the cache client.
+- So, when cache client instance is created, we also construct a local cache. This way we hide all the complexity behind a single component - cache client.
+- We can utilize previously introduced LRU cache implementation as a local cache, or use well-known 3-rd party implementations, for example Guava cache.
+#### Security
+- Caches are usually accessed by trusted clients inside trusted environments and we should not expose cache servers directly to the internet, if it is not absolutely required.
+- For these reasons we should use a firewall to restrict access to cache server ports and ensure only approved clients can access the cache. 
+- Clients may also encrypt data before storing it in cache and decrypt it on the way out. But we should expect performance implications.
+#### ME
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMDc2NjU1OSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTUwOTY2MTUxMSwtMjA4ODc0NjYxMl19
 -->
