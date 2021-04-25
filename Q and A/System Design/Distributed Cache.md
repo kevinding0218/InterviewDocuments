@@ -33,9 +33,15 @@ Service Host A		Service Host B
 LRU Cache			LRU Cache
 (A - M)				(N - Z)
 ```
-#### Dedicated 
+#### Dedicated Cache Cluster
+- Dedicated cluster helps to isolate cache resources from the service resources. Both the cache and the service do not share memory and CPU anymore. And can scale on their own.
+- Dedicated cluster can be used by multiple services. And we can utilize the same cluster across several microservices our team owns. And dedicated cluster also gives us flexibility in choosing hardware. We can choose hardware hosts with a lot of memory and high network bandwidth. Public clouds nowadays provide a variety of memory optimized hardware.
+#### Co-located Cache Cluster
+- We do not need a separate cluster. This helps to save on hardware cost and usually less operationally intensive than a separate cluster. And with co-location, both the service and the cache scale out at the same time. We just add more hosts to the service cluster when needed.
+
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNzczMTg1MywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTIwODcxNzgwOSwtMjA4ODc0NjYxMl19
 -->
