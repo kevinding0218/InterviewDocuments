@@ -83,9 +83,13 @@ for that shard is lost and all requests to that shard will result in a cache mis
 1. The first category includes a set of probabilistic protocols like gossip, these protocols tend to favor eventual consistency.
 2. The second category includes consensus protocols such as chain replication, these protocols tend to favor strong consistency
 #### Leader Follower (also known as master-slave) replication
+- For each shard we will designate a master cache server and several read replicas. Replicas (or followers) try to be an exact copy of the master. Every time the connection between master and replica breaks, replica attempts to automatically
+reconnect to the master. 
+- Replicas live in different data centers, so that cache data is still available when one data center is down. 
+- All put calls go through the master node, while get calls are handled by both master node and all the replicas. And because calls to a cache shard are now spread across several nodes, it is much easier to deal with hot shards. We may scale out by adding more read replicas.
 - 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE5MjU0ODI3LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTM2MDc5NzMxMiwtMjA4ODc0NjYxMl19
 -->
