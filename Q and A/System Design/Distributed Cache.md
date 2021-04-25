@@ -80,9 +80,11 @@ LRU Cache			LRU Cache
 - High availability is not there at all. If some shard dies or becomes unavailable due to a network partition, all cache data
 for that shard is lost and all requests to that shard will result in a cache miss, until keys are re-hashed.
 ### Data Replication (deal with hot shard problem)
-- 
+1. The first category includes a set of probabilistic protocols like gossip, these protocols tend to favor eventual consistency.
+2. The second category includes consensus protocols such as chain replication, these protocols tend to favor strong consistency
+#### leader follower (also known as master-slave) replication
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjM5Njg5NywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNTA0MzUwMTI0LC0yMDg4NzQ2NjEyXX0=
 -->
