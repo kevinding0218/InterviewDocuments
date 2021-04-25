@@ -13,10 +13,9 @@
 ### Implementation
 - LRU Cache
 ### Make it distributed
-- We can start with a really straightforward idea, when we move the least recently used cache we just implemented to its own host.
-- The benefit of this, we can now make each host to store only chunk of data, called shard. Because data is split across several hosts, we now can store much more data in memory. Service hosts know about all shards, and they forward put and get requests to a particular shard.
+- We can start with a really straightforward idea, when we move the least recently used cache we just implemented to its own host. The benefit of this, we can now make each host to store only chunk of data, called shard. Because data is split across several hosts, we now can store much more data in memory. Service hosts know about all shards, and they forward put and get requests to a particular shard.
 - The same idea, but a slightly different realization, is to use service hosts for the cache. We run cache as a separate process on a service host. And data is also split into shards. And similar to the first option, when service needs to make a call to the cache, it picks the shard that stores data and makes a call.
-- Le’ts call these options as distributed cache cluster and co-located cache.
+- Let's call these options as distributed cache cluster and co-located cache.
 ```
 - Dedicated cache cluster
 - Isolation of resources between service and cache
@@ -34,7 +33,9 @@ Service Host A		Service Host B
 LRU Cache			LRU Cache
 (A - M)				(N - Z)
 ```
+#### Dedicated 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNzI0NDA4MywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTIxNzczMTg1MywtMjA4ODc0NjYxMl19
 -->
