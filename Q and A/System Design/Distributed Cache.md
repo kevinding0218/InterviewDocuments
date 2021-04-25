@@ -58,11 +58,12 @@ LRU Cache			LRU Cache
 - Cache client knows about all cache servers. And all clients should have the same list. Otherwise, different clients will have their own view of the consistent hashing circle and the same key may be routed to different cache hosts.
 - Client stores **list of cache hosts in sorted order (for a fast host lookup) and binary search can be used to find a cache server** that owns the key.
 - Cache client talks to cache hosts using TCP or UDP protocol. And if cache host is unavailable, client proceeds as though it was a cache miss. As you may see, list of cache hosts is the most important knowledge for clients.
+#### How cache hosts list is created, maintained and shared?
+- In the first option we store a list of cache hosts in a file and deploy this file to service hosts using some continuous deployment pipeline. This is the simplest option but not very flexible. Every time list changes we need to make a code change and deploy it out to every service host.
 - 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTUyODIwNDAsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTMxNTI3MzQ4NywtMjA4ODc0NjYxMl19
 -->
