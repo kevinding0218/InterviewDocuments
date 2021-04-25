@@ -39,14 +39,17 @@ LRU Cache			LRU Cache
 #### Co-located Cache Cluster
 - We do not need a separate cluster. This helps to save on hardware cost and usually less operationally intensive than a separate cluster. And with co-location, both the service and the cache scale out at the same time. We just add more hosts to the service cluster when needed.
 #### Cache Client
-- We told cache clients to call the cache process using either TCP or UDP connection.
-##### how do cache clients decide which cache shard to call?
-1. MOD function. 
+- We told cache clients to call the cache process using either TCP or UDP connection. How do cache clients decide which cache shard to call?
+##### MOD function
 - Based on the item key and some hash function we compute a hash. We divide this hash number by a number of available cache hosts. And take a remainder. We treat this remainder as an index in the array of cache hosts.
-- 
+- For example, we have 3 cache hosts. And hash is equal to 8. 8 MOD 3 is 2, so the cache host with index 2 will be selected by the service to store this item in the cache and while retrieving the item from the cache.
+###### what happens when we add a new cache host (or some host dies due to hardware failures)?
+- The MOD function will start to produce completely different results. Service hosts will start choosing completely different cache hosts than they did previously, resulting in a high percentage of cache misses.
+##### Consistent Hashing function
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0OTYyNjY4MCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTQ2NDU3NjAwMCwtMjA4ODc0NjYxMl19
 -->
