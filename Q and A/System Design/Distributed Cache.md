@@ -38,10 +38,15 @@ LRU Cache			LRU Cache
 - Dedicated cluster can be used by multiple services. And we can utilize the same cluster across several microservices our team owns. And dedicated cluster also gives us flexibility in choosing hardware. We can choose hardware hosts with a lot of memory and high network bandwidth. Public clouds nowadays provide a variety of memory optimized hardware.
 #### Co-located Cache Cluster
 - We do not need a separate cluster. This helps to save on hardware cost and usually less operationally intensive than a separate cluster. And with co-location, both the service and the cache scale out at the same time. We just add more hosts to the service cluster when needed.
-
+#### Cache Client
+- We told cache clients to call the cache process using either TCP or UDP connection.
+##### how do cache clients decide which cache shard to call?
+1. MOD function. 
+- Based on the item key and some hash function we compute a hash. We divide this hash number by a number of available cache hosts. And take a remainder. We treat this remainder as an index in the array of cache hosts.
+- 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODcxNzgwOSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTk0OTYyNjY4MCwtMjA4ODc0NjYxMl19
 -->
