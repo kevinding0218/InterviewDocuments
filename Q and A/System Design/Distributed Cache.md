@@ -54,10 +54,15 @@ LRU Cache			LRU Cache
 - In other words, host 6 took responsibility for a subset of what was formerly owned by host 4. And nothing has changed for all the other hosts. Which is exactly what we wanted, to minimize a number of keys we need to re-hash.
 - Consistent hashing is much better than MOD hashing, as significantly smaller fraction of keys is re-hashed when new host is added or host is removed from the cache cluster.
 #### What does Cache Client do?
+- It’s a small and lightweight library, that is integrated with the service code and is responsible for the cache host selection.
+- Cache client knows about all cache servers. And all clients should have the same list. Otherwise, different clients will have their own view of the consistent hashing circle and the same key may be routed to different cache hosts.
+- Client stores **list of cache hosts in sorted order (for a fast host lookup) and binary search can be used to find a cache server** that owns the key.
+- Cache client talks to cache hosts using TCP or UDP protocol. And if cache host is unavailable, client proceeds as though it was a cache miss. As you may see, list of cache hosts is the most important knowledge for clients.
 - 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNzE5NDQwNCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTExNTUyODIwNDAsLTIwODg3NDY2MTJdfQ
+==
 -->
