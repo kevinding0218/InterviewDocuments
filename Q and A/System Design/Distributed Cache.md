@@ -72,13 +72,17 @@ LRU Cache			LRU Cache
 #### Recall non functional requirements
 ##### Have we built a highly performant cache?
 - Yes. Least recently used cache implementation uses constant time operations. Cache client picks cache server in log n time, very fast. And connection between cache client and cache server is done over TCP or UDP, also fast.
-##### What about other two: scalability and availability?
+##### What about scalability ?
 - We can easily create more shards and have more data stored in memory. Although those of you who did data sharding in real systems know that common problem for shards is that some of them may become hot.
 - Meaning that some shards process much more requests then their peers. Resulting in a bottleneck. And adding more cache servers may not be very effective.
 - With consistent hashing in place, a new cache server will further split some shard into two smaller shards. But we do not want to split any shard, we need to split a very concrete one.
+##### What about availability?
+- High availability is not there at all. If some shard dies or becomes unavailable due to a network partition, all cache data
+for that shard is lost and all requests to that shard will result in a cache miss, until keys are re-hashed.
+### Data Replication (deal with hot shard problem)
 - 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MzQ5OTQ4NCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTMxMjM5Njg5NywtMjA4ODc0NjYxMl19
 -->
