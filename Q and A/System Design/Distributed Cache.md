@@ -66,10 +66,16 @@ LRU Cache			LRU Cache
 3. It would be great if we could somehow monitor cache server health and if something bad happens to the cache server, all service hosts are notified and stop sending any requests to the unavailable cache server. And if a new cache server is added, all service hosts are also notified and start sending requests to it. To implement this approach, we will need a new service, **configuration service, whose purpose is to discover cache hosts and monitor their health.**
 	- Each cache server registers itself with the configuration service and sends heartbeats to the configuration service periodically. As long as heartbeats come, server is keep registered in the system. If heartbeats stop coming, the configuration service unregisters a cache server that is no longer alive or inaccessible. And every cache client grabs the list of registered cache servers from the configuration service.
 	- The third option is the hardest from implementation standpoint and its operational cost is higher. But it helps to fully automate the list maintenance.
-- 
-
+### Summarize so far
+- To store more data in memory we partition data into shards. And put each shard on its own server.
+- Every cache client knows about all cache shards. And cache clients use consistent hashing algorithm to pick a shard for storing and retrieving a particular cache key.
+#### Recall non functional requirements
+##### Have we built a highly performant cache?
+- Yes. Least recently used cache implementation uses constant time operations. Cache client picks cache server in log n time, very fast. And connection between cache client and cache server is done over TCP or UDP, also fast.
+####
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwOTg0MjExNywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTEyNjg2MDQ4MTMsLTIwODg3NDY2MTJdfQ
+==
 -->
