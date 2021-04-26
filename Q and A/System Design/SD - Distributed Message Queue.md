@@ -10,7 +10,7 @@
 	- In case of a queue, message is received by one and only one consumer.
 ### Functional Requirements
 - At this stage of the interview it may be hard to come up with a definitive set of requirements. And it’s usually not needed.
-- Time limit allows us to only focus on several core APIs, like **send message and receive message**.
+- Time limit allows us to only focus on several core APIs, like **send message(messageBody) and receive message**.
 	- Among functional requirements, we can be asked to support create and delete queue APIs, or delete message API.
 	- There may be specific requirements for the producer (for example system needs to avoid duplicate submissions), or security requirements, or an ask to implement a specific ordering guarantee.
 ### Non Functional Requirements
@@ -18,7 +18,10 @@
 - there may be many other requirements either explicitly stated by the interviewer or intentionally omitted.
 - the interviewer may define specific service level agreement numbers (so called SLA, for example minimum throughput our system needs to support), or requirements around cost-effectiveness (for example system needs to minimize hardware cost or operational support cost)
 ### Architecture
+- Let’s start with components that are common for many distributed systems.
+- First, we need a virtual IP. VIP refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
+- Next, we have a load balancer. A load balancer is a device that routs client requests across a number of servers.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODUyOTI1NjldfQ==
+eyJoaXN0b3J5IjpbLTg0MDY2NTA3NF19
 -->
