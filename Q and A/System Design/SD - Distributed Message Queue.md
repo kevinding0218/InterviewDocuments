@@ -42,10 +42,10 @@ Client(consumer)
 - As for scalability concerns, a concept of multiple VIPs (sometimes referred as **VIP partitioning**) can be utilized.
 - In DNS we assign multiple A records to the same DNS name for the service. As a result, requests are partitioned across several load balancers. And by spreading load balancers across several data centers, we improve both availability and performance.
 ```
-								/	FrontEnd-Host-1.domain.com		-
-		/	VIP1 LoadBalancer A -	FrontEnd-Host-2.domain.com		- Data Center A
+Distributed-Msg-Queue.domain.com
+|		/	VIP1 LoadBalancer A -	FrontEnd-Host-1/2.domain.com	- Data Center A
 Client	-	VIP2 LoadBalancer B - 	FrontEnd-Host-3/4.domain.com	- Data Center B
-		\	VIP2 LoadBalancer B - 	FrontEnd-Host-3/4.domain.com	- Data Center B
+		\	VIP3 LoadBalancer C - 	FrontEnd-Host-5/6.domain.com	- Data Center C
 ```
 #### FrontEnd web service
 - FrontEnd is a lightweight web service, consisting of stateless machines located across several data centers.
@@ -63,6 +63,6 @@ And during authorization check we verify that sender is allowed to publish messa
 #### Cache
 - Cache stores copies of source data. In FrontEnd cache we will store metadata information about the most actively used queues. As well as user identity information to save on calls to authentication and authorization services.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NDE0OTM4MCwtMTkzNDc5ODQ2MywtMT
-Q0MDkzMDE4N119
+eyJoaXN0b3J5IjpbMzUxNDc5NzU5LC0xOTM0Nzk4NDYzLC0xND
+QwOTMwMTg3XX0=
 -->
