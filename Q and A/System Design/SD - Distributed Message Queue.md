@@ -9,7 +9,12 @@
 	- In case of a topic, message that is published goes to each and every subscriber.
 	- In case of a queue, message is received by one and only one consumer.
 ### Functional Requirements
+- At this stage of the interview it may be hard to come up with a definitive set of requirements. And it’s usually not needed.
+- Time limit allows us to only focus on several core APIs, like **send message and receive message**.
+### Non Functional Requirements
+- we want our system to be **scalable** and handle load increase, highly **available** and tolerate hardware and network failures, highly **performant**, so that both send and receive operations are fast, and durable, so that data is persisted once submitted to the queue.
+- there may be many other requirements either explicitly stated by the interviewer or intentionally omitted.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjUwMDE5ODVdfQ==
+eyJoaXN0b3J5IjpbMTkyNDI5OTQxMF19
 -->
