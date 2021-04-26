@@ -132,12 +132,9 @@ reconnect to the master.
 - We started with a single host and implemented least recently used cache. Because local cache has limited capacity and does not scale, we decided to run our LRU cache as a standalone process. Either on its own host or on the service host.
 - We made each process responsible for its own part of the data set. We introduced a consistent hashing ring, a logical structure that helps to assign owners for ranges of cache keys.
 - We introduced a cache client, that is responsible to routing requests for each key to a specific shard that stores data for this key. Memcached, which is an open source high-performance distributed cache is built on top of these principles.
-- We went further, as we wanted to improve availability of our cache and read scalability.
-And introduced master-slave data replication.
-For monitoring leaders and read replicas and to provide failover support, we brought in
-a configuration service.
-Which is also used by cache clients for discovering cache servers.
+- We went further, as we wanted to improve availability of our cache and read scalability. And introduced master-slave data replication.
+- For monitoring leaders and read replicas and to provide failover support, we brought in a configuration service. Which is also used by cache clients for discovering cache servers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYzNTc4MTYsMjAxMTQwMDYsLTIwODg3ND
-Y2MTJdfQ==
+eyJoaXN0b3J5IjpbMTY4MjkxNTg0NywyMDExNDAwNiwtMjA4OD
+c0NjYxMl19
 -->
