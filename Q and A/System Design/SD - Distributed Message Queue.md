@@ -22,7 +22,9 @@
 - First, we need a virtual IP. VIP refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
 - Next, we have a load balancer. A load balancer is a device that routs client requests across a number of servers.
 - Next, we have a FrontEnd web service. A component responsible for initial request processing, like validation, authentication, etc.
-- 
+- Queue metadata information like its name, creation date and time, owner and any other
+configuration settings will be stored in a database.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDA5MzAxODddfQ==
+eyJoaXN0b3J5IjpbLTEyNjU2MDM2ODgsLTE0NDA5MzAxODddfQ
+==
 -->
