@@ -21,7 +21,8 @@
 - Let’s start with components that are common for many distributed systems.
 - First, we need a virtual IP. VIP refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
 - Next, we have a load balancer. A load balancer is a device that routs client requests across a number of servers.
+- Next, we have a FrontEnd web service. A component responsible for initial request processing, like validation, authentication, etc.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MDY2NTA3NF19
+eyJoaXN0b3J5IjpbLTE0NDA5MzAxODddfQ==
 -->
