@@ -45,7 +45,16 @@ Client(consumer)
 - FrontEnd is a lightweight web service, consisting of stateless machines located across several data centers.
 - FrontEnd service is responsible for: **request validation, authentication and authorization, SSL termination, server-side data encryption, caching, rate limiting (also known as throttling), request dispatching, request deduplication, usage data collection.**
 ##### Request validation
+- Request validation helps to ensure that all the required parameters are present in the request and values of these parameters honor constraints.
+- For example, in our case we want to make sure queue name comes with every send message request. And message size does not exceed a specified threshold.
+##### Authentication
+- During authentication check we verify that message sender is a registered customer of our distributed queue service.
+And during authorization check we verify that sender is allowed to publish messages to the queue it claims.
+##### TLS
+- TLS is a protocol that aims to provide privacy and data integrity. TLS termination refers to the process of decrypting request and passing on an unencrypted request to the backend service. And we want to do TLS termination on FrontEnd hosts because TLS on the load balancer is expensive. Termination is usually handled by not a FrontEnd service itself, but a separate HTTP proxy that runs as a process on the same host.
+##### Server-side Encryption
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDU0Mjc2MCwtMTQ0MDkzMDE4N119
+eyJoaXN0b3J5IjpbLTE4ODUyMDQ0NTQsLTE0NDA5MzAxODddfQ
+==
 -->
