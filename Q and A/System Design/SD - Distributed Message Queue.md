@@ -82,8 +82,10 @@ And during authorization check we verify that sender is allowed to publish messa
 - The **Third** approach is We also partition data into shards, but **FrontEnd does not know on what shard data is stored**. So, **FrontEnd calls a random** Metadata service host and **host itself knows where to forward** the request to.
 - In option 1, we can introduce a **load balancer between FrontEnd and Metadata service**. As all Metadata service hosts are equal and FrontEnd does not care which Metadata host handles the request.
 - In option 2 and 3, **Metadata hosts represent a consistent hashing ring.**
-
+#### Backend Service
+- Is database an option? Yes, it is. But not the best one and let me explain why.
+- We are building a distributed message queue, a system that should be able to handle a very high throughput. And this means that all this throughput will be offloaded to the database. In other words, a problem of building a distributed message queue becomes a problem of building a database that can handle high throughput. And we know that highly-available and scalable databases exist out there.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MTkzMTI5LC0xOTM0Nzk4NDYzLC0xND
-QwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbLTExMjc5MDA1NjQsLTE5MzQ3OTg0NjMsLT
+E0NDA5MzAxODddfQ==
 -->
