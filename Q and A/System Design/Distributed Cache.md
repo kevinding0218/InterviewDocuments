@@ -122,12 +122,12 @@ reconnect to the master.
 #### Proxy
 - As you have seen cache client has many responsibilities: maintain a list of cache servers, pick a shard to route a request to, handle a remote call and any potential failures, emit metrics.
 - A proxy, that will sit between cache clients and cache servers and will be responsible for picking a cache shard.
-- is to make cache servers responsible for picking a shard.
-Client sends request to a random cache server and cache server applies consistent hashing
-(or some other partitioning algorithm) and redirects request to the shard that stores
-the data.
-This idea is utilized by Redis cluster.
+- Or to make cache servers responsible for picking a shard. Client sends request to a random cache server and cache server applies consistent hashing (or some other partitioning algorithm) and redirects request to the shard that stores the data. This idea is utilized by Redis cluster.
+#### Disadvantage of consistent hashing
+- domino effect and the fact that cache servers do not split the circle evenly.
+- Domino effect may appear when cache server dies. And all of its load is transferred to the next server. This transfer might overload the next server, and then that server would fail, causing a chain reaction of failures.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODA1MjA5MTQsMjAxMTQwMDYsLTIwOD
-g3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTc5MjI1Mjc1NywyMDExNDAwNiwtMjA4OD
+c0NjYxMl19
 -->
