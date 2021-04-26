@@ -87,8 +87,11 @@ And during authorization check we verify that sender is allowed to publish messa
 	- We are building a distributed message queue, a system that should be able to handle a very high throughput. And this means that all this throughput will be offloaded to the database. In other words, a problem of building a distributed message queue becomes a problem of building a database that can handle high throughput. And we know that highly-available and scalable databases exist out there.
 	- Store in memory or file system, As we may need to store messages for days or even weeks, we need a more durable storage, like a local disk. At the same time newly arrived messages may live in memory for a short period of time or until memory on the backend host is fully utilized.
 - How do we replicate data?
-	- 
+	- We will send copies of messages to some other hosts, so that data can survive host hardware or software failures.
+And finally, let's think about how FrontEnd hosts select backend hosts for both storing messages and retrieving them.
+- Message comes to the FrontEnd, FrontEnd consults Metadata service what backend host to send data to. Message is sent to a selected backend host and data is replicated. And when receive message call comes, FrontEnd talks to Metadata service to identify a backend host that stores the data.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NDM0MTEyNSwtMTkzNDc5ODQ2MywtMT
+eyJoaXN0b3J5IjpbMTE3MTcxMzg4NiwtMTkzNDc5ODQ2MywtMT
 Q0MDkzMDE4N119
 -->
