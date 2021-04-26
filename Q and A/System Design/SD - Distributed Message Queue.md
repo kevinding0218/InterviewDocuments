@@ -24,8 +24,10 @@
 - Next, we have a **FrontEnd web service**. A component responsible for initial request processing, like validation, authentication, etc.
 - Queue metadata information like its name, creation date and time, owner and any other configuration settings will be stored in a ** Metadata Database**.
 - And best practices dictate that databases should be hidden behind some facade, a dedicated web service responsible for handling calls to a database, as **Metadata Service**
+- And we need a place to store queue messages. So, lets introduce a backend web service, that will be responsible for message persistence and processing.
+#### Each Component
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDk2NTUwNjgsLTE0NDA5MzAxODddfQ
+eyJoaXN0b3J5IjpbLTE3MTA1MzQyODUsLTE0NDA5MzAxODddfQ
 ==
 -->
