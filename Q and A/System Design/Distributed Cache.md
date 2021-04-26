@@ -116,7 +116,11 @@ reconnect to the master.
 - For these reasons we should use a firewall to restrict access to cache server ports and ensure only approved clients can access the cache. 
 - Clients may also encrypt data before storing it in cache and decrypt it on the way out. But we should expect performance implications.
 #### Metrics & Logging
-- 
+- This is especially important if we launch our distributed cache as a service. Because so many service teams in the organization may use our cache, every time those services experience performance degradation, they will come to us as one of the potential sources of these degradations.
+- What metrics we may want to emit: number of faults while calling the cache, latency, number of hits and misses, CPU and memory utilization on cache hosts, network I/O. 
+- With regards to logging we may capture the details of every request to the cache. The basic information like who and when accessed the cache, what was the key and return status code.
+Log entries should be small, but useful.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMTQwMDYsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE5Njc4NjkxOCwyMDExNDAwNiwtMjA4OD
+c0NjYxMl19
 -->
