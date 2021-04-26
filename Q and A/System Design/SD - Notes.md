@@ -7,8 +7,9 @@
 - **High performance** will help to ensure data is retrieving fast on every request
 - High Durability: if data persistence is important
 ### Design/Implementation
- - start approaching any design problem with some small and simple steps.
- - evolve your solution with every next step.
+ - start approaching any design problem with some small and simple steps. evolve your solution with every next step.
+ - The set of components we just discussed: **VIP + Load Balancer + FrontEnd web service + Metadata web service that represents a caching layer on top of a database** is so popular in the world of distributed systems, that you may consider it a standard and apply to many system designs.
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI0OTM2ODU0XX0=
+eyJoaXN0b3J5IjpbMTQ3NzQzMTE0MV19
 -->
