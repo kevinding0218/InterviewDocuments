@@ -62,7 +62,14 @@ And during authorization check we verify that sender is allowed to publish messa
 - Because we want to store messages securely on backend hosts, messages are encrypted as soon as FrontEnd receives them. **Messages are stored in encrypted form and FrontEnd decrypts them only when they are sent back to a consumer**.
 #### Cache
 - Cache stores copies of source data. In FrontEnd cache we will store metadata information about the most actively used queues. As well as user identity information to save on calls to authentication and authorization services.
+#### Rate Limiting/Throttling
+- Rate limiting or throttling is the process of limiting the number of requests you can submit to a given operation in a given amount of time. 
+- Throttling protects the web service from being overwhelmed with requests. Leaky bucket algorithm is one of the most famous.
+#### Metadata & Backend Service
+- FrontEnd service makes remote calls to at least two other web services: Metadata service and backend service.
+- FrontEnd service creates HTTP clients for both services and makes sure that calls to these services are properly isolated.
+- It means that when one service let’s say Metadata service experiences a slowdown, requests to backend service are not impacted.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUxNDc5NzU5LC0xOTM0Nzk4NDYzLC0xND
-QwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbLTIwNjkzOTc0NDMsLTE5MzQ3OTg0NjMsLT
+E0NDA5MzAxODddfQ==
 -->
