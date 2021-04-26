@@ -50,32 +50,33 @@ Client	-	VIP2 LoadBalancer B - 	FrontEnd-Host-3/4.domain.com	- Data Center B
 #### FrontEnd web service
 - FrontEnd is a lightweight web service, consisting of stateless machines located across several data centers.
 - FrontEnd service is responsible for: **request validation, authentication and authorization, SSL termination, server-side data encryption, caching, rate limiting (also known as throttling), request dispatching, request deduplication, usage data collection.**
-#### Request validation
+##### Request validation
 - Request validation helps to ensure that all the required parameters are present in the request and values of these parameters honor constraints.
 - For example, in our case we want to make sure queue name comes with every send message request. And message size does not exceed a specified threshold.
-#### Authentication
+##### Authentication
 - During authentication check we verify that message sender is a registered customer of our distributed queue service.
 And during authorization check we verify that sender is allowed to publish messages to the queue it claims.
-#### TLS
+##### TLS
 - TLS is a protocol that aims to provide privacy and data integrity. TLS termination refers to the process of decrypting request and passing on an unencrypted request to the backend service. And we want to do TLS termination on FrontEnd hosts because TLS on the load balancer is expensive. Termination is usually handled by not a FrontEnd service itself, but a separate HTTP proxy that runs as a process on the same host.
-#### Server-side Encryption
+##### Server-side Encryption
 - Because we want to store messages securely on backend hosts, messages are encrypted as soon as FrontEnd receives them. **Messages are stored in encrypted form and FrontEnd decrypts them only when they are sent back to a consumer**.
-#### Cache
+##### Cache
 - Cache stores copies of source data. In FrontEnd cache we will store metadata information about the most actively used queues. As well as user identity information to save on calls to authentication and authorization services.
-#### Rate Limiting/Throttling
+##### Rate Limiting/Throttling
 - Rate limiting or throttling is the process of limiting the number of requests you can submit to a given operation in a given amount of time. 
 - Throttling protects the web service from being overwhelmed with requests. Leaky bucket algorithm is one of the most famous.
 #### Metadata & Backend Service
-- FrontEnd service makes remote calls to at least two other web services: Metadata service and backend service.
-- FrontEnd service creates HTTP clients for both services and makes sure that calls to these services are properly isolated.
-- It means that when one service let’s say Metadata service experiences a slowdown, requests to backend service are not impacted.
-#### Deduplication
+
+##### Deduplication
 - It may occur when a response from a successful send message request failed to reach a client. 
 - Lesser an issue for ‘at least once’ delivery semantics, a bigger issue for ‘exactly once’ and ‘at most once’ delivery semantics, when we need to guarantee that message was never processed more than one time.
 - Caching is usually used to store previously seen request ids to avoid deduplication.
-#### Data Collection 
+##### Data Collection 
 - When we gather real-time information that can be used for audit.
+#### Metadata Service
+- Metadata service stores information about queues. Every time queue is created, we store information about it in the database.
+- Conceptually, Metadata service is a caching layer between the FrontEnd and a persistent storage. It handles many reads and a relatively small number of writes. As we read every time message arrives and write only when new queue is created. Even though strongly consistent storage is preferred to avoid potential concurrent updates, it is not strictly required.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIzMTMyODE4LC0xOTM0Nzk4NDYzLC0xND
-QwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbLTE5NzI4MzExNTIsLTE5MzQ3OTg0NjMsLT
+E0NDA5MzAxODddfQ==
 -->
