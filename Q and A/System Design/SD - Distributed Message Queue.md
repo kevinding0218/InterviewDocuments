@@ -65,8 +65,6 @@ And during authorization check we verify that sender is allowed to publish messa
 ##### Rate Limiting/Throttling
 - Rate limiting or throttling is the process of limiting the number of requests you can submit to a given operation in a given amount of time. 
 - Throttling protects the web service from being overwhelmed with requests. Leaky bucket algorithm is one of the most famous.
-#### Metadata & Backend Service
-
 ##### Deduplication
 - It may occur when a response from a successful send message request failed to reach a client. 
 - Lesser an issue for ‘at least once’ delivery semantics, a bigger issue for ‘exactly once’ and ‘at most once’ delivery semantics, when we need to guarantee that message was never processed more than one time.
@@ -76,7 +74,14 @@ And during authorization check we verify that sender is allowed to publish messa
 #### Metadata Service
 - Metadata service stores information about queues. Every time queue is created, we store information about it in the database.
 - Conceptually, Metadata service is a caching layer between the FrontEnd and a persistent storage. It handles many reads and a relatively small number of writes. As we read every time message arrives and write only when new queue is created. Even though strongly consistent storage is preferred to avoid potential concurrent updates, it is not strictly required.
+- FrontEnd service makes remote calls to at least two other web services: Metadata service and backend service.
+- FrontEnd service creates HTTP clients for both services and makes sure that calls to these services are properly isolated. It means that when one service let’s say Metadata service experiences a slowdown, requests to backend service are not impacted.
+#### Cache Clusters
+- The first option is **when cache is relatively small** and we can **store the whole data set on every cluster node**. FrontEnd host **calls a randomly chosen Metadata service host**, because all the cache cluster nodes contain the same information.
+- The Second approach is to partition data into small chunks, called shards.Because data set is too big and cannot be placed into a memory of a single host.
+So, we store each such chunk of data on a separate node in a cluster.
+FrontEnd then knows which shard stores the data and calls the shard directly.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzI4MzExNTIsLTE5MzQ3OTg0NjMsLT
-E0NDA5MzAxODddfQ==
+eyJoaXN0b3J5IjpbNDU1OTM4OTksLTE5MzQ3OTg0NjMsLTE0ND
+A5MzAxODddfQ==
 -->
