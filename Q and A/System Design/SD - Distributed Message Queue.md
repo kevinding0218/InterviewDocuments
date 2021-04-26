@@ -26,10 +26,14 @@
 - And best practices dictate that databases should be hidden behind some facade, a dedicated web service responsible for handling calls to a database, as **Metadata Service**
 - And we need a place to store queue messages. So, lets introduce a backend web service, that will be responsible for message persistence and processing.
 ```
-
+Client(producer)						Metadata Database
+				\						Metadata Service
+				---> VIP -- Load Balancer -- FrontEnd -- Backend
+				/
+Client(consumer)
 ```
 #### Each Component
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY3NzUzMDU3LC0xNDQwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbMTU0MzcxNjM4LC0xNDQwOTMwMTg3XX0=
 -->
