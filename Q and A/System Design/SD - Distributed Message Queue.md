@@ -32,20 +32,20 @@ Client(producer)						Metadata Database
 				/
 Client(consumer)
 ```
-#### Each Component
-##### Load balancing
+#### Load balancing
 - Load balancing is a big topic. And unless interviewer encourages you to dive deep into load balancing topic, we better not deviate too much from the main question of the interview. Always try to stay focused on what really matters.
 - Internals of how load balancers work may not matter, but in order to make sure non-functional requirements to the system we build are fully met, we need to explain how load balancers will help us achieve high throughput and availability.
 - When domain name is hit, request is transferred to one of the VIPs registered in DNS for our domain name. VIP is resolved to a load balancer device, which has a knowledge of FrontEnd hosts.
 1. load balancer seems like a single point of failure. What happens if load balancer device goes down?
 2. load balancers have limits with regards to number of requests they can process and number of bytes they can transfer. What happens when our distributed message queue service becomes so popular that load balancer limits are reached?
 - To address **high availability** concerns, load balancers utilize a **concept of primary and secondary nodes**. The primary node accepts connections and serves requests while the secondary node monitors the primary. If, for any reason, the primary node is unable to accept connections, the secondary node takes over.
-- As for scalability concerns, a concept of multiple VIPs (sometimes referred as VIP
-partitioning) can be utilized.
-In DNS we assign multiple A records to the same DNS name for the service.
-As a result, requests are partitioned across several load balancers.
-And by spreading load balancers across several data centers, we improve both availability
-and performance.
+- As for scalability concerns, a concept of multiple VIPs (sometimes referred as **VIP partitioning**) can be utilized.
+- In DNS we assign multiple A records to the same DNS name for the service. As a result, requests are partitioned across several load balancers. And by spreading load balancers across several data centers, we improve both availability and performance.
+#### FrontEnd web service
+- FrontEnd is a lightweight web service, consisting of stateless machines located across several data centers.
+- FrontEnd service is responsible for: **request validation, authentication and authorization, SSL termination, server-side data encryption, caching, rate limiting (also known as throttling), request dispatching, request deduplication, usage data collection.**
+##### Request validation
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3ODIyNjQ2LC0xNDQwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbMTQ3NDU0Mjc2MCwtMTQ0MDkzMDE4N119
 -->
