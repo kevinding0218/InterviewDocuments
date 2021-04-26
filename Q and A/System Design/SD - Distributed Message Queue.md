@@ -41,6 +41,10 @@ Client(consumer)
 - To address **high availability** concerns, load balancers utilize a **concept of primary and secondary nodes**. The primary node accepts connections and serves requests while the secondary node monitors the primary. If, for any reason, the primary node is unable to accept connections, the secondary node takes over.
 - As for scalability concerns, a concept of multiple VIPs (sometimes referred as **VIP partitioning**) can be utilized.
 - In DNS we assign multiple A records to the same DNS name for the service. As a result, requests are partitioned across several load balancers. And by spreading load balancers across several data centers, we improve both availability and performance.
+```
+		
+Client
+```
 #### FrontEnd web service
 - FrontEnd is a lightweight web service, consisting of stateless machines located across several data centers.
 - FrontEnd service is responsible for: **request validation, authentication and authorization, SSL termination, server-side data encryption, caching, rate limiting (also known as throttling), request dispatching, request deduplication, usage data collection.**
@@ -57,6 +61,6 @@ And during authorization check we verify that sender is allowed to publish messa
 #### Cache
 - Cache stores copies of source data. In FrontEnd cache we will store metadata information about the most actively used queues. As well as user identity information to save on calls to authentication and authorization services.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzQ3OTg0NjMsLTE0NDA5MzAxODddfQ
-==
+eyJoaXN0b3J5IjpbLTY1MjI2Nzk5OCwtMTkzNDc5ODQ2MywtMT
+Q0MDkzMDE4N119
 -->
