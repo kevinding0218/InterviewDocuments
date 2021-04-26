@@ -85,7 +85,9 @@ And during authorization check we verify that sender is allowed to publish messa
 #### Backend Service
 - Is database an option? Yes, it is. But not the best one and let me explain why.
 - We are building a distributed message queue, a system that should be able to handle a very high throughput. And this means that all this throughput will be offloaded to the database. In other words, a problem of building a distributed message queue becomes a problem of building a database that can handle high throughput. And we know that highly-available and scalable databases exist out there.
+- Store in memory or file system, As we may need to store messages for days or even weeks, we need a more durable storage, like a local disk. At the same time newly arrived messages may live in memory for a short period of time or until memory on the backend host is fully utilized.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjc5MDA1NjQsLTE5MzQ3OTg0NjMsLT
+eyJoaXN0b3J5IjpbLTE1NDI4Njc1NTcsLTE5MzQ3OTg0NjMsLT
 E0NDA5MzAxODddfQ==
 -->
