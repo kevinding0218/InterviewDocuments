@@ -128,8 +128,16 @@ reconnect to the master.
 - Domino effect may appear when cache server dies. And all of its load is transferred to the next server. This transfer might overload the next server, and then that server would fail, causing a chain reaction of failures.
 - Remember how we placed cache servers on the circle. Some servers may reside close to each other and some may be far apart. Causing uneven distribution of keys among the cache servers.
 - To deal with these problems, several modifications of the consistent hashing algorithm have been introduced. One simple idea is to **add each server on the circle multiple times**.
-#
+### Summary
+- We started with a single host and implemented least recently used cache. Because local cache has limited capacity and does not scale, we decided to run our LRU cache as a standalone process. Either on its own host or on the service host.
+- We made each process responsible for its own part of the data set. We introduced a consistent hashing ring, a logical structure that helps to assign owners for ranges of cache keys.
+- We introduced a cache client, that is responsible to routing requests for each key to a specific shard that stores data for this key. Memcached, which is an open source high-performance distributed cache is built on top of these principles.
+- We went further, as we wanted to improve availability of our cache and read scalability.
+And introduced master-slave data replication.
+For monitoring leaders and read replicas and to provide failover support, we brought in
+a configuration service.
+Which is also used by cache clients for discovering cache servers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzIyMDYyMTEsMjAxMTQwMDYsLTIwOD
-g3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbNDYzNTc4MTYsMjAxMTQwMDYsLTIwODg3ND
+Y2MTJdfQ==
 -->
