@@ -80,9 +80,10 @@ And during authorization check we verify that sender is allowed to publish messa
 - The **First** option is **when cache is relatively small** and we can **store the whole data set on every cluster node**. FrontEnd host **calls a randomly chosen Metadata service host**, because all the cache cluster nodes contain the same information.
 - The **Second** approach is to **partition data into small chunks, called shards**. Because data set is too big and cannot be placed into a memory of a single host. So, we **store each such chunk of data on a separate node in a cluster**. **FrontEnd then knows which shard stores the data** and calls the shard directly.
 - The **Third** approach is We also partition data into shards, but **FrontEnd does not know on what shard data is stored**. So, **FrontEnd calls a random** Metadata service host and **host itself knows where to forward** the request to.
-- In option 1, we can introduce a load balancer between FrontEnd and Metadata service. As all Metadata service hosts are equal and FrontEnd does not care which Metadata host handles the request.
+- In option 1, we can introduce a **load balancer between FrontEnd and Metadata service**. As all Metadata service hosts are equal and FrontEnd does not care which Metadata host handles the request.
 - In option 2 and 3, **Metadata hosts represent a consistent hashing ring.**
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzc2NjY3MTEsLTE5MzQ3OTg0NjMsLT
-E0NDA5MzAxODddfQ==
+eyJoaXN0b3J5IjpbLTU0MTkzMTI5LC0xOTM0Nzk4NDYzLC0xND
+QwOTMwMTg3XX0=
 -->
