@@ -118,9 +118,16 @@ reconnect to the master.
 #### Metrics & Logging
 - This is especially important if we launch our distributed cache as a service. Because so many service teams in the organization may use our cache, every time those services experience performance degradation, they will come to us as one of the potential sources of these degradations.
 - What metrics we may want to emit: number of faults while calling the cache, latency, number of hits and misses, CPU and memory utilization on cache hosts, network I/O. 
-- With regards to logging we may capture the details of every request to the cache. The basic information like who and when accessed the cache, what was the key and return status code.
-Log entries should be small, but useful.
+- With regards to logging we may capture the details of every request to the cache. The basic information like who and when accessed the cache, what was the key and return status code. Log entries should be small, but useful.
+#### Proxy
+- As you have seen cache client has many responsibilities: maintain a list of cache servers, pick a shard to route a request to, handle a remote call and any potential failures, emit metrics.
+- A proxy, that will sit between cache clients and cache servers and will be responsible for picking a cache shard.
+- is to make cache servers responsible for picking a shard.
+Client sends request to a random cache server and cache server applies consistent hashing
+(or some other partitioning algorithm) and redirects request to the shard that stores
+the data.
+This idea is utilized by Redis cluster.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Njc4NjkxOCwyMDExNDAwNiwtMjA4OD
-c0NjYxMl19
+eyJoaXN0b3J5IjpbLTE1ODA1MjA5MTQsMjAxMTQwMDYsLTIwOD
+g3NDY2MTJdfQ==
 -->
