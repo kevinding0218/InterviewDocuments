@@ -124,10 +124,12 @@ reconnect to the master.
 - A proxy, that will sit between cache clients and cache servers and will be responsible for picking a cache shard.
 - Or to make cache servers responsible for picking a shard. Client sends request to a random cache server and cache server applies consistent hashing (or some other partitioning algorithm) and redirects request to the shard that stores the data. This idea is utilized by Redis cluster.
 #### Disadvantage of consistent hashing
-- domino effect and the fact that cache servers do not split the circle evenly.
+- Two major flaws: domino effect and the fact that cache servers do not split the circle evenly.
 - Domino effect may appear when cache server dies. And all of its load is transferred to the next server. This transfer might overload the next server, and then that server would fail, causing a chain reaction of failures.
-- 
+- Remember how we placed cache servers on the circle. Some servers may reside close to each other and some may be far apart. Causing uneven distribution of keys among the cache servers.
+- To deal with these problems, several modifications of the consistent hashing algorithm have been introduced. One simple idea is to **add each server on the circle multiple times**.
+#
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MjI1Mjc1NywyMDExNDAwNiwtMjA4OD
-c0NjYxMl19
+eyJoaXN0b3J5IjpbLTE4NzIyMDYyMTEsMjAxMTQwMDYsLTIwOD
+g3NDY2MTJdfQ==
 -->
