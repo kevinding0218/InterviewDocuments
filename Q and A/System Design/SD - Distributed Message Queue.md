@@ -69,7 +69,13 @@ And during authorization check we verify that sender is allowed to publish messa
 - FrontEnd service makes remote calls to at least two other web services: Metadata service and backend service.
 - FrontEnd service creates HTTP clients for both services and makes sure that calls to these services are properly isolated.
 - It means that when one service let’s say Metadata service experiences a slowdown, requests to backend service are not impacted.
+#### Deduplication
+- It may occur when a response from a successful send message request failed to reach a client. 
+- Lesser an issue for ‘at least once’ delivery semantics, a bigger issue for ‘exactly once’ and ‘at most once’ delivery semantics, when we need to guarantee that message was never processed more than one time.
+- Caching is usually used to store previously seen request ids to avoid deduplication.
+#### Data Collection 
+- When we gather real-time information that can be used for audit.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjkzOTc0NDMsLTE5MzQ3OTg0NjMsLT
-E0NDA5MzAxODddfQ==
+eyJoaXN0b3J5IjpbOTIzMTMyODE4LC0xOTM0Nzk4NDYzLC0xND
+QwOTMwMTg3XX0=
 -->
