@@ -19,12 +19,13 @@
 - the interviewer may define specific service level agreement numbers (so called SLA, for example minimum throughput our system needs to support), or requirements around cost-effectiveness (for example system needs to minimize hardware cost or operational support cost)
 ### Architecture
 - Let’s start with components that are common for many distributed systems.
-- First, we need a virtual IP. VIP refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
-- Next, we have a load balancer. A load balancer is a device that routs client requests across a number of servers.
-- Next, we have a FrontEnd web service. A component responsible for initial request processing, like validation, authentication, etc.
-- Queue metadata information like its name, creation date and time, owner and any other
-configuration settings will be stored in a database.
+- First, we need a **virtual IP**. VIP refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
+- Next, we have a **load balancer**. A load balancer is a device that routs client requests across a number of servers.
+- Next, we have a **FrontEnd web service**. A component responsible for initial request processing, like validation, authentication, etc.
+- Queue metadata information like its name, creation date and time, owner and any other configuration settings will be stored in a ** Metadata Database**.
+- And best practices dictate that databases should be hidden behind some facade, a dedicated web service responsible for handling calls to a database, as **Metadata Service**
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjU2MDM2ODgsLTE0NDA5MzAxODddfQ
+eyJoaXN0b3J5IjpbLTEwMDk2NTUwNjgsLTE0NDA5MzAxODddfQ
 ==
 -->
