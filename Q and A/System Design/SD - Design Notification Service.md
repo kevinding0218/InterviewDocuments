@@ -21,10 +21,10 @@ subscribe(topicName, endpoint)
 - Durable: messages must not be lost, each subscriber must receive every message at least once
 ### High level architectureenter image description here```
 ```
-				Metadata Database
-						|
-				Metadata Service ---------------------------------------------------------------------|	
-						|																			  |
+															Metadata Database
+																	|
+															Metadata Service -------------------------|	
+																	|								  |											  
 Client --(create topic subscribe/publish)--> Load Balaner ---> FrontEnd  --- Temporary Storage --- Sender 	--- Subscribe A, B, C
 ```
 - All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
@@ -173,5 +173,6 @@ Temporary Storage -> Message Retriever -> MS Client -- Task Creator -- Task Exec
 #### Did we design a durable system?
 - Yes. Whatever Temporary Storage solution we choose, data will be stored in the redundant manner, when several copies of a message is stored across several machines, and ideally across several data centers. We also retry messages for a period of time to make sure they are delivered to every subscriber at least once.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDYwMjc0NjFdfQ==
+eyJoaXN0b3J5IjpbLTEwMzMwOTAwMDUsLTIwMDYwMjc0NjFdfQ
+==
 -->
