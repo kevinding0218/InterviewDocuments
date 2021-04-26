@@ -44,17 +44,19 @@ Client(consumer)
 #### FrontEnd web service
 - FrontEnd is a lightweight web service, consisting of stateless machines located across several data centers.
 - FrontEnd service is responsible for: **request validation, authentication and authorization, SSL termination, server-side data encryption, caching, rate limiting (also known as throttling), request dispatching, request deduplication, usage data collection.**
-##### Request validation
+#### Request validation
 - Request validation helps to ensure that all the required parameters are present in the request and values of these parameters honor constraints.
 - For example, in our case we want to make sure queue name comes with every send message request. And message size does not exceed a specified threshold.
-##### Authentication
+#### Authentication
 - During authentication check we verify that message sender is a registered customer of our distributed queue service.
 And during authorization check we verify that sender is allowed to publish messages to the queue it claims.
-##### TLS
+#### TLS
 - TLS is a protocol that aims to provide privacy and data integrity. TLS termination refers to the process of decrypting request and passing on an unencrypted request to the backend service. And we want to do TLS termination on FrontEnd hosts because TLS on the load balancer is expensive. Termination is usually handled by not a FrontEnd service itself, but a separate HTTP proxy that runs as a process on the same host.
-##### Server-side Encryption
-- 
+#### Server-side Encryption
+- Because we want to store messages securely on backend hosts, messages are encrypted as soon as FrontEnd receives them. **Messages are stored in encrypted form and FrontEnd decrypts them only when they are sent back to a consumer**.
+#### Cache
+- Cache stores copies of source data. In FrontEnd cache we will store metadata information about the most actively used queues. As well as user identity information to save on calls to authentication and authorization services.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODUyMDQ0NTQsLTE0NDA5MzAxODddfQ
+eyJoaXN0b3J5IjpbLTE5MzQ3OTg0NjMsLTE0NDA5MzAxODddfQ
 ==
 -->
