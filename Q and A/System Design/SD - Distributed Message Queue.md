@@ -117,7 +117,11 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 	- When a single queue gets so many messages that a single leader (in design option A) or a single cluster (in design option B) cannot handle such a big load?
 	- In-cluster manager splits queue into parts (partitions) and each partition gets a leader server.
 	- Out-cluster manager may split queue across several clusters. So that messages for the same queue are equally distributed between several clusters.
+#### Queue creation and deletion.
+- Queue can be auto-created, for example when the first message for the queue hits FrontEnd service, or we can define API for queue creation. API is a better option, as we will have more control over queue configuration parameters.
+- Delete queue operation is a bit controversial, as it may cause a lot of harm and must be executed with caution. For this reason, you may find examples of well-known distributed queues that do not expose deleteQueue API via public REST endpoint. Instead, this operation may be exposed through a command line utility, so that only experienced admin users may call it.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNjYxOTEyOCwtMjA5MTQwMDI2MSwxMT
-cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbLTE1Mzg0MDgyNzQsLTIwOTE0MDAyNjEsMT
+E3MTcxMzg4NiwtMTkzNDc5ODQ2MywtMTQ0MDkzMDE4N119
 -->
