@@ -108,7 +108,16 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 		- After that we just make a call to a randomly selected instance in the cluster. And instance is responsible for data replication across all nodes in the cluster.
 		- When receive message request comes and we identified which cluster stores messages for the q1 queue, we once again call a randomly selected host and retrieve the message. Selected host is responsible for the message cleanup. 
 		- As you may see, we no longer need a component for leader election, but we still need something that will help us to manage queue to cluster assignments. Let’s call this component an **Out-cluster manager**, this component will be responsible for maintaining a mapping between queues and clusters.
+	- While in-cluster manager manages queue assignment within the cluster, out-cluster manager manages queue assignment across clusters.
+	- In-cluster manager needs to know about each and every instance in the cluster. Out-cluster manager may not know about each particular instance, but it needs to know about each cluster.
+	- In-cluster manager listens to heartbeats from instances. Out-cluster manager monitors health of each independent cluster. 
+	- And while in-cluster manager deals with host failures and needs to adjust to the fact that instances may die and new instances may be added to the cluster, out-cluster manager is responsible for tracking each cluster utilization and deal with overheated clusters.
+	- Meaning that new queues may no longer be assigned to clusters that reached their capacity limits.
+- What about really big queues?
+	- When a single queue gets so many messages that a single leader (in design option A) or a single cluster (in design option B) cannot handle such a big load?
+	- In-cluster manager splits queue into parts (partitions) and each partition gets a leader server.
+	- Out-cluster manager may split queue across several clusters. So that messages for the same queue are equally distributed between several clusters.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNTk4Njc5OCwtMjA5MTQwMDI2MSwxMT
+eyJoaXN0b3J5IjpbLTgwNjYxOTEyOCwtMjA5MTQwMDI2MSwxMT
 cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
 -->
