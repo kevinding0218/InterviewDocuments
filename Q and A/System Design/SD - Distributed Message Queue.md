@@ -67,7 +67,7 @@ And during authorization check we verify that sender is allowed to publish messa
 - Throttling protects the web service from being overwhelmed with requests. Leaky bucket algorithm is one of the most famous.
 ##### Request Dispatching
 - Responsible for all the activieties associated with sending requests to backend services (clients management, response handling, resources isolation, etc), Frontend service makes remote calls to at least two other web services: Metadata service and Backend service, 
-- FrontEnd service creates HTTP clients for both services and makes sure that calls to these services are properly isolated. I t means that when one service, let's say Metadata service experiences a slowdown, requests to Backend service are not impacted.
+- FrontEnd service creates HTTP clients for both services and makes sure that calls to these services are properly isolated. It means that when one service, let's say Metadata service experiences a slowdown, requests to Backend service are not impacted.
 - Bulkhead pattern helps to isloate elements of an application into pools so that if one fails, the others will continue to function
 - Circuit Breaker pattern prevents an application from repeatedly trying to execute an operation that's likely to fail
 ##### Deduplication
@@ -75,7 +75,7 @@ And during authorization check we verify that sender is allowed to publish messa
 - Lesser an issue for ‘at least once’ delivery semantics, a bigger issue for ‘exactly once’ and ‘at most once’ delivery semantics, when we need to guarantee that message was never processed more than one time.
 - Caching is usually used to store previously seen request ids to avoid deduplication.
 ##### Data Collection 
-- When we gather real-time information that can be used for audit.
+- When we gather real-time information that can be used for audit, gather real-time information that can be used for audit and billing (invoices)
 #### Metadata Service
 - Metadata service stores information about queues. Every time queue is created, we store information about it in the database.
 - Conceptually, Metadata service is a caching layer between the FrontEnd and a persistent storage. It handles many reads and a relatively small number of writes. As we read every time message arrives and write only when new queue is created. Even though strongly consistent storage is preferred to avoid potential concurrent updates, it is not strictly required.
@@ -101,6 +101,6 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 	- 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNTQ0ODI5LC0yMDkxNDAwMjYxLDExNz
+eyJoaXN0b3J5IjpbODM3NTM4NDUwLC0yMDkxNDAwMjYxLDExNz
 E3MTM4ODYsLTE5MzQ3OTg0NjMsLTE0NDA5MzAxODddfQ==
 -->
