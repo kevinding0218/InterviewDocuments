@@ -1,0 +1,13 @@
+
+#### Step 1: Requirements clarifications
+for designing Twitter that should be answered before moving on to the next steps:
+• Will users of our service be able to post tweets and follow other people?
+• Should we also design to create and display the user’s timeline?
+• Will tweets contain photos and videos?
+• Are we focusing on the backend only or are we developing the front-end too?
+• Will users be able to search tweets?
+• Do we need to display hot trending topics?
+• Will there be any push notification for new (or important) tweets?
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3ODc0Njk1MThdfQ==
+-->
