@@ -139,7 +139,10 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 - With a pull model, consumer constantly sends retrieve message requests and when new message is available in the queue, it is sent back to a consumer.
 - With a push model, consumer is not constantly bombarding FrontEnd service with receive calls. Instead, consumer is notified as soon as new message arrives to the queue.
 - Pros and Cons, from a distributed message queue perspective pull is easier to implement than a push. But from a consumer perspective, we need to do more work if we pull.
+#### FIFO == Queue?
+- Many of us think of FIFO acronym when we hear about queues. FIFO stands for first-in, first-out, meaning that the oldest message in a queue is always processed first. But in distributed systems, it is hard to maintain a strict order. Message A may be produced prior to message B, but it is hard to guarantee that message A will be stored and consumed prior to message B.
+For these reasons many distributed queue solutions out there either does not guarantee a strict order. Or have limitations around throughput, as queue cannot be fast while it’s doing many additional validations and coordination to guarantee a strict order.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2ODgxNTI4NSwtMjA5MTQwMDI2MSwxMT
-cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbMTQ1MjQ3MzEsLTIwOTE0MDAyNjEsMTE3MT
+cxMzg4NiwtMTkzNDc5ODQ2MywtMTQ0MDkzMDE4N119
 -->
