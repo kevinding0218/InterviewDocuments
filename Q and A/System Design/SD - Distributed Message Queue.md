@@ -97,13 +97,14 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 - Message comes to the FrontEnd, FrontEnd consults Metadata service what backend host to send data to. Message is sent to a selected backend host and data is replicated. And when receive message call comes, FrontEnd talks to Metadata service to identify a backend host that stores the data.
 - How Backend hosts relate to each other?
 	- We will consider two options of how backend hosts relate to each other.
-	- In the first option, (Leader-Follower relationship) each backend instance is considered a leader for a particular set of queues. And by leader we mean that all requests for a particular queue (like send message and receive message requests) go to this leader instance.
+	- **In the first option, (Leader-Follower relationship)** each backend instance is considered a leader for a particular set of queues. And by leader we mean that all requests for a particular queue (like send message and receive message requests) go to this leader instance.
 	- For example, 
 		- Send message request comes to a FrontEnd instance. Message comes to a queue with ID equal to q1. FrontEnd service calls Metadata service to identify a leader backend instance for this queue. In this particular example, instance B is a leader for q1. 
 		- Message is sent to the leader and the leader is fully responsible for data replication. 
 		- When receive message request comes to a FrontEnd instance, it also makes a request to the Metadata service to identify the leader for the queue. Message is then retrieved from the leader instance and leader is responsible for cleaning up the original message and all the replicas.
-- 
+		- We need a component that will help us with leader election and management. Let’s call it **In-cluster manager**. And as already mentioned, in-cluster manager is responsible for maintaining a mapping between queues, leaders and followers. In-cluster manager is a very sophisticated component. It has to be reliable, scalable and performant. Creating such a component from scratch is not an easy task.
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MTMyNTYzMywtMjA5MTQwMDI2MSwxMT
-cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbOTIwMzMyMzY4LC0yMDkxNDAwMjYxLDExNz
+E3MTM4ODYsLTE5MzQ3OTg0NjMsLTE0NDA5MzAxODddfQ==
 -->
