@@ -66,8 +66,9 @@ And during authorization check we verify that sender is allowed to publish messa
 - Rate limiting or throttling is the process of limiting the number of requests you can submit to a given operation in a given amount of time. 
 - Throttling protects the web service from being overwhelmed with requests. Leaky bucket algorithm is one of the most famous.
 ##### Request Dispatching
-- Responsible for all the activieties associated with sending requests to backend services (clients management, response handling, resources isolation, etc)
-- 
+- Responsible for all the activieties associated with sending requests to backend services (clients management, response handling, resources isolation, etc), Frontend 
+- Bulkhead pattern helps to isloate elements of an application into pools so that if one fails, the others will continue to function
+- Circuit Breaker pattern prevents an application from repeatedly trying to execute an operation that's likely to fail
 ##### Deduplication
 - It may occur when a response from a successful send message request failed to reach a client. 
 - Lesser an issue for ‘at least once’ delivery semantics, a bigger issue for ‘exactly once’ and ‘at most once’ delivery semantics, when we need to guarantee that message was never processed more than one time.
@@ -99,6 +100,6 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 	- 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NzU3MTc0MCwtMjA5MTQwMDI2MSwxMT
-cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbODExMzQ1NzM1LC0yMDkxNDAwMjYxLDExNz
+E3MTM4ODYsLTE5MzQ3OTg0NjMsLTE0NDA5MzAxODddfQ==
 -->
