@@ -144,8 +144,15 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 For these reasons many distributed queue solutions out there either does not guarantee a strict order. Or have limitations around throughput, as queue cannot be fast while it’s doing many additional validations and coordination to guarantee a strict order.
 #### Security
 - With regards to security, we need to make sure that messages are securely transferred to and from a queue. Encryption using SSL over HTTPS helps to protect messages in transit. And we also may encrypt messages while storing them on backend hosts. We discussed this when talked about FrontEnd service responsibilities.
+#### Monitoring (Datadog)
+- Monitoring is critical for every system. With regards to distributed message queue, we need to monitor components (or microservices) that we built: fronted, metadata and backend services.
+- As well as provide visibility into customer’s experience. In other words, we need to monitor health of our distributed queue system and give customers ability to track state of their queues.
+- Each service we built has to emit metrics and write log data. As operators of these services we need to create dashboards for each microservice and setup alerts. And customers of our queue have to be able to create dashboards and set up alerts as well. For this purpose, integration with monitoring system is required.
+#### Final Review
+- Is our system scalable?
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg4ODc2NjkzLDE0NTI0NzMxLC0yMDkxND
-AwMjYxLDExNzE3MTM4ODYsLTE5MzQ3OTg0NjMsLTE0NDA5MzAx
-ODddfQ==
+eyJoaXN0b3J5IjpbLTYzMzczMzQzNywxNDUyNDczMSwtMjA5MT
+QwMDI2MSwxMTcxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMw
+MTg3XX0=
 -->
