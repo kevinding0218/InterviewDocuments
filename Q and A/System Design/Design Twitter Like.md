@@ -18,7 +18,13 @@ markTweetFavorite(user_id, tweet_id, timestamp, …)
 - High Scalability
 - High Availibility
 - High Performant
+- • What scale is expected from the system (e.g., number of new tweets, number of tweet views,
+number of timeline generations per sec., etc.)?
+• How much storage will we need? We will have different numbers if users can have photos and
+videos in their tweets.
+• What network bandwidth usage are we expecting? This will be crucial in deciding how we will
+manage traffic and balance load between servers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM3MjQyODgzLC0yMDU4MTgwMTI1LDE3NT
-c4MjE5NDFdfQ==
+eyJoaXN0b3J5IjpbLTgwMjMzMTgzMiw1MzcyNDI4ODMsLTIwNT
+gxODAxMjUsMTc1NzgyMTk0MV19
 -->
