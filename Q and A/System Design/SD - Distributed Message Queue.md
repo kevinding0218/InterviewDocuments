@@ -150,9 +150,15 @@ For these reasons many distributed queue solutions out there either does not gua
 - Each service we built has to emit metrics and write log data. As operators of these services we need to create dashboards for each microservice and setup alerts. And customers of our queue have to be able to create dashboards and set up alerts as well. For this purpose, integration with monitoring system is required.
 #### Final Review
 - Is our system scalable?
-	- 
+	- Yes. As every component is scalable. When load increases, we just add more load balancers, more FrontEnd hosts, more Metadata service cache shards, more backend clusters and hosts.
+- Is our system highly available?
+	- Yes. As there is no a single point of failure, each component is deployed across several data centers. Individual hosts may die, network partitions may happen, but with this redundancy in place our system will continue to operate.
+- Is our system highly performant?
+	- It’s actually very well depends on the implementation, hardware and network setup. Each individual microservice needs to be fast. And we need to run our software in high-performance data centers.
+- Is our system durable?
+	- Yes, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMzczMzQzNywxNDUyNDczMSwtMjA5MT
-QwMDI2MSwxMTcxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMw
-MTg3XX0=
+eyJoaXN0b3J5IjpbLTEyMjAxNTM3NzYsMTQ1MjQ3MzEsLTIwOT
+E0MDAyNjEsMTE3MTcxMzg4NiwtMTkzNDc5ODQ2MywtMTQ0MDkz
+MDE4N119
 -->
