@@ -124,8 +124,18 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 	- One option is not to delete a message right after it was consumed. In this case consumers have to be responsible for what they already consumed. And it is not as easy as it sounds. As we need to maintain some kind of an order for messages in the queue and keep track of the offset, which is the position of a message within a queue. Messages can then be deleted several days later, by a job. This idea is used by Apache Kafka.
 	- The second option, is to do something similar to what Amazon SQS is doing. Messages are also not deleted immediately, but marked as invisible, so that other consumers may not get already retrieved message. Consumer that retrieved the message, needs to then call delete message API to delete the message from a backend host. And if the message was not explicitly deleted by a consumer, message becomes visible and may be delivered and processed twice. We know that messages need to be replicated to achieve high durability. Otherwise, if we only have one copy of data, it may be lost due to unexpected hardware failure.
 #### Message replication
-- 
+- Messages can be replicated synchronously or asynchronously.
+- Synchronously means that when backend host receives new message, it waits until data is replicated to other hosts. And only if replication is fully completed, successful response is returned to a producer.
+- Asynchronous replication means that response is returned back to a producer as soon as message is stored on a single backend host. Message is later replicated to other hosts.
+- Both options have pros and cons.
+	- Synchronous replication provides higher durability, but with a cost of higher latency for send message operation.
+	- Asynchronous replication is more performant, but does not guarantee that message will survive backend host failure.
+#### Message Delivery Gurantees
+- At most once, when messages may be lost but are never redelivered.
+- At least once, when messages are never lost but may be redelivered.
+- And exactly once, when each message is delivered once and only once.
+- And you probably have a question already, why do we need three? Will anyone ever want other than exactly once delivery? 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzODc3MTMzMSwtMjA5MTQwMDI2MSwxMT
+eyJoaXN0b3J5IjpbLTg0ODA1Njg5OSwtMjA5MTQwMDI2MSwxMT
 cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
 -->
