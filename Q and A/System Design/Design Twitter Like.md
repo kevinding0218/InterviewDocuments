@@ -8,6 +8,10 @@ Here are some questions for designing Twitter that should be answered before mov
 • Will users be able to search tweets?
 • Do we need to display hot trending topics?
 • Will there be any push notification for new (or important) tweets?
+#### Step 2: Functional requirements
+#### Step 3: Non Functional requirements
+- High Scalability
+- High Av
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NzgyMTk0MV19
+eyJoaXN0b3J5IjpbLTUxMTE2NTUyNywxNzU3ODIxOTQxXX0=
 -->
