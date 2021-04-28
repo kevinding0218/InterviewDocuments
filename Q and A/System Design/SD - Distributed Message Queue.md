@@ -67,7 +67,7 @@ And during authorization check we verify that sender is allowed to publish messa
 - Throttling protects the web service from being overwhelmed with requests. Leaky bucket algorithm is one of the most famous.
 ##### Request Dispatching
 - Responsible for all the activieties associated with sending requests to backend services (clients management, response handling, resources isolation, etc), Frontend service makes remote calls to at least two other web services: Metadata service and Backend service, 
-- FrontEnd service creates HTTP clients for both services and makes sure that calls to these services are properly isolated. I t means that when one service, let's say Metadata service experiences a slowdown, requests to back
+- FrontEnd service creates HTTP clients for both services and makes sure that calls to these services are properly isolated. I t means that when one service, let's say Metadata service experiences a slowdown, requests to Backend service are not impacted.
 - Bulkhead pattern helps to isloate elements of an application into pools so that if one fails, the others will continue to function
 - Circuit Breaker pattern prevents an application from repeatedly trying to execute an operation that's likely to fail
 ##### Deduplication
@@ -101,6 +101,6 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 	- 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjY4NTgwOTMsLTIwOTE0MDAyNjEsMT
-E3MTcxMzg4NiwtMTkzNDc5ODQ2MywtMTQ0MDkzMDE4N119
+eyJoaXN0b3J5IjpbMTEzNTQ0ODI5LC0yMDkxNDAwMjYxLDExNz
+E3MTM4ODYsLTE5MzQ3OTg0NjMsLTE0NDA5MzAxODddfQ==
 -->
