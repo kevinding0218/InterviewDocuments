@@ -136,12 +136,10 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 - And **exactly once**, when each message is delivered once and only once.
 - You probably have a question already, why do we need three? Will anyone ever want other than exactly once delivery? 
 	- In a distributed message queue system there are many potential points of failure. Producer may fail to deliver or deliver multiple times, data replication may fail, consumers may fail to retrieve or process the message. All this adds complexity and leads to the fact that most distributed queue solutions today support at-least-once delivery, as it provides a good balance between durability, availability and performance.
-- With a pull model, consumer constantly sends retrieve message requests and when new message
-- is available in the queue, it is sent back to a consumer.
-With a push model, consumer is not constantly bombarding FrontEnd service with receive calls.
-Instead, consumer is notified as soon as new message arrives to the queue.
-- 
+- With a pull model, consumer constantly sends retrieve message requests and when new message is available in the queue, it is sent back to a consumer.
+- With a push model, consumer is not constantly bombarding FrontEnd service with receive calls. Instead, consumer is notified as soon as new message arrives to the queue.
+- Pros and Cons, from a distributed message queue perspective pull is easier to implement than a push. But from a consumer perspective, we need to do more work if we pull.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjM3NjEyNTMsLTIwOTE0MDAyNjEsMT
-E3MTcxMzg4NiwtMTkzNDc5ODQ2MywtMTQ0MDkzMDE4N119
+eyJoaXN0b3J5IjpbLTU2ODgxNTI4NSwtMjA5MTQwMDI2MSwxMT
+cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
 -->
