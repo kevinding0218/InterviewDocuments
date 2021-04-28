@@ -90,8 +90,12 @@ And during authorization check we verify that sender is allowed to publish messa
 	- We will send copies of messages to some other hosts, so that data can survive host hardware or software failures.
 And finally, let's think about how FrontEnd hosts select backend hosts for both storing messages and retrieving them.
 - Message comes to the FrontEnd, FrontEnd consults Metadata service what backend host to send data to. Message is sent to a selected backend host and data is replicated. And when receive message call comes, FrontEnd talks to Metadata service to identify a backend host that stores the data.
+- How Backend hosts relate to each other?
+	- We will consider two options of how backend hosts relate to each other.
+	- In the first option, each backend instance is considered a leader for a particular set of queues. And by leader we mean that all requests for a particular queue (like send message and receive message requests) go to this leader instance.
+	- 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MTcxMzg4NiwtMTkzNDc5ODQ2MywtMT
-Q0MDkzMDE4N119
+eyJoaXN0b3J5IjpbLTIwOTE0MDAyNjEsMTE3MTcxMzg4NiwtMT
+kzNDc5ODQ2MywtMTQ0MDkzMDE4N119
 -->
