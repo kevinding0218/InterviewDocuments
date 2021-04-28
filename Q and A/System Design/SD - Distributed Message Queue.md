@@ -120,8 +120,11 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 #### Queue creation and deletion.
 - Queue can be auto-created, for example when the first message for the queue hits FrontEnd service, or we can define API for queue creation. API is a better option, as we will have more control over queue configuration parameters.
 - Delete queue operation is a bit controversial, as it may cause a lot of harm and must be executed with caution. For this reason, you may find examples of well-known distributed queues that do not expose deleteQueue API via public REST endpoint. Instead, this operation may be exposed through a command line utility, so that only experienced admin users may call it.
-- 
+- As for a message deletion, there are several options at our disposal.
+	- One option is not to delete a message right after it was consumed. In this case consumers have to be responsible for what they already consumed. And it is not as easy as it sounds. As we need to maintain some kind of an order for messages in the queue and keep track of the offset, which is the position of a message within a queue. Messages can then be deleted several days later, by a job. This idea is used by Apache Kafka.
+	- 
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mzg0MDgyNzQsLTIwOTE0MDAyNjEsMT
-E3MTcxMzg4NiwtMTkzNDc5ODQ2MywtMTQ0MDkzMDE4N119
+eyJoaXN0b3J5IjpbLTcwMDM1NTExMCwtMjA5MTQwMDI2MSwxMT
+cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
 -->
