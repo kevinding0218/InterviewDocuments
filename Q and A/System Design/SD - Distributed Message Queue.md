@@ -98,9 +98,9 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 - How Backend hosts relate to each other?
 	- We will consider two options of how backend hosts relate to each other.
 	- In the first option, (Leader-Follower relationship) each backend instance is considered a leader for a particular set of queues. And by leader we mean that all requests for a particular queue (like send message and receive message requests) go to this leader instance.
-	- 
+	- For example, 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NzI1ODkyOSwtMjA5MTQwMDI2MSwxMT
-cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
+eyJoaXN0b3J5IjpbLTMzMjU0MDkyLC0yMDkxNDAwMjYxLDExNz
+E3MTM4ODYsLTE5MzQ3OTg0NjMsLTE0NDA5MzAxODddfQ==
 -->
