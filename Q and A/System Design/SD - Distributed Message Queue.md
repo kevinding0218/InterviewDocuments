@@ -97,10 +97,10 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 - Message comes to the FrontEnd, FrontEnd consults Metadata service what backend host to send data to. Message is sent to a selected backend host and data is replicated. And when receive message call comes, FrontEnd talks to Metadata service to identify a backend host that stores the data.
 - How Backend hosts relate to each other?
 	- We will consider two options of how backend hosts relate to each other.
-	- In the first option, each backend instance is considered a leader for a particular set of queues. And by leader we mean that all requests for a particular queue (like send message and receive message requests) go to this leader instance.
+	- In the first option, (Leader-Follower relationship) each backend instance is considered a leader for a particular set of queues. And by leader we mean that all requests for a particular queue (like send message and receive message requests) go to this leader instance.
 	- 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM3NTM4NDUwLC0yMDkxNDAwMjYxLDExNz
-E3MTM4ODYsLTE5MzQ3OTg0NjMsLTE0NDA5MzAxODddfQ==
+eyJoaXN0b3J5IjpbLTM0NzI1ODkyOSwtMjA5MTQwMDI2MSwxMT
+cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
 -->
