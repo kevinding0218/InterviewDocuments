@@ -122,9 +122,10 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 - Delete queue operation is a bit controversial, as it may cause a lot of harm and must be executed with caution. For this reason, you may find examples of well-known distributed queues that do not expose deleteQueue API via public REST endpoint. Instead, this operation may be exposed through a command line utility, so that only experienced admin users may call it.
 - As for a message deletion, there are several options at our disposal.
 	- One option is not to delete a message right after it was consumed. In this case consumers have to be responsible for what they already consumed. And it is not as easy as it sounds. As we need to maintain some kind of an order for messages in the queue and keep track of the offset, which is the position of a message within a queue. Messages can then be deleted several days later, by a job. This idea is used by Apache Kafka.
-	- 
-	- 
+	- The second option, is to do something similar to what Amazon SQS is doing. Messages are also not deleted immediately, but marked as invisible, so that other consumers may not get already retrieved message. Consumer that retrieved the message, needs to then call delete message API to delete the message from a backend host. And if the message was not explicitly deleted by a consumer, message becomes visible and may be delivered and processed twice. We know that messages need to be replicated to achieve high durability. Otherwise, if we only have one copy of data, it may be lost due to unexpected hardware failure.
+#### Message replication
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwMDM1NTExMCwtMjA5MTQwMDI2MSwxMT
+eyJoaXN0b3J5IjpbMTgzODc3MTMzMSwtMjA5MTQwMDI2MSwxMT
 cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
 -->
