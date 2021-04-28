@@ -156,9 +156,9 @@ For these reasons many distributed queue solutions out there either does not gua
 - Is our system highly performant?
 	- It’s actually very well depends on the implementation, hardware and network setup. Each individual microservice needs to be fast. And we need to run our software in high-performance data centers.
 - Is our system durable?
-	- Yes, 
+	- Yes, We replicate data while storing and ensure messages are not lost during the transfer from a producer and to a consumer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjAxNTM3NzYsMTQ1MjQ3MzEsLTIwOT
-E0MDAyNjEsMTE3MTcxMzg4NiwtMTkzNDc5ODQ2MywtMTQ0MDkz
-MDE4N119
+eyJoaXN0b3J5IjpbMTk0OTk4ODc5NywxNDUyNDczMSwtMjA5MT
+QwMDI2MSwxMTcxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMw
+MTg3XX0=
 -->
