@@ -142,7 +142,10 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 #### FIFO == Queue?
 - Many of us think of FIFO acronym when we hear about queues. FIFO stands for first-in, first-out, meaning that the oldest message in a queue is always processed first. But in distributed systems, it is hard to maintain a strict order. Message A may be produced prior to message B, but it is hard to guarantee that message A will be stored and consumed prior to message B.
 For these reasons many distributed queue solutions out there either does not guarantee a strict order. Or have limitations around throughput, as queue cannot be fast while it’s doing many additional validations and coordination to guarantee a strict order.
+#### Security
+- With regards to security, we need to make sure that messages are securely transferred to and from a queue. Encryption using SSL over HTTPS helps to protect messages in transit. And we also may encrypt messages while storing them on backend hosts. We discussed this when talked about FrontEnd service responsibilities.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MjQ3MzEsLTIwOTE0MDAyNjEsMTE3MT
-cxMzg4NiwtMTkzNDc5ODQ2MywtMTQ0MDkzMDE4N119
+eyJoaXN0b3J5IjpbMzg4ODc2NjkzLDE0NTI0NzMxLC0yMDkxND
+AwMjYxLDExNzE3MTM4ODYsLTE5MzQ3OTg0NjMsLTE0NDA5MzAx
+ODddfQ==
 -->
