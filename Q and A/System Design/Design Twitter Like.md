@@ -31,7 +31,8 @@ videos in their tweets.
 • What network bandwidth usage are we expecting? This will be crucial in deciding how we will
 manage traffic and balance load between servers.
 #### Step 4: High level architecture
+#### Step 5: Detail Design of architecture component
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTc2OTI5MTcsNTM3MjQyODgzLC0yMD
-U4MTgwMTI1LDE3NTc4MjE5NDFdfQ==
+eyJoaXN0b3J5IjpbNjMwMzQwNTA2LC0xODE3NjkyOTE3LDUzNz
+I0Mjg4MywtMjA1ODE4MDEyNSwxNzU3ODIxOTQxXX0=
 -->
