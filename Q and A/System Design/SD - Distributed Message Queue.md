@@ -103,8 +103,12 @@ And finally, let's think about how FrontEnd hosts select backend hosts for both 
 		- Message is sent to the leader and the leader is fully responsible for data replication. 
 		- When receive message request comes to a FrontEnd instance, it also makes a request to the Metadata service to identify the leader for the queue. Message is then retrieved from the leader instance and leader is responsible for cleaning up the original message and all the replicas.
 		- We need a component that will help us with leader election and management. Let’s call it **In-cluster manager**. And as already mentioned, in-cluster manager is responsible for maintaining a mapping between queues, leaders and followers. In-cluster manager is a very sophisticated component. It has to be reliable, scalable and performant. Creating such a component from scratch is not an easy task.
-	- 
+	- In the second option, we have a set of small clusters, each cluster consists of 3-4 machines distributed across several data centers. 
+		- When send message request comes, similar to the previous design option, we also need to call Metadata service to identify which cluster is responsible for storing messages for the q1 queue.
+		- After that we just make a call to a randomly selected instance in the cluster. And instance is responsible for data replication across all nodes in the cluster.
+		- When receive message request comes and we identified which cluster stores messages for the q1 queue, we once again call a randomly selected host and retrieve the message. Selected host is responsible for the message cleanup. 
+		- As you may see, we no longer need a component for leader election, but we still need something that will help us to manage queue to cluster assignments. Let’s call this component an **Out-cluster manager**, this component will be responsible for maintaining a mapping between queues and clusters.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIwMzMyMzY4LC0yMDkxNDAwMjYxLDExNz
-E3MTM4ODYsLTE5MzQ3OTg0NjMsLTE0NDA5MzAxODddfQ==
+eyJoaXN0b3J5IjpbMTgyNTk4Njc5OCwtMjA5MTQwMDI2MSwxMT
+cxNzEzODg2LC0xOTM0Nzk4NDYzLC0xNDQwOTMwMTg3XX0=
 -->
