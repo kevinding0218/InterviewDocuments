@@ -78,7 +78,7 @@ user1 {
 }
 ```
 ##### Feeds Service
-- **@Get getTopFeeds(UUID user_id)**: return Top K news feed
+- **@Get getTopFeeds(UUID user_id)**: return Top K news feed for user_id's following's feeds
 - **@Post createFeed(FeedInfo feedInfo)**: return Http status
 - **@Get getBatchFeeds(Collection< UUID> user_ids)**: return a list of Top K news feed for each requested user in response
 ```
@@ -102,7 +102,7 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 ##### Push Model
 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMxMjE5OTAwLC0xMDI0OTEzODA3LC0yMT
+eyJoaXN0b3J5IjpbODM0NDY0OTM0LC0xMDI0OTEzODA3LC0yMT
 I0MzMyNDIwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUx
 NTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC
 05MDYzMzg1NDAsLTM3ODUxNjYwOF19
