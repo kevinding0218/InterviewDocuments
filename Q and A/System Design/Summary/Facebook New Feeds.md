@@ -167,12 +167,13 @@ AsyncService::fanoutTweet(user, tweet)
 - A possible problem with this approach is that when a user has millions of followers (a celebrity-user), the server has to push updates to a lot of people.
 - DB write is usually slower than DB Read
 - Waste of request send to inactive user
-
+###### Improve on Push
+- Adding more service instance during busy hours
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE0MzA2Mzk3LDEwNTI0NTg4NDAsLTIwMD
-AxNTkxMDUsMTc2MzAwNDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEz
-ODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC
-0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1
-OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbMTUzNjg0OTgxMCwxMDUyNDU4ODQwLC0yMD
+AwMTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkx
+MzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0Ni
+wtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0
+NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
