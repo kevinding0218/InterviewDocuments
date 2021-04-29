@@ -30,10 +30,11 @@
 Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
 ```
 ### Detail Analysis of each component in architecture
-- VIP/**virtual IP**. refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
-- LB/Load Balancer : All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
+- **VIP/virtual IP**. refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
+- **LB/Load Balancer** : All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
+- **API gateway** is an API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIwODE4ODU3LDE4MDUwMjYzMjQsOTI1NT
-cwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYw
-OF19
+eyJoaXN0b3J5IjpbLTkxMTAxODU3MCwxODA1MDI2MzI0LDkyNT
+U3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2
+MDhdfQ==
 -->
