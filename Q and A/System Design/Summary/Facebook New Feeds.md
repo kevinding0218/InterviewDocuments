@@ -158,11 +158,13 @@ AsyncService::fanoutTweet(user, tweet)
 - A possible problem with this approach is that when a user has millions of followers (a celebrity-user), the server has to push updates to a lot of people.
 - DB write is usually slower than DB Read
 ##### Improve Pull
-- The slowest 
+- The slowest/longest duration was taken while user is reading requests
+	- Let's add a cache that stores each user's timeline
+	- N times of DB request become N times of Cache request (N is your follower
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjU5MzE5MjMsMTA1MjQ1ODg0MCwtMj
-AwMDE1OTEwNSwxNzYzMDA0NzA5LDExMjQ3NzIxNDEsLTEwMjQ5
-MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3ND
-YsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIw
-NDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbMTM2NzkxNTkyNSwxMDUyNDU4ODQwLC0yMD
+AwMTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkx
+MzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0Ni
+wtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0
+NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
