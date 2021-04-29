@@ -165,11 +165,11 @@ AsyncService::fanoutTweet(user, tweet)
 		- Trade off: Cache all News Feed or Most recent 100/1k News Feed?
 	- Cache every user's news feed
 		- For user that's inactive for a long time, which doesn't have an entry, as soon as he make request, we would load the cache from his N following's and merge the Top K using Pull Approatch
-		- For user that's already login and has an entry in the cache, we can just append news feed after 
+		- For user that's already login and has an entry in the cache, we can just append news feed after a certain timestamp
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTI4MDg1MDEsMTA1MjQ1ODg0MCwtMj
-AwMDE1OTEwNSwxNzYzMDA0NzA5LDExMjQ3NzIxNDEsLTEwMjQ5
-MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3ND
-YsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIw
-NDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbMTgwNTM4NTkwNCwxMDUyNDU4ODQwLC0yMD
+AwMTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkx
+MzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0Ni
+wtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0
+NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
