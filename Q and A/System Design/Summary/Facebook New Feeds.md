@@ -40,13 +40,19 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 	- loginUser(LoginInfo logInfo), the `LoginInfo` may include information such as `username/email/password`, it may return an JWT token for further API request authentication and authorization
 	- User info are tend to be structure so we can just use a SQL Database to save such info in a user table, each user would be assigned with an unique UserId
 ```
-User T
+User Table
+id			integer
+username	varchar
+email		varchar
+password	varchar
 ```
+- Friendship Service
+	- follow(
 
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDAyOTYxMjUsLTE1MDM2NTE1NzYsMT
-gwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMz
-ODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MD
+UwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1
+NDAsLTM3ODUxNjYwOF19
 -->
