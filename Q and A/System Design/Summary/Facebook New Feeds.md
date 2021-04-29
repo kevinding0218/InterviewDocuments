@@ -116,8 +116,8 @@ postTweet(request, tweet)
 return success
 ```
 ###### Time Complexity
-- For Get Feeds: suppose I have N followings, then it's going to be N * DB Reads + O(kn*logK), here the merge K might be ignored as it's processing in memory. In real time experience through profiling, we know that there are some facts taking an obvious duration such as Object Deserialization and I/O connection
-- For Post a Feeds: Only 1 time DB write
+- **For Get Feeds**: suppose I have N followings, then it's going to be **N * DB Reads + O(kn*logK)**, here the merge K might be ignored as it's processing in memory. **In real time experience through profiling, we know that there are some facts taking an obvious duration such as Object Deserialization and I/O connection**
+- **For Post a Feeds**: Only 1 time DB write (**Advantage**)
 ###### Disadvantage
 - N times of DB reads is very slow, and it has to process during user request the news feed
 - New data might not be shown to the users until they issue a pull request
@@ -154,9 +154,9 @@ AsyncService::fanoutTweet(user, tweet)
 - Get Feed: Only 1 DB Read
 - Post Feed: N times of DB Writes, benefit is it can be done within consumer as async task, user doesn't have to wait
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0ODY3MzIwLDE3NjMwMDQ3MDksMTEyND
-c3MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMjQyMCwtMjgwOTUz
-Nzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2MzI0LD
-kyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1
-MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbMjEzODM5Mzc5MCwxNzYzMDA0NzA5LDExMj
+Q3NzIxNDEsLTEwMjQ5MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1
+Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNC
+w5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4
+NTE2NjA4XX0=
 -->
