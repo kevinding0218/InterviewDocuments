@@ -1,5 +1,6 @@
 ### Requirements/Goals
 #### Function Requirements
+- User Login/Logout
 - A user may have many friends and follow a large number of pages/groups
 - Newsfeed will be generated based on the posts from the people, pages or groups that a user follows
 - Service should support appending new posts as they arrive to the newsfeed for all active user
@@ -33,8 +34,11 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 - **VIP/virtual IP**. refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
 - **LB/Load Balancer** : All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
 - **API gateway** is an API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
+- When comes to the service, let's talk about the storage as well as API design
+#### Storage
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNDAxNDIxNCwxODA1MDI2MzI0LDkyNT
-U3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2
-MDhdfQ==
+eyJoaXN0b3J5IjpbMTM3OTUwNjQwLDE4MDUwMjYzMjQsOTI1NT
+cwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYw
+OF19
 -->
