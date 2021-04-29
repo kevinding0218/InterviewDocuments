@@ -96,6 +96,7 @@ content		BLOB(binary large object)
 create_at 	time_stamp		indexing
 feed_type	smallint		FK	(Photo/Article/Video, etc)
 ```
+
 ##### Pull Model
 1. User A request "Give me new feed" using `getRecentFeeds`
 2. Get followings User Ids from Friendship Service/Table using `getConnections`
@@ -131,6 +132,7 @@ return success
 	- Cache every user's news feed
 		- For user that's inactive for a long time, which doesn't have an entry, as soon as he make request, we would load the cache from his N following's and merge the Top K using Pull Approatch
 		- For user that's already login and has an entry in the cache, we can just append news feed after a certain timestamp
+
 ##### Push Model (with Async Fanout and NewsFeed table)
 ```
 select * from news_feed where owner_id = A order by created_at desc limit 20;
@@ -169,9 +171,11 @@ AsyncService::fanoutTweet(user, tweet)
 - Waste of request send to inactive user
 ###### Improve on Push
 - Adding more service instance during busy hours to scale out
+#### Push + Pull
+- Normal user (who doesn't have a pretty large amount of followers) 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM2NTIxMjI3LDEwNTI0NTg4NDAsLTIwMD
+eyJoaXN0b3J5IjpbNTYzNDMzMzg5LDEwNTI0NTg4NDAsLTIwMD
 AxNTkxMDUsMTc2MzAwNDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEz
 ODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC
 0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1
