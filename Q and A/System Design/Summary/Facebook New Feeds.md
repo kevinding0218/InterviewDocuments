@@ -53,11 +53,12 @@ username	varchar
 email		varchar
 password	varchar
 ```
-- Friendship Service
-	- **@Post createConnection(UUID from_user_id, UUID to_user_id)**, build a mapping relationship between User A and User B, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
-	- **@Get getConnections(UUID from_user_id)** which would return a list of UUID of user_id that the `from_user_id` is following.
-	- **@Delete removeConnection(UUID from_user_id, UUID to_user_id)**, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
-	- Friendship relationship can be stored in in SQL like as well as NoSQL
+##### Friendship Service
+- **@Post createConnection(UUID from_user_id, UUID to_user_id)**, build a mapping relationship between User A and User B, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
+- **@Get getConnections(UUID from_user_id)** which would return a list of UUID of user_id that the `from_user_id` is following.
+- **@Delete removeConnection(UUID from_user_id, UUID to_user_id)**, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
+- Friendship relationship can be stored in in SQL like as well as NoSQL
+	- when we consider SQL or NoSQL for storing messages, we need to think of if we need ACID transactions, we do not need to run complex dynamic queries, we do not plan to use this storage for analytics or data warehousing. Instead, we need a database that can be easily scaled for both writes and reads. It should be highly available and tolerate network partitions.
 ```
 // Friendship Table
 from_user_id	varchar		FK
@@ -78,8 +79,7 @@ user1 {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzcwMjUzNzIsLTI4MDk1Mzc5NCwzNT
-QzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0
-ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX
-0=
+eyJoaXN0b3J5IjpbNDU3MzI4MzE5LC0yODA5NTM3OTQsMzU0Mz
+czNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgy
+LC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
 -->
