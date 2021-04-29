@@ -190,11 +190,24 @@ AsyncService::fanoutTweet(user, tweet)
 - File/Photo can be stored in File System like AWS S3 or Azure Blob Storage
 - We could also have a cache to load user most recent N posts such as LRU
 - We could also Archieve the file after a certain time period
+### Other Topic
+如何实现 follow 与 unfollow?
+• Follow 一个用户之后，异步地将他的 Timeline 合并到你的 News Feed 中
+• Merge timeline into news feed asynchronously.
+• Unfollow 一个用户之后，异步地将他发的 Tweets 从你的 News Feed 中移除
+• Pick out tweets from news feed asynchronously.
+• 为什么需要异步 Async？
+• 因为这个过程一点都不快呀
+• 异步的好处？
+• 用户迅速得到反馈，似乎马上就 follow / unfollow 成功了
+• 异步的坏处？
+• Unfollow 之后刷新 News Feed，发现好像他的信息还在
+• 不过最终还是会被删掉的
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NTk2MDI3NCwtMjAzNTU3Mjc0OSwtMT
-Y3Mjg1MTI0MiwxMDUyNDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMw
-MDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMj
-QyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3Niwx
-ODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2Mz
-M4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTEzMzY2MzYyMzUsLTIwMzU1NzI3NDksLT
+E2NzI4NTEyNDIsMTA1MjQ1ODg0MCwtMjAwMDE1OTEwNSwxNzYz
+MDA0NzA5LDExMjQ3NzIxNDEsLTEwMjQ5MTM4MDcsLTIxMjQzMz
+I0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYs
+MTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNj
+MzODU0MCwtMzc4NTE2NjA4XX0=
 -->
