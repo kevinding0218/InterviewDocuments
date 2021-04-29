@@ -9,15 +9,14 @@
 - Other functions like search/left comments/tagging user/share post, etc
 #### Non-functional requirements
 - Let's do some analysis on the Daily Active User (DAU) or Monthly Active User (MAU)
-	- QPS: DAU * Request per day per user(request not only about news feed but things like login/like/comment/post, etc) 1M * 60 / 86400 (total seconds) ~ 100k
-	- Peak QPS ~ 300k
+	- **QPS**: DAU * Request per day per user(request not only about news feed but things like login/like/comment/post, etc) 1M * 60 / 86400 (total seconds) ~ 100k
+	- **Peak QPS** ~ 300k
 	- High QPS determines that we may need a cluster of 500 ~ 1k web servers to handle that request (considering of business logic and bottleneck of database query)
 - Let's also do some estimation on storage
 	- How many new photo will be uploaded every day or every second, what's going to be the average photo file size
 	- Total space required for 1 day of photo/1 year/5 years?
 	- For this news feed section, we can think of this would be a heave read and light write QPS
-- When we talked about designing it as distributed system, which I assume it's something we're looking forward in today's design
-- we'd basically mean
+- When we talked about designing it as distributed system, which I assume it's something we're looking forward in today's design, we need to consider of
 - **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
 - **High availability**: **survives hardware/network failures**
 - **High performant**: keep end-to-end **latency as low as possible**
@@ -26,7 +25,7 @@
 	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
 - **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
 - **Cost**(hardware, development, maintenance), but we might ignore that for now
-- Let's revisit those once we finialize more details with our design
+- **Let's revisit those once we finialize more details with our design**
 ### High level Architecture
 ```
 Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
@@ -39,7 +38,7 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MTQwMzQwOCwxODA1MDI2MzI0LDkyNT
-U3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2
-MDhdfQ==
+eyJoaXN0b3J5IjpbLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5Mj
+U1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2
+NjA4XX0=
 -->
