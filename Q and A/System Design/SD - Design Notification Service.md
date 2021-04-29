@@ -19,7 +19,7 @@ subscribe(topicName, endpoint)
 - Highly Available: survives hardware/network failures, no single point of failure
 - Highly Performant: keep end-to-end latency as low as possible
 - Durable: messages must not be lost, each subscriber must receive every message at least once
-### High level architectureenter image description here```
+### High level architecture
 ```
 															Metadata Database
 																	|
@@ -173,6 +173,6 @@ Temporary Storage -> Message Retriever -> MS Client -- Task Creator -- Task Exec
 #### Did we design a durable system?
 - Yes. Whatever Temporary Storage solution we choose, data will be stored in the redundant manner, when several copies of a message is stored across several machines, and ideally across several data centers. We also retry messages for a period of time to make sure they are delivered to every subscriber at least once.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzMwOTAwMDUsLTIwMDYwMjc0NjFdfQ
-==
+eyJoaXN0b3J5IjpbMTU1MTg4MTIyMiwtMTAzMzA5MDAwNSwtMj
+AwNjAyNzQ2MV19
 -->
