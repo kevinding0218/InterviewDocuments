@@ -99,8 +99,8 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 ##### Pull Model
 1. User A request "Give me new feed" using `getRecentFeeds`
 2. Get followings User Ids from Friendship Service/Table using `getConnections`
-3. Get followings Top N feeds from Feed Service for each User Id, **ordered by create_at** timestamp
-4. Merge K sorted feed list and return the Top 100 NewsFeeds after merging
+3. Get followings **Top N feeds from Feed Service for each User Id**, **ordered by create_at** timestamp
+4. **Merge K sorted feed list** and return the Top 100 NewsFeeds after merging
 ```
 getNewsFeed(request)
 	followings = DB.getFollowings(user=request.user)
@@ -120,6 +120,7 @@ return success
 - For Post a Feeds: Only 1 time DB write
 ###### Disadvantage
 - N times of DB reads is very slow, and it has to process during user request the news feed
+- New data might not be shown to the users until they issue a pull request
 ##### Push Model (with Async Fanout and NewsFeed table)
 ```
 select * from news_feed where owner_id = A order by created_at desc limit 20;
@@ -152,8 +153,9 @@ AsyncService::fanoutTweet(user, tweet)
 - Get Feed: Only 1 DB Read
 - Post Feed: N times of DB Writes, benefit is it can be done within consumer as async task, user doesn't have to wait
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MzAwNDcwOSwxMTI0NzcyMTQxLC0xMD
-I0OTEzODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0Mzcz
-NzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC
-0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbLTI4NjkxNTgxMiwxNzYzMDA0NzA5LDExMj
+Q3NzIxNDEsLTEwMjQ5MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1
+Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNC
+w5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4
+NTE2NjA4XX0=
 -->
