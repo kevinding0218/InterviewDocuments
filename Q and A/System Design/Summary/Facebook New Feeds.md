@@ -11,8 +11,8 @@
 - **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
 - **High availability**: **survives hardware/network failures**
 - **High performant**: keep end-to-end **latency as low as possible**
-Also if we refer to the CAP theorem(Consistency, **Availability**
-- Consistency 
+Also if we refer to the CAP theorem(**Consistency**, **Availability** and **Partition tolerance**)
+- Ask interviewer: do we need to consider consistency here? 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MzM1NjQ3OCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbLTY1MTA4Mjc0LC0zNzg1MTY2MDhdfQ==
 -->
