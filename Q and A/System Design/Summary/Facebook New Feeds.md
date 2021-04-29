@@ -90,7 +90,7 @@ create_at 	time_stamp		indexing
 feed_type	smallint		FK	(Photo/Article/Video, etc)
 ```
 ##### Pull Model
-1. Client request "Give me new feed" using `getRecentFeeds`
+1. User A request "Give me new feed" using `getRecentFeeds`
 2. Get followings User Ids from Friendship Service/Table using `getConnections`
 3. Get followings Top N feeds from Feed Service for each User Id, **ordered by create_at** timestamp
 4. Merge K sorted feed list and return the Top 100 NewsFeeds after merging
@@ -100,10 +100,12 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 ###### Disadvantage
 - N times of DB reads is very slow, and it has to process during user request the news feed
 ##### Push Model
-1. Client post a new feed
-2. Feeds Service 
+1. User A post a new feed
+2. Feeds Service Insert the new feed to DB
+3. Feeds Service Send the new feed to A's friends through Aysnc Task
+4. Feeds Consumer will get 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MzU1NDQyMiwtMTAyNDkxMzgwNywtMj
+eyJoaXN0b3J5IjpbMTE0MjI5MjM1NywtMTAyNDkxMzgwNywtMj
 EyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1
 MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3Ny
 wtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
