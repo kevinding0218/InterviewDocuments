@@ -150,16 +150,16 @@ AsyncService::fanoutTweet(user, tweet)
 	for follower in followers:
 		DB.insertNewsFeed(tweet, follower)
 ```
-- The **advantage** is that when fetching feed, you don’t need to go through your friend’s list and get feeds for each of them. It significantly reduces read operations. To efficiently handle this, users have to maintain a Long Poll request with the server for receiving the updates
+- The **advantage** is that It significantly reduces read operations. To efficiently handle this, users have to maintain a Long Poll request with the server for receiving the updates
 ###### Time Complexity
 - **Get Feed: Only 1 DB Read**
 - **Post Feed**: N times of DB Writes, benefit is it can be done within consumer as async task, user doesn't have to wait
 ###### Disadvantage
 - A possible problem with this approach is that when a user has millions of followers (a celebrity-user), the server has to push updates to a lot of people.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDAxNTkxMDUsMTc2MzAwNDcwOSwxMT
-I0NzcyMTQxLC0xMDI0OTEzODA3LC0yMTI0MzMyNDIwLC0yODA5
-NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYzMj
-QsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3
-ODUxNjYwOF19
+eyJoaXN0b3J5IjpbLTI5MDgxMDkxMCwtMjAwMDE1OTEwNSwxNz
+YzMDA0NzA5LDExMjQ3NzIxNDEsLTEwMjQ5MTM4MDcsLTIxMjQz
+MzI0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1Nz
+YsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkw
+NjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
