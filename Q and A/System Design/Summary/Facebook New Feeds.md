@@ -163,8 +163,9 @@ AsyncService::fanoutTweet(user, tweet)
 		- Is capacity an issue? Not really, big company should be able to support millions of Cache or distributed cache system
 	- N times of DB request become N times of Cache request (N is your follower number)
 		- Trade off: Cache all News Feed or Most recent 100/1k News Feed?
+	- Cache every user's news feed
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDI5NjQ3NiwxMDUyNDU4ODQwLC0yMD
+eyJoaXN0b3J5IjpbMTY2MDAzMDM2MiwxMDUyNDU4ODQwLC0yMD
 AwMTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkx
 MzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0Ni
 wtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0
