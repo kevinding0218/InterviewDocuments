@@ -36,12 +36,12 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 - **API gateway** is an API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
 - When comes to the **Service**, let's talk about the **Storage** as well as **API design**
 - User Service
-	- registerUser(RegistrationInfo regInfo), the `RegistrationInfo` may include information such as username/email/password/confirmedPassword, etc)
-	- loginUser(LoginInfo logInfo), 
+	- registerUser(RegistrationInfo regInfo), the `RegistrationInfo` may include information such as username/email/password/confirmedPassword/contactInfo, etc)
+	- loginUser(LoginInfo logInfo), the `LoginInfo` may include information such as `username/email/password`, it may return an JWT token for f
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY1NjMxNzc2LC0xNTAzNjUxNTc2LDE4MD
-UwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1
-NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbLTczODIyMDEwNiwtMTUwMzY1MTU3NiwxOD
+A1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4
+NTQwLC0zNzg1MTY2MDhdfQ==
 -->
