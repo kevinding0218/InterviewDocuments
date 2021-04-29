@@ -63,11 +63,24 @@ Friendship Table
 from_user_id	varchar		FK
 to_user_id		varchar		FK
 update
+NoSQL Schema
+```
+userID {
+  _id: "my_user1",
+  name: "john smith",
+  email: "blah@test.com,
+  friends: [
+    "my_user2",
+    "my_user3",
+    "my_user4",
+  ]
+}
+```
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MD
-M2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2
-NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbNDI0OTEzNzgsLTI4MDk1Mzc5NCwzNTQzNz
+M3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIs
+LTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
