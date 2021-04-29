@@ -62,12 +62,12 @@ password	varchar
 Friendship Table
 from_user_id	varchar		FK
 to_user_id		varchar		FK
-times
+update
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MTE3NDQzMywzNTQzNzM3NDYsLTE1MD
+eyJoaXN0b3J5IjpbLTI4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MD
 M2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2
 NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
