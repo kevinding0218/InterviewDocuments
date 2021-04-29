@@ -77,11 +77,19 @@ user1 {
 }
 ```
 ##### Feeds Service
-- @Get getFeeds(UUID user_id): 
+- @Get getFeeds(UUID user_id): return top 100 news feed
+```
+Tweet Table
+id			varchar/UUID	PK
+user_id		varchar			FK
+content	**BLOB**
+create_at time_stamp
+
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MDA4MTIxNSwtMjEyNDMzMjQyMCwtMj
-gwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2
-MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC
-0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbNDI1NTQ3NDg0LC0yMTI0MzMyNDIwLC0yOD
+A5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYz
+MjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLT
+M3ODUxNjYwOF19
 -->
