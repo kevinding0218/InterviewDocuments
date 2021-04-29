@@ -127,8 +127,21 @@ create_at	timestap
 3. Feeds Service Send a message of the new feed to A's friends through Aysnc Task
 4. Feeds Consumer will get A's followers from Friendship Service/Table
 5. Feeds Consuer perform a Fan-out to insert that new feed to each followers' new feed list
+```
+getNewsFeed(request)
+	return DB.getNewsFeed(request.user)
+
+postTweet(request, tweet_info)
+	tweet = DB.insertTweet(request.user, tweet_info)
+	AsyncService.fanoutTweet(request.user, tweet)
+return success
+AsyncService::fanoutTweet(user, tweet)
+followers = DB.getFollowers(user)
+for follower in followers:
+DB.insertNewsFeed(tweet, follower)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzQxMzc5MzksLTEwMjQ5MTM4MDcsLT
+eyJoaXN0b3J5IjpbLTIxNDEyNzk5NjAsLTEwMjQ5MTM4MDcsLT
 IxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2
 NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2Nz
 csLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
