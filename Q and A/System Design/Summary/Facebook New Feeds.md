@@ -94,11 +94,11 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 3. Get followings Top N tweets from Tweet Service for each User Id, **ordered by create_at** timestamp
 4. Merge K sorted feed list and return the Top 100 NewsFeeds after merging
 **Time Complexity**
-- Suppose I have N followings, then it's going to be N * DB Reads + merge 
+- Suppose I have N followings, then it's going to be N * DB Reads + O(kn*logK), here the merge K might 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg4MDYwMDI5LC0yMTI0MzMyNDIwLC0yOD
-A5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYz
-MjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLT
-M3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbLTEzOTQ4NDA5NzgsLTIxMjQzMzI0MjAsLT
+I4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAy
+NjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MC
+wtMzc4NTE2NjA4XX0=
 -->
