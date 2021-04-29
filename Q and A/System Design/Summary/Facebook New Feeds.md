@@ -92,11 +92,12 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 1. Client request "Give me new feed" using `getRecentFeeds`
 2. Get followings User Ids from Friendship Service/Table using `getConnections`
 3. Get followings Top 100 tweets from Tweet Service for each User Id, **ordered by create_at** timestamp
-4. Merge K sorted tweets and return the Top 100 NewsFeeds af
--
+4. Merge K sorted tweets and return the Top 100 NewsFeeds after merging
+- Time Complexity:
+- Suppose I have N followings, then it's going to be N * DB Reads + merge 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM3NzQ5MzIyLC0yMTI0MzMyNDIwLC0yOD
+eyJoaXN0b3J5IjpbNDc5Mzc2OTc0LC0yMTI0MzMyNDIwLC0yOD
 A5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYz
 MjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLT
 M3ODUxNjYwOF19
