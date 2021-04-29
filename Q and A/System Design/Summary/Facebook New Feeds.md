@@ -78,9 +78,9 @@ user1 {
 }
 ```
 ##### Feeds Service
-- **@Get getTopFeeds(UUID user_id)**: return Top 100 news feed
+- **@Get getTopFeeds(UUID user_id)**: return Top K news feed
 - **@Post createFeed(FeedInfo feedInfo)**: return Http status
-- **@Get getBatchFeeds(Set<UUID> user_id_set)**: return Top 100 news feed
+- **@Get getBatchFeeds(Set<UUID> user_id_set)**: return a list of Top K news feed for each user in request
 ```
 Feeds Table
 id			varchar/UUID	PK
@@ -100,7 +100,7 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 ###### Disadvantage
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDIzNDQ3ODYsLTIxMjQzMzI0MjAsLT
+eyJoaXN0b3J5IjpbLTEwMjQ5MTM4MDcsLTIxMjQzMzI0MjAsLT
 I4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAy
 NjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MC
 wtMzc4NTE2NjA4XX0=
