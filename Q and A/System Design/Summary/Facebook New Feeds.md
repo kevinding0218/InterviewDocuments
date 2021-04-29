@@ -184,12 +184,13 @@ AsyncService::fanoutTweet(user, tweet)
 - When to use Push?
 	- When we have limited resource
 	- Real-time requirement is not needed
-	- User post less (more 
+	- User post less (more read duration)
+	- Round trip friendship/No Celebrity User
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0ODQwMzc5MCwtMTY3Mjg1MTI0MiwxMD
-UyNDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3
-MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNz
-k0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDky
-NTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MT
-Y2MDhdfQ==
+eyJoaXN0b3J5IjpbLTIwMzU1NzI3NDksLTE2NzI4NTEyNDIsMT
+A1MjQ1ODg0MCwtMjAwMDE1OTEwNSwxNzYzMDA0NzA5LDExMjQ3
+NzIxNDEsLTEwMjQ5MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1Mz
+c5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5
+MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NT
+E2NjA4XX0=
 -->
