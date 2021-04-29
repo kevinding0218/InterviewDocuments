@@ -55,7 +55,7 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User(SQL)/Friendship(S
 - **User info are tend to be structure** so we can just use a SQL Database to save such info in a user table, each user would be assigned with **an unique UserId/UUID** in **Metadata DB**
 ```
 User Table
-id			varchar	PK/UUID
+user_id		varchar	PK/UUID
 username	varchar
 email		varchar
 password	varchar
@@ -90,7 +90,7 @@ user1 {
 - **@Get getBatchFeeds(Collection< UUID> user_ids)**: return a list of Top K news feed for each requested user in response
 ```
 Feeds Table
-id			varchar/UUID	PK
+feed_id		varchar/UUID	PK
 user_id		varchar			FK
 content		BLOB(binary large object)
 create_at 	time_stamp		indexing
@@ -139,7 +139,7 @@ select * from news_feed where owner_id = A order by created_at desc limit 20;
 NewFeeds Table
 feed_id		varchar		PK
 owner_id	varchar		FK
-feed_id	varchar		FK
+content		BLOB(binary large object)
 create_at	timestap
 ```
 1. User A post a new feed
@@ -216,13 +216,13 @@ like_num	integer			De-normalize
 comment_num integer
 share_num	integer
 
-Like Table
-id			integer
+Like Table	(NoSQL)
+like_id		integer
 user_id		varchar			FK
 feed_id		
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3ODc5NjgxNiwtMjAzNTU3Mjc0OSwtMT
+eyJoaXN0b3J5IjpbMjAzNTU3NjA5OSwtMjAzNTU3Mjc0OSwtMT
 Y3Mjg1MTI0MiwxMDUyNDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMw
 MDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMj
 QyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3Niwx
