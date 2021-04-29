@@ -7,7 +7,7 @@
 - Post can be liked by other users
 - Other functions like search/left comments/tagging user, etc
 #### Non-functional requirements
-- Let's do some analysis on the Daily Active User (DAU)
+- Let's do some analysis on the Daily Active User (DAU) or Monthly Active User (MAU)
 	- 
 - When we talked about designing it as distributed system, which I assume it's something we're looking forward in today's design
 - we'd basically mean
@@ -19,5 +19,6 @@
 	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
 - **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMz
+c4NTE2NjA4XX0=
 -->
