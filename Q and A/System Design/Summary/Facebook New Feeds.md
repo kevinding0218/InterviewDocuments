@@ -31,17 +31,17 @@
 Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
 ```
 ### Detail Analysis of each component in architecture
-#### **VIP/virtual IP**
+#### VIP/virtual IP
 - refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
-#### **LB/Load Balancer** 
+#### LB/Load Balancer
 - All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
-#### **API gateway**
+#### API gateway
 - An API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
-- When comes to the **Service**, let's talk about the **Storage** as well as **API design**
-- User Service
-	- registerUser(RegistrationInfo regInfo), the `RegistrationInfo` may include information such as username/email/password/confirmedPassword/contactInfo, etc)
-	- loginUser(LoginInfo logInfo), the `LoginInfo` may include information such as `username/email/password`, it may return an JWT token for further API request authentication and authorization
-	- User info are tend to be structure so we can just use a SQL Database to save such info in a user table, each user would be assigned with an unique UserId
+####  Service - Storage as well as API/Schema design
+##### User Service
+- **registerUser(RegistrationInfo regInfo)**, the `RegistrationInfo` may include information such as username/email/password/confirmedPassword/contactInfo, etc)
+- **loginUser(LoginInfo logInfo)**, the `LoginInfo` may include information such as `username/email/password`, it may return an JWT token for further API request authentication and authorization
+- **User info are tend to be structure** so we can just use a SQL Database to save such info in a user table, each user would be assigned with **an unique UserId/UUID**
 ```
 User Table
 id			integer
@@ -55,7 +55,7 @@ password	varchar
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwODI0NzYyOCwzNTQzNzM3NDYsLTE1MD
-M2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2
-NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbMTA3MjI3MDEyLDM1NDM3Mzc0NiwtMTUwMz
+Y1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3
+NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
