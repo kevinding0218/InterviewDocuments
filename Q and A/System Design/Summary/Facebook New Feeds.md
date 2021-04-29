@@ -189,12 +189,12 @@ AsyncService::fanoutTweet(user, tweet)
 ##### Media Service
 - File/Photo can be stored in File System like AWS S3 or Azure Blob Storage
 - We could also have a cache to load user most recent N posts such as LRU
-- We could a
+- We could also Archieve the file after a certain time period
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkyNzc4MzY1LC0yMDM1NTcyNzQ5LC0xNj
-cyODUxMjQyLDEwNTI0NTg4NDAsLTIwMDAxNTkxMDUsMTc2MzAw
-NDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEzODA3LC0yMTI0MzMyND
-IwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4
-MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMz
-g1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbMjA5NTk2MDI3NCwtMjAzNTU3Mjc0OSwtMT
+Y3Mjg1MTI0MiwxMDUyNDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMw
+MDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMj
+QyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3Niwx
+ODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2Mz
+M4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
