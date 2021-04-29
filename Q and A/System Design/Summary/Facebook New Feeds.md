@@ -175,7 +175,7 @@ AsyncService::fanoutTweet(user, tweet)
 - Normal user (who doesn't have a pretty large amount of followers) can use with Push
 - Special user like celebrities (who has a large number of followers), we marked them as Star/VIP user
 	-	For those users, we're not pushing their Post into followers' new feed, instead. when user request the feed, we are doing a Pulling from those VIP
-#### Summary
+###### Summary
 - When to use Pull?
 	- When we have enough resource
 	- When we need real-time requirements
@@ -186,11 +186,15 @@ AsyncService::fanoutTweet(user, tweet)
 	- Real-time requirement is not needed
 	- User post less (more read duration)
 	- Round trip friendship/No Celebrity User
+##### Media Service
+- File/Photo can be stored in File System like AWS S3 or Azure Blob Storage
+- We could also have a cache to load user most recent N posts such as LRU
+- We could a
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzU1NzI3NDksLTE2NzI4NTEyNDIsMT
-A1MjQ1ODg0MCwtMjAwMDE1OTEwNSwxNzYzMDA0NzA5LDExMjQ3
-NzIxNDEsLTEwMjQ5MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1Mz
-c5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5
-MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NT
-E2NjA4XX0=
+eyJoaXN0b3J5IjpbNTkyNzc4MzY1LC0yMDM1NTcyNzQ5LC0xNj
+cyODUxMjQyLDEwNTI0NTg4NDAsLTIwMDAxNTkxMDUsMTc2MzAw
+NDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEzODA3LC0yMTI0MzMyND
+IwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4
+MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMz
+g1NDAsLTM3ODUxNjYwOF19
 -->
