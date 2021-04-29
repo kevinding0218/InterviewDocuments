@@ -48,23 +48,26 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 - **User info are tend to be structure** so we can just use a SQL Database to save such info in a user table, each user would be assigned with **an unique UserId/UUID**
 ```
 User Table
-id			integer
+id			varchar	PK
 username	varchar
 email		varchar
 password	varchar
 ```
 - Friendship Service
-	- **@Post connect(UUID from_user_id, UUID to_user_id)**, build a mapping relationship between User A and User B, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
-	- **@Get getConnection(UUID from_user_id)** which would return a list of UUID of user_id that the `from_user_id` is following.
-	- **@Delete disconnect(UUID from_user_id, UUID to_user_id)**, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
+	- **@Post createConnection(UUID from_user_id, UUID to_user_id)**, build a mapping relationship between User A and User B, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
+	- **@Get getConnections(UUID from_user_id)** which would return a list of UUID of user_id that the `from_user_id` is following.
+	- **@Delete removeConnection(UUID from_user_id, UUID to_user_id)**, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
 	- Friendship relationship can be stored in in SQL like as well as NoSQL
 ```
-F
+Friendship Table
+from_user_id	varchar		FK
+to_user_id		varchar		FK
+times
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDE4MDUyNDcsMzU0MzczNzQ2LC0xNT
-AzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUx
-Njc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbMTA0MTE3NDQzMywzNTQzNzM3NDYsLTE1MD
+M2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2
+NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
