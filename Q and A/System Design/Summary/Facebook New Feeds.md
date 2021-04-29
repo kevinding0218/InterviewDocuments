@@ -54,12 +54,13 @@ email		varchar
 password	varchar
 ```
 - Friendship Service
-	- follow(
+	- follow(UUID from_user_id, UUID to_user_id), build a relationship between User A and User B
+	- getMyFollower
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MjkzNTI5LDM1NDM3Mzc0NiwtMTUwMz
-Y1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3
-NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTEwMzY3MzI1MjcsMzU0MzczNzQ2LC0xNT
+AzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUx
+Njc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
 -->
