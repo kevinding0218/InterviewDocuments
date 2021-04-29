@@ -28,6 +28,10 @@
 - **Let's revisit those once we finialize more details with our design**
 ### High level Architecture
 ```
+User A -> Browser -> Add/Update Post 								
+									\								/
+									VIP -> LB -> API Gateway/Router
+						
 Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User(SQL)/Friendship(SQL/NoSQL)/Feeds(NoSQL)/Media(File DB) Service    -> Database -> Query Service -> Browser -> Client
 ```
 ### Detail Analysis of each component in architecture
@@ -145,8 +149,9 @@ AsyncService::fanoutTweet(user, tweet)
 - Get Feed: Only 1 DB Read
 - Post Feed: N times of DB Writes, benefit is it can be done within consumer as async task, user doesn't have to wait
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNDc3MjE0MSwtMTAyNDkxMzgwNywtMj
-EyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1
-MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3Ny
-wtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTEyNDIzMDg4MjgsMTEyNDc3MjE0MSwtMT
+AyNDkxMzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3
+Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4Mi
+wtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+
 -->
