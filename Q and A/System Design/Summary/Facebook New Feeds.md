@@ -27,9 +27,10 @@
 - **Cost**(hardware, development, maintenance), but we might ignore that for now
 ### High level Architecture
 ```
-Client -> LB -> 
+Client -> LB -> API gateway -> 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwND
-U5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbMTk1NzA2ODg0OSwxODA1MDI2MzI0LDkyNT
+U3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2
+MDhdfQ==
 -->
