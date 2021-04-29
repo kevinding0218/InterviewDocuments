@@ -35,10 +35,12 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 - **LB/Load Balancer** : All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
 - **API gateway** is an API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
 - When comes to the **Service**, let's talk about the **Storage** as well as **API design**
+- User Service
+	- Register
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5Mj
-U1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2
-NjA4XX0=
+eyJoaXN0b3J5IjpbMzE1MzY0MjU5LC0xNTAzNjUxNTc2LDE4MD
+UwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1
+NDAsLTM3ODUxNjYwOF19
 -->
