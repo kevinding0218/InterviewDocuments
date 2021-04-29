@@ -134,15 +134,19 @@ getNewsFeed(request)
 postTweet(request, tweet_info)
 	tweet = DB.insertTweet(request.user, tweet_info)
 	AsyncService.fanoutTweet(request.user, tweet)
-return success
+	return success
+
 AsyncService::fanoutTweet(user, tweet)
-followers = DB.getFollowers(user)
-for follower in followers:
-DB.insertNewsFeed(tweet, follower)
+	followers = DB.getFollowers(user)
+	for follower in followers:
+		DB.insertNewsFeed(tweet, follower)
 ```
+###### Time Complexity
+- Get Feed: Only 1 DB Read
+- Post Feed: N times of DB Writes, benefit is it can be done within consumer as async task
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDEyNzk5NjAsLTEwMjQ5MTM4MDcsLT
-IxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2
-NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2Nz
-csLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbLTc1MTEyOTE3OCwtMTAyNDkxMzgwNywtMj
+EyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1
+MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3Ny
+wtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
