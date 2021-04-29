@@ -32,6 +32,8 @@ User A -> Browser -> Add/Update Post/Follow 						  User(SQL)
 									\								/ Friendship -> Cache -> Metadata Storage(SQL/NoSQL)
 									VIP -> LB -> API Gateway/Router - Feeds	-> Cache -> Post Storage (NoSQL)
 																	\ Media Service	-> Cache ->			Media Storage(File DB)
+																			|
+																		Query Service -> Notification Service -> User B/C
 						
 Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User(SQL)/Friendship(SQL/NoSQL)/Feeds(NoSQL)/Media(File DB) Service    -> Database -> Query Service -> Browser -> Client
 ```
@@ -150,7 +152,7 @@ AsyncService::fanoutTweet(user, tweet)
 - Get Feed: Only 1 DB Read
 - Post Feed: N times of DB Writes, benefit is it can be done within consumer as async task, user doesn't have to wait
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MDkwMzUzMSwxMTI0NzcyMTQxLC0xMD
+eyJoaXN0b3J5IjpbMTY0Nzg1MTY2NywxMTI0NzcyMTQxLC0xMD
 I0OTEzODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0Mzcz
 NzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC
 0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
