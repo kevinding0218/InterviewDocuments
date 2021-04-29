@@ -20,7 +20,7 @@
 - **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
 - **High availability**: **survives hardware/network failures**
 - **High performant**: keep end-to-end **latency as low as possible**
- - **CAP(Consistency**, **Availability** and **Partition tolerance**) theorem tells me I should be choosing between Availability and Consistency, **discuss with interviewer**
+ - **CAP(Consistency, Availability and Partition tolerance)** theorem tells us that we should be choosing between Availability and Consistency, **discuss with interviewer**
 	- If we choose **Availability** over Consistency, it simply means we prefer to **show stale (not up-to-date) data than no data at all**.
 	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
 - **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
@@ -31,8 +31,10 @@
 Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
 ```
 ### Detail Analysis of each component in architecture
-- **VIP/virtual IP**. refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
-- **LB/Load Balancer** : All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
+#### **VIP/virtual IP**
+- refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
+#### **LB/Load Balancer** 
+ All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
 - **API gateway** is an API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
 - When comes to the **Service**, let's talk about the **Storage** as well as **API design**
 - User Service
@@ -52,7 +54,7 @@ password	varchar
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzIwMDIwMzAsMzU0MzczNzQ2LC0xNT
-AzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUx
-Njc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbMTY5MTE0ODkzMSwzNTQzNzM3NDYsLTE1MD
+M2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2
+NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
