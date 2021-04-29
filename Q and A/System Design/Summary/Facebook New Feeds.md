@@ -52,7 +52,7 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User(SQL)/Friendship(S
 ##### User Service
 - **@Post registerUser(RegistrationInfo regInfo)**, the `RegistrationInfo` may include information such as username/email/password/confirmedPassword/contactInfo, etc)
 - **@Post loginUser(LoginInfo logInfo)**, the `LoginInfo` may include information such as `username/email/password`, it may return an JWT token for further API request authentication and authorization
-- **User info are tend to be structure** so we can just use a SQL Database to save such info in a user table, each user would be assigned with **an unique UserId/UUID** in Metadata DB
+- **User info are tend to be structure** so we can just use a SQL Database to save such info in a user table, each user would be assigned with **an unique UserId/UUID** in **Metadata DB**
 ```
 User Table
 id			varchar	PK/UUID
@@ -152,7 +152,7 @@ AsyncService::fanoutTweet(user, tweet)
 - Get Feed: Only 1 DB Read
 - Post Feed: N times of DB Writes, benefit is it can be done within consumer as async task, user doesn't have to wait
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NTQ2NTExNSwxMTI0NzcyMTQxLC0xMD
+eyJoaXN0b3J5IjpbMTc2MzAwNDcwOSwxMTI0NzcyMTQxLC0xMD
 I0OTEzODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0Mzcz
 NzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC
 0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
