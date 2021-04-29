@@ -48,10 +48,11 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Friendship/Feeds/
 - **User info are tend to be structure** so we can just use a SQL Database to save such info in a user table, each user would be assigned with **an unique UserId/UUID**
 ```
 User Table
-id			varchar	PK
+id			varchar	PK/UUID
 username	varchar
 email		varchar
 password	varchar
+lastLogin	timestamp
 ```
 ##### Friendship Service
 - **@Post createConnection(UUID from_user_id, UUID to_user_id)**, build a mapping relationship between User A and User B, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
@@ -83,13 +84,13 @@ Feeds Table
 id			varchar/UUID	PK
 user_id		varchar			FK
 content		BLOB(binary large object)
-create_at 	time_stamp
+create_at 	time_stamp		indexing
 feed_type	smallint		FK	(Photo/Article/Video, etc)
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1NTQ1MzcwLC0yMTI0MzMyNDIwLC0yOD
-A5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYz
-MjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLT
-M3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbMTQ3MDUxNTAyOSwtMjEyNDMzMjQyMCwtMj
+gwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2
+MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC
+0zNzg1MTY2MDhdfQ==
 -->
