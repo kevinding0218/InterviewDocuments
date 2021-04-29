@@ -21,6 +21,10 @@
 	- **Isolation**  – No other transactions take place and affect the transaction in question. This prevents “mid-air collisions.”
 	- **Durable**  – System failures or restarts do not affect committed transactions.
 - Your data is structured and unchanging
+#### Reasons to use NoSQL database
+- Storing large volumes of data that often have little to no structure
+- Making the most of cloud computing and storage. Cloud-based storage is an excellent cost-saving solution but requires data to be easily spread across multiple servers to scale up.
+- Rapid development
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTUwMTI5MzRdfQ==
+eyJoaXN0b3J5IjpbLTgyMjI4NzMwOV19
 -->
