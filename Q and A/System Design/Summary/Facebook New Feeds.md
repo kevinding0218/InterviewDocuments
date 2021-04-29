@@ -26,6 +26,7 @@
 	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
 - **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
 - **Cost**(hardware, development, maintenance), but we might ignore that for now
+- Let's revisit those once we finialize more details with our design
 ### High level Architecture
 ```
 Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
@@ -38,7 +39,7 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIxMTM2MzA4LDE4MDUwMjYzMjQsOTI1NT
-cwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYw
-OF19
+eyJoaXN0b3J5IjpbLTM0MTQwMzQwOCwxODA1MDI2MzI0LDkyNT
+U3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2
+MDhdfQ==
 -->
