@@ -115,6 +115,7 @@ return success
 - N times of DB reads is very slow, and it has to process during user request the news feed
 ##### Push Model (with Async Fanout and NewsFeed table)
 ```
+select * from news_feed where owner_id = A order by created_at desc limit 20;
 NewFeeds Table
 feed_id		varchar		PK
 owner_id	varchar		FK
@@ -127,8 +128,8 @@ create_at	timestap
 4. Feeds Consumer will get A's followers from Friendship Service/Table
 5. Feeds Consuer perform a Fan-out to insert that new feed to each followers' new feed list
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MTU0NTkwMSwtMTAyNDkxMzgwNywtMj
-EyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1
-MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3Ny
-wtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTExNzQxMzc5MzksLTEwMjQ5MTM4MDcsLT
+IxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2
+NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2Nz
+csLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
