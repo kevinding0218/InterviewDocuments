@@ -8,8 +8,8 @@
 - **Graph Databases**: These databases are used to store data whose relations are best represented in a graph
 ### Difference
 #### Scalability
-- In most common situations, SQL databases are vertically scalable, i.e., by increasing the horsepower (higher Memory, CPU, etc.) of the hardware, which can get very expensive
-- NoSQL databases are horizontally scalable, meaning we can add more servers easily in our NoSQL database infrastructure to handle a lot of traffic. Any cheap commodity hardware or cloud instances can host NoSQL databases, thus making it a lot more cost-effective than vertical scaling.
+- In most common situations, **SQL databases are vertically scalable**, i.e., by increasing the horsepower (higher Memory, CPU, etc.) of the hardware, which can get very expensive
+- **NoSQL databases are horizontally scalable**, meaning we can add more servers easily in our NoSQL database infrastructure to handle a lot of traffic. Any cheap commodity hardware or cloud instances can host NoSQL databases, thus making it a lot more cost-effective than vertical scaling.
 #### Reliability or ACID Compliancy (Atomicity, Consistency, Isolation, Durability)
 - when it comes to data reliability and safe guarantee of performing transactions, SQL databases are still the better bet.
 - Most of the NoSQL solutions sacrifice ACID compliance for performance and scalability.
@@ -26,5 +26,5 @@
 - Making the most of cloud computing and storage. Cloud-based storage is an excellent cost-saving solution but requires data to be easily spread across multiple servers to scale up.
 - Rapid development
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMjI4NzMwOV19
+eyJoaXN0b3J5IjpbLTQxMjgyMDYxXX0=
 -->
