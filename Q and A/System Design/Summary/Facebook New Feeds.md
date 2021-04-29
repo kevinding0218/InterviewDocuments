@@ -89,14 +89,15 @@ create_at 	time_stamp		indexing
 feed_type	smallint		FK	(Photo/Article/Video, etc)
 ```
 ##### Pull Model
-1. Client request "Give me new feed"
-2. Get followings User Ids from Friendship Service/Table
-3. Get followings Top 100 tweets from Tweet Service for each User Id, ordered by create_at timestamp
-4. Merge and return
+1. Client request "Give me new feed" using `getRecentFeeds`
+2. Get followings User Ids from Friendship Service/Table using `getConnections`
+3. Get followings Top 100 tweets from Tweet Service for each User Id, **ordered by create_at** timestamp
+4. Merge K sorted tweets and return the Top 100 NewsFeeds af
+-
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMjQxNjcyNiwtMjEyNDMzMjQyMCwtMj
-gwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2
-MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC
-0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbNDM3NzQ5MzIyLC0yMTI0MzMyNDIwLC0yOD
+A5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYz
+MjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLT
+M3ODUxNjYwOF19
 -->
