@@ -27,11 +27,13 @@
 - **Cost**(hardware, development, maintenance), but we might ignore that for now
 ### High level Architecture
 ```
-Client -> LB -> API gateway/Router -> User Service
-									  
+Client -> Browser -> LB -> API gateway/Router -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
+									   Service
+									  Media Service
+									  Friendship Service
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4OTI2MjQwNywxODA1MDI2MzI0LDkyNT
-U3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2
-MDhdfQ==
+eyJoaXN0b3J5IjpbMzMyMjQ0NTkxLDE4MDUwMjYzMjQsOTI1NT
+cwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYw
+OF19
 -->
