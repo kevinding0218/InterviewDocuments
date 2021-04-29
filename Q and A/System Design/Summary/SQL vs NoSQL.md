@@ -7,10 +7,15 @@
 - **Wide-Column Databases**: Unlike relational databases, we don’t need to know all the columns up front and each row doesn’t have to have the same number of columns, e.g: **Cassandra**
 - **Graph Databases**: These databases are used to store data whose relations are best represented in a graph
 ### Difference
-- Scalability
-	- In most common situations, SQL databases are vertically scalable, i.e., by increasing the horsepower (higher Memory, CPU, etc.) of the hardware, which can get very expensive
-	- NoSQL databases are horizontally scalable, meaning we can add more servers easily in our NoSQL database infrastructure to handle a lot of traffic. Any cheap commodity hardware or cloud instances can host NoSQL databases, thus making it a lot more cost-effective than vertical scaling.
-	- 
+#### Scalability
+- In most common situations, SQL databases are vertically scalable, i.e., by increasing the horsepower (higher Memory, CPU, etc.) of the hardware, which can get very expensive
+- NoSQL databases are horizontally scalable, meaning we can add more servers easily in our NoSQL database infrastructure to handle a lot of traffic. Any cheap commodity hardware or cloud instances can host NoSQL databases, thus making it a lot more cost-effective than vertical scaling.
+#### Reliability or ACID Compliancy (Atomicity, Consistency, Isolation, Durability)
+- when it comes to data reliability and safe guarantee of performing transactions, SQL databases are still the better bet.
+- Most of the NoSQL solutions sacrifice ACID compliance for performance and scalability.
+### Which one to choose
+#### Reasons to use SQL database
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzIxOTg3OTFdfQ==
+eyJoaXN0b3J5IjpbMTg0MTYyMzQwOV19
 -->
