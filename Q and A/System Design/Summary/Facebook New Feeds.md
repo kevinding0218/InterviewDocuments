@@ -168,12 +168,12 @@ AsyncService::fanoutTweet(user, tweet)
 - DB write is usually slower than DB Read
 - Waste of request send to inactive user
 ###### Improve on Push
-- Adding more service instance during busy hours
+- Adding more service instance during busy hours to scale out
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNjg0OTgxMCwxMDUyNDU4ODQwLC0yMD
-AwMTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkx
-MzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0Ni
-wtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0
-NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbNzM2NTIxMjI3LDEwNTI0NTg4NDAsLTIwMD
+AxNTkxMDUsMTc2MzAwNDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEz
+ODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC
+0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1
+OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
 -->
