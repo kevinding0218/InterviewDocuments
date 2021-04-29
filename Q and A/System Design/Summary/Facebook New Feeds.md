@@ -122,6 +122,15 @@ return success
 - N times of DB reads is very slow, and it has to process during user request the news feed
 - New data might not be shown to the users until they issue a pull request
 - It’s hard to find the right pull time, as most of the time pull requests will result in an empty response if there is no new data, causing waste of resources
+###### Improve Pull
+- The slowest/longest duration was taken while user is reading requests
+	- Let's add a cache that stores each user's timeline
+		- Is capacity an issue? Not really, big company should be able to support millions of Cache or distributed cache system
+	- N times of DB request become N times of Cache request (N is your follower number)
+		- Trade off: Cache all News Feed or Most recent 100/1k News Feed?
+	- Cache every user's news feed
+		- For user that's inactive for a long time, which doesn't have an entry, as soon as he make request, we would load the cache from his N following's and merge the Top K using Pull Approatch
+		- For user that's already login and has an entry in the cache, we can just append news feed after a certain timestamp
 ##### Push Model (with Async Fanout and NewsFeed table)
 ```
 select * from news_feed where owner_id = A order by created_at desc limit 20;
@@ -158,17 +167,10 @@ AsyncService::fanoutTweet(user, tweet)
 - A possible problem with this approach is that when a user has millions of followers (a celebrity-user), the server has to push updates to a lot of people.
 - DB write is usually slower than DB Read
 - Waste of request send to inactive user
-##### Improve Pull
-- The slowest/longest duration was taken while user is reading requests
-	- Let's add a cache that stores each user's timeline
-		- Is capacity an issue? Not really, big company should be able to support millions of Cache or distributed cache system
-	- N times of DB request become N times of Cache request (N is your follower number)
-		- Trade off: Cache all News Feed or Most recent 100/1k News Feed?
-	- Cache every user's news feed
-		- For user that's inactive for a long time, which doesn't have an entry, as soon as he make request, we would load the cache from his N following's and merge the Top K using Pull Approatch
-		- For user that's already login and has an entry in the cache, we can just append news feed after a certain timestamp
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI5Mzg3NTcyLDEwNTI0NTg4NDAsLTIwMD
+eyJoaXN0b3J5IjpbNTE0MzA2Mzk3LDEwNTI0NTg4NDAsLTIwMD
 AxNTkxMDUsMTc2MzAwNDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEz
 ODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC
 0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1
