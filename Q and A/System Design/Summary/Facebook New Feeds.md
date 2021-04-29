@@ -28,7 +28,7 @@
 - **Let's revisit those once we finialize more details with our design**
 ### High level Architecture
 ```
-Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Friendship/Feeds/Media Service    -> Database -> Query Service -> Browser -> Client
+Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User(SQL)/Friendship(SQL/NoSQL)/Feeds(NoSQL)/Media(File DB) Service    -> Database -> Query Service -> Browser -> Client
 ```
 ### Detail Analysis of each component in architecture
 #### VIP/virtual IP
@@ -58,7 +58,7 @@ lastLogin	timestamp
 - **@Post createConnection(UUID from_user_id, UUID to_user_id)**, build a mapping relationship between User A and User B, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
 - **@Get getConnections(UUID from_user_id)** which would return a list of UUID of user_id that the `from_user_id` is following.
 - **@Delete removeConnection(UUID from_user_id, UUID to_user_id)**, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
-- F**riendship relationship can be stored in in SQL like as well as NoSQL using Graph DB**, for cosidering data durability and performance
+- F**riendship relationship can be stored in in SQL like as well as NoSQL using Graph DB**, for considering data durability and performance
 	- when we consider SQL or NoSQL for storing messages, we need to think of **if we need ACID transactions, if we need to run complex dynamic queries, if we would use this storage for analytics or data warehousing.**
 ```
 // Friendship Table
@@ -97,7 +97,7 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 - Suppose I have N followings, then it's going to be N * DB Reads + merge 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MzM1MjMzMCwtMjEyNDMzMjQyMCwtMj
+eyJoaXN0b3J5IjpbMTU5NTEzMTA3NSwtMjEyNDMzMjQyMCwtMj
 gwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2
 MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC
 0zNzg1MTY2MDhdfQ==
