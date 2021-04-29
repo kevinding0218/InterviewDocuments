@@ -65,14 +65,14 @@ to_user_id		varchar		FK
 update
 NoSQL Schema
 ```
-userID {
-  _id: "my_user1",
+user1 {
+  _id: "user1",
   name: "john smith",
   email: "blah@test.com,
   friends: [
-    "my_user2",
-    "my_user3",
-    "my_user4",
+    "user2",
+    "user3",
+    "user4",
   ]
 }
 ```
@@ -80,7 +80,8 @@ userID {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI0OTEzNzgsLTI4MDk1Mzc5NCwzNTQzNz
-M3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIs
-LTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbLTU1NzIwMDYyOCwtMjgwOTUzNzk0LDM1ND
+M3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4
+MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ
+==
 -->
