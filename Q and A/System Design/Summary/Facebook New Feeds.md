@@ -157,6 +157,7 @@ AsyncService::fanoutTweet(user, tweet)
 ###### Disadvantage
 - A possible problem with this approach is that when a user has millions of followers (a celebrity-user), the server has to push updates to a lot of people.
 - DB write is usually slower than DB Read
+- Waste of request send to inactive user
 ##### Improve Pull
 - The slowest/longest duration was taken while user is reading requests
 	- Let's add a cache that stores each user's timeline
@@ -167,9 +168,9 @@ AsyncService::fanoutTweet(user, tweet)
 		- For user that's inactive for a long time, which doesn't have an entry, as soon as he make request, we would load the cache from his N following's and merge the Top K using Pull Approatch
 		- For user that's already login and has an entry in the cache, we can just append news feed after a certain timestamp
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNTM4NTkwNCwxMDUyNDU4ODQwLC0yMD
-AwMTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkx
-MzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0Ni
-wtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0
-NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbNjI5Mzg3NTcyLDEwNTI0NTg4NDAsLTIwMD
+AxNTkxMDUsMTc2MzAwNDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEz
+ODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC
+0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1
+OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
 -->
