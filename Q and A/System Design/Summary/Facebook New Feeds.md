@@ -37,11 +37,16 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 - When comes to the **Service**, let's talk about the **Storage** as well as **API design**
 - User Service
 	- registerUser(RegistrationInfo regInfo), the `RegistrationInfo` may include information such as username/email/password/confirmedPassword/contactInfo, etc)
-	- loginUser(LoginInfo logInfo), the `LoginInfo` may include information such as `username/email/password`, it may return an JWT token for f
+	- loginUser(LoginInfo logInfo), the `LoginInfo` may include information such as `username/email/password`, it may return an JWT token for further API request authentication and authorization
+	- User info are tend to be structure so we can just use a SQL Database to save such info in a user table, each user would be assigned with an unique UserId
+```
+User T
+```
+
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczODIyMDEwNiwtMTUwMzY1MTU3NiwxOD
-A1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4
-NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTEyNDAyOTYxMjUsLTE1MDM2NTE1NzYsMT
+gwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMz
+ODU0MCwtMzc4NTE2NjA4XX0=
 -->
