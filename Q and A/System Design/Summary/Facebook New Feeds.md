@@ -12,10 +12,10 @@
 - **High availability**: **survives hardware/network failures**
 - **High performant**: keep end-to-end **latency as low as possible**
  - CAP(**Consistency**, **Availability** and **Partition tolerance**) theorem tells me I should be choosing between Availability and Consistency
-	- If we choose Availability over Consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all.
-	- On the other hand of choosing Consistency: Synchronous data replicate is slow, we usually replicate data asynchronously.
-- Also if we refer to the CAP theorem
+	- If we choose **Availability** over Consistency, it simply means we prefer to **show stale (not up-to-date) data than no data at all**.
+	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
+- Data Durable is also something we need to think of, which refers to the system being highly reliable, any uploaded 
 - Ask interviewer: do we need to consider consistency here? 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODI0MzQ5OTIsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbMzk2NTAyOTc1LC0zNzg1MTY2MDhdfQ==
 -->
