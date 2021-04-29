@@ -222,11 +222,20 @@ user_id		varchar			FK
 feed_id		varchar			FK
 create_at	timestamp
 ```
+#### NewsFeed如何实现pagination
+- 问：**是不是不管push还是pull模型，如果翻页的话都得pull?**  
+	- 翻页是用户主动操作的过程，所以肯定是由client 发给 server，肯定是一个pull的过程。
+- 问：**假设前100条中最早的timestamp是T，就分别请求follow的人在T之前的100条feed，然后再进行合并？**  
+	- 答：对
+- 问：**如果恰好有几条feed的timestamp一样该如何处理？**  
+	- 答：首先不会有帖子的timestamp一样，timestamp的精度很高的（微秒级别）
+	- 通常来说，翻页这个完全可以作为一道单独的系统设计面试题来问你。翻页并不是简单的1-100，101-200这样去翻页。因为当你在翻页的时候，你的news feed可能已经添加了新的 内容，这个时候你再去索引最新的101-200可能和你的1-100就有重叠了。
+	- 通常的做法是，拿第101个帖子的timestamp作为下一页的起始位置，也就是说，当用户在看到第一页的前100个帖子的时候，他还有第101个帖子的timestamp信息（隐藏在你看不到的地方），然后你请求下一页的时候，会带上这个timestamp的信息，server端会去数据库里请求 >= timestamp 的前101个帖子，然后也同样把第101个帖子作为下一页的timestamp。这个方法比直接用第100个帖子的timestamp好的地方是，你如果读不到第101个帖子，说明没有下一页了，如果你刚才只有100个帖子的话，用第100个帖子的timestamp的坏处是，你会有一次`空翻`。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzODUxMDc5LC0yMDM1NTcyNzQ5LC0xNj
-cyODUxMjQyLDEwNTI0NTg4NDAsLTIwMDAxNTkxMDUsMTc2MzAw
-NDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEzODA3LC0yMTI0MzMyND
-IwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4
-MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMz
-g1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbLTYyOTcyNzk1NiwtMjAzNTU3Mjc0OSwtMT
+Y3Mjg1MTI0MiwxMDUyNDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMw
+MDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMj
+QyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3Niwx
+ODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2Mz
+M4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
