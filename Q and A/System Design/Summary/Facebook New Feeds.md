@@ -172,10 +172,12 @@ AsyncService::fanoutTweet(user, tweet)
 ###### Improve on Push
 - Adding more service instance during busy hours to scale out
 #### Push + Pull
-- Normal user (who doesn't have a pretty large amount of followers) 
+- Normal user (who doesn't have a pretty large amount of followers) can use with Push
+- Special user like celebrities (who has a large number of followers), we marked them as Star/VIP user
+	-	For those users, we're not pushing their Post into followers' new fee
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYzNDMzMzg5LDEwNTI0NTg4NDAsLTIwMD
+eyJoaXN0b3J5IjpbOTk5MDg5OTQ2LDEwNTI0NTg4NDAsLTIwMD
 AxNTkxMDUsMTc2MzAwNDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEz
 ODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC
 0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1
