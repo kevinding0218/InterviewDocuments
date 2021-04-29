@@ -20,7 +20,7 @@
 - **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
 - **High availability**: **survives hardware/network failures**
 - **High performant**: keep end-to-end **latency as low as possible**
- - CAP(**Consistency**, **Availability** and **Partition tolerance**) theorem tells me I should be choosing between Availability and Consistency, **discuss with interviewer**
+ - **CAP(Consistency**, **Availability** and **Partition tolerance**) theorem tells me I should be choosing between Availability and Consistency, **discuss with interviewer**
 	- If we choose **Availability** over Consistency, it simply means we prefer to **show stale (not up-to-date) data than no data at all**.
 	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
 - **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
@@ -52,7 +52,7 @@ password	varchar
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU0MTc4OTYyLDM1NDM3Mzc0NiwtMTUwMz
-Y1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3
-NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTEwNzIwMDIwMzAsMzU0MzczNzQ2LC0xNT
+AzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUx
+Njc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
 -->
