@@ -11,8 +11,11 @@
 - **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
 - **High availability**: **survives hardware/network failures**
 - **High performant**: keep end-to-end **latency as low as possible**
-Also if we refer to the CAP theorem(**Consistency**, **Availability** and **Partition tolerance**)
+ - CAP(**Consistency**, **Availability** and **Partition tolerance**) theorem tells me I should be choosing between Availability and Consistency
+	- If we choose Availability over Consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all.
+	- On the other hand of choosing Consistency: Synchronous data replicate is slow, we usually replicate data asynchronously.
+- Also if we refer to the CAP theorem
 - Ask interviewer: do we need to consider consistency here? 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MTA4Mjc0LC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTE4ODI0MzQ5OTIsLTM3ODUxNjYwOF19
 -->
