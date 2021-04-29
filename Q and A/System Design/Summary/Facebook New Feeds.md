@@ -24,7 +24,10 @@
 	- If we choose **Availability** over Consistency, it simply means we prefer to **show stale (not up-to-date) data than no data at all**.
 	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
 - **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
+- **Cost**(hardware, development, maintenance), but we might ignore that for now
+### High level Architecture
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MD
-YzMzg1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbNjg3Mzg3MzEzLDkyNTU3MDQ4MiwtMjA0NT
+k1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
