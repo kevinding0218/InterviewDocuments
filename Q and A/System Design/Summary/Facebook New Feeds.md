@@ -28,12 +28,11 @@
 ### High level Architecture
 ```
 Client -> Browser -> LB -> API gateway/Router -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
-									   Service
-									  Media Service
-									  Friendship Service
 ```
+### Detail Analysis of each component in architecture
+- LB: All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMyMjQ0NTkxLDE4MDUwMjYzMjQsOTI1NT
-cwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYw
-OF19
+eyJoaXN0b3J5IjpbMTgzMjEzODA0OSwxODA1MDI2MzI0LDkyNT
+U3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2
+MDhdfQ==
 -->
