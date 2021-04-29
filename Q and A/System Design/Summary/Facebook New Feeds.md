@@ -57,8 +57,8 @@ password	varchar
 - **@Post createConnection(UUID from_user_id, UUID to_user_id)**, build a mapping relationship between User A and User B, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
 - **@Get getConnections(UUID from_user_id)** which would return a list of UUID of user_id that the `from_user_id` is following.
 - **@Delete removeConnection(UUID from_user_id, UUID to_user_id)**, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
-- Friendship relationship can be stored in in SQL like as well as NoSQL, for cosidering data durability and performance
-	- when we consider SQL or NoSQL for storing messages, we need to think of if we need ACID transactions, if we need to run complex dynamic queries, if we would use this storage for analytics or data warehousing.
+- F**riendship relationship can be stored in in SQL like as well as NoSQL**, for cosidering data durability and performance
+	- when we consider SQL or NoSQL for storing messages, we need to think of **if we need ACID transactions, if we need to run complex dynamic queries, if we would use this storage for analytics or data warehousing.**
 ```
 // Friendship Table
 from_user_id	varchar		FK
@@ -77,11 +77,11 @@ user1 {
 }
 ```
 ##### Feeds Service
-
+- @Get getFeeds(UUID user_id): 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNT
-QzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0
-ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX
-0=
+eyJoaXN0b3J5IjpbLTU5MDA4MTIxNSwtMjEyNDMzMjQyMCwtMj
+gwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2
+MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC
+0zNzg1MTY2MDhdfQ==
 -->
