@@ -79,16 +79,16 @@ user1 {
 ##### Feeds Service
 - @Get getFeeds(UUID user_id): return top 100 news feed
 ```
-Tweet Table
+Feeds Table
 id			varchar/UUID	PK
 user_id		varchar			FK
-content	**BLOB**
-create_at time_stamp
-
+content		BLOB(binary large object)
+create_at 	time_stamp
+feed_type	smallint		FK	(Photo/Article/Video, etc)
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI1NTQ3NDg0LC0yMTI0MzMyNDIwLC0yOD
+eyJoaXN0b3J5IjpbNTU1NTQ1MzcwLC0yMTI0MzMyNDIwLC0yOD
 A5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYz
 MjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLT
 M3ODUxNjYwOF19
