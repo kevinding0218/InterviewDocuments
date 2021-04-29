@@ -174,12 +174,12 @@ AsyncService::fanoutTweet(user, tweet)
 #### Push + Pull
 - Normal user (who doesn't have a pretty large amount of followers) can use with Push
 - Special user like celebrities (who has a large number of followers), we marked them as Star/VIP user
-	-	For those users, we're not pushing their Post into followers' new fee
+	-	For those users, we're not pushing their Post into followers' new feed, instead. when user request the feed, we are doing a Pulling from those VIP
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk5MDg5OTQ2LDEwNTI0NTg4NDAsLTIwMD
-AxNTkxMDUsMTc2MzAwNDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEz
-ODA3LC0yMTI0MzMyNDIwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC
-0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1
-OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbLTE2NzI4NTEyNDIsMTA1MjQ1ODg0MCwtMj
+AwMDE1OTEwNSwxNzYzMDA0NzA5LDExMjQ3NzIxNDEsLTEwMjQ5
+MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3ND
+YsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIw
+NDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
