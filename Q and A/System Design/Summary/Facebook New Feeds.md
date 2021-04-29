@@ -98,10 +98,12 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 - For Get Feeds: suppose I have N followings, then it's going to be N * DB Reads + O(kn*logK), here the merge K might be ignored as it's processing in memory. In real time experience through profiling, we know that there are some facts taking an obvious duration such as Object Deserialization and I/O connection
 - For Post a Feeds: Only 1 time DB write
 ###### Disadvantage
-- 
+- N times of DB reads is very slow, and it has to process during user request the news feed
+##### Push Model
+1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjQ5MTM4MDcsLTIxMjQzMzI0MjAsLT
-I4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAy
-NjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MC
-wtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbLTcxOTgxMTExOCwtMTAyNDkxMzgwNywtMj
+EyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1
+MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3Ny
+wtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
