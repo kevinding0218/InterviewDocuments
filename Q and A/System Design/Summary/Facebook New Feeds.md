@@ -94,11 +94,11 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 3. Get followings Top N tweets from Tweet Service for each User Id, **ordered by create_at** timestamp
 4. Merge K sorted feed list and return the Top 100 NewsFeeds after merging
 **Time Complexity**
-- Suppose I have N followings, then it's going to be N * DB Reads + O(kn*logK), here the merge K might be ignored as it's processing in memory. In real time experience through profiling, we know that there are some facts taking an obvious duration such as Object Deserialization and I/O connection
-
+- For Get Feeds: suppose I have N followings, then it's going to be N * DB Reads + O(kn*logK), here the merge K might be ignored as it's processing in memory. In real time experience through profiling, we know that there are some facts taking an obvious duration such as Object Deserialization and I/O connection
+- For Post a Feeds: Only 1 time DB write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0ODE3MTA3OCwtMjEyNDMzMjQyMCwtMj
-gwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2
-MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC
-0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTE0NTM5MDc3MzcsLTIxMjQzMzI0MjAsLT
+I4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAy
+NjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MC
+wtMzc4NTE2NjA4XX0=
 -->
