@@ -136,13 +136,8 @@ return success
 	- 用户打开Twitter之后首先看到的界面就是News Feed界面，这些 tweets 来自你关注的用户
 - **Timeline**：某个用户发的所有帖子
 	- 用户点开某个人的页面之后，看到这个人发的所有帖子
-	- 每次发帖的时候会：
-
-1.  更新自己的timeline cache
-
-每次登陆会：
-
-1.  pull following的 timeline, merge, 更新自己的 newsfeed cache
+- 每次发帖的时候会：更新自己的timeline cache
+- 每次登陆会：pull following的 timeline, merge, 更新自己的 newsfeed cache
 
 ##### Push Model (with Async Fanout and NewsFeed table)
 ```
@@ -243,10 +238,10 @@ create_at	timestamp
 	- 通常来说，翻页这个完全可以作为一道单独的系统设计面试题来问你。翻页并不是简单的1-100，101-200这样去翻页。因为当你在翻页的时候，你的news feed可能已经添加了新的 内容，这个时候你再去索引最新的101-200可能和你的1-100就有重叠了。
 	- 通常的做法是，拿第101个帖子的timestamp作为下一页的起始位置，也就是说，当用户在看到第一页的前100个帖子的时候，他还有第101个帖子的timestamp信息（隐藏在你看不到的地方），然后你请求下一页的时候，会带上这个timestamp的信息，server端会去数据库里请求 >= timestamp 的前101个帖子，然后也同样把第101个帖子作为下一页的timestamp。这个方法比直接用第100个帖子的timestamp好的地方是，你如果读不到第101个帖子，说明没有下一页了，如果你刚才只有100个帖子的话，用第100个帖子的timestamp的坏处是，你会有一次`空翻`。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg3MDkwNjYwLC0yMDM1NTcyNzQ5LC0xNj
-cyODUxMjQyLDEwNTI0NTg4NDAsLTIwMDAxNTkxMDUsMTc2MzAw
-NDcwOSwxMTI0NzcyMTQxLC0xMDI0OTEzODA3LC0yMTI0MzMyND
-IwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4
-MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMz
-g1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbMTgxMTQyNzA1MywtMjAzNTU3Mjc0OSwtMT
+Y3Mjg1MTI0MiwxMDUyNDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMw
+MDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMj
+QyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3Niwx
+ODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2Mz
+M4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
