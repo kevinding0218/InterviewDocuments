@@ -8,9 +8,9 @@
 - Other functions like search/left comments/tagging user, etc
 #### Non-functional requirements
 - When we talked about distributed system, which I assume it's something we're looking forward in today's design, we'd basically mean
-- High scalability: supports an arbitrarily large number of posts ,
-- High availability: survives hardware/network failures, no single point of failure
+- High scalability: supports an arbitrarily large number of posts or able to **handle load increase**
+- **High availability**: **survives hardware/network failures**
 - High performant: keep end-to-end latency as low as possible
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0Mjk1ODc3MiwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbMTAxMjQ5MDU4NiwtMzc4NTE2NjA4XX0=
 -->
