@@ -175,11 +175,21 @@ AsyncService::fanoutTweet(user, tweet)
 - Normal user (who doesn't have a pretty large amount of followers) can use with Push
 - Special user like celebrities (who has a large number of followers), we marked them as Star/VIP user
 	-	For those users, we're not pushing their Post into followers' new feed, instead. when user request the feed, we are doing a Pulling from those VIP
-
+#### Summary
+- When to use Pull?
+	- When we have enough resource
+	- When we need real-time requirements
+	- User post frequently
+	- Single direction friendship/Celebrity User, etc
+- When to use Push?
+	- When we have limited resource
+	- Real-time requirement is not needed
+	- User post less (more 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzI4NTEyNDIsMTA1MjQ1ODg0MCwtMj
-AwMDE1OTEwNSwxNzYzMDA0NzA5LDExMjQ3NzIxNDEsLTEwMjQ5
-MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3ND
-YsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIw
-NDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbMTI0ODQwMzc5MCwtMTY3Mjg1MTI0MiwxMD
+UyNDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3
+MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNz
+k0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDky
+NTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MT
+Y2MDhdfQ==
 -->
