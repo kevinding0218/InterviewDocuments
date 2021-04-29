@@ -5,7 +5,7 @@
 - Service should support appending new posts as they arrive to the newsfeed for all active user
 - News feed would be sorted by timeline
 - Post can be liked by other users
-- Other functions like search/left comments/tagging user, etc
+- Other functions like search/left comments/tagging user/share post, etc
 #### Non-functional requirements
 - Let's do some analysis on the Daily Active User (DAU) or Monthly Active User (MAU)
 	- QPS: DAU * Request per day per user(request not only about news feed but things like login/like/comment/post, etc) 150M * 60 / 86400 (total seconds) ~ 100k
@@ -20,6 +20,6 @@
 	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
 - **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjk2NzM2OTksLTIwNDU5NTE2NzcsLT
+eyJoaXN0b3J5IjpbLTE5OTc5NTcyMjcsLTIwNDU5NTE2NzcsLT
 kwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
