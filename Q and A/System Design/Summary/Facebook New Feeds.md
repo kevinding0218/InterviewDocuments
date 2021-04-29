@@ -28,7 +28,7 @@
 - **Let's revisit those once we finialize more details with our design**
 ### High level Architecture
 ```
-Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
+Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Friendship/Feeds/Media Service    -> Database -> Query Service -> Browser -> Client
 ```
 ### Detail Analysis of each component in architecture
 #### VIP/virtual IP
@@ -76,10 +76,12 @@ user1 {
   ]
 }
 ```
+##### Feeds Service
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODcxODI4NjY4LC0yODA5NTM3OTQsMzU0Mz
-czNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgy
-LC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbLTIxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNT
+QzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0
+ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX
+0=
 -->
