@@ -79,6 +79,7 @@ user1 {
 ```
 ##### Feeds Service
 - @Get getFeeds(UUID user_id): return top 100 news feed
+- @Post createFeed(FeedInfo feedInfo): return Http status
 ```
 Feeds Table
 id			varchar/UUID	PK
@@ -91,7 +92,7 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 - 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2ODU2OTAzNywtMjEyNDMzMjQyMCwtMj
+eyJoaXN0b3J5IjpbLTEzODUwNzE0MSwtMjEyNDMzMjQyMCwtMj
 gwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2
 MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC
 0zNzg1MTY2MDhdfQ==
