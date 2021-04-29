@@ -34,8 +34,9 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 #### **VIP/virtual IP**
 - refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
 #### **LB/Load Balancer** 
- All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
-- **API gateway** is an API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
+- All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
+#### **API gateway**
+- An API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
 - When comes to the **Service**, let's talk about the **Storage** as well as **API design**
 - User Service
 	- registerUser(RegistrationInfo regInfo), the `RegistrationInfo` may include information such as username/email/password/confirmedPassword/contactInfo, etc)
@@ -54,7 +55,7 @@ password	varchar
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MTE0ODkzMSwzNTQzNzM3NDYsLTE1MD
+eyJoaXN0b3J5IjpbMTMwODI0NzYyOCwzNTQzNzM3NDYsLTE1MD
 M2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2
 NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
