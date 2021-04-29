@@ -78,8 +78,8 @@ user1 {
 }
 ```
 ##### Feeds Service
-- @Get getFeeds(UUID user_id): return top 100 news feed
-- @Post createFeed(FeedInfo feedInfo): return Http status
+- **@Get getRecentFeeds(UUID user_id)**: return Top 100 news feed
+- **@Post createFeed(FeedInfo feedInfo)**: return Http status
 ```
 Feeds Table
 id			varchar/UUID	PK
@@ -89,11 +89,13 @@ create_at 	time_stamp		indexing
 feed_type	smallint		FK	(Photo/Article/Video, etc)
 ```
 ##### Pull Model
-- 
+1. Client request "Give me new feed"
+2. Get followings from Friendship Service/Table
+3. Get tweets from 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODUwNzE0MSwtMjEyNDMzMjQyMCwtMj
-gwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2
-MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC
-0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTEyODU2NjQ3NzQsLTIxMjQzMzI0MjAsLT
+I4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAy
+NjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MC
+wtMzc4NTE2NjA4XX0=
 -->
