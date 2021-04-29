@@ -5,8 +5,8 @@
 - Newsfeed will be generated based on the posts from the people, pages or groups that a user follows
 - Service should support appending new posts as they arrive to the newsfeed for all active user
 - News feed would be sorted by timeline
-- Post can be liked by other users
-- Other functions like search/left comments/tagging user/share post, etc
+- Post feeds can be liked by other users
+- Other functions like search/left comments/like comment/tagging user/share post, etc
 #### Non-functional requirements
 - Let's do some analysis on the Daily Active User (DAU) or Monthly Active User (MAU)
 	- **QPS**: DAU * Request per day per user(request not only about news feed but things like login/like/comment/post, etc) 1M * 60 / 86400 (total seconds) ~ 100k
@@ -52,7 +52,7 @@ password	varchar
 #### Storage (SQL vs NoSQL vs File System)
 - Relational Database 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MD
-UwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1
-NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbMjU0MTc4OTYyLDM1NDM3Mzc0NiwtMTUwMz
+Y1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3
+NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
