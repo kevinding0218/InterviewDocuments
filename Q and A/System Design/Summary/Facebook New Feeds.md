@@ -59,12 +59,11 @@ password	varchar
 	- **@Delete removeConnection(UUID from_user_id, UUID to_user_id)**, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
 	- Friendship relationship can be stored in in SQL like as well as NoSQL
 ```
-Friendship Table
+// Friendship Table
 from_user_id	varchar		FK
 to_user_id		varchar		FK
 update
-NoSQL Schema
-```
+// NoSQL Schema
 user1 {
   _id: "user1",
   name: "john smith",
@@ -76,12 +75,11 @@ user1 {
   ]
 }
 ```
-```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NzIwMDYyOCwtMjgwOTUzNzk0LDM1ND
-M3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4
-MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ
-==
+eyJoaXN0b3J5IjpbLTEwMzcwMjUzNzIsLTI4MDk1Mzc5NCwzNT
+QzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0
+ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX
+0=
 -->
