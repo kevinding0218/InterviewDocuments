@@ -54,14 +54,14 @@ email		varchar
 password	varchar
 ```
 - Friendship Service
-	- createFriendship(UUID from_user_id, UUID to_user_id), build a mapping relationship between User A and User B
-	- getFriendship(UUID from_user_id) which would return a list of UUID of user_id that the `from_user_id` is following.
-	- disconnectFrienship(UUID from_user_id, UUID to_user_id)
+	- **@Post createFriendship(UUID from_user_id, UUID to_user_id)**, build a mapping relationship between User A and User B, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
+	- **@Get getFriendship(UUID from_user_id)** which would return a list of UUID of user_id that the `from_user_id` is following.
+	- **@Delete disconnectFrienship(UUID from_user_id, UUID to_user_id)**, which would return a Http Status of 200 if disconnect succesfully or 422 if unprocessable
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NTM4MzYwNSwzNTQzNzM3NDYsLTE1MD
-M2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2
-NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbLTMxMjcwMDg4LDM1NDM3Mzc0NiwtMTUwMz
+Y1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3
+NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
