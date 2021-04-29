@@ -87,9 +87,11 @@ content		BLOB(binary large object)
 create_at 	time_stamp		indexing
 feed_type	smallint		FK	(Photo/Article/Video, etc)
 ```
+##### Pull Model
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MDUxNTAyOSwtMjEyNDMzMjQyMCwtMj
+eyJoaXN0b3J5IjpbLTc2ODU2OTAzNywtMjEyNDMzMjQyMCwtMj
 gwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2
 MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC
 0zNzg1MTY2MDhdfQ==
