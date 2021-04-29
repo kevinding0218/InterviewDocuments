@@ -43,8 +43,8 @@ Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friend
 - NoSQl
 - File System
 ##### User Service
-- **registerUser(RegistrationInfo regInfo)**, the `RegistrationInfo` may include information such as username/email/password/confirmedPassword/contactInfo, etc)
-- **loginUser(LoginInfo logInfo)**, the `LoginInfo` may include information such as `username/email/password`, it may return an JWT token for further API request authentication and authorization
+- **@Post registerUser(RegistrationInfo regInfo)**, the `RegistrationInfo` may include information such as username/email/password/confirmedPassword/contactInfo, etc)
+- **@Post loginUser(LoginInfo logInfo)**, the `LoginInfo` may include information such as `username/email/password`, it may return an JWT token for further API request authentication and authorization
 - **User info are tend to be structure** so we can just use a SQL Database to save such info in a user table, each user would be assigned with **an unique UserId/UUID**
 ```
 User Table
@@ -56,11 +56,12 @@ password	varchar
 - Friendship Service
 	- createFriendship(UUID from_user_id, UUID to_user_id), build a mapping relationship between User A and User B
 	- getFriendship(UUID from_user_id) which would return a list of UUID of user_id that the `from_user_id` is following.
+	- disconnectFrienship(UUID from_user_id, UUID to_user_id)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI2NTg5NjM4LDM1NDM3Mzc0NiwtMTUwMz
-Y1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3
-NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbMTU3NTM4MzYwNSwzNTQzNzM3NDYsLTE1MD
+M2NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2
+NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
