@@ -101,12 +101,13 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 - N times of DB reads is very slow, and it has to process during user request the news feed
 ##### Push Model
 1. User A post a new feed
-2. Feeds Service Insert the new feed to DB
-3. Feeds Service Send the new feed to A's friends through Aysnc Task
-4. Feeds Consumer will get 
+2. New feed will be inserted into DB through Feeds Service
+3. Feeds Service Send a message of the new feed to A's friends through Aysnc Task
+4. Feeds Consumer will get A's followers from Friendship Service/Table
+5. Feeds Consuer perform a Fan-out to insert that new feed to each followers' new feed list
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0MjI5MjM1NywtMTAyNDkxMzgwNywtMj
-EyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1
-MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3Ny
-wtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTEwMjk2NTkzNTMsLTEwMjQ5MTM4MDcsLT
+IxMjQzMzI0MjAsLTI4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2
+NTE1NzYsMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2Nz
+csLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
