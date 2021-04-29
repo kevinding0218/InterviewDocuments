@@ -143,9 +143,9 @@ AsyncService::fanoutTweet(user, tweet)
 ```
 ###### Time Complexity
 - Get Feed: Only 1 DB Read
-- Post Feed: N times of DB Writes, benefit is it can be done within consumer as async task
+- Post Feed: N times of DB Writes, benefit is it can be done within consumer as async task, user doesn't have to wait
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MTEyOTE3OCwtMTAyNDkxMzgwNywtMj
+eyJoaXN0b3J5IjpbMTEyNDc3MjE0MSwtMTAyNDkxMzgwNywtMj
 EyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1
 MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3Ny
 wtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
