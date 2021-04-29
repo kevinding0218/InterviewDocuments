@@ -78,7 +78,7 @@ user1 {
 }
 ```
 ##### Feeds Service
-- **@Get getRecentFeeds(UUID user_id)**: return Top 100 news feed
+- **@Get getTopFeeds(UUID user_id)**: return Top 100 news feed
 - **@Post createFeed(FeedInfo feedInfo)**: return Http status
 ```
 Feeds Table
@@ -91,14 +91,14 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 ##### Pull Model
 1. Client request "Give me new feed" using `getRecentFeeds`
 2. Get followings User Ids from Friendship Service/Table using `getConnections`
-3. Get followings Top 100 tweets from Tweet Service for each User Id, **ordered by create_at** timestamp
+3. Get followings Top N tweets from Tweet Service for each User Id, **ordered by create_at** timestamp
 4. Merge K sorted feed list and return the Top 100 NewsFeeds after merging
 **Time Complexity**
 - Suppose I have N followings, then it's going to be N * DB Reads + merge 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzc0MjM0MzQsLTIxMjQzMzI0MjAsLT
-I4MDk1Mzc5NCwzNTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAy
-NjMyNCw5MjU1NzA0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MC
-wtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbOTg4MDYwMDI5LC0yMTI0MzMyNDIwLC0yOD
+A5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUxNTc2LDE4MDUwMjYz
+MjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLT
+M3ODUxNjYwOF19
 -->
