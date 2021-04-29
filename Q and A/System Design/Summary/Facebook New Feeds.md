@@ -27,13 +27,13 @@
 - **Cost**(hardware, development, maintenance), but we might ignore that for now
 ### High level Architecture
 ```
-Client -> Browser -> VIP -> LB -> API gateway/Router -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
+Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User/Feed/Media/Friendship Service    -> Database -> Query Service -> Browser -> Client
 ```
 ### Detail Analysis of each component in architecture
-- First, we need a **virtual IP**. VIP refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
-- LB: All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
+- VIP/**virtual IP**. refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
+- LB/Load Balancer : All requests coming from our clients will go through a load balancer first. This will ensure requests are equally distributed among requests processing servers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMDU3NjI4NSwxODA1MDI2MzI0LDkyNT
-U3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2
-MDhdfQ==
+eyJoaXN0b3J5IjpbODIwODE4ODU3LDE4MDUwMjYzMjQsOTI1NT
+cwNDgyLC0yMDQ1OTUxNjc3LC05MDYzMzg1NDAsLTM3ODUxNjYw
+OF19
 -->
