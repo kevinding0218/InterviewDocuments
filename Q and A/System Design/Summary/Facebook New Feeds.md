@@ -92,7 +92,7 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 ##### Pull Model
 1. Client request "Give me new feed" using `getRecentFeeds`
 2. Get followings User Ids from Friendship Service/Table using `getConnections`
-3. Get followings Top N tweets from Tweet Service for each User Id, **ordered by create_at** timestamp
+3. Get followings Top N feeds from Feed Service for each User Id, **ordered by create_at** timestamp
 4. Merge K sorted feed list and return the Top 100 NewsFeeds after merging
 ###### Time Complexity
 - For Get Feeds: suppose I have N followings, then it's going to be N * DB Reads + O(kn*logK), here the merge K might be ignored as it's processing in memory. In real time experience through profiling, we know that there are some facts taking an obvious duration such as Object Deserialization and I/O connection
@@ -100,10 +100,11 @@ feed_type	smallint		FK	(Photo/Article/Video, etc)
 ###### Disadvantage
 - N times of DB reads is very slow, and it has to process during user request the news feed
 ##### Push Model
-1. 
+1. Client post a new feed
+2. Feeds Service 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAyMTEyNjAyLC0xMDI0OTEzODA3LC0yMT
-I0MzMyNDIwLC0yODA5NTM3OTQsMzU0MzczNzQ2LC0xNTAzNjUx
-NTc2LDE4MDUwMjYzMjQsOTI1NTcwNDgyLC0yMDQ1OTUxNjc3LC
-05MDYzMzg1NDAsLTM3ODUxNjYwOF19
+eyJoaXN0b3J5IjpbLTU0MzU1NDQyMiwtMTAyNDkxMzgwNywtMj
+EyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1
+MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NTk1MTY3Ny
+wtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
 -->
