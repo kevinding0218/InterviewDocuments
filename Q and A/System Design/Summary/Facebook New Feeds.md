@@ -203,9 +203,20 @@ AsyncService::fanoutTweet(user, tweet)
 - 异步的坏处？
 	- Unfollow 之后刷新 News Feed，发现好像他的信息还在
 	- 不过最终还是会被删掉的
-
+#### 如何存储 likes?
+- Table Schema
+```
+Feeds Table
+id			varchar/UUID	PK
+user_id		varchar			FK
+content		BLOB(binary large object)
+create_at 	time_stamp		indexing
+feed_type	smallint		FK	(Photo/Article/Video, etc)
+like_count	integer
+comment_count
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1ODQ4NTIwNCwtMjAzNTU3Mjc0OSwtMT
+eyJoaXN0b3J5IjpbLTM4ODczNjY5OCwtMjAzNTU3Mjc0OSwtMT
 Y3Mjg1MTI0MiwxMDUyNDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMw
 MDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMj
 QyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3Niwx
