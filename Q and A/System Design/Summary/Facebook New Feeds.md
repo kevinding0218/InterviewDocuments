@@ -26,8 +26,10 @@
 - **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
 - **Cost**(hardware, development, maintenance), but we might ignore that for now
 ### High level Architecture
-
+```
+Client -> LB -> 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg3Mzg3MzEzLDkyNTU3MDQ4MiwtMjA0NT
-k1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbMTgwNTAyNjMyNCw5MjU1NzA0ODIsLTIwND
+U5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4XX0=
 -->
