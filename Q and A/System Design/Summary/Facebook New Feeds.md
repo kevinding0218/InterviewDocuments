@@ -4,8 +4,9 @@
 - A user may have many friends and follow a large number of pages/groups
 - Service should support appending new posts as they arrive to the newsfeed for all active user
 - Post can be liked or left comments by other users
-- Feed timeline should be 
+- News feed would be sorted by timeline
+- 
 #### Non-functional requirements
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MDgxNTY5OCwtMzc4NTE2NjA4XX0=
+eyJoaXN0b3J5IjpbLTEyODI0NjYzNTAsLTM3ODUxNjYwOF19
 -->
