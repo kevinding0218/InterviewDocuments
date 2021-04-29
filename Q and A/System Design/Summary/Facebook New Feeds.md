@@ -139,7 +139,7 @@ select * from news_feed where owner_id = A order by created_at desc limit 20;
 NewFeeds Table
 feed_id		varchar		PK
 owner_id	varchar		FK
-tweet_id	varchar		FK
+feed_id	varchar		FK
 create_at	timestap
 ```
 1. User A post a new feed
@@ -207,16 +207,22 @@ AsyncService::fanoutTweet(user, tweet)
 - Table Schema
 ```
 Feeds Table
-id			varchar/UUID	PK
+feed_id		varchar/UUID	PK
 user_id		varchar			FK
 content		BLOB(binary large object)
 create_at 	time_stamp		indexing
 feed_type	smallint		FK	(Photo/Article/Video, etc)
-like_count	integer
-comment_count
+like_num	integer			De-normalize
+comment_num integer
+share_num	integer
+
+Like Table
+id			integer
+user_id		varchar			FK
+feed_id		
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4ODczNjY5OCwtMjAzNTU3Mjc0OSwtMT
+eyJoaXN0b3J5IjpbMTk3ODc5NjgxNiwtMjAzNTU3Mjc0OSwtMT
 Y3Mjg1MTI0MiwxMDUyNDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMw
 MDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkxMzgwNywtMjEyNDMzMj
 QyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0NiwtMTUwMzY1MTU3Niwx
