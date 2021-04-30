@@ -74,7 +74,6 @@ LIMIT 10
 #### Search
 - when search happens, just return the value collection as hot keywords suggestions
 #### New Data (TopKFrequentWordsII)
-- build from bottom to up by using merge sort for parent node (PriorityQueue/TreeSet)
 - when new data comes in
 	- e.g: {axx: 10b}, 
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
@@ -83,6 +82,7 @@ LIMIT 10
 #### Trie can only be stored in memory
 - but what if electronic cut off, memeory will be lost, so we still **need to serialize into disk**, like convert a Tree into a character string and store in disk (**TriesSerialization**)
 ### DataCollectionService (offline build/Serialize/Map Reduce)
+- build from bottom to up by using merge sort for parent node (PriorityQueue/TreeSet) offline
 - create raw data based on user search from web request and generate the result of keyword with hit_count
 |user| keyword | timestamp |
 |--|--|--|
@@ -133,7 +133,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMzE5OTU1NywyMDY5Njc4ODc2LC00Nj
-E1OTk0MzUsLTU1MjA4NDAxNSw4NzYyOTAzNjEsMTcyNDUyNjIx
-MCwxMDI5OTc0MjUxLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbODQ2NjE3Mzc4LDE0MDMxOTk1NTcsMjA2OT
+Y3ODg3NiwtNDYxNTk5NDM1LC01NTIwODQwMTUsODc2MjkwMzYx
+LDE3MjQ1MjYyMTAsMTAyOTk3NDI1MSw3MzA5OTgxMTZdfQ==
 -->
