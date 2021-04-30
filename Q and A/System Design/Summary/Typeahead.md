@@ -118,22 +118,22 @@ LIMIT 10
 	- e.g, if a keyword A has been searched over 10b for over two weeks, it would only be logged as 10k times,
 	- e.g, if a keyword B has been searched over 100k for over two weeks, it would only be logged as 10 times,
 	- both A and B appearance decreased by same times, and apparantly B won't become hot keyword
-
 ### Interviewer: how to reduce response time in front-end
 #### Cache Control
 - Store the result on client for 1 min
 - Suppose we already did well on server side, what can we do at client/browser side
+- Store in localstorage
+#### Input debounce
 #### Dedupilcate
 - No duplicate request 
 	- suppose when we type "123", we would request 3 times already (1, 12 & 123), now if we remove 3 it comes "12", we don't need to make a new request because we already get the response earlier
 #### PreFetch
 - Filter on client side with more data response at initial request
 	- suppose when we type "a", instead of just return the top 4 keywords with a, we can return keywords of other combination such as "ab", "ac", ... "az", so we can filter the result on client side when user type the next word but also request for "ab"
-
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjUyMDg0MDYsMjA2OTY3ODg3NiwtND
-YxNTk5NDM1LC01NTIwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYy
-MTAsMTAyOTk3NDI1MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTMxNTQ4NTY0NCwyMDY5Njc4ODc2LC00Nj
+E1OTk0MzUsLTU1MjA4NDAxNSw4NzYyOTAzNjEsMTcyNDUyNjIx
+MCwxMDI5OTc0MjUxLDczMDk5ODExNl19
 -->
