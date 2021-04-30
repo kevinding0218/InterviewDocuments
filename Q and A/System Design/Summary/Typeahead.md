@@ -77,6 +77,7 @@ LIMIT 10
 	- e.g: {axx: 10b}, 
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
 		- continue to "ax", then "axx"
+- If we try to update our trie for every query it’ll be extremely resource intensive and this can hamper our read requests, too. One solution to handle this could be to update our trie offline after a certain interval.
 #### Trie can only be stored in memory
 - but what if electronic cut off, memeory will be lost, so we still **need to serialize into disk**, like convert a Tree into a character string and store in disk (**TriesSerialization**)
 ### DataCollectionService
@@ -127,7 +128,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk3NTkxNjQxLC00NjE1OTk0MzUsLTU1Mj
-A4NDAxNSw4NzYyOTAzNjEsMTcyNDUyNjIxMCwxMDI5OTc0MjUx
-LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTg5MDYwNjI2MiwtNDYxNTk5NDM1LC01NT
+IwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1
+MSw3MzA5OTgxMTZdfQ==
 -->
