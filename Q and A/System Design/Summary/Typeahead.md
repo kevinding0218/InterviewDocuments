@@ -1,7 +1,7 @@
 ### Requirements/Goals
 #### Function Requirements
 - while user are typing in the search bar, we should have service with response of suggested terms matching with whatever user typed
-- Discuss: are we only returning the result or maybe
+- Discuss: are we only returning the result or maybe Hot words like top N (10 or 20) 
 #### Non-functional requirements
 - QPS discussion or data entry size billion level?
 	- DAU: 500m
@@ -30,6 +30,6 @@ User typing -> Browser -> LB -> Router - Query Service - DataCollection Service 
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk2MjQ0NjkzLDEwMjk5NzQyNTEsNzMwOT
-k4MTE2XX0=
+eyJoaXN0b3J5IjpbMTcyNDUyNjIxMCwxMDI5OTc0MjUxLDczMD
+k5ODExNl19
 -->
