@@ -31,6 +31,7 @@ User typing -> Browser -> LB -> Router - Query Service - DataCollection Service 
 #### API gateway/Router
 - An API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
 ### Storage
+#### SQL Table
 -   What kind of data do we need to store?
     -   The naive way
     -   keyword (e.g: “amazon”, “apple”, “adidas”)
@@ -76,6 +77,6 @@ LIMIT 10
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTk3MzU3MDUsMTcyNDUyNjIxMCwxMD
-I5OTc0MjUxLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOT
+k3NDI1MSw3MzA5OTgxMTZdfQ==
 -->
