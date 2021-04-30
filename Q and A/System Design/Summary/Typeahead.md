@@ -41,28 +41,20 @@ User typing -> Browser -> LB -> Router - Query Service - DataCollection Service 
 | "apple" | 15b |
 | "adidas" | 7b |
 ```
-
+SELECT * FROM hit_stats
+WHERE keyword LIKE '${key}%'
+ORDER BY hit_count DESC
+LIMIT 10
 ```
 - Pros
 	- If search range is fixed or small
 	- fast to implement
 - Cons
-	-   when we do a query search like
-### Interviewer: what’s the problem with this approach
+	-   Like Operation is expensive
 
-
-```
-SELECT * FROM hit_stats
-WHERE keyword LIKE '${key}%'
-ORDER BY hit_count DESC
-LIMIT 10
-
-```
-
--   Like Operation is expensive
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDU4OTY5LDE3MjQ1MjYyMTAsMTAyOT
-k3NDI1MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMTcyMzgxNTk2NCwxNzI0NTI2MjEwLDEwMj
+k5NzQyNTEsNzMwOTk4MTE2XX0=
 -->
