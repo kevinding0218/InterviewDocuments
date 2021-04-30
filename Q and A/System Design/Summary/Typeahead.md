@@ -2,7 +2,7 @@
 #### Function Requirements
 - while user are typing in the search bar, we should have service with response of suggested top N (10 or 20) terms matching with whatever user typed
 #### Non-functional requirements
-- QPS discussion
+- QPS discussion or data entry size billion level?
 	- DAU: 500m
 	- Search: 4 * 6 * 500m = 12b (every user searches 6 times, types 4 letters)
 	- QPS: 12b/86400 ~ 138k
@@ -18,6 +18,9 @@
 - **Cost**(hardware, development, maintenance), but we might ignore that for now
 - **Let's revisit those once we finialize more details with our design**
 ### High level Architecture
+#### What services do we need to have?
+- Query Service
+- DataCollection Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDA4MzUxNTYsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTAyOTk3NDI1MSw3MzA5OTgxMTZdfQ==
 -->
