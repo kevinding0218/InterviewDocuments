@@ -22,13 +22,13 @@
 - Query Service
 - DataCollection Service
 ```
-
+User typing -> Browser -> LB -> Router - Query Service - L
 ```
 
 
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwODg2MjMzNiwxMDI5OTc0MjUxLDczMD
-k5ODExNl19
+eyJoaXN0b3J5IjpbLTE3MzQ0MjU0MjEsMTAyOTk3NDI1MSw3Mz
+A5OTgxMTZdfQ==
 -->
