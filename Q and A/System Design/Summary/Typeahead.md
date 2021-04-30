@@ -117,7 +117,7 @@ such term before sending them to users.
 - In addition to a simple count, for terms ranking, we have to consider other factors too, e.g., freshness, user location, language, demographics, personal history etc.
 ### Interviewer: what if the trie gets too large for one machine?
 - We could have multiple QueryService based on splitting on character (Sharding)
-- 
+- Range Based Partitioning
 #### How is trie stored across multiple machines?
 - We use **consistent hashing** to decide which machine a particular string belongs 2
 - e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad". At this time, even though other Query Service Tries also contains "ad" node, we won't store anything there
@@ -151,8 +151,8 @@ such term before sending them to users.
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MDc4NDE2LC00NzgwMzA1NTgsMTQwMz
-E5OTU1NywyMDY5Njc4ODc2LC00NjE1OTk0MzUsLTU1MjA4NDAx
-NSw4NzYyOTAzNjEsMTcyNDUyNjIxMCwxMDI5OTc0MjUxLDczMD
-k5ODExNl19
+eyJoaXN0b3J5IjpbMTY1NzU3MzE5MiwtNDc4MDMwNTU4LDE0MD
+MxOTk1NTcsMjA2OTY3ODg3NiwtNDYxNTk5NDM1LC01NTIwODQw
+MTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1MSw3Mz
+A5OTgxMTZdfQ==
 -->
