@@ -118,7 +118,7 @@ such term before sending them to users.
 ### Interviewer: what if the trie gets too large for one machine?
 - We could have multiple QueryService based on splitting on character (Sharding)
 - Range Based Partitioning, each term in a partition. Cons: Distribution is skewed,
-- Partition based on the maximum capacity of the server
+- Partition based on the maximum capacity of the server using consistent hashing
 #### How is trie stored across multiple machines?
 - We use **consistent hashing** to decide which machine a particular string belongs 2
 - e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad". At this time, even though other Query Service Tries also contains "ad" node, we won't store anything there
@@ -152,7 +152,7 @@ such term before sending them to users.
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4ODMyNzYwMiwtNDc4MDMwNTU4LDE0MD
+eyJoaXN0b3J5IjpbMTQ5MTA0MDEwNiwtNDc4MDMwNTU4LDE0MD
 MxOTk1NTcsMjA2OTY3ODg3NiwtNDYxNTk5NDM1LC01NTIwODQw
 MTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1MSw3Mz
 A5OTgxMTZdfQ==
