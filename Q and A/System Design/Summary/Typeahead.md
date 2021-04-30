@@ -1,7 +1,7 @@
 ### Requirements/Goals
 #### Function Requirements
 - while user are typing in the search bar, we should have service with response of suggested terms matching with whatever user typed
-- Discuss: are we only returning the result or maybe Hot words like top N (10 or 20) 
+- Discuss: are we only returning the result or maybe Hot words like top N (10 or 20) , should we consider uppercase or just assume lowercase
 #### Non-functional requirements
 - QPS discussion or data entry size billion level?
 	- DAU: 500m
@@ -128,7 +128,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MDYwNjI2MiwtNDYxNTk5NDM1LC01NT
-IwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1
-MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE5MDE1NzczNTQsLTQ2MTU5OTQzNSwtNT
+UyMDg0MDE1LDg3NjI5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQy
+NTEsNzMwOTk4MTE2XX0=
 -->
