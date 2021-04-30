@@ -100,6 +100,22 @@ LIMIT 10
 	- Switch machine B with machine A
 #### Map Reduce Solution (same as top K)
 - Processing the logging data peirodically like every hour
+- These MR jobs will calculate frequencies of all searched terms in the past hour. We can then update our
+trie with this new data. We can take the current snapshot of the trie and update it with all the new terms
+and their frequencies. We should do this offline as we don’t want our read queries to be blocked by
+update trie requests. We can have two options:
+1. We can make a copy of the trie on each server to update it offline. Once done we can switch to
+start using it and discard the old one.
+2. Another option is we can have a master-slave configuration for each trie server. We can update
+slave while the master is serving traffic. Once the update is complete, we can make the slave our
+new master. We can later update our old master, which can then start serving traffic, too.
+#### How can we remove a term from the trie?
+- We can completely remove such terms from the trie when the
+regular update happens, meanwhile, we can add a filtering layer on each server which will remove any
+such term before sending them to users.
+### Ranking criteria for suggestions? In addition to a simple count, for terms
+ranking, we have to consider other factors too, e.g., freshness, user location, language, demographics,
+personal history etc.
 ### Interviewer: what if the trie gets too large for one machine?
 - We could have multiple QueryService based on splitting on character (Sharding)
 #### How is trie stored across multiple machines?
@@ -135,8 +151,8 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDkwMTkzNjMsLTQ3ODAzMDU1OCwxND
-AzMTk5NTU3LDIwNjk2Nzg4NzYsLTQ2MTU5OTQzNSwtNTUyMDg0
-MDE1LDg3NjI5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQyNTEsNz
-MwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTM0ODU0NzQxMywtNDc4MDMwNTU4LDE0MD
+MxOTk1NTcsMjA2OTY3ODg3NiwtNDYxNTk5NDM1LC01NTIwODQw
+MTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1MSw3Mz
+A5OTgxMTZdfQ==
 -->
