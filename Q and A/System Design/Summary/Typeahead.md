@@ -77,7 +77,7 @@ LIMIT 10
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
 		- continue to "ax", then "axx"
 #### Trie can only be stored in memory
-- but what if electronic cut off, memeory will be lost, so we still need to serialize into disk, like convert a Tree into a character string and store in disk
+- but what if electronic cut off, memeory will be lost, so we still **need to serialize into disk**, like convert a Tree into a character string and store in disk (TriesSerialization)
 ### DataCollectionService
 - create raw data based on user search from web request and generate the result of keyword with hit_count
 |user| keyword | timestamp |
@@ -91,10 +91,9 @@ LIMIT 10
 	- cannot update Query Service while it's live and used by user
 	- cannot write and read at same time
 	- Back up Query Service disk from live machine A in another machine B 
-	- Deserialize disk in machine B into Trie in machine B
+	- **Deserialize** disk in machine B into Trie in machine B
 	- Update Tries in machine B from DataCollectionService
 	- Switch machine B with machine A
-
 ### Interviewer: what if the trie gets too large for one machine?
 - We could have multiple QueryService based on splitting on character (Sharding)
 #### How is trie stored across multiple machines?
@@ -127,7 +126,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzE5MzA4NzEsLTQ2MTU5OTQzNSwtNT
-UyMDg0MDE1LDg3NjI5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQy
-NTEsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTQ3NTk5Mzg1MSwtNDYxNTk5NDM1LC01NT
+IwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1
+MSw3MzA5OTgxMTZdfQ==
 -->
