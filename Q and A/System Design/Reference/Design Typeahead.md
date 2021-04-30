@@ -109,7 +109,8 @@ LIMIT 10
 	- both A and B appearance decreased by same times, and apparantly B won't become hot keyword
 
 ### Interviewer: how to reduce response time in front-end
-#### Cache
+#### Cache Control
+- Store the result on client for 1 min
 - Suppose we already did well on server side, what can we do at client/browser side
 #### Dedupilcate
 - No duplicate request 
@@ -121,6 +122,5 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTk4OTY5NzQsLTEyNDUxODQxMTNdfQ
-==
+eyJoaXN0b3J5IjpbMTkxNDAyNjYwNSwtMTI0NTE4NDExM119
 -->
