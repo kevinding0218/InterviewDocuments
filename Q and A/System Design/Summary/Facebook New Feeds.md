@@ -37,6 +37,7 @@ User A -> Browser -> Add/Update Post/Follow 						  User(SQL)
 						
 Client -> Browser -> VIP -> LB -> (API gateway/Router) -> User(SQL)/Friendship(SQL/NoSQL)/Feeds(NoSQL)/Media(File DB) Service    -> Database -> Query Service -> Browser -> Client
 ```
+- Of course, we would have some cache layer to help us improve the performance but we can talk about it later
 ### Detail Analysis of each component in architecture
 #### VIP/virtual IP
 - refers to the symbolic hostname (for example myWebService.domain.com) that resolves to a load balancer system.
@@ -262,11 +263,11 @@ create_at	timestamp
 	- 通常来说，翻页这个完全可以作为一道单独的系统设计面试题来问你。翻页并不是简单的1-100，101-200这样去翻页。因为当你在翻页的时候，你的news feed可能已经添加了新的 内容，这个时候你再去索引最新的101-200可能和你的1-100就有重叠了。
 	- 通常的做法是，拿第101个帖子的timestamp作为下一页的起始位置，也就是说，当用户在看到第一页的前100个帖子的时候，他还有第101个帖子的timestamp信息（隐藏在你看不到的地方），然后你请求下一页的时候，会带上这个timestamp的信息，server端会去数据库里请求 >= timestamp 的前101个帖子，然后也同样把第101个帖子作为下一页的timestamp。这个方法比直接用第100个帖子的timestamp好的地方是，你如果读不到第101个帖子，说明没有下一页了，如果你刚才只有100个帖子的话，用第100个帖子的timestamp的坏处是，你会有一次`空翻`。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNTM1MDUzLDE1NDg3ODI3NDAsLTE2OD
-A1MDUwMTAsLTIwMzU1NzI3NDksLTE2NzI4NTEyNDIsMTA1MjQ1
-ODg0MCwtMjAwMDE1OTEwNSwxNzYzMDA0NzA5LDExMjQ3NzIxND
-EsLTEwMjQ5MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1Mzc5NCwz
-NTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1Nz
-A0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4
-XX0=
+eyJoaXN0b3J5IjpbLTE3NDQyMjYwNzgsMTU0ODc4Mjc0MCwtMT
+Y4MDUwNTAxMCwtMjAzNTU3Mjc0OSwtMTY3Mjg1MTI0MiwxMDUy
+NDU4ODQwLC0yMDAwMTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3Mj
+E0MSwtMTAyNDkxMzgwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0
+LDM1NDM3Mzc0NiwtMTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNT
+U3MDQ4MiwtMjA0NTk1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2
+MDhdfQ==
 -->
