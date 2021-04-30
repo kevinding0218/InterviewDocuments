@@ -123,7 +123,7 @@ LIMIT 10
 - Store the result on client for 1 min
 - Suppose we already did well on server side, what can we do at client/browser side
 - Store in localstorage
-#### Input debounce
+#### Input debounce: delay 50ms ~ 100ms
 #### Dedupilcate
 - No duplicate request 
 	- suppose when we type "123", we would request 3 times already (1, 12 & 123), now if we remove 3 it comes "12", we don't need to make a new request because we already get the response earlier
@@ -133,7 +133,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNTQ4NTY0NCwyMDY5Njc4ODc2LC00Nj
+eyJoaXN0b3J5IjpbMTk0OTg1NzY2OSwyMDY5Njc4ODc2LC00Nj
 E1OTk0MzUsLTU1MjA4NDAxNSw4NzYyOTAzNjEsMTcyNDUyNjIx
 MCwxMDI5OTc0MjUxLDczMDk5ODExNl19
 -->
