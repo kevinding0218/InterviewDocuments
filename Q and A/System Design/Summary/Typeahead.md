@@ -63,6 +63,7 @@ LIMIT 10
 - e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in ending char of "n" (a -> m -> a -> z -> o -> n[20b])
 ##3# how to get hot keywords
 - e.g: user type "a", we need to track every node with "a" and find the hit_count, 
+##### Note: we're only considering alphebt lower case character (26), 
 #### Time Complexity
 - O(26^n), very slow
 #### How to improve
@@ -129,7 +130,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMjc4NzcxLC00NjE1OTk0MzUsLTU1Mj
-A4NDAxNSw4NzYyOTAzNjEsMTcyNDUyNjIxMCwxMDI5OTc0MjUx
-LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTQ5OTczNDI4MiwtNDYxNTk5NDM1LC01NT
+IwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1
+MSw3MzA5OTgxMTZdfQ==
 -->
