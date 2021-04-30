@@ -109,14 +109,18 @@ LIMIT 10
 	- both A and B appearance decreased by same times, and apparantly B won't become hot keyword
 
 ### Interviewer: how to reduce response time in front-end
+#### Cache
 - Suppose we already did well on server side, what can we do at client/browser side
+#### Dedupilcate
 - No duplicate request 
 	- suppose when we type "123", we would request 3 times already (1, 12 & 123), now if we remove 3 it comes "12", we don't need to make a new request because we already get the response earlier
+#### PreFetch
 - Filter on client side with more data response at initial request
 	- suppose when we type "a", instead of just return the top 4 keywords with a, we can return keywords of other combination such as "ab", "ac", ... "az", so we can filter the result on client side when user type the next word but also request for "ab"
 
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDUxODQxMTNdfQ==
+eyJoaXN0b3J5IjpbLTE5MTk4OTY5NzQsLTEyNDUxODQxMTNdfQ
+==
 -->
