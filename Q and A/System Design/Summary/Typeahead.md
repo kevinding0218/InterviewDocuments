@@ -69,7 +69,9 @@ LIMIT 10
 	- e.g
 		- "a" -> [{adidas: 7b},{airbnb:3b},{amazon: 20b},{apple: 15b},...]
 		- "a" - "d" -> [{adidas: 7b},{adobe: 1b},{adele: 2b},{adblock: 1b},...]
+#### Search
 - when search happens, just return the value collection as hot keywords suggestions
+#### New Data (TopKFrequentWordsII)
 - when new data comes in
 	- e.g: {axx: 10b}, 
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
@@ -79,7 +81,7 @@ LIMIT 10
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyNjk4OTA3LC01NTIwODQwMTUsODc2Mj
-kwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1MSw3MzA5OTgxMTZd
-fQ==
+eyJoaXN0b3J5IjpbLTQ2MTU5OTQzNSwtNTUyMDg0MDE1LDg3Nj
+I5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQyNTEsNzMwOTk4MTE2
+XX0=
 -->
