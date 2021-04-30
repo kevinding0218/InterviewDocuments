@@ -36,6 +36,7 @@ User typing -> Browser -> LB -> Router - Query Service - DataCollection Service 
     -   The naive way
     -   keyword (e.g: “amazon”, “apple”, “adidas”)
     -   hit_count (e.g: 20b, 15b 7b)
+    - 
 | keyword | hitcount |
 |--|--|
 | "amazon" | 20b |
@@ -126,7 +127,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzQ3NDk0NzQsLTQ2MTU5OTQzNSwtNT
-UyMDg0MDE1LDg3NjI5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQy
-NTEsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbNzk3NTkxNjQxLC00NjE1OTk0MzUsLTU1Mj
+A4NDAxNSw4NzYyOTAzNjEsMTcyNDUyNjIxMCwxMDI5OTc0MjUx
+LDczMDk5ODExNl19
 -->
