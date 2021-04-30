@@ -30,7 +30,7 @@ User typing -> Browser -> LB -> Router - Query Service - DataCollection Service 
 - All requests coming from our clients will go through a load balancer first. This will **ensure requests are equally distributed among processing servers**.
 #### API gateway/Router
 - An API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
-#### Query Service
+#### Query Service (Function refer to FrontEnd Service)
 #### SQL Table
 -   What kind of data do we need to store?
     -   The naive way
@@ -126,7 +126,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NjIzMjM3OSwtNDYxNTk5NDM1LC01NT
-IwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1
-MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTEwNzQ3NDk0NzQsLTQ2MTU5OTQzNSwtNT
+UyMDg0MDE1LDg3NjI5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQy
+NTEsNzMwOTk4MTE2XX0=
 -->
