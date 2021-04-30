@@ -113,11 +113,11 @@ new master. We can later update our old master, which can then start serving tra
 - We can completely remove such terms from the trie when the
 regular update happens, meanwhile, we can add a filtering layer on each server which will remove any
 such term before sending them to users.
-### Ranking criteria for suggestions? In addition to a simple count, for terms
-ranking, we have to consider other factors too, e.g., freshness, user location, language, demographics,
-personal history etc.
+### Ranking criteria
+- In addition to a simple count, for terms ranking, we have to consider other factors too, e.g., freshness, user location, language, demographics, personal history etc.
 ### Interviewer: what if the trie gets too large for one machine?
 - We could have multiple QueryService based on splitting on character (Sharding)
+- 
 #### How is trie stored across multiple machines?
 - We use **consistent hashing** to decide which machine a particular string belongs 2
 - e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad". At this time, even though other Query Service Tries also contains "ad" node, we won't store anything there
@@ -129,7 +129,7 @@ personal history etc.
 ### Interviewer: how to reduce the size of log file
 - what is log file?
 	- log which user searched which keyword at when
-- Use a random number like (1 ~ 10k), only when random number equals 1, then we log the record into log file
+- **Use a random number like (1 ~ 10k), only when random number equals 1, then we log the record into log file**
 	- log file size would be reduced by 1/10k
 - Will this impact hot keyword search?
 	- No, because we don't care about exact keyword search number, we only care about relative keyword search number
@@ -151,8 +151,8 @@ personal history etc.
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0ODU0NzQxMywtNDc4MDMwNTU4LDE0MD
-MxOTk1NTcsMjA2OTY3ODg3NiwtNDYxNTk5NDM1LC01NTIwODQw
-MTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1MSw3Mz
-A5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTQ5MDc4NDE2LC00NzgwMzA1NTgsMTQwMz
+E5OTU1NywyMDY5Njc4ODc2LC00NjE1OTk0MzUsLTU1MjA4NDAx
+NSw4NzYyOTAzNjEsMTcyNDUyNjIxMCwxMDI5OTc0MjUxLDczMD
+k5ODExNl19
 -->
