@@ -105,7 +105,9 @@ LIMIT 10
 - e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad". At this time, even though other Query Service Tries also contains "ad" node, we won't store anything there
 - e.g 2: when "adi" comes, we calculate its hashing value, assuming it's 0,  then we would go to Query Service 0 to either read/write/update in the Service 0 Tries for the "adi". At this time, even though other Query Service Tries also contains "adi" node, we won't store anything there
 ### Interviewer: Distribution is skewed, e.g: 's' has much more queries than 'z'..
-- We split based on statistics, e.g, each machine at most N bytes, count bytes by prefix: 'aa', 'ab', 'ac', ......
+- We split based on statistics/hit rates, e.g, each machine at most evenly N bytes, count bytes by prefix: 'aa', 'ab', 'ac', ......
+### Interviewer: Trending queries/Hot words
+- Because those hot words might not 
 ### Interviewer: how to reduce the size of log file
 - what is log file?
 	- log which user searched which keyword at when
@@ -131,7 +133,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTY3ODg3NiwtNDYxNTk5NDM1LC01NT
-IwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1
-MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMjc3MjAyOTksMjA2OTY3ODg3NiwtND
+YxNTk5NDM1LC01NTIwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYy
+MTAsMTAyOTk3NDI1MSw3MzA5OTgxMTZdfQ==
 -->
