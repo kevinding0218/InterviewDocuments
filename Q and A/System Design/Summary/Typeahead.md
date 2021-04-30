@@ -101,10 +101,10 @@ LIMIT 10
 ### Interviewer: what if the trie gets too large for one machine?
 - We could have multiple QueryService based on splitting on character (Sharding)
 #### How is trie stored across multiple machines?
-- We use consistent hashing to decide which machine a particular string belongs 2
+- We use **consistent hashing** to decide which machine a particular string belongs 2
 - e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad". At this time, even though other Query Service Tries also contains "ad" node, we won't store anything there
 - e.g 2: when "adi" comes, we calculate its hashing value, assuming it's 0,  then we would go to Query Service 0 to either read/write/update in the Service 0 Tries for the "adi". At this time, even though other Query Service Tries also contains "adi" node, we won't store anything there
-
+### Interviewer: Dis
 ### Interviewer: how to reduce the size of log file
 - what is log file?
 	- log which user searched which keyword at when
@@ -130,7 +130,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk3NDkyNjA3LC00NjE1OTk0MzUsLTU1Mj
+eyJoaXN0b3J5IjpbMTI0NDQyNTUwLC00NjE1OTk0MzUsLTU1Mj
 A4NDAxNSw4NzYyOTAzNjEsMTcyNDUyNjIxMCwxMDI5OTc0MjUx
 LDczMDk5ODExNl19
 -->
