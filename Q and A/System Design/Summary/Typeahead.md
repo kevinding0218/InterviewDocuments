@@ -49,6 +49,7 @@ LIMIT 10
 ```
 - Pros
 	- If search range is fixed or small
+	- real time data persistence
 	- fast to implement
 - Cons
 	-   Like Operation is expensive
@@ -77,6 +78,6 @@ LIMIT 10
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOT
-k3NDI1MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE3NjgyNTMxNjgsODc2MjkwMzYxLDE3Mj
+Q1MjYyMTAsMTAyOTk3NDI1MSw3MzA5OTgxMTZdfQ==
 -->
