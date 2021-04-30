@@ -62,10 +62,9 @@ LIMIT 10
 - e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in ending char of "n" (a -> m -> a -> z -> o -> n[20b])
 ##3# how to get hot keywords
 - e.g: user type "a", we need to track every node with "a" and find the hit_count, 
-- #### Time Complexity
-- O(26^n)
-- very slow
-#### how to improve
+#### Time Complexity
+- O(26^n), very slow
+#### How to improve
 - instead of just storing the hit_count of exact ending char node, we can store a collection of key as words and value as hit_count in every char node if they're in the middle of the wording path
 	- e.g
 		- "a" -> [{adidas: 7b},{airbnb:3b},{amazon: 20b},{apple: 15b},...]
@@ -80,7 +79,7 @@ LIMIT 10
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mzc3MDgyMTEsLTU1MjA4NDAxNSw4Nz
-YyOTAzNjEsMTcyNDUyNjIxMCwxMDI5OTc0MjUxLDczMDk5ODEx
-Nl19
+eyJoaXN0b3J5IjpbMTI3NDkwNzY5NSwtNTUyMDg0MDE1LDg3Nj
+I5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQyNTEsNzMwOTk4MTE2
+XX0=
 -->
