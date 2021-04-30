@@ -25,11 +25,15 @@
 ```
 User typing -> Browser -> LB -> Router - Query Service - DataCollection Service - (MapReduce) - Metadata Database/Logs
 ```
-
+### Detail Analysis of each component in architecture
+#### LB/Load Balancer
+- All requests coming from our clients will go through a load balancer first. This will **ensure requests are equally distributed among processing servers**.
+#### API gateway/Router
+- An API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
 
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNDUyNjIxMCwxMDI5OTc0MjUxLDczMD
-k5ODExNl19
+eyJoaXN0b3J5IjpbMTI1NjEwNTk4NSwxNzI0NTI2MjEwLDEwMj
+k5NzQyNTEsNzMwOTk4MTE2XX0=
 -->
