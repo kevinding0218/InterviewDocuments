@@ -78,10 +78,56 @@ LIMIT 10
 		- continue to "ax", then "axx"
 #### Trie can only be stored in memory
 - but what if electronic cut off, memeory will be lost, so we still need to serialize into disk, like convert a Tree into a character string and store in disk
+### DataCollectionService
+- create raw data based on user search from web request and generate the result of keyword with hit_count
+|user| keyword | timestamp |
+|--|--|--|
+| xxx | "amazon" | 142523421
+| yyy | "apple" | 142528465
+| zzz | "amazon" | 142529861
 
-cache-control
+- group by keyword to get "amazon" with hit_count 20b
+- update periodically Tries in Query Service memory 
+	- cannot update Query Service while it's live and used by user
+	- cannot write and read at same time
+	- Back up Query Service disk from live machine A in another machine B 
+	- Deserialize disk in machine B into Trie in machine B
+	- Update Tries in machine B from DataCollectionService
+	- Switch machine B with machine A
+
+### Interviewer: what if the trie gets too large for one machine?
+- We could have multiple QueryService based on splitting on character (Sharding)
+#### How is trie stored across multiple machines?
+- We use consistent hashing to decide which machine a particular string belongs 2
+- e.g 1: when "ad" comes, we calculate its hashing value, assuming it's 1, then we would go to Query Service 1 to either read/write/update in the Service 1 Tries for the "ad". At this time, even though other Query Service Tries also contains "ad" node, we won't store anything there
+- e.g 2: when "adi" comes, we calculate its hashing value, assuming it's 0,  then we would go to Query Service 0 to either read/write/update in the Service 0 Tries for the "adi". At this time, even though other Query Service Tries also contains "adi" node, we won't store anything there
+
+### Interviewer: how to reduce the size of log file
+- what is log file?
+	- log which user searched which keyword at when
+- Use a random number like (1 ~ 10k), only when random number equals 1, then we log the record into log file
+	- log file size would be reduced by 1/10k
+- Will this impact hot keyword search?
+	- No, because we don't care about exact keyword search number, we only care about relative keyword search number
+	- e.g, if a keyword A has been searched over 10b for over two weeks, it would only be logged as 10k times,
+	- e.g, if a keyword B has been searched over 100k for over two weeks, it would only be logged as 10 times,
+	- both A and B appearance decreased by same times, and apparantly B won't become hot keyword
+
+### Interviewer: how to reduce response time in front-end
+#### Cache Control
+- Store the result on client for 1 min
+- Suppose we already did well on server side, what can we do at client/browser side
+#### Dedupilcate
+- No duplicate request 
+	- suppose when we type "123", we would request 3 times already (1, 12 & 123), now if we remove 3 it comes "12", we don't need to make a new request because we already get the response earlier
+#### PreFetch
+- Filter on client side with more data response at initial request
+	- suppose when we type "a", instead of just return the top 4 keywords with a, we can return keywords of other combination such as "ab", "ac", ... "az", so we can filter the result on client side when user type the next word but also request for "ab"
+
+### Stopwords
+- Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNDAzODkzMiwtNDYxNTk5NDM1LC01NT
-IwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1
-MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE0NzE5MzA4NzEsLTQ2MTU5OTQzNSwtNT
+UyMDg0MDE1LDg3NjI5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQy
+NTEsNzMwOTk4MTE2XX0=
 -->
