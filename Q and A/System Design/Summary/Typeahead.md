@@ -66,13 +66,14 @@ LIMIT 10
 #### Time Complexity
 - O(26^n), very slow
 #### How to improve
-- instead of just storing the hit_count of exact ending char node, we can store a **Top K collection of key as words and value as hit_count in every char node** if they're in the middle of the wording path, build from bottom to up by using merge sort for parent node (PriorityQueue/TreeSet)
+- instead of just storing the hit_count of exact ending char node, we can store a **Top K collection of key as words and value as hit_count in every char node** if they're in the middle of the wording path
 	- e.g
 		- "a" -> [{adidas: 7b},{airbnb:3b},{amazon: 20b},{apple: 15b},...]
 		- "a" - "d" -> [{adidas: 7b},{adobe: 1b},{adele: 2b},{adblock: 1b},...]
 #### Search
 - when search happens, just return the value collection as hot keywords suggestions
 #### New Data (TopKFrequentWordsII)
+- build from bottom to up by using merge sort for parent node (PriorityQueue/TreeSet)
 - when new data comes in
 	- e.g: {axx: 10b}, 
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
@@ -128,7 +129,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU4OTU0MTcyLC00NjE1OTk0MzUsLTU1Mj
+eyJoaXN0b3J5IjpbMTEzMjc4NzcxLC00NjE1OTk0MzUsLTU1Mj
 A4NDAxNSw4NzYyOTAzNjEsMTcyNDUyNjIxMCwxMDI5OTc0MjUx
 LDczMDk5ODExNl19
 -->
