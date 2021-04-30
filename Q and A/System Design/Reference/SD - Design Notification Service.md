@@ -104,7 +104,7 @@ FrontEnd Host	---			[A-G]
 	- The problem with this approach is that some threads may be idle, as there may not be enough messages to retrieve. Or another extreme, when all threads may quickly become occupied and the only way to scale message retrieval would be adding more Sender hosts.
 	- A better approach is to keep track of idle threads and adjust number of message retrieval threads dynamically. If we have too many idle threads, no new threads should be created. If all threads are busy, more threads in the pool can start reading messages. 
 	- This not only helps to better scale the Sender service, it also protects Temporary Storage service from being constantly bombarded by Sender service. This is especially useful when Temporary Storage service experiences performance degradation, and Sender service can lower the rate of message reads to help Temporary Storage service to recover faster.
-#### Suto-Scaling Solution (Semaphores)
+#### Auto-Scaling Solution (Semaphores)
 - Conceptually, a semaphore maintains a set of permits. 
 - Before retrieving the next message, thread must acquire a permit from the semaphore. 
 - When the thread has finished reading the message a permit is returned to the semaphore, allowing another thread from the pool to start reading messages. 
@@ -173,5 +173,5 @@ Temporary Storage -> Message Retriever -> MS Client -- Task Creator -- Task Exec
 #### Did we design a durable system?
 - Yes. Whatever Temporary Storage solution we choose, data will be stored in the redundant manner, when several copies of a message is stored across several machines, and ideally across several data centers. We also retry messages for a period of time to make sure they are delivered to every subscriber at least once.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MTg4MTIyMl19
+eyJoaXN0b3J5IjpbNDAzNjA0MTg0LDE1NTE4ODEyMjJdfQ==
 -->
