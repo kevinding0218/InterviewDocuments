@@ -19,7 +19,7 @@
 - When we talked about designing it as distributed system, which I assume it's something we're looking forward in today's design, we need to consider of
 - **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
 - **High availability**: **survives hardware/network failures**
-- **High performant**: keep end-to-end **latency as low as possible**
+- **High performant**: keep end-to-end **latency as low as possible**, GEO might be a considration
  - **CAP(Consistency, Availability and Partition tolerance)** theorem tells us that we should be choosing between Availability and Consistency, **discuss with interviewer**
 	- If we choose **Availability** over Consistency, it simply means we prefer to **show stale (not up-to-date) data than no data at all**.
 	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
@@ -262,10 +262,11 @@ create_at	timestamp
 	- 通常来说，翻页这个完全可以作为一道单独的系统设计面试题来问你。翻页并不是简单的1-100，101-200这样去翻页。因为当你在翻页的时候，你的news feed可能已经添加了新的 内容，这个时候你再去索引最新的101-200可能和你的1-100就有重叠了。
 	- 通常的做法是，拿第101个帖子的timestamp作为下一页的起始位置，也就是说，当用户在看到第一页的前100个帖子的时候，他还有第101个帖子的timestamp信息（隐藏在你看不到的地方），然后你请求下一页的时候，会带上这个timestamp的信息，server端会去数据库里请求 >= timestamp 的前101个帖子，然后也同样把第101个帖子作为下一页的timestamp。这个方法比直接用第100个帖子的timestamp好的地方是，你如果读不到第101个帖子，说明没有下一页了，如果你刚才只有100个帖子的话，用第100个帖子的timestamp的坏处是，你会有一次`空翻`。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0ODc4Mjc0MCwtMTY4MDUwNTAxMCwtMj
-AzNTU3Mjc0OSwtMTY3Mjg1MTI0MiwxMDUyNDU4ODQwLC0yMDAw
-MTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkxMz
-gwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0Niwt
-MTUwMzY1MTU3NiwxODA1MDI2MzI0LDkyNTU3MDQ4MiwtMjA0NT
-k1MTY3NywtOTA2MzM4NTQwLC0zNzg1MTY2MDhdfQ==
+eyJoaXN0b3J5IjpbMTYyNTM1MDUzLDE1NDg3ODI3NDAsLTE2OD
+A1MDUwMTAsLTIwMzU1NzI3NDksLTE2NzI4NTEyNDIsMTA1MjQ1
+ODg0MCwtMjAwMDE1OTEwNSwxNzYzMDA0NzA5LDExMjQ3NzIxND
+EsLTEwMjQ5MTM4MDcsLTIxMjQzMzI0MjAsLTI4MDk1Mzc5NCwz
+NTQzNzM3NDYsLTE1MDM2NTE1NzYsMTgwNTAyNjMyNCw5MjU1Nz
+A0ODIsLTIwNDU5NTE2NzcsLTkwNjMzODU0MCwtMzc4NTE2NjA4
+XX0=
 -->
