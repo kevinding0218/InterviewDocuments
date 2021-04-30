@@ -77,7 +77,7 @@ LIMIT 10
 		- check "a" lists, see if the value collection reaches capacity, if not, inserted it, otherwise, replace the one with lower least entry
 		- continue to "ax", then "axx"
 #### Trie can only be stored in memory
-- but what if electronic cut off, memeory will be lost, so we still **need to serialize into disk**, like convert a Tree into a character string and store in disk (TriesSerialization)
+- but what if electronic cut off, memeory will be lost, so we still **need to serialize into disk**, like convert a Tree into a character string and store in disk (**TriesSerialization**)
 ### DataCollectionService
 - create raw data based on user search from web request and generate the result of keyword with hit_count
 |user| keyword | timestamp |
@@ -126,7 +126,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NTk5Mzg1MSwtNDYxNTk5NDM1LC01NT
+eyJoaXN0b3J5IjpbLTg5NjIzMjM3OSwtNDYxNTk5NDM1LC01NT
 IwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1
 MSw3MzA5OTgxMTZdfQ==
 -->
