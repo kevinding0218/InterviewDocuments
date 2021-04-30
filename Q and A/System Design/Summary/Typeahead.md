@@ -51,10 +51,11 @@ LIMIT 10
 	- fast to implement
 - Cons
 	-   Like Operation is expensive
+		- If your filter criteria uses equals = and the field is indexed, then most likely it will use an INDEX/CLUSTERED INDEX SEEK
 
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMzgxNTk2NCwxNzI0NTI2MjEwLDEwMj
-k5NzQyNTEsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTE5NzM5NDY0MzgsMTcyNDUyNjIxMCwxMD
+I5OTc0MjUxLDczMDk5ODExNl19
 -->
