@@ -82,7 +82,7 @@ LIMIT 10
 - If we try to update our trie for every query it’ll be extremely resource intensive and this can hamper our read requests, too. One solution to handle this could be to update our trie offline after a certain interval.
 #### Trie can only be stored in memory
 - but what if electronic cut off, memeory will be lost, so we still **need to serialize into disk**, like convert a Tree into a character string and store in disk (**TriesSerialization**)
-### DataCollectionService (offline/Serialization/Map Reduce)
+### DataCollectionService (offline/Serialize/Map Reduce)
 - create raw data based on user search from web request and generate the result of keyword with hit_count
 |user| keyword | timestamp |
 |--|--|--|
@@ -133,7 +133,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMzE0NzI4OCwyMDY5Njc4ODc2LC00Nj
-E1OTk0MzUsLTU1MjA4NDAxNSw4NzYyOTAzNjEsMTcyNDUyNjIx
-MCwxMDI5OTc0MjUxLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTExMjgxMTg5MjAsMjA2OTY3ODg3NiwtND
+YxNTk5NDM1LC01NTIwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYy
+MTAsMTAyOTk3NDI1MSw3MzA5OTgxMTZdfQ==
 -->
