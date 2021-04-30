@@ -11,7 +11,7 @@
 - When we talked about designing it as distributed system, which I assume it's something we're looking forward in today's design, we need to consider of
 - **High scalability**: supports an arbitrarily large number of data collection as well as query to **handle load increase**
 - **High availability**: **survives hardware/network failures**
-- **High performant**: keep end-to-end **latency as low as possible**
+- **High performant**: keep end-to-end **latency as low as possible** GEO might be a considration
 -  **CAP(Consistency, Availability and Partition tolerance)** theorem tells us that we should be choosing between Availability and Consistency, **discuss with interviewer**
 	- If we choose **Availability** over Consistency, it simply means we prefer to **show stale (not up-to-date) data than no data at all**.
 - **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
@@ -22,5 +22,6 @@
 - Query Service
 - DataCollection Service
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyOTk3NDI1MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMjE0NTc1NDI5NiwxMDI5OTc0MjUxLDczMD
+k5ODExNl19
 -->
