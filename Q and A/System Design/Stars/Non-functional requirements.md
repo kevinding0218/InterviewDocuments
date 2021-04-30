@@ -10,7 +10,7 @@
 - When we talked about designing it as distributed system, which I assume it's something we're looking forward in today's design, we need to consider of
 - **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
 - **High availability**: **survives hardware/network failures**
-- **High performant**: keep end-to-end **latency as low as possible**
+- **High performant**: keep end-to-end **latency as low as possible**, GEO might be a considration
  - **CAP(Consistency, Availability and Partition tolerance)** theorem tells us that we should be choosing between Availability and Consistency, **discuss with interviewer**
 	- If we choose **Availability** over Consistency, it simply means we prefer to **show stale (not up-to-date) data than no data at all**.
 	- On the other hand of choosing **Consistency**: Synchronous data replicate is slow, we usually replicate data asynchronously, if a user doesn't see a photo for a while, should it be fine or not?
@@ -18,5 +18,5 @@
 - **Cost**(hardware, development, maintenance), but we might ignore that for now
 - **Let's revisit those once we finialize more details with our design**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNjQ0ODkwMF19
+eyJoaXN0b3J5IjpbMTQ3ODM2MDQwM119
 -->
