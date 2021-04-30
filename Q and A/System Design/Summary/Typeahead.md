@@ -52,7 +52,7 @@ LIMIT 10
 	- real time data persistence
 	- fast to implement
 - Cons
-	-   Like Operation is expensive
+	-   Like Operation is expensive (Use Cache to help with that)
 		- If your filter criteria uses equals = and the field is indexed, then most likely it will use an INDEX/CLUSTERED INDEX SEEK
 		- If your filter criteria uses LIKE, with no wildcards, it is about as likely as #1 to use the index. The increased cost is almost nothing
 		- If your filter criteria uses LIKE, but with a wildcard it's much less likely to use the index
@@ -78,6 +78,6 @@ LIMIT 10
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjgyNTMxNjgsODc2MjkwMzYxLDE3Mj
-Q1MjYyMTAsMTAyOTk3NDI1MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTU1MjA4NDAxNSw4NzYyOTAzNjEsMTcyND
+UyNjIxMCwxMDI5OTc0MjUxLDczMDk5ODExNl19
 -->
