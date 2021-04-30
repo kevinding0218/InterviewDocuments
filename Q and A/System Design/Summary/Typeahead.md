@@ -9,9 +9,15 @@
 	- Peak QPS: QPS * 2 = 276k
 - Obviously we'd be looking forward a large scale data collection with query
 - When we talked about designing it as distributed system, which I assume it's something we're looking forward in today's design, we need to consider of
-- **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
+- **High scalability**: supports an arbitrarily large number of data collection as well as query to **handle load increase**
 - **High availability**: **survives hardware/network failures**
 - **High performant**: keep end-to-end **latency as low as possible**
+-  **CAP(Consistency, Availability and Partition tolerance)** theorem tells us that we should be choosing between Availability and Consistency, **discuss with interviewer**
+	- If we choose **Availability** over Consistency, it simply means we prefer to **show stale (not up-to-date) data than no data at all**.
+- **Data Durable** is also something we need to think of, which refers to the **system being highly reliable**, any uploaded **feed should never be lost**
+- **Cost**(hardware, development, maintenance), but we might ignore that for now
+- **Let's revisit those once we finialize more details with our design**
+### High level Architecture
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY1ODcyMDk3LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTE0NDA4MzUxNTYsNzMwOTk4MTE2XX0=
 -->
