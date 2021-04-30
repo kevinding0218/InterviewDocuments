@@ -205,7 +205,7 @@ AsyncService::fanoutTweet(user, tweet)
 	- New shards fill up quickly, write qps too high
 #### Option 2: Shard by hash (userId): store all the data of a user on a single shard
 - Pros:
-	- Simple
+	- Simple (One shard can handle 1M user data)
 	- Query user timline is straightforward
 - Cons:
 	- home timeline still needs to query multiple shards
@@ -256,7 +256,7 @@ create_at	timestamp
 	- 通常来说，翻页这个完全可以作为一道单独的系统设计面试题来问你。翻页并不是简单的1-100，101-200这样去翻页。因为当你在翻页的时候，你的news feed可能已经添加了新的 内容，这个时候你再去索引最新的101-200可能和你的1-100就有重叠了。
 	- 通常的做法是，拿第101个帖子的timestamp作为下一页的起始位置，也就是说，当用户在看到第一页的前100个帖子的时候，他还有第101个帖子的timestamp信息（隐藏在你看不到的地方），然后你请求下一页的时候，会带上这个timestamp的信息，server端会去数据库里请求 >= timestamp 的前101个帖子，然后也同样把第101个帖子作为下一页的timestamp。这个方法比直接用第100个帖子的timestamp好的地方是，你如果读不到第101个帖子，说明没有下一页了，如果你刚才只有100个帖子的话，用第100个帖子的timestamp的坏处是，你会有一次`空翻`。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NjUwODg0OSwtMTY4MDUwNTAxMCwtMj
+eyJoaXN0b3J5IjpbMTA0OTQ5NDQ1OSwtMTY4MDUwNTAxMCwtMj
 AzNTU3Mjc0OSwtMTY3Mjg1MTI0MiwxMDUyNDU4ODQwLC0yMDAw
 MTU5MTA1LDE3NjMwMDQ3MDksMTEyNDc3MjE0MSwtMTAyNDkxMz
 gwNywtMjEyNDMzMjQyMCwtMjgwOTUzNzk0LDM1NDM3Mzc0Niwt
