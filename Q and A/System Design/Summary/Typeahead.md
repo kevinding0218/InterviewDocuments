@@ -52,10 +52,13 @@ LIMIT 10
 - Cons
 	-   Like Operation is expensive
 		- If your filter criteria uses equals = and the field is indexed, then most likely it will use an INDEX/CLUSTERED INDEX SEEK
+		- If your filter criteria uses LIKE, with no wildcards, it is about as likely as #1 to use the index. The increased cost is almost nothing
+		- If your filter criteria uses LIKE, but with a wildcard it's much less likely to use the index
+		- the SQL engine still might not use an index the way you're expecting, depending on what else is going on in your query and what tables you're joining to
 
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzM5NDY0MzgsMTcyNDUyNjIxMCwxMD
-I5OTc0MjUxLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTM4MDY0ODI3OSwxNzI0NTI2MjEwLDEwMj
+k5NzQyNTEsNzMwOTk4MTE2XX0=
 -->
