@@ -57,7 +57,7 @@ LIMIT 10
 		- If your filter criteria uses LIKE, with no wildcards, it is about as likely as #1 to use the index. The increased cost is almost nothing
 		- If your filter criteria uses LIKE, but with a wildcard it's much less likely to use the index
 		- the SQL engine still might not use an index the way you're expecting, depending on what else is going on in your query and what tables you're joining to
-### Trie
+### Trie (ImplementTrie)
 #### key value store
 - e.g: "amazon", we can traverse the Trie to find the path with "amazon", then store the hit_count of 20b in ending char of "n" (a -> m -> a -> z -> o -> n[20b])
 ##3# how to get hot keywords
@@ -79,7 +79,7 @@ LIMIT 10
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNTgwOTMyNywtNTUyMDg0MDE1LDg3Nj
-I5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQyNTEsNzMwOTk4MTE2
-XX0=
+eyJoaXN0b3J5IjpbMzUyNjk4OTA3LC01NTIwODQwMTUsODc2Mj
+kwMzYxLDE3MjQ1MjYyMTAsMTAyOTk3NDI1MSw3MzA5OTgxMTZd
+fQ==
 -->
