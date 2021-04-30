@@ -98,6 +98,8 @@ LIMIT 10
 	- **Deserialize** disk in machine B into Trie in machine B
 	- Update Tries in machine B from DataCollectionService
 	- Switch machine B with machine A
+#### Map Reduce Solution (same as top K)
+- Processing the logging data peirodically like every hour
 ### Interviewer: what if the trie gets too large for one machine?
 - We could have multiple QueryService based on splitting on character (Sharding)
 #### How is trie stored across multiple machines?
@@ -133,7 +135,8 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3ODAzMDU1OCwxNDAzMTk5NTU3LDIwNj
-k2Nzg4NzYsLTQ2MTU5OTQzNSwtNTUyMDg0MDE1LDg3NjI5MDM2
-MSwxNzI0NTI2MjEwLDEwMjk5NzQyNTEsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEyMDkwMTkzNjMsLTQ3ODAzMDU1OCwxND
+AzMTk5NTU3LDIwNjk2Nzg4NzYsLTQ2MTU5OTQzNSwtNTUyMDg0
+MDE1LDg3NjI5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQyNTEsNz
+MwOTk4MTE2XX0=
 -->
