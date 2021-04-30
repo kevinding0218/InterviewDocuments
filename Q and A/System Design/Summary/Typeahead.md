@@ -22,13 +22,13 @@
 - Query Service
 - DataCollection Service
 ```
-User typing -> Browser -> LB -> Router - Query Service - DataCollection Service - Metadata Database/Logs
+User typing -> Browser -> LB -> Router - Query Service - DataCollection Service - (MapReduce) - Metadata Database/Logs
 ```
 
 
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNTg5NzY5LDEwMjk5NzQyNTEsNzMwOT
-k4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEzNDAzOTcwMDUsMTAyOTk3NDI1MSw3Mz
+A5OTgxMTZdfQ==
 -->
