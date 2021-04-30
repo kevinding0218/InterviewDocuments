@@ -108,6 +108,11 @@ When to use Index?
 a. When there is large amount of data. For faster search mechanism indexes are appropriate.
 
 b. To improve performance they must be created on fields used in table joins
+###  Like Operation is expensive
+- If your filter criteria uses equals = and the field is indexed, then most likely it will use an INDEX/CLUSTERED INDEX SEEK
+- If your filter criteria uses LIKE, with no wildcards, it is about as likely as #1 to use the index. The increased cost is almost nothing
+- If your filter criteria uses LIKE, but with a wildcard it's much less likely to use the index
+- the SQL engine still might not use an index the way you're expecting, depending on what else is going on in your query and what tables you're joining to
 
 Primary Key vs Unique Key
 
@@ -188,5 +193,6 @@ When you specify a column or set of columns with PARTITION BY clause then it wil
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIyODM2NzA1LC01MDkwNTM4OTRdfQ==
+eyJoaXN0b3J5IjpbMTAzMDM4NjkxNiw1MjI4MzY3MDUsLTUwOT
+A1Mzg5NF19
 -->
