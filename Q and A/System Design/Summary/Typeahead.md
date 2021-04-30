@@ -107,7 +107,7 @@ LIMIT 10
 ### Interviewer: Distribution is skewed, e.g: 's' has much more queries than 'z'..
 - We split based on statistics/hit rates, e.g, each machine at most evenly N bytes, count bytes by prefix: 'aa', 'ab', 'ac', ......
 ### Interviewer: Trending queries/Hot words
-- Because those hot words might not 
+- Because those hot words might not have large amount volumn, so we can leave some space in each service to insert these hot words with a higher weight by online update
 ### Interviewer: how to reduce the size of log file
 - what is log file?
 	- log which user searched which keyword at when
@@ -133,7 +133,7 @@ LIMIT 10
 ### Stopwords
 - Skip words like "I", "the", "a" as those even appear more than often but doesn't have real meaning
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjc3MjAyOTksMjA2OTY3ODg3NiwtND
-YxNTk5NDM1LC01NTIwODQwMTUsODc2MjkwMzYxLDE3MjQ1MjYy
-MTAsMTAyOTk3NDI1MSw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbNjMxNDk0MjY5LDIwNjk2Nzg4NzYsLTQ2MT
+U5OTQzNSwtNTUyMDg0MDE1LDg3NjI5MDM2MSwxNzI0NTI2MjEw
+LDEwMjk5NzQyNTEsNzMwOTk4MTE2XX0=
 -->
