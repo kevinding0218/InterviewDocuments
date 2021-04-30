@@ -1,4 +1,4 @@
-##### how FrontEnd hosts know which Metadata service host to call.
+### How FrontEnd hosts know which Metadata service host to call.
 
 1.  In the first option we introduce a component responsible for coordination(Configuration Service, e.g. ZooKeper). This component knows about all the Metadata service hosts, as those hosts constantly send heartbeats to it. Each FrontEnd host asks Configuration service what Metadata service host contains data for a specified hash value.
     -   Every time we scale out and add more Metadata service hosts, Configuration service becomes aware of the changes and re-maps hash key ranges, this is so called Central registry
@@ -21,5 +21,5 @@ FrontEnd Host	---			[A-G]
 				\			[O-T][U-Z]
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjQ2NzYyNDZdfQ==
+eyJoaXN0b3J5IjpbNDQ1MjIwOTA2XX0=
 -->
