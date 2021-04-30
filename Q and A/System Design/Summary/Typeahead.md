@@ -30,10 +30,39 @@ User typing -> Browser -> LB -> Router - Query Service - DataCollection Service 
 - All requests coming from our clients will go through a load balancer first. This will **ensure requests are equally distributed among processing servers**.
 #### API gateway/Router
 - An API management tool that sits between a client and a collection of backend services, acts as a reverse proxy to accept all, aggregate the various services required to fulfill them, and return the appropriate result, in a microservices architecture, in which case a single request could require calls to dozens of distinct applications.
+#### Storage
+-   What kind of data do we need to store?
+    -   The naive way
+    -   keyword (e.g: “amazon”, “apple”, “adidas”)
+    -   hit_count (e.g: 20b, 15b 7b)
+| keyword | hitcount |
+|--|--|
+| "amazon" | 20b |
+| "apple" | 15b |
+| "adidas" | 7b |
+```
 
+```
+- Pros
+	- If search range is fixed or small
+	- fast to implement
+- Cons
+	-   when we do a query search like
+### Interviewer: what’s the problem with this approach
+
+
+```
+SELECT * FROM hit_stats
+WHERE keyword LIKE '${key}%'
+ORDER BY hit_count DESC
+LIMIT 10
+
+```
+
+-   Like Operation is expensive
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NjEwNTk4NSwxNzI0NTI2MjEwLDEwMj
-k5NzQyNTEsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTIxNDU4OTY5LDE3MjQ1MjYyMTAsMTAyOT
+k3NDI1MSw3MzA5OTgxMTZdfQ==
 -->
