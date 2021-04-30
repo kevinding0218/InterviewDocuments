@@ -65,7 +65,7 @@ LIMIT 10
 #### Time Complexity
 - O(26^n), very slow
 #### How to improve
-- instead of just storing the hit_count of exact ending char node, we can store a collection of key as words and value as hit_count in every char node if they're in the middle of the wording path
+- instead of just storing the hit_count of exact ending char node, we can store a **Top K collection of key as words and value as hit_count in every char node** if they're in the middle of the wording path
 	- e.g
 		- "a" -> [{adidas: 7b},{airbnb:3b},{amazon: 20b},{apple: 15b},...]
 		- "a" - "d" -> [{adidas: 7b},{adobe: 1b},{adele: 2b},{adblock: 1b},...]
@@ -79,7 +79,7 @@ LIMIT 10
 
 cache-control
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NDkwNzY5NSwtNTUyMDg0MDE1LDg3Nj
+eyJoaXN0b3J5IjpbMjEwNTgwOTMyNywtNTUyMDg0MDE1LDg3Nj
 I5MDM2MSwxNzI0NTI2MjEwLDEwMjk5NzQyNTEsNzMwOTk4MTE2
 XX0=
 -->
