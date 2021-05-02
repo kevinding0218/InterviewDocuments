@@ -9,7 +9,13 @@
 - We can achieve Inversion of Control through various mechanisms such as: **Strategy design pattern, Service Locator pattern, Factory pattern, and Dependency Injection (DI).**
 ### What Is Dependency Injection
 - Dependency injection is a pattern we can use to implement IoC, where the control being inverted is setting an object's dependencies.
-- 
+- refers to a specific form of decoupling software modules, **helps us to develop loosely couple code by ensuring that high-level modules depend on abstractions rather than concrete implementations of lower-level modules and make unit testing easier for mocking**
+	- **High-level modules should not depend on low-level modules. Both should depend on abstractions.**
+	- **Constructor injection**/Property(Setter) injection/Method injection
+#### Benefit of DI
+	- Dependency Injection is a design pattern allows us to write loose coupled code
+	- Dependency Injections helps us to manage future changes in code i.e. code maintainability
+	- Dependency Injection uses a builder object to initialize objects and provide the required dependencies to the object means it allows you to ‘inject’ a dependency from outside the class
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MzU2ODEzXX0=
+eyJoaXN0b3J5IjpbLTEzNjEzMTUxODRdfQ==
 -->
