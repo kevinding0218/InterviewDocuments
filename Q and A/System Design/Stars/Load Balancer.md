@@ -40,10 +40,10 @@ P2			17		(Completed)
 P3			68		=>		68 - 20 = 48 => 48 - 20 = 28 => 28 - 20 = 8 => Completed
 P4			24		=>		24 - 20 = 4 => COmpleted
 0 	-> 	20 	-> 	37 	-> 	57 	-> 	77 -> 97 -> 117 -> 121 -> 134 -> 154 -> 162 
-  P1(20)	P2(17) 	P3(20)	P4(20) P1(20)P3(20	   P4	  P1    P3		Pe
+  P1(20)	P2(17) 	P3(20)	P4(20) P1(20)P3(20) P4(4) P1(13)  P3(20) P3(8)
 
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MTY0MzA0Nl19
+eyJoaXN0b3J5IjpbLTI3MzE4MDQ4N119
 -->
