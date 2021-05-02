@@ -147,11 +147,17 @@ C	-	D(L)
 - We have implemented the algorithm, created a set of classes and interfaces, discussed message broadcasting. But how do we integrate all this cool solution with the service? Let’s see what options we have.
 #### Solution 1 - as a library (Daemon)
 - We can run Rate Limiter as a part of the service process or as its own process (daemon). In the first option, Rate Limiter is distributed as a collection of classes, a library that should be integrated with the service code.
+```
+Service Host = Service Process && Rate Limiter Process
+```
 ##### Pros
 - It is faster, as we do not need to do any inter-process call.
 - It is also resilient to the inter-process call failures, because there are no such calls.
 #### Solution 2 - as external client
 - In the second option we have two libraries: the daemon itself and the client, that is responsible for inter-process communication between the service process and the daemon. Client is integrated with the service code.
+```
+Service Host = Service Process && Rate Limiter Client + Rate Limiter Process
+```
 ##### Pros
 - programming language agnostic. It means that Rate Limiter daemon can be written on a programming language that may be different from the language we use for the service implementation. As we do not need to do integration on the code level. Yes, we need to have Rate Limiter client compatible with the service code language. But not the daemon itself.
 - Also, Rate Limiter process uses its own memory space. This isolation helps to better control behavior for both the service and the daemon. For example, daemon my store many buckets in memory, but because the service process has its own memory space, the service memory does not need to allocate space for these buckets. Which makes service memory allocation more predictable.
@@ -196,6 +202,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY3MDQ0MTYyLDU1MTczNjc4NSw5NDIwNz
-g5NjMsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTEyMjY1ODM1Miw2NjcwNDQxNjIsNTUxNz
+M2Nzg1LDk0MjA3ODk2MywtMjA4ODc0NjYxMl19
 -->
