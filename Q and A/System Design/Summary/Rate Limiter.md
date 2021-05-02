@@ -137,8 +137,8 @@ C	-	D(L)
 - Is this an issue? Actually, no. **Each leader will calculate rate and share with everyone else.** This will cause unnecessary messaging overhead, but **each leader will have its own correct view of the overall rate**. And to finish message broadcasting discussion, I want to talk about communication protocols, how hosts talk to each other.
 #### Communication Protocol
 ##### TCP and UDP
-- TCP protocol guarantees delivery of data and also guarantees that packets will be delivered in the same order in which they were sent.
-- UDP protocol does not guarantee you are getting all the packets and order is not guaranteed. But because UDP throws all the error-checking stuff out, it is faster.
+- **TCP protocol guarantees delivery of data and also guarantees that packets will be delivered in the same order** in which they were sent.
+- **UDP protocol does not guarantee you are getting all the packets and order is not guaranteed.** But because UDP throws all the error-checking stuff out, **it is faster**.
 ##### Which one to choose?
 - If we want rate limiting solution to be more accurate, but with a little bit of performance overhead, we need to go with TCP.
 - If we ok to have a bit less accurate solution, but the one that works faster, UDP should be our choice.
@@ -196,6 +196,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1OTYzOTIzMCw1NTE3MzY3ODUsOTQyMD
-c4OTYzLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNjY3MDQ0MTYyLDU1MTczNjc4NSw5NDIwNz
+g5NjMsLTIwODg3NDY2MTJdfQ==
 -->
