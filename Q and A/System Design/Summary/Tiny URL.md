@@ -24,7 +24,7 @@
 		- 100M * 0.1 ~ 10M URL daily
 		- average storage for a tiny url like 100 bytes, total of 1G
 		- 1T hard disk be used for 3 years
-#### Service
+#### UrlService
 - TinyURL only needs one UrlService
 - Function Design
 	- UrlService.encode(long_url)
@@ -245,6 +245,5 @@
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzM0MTY2MTAsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbMTExODE1ODIwMSwtMjA4ODc0NjYxMl19
 -->
