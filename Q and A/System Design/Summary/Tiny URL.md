@@ -57,7 +57,7 @@ Client -> LB -> UrlService -> LB -> Cache Server
 				KV DB				Cleanup Service
 ```
 #### LB/Load Balancer (Don't need that initially)
-- All requests coming from our clients will go through a load balancer first. This will **ensure requests are equally distributed among processing servers**.
+- All requests coming from our clients will go through a load balancer first. This will **ensure requests are equally distributed among processing servers at an ideal expectation**.
 ### Algorithm
 #### Hashing function (**No** because of conflict)
 - get long URL last 6 digets of MD5
@@ -258,6 +258,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAzOTE2NjMsMTkyNzU3NjAxOCwyMDQ2OD
-g2MjEsMTExODE1ODIwMSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTc5MzAxMTg3OCwxOTI3NTc2MDE4LDIwND
+Y4ODYyMSwxMTE4MTU4MjAxLC0yMDg4NzQ2NjEyXX0=
 -->
