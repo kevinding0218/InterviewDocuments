@@ -84,32 +84,36 @@ request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Process
 	- **Host B will find out that A and C consumed two tokens already**. Leaving host B with 0 tokens as well.
 	- And the same logic applies to host C, C will find out that A and B consumed 3 tokens already, leaving host C with 0 tokens. Now everything looks correct.
 	- 4 requests have been processed and no more requests allowed.
-- We gave each bucket 4 tokens. If many requests for the same bucket hit our cluster exactly at the same second. Does this mean that 12 requests may be processed, instead of only 4 allowed? Or may be a more realistic scenario. Because communication between hosts takes time, until all hosts agree on what that final number of tokens must be, may there be any requests that slip into the system at that time?
-- Yes. Unfortunately, this is the case. We should expect that sometimes our system may be processing more requests than we expect and we need to scale out our cluster accordingly.
-- By the way, the token bucket algorithm will still handle this use case well. We just need to slightly modify it to allow negative number of available tokens. 
-- When 12 requests hit the system, buckets will start sharing this information. After sharing, every bucket will have -8 (4-12) tokens and for the duration of the next 2 seconds all requests will be throttled. So, on average we processed 12 requests within 3 seconds.
+- We gave each bucket 4 tokens. If many requests for the same bucket hit our cluster exactly at the same second. Does this mean that 12 requests may be processed, instead of only 4 allowed? Or may be a more realistic scenario. Because **communication between hosts takes time**, until all hosts agree on what that final number of tokens must be, may there be any requests that slip into the system at that time?
+- Yes. Unfortunately, this is the case. **We should expect that sometimes our system may be processing more requests than we expect and we need to scale out our cluster accordingly**.
+- By the way, the token bucket algorithm will still handle this use case well. **We just need to slightly modify it to allow negative number of available tokens**. 
+- When 12 requests hit the system, buckets will start sharing this information. **After sharing, every bucket will have -8 (4-12) tokens and for the duration of the next 2 seconds all requests will be throttled**. So, on average we processed 12 requests within 3 seconds.
 - Although in reality all 12 were processed within the first second. So, communication between hosts is the key. Let’s see how this communication can be implemented.
 #### Ways of sharing between hosts
 1. Tell every host everything
+```
+A	-	B
+|	X	|
+```
 - It means that every host in the cluster knows about every other host in the cluster and share messages with each one of them. For cluster A, B, C & D, each cluster will communicate the other
 - You may also heard a term full mesh that describes this network topology. How do hosts discover each other? When a new host is added, how does everyone else know? And there are several approaches used for hosts discovery.
 - One option is to use a 3-rd party service which will listen to heartbeats coming from every host. As long as heartbeats come, host is keep registered in the system. If heartbeats stop coming, the service unregister host that is no longer alive. And all hosts in our cluster ask this 3-rd party service for the full list of members.
 - Another option is to resolve some user provided information. For example, user specifies a VIP and because VIP knows about all the hosts behind it, we can use this information to obtain all the members.
 - Or we can rely on a less flexible but still a good option when user provides a list of hosts via some configuration file. We then need a way to deploy this file across all cluster nodes every time this list changes. Full mesh broadcasting is relatively straightforward to implement.
 - But the main problem with this approach is that it is not scalable. Number of messages grows quadratically with respect to the number of hosts in a cluster. Approach works well for small clusters, but we will not be able to support big clusters. So, let’s investigate some other options that may require less messages to be broadcasted within the cluster.
-2. Gossip Communication
+3. Gossip Communication
 - And one such option is to use a gossip protocol. This protocol is based on the way that epidemics spread.
 Computer systems typically implement this type of protocol with a form of random "peer selection": with a given frequency, each machine picks another machine at random and shares data. B picks A, A picks C, C picks D
 - By the way, rate limiting solution at Yahoo uses this approach.
-3. Distributed Cache
+4. Distributed Cache
 - Next option is to use distributed cache cluster. For example, Redis. Or we can implement custom distributed cache solution.
 - The pros for this approach is that distributed cache cluster is relatively small and our service cluster can scale out independently.
 - This cluster can be shared among many different service teams in the organization. Or each team can setup their own small cluster.
 - - In case of a rally large clusters, like tens of thousands of hosts, we may no longer rely on host-to-host communication in the service cluster as it becomes costly. And we need a separate cluster for making a throttling decision. This is a distributed cache option we discussed above. But the drawback of this approach is that it increases latency and operational cost. It would be good to have these tradeoff discussions with your interviewer.
-4. Coordination Service
+5. Coordination Service
 - A coordination service that helps to choose a leader. Choosing a leader helps to decrease number of messages broadcasted within the cluster. Leader asks everyone to send it all the information. And then it calculates and sends back the final result. E.g: Cordination Service choose Host C and let C be responsible for A, B & D, So, each host only needs to talk to a leader or a set of leaders, where each leader is responsible for its own range of keys.  
 - but the main drawback is that we need to setup and maintain Coordination Service. Coordination service is typically a very sophisticated component that has to be very reliable and make sure one and only one leader is elected.
-5. Random Leader Selection
+6. Random Leader Selection
 - Let’s say we use a simple algorithm to elect a leader. But because of the simplicity of the algorithm it may not guarantee one and only one leader. So that we may end up with multiple leaders being elected.
 - Is this an issue? Actually, no. Each leader will calculate rate and share with everyone else. This will cause unnecessary messaging overhead, but each leader will have its own correct view of the overall rate. And to finish message broadcasting discussion, I want to talk about communication protocols, how hosts talk to each other.
 ### Algorithm
@@ -243,6 +247,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI1ODU4OTk2LDk0MjA3ODk2MywtMjA4OD
+eyJoaXN0b3J5IjpbMjk2ODIxNzA2LDk0MjA3ODk2MywtMjA4OD
 c0NjYxMl19
 -->
