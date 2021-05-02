@@ -133,6 +133,7 @@ public String longToShort(String url) {
 	- cache needs to store two types of data
 		- long to short (for usage when generating short url)
 		- short to long (for usage when query short url)
+	- Which cache eviction policy would best fit our needs? LRU
 	- **workflow**:
 		1. get http://bit.ly/1Us49DS
 		2. request sends to web server, check this short url in Memcached and if found, return long url
@@ -235,6 +236,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDIzMTAyOTcsMTkyNzU3NjAxOCwyMD
+eyJoaXN0b3J5IjpbLTE4NTAzMTYxMTksMTkyNzU3NjAxOCwyMD
 Q2ODg2MjEsMTExODE1ODIwMSwtMjA4ODc0NjYxMl19
 -->
