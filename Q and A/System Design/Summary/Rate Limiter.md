@@ -123,7 +123,7 @@ C	D
 A	B
 | /
 C - D
-(leader)
+(leader C)
 ```
 - A coordination service that **helps to choose a leader**. Choosing a leader helps to decrease number of messages broadcasted within the cluster. Leader asks everyone to send it all the information. And then it calculates and sends back the final result. E.g: Cordination Service choose Host C and let C be responsible for A, B & D, So, each host only needs to talk to a leader or a set of leaders, where each leader is responsible for its own range of keys.  
 - but the main drawback is that we need to setup and maintain Coordination Service. Coordination service is typically a very sophisticated component that has to be very reliable and make sure one and only one leader is elected.
@@ -261,6 +261,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNTc0MzE2NCw1NTE3MzY3ODUsOTQyMD
+eyJoaXN0b3J5IjpbMTQ2MTk1OTQ4MSw1NTE3MzY3ODUsOTQyMD
 c4OTYzLC0yMDg4NzQ2NjEyXX0=
 -->
