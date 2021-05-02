@@ -217,6 +217,7 @@ public String longToShort(String url) {
 	- http://tiny.url/google/ => http://www.google.com
 	- http://tiny.url/systemdesign/ => http://www.jiuzhang.com/course/2/
 - Create a new table to store custom URL (e.g: CustomURLTable)
+- 
 |custom_url| long_url(index=true) |
 |--|--|
 | gg | http://www.google.com |
@@ -234,6 +235,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0Njg4NjIxLDExMTgxNTgyMDEsLTIwOD
-g3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTkyNzU3NjAxOCwyMDQ2ODg2MjEsMTExOD
+E1ODIwMSwtMjA4ODc0NjYxMl19
 -->
