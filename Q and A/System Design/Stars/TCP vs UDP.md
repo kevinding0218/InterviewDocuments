@@ -1,13 +1,13 @@
 ### TCP and UDP
 #### Why we talks about TCP vs UDP
 - there are **many protocols out there is http, there's http2 there's grpc**, etc but **those two are the building blocks and the fundamentals of everything that comes on top**
-- if you understand that you pick UDP over TCP then you will be okay to **pick quick which is on top of UDP**, otherwise you would pick for example http which is on top of tcp, or grpc which is on top of http 2 which is also on top of tcp
+- if you understand that you pick UDP over TCP then you will be okay to **pick quick which is on top of UDP**, otherwise you would pick for example **http which is on top of tcp, or grpc which is on top of http 2 which is also on top of tcp**
 #### UDP
 - UDP protocol **does not guarantee you are getting all the packets and order is not guaranteed**. But because UDP throws all the error-checking stuff out, it is faster.
 - For example, **you send a packet and you just forget about it** right? The only guarantee that udp gives you is i can tell you if the packet arrived correctly or not, i'm not gonna retry,  i'm not gonna check if you can handle the letter a or not, i'm not going to do any flaw control, i'm going to do any re-transmission if it fails, i don't know if you even get it or not, it does the job that just send the package
 #### TPC
-- TCP protocol guarantees delivery of data and also guarantees that packets will be delivered in the same order in which they were sent, it tries to solve the problems up in the udp
-- Let's taste how tcp does, it first tries to establish a connection, hey server are you even there? let me check oh i can't just send stuff, let me establish a connection first. TCP actually creates a physical connection between the two and it actually reserves some memory on the server side, says hey sen i am going to start my sequence with the within my packets with the number hundred right? and then the server say okay i acknowledge that that means i received that and then, this is a stateful protocol there's a state on the server
+- TCP protocol **guarantees delivery of data and also guarantees that packets will be delivered in the same order in which they were sent, it tries to solve the problems up in the udp**
+- Let's taste how tcp does, it first **tries to establish a connection**, hey server are you even there? let me check oh i can't just send stuff, let me establish a connection first. TCP actually creates a physical connection between the two and it actually reserves some memory on the server side, says hey sen i am going to start my sequence with the within my packets with the number hundred right? and then the server say okay i acknowledge that that means i received that and then, **this is a stateful protocol there's a state on the server(HandShake)**
 ### Which one to choose?
 - If we want rate limiting solution to **be more accurate**, but with a little bit of **performance overhead**, we need to go with **TCP**.
 - If we ok to have a bit **less accurate** solution, but the one that **works faster**, UDP should be our choice.
@@ -23,6 +23,6 @@ completely different message, especially if you need to do some encryption,it's 
 ### Building a Game using UDP
 - a game however on the other end if i am building a game multiplayer game between two parties you can still use tcp and websocket on http however **be be sure that there will be some lags** right? because **those lags are because of the expense of the acknowledgement or because of the expense of the flow control and other stuff as well**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc1NDAxNDk2LC02NDQ0NjI2MDIsMTcyMz
-M2Njk0XX0=
+eyJoaXN0b3J5IjpbLTEyNTI3MjA5MTgsLTY0NDQ2MjYwMiwxNz
+IzMzY2OTRdfQ==
 -->
