@@ -107,10 +107,14 @@ A	-	B
 |
 C	-	D
 ```
-- And one such option is to use a gossip protocol. This protocol is based on the way that epidemics spread.
-Computer systems typically implement this type of protocol with a form of random "peer selection": with a given frequency, each machine picks another machine at random and shares data. B picks A, A picks C, C picks D
+- This protocol is based on the way that epidemics spread. Computer systems typically implement this type of protocol with a form of random "peer selection": with a given frequency, each machine picks another machine at random and shares data. B picks A, A picks C, C picks D
 - By the way, rate limiting solution at Yahoo uses this approach.
-4. Distributed Cache
+3. Distributed Cache
+```
+A	B
+		-> In memory store (e.g. Redis)
+C	D
+```
 - Next option is to use distributed cache cluster. For example, Redis. Or we can implement custom distributed cache solution.
 - The pros for this approach is that distributed cache cluster is relatively small and our service cluster can scale out independently.
 - This cluster can be shared among many different service teams in the organization. Or each team can setup their own small cluster.
@@ -252,6 +256,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUxNzM2Nzg1LDk0MjA3ODk2MywtMjA4OD
-c0NjYxMl19
+eyJoaXN0b3J5IjpbLTE1MjIxMDA1MzcsNTUxNzM2Nzg1LDk0Mj
+A3ODk2MywtMjA4ODc0NjYxMl19
 -->
