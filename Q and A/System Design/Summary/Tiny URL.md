@@ -6,9 +6,11 @@
 - **Discussion**: Users should optionally be able to pick a custom short link for their URL.
 #### Non Functional
 - High Availablity: if our service is down, all the URL redirections will start failing.
-- High Performant: with minimal latency
+- High Performant: with minimal latency < 200ms
+- Discussion High Secure: not predictable
+- Discussion: Expose to external service or just internal application usage
 - **Daily Usage** (QPS + Storage)
-	- Ask interviewer daily active user (DAU)
+	- Ask interviewer daily active user (DAU) or discuss that we assu
 		- nearly 100M
 	- Estimate QPS for generating one tiny URL
 		- suppose each user post 0.1 twitter that includes a tiney URL
@@ -23,5 +25,5 @@
 		- average storage for a tiny url like 100 bytes, total of 1G
 		- 1T hard disk be used for 3 years
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMyNzUxNzQ0LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMjI2MTcxOTEzLC0yMDg4NzQ2NjEyXX0=
 -->
