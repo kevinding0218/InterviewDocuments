@@ -201,6 +201,9 @@ public String longToShort(String url) {
        ```
 - How to query Long Url if using ID?
 - How to query ID if using Long URL?
+### DB Cleanup
+- we can slowly remove expired links and do a lazy cleanup. Our service will make sure that only expired links will be deleted, although some expired links can live longer but will never be returned to users.
+- 
 ### Scale - Multi Region
 - we can continue improving the performance in **communication between web server and database**
 - Communication between Centralized DB set and cross region Web Server is slow
@@ -246,6 +249,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMjA0ODA5MiwxOTI3NTc2MDE4LDIwND
-Y4ODYyMSwxMTE4MTU4MjAxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE2MDk4OTMyOTQsMTkyNzU3NjAxOCwyMD
+Q2ODg2MjEsMTExODE1ODIwMSwtMjA4ODc0NjYxMl19
 -->
