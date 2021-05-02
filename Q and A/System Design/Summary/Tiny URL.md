@@ -51,31 +51,30 @@
 			- For tiny url, not high expectation
 	- Schema data list in detail
 
-#### Algorithm
-1. Hashing function (**No** because of conflict)
-	- get long URL last 6 digets of MD5
-	- advantage: fast
-	- disadvantage: hard to design a non-conflict hashing algorithm
-2. Randomly generate a short URL + remove replicate in database
-	- Generate a 6 diget short url randomly, if not has been used, bind it to long url
-	```
-	public String longToShort(String url) {
-		while(true) {
-			String shortURL = randomShortURL();
-			if (!database.filter(shortURL=shortURL).existed()) {
-				database.create(shortURL=shortURL, longURL = url);
-				return shortURL;
-			}
+### Algorithm
+#### Hashing function (**No** because of conflict)
+- get long URL last 6 digets of MD5
+- Pros: fast
+- Cons: hard to design a **non-conflict hashing algorithm**
+#### Randomly generate a short URL + remove replicate in database
+- Generate a 6 diget short url randomly, if not has been used, bind it to long url
+```
+public String longToShort(String url) {
+	while(true) {
+		String shortURL = randomShortURL();
+		if (!database.filter(shortURL=shortURL).existed()) {
+			database.create(shortURL=shortURL, longURL = url);
+			return shortURL;
 		}
 	}
-	```
-	-	advantage: simple implementation
-	-	disadvantage: with more data coming, speed become slower
-3. Convert to Base62
-- Base 62
-	- consider a 62-digit number (0-9, a-z, A-Z) for the 6 digit short url
-	- every short url refers to an Integer
-	- this integer can be mapping as primary key in database - Sequential ID
+}
+```
+- Pros: simple implementation
+- Cons: with more data coming, speed become slower
+#### Convert to Base62
+- consider a **62-digit number (0-9, a-z, A-Z) for the 6 digit short url**
+- every short url refers to an Integer
+- this integer can be mapping as primary key in database - Sequential ID
 	```
 	int shortURLtoID(String shortURL) {
 		int id = 0;
@@ -97,11 +96,11 @@
 		return short_url;
 	}
 	```
-- how many URL can the 6 digit short url represent?
+- **how many URL can the 6 digit short url represent?**
 	- 5 digits = 62 ^ 5 = 0.9B
 	- 6 digits = 62 ^ 6 = 57B
 	- 7 digits = 62 ^ 7 = 3.5T
-- advantage: better performance
+- P: better performance
 - disadvantage: rely to auto-increment global ID (need a single database table for auto-increment id)
 
 ### database design
@@ -235,6 +234,6 @@
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1OTYyODAwMCwxMTE4MTU4MjAxLC0yMD
-g4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTc1MTkzNDYsMTExODE1ODIwMSwtMjA4OD
+c0NjYxMl19
 -->
