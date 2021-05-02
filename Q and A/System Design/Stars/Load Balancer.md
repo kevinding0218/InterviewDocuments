@@ -13,6 +13,13 @@ Distributed-Msg-Queue.domain.com
 Client	-	VIP2 LoadBalancer B - 	FrontEnd-Host-3/4.domain.com	- Data Center B
 		\	VIP3 LoadBalancer C - 	FrontEnd-Host-5/6.domain.com	- Data Center C
 ```
+### Round Robin
+- Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way.  
+-  It is simple, easy to implement, and starvation-free as all processes get fair share of CPU.  
+- One of the most commonly used technique in CPU scheduling as a core.  
+- It is preemptive as processes are assigned CPU only for a fixed slice of time at most.  
+- The disadvantage of it is more overhead of context switching, server load is not taken into consideration. If a server is
+overloaded or slow, the LB will not stop sending new requests to that server
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNzY1Njc5Ml19
+eyJoaXN0b3J5IjpbLTkzODQ4MjY1Nl19
 -->
