@@ -125,11 +125,16 @@ A	B
 C - D
 (leader C)
 ```
-- A coordination service that **helps to choose a leader**. Choosing a leader helps to decrease number of messages broadcasted within the cluster. Leader asks everyone to send it all the information. And then it calculates and sends back the final result. E.g: Cordination Service choose Host C and let C be responsible for A, B & D, So, each host only needs to talk to a leader or a set of leaders, where each leader is responsible for its own range of keys.  
-- but the main drawback is that we need to setup and maintain Coordination Service. Coordination service is typically a very sophisticated component that has to be very reliable and make sure one and only one leader is elected.
-6. Random Leader Selection
+- A coordination service that **helps to choose a leader**. Choosing a leader helps to decrease number of messages broadcasted within the cluster. **Leader asks everyone to send it all the information. And then it calculates and sends back the final result**. E.g: Cordination Service choose Host C and let C be responsible for A, B & D, So, each host only needs to talk to a leader or a set of leaders, where each leader is responsible for its own range of keys.  
+- but the main drawback is that we need to setup and maintain Coordination Service. **Coordination service is typically a very sophisticated component that has to be very reliable and make sure one and only one leader is elected**.
+5. Random Leader Selection
+```
+A(L)- 	B
+|	\	|
+C	-	D(L)
+```
 - Let’s say we use a simple algorithm to elect a leader. But because of the simplicity of the algorithm it may not guarantee one and only one leader. So that we may end up with multiple leaders being elected.
-- Is this an issue? Actually, no. Each leader will calculate rate and share with everyone else. This will cause unnecessary messaging overhead, but each leader will have its own correct view of the overall rate. And to finish message broadcasting discussion, I want to talk about communication protocols, how hosts talk to each other.
+- Is this an issue? Actually, no. **Each leader will calculate rate and share with everyone else.** This will cause unnecessary messaging overhead, but each leader will have its own correct view of the overall rate. And to finish message broadcasting discussion, I want to talk about communication protocols, how hosts talk to each other.
 ### Algorithm
 - Google Guava RateLimiter class.
 - Fixed and sliding window paradigms
@@ -261,6 +266,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MTk1OTQ4MSw1NTE3MzY3ODUsOTQyMD
-c4OTYzLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbOTgxNzk5NTM0LDU1MTczNjc4NSw5NDIwNz
+g5NjMsLTIwODg3NDY2MTJdfQ==
 -->
