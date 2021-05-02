@@ -133,7 +133,12 @@ public String longToShort(String url) {
 	- cache needs to store two types of data
 		- long to short (for usage when generating short url)
 		- short to long (for usage when query short url)
-	- Which cache eviction policy would best fit our needs? LRU
+	- **Which cache eviction policy would best fit our needs?** 
+		- LRU
+	- **How can each cache replica be updated?** 
+		- Whenever there is a cache miss, our servers would be hitting a backend database. 
+		- Whenever this happens, we can update the cache and pass the new entry to all the cache replicas. 
+		- Each replica can update their cache by adding the new entry. If a replica already has that entry, it can simply ignore it.
 	- **workflow**:
 		1. get http://bit.ly/1Us49DS
 		2. request sends to web server, check this short url in Memcached and if found, return long url
@@ -153,7 +158,12 @@ public String longToShort(String url) {
         CN user   -> DNS -> Web Server <--> Memcached
         ```
         - User visit a webserver would be much slower than webserver visit another webserver, because of less redirection
-    
+ 
+### Load Balancer
+ We can add a Load balancing layer at three places in our system:
+1. Between Clients and Application servers
+2. Between Application Servers and database servers
+3. Between Application Servers and Cache servers
 ### Interviewer: what if one SQL database is out of capacity? (Sharding)
 #### When would we need more database serve**r?
 - Cache resource is out of capacity
@@ -236,6 +246,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTAzMTYxMTksMTkyNzU3NjAxOCwyMD
-Q2ODg2MjEsMTExODE1ODIwMSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTEyMjA0ODA5MiwxOTI3NTc2MDE4LDIwND
+Y4ODYyMSwxMTE4MTU4MjAxLC0yMDg4NzQ2NjEyXX0=
 -->
