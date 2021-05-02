@@ -103,7 +103,7 @@ public String longToShort(String url) {
 - Pros: better performance
 - Cons: rely to auto-increment global ID (need a single database table for auto-increment id)
 
-### database design
+### Database design
 #### random generator + check existence
 - need query Short url based on Long url, also need to query Long url based on Short url
 - if choose SQL database, table will 
@@ -235,6 +235,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIwNTUzMjg3LDE5Mjc1NzYwMTgsMjA0Nj
-g4NjIxLDExMTgxNTgyMDEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTEyMDIzMTAyOTcsMTkyNzU3NjAxOCwyMD
+Q2ODg2MjEsMTExODE1ODIwMSwtMjA4ODc0NjYxMl19
 -->
