@@ -45,7 +45,7 @@
 		- **How much expectation in QPS?**
 			- NoSQL has better performance
 			- 2k is not a high expectation, can use Cache for reading, much less write (SQL + 1)
-		- How much expectation in scalability?
+		- How much expectation in **scalability**?
 			- SQL needs developer to scale (consistent hashing with horizontal virtual node)
 			- NoSQL does these for you
 			- For tiny url, not high expectation
@@ -105,20 +105,21 @@
 - disadvantage: rely to auto-increment global ID (need a single database table for auto-increment id)
 
 ### database design
-1. random generator + check existence
+#### random generator + check existence
 - need query Short url based on Long url, also need to query Long url based on Short url
 - if choose SQL database, table will 
+- 
 |shortKey| longUrl |
 |--|--|
 | a0B4Lb | http://www.facebook.com |
 | Df523P| http://www.google.com |
-	- need to indexing on both shortKey and longUrl
+	- need to **indexing on both shortKey and longUrl**
 - if choose NoSQL database, but will need two tables
 	- 1st table, query Short based on Long
 		- row_key=longURL, column_key=shortURL, value=null or timestamp
 	- 2nd table, query Long based on Short
 		- row_key=shortURL, column_key=longURL, value=null or timestamp
-2. base62
+#### base62
 - because this will be used of sequential ID, can only choose SQL database
 - shortURL doesn't need to store in table because it can be calculated based on id
 |id| longUrl(index=true |
@@ -234,6 +235,6 @@
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNzYwODk5NiwxMTE4MTU4MjAxLC0yMD
+eyJoaXN0b3J5IjpbMTA1OTYyODAwMCwxMTE4MTU4MjAxLC0yMD
 g4NzQ2NjEyXX0=
 -->
