@@ -45,7 +45,6 @@ request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Process
 - And store rules in memory. 
 - And we need a component that makes a decision. 
 - You may argue whether we need the client identifier builder as a separate component or should it just be a part of the decision-making component. It is up to you.
-### Object-Oriented Design
 #### Class and Interface
 1. **Job Scheduler** interface is responsible for scheduling a job that runs every several seconds and retrieves rules from Rules service.
 	1.2 RetrieveJobScheduler class implements JobScheduler interface. Its responsibility is to instantiate, start and stop the 	scheduler. And to run retrieve rules task periodically.
@@ -53,8 +52,8 @@ request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Process
 	ScheduledExecutorService
 	RetrieveRulesTask
 	```
-	1.3 RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service for retrieving all the rules for this service. It then creates token buckets and puts them into the cache.
-2. RulesCache interface is responsible for storing rules in memory.
+	1.3 RetrieveJobScheduler runs RetrieveRulesTask, which **makes a remote call to the Rules service** for retrieving all the rules for this service. It then **creates token buckets and puts them into the cache**.
+2. **RulesCache** interface is responsible for storing rules in memory.
 	- TokenBucketCache class implements RulesCache, it is responsible for storing token bucket objects, Map / ConcurrentHashMap / Google Guava Cache
 3. ClientIdentifier Interface builds a key that uniquely identifies a client.
 	- ClientIdentifierBuilder implements ClientIdentifier, it is responsible for building a key based on user identity information (for example login). There can be other implementations as well, for example based on IP address or retrieve client identity information from request context
@@ -239,6 +238,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDYyMjQ1MDYsOTQyMDc4OTYzLC0yMD
+eyJoaXN0b3J5IjpbLTE5NjE1MDc2NDcsOTQyMDc4OTYzLC0yMD
 g4NzQ2NjEyXX0=
 -->
