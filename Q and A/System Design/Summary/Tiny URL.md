@@ -3,7 +3,7 @@
 - Having a service to generate a shorter and unique url link by given a URL input - `UrlService.encode(long_url)`
 - Redirect user to original link when client tries to access with provided shorten url - `UrlService.decode(short_url)`
 - **Discussion**: Should shorten url link be expire or does it have a Time To Live? Who would make the decision? User or Us?
-- **Discussion**: Users should optionally be able to pick a custom short link for their URL.
+- **Discussion**: Users should optionally be able to pick a custom short link for their URL. `URlService.createCustomTinyURL(String longUrl, String customName);`
 #### Non Functional
 - High Availablity: if our service is down, all the URL redirections will start failing.
 - High Performant: with minimal latency < 200ms
@@ -235,6 +235,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNzU3NjAxOCwyMDQ2ODg2MjEsMTExOD
-E1ODIwMSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTIxNjk3NzI4NywxOTI3NTc2MDE4LDIwND
+Y4ODYyMSwxMTE4MTU4MjAxLC0yMDg4NzQ2NjEyXX0=
 -->
