@@ -22,9 +22,32 @@ completely different message, especially if you need to do some encryption,it's 
 - a game however on the other end if i am building a game multiplayer game between two parties you can still use tcp and websocket on http however **be be sure that there will be some lags** right? because **those lags are because of the expense of the acknowledgement or because of the expense of the flow control and other stuff as well**
 ### Building a Gossip Communication using UDP
 - For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
-#### Cons of TCP
+#### Cons of TCP (HTTP2)
 - tcp was doing way too much for us that we don't really need this level of thing with http 2 specifically. 
+- HTTP2  we have this idea of streams right?  the packets are packaged into its own applic layer seven packet that has
+an id called stream id or say okay, i'm sending a GET or POST request tag it with stream number 7 whatever, so you can send three requests at the same timehowever to the tcp layer
+this is just data this is just garbage
+data it doesn't know that
+oh this is stream one this is stream
+stream seven this stream is there's
+no no it doesn't have stuff it knows
+that this is packet this is packet this
+is back at this these are packets
+and guess what if stream
+nine packets received successfully
+but stream 8 and 7 was not
+for some reason the server will actually
+pause and say hey
+i received this packet but the sequence
+because they are labeled with the
+sequences right
+this i don't receive this or this i'm
+gonna wait
+for you to send all the stuff because oh
+i i receive back packet let's say packet
+number
+nine is like stream number nine is
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY3MTI2NzA5LC0xMzQ3MDk1OTAsLTY0ND
-Q2MjYwMiwxNzIzMzY2OTRdfQ==
+eyJoaXN0b3J5IjpbNDc4NDE1ODAsLTEzNDcwOTU5MCwtNjQ0ND
+YyNjAyLDE3MjMzNjY5NF19
 -->
