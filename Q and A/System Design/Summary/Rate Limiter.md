@@ -21,8 +21,13 @@
 #### Start from Simple
 - let’s implement a rate limiting solution for a single server first. So, no communication between servers just yet
 ```
-									Throttle Rule Ca
+									Throttle Rule Cache	-> Throttle Rules Retriever -> Rule Service -> Rule Databases (ClientA is allowed to make 500 request per second)
+											|
 request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Processor
+											|
+										  reject	-> QUEUE
+ 503 (service unavailable)
+ 429 (too many requests)
 ```
 #### Rules Retriever
 - Each rule specifies a number of requests allowed for a particular client per second.
@@ -230,5 +235,5 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MTEwMTAwMSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbOTQyMDc4OTYzLC0yMDg4NzQ2NjEyXX0=
 -->
