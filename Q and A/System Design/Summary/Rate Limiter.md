@@ -55,7 +55,7 @@ request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Process
 3. **ClientIdentifier** Interface builds a key that uniquely **identifies a client.**
 	- **class ClientIdentifierBuilder** implements ClientIdentifier, it is responsible for **building a key based on user identity information (for example login)**. There can be other implementations as well, for example **based on IP address or retrieve client identity information from request context**
 4. **RateLimiter Interface** is responsible for decision making.
-	-	**TokenBucketRateLimiter class** implements RateLimiter, it is responsible for retrieves token bucket from cache, and calls allowRequest() on the bucket
+	-	**TokenBucketRateLimiter class** implements RateLimiter, it is responsible for **retrieves token bucket from cache**, and calls **allowRequest()** on the bucket
 #### Interaction
 1. RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service. It then creates token buckets and puts them into the cache.
 2. When client request comes to the host, RateLimiter first makes a call to the ClientIdentifierBuilder to build a unique identifier for the client.
@@ -64,7 +64,7 @@ request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Process
 ### Distributed World
 #### How we can make rate limiting work across many machines in a cluster.
 - We have a cluster that consists of 3 hosts. And we want rate limiting solution to **allow 4 requests per second for each client**. How many tokens should we give to a bucket on every host? Should we give 4 divided by 3?
-- Answer is 4. Each bucket should have 4 tokens initially. The reason for this is that all requests for the same bucket may in theory land on the same host. Load balancers try to distributed requests evenly, but they do not know anything about keys, and requests for the same key will not be evenly distributed.  
+- Answer is 4. **Each bucket should have 4 tokens initially**. The reason for this is that all requests for the same bucket may in theory land on the same host. Load balancers try to distributed requests evenly, but they do not know anything about keys, and requests for the same key will not be evenly distributed.  
 #### Simulation
 - Let's add load balancer into the picture and run a very simple simulation. 
 	- The first request goes to host A, one token is consumed. Remaining 3 tokens
@@ -235,6 +235,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEzOTU1NzM5LDk0MjA3ODk2MywtMjA4OD
-c0NjYxMl19
+eyJoaXN0b3J5IjpbMTI4OTUzNjc5NSw5NDIwNzg5NjMsLTIwOD
+g3NDY2MTJdfQ==
 -->
