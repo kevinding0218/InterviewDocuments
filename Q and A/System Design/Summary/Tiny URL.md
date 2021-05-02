@@ -127,22 +127,22 @@ public String longToShort(String url) {
 | 2| http://www.google.com |
 
 ### Interviewr: how to reduce response time
-- Scale
-1. Read more than write
-	- use cache aside to improve the speed
+#### Scale
+1. **Read more than write**
+	- use **cache** aside to improve the speed
 	- cache needs to store two types of data
 		- long to short (for usage when generating short url)
 		- short to long (for usage when query short url)
-	- workflow:
+	- **workflow**:
 		1. get http://bit.ly/1Us49DS
 		2. request sends to web server, check this short url in Memcached and if found, return long url
 		3. if not found in Memcached, check this short url in SQL database and return
 		4. server return to user with http 301 redirect
-2. Geo info usage
+2. **Geo info usage**
 	- improve service visit time
 		- use different web servers in different districts
 		- use DNS to decode users across regions to different servers
-		- e.g if user's long url is an asia website, your server is in U.S, putting it in U.S server meaning user's request has to decode the url in U.S server then redirect to asia
+		- **e.g if user's long url is an asia website, your server is in U.S, putting it in U.S server meaning user's request has to decode the url in U.S server then redirect to asia**
 	- improve data visit time
 		- use Centralized SQL database + Distributed Memcached
 		- One SQL database with many Memcache, distributed across regions
@@ -234,6 +234,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNjY2MjkyMCwxMTE4MTU4MjAxLC0yMD
-g4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE5MDU3NjE2ODUsMTExODE1ODIwMSwtMj
+A4ODc0NjYxMl19
 -->
