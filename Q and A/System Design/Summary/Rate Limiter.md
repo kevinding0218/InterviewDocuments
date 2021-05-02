@@ -116,9 +116,8 @@ A	B
 C	D
 ```
 - Next option is to use distributed cache cluster. For example, Redis. Or we can implement custom distributed cache solution.
-- The pros for this approach is that distributed cache cluster is relatively small and our service cluster can scale out independently.
-- This cluster can be shared among many different service teams in the organization. Or each team can setup their own small cluster.
-- - In case of a rally large clusters, like tens of thousands of hosts, we may no longer rely on host-to-host communication in the service cluster as it becomes costly. And we need a separate cluster for making a throttling decision. This is a distributed cache option we discussed above. But the drawback of this approach is that it increases latency and operational cost. It would be good to have these tradeoff discussions with your interviewer.
+- **The pros for this approach is that distributed cache cluster is relatively small and our service cluster can scale out independently**. This cluster can be shared among many different service teams in the organization. Or each team can setup their own small cluster.
+- In case of a rally large clusters, like tens of thousands of hosts, we may no longer rely on host-to-host communication in the service cluster as it becomes costly. And we need a separate cluster for making a throttling decision. This is a distributed cache option we discussed above. But the drawback of this approach is that it **increases latency and operational cost**. It would be good to have these tradeoff discussions with your interviewer.
 5. Coordination Service
 - A coordination service that helps to choose a leader. Choosing a leader helps to decrease number of messages broadcasted within the cluster. Leader asks everyone to send it all the information. And then it calculates and sends back the final result. E.g: Cordination Service choose Host C and let C be responsible for A, B & D, So, each host only needs to talk to a leader or a set of leaders, where each leader is responsible for its own range of keys.  
 - but the main drawback is that we need to setup and maintain Coordination Service. Coordination service is typically a very sophisticated component that has to be very reliable and make sure one and only one leader is elected.
@@ -256,6 +255,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjIxMDA1MzcsNTUxNzM2Nzg1LDk0Mj
+eyJoaXN0b3J5IjpbLTE2MTI5MDM3OTUsNTUxNzM2Nzg1LDk0Mj
 A3ODk2MywtMjA4ODc0NjYxMl19
 -->
