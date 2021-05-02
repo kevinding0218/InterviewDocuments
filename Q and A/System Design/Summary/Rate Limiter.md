@@ -74,16 +74,16 @@ request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Process
 	4			4		4
 	3			2		3
 	3-3			2-2		3-3
-	0			0			0
+	0			0		0
 ```
-	- The first request goes to host A, one token is consumed. Remaining 3 tokens
-	- The second request goes to host C and one token is consumed there.  Remaining 3 tokens
-	- Two other requests, within the same 1 second interval, go to host B. And take two tokens from the bucket.  Remaining 2 tokens
-	- All 4 allowed requests hit the cluster; we should throttle all the remaining requests for this second. But we still have tokens available. What should we do? **We must allow hosts to talk to each other and share how many tokens they consumed altogether.**
-	- In this case host A will see that other two hosts consumed 3 tokens. And host A will subtract this number from its bucket. Leaving it with 0 tokens available. 
-	- Host B will find out that A and C consumed two tokens already. Leaving host B with 0 tokens as well.
-		- And the same logic applies to host C, C will find out that A and B consumed 3 tokens already, leaving host C with 0 tokens. Now everything looks correct.
-		- 4 requests have been processed and no more requests allowed.
+- The first request goes to host A, one token is consumed. Remaining 3 tokens
+- The second request goes to host C and one token is consumed there.  Remaining 3 tokens
+- Two other requests, within the same 1 second interval, go to host B. And take two tokens from the bucket.  Remaining 2 tokens
+- All 4 allowed requests hit the cluster; we should throttle all the remaining requests for this second. But we still have tokens available. What should we do? **We must allow hosts to talk to each other and share how many tokens they consumed altogether.**
+	- In this case **host A will see that other two hosts consumed 3 tokens**. And **host A will subtract this number from its bucket**. Leaving it with 0 tokens available. 
+	- **Host B will find out that A and C consumed two tokens already**. Leaving host B with 0 tokens as well.
+	- And the same logic applies to host C, C will find out that A and B consumed 3 tokens already, leaving host C with 0 tokens. Now everything looks correct.
+	- 4 requests have been processed and no more requests allowed.
 - We gave each bucket 4 tokens. If many requests for the same bucket hit our cluster exactly at the same second. Does this mean that 12 requests may be processed, instead of only 4 allowed? Or may be a more realistic scenario. Because communication between hosts takes time, until all hosts agree on what that final number of tokens must be, may there be any requests that slip into the system at that time?
 - Yes. Unfortunately, this is the case. We should expect that sometimes our system may be processing more requests than we expect and we need to scale out our cluster accordingly.
 - By the way, the token bucket algorithm will still handle this use case well. We just need to slightly modify it to allow negative number of available tokens. 
@@ -243,6 +243,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NTQyMDI4LDk0MjA3ODk2MywtMjA4OD
+eyJoaXN0b3J5IjpbODI1ODU4OTk2LDk0MjA3ODk2MywtMjA4OD
 c0NjYxMl19
 -->
