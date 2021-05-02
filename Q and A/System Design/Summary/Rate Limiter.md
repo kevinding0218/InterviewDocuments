@@ -159,11 +159,11 @@ Service Host = Service Process && Rate Limiter Process
 Service Host = Service Process && Rate Limiter Client + Rate Limiter Process
 ```
 ##### Pros
-- programming language agnostic. It means that Rate Limiter daemon can be written on a programming language that may be different from the language we use for the service implementation. As we do not need to do integration on the code level. Yes, we need to have Rate Limiter client compatible with the service code language. But not the daemon itself.
-- Also, Rate Limiter process uses its own memory space. This isolation helps to better control behavior for both the service and the daemon. For example, daemon my store many buckets in memory, but because the service process has its own memory space, the service memory does not need to allocate space for these buckets. Which makes service memory allocation more predictable.
-- Another good reason, and you may see it happening a lot in practice, service teams tend to be very cautious when you come to them and ask to integrate their service with your super cool library. You will hear tons of questions. Like how much memory and CPU your library consumes? What will happen in case of a network partition or any other exceptional scenario? Can we see results of the load testing for your library? What are your mom’s favorite flowers? And many many other questions. These questions are also applicable to the daemon solution. But it is easier to guarantee that the service itself will not be impacted by any bugs that
+- programming language agnostic. It means that **Rate Limiter daemon can be written on a programming language that may be different from the language we use for the service implementation**. As we do not need to do integration on the code level. Yes, we need to have Rate Limiter client compatible with the service code language. But not the daemon itself.
+- Also, **Rate Limiter process uses its own memory space**. This isolation helps to better control behavior for both the service and the daemon. For example, daemon my store many buckets in memory, but because the service process has its own memory space, the service memory does not need to allocate space for these buckets. Which makes service memory allocation more predictable.
+- Another good reason, and you may see it happening a lot in practice, **service teams tend to be very cautious when you come to them and ask to integrate their service with your super cool library**. You will hear tons of questions. Like how much memory and CPU your library consumes? What will happen in case of a network partition or any other exceptional scenario? Can we see results of the load testing for your library? What are your mom’s favorite flowers? And many many other questions. These questions are also applicable to the daemon solution. But it is easier to guarantee that the service itself will not be impacted by any bugs that
 may be in the Rate Limiter library.
-- As you may see, strengths of the first approach become weaknesses of the second approach. And vice versa.
+- As you may see, **strengths of the first approach become weaknesses of the second approach. And vice versa.**
 #### Summary
 - Both are good options and it really depends on the use cases and needs of a particular service team. 
 - By the way, the second approach, when we have a daemon that communicates with other hosts in the cluster is a quite popular pattern in distributed systems. For example, it is widely used to implement auto discovery of service hosts, when hosts in a cluster identify each other.
@@ -202,6 +202,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMjY1ODM1Miw2NjcwNDQxNjIsNTUxNz
-M2Nzg1LDk0MjA3ODk2MywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTU3ODYxNzc2LDY2NzA0NDE2Miw1NTE3Mz
+Y3ODUsOTQyMDc4OTYzLC0yMDg4NzQ2NjEyXX0=
 -->
