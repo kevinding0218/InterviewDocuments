@@ -14,8 +14,26 @@
 ### Building a Gossip Communication using UDP
 - For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
 ### Building a Chat App using TCP
-- 
+- Let's say we're building a chatting app right, we're building it peer-to-peer, like we need some some centralized place
+where you're gonna send your message right and then another party will join the same server and then they can exchange
+the messages between them
+- So if you're going to use udp to build a chatting app then you are in trouble if you get if if
+you used
+udp as its raw protocol as
+is you might send high and you might be
+lucky
+and the server receives the hi and then
+finds out who to send it to and then
+it sends it to the to the to the actual
+server to the actual um
+client right assuming there is a udp
+server right here
+then the client might get you might get
+the actual message correctly
+if we're lucky or a bit or two might
+have flipped and you're gonna get a
+completely different message
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTYwNjA2MzYsLTY0NDQ2MjYwMiwxNz
-IzMzY2OTRdfQ==
+eyJoaXN0b3J5IjpbLTI2NDQwNzI2NSwtNjQ0NDYyNjAyLDE3Mj
+MzNjY5NF19
 -->
