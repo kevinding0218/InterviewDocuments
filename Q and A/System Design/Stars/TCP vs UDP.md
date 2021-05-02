@@ -11,8 +11,11 @@
 ### Which one to choose?
 - If we want rate limiting solution to **be more accurate**, but with a little bit of **performance overhead**, we need to go with **TCP**.
 - If we ok to have a bit **less accurate** solution, but the one that **works faster**, UDP should be our choice.
+### Building a Gossip Communication using UDP
 - For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
+### Building a Chat App using TCP
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTEyMzE0MzksLTY0NDQ2MjYwMiwxNz
+eyJoaXN0b3J5IjpbLTE2OTYwNjA2MzYsLTY0NDQ2MjYwMiwxNz
 IzMzY2OTRdfQ==
 -->
