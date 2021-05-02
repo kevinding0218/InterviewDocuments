@@ -166,7 +166,7 @@ may be in the Rate Limiter library.
 - As you may see, **strengths of the first approach become weaknesses of the second approach. And vice versa.**
 #### Summary
 - Both are good options and it really depends on the use cases and needs of a particular service team. 
-- By the way, the second approach, when we have a daemon that communicates with other hosts in the cluster is a quite popular pattern in distributed systems. For example, it is widely used to implement auto discovery of service hosts, when hosts in a cluster identify each other.
+- By the way, the second approach, when we have a daemon that communicates with other hosts in the cluster is a quite popular pattern in distributed systems. **For example, it is widely used to implement auto discovery of service hosts, when hosts in a cluster identify each other.**
 ### Other question
 #### Bucket in memory
 - In theory, it is possible that many token buckets will be created and stored in memory.
@@ -189,19 +189,19 @@ from memory. And bucket will be re-created again when client makes a new request
 - As for synchronization, there may be several places where we need it. 
 	- First, we have synchronization in the token bucket. There is a better way to implement thread-safety in that class, using for example atomic references. 
 	- Another place that may require synchronization is the token bucket cache. As we mentioned before, if there are too many buckets stored in the cache and we want to delete unused buckets and re-create them when needed, we will end up with synchronization.
-	- So, we may need to use concurrent hash map, which is a thread safe equivalent of the hash map in Java.
+	- So, **we may need to use concurrent hash map**, which is a thread safe equivalent of the hash map in Java.
 - In general, no need to be afraid of the synchronization in both those places. It may become a bottleneck eventually, but only for services with insanely large requests per second rate.
 - For most services out there even the simplest synchronization implementation does not add to much overhead.
 #### Todo with Throttled Calls
-- There are several options, as always. Clients may queue such requests and re-send them later. Or they can retry throttled requests. But do it in a smart way, and this smart way is called exponential backoff and jitter. 
-	- An exponential backoff algorithm retries requests exponentially, increasing the waiting time between retries up to a maximum backoff time. In other words, we retry requests several times, but wait a bit longer with every retry attempt.
-	- Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
+- There are several options, as always. **Clients may queue such requests and re-send them later. Or they can retry throttled requests**. But do it in a smart way, and this smart way is called exponential backoff and jitter. 
+	- An **exponential backoff algorithm retries requests exponentially**, increasing the waiting time between retries up to a maximum backoff time. In other words, we retry requests several times, but wait a bit longer with every retry attempt.
+	- **Jitter adds randomness to retry intervals to spread out the load**. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
 ### Summary
 - Service owners can use a self-service tools for rules management. Rules are stored in the database.
 - On the service host we have rules retriever that stores retrieved rules in the local cache.
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3ODYxNzc2LDY2NzA0NDE2Miw1NTE3Mz
-Y3ODUsOTQyMDc4OTYzLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTI2NjY5Nzg0MCw2NjcwNDQxNjIsNTUxNz
+M2Nzg1LDk0MjA3ODk2MywtMjA4ODc0NjYxMl19
 -->
