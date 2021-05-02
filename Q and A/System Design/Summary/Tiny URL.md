@@ -53,8 +53,8 @@
 ### Architecture
 ```
 Client -> LB -> UrlService -> LB -> Cache Server
-					|
-				
+					|					Database
+				KV DB				Cleanup Service
 ```
 ### Algorithm
 #### Hashing function (**No** because of conflict)
@@ -256,6 +256,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MzMyODQwLDE5Mjc1NzYwMTgsMjA0Nj
-g4NjIxLDExMTgxNTgyMDEsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTkxMzQwNTkwNSwxOTI3NTc2MDE4LDIwND
+Y4ODYyMSwxMTE4MTU4MjAxLC0yMDg4NzQ2NjEyXX0=
 -->
