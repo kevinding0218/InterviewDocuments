@@ -10,9 +10,7 @@
 - Let's taste how tcp does, it first **tries to establish a connection**, hey server are you even there? let me check oh i can't just send stuff, let me establish a connection first. TCP actually creates a physical connection between the two and it actually reserves some memory on the server side, says hey sen i am going to start my sequence with the within my packets with the number hundred right? and then the server say okay i acknowledge that that means i received that and then, **this is a stateful protocol there's a state on the server(HandShake)**
 ### Which one to choose?
 - If we want rate limiting solution to **be more accurate**, but with a little bit of **performance overhead**, we need to go with **TCP**.
-- If we ok to have a bit **less accurate** solution, but the one that **works faster**, UDP should be our choice.
-### Building a Gossip Communication using UDP
-- For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
+- If we ok to have a bit **less accurate** solution, but the one that **works faster**, **UDP** should be our choice.
 ### Building a Chat App using TCP
 - Let's say we're building a chatting app right, we're building it peer-to-peer, like we need some some centralized place
 where you're gonna send your message right and then another party will join the same server and then they can exchange
@@ -22,7 +20,9 @@ completely different message, especially if you need to do some encryption,it's 
 - so using tcp to build a chatting app is okay now when i say tcp feel free to use websockets which is on top of http which is on top of tcp, it's absolutely fine you use pure http if you want you don't want bi-directional but like use long polling
 ### Building a Game using UDP
 - a game however on the other end if i am building a game multiplayer game between two parties you can still use tcp and websocket on http however **be be sure that there will be some lags** right? because **those lags are because of the expense of the acknowledgement or because of the expense of the flow control and other stuff as well**
+### Building a Gossip Communication using UDP
+- For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTI3MjA5MTgsLTY0NDQ2MjYwMiwxNz
-IzMzY2OTRdfQ==
+eyJoaXN0b3J5IjpbLTEzNDcwOTU5MCwtNjQ0NDYyNjAyLDE3Mj
+MzNjY5NF19
 -->
