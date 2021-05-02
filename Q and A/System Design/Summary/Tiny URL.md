@@ -193,17 +193,17 @@ public String longToShort(String url) {
 ### Scale - Multi Region
 - we can continue improving the performance in **communication between web server and database**
 - Communication between Centralized DB set and cross region Web Server is slow
-	- e.g Server in Indian to hit database in U.S
+	- e.g Server in India to hit database in U.S
 - Think about user's experience and habits
-	- **When China user hits the URL, will be distributed to Chinese Server**
-	- Because usually Chinese user would visit Chinese website
+	- **When India user hits the URL, will be distributed to Indian Server**
+	- Because usually Indian user would visit Indian website
 	- So we can have **Sharding key based on website GEO region info**
 		- How to get the region info? 
 			- use machine learning to train to find out and grouping top 10k visited website
 			- consider rest of the website based on request region as they are not high demand
-	- What if Chinese user wants to hit U.S website?
-		- Let Chinese server hit U.S data
-		- The major requirement is for letting China to visit Chinese website, system improvement is based on
+	- What if Indian user wants to hit U.S website?
+		- Let Indian server hit U.S data
+		- The major requirement is for **letting India to visit Indian website**, system improvement is based on
 		solving for major requirements
 		```
 		USA user -> DNS -> Web Server <--> Memcached
@@ -234,6 +234,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MzUyNzI5LDExMTgxNTgyMDEsLTIwOD
+eyJoaXN0b3J5IjpbMjA0Njg4NjIxLDExMTgxNTgyMDEsLTIwOD
 g3NDY2MTJdfQ==
 -->
