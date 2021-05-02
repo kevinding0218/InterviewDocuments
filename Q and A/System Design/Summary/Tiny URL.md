@@ -24,39 +24,28 @@
 		- 100M * 0.1 ~ 10M URL daily
 		- average storage for a tiny url like 100 bytes, total of 1G
 		- 1T hard disk be used for 3 years
-#### UrlService
-- TinyURL only needs one UrlService
-- Function Design
-	- UrlService.encode(long_url)
-	- UrlService.decode(short_url)
-- Endpoint Design
-	- Get /<short_url>
-		- Return a Http redirect response
-	- Post /data/shorten/
-		- Data body = {url: http://xxxxxx }
-		- Return short url
 #### Storage
 - How to store and visit data
 	- Select storage structure (SQL or NoSQL)
-		- Does it need to support Transaction?
+		- **Does it need to support Transaction?**
 			- NoSQL doesn't support Transaction
-			- For tiny url, no need (NoSQL + 1)
-		- Does it need a lot SQL Query?
+			- For tiny url, **no need** (NoSQL + 1)
+		- **Does it need a lot SQL Query?**
 			- NoSQL doesn't enrich in Query
 			- Some NoSQL support simple SQL Query
-			- For tiny url, no need (NoSQL + 1)
-		- Save time in infrustructure?
+			- For tiny url, **no need** (NoSQL + 1)
+		- **Save time in infrustructure?**
 			- Most web framework has good compatibility with SQL Database
 			- Less code when use SQL vs NoSQL
-			- For tiny url, no need for complex code (NoSQL + 1)
-		- Does it need Sequential ID?
+			- For tiny url, **no need** for complex code (NoSQL + 1)
+		- **Does it need Sequential ID?**
 			- SQL supports auto-increment Sequential ID, like 1,2,3,4,5 ...
 			- NoSQL ID is not sequential
 			- For tiny url, depends on your algo
-		- How much expectation in QPS?
+		- **How much expectation in QPS?**
 			- NoSQL has better performance
 			- 2k is not a high expectation, can use Cache for reading, much less write (SQL + 1)
-		- How much expectation in scalability/
+		- How much expectation in scalability?
 			- SQL needs developer to scale (consistent hashing with horizontal virtual node)
 			- NoSQL does these for you
 			- For tiny url, not high expectation
@@ -245,5 +234,6 @@
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExODE1ODIwMSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTMzNzYwODk5NiwxMTE4MTU4MjAxLC0yMD
+g4NzQ2NjEyXX0=
 -->
