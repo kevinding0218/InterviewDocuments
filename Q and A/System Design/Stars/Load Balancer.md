@@ -4,7 +4,7 @@
 If a server is not available to take new requests or is not responding or has elevated error rate, LB will stop sending traffic to such a server.
 ### Pros
 - Users experience faster, uninterrupted service. Users won’t have to wait for a single struggling server to finish its previous tasks
-- help us achieve high throughput and availability
+- help us achieve high throughput and availability, only forward traffic to “healthy” backend servers. To monitor the health of a backend server, “health checks” regularly attempt to connect to backend servers to ensure that servers are listening.
 ### How it works
 - When domain name is hit, request is transferred to one of the VIPs registered in DNS for our domain name. VIP is resolved to a load balancer device, which has a knowledge of FrontEnd hosts.
 1. load balancer seems like a single point of failure. What happens if load balancer device goes down?
@@ -21,11 +21,12 @@ Client	-	VIP2 LoadBalancer B - 	FrontEnd-Host-3/4.domain.com	- Data Center B
 ### (Weight) Round Robin
 - Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way, When it reaches the end of the list, it starts over at the beginning 
 - The weighted round-robin scheduling is designed to better handle servers with different processing capacities. Each server is assigned a weight (an integer value that indicates the processing capacity). Servers with higher weights receive new connections before those with less weights and servers with higher weights get more connections than those with less weights.
+### Pros
 -  It is simple, easy to implement, and starvation-free as all processes get fair share of CPU.  
 - One of the most commonly used technique in CPU scheduling as a core.  
 - It is preemptive as processes are assigned CPU only for a fixed slice of time at most.  
 - The disadvantage of it is more overhead of context switching, server load is not taken into consideration. If a server is
 overloaded or slow, the LB will not stop sending new requests to that server
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NjkyNzM5NF19
+eyJoaXN0b3J5IjpbMTAxMjU0MjYzOF19
 -->
