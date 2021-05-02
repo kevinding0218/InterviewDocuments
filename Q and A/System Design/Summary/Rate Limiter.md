@@ -133,8 +133,8 @@ A(L)- 	B
 |	\	|
 C	-	D(L)
 ```
-- Let’s say we use a simple algorithm to elect a leader. But because of the simplicity of the algorithm it may not guarantee one and only one leader. So that we may end up with multiple leaders being elected.
-- Is this an issue? Actually, no. **Each leader will calculate rate and share with everyone else.** This will cause unnecessary messaging overhead, but each leader will have its own correct view of the overall rate. And to finish message broadcasting discussion, I want to talk about communication protocols, how hosts talk to each other.
+- Let’s say we use a simple algorithm to elect a leader. But because of the simplicity of the algorithm **it may not guarantee one and only one leader.** So that we may end up with multiple leaders being elected.
+- Is this an issue? Actually, no. **Each leader will calculate rate and share with everyone else.** This will cause unnecessary messaging overhead, but **each leader will have its own correct view of the overall rate**. And to finish message broadcasting discussion, I want to talk about communication protocols, how hosts talk to each other.
 ### Algorithm
 - Google Guava RateLimiter class.
 - Fixed and sliding window paradigms
@@ -266,6 +266,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgxNzk5NTM0LDU1MTczNjc4NSw5NDIwNz
-g5NjMsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTczMjQ4ODM2Niw1NTE3MzY3ODUsOTQyMD
+c4OTYzLC0yMDg4NzQ2NjEyXX0=
 -->
