@@ -2,7 +2,7 @@
 #### Functional
 - Having a service to generate a shorter and unique url link by given a URL input - `UrlService.encode(long_url)`
 - Redirect user to original link when client tries to access with provided shorten url - `UrlService.decode(short_url)`
-- **Discussion**: Should shorten url link be expire? Who would make the decision? User or Us?
+- **Discussion**: Should shorten url link be expire or does it have a Time To Live? Who would make the decision? User or Us?
 - **Discussion**: Users should optionally be able to pick a custom short link for their URL.
 #### Non Functional
 - High Availablity: if our service is down, all the URL redirections will start failing.
@@ -245,5 +245,6 @@
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNDAyNTc5MiwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE0MzM0MTY2MTAsLTIwODg3NDY2MTJdfQ
+==
 -->
