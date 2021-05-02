@@ -1,7 +1,7 @@
 ### Requirements/Goals
 #### Functional
-- Having a service to generate a shorter and unique url link by given a URL input
-- Redirect user to original link when client tries to access with provided shorten url
+- Having a service to generate a shorter and unique url link by given a URL input - `UrlService.encode(long_url)`
+- Redirect user to original link when client tries to access with provided shorten url - `UrlService.decode(short_url)`
 - **Discussion**: Should shorten url link be expire? Who would make the decision? User or Us?
 - **Discussion**: Users should optionally be able to pick a custom short link for their URL.
 #### Non Functional
@@ -10,7 +10,7 @@
 - Discussion High Secure: not predictable
 - Discussion: Expose to external service or just internal application usage
 - **Daily Usage** (QPS + Storage)
-	- Ask interviewer daily active user (DAU) or discuss that we assu
+	- Ask interviewer daily active user (DAU) or discuss that we assuming this would be high QPS
 		- nearly 100M
 	- Estimate QPS for generating one tiny URL
 		- suppose each user post 0.1 twitter that includes a tiney URL
@@ -25,5 +25,5 @@
 		- average storage for a tiny url like 100 bytes, total of 1G
 		- 1T hard disk be used for 3 years
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI2MTcxOTEzLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE1Mzg4MDk2OCwtMjA4ODc0NjYxMl19
 -->
