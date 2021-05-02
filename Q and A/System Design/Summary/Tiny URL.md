@@ -100,8 +100,8 @@ public String longToShort(String url) {
 	- 5 digits = 62 ^ 5 = 0.9B
 	- 6 digits = 62 ^ 6 = 57B
 	- 7 digits = 62 ^ 7 = 3.5T
-- P: better performance
-- disadvantage: rely to auto-increment global ID (need a single database table for auto-increment id)
+- Pros: better performance
+- Cons: rely to auto-increment global ID (need a single database table for auto-increment id)
 
 ### database design
 #### random generator + check existence
@@ -234,6 +234,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MTkzNDYsMTExODE1ODIwMSwtMjA4OD
-c0NjYxMl19
+eyJoaXN0b3J5IjpbMTUxNjY2MjkyMCwxMTE4MTU4MjAxLC0yMD
+g4NzQ2NjEyXX0=
 -->
