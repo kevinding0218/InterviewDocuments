@@ -1,6 +1,11 @@
 ### Load balancing
 - Load balancing is a big topic. And unless interviewer encourages you to dive deep into load balancing topic, we better not deviate too much from the main question of the interview. Always try to stay focused on what really matters.
-- load balancers will help us achieve high throughput and availability, ensure requests are equally distributed among processing servers at an ideal expectation
+- load balancers will help us achieve high throughput and availability, ensure requests are equally distributed among processing servers at an ideal expectation, also keeps track of the status of all the resources while distributing requests.
+If a server is not available to take new requests or is not responding or has elevated error rate, LB will stop sending traffic to such a server.
+### Pros
+- Users experience faster, uninterrupted service. Users won’t have to wait for a single struggling server to finish its previous tasks
+- help us achieve high throughput and availability
+### How it works
 - When domain name is hit, request is transferred to one of the VIPs registered in DNS for our domain name. VIP is resolved to a load balancer device, which has a knowledge of FrontEnd hosts.
 1. load balancer seems like a single point of failure. What happens if load balancer device goes down?
 2. load balancers have limits with regards to number of requests they can process and number of bytes they can transfer. What happens when our distributed message queue service becomes so popular that load balancer limits are reached?
@@ -21,5 +26,5 @@ Client	-	VIP2 LoadBalancer B - 	FrontEnd-Host-3/4.domain.com	- Data Center B
 - The disadvantage of it is more overhead of context switching, server load is not taken into consideration. If a server is
 overloaded or slow, the LB will not stop sending new requests to that server
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDM1MDc5MTRdfQ==
+eyJoaXN0b3J5IjpbLTgyODAzMjUwOF19
 -->
