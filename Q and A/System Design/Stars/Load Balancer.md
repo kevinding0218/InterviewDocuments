@@ -34,16 +34,16 @@ overloaded or slow, the LB will not stop sending new requests to that server
 - Example
 ```
 RR with time quantum = 20
-Process		Burst Time
-P1			53		
-P2			17
-P3			68
-P4			24
-0 -> 20 -> 37
+Process		Burst Time		Limit Burst Time
+P1			53		=>		53 - 20 = 33 =>	33 - 20 = 13 => Completed
+P2			17		(Completed)
+P3			68		=>		68 - 20 = 48 => 48 - 20 = 28 => 28 - 20 = 8 => Completed
+P4			24		=>		24 - 20 = 4 => COmpleted
+0 -> 20 -> 37 -> 57 -> 77 -> 97 -> 117 -> 121 -> 13
   P1
 
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDgzNDczNTVdfQ==
+eyJoaXN0b3J5IjpbLTQ5NjY1NjkxNF19
 -->
