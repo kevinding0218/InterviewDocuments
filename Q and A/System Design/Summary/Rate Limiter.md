@@ -66,7 +66,12 @@ request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Process
 - We have a cluster that consists of 3 hosts. And we want rate limiting solution to **allow 4 requests per second for each client**. How many tokens should we give to a bucket on every host? Should we give 4 divided by 3?
 - Answer is 4. **Each bucket should have 4 tokens initially**. The reason for this is that all requests for the same bucket may in theory land on the same host. Load balancers try to distributed requests evenly, but they do not know anything about keys, and requests for the same key will not be evenly distributed.  
 #### Simulation
-- Let's add load balancer into the picture and run a very simple simulation. 
+- Let's add **load balancer** into the picture and run a very simple simulation. 
+```
+		Load Balancer
+		/		|		\
+	Host A	  Host B	Host C
+```
 	- The first request goes to host A, one token is consumed. Remaining 3 tokens
 	- The second request goes to host C and one token is consumed there.  Remaining 3 tokens
 	- Two other requests, within the same 1 second interval, go to host B. And take two tokens from the bucket.  Remaining 2 tokens
@@ -235,6 +240,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4OTUzNjc5NSw5NDIwNzg5NjMsLTIwOD
+eyJoaXN0b3J5IjpbMTE2NzM0MDY0OCw5NDIwNzg5NjMsLTIwOD
 g3NDY2MTJdfQ==
 -->
