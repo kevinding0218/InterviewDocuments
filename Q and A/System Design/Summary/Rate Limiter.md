@@ -90,7 +90,7 @@ request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Process
 - When 12 requests hit the system, buckets will start sharing this information. **After sharing, every bucket will have -8 (4-12) tokens and for the duration of the next 2 seconds all requests will be throttled**. So, on average we processed 12 requests within 3 seconds.
 - Although in reality all 12 were processed within the first second. So, communication between hosts is the key. Let’s see how this communication can be implemented.
 ### Ways of sharing info between hosts
-1. Tell every host everything
+1. **Tell every host everything**
 ```
 A	-	B
 |	X	|
@@ -99,10 +99,14 @@ C	-	D
 - It means that every host in the cluster knows about every other host in the cluster and share messages with each one of them. **For cluster A, B, C & D, each cluster will communicate the other**
 - You may also heard a term full mesh that describes this network topology. How do hosts discover each other? When a new host is added, how does everyone else know? And there are several approaches used for hosts discovery.
 - One option is to use **a 3-rd party service which will listen to heartbeats coming from every host. As long as heartbeats come, host is keep registered in the system. If heartbeats stop coming, the service unregister host that is no longer alive.** And all hosts in our cluster ask this 3-rd party service for the full list of members.
-- Another option is to resolve some user provided information. For example, user specifies a VIP and because VIP knows about all the hosts behind it, we can use this information to obtain all the members.
-- Or we can rely on a less flexible but still a good option **when user provides a list of hosts via some configuration file. We then need a way to deploy this file across all cluster nodes every time this list changes**. Full mesh broadcasting is relatively straightforward to implement.
-- But the main problem with this approach is that it is not scalable. Number of messages grows quadratically with respect to the number of hosts in a cluster. Approach works well for small clusters, but we will not be able to support big clusters. So, let’s investigate some other options that may require less messages to be broadcasted within the cluster.
-3. Gossip Communication
+-  **when user provides a list of hosts via some configuration file. We then need a way to deploy this file across all cluster nodes every time this list changes**. Full mesh broadcasting is relatively straightforward to implement.
+- But the **main problem with this approach is that it is not scalable**. Number of messages grows quadratically with respect to the number of hosts in a cluster. Approach works well for small clusters, but we will not be able to support big clusters. So, let’s investigate some other options that may require less messages to be broadcasted within the cluster.
+2. **Gossip Communication**
+```
+A	-	B
+|
+C	-	D
+```
 - And one such option is to use a gossip protocol. This protocol is based on the way that epidemics spread.
 Computer systems typically implement this type of protocol with a form of random "peer selection": with a given frequency, each machine picks another machine at random and shares data. B picks A, A picks C, C picks D
 - By the way, rate limiting solution at Yahoo uses this approach.
@@ -248,6 +252,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU1MzA3MjQzLDk0MjA3ODk2MywtMjA4OD
+eyJoaXN0b3J5IjpbNTUxNzM2Nzg1LDk0MjA3ODk2MywtMjA4OD
 c0NjYxMl19
 -->
