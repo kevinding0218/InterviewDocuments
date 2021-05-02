@@ -30,8 +30,20 @@ Client	-	VIP2 LoadBalancer B - 	FrontEnd-Host-3/4.domain.com	- Data Center B
 overloaded or slow, the LB will not stop sending new requests to that server
 #### Details
 - The process are dispatched in FIFO manner but are given limited amount, called quantum/time-slice,
-- A process does not complete before its CPU-time expires, CPU is pre
+- A process does not complete before its CPU-time expires, CPU will take the next priority process
+- Example
+```
+RR with time quantum = 20
+Process		Burst Time
+P1			53		
+P2			17
+P3			68
+P4			24
+0 -> 20 -> 37
+  P1
+
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQxMzg3OTddfQ==
+eyJoaXN0b3J5IjpbLTE4MDgzNDczNTVdfQ==
 -->
