@@ -144,7 +144,7 @@ public String longToShort(String url) {
 		- use DNS to decode users across regions to different servers
 		- **e.g if user's long url is an asia website, your server is in U.S, putting it in U.S server meaning user's request has to decode the url in U.S server then redirect to asia**
 	- improve data visit time
-		- use Centralized SQL database + Distributed Memcached
+		- use **Centralized SQL database + Distributed Memcached**
 		- One SQL database with many Memcache, distributed across regions
 		```
 		USA user -> DNS -> Web Server <--> Memcached
@@ -154,50 +154,50 @@ public String longToShort(String url) {
         - User visit a webserver would be much slower than webserver visit another webserver, because of less redirection
     
 ### Interviewer: what if one SQL database is out of capacity? (Sharding)
-- When would we need more database server?
-	- Cache resource is out of capacity
-	- Write operation become much more, too busy
-	- More requestes cannot get resolved through Cache
-- What can we improve by adding more database server
-	- solve the out of capacity storage (Storage)
-	- solve the too busy (QPS)
-	- What is main issue of TinyURL
-		- too busy (like mallicious attack)
-- Vertical Sharding
-	- Table has too many column
-		-  we can separate partial columns of that table into a different table
-- Horizontal Sharding
-	- Table has too many rows
-		- we can separate partial rows of data into another database server/machine
-	- What does Sharding Key do?
-		- Determine which database server/machine it should select to retrieve the data, when data is distributed sotred
-	- How to make Sharding Key?
-		- Solution 1:save as 2 copies
-			- when reading Short to get Long, use Short as Sharding Key
-			- when reading Long to get Short, use Long as Sharding Key
-			- Long could have more than one Short, but not the other way around
-		- Solution 2: Extend short key
- 			- If at beginning, short key is 6 digit, adding a prefix diget in short key
-	 			- AB1234 -> 0AB1234
-	 			- another way is to pick first digit 'A' as sharding key
- 			- the prefix value was getting from Hash(long_url)%62
- 			- devided the circle into 62 sections, each machine would be responsible for one section
- 			- this way we don't need broadcast, either find short2long or long2short can use sharding key
- 			```
-		 USA user -> DNS -> Web Server <--> Memcached
-	                  Shared DB (1, 2, ..., 61)
-	    CN user   -> DNS -> Web Server <--> Memcached
-        ```
-	- How to query Long Url if using ID?
-	- How to query ID if using Long URL?
+#### When would we need more database serve**r?
+- Cache resource is out of capacity
+- Write operation become much more, too busy
+- More requestes cannot get resolved through Cache
+#### What can we improve by adding more database server
+- solve the out of capacity storage (Storage)
+- solve the too busy (QPS)
+- What is main issue of TinyURL
+	- too busy (like mallicious attack)
+#### Vertical Sharding
+- Table has too many column
+	-  we can separate partial columns of that table into a different table
+#### Horizontal Sharding
+- Table has too many rows
+	- we can separate partial rows of data into another database server/machine
+- What does Sharding Key do?
+	- Determine which database server/machine it should select to retrieve the data, when data is distributed sotred
+- How to make Sharding Key?
+	- Solution 1:save as 2 copies
+		- when reading Short to get Long, use Short as Sharding Key
+		- when reading Long to get Short, use Long as Sharding Key
+		- Long could have more than one Short, but not the other way around
+	- Solution 2: Extend short key
+			- If at beginning, short key is 6 digit, adding a prefix diget in short key
+ 			- AB1234 -> 0AB1234
+ 			- another way is to pick first digit 'A' as sharding key
+			- the prefix value was getting from Hash(long_url)%62
+			- devided the circle into 62 sections, each machine would be responsible for one section
+			- this way we don't need broadcast, either find short2long or long2short can use sharding key
+			```
+	 USA user -> DNS -> Web Server <--> Memcached
+                  Shared DB (1, 2, ..., 61)
+    CN user   -> DNS -> Web Server <--> Memcached
+       ```
+- How to query Long Url if using ID?
+- How to query ID if using Long URL?
 ### Scale - Multi Region
-- we can continue improving the performance in communication between web server and database
+- we can continue improving the performance in **communication between web server and database**
 - Communication between Centralized DB set and cross region Web Server is slow
-	- e.g Server in China to hit database in U.S
+	- e.g Server in Indian to hit database in U.S
 - Think about user's experience and habits
-	- When China user hits the URL, will be distributed to Chinese Server
+	- **When China user hits the URL, will be distributed to Chinese Server**
 	- Because usually Chinese user would visit Chinese website
-	- So we can have Sharding key based on website GEO region info
+	- So we can have **Sharding key based on website GEO region info**
 		- How to get the region info? 
 			- use machine learning to train to find out and grouping top 10k visited website
 			- consider rest of the website based on request region as they are not high demand
@@ -234,6 +234,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDU3NjE2ODUsMTExODE1ODIwMSwtMj
-A4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTc4MzUyNzI5LDExMTgxNTgyMDEsLTIwOD
+g3NDY2MTJdfQ==
 -->
