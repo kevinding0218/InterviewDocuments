@@ -19,8 +19,10 @@ where you're gonna send your message right and then another party will join the 
 the messages between them
 - So if you're going to use udp as its raw protocol to build a chatting app then you are in trouble as is you might send a "Hi" and you might be lucky and the server receives the "Hi" and then finds out who to send it to and then it sends it to the to the to the actual server to the actual um client. However, this is not guranteed, sometimes  you're gonna get a
 completely different message, especially if you need to do some encryption,it's going to flip and then it cannot even be decrypted.
-- so using tcp to build a chatting app is okay now when i say tcp feel free to use websockets which is on top of http which is on top of tcp
+- so using tcp to build a chatting app is okay now when i say tcp feel free to use websockets which is on top of http which is on top of tcp, it's absolutely fine you use pure http if you want you don't want bi-directional but like use long polling
+### Building a Game using UDP
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Njk1MTE5NjUsLTY0NDQ2MjYwMiwxNz
+eyJoaXN0b3J5IjpbLTE1NTA1MTYwODcsLTY0NDQ2MjYwMiwxNz
 IzMzY2OTRdfQ==
 -->
