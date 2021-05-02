@@ -1,7 +1,7 @@
 #### NoSQL
 ##### Nodes and Shards
-- In NoSQL world, we split data into chunks, shards, also known as nodes
-- Instead of having leaders and followers, we say that each shard is Equal, we no longer need configuration service to monitor health of each shard. Instead, let's allow shards talk to each other and exchange information about their state.
+- **In NoSQL world, we split data into chunks, shards, also known as nodes**
+- Instead of having leaders and followers, we say that **each shard is Equal**, we no longer need configuration service to monitor health of each shard. Instead, let's **allow shards talk to each other and exchange information about their state**.
 - To reduce network load, we don't need each shard to talk to every other shard. Every second shard may exchange information with a few other shards, no more than 3. Qucik enough state information about every node propagates throughout the cluster. This procedure is called a gossip protocol.
 - Ok, each node in the cluster knows about other node and this is a big deal. Remember preivously we used `Cluster Proxy` component to route requests to a particular shard, as `Cluster Proxy` was the only one who knew about all shards, but now every node knows about each other. So clients of our database no longer need to call a special component for routng requests.
 ##### How NoSQL Shards work
@@ -38,5 +38,5 @@
 - In case of a leader-follower replication for example, some read replicas may be behind their master. Which leads to a situation when different users see different total count for a video.
 - This inconsistency is temporary, over time all writes will propagate to replicas. This effect is known as `Eventual Consistency`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NzEyNzI2M119
+eyJoaXN0b3J5IjpbMTQyMjcyMzc0MywxNjg3MTI3MjYzXX0=
 -->
