@@ -22,7 +22,9 @@ completely different message, especially if you need to do some encryption,it's 
 - a game however on the other end if i am building a game multiplayer game between two parties you can still use tcp and websocket on http however **be be sure that there will be some lags** right? because **those lags are because of the expense of the acknowledgement or because of the expense of the flow control and other stuff as well**
 ### Building a Gossip Communication using UDP
 - For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
+#### Cons of TCP
+- tcp was doing way too much for us that we don't really need this level of thing with http 2 specifically. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDcwOTU5MCwtNjQ0NDYyNjAyLDE3Mj
-MzNjY5NF19
+eyJoaXN0b3J5IjpbOTY3MTI2NzA5LC0xMzQ3MDk1OTAsLTY0ND
+Q2MjYwMiwxNzIzMzY2OTRdfQ==
 -->
