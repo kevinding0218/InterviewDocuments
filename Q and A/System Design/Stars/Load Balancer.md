@@ -21,12 +21,17 @@ Client	-	VIP2 LoadBalancer B - 	FrontEnd-Host-3/4.domain.com	- Data Center B
 ### (Weight) Round Robin
 - Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way, When it reaches the end of the list, it starts over at the beginning 
 - The weighted round-robin scheduling is designed to better handle servers with different processing capacities. Each server is assigned a weight (an integer value that indicates the processing capacity). Servers with higher weights receive new connections before those with less weights and servers with higher weights get more connections than those with less weights.
-### Pros
+#### Pros
 -  It is simple, easy to implement, and starvation-free as all processes get fair share of CPU.  
 - One of the most commonly used technique in CPU scheduling as a core.  
 - It is preemptive as processes are assigned CPU only for a fixed slice of time at most.  
+#### Cons
 - The disadvantage of it is more overhead of context switching, server load is not taken into consideration. If a server is
 overloaded or slow, the LB will not stop sending new requests to that server
+#### Details
+- The process are dispatched in FIFO manner but are given limited amount, called quantum/time-slice,
+- A process does not complete before its CPU-time expires, CPU is pre
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMjU0MjYzOF19
+eyJoaXN0b3J5IjpbOTQxMzg3OTddfQ==
 -->
