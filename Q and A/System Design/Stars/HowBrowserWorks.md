@@ -8,7 +8,7 @@
 -   If the requested URL is not in the cache,  **ISP’s DNS server initiates a DNS query to find the IP address of the server**  that hosts  [maps.google.com](http://maps.google.com/).
 -   Browser  **initiates a TCP connection**  with the server.
     -   In order to transfer data packets between your computer(client) and the server, it is important to have a TCP connection established.
-    -   This connection is established using a process called the  **TCP/IP three-way handshake**. This is a three step process where the client and the server exchange SYN(synchronize) and ACK(acknowledge) messages to establish a connection.
+    -   This connection is established using a process called the  **TCP/IP three-way handshake**. This is a **three step process where the client and the server exchange SYN(synchronize) and ACK(acknowledge) messages to establish a connection**.
         -   Client machine sends a SYN packet to the server over the internet asking if it is open for new connections.
         -   If the server has open ports that can accept and initiate new connections, it’ll respond with an ACKnowledgment of the SYN packet using a SYN/ACK packet.
         -   The client will receive the SYN/ACK packet from the server and will acknowledge it by sending an ACK packet.
@@ -24,5 +24,5 @@
     -   The server response contains the web page you requested as well as the status code, compression type (_Content-Encoding)_, how to cache the page (_Cache-Control_), any cookies to set, privacy information, etc.
 -   The  **browser displays the HTML content**  (for HTML responses which is the most common)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI1OTI0NTEzXX0=
+eyJoaXN0b3J5IjpbMTk4MzY2MTI4MV19
 -->
