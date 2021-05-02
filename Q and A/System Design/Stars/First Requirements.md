@@ -1,4 +1,4 @@
-#### Functional Requirement
+### Functional Requirement
 - API Definition
 ### Non-functional requirements
 - Let's do some analysis on the Daily Active User (DAU) or Monthly Active User (MAU)
@@ -20,5 +20,5 @@
 - **Cost**(hardware, development, maintenance), but we might ignore that for now
 - **Let's revisit those once we finialize more details with our design**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjcwMjIxNV19
+eyJoaXN0b3J5IjpbLTM4MzQ3NTg0XX0=
 -->
