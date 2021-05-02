@@ -7,16 +7,12 @@
 - For example, you send a packet and you just forget about it right? The only guarantee that udp gives you is i can tell you if the packet arrived correctly or not, i'm not gonna retry,  i'm not gonna check if you can handle the letter a or not, i'm not going to do any flaw control, i'm going to do any re-transmission if it fails, i don't know if you even get it or not, it does the job that just send the package
 #### TPC
 - TCP protocol guarantees delivery of data and also guarantees that packets will be delivered in the same order in which they were sent, it tries to solve the problems up in the udp
-- Let's taste how tcp does, it first tries to establish a connection, hey server are you even there? let me check oh i can't just send stuff, let me establish a connection first. TCP actually creates a physical connection between the two and it actually reserves some memory on the server side, says hey sen i am going to start my sequence with the within my packets with the
-number hundred right and then the server
-say okay
-i acknowledge that that means i received
-that and then
+- Let's taste how tcp does, it first tries to establish a connection, hey server are you even there? let me check oh i can't just send stuff, let me establish a connection first. TCP actually creates a physical connection between the two and it actually reserves some memory on the server side, says hey sen i am going to start my sequence with the within my packets with the number hundred right? and then the server say okay i acknowledge that that means i received that and then, this is a stateful protocol there's a state on the server
 ### Which one to choose?
 - If we want rate limiting solution to **be more accurate**, but with a little bit of **performance overhead**, we need to go with **TCP**.
 - If we ok to have a bit **less accurate** solution, but the one that **works faster**, UDP should be our choice.
 - For majority of clusters out there, where cluster size is less then several thousands of nodes and number of active buckets per second is less then tens of thousands, gossip communication over UDP will work really fast and is quite accurate.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMjE3MzM2NCwtNjQ0NDYyNjAyLDE3Mj
-MzNjY5NF19
+eyJoaXN0b3J5IjpbLTIwMTEyMzE0MzksLTY0NDQ2MjYwMiwxNz
+IzMzY2OTRdfQ==
 -->
