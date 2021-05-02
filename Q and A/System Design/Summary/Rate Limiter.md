@@ -49,6 +49,10 @@ request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Process
 #### Class and Interface
 1. **Job Scheduler** interface is responsible for scheduling a job that runs every several seconds and retrieves rules from Rules service.
 	1.2 RetrieveJobScheduler class implements JobScheduler interface. Its responsibility is to instantiate, start and stop the 	scheduler. And to run retrieve rules task periodically.
+	```
+	ScheduledExecutorService
+	RetrieveRulesTask
+	```
 	1.3 RetrieveJobScheduler runs RetrieveRulesTask, which makes a remote call to the Rules service for retrieving all the rules for this service. It then creates token buckets and puts them into the cache.
 2. RulesCache interface is responsible for storing rules in memory.
 	- TokenBucketCache class implements RulesCache, it is responsible for storing token bucket objects, Map / ConcurrentHashMap / Google Guava Cache
@@ -235,6 +239,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MzcwMzA1NSw5NDIwNzg5NjMsLTIwOD
-g3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE4NDYyMjQ1MDYsOTQyMDc4OTYzLC0yMD
+g4NzQ2NjEyXX0=
 -->
