@@ -7,12 +7,15 @@
 	- Load balancer does not have knowledge about a cost of each operation. And if we want to limit number of requests for a particular operation, we can do this on application server only, not at a load balancer level.
 	- If we have a load balancer in front of our web service and this load balancer spreads requests evenly across application servers and each request takes the same amount of time to complete - you are right. In this case this is a single instance problem and there is no need in any distributed solution. Application servers do not need to talk to each other. They throttle requests independently.
 	- But in the real-world load balancers cannot distribute requests in a perfectly even manner. Plus, as we discussed before different web service operations cost differently. And each application server itself may become slow due to software failures or overheated due to some other background process running on it. All this leads to a conclusion that we will need a solution where application servers will communicate with each other and share information about how many client requests each one of them processed so far.
-#### Functional Requirements
+### Functional Requirements
 - For a given request our rate limiting solution should return a boolean value, whether request is throttled or not.
-#### Non-functional Requirements
+- API: `allowRequest(request)`
+### Non-functional Requirements
 - we need rate limiter to be fast (as it will be called on every request to the service), 
 - accurate (as we do not want to throttle customers unless it is absolutely required)
 - scalable (so that rate limiter scales out together with the service itself). If we need to add more hosts to the web service cluster, this should not be a problem for the rate limiter.
+- Low latency (make decision ASAP)
+- 
 #### What about high availability and fault tolerance?
 - Two common requirements for many distributed systems but not so much important to a rate limiter
 ### Build Solution
@@ -224,5 +227,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3OTczNDk0NywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE1Mjc0OTIyMzAsLTIwODg3NDY2MTJdfQ
+==
 -->
