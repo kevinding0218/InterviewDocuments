@@ -29,8 +29,8 @@ Client	-	VIP2 LoadBalancer B - 	FrontEnd-Host-3/4.domain.com	- Data Center B
 - The disadvantage of it is more overhead of context switching, server load is not taken into consideration. If a server is
 overloaded or slow, the LB will not stop sending new requests to that server
 #### Details
-- The process are dispatched in FIFO manner but are given limited amount, called quantum/time-slice,
-- A process does not complete before its CPU-time expires, CPU will take the next priority process
+- The process are dispatched in **FIFO manner but are given limited amount, called quantum/time-slice**,
+- A process **does not complete before its CPU-time expires**, CPU will **take the next priority process**
 - Example
 ```
 RR with time quantum = 20
@@ -41,9 +41,8 @@ P3			68		=>		68 - 20 = 48 => 48 - 20 = 28 => 28 - 20 = 8 => Completed
 P4			24		=>		24 - 20 = 4 => COmpleted
 0 	-> 	20 	-> 	37 	-> 	57 	-> 	77 -> 97 -> 117 -> 121 -> 134 -> 154 -> 162 
   P1(20)	P2(17) 	P3(20)	P4(20) P1(20)P3(20) P4(4) P1(13)  P3(20) P3(8)
-
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MzE4MDQ4N119
+eyJoaXN0b3J5IjpbLTE1MTI0MDY4MDldfQ==
 -->
