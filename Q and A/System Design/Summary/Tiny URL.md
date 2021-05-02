@@ -8,7 +8,7 @@
 - High Availablity: if our service is down, all the URL redirections will start failing.
 - High Performant: with minimal latency < 200ms
 - Discussion High Secure: not predictable
-- Discussion: Expose to external service or just internal application usage
+- Discussion: Expose to external service or just internal application usage (SOAP & REST)
 - **Daily Usage** (QPS + Storage)
 	- Ask interviewer daily active user (DAU) or discuss that we assuming this would be high QPS
 		- nearly 100M
@@ -235,6 +235,6 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNjk3NzI4NywxOTI3NTc2MDE4LDIwND
-Y4ODYyMSwxMTE4MTU4MjAxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbOTIwNTUzMjg3LDE5Mjc1NzYwMTgsMjA0Nj
+g4NjIxLDExMTgxNTgyMDEsLTIwODg3NDY2MTJdfQ==
 -->
