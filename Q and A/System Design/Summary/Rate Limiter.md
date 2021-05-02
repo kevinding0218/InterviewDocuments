@@ -12,15 +12,18 @@
 - API: `allowRequest(request)`
 ### Non-functional Requirements
 - we need rate limiter to be fast (as it will be called on every request to the service), 
-- accurate (as we do not want to throttle customers unless it is absolutely required)
-- scalable (so that rate limiter scales out together with the service itself). If we need to add more hosts to the web service cluster, this should not be a problem for the rate limiter.
-- Low latency (make decision ASAP)
-- 
+- **Scalable** (so that rate limiter scales out together with the service itself). If we need to add more hosts to the web service cluster, this should not be a problem for the rate limiter.
+- **Low latency** (make decision ASAP)
+- **Accurate** (as we do not want to throttle customers unless it is absolutely required)
 #### What about high availability and fault tolerance?
 - Two common requirements for many distributed systems but not so much important to a rate limiter
 ### Build Solution
 #### Start from Simple
 - let’s implement a rate limiting solution for a single server first. So, no communication between servers just yet
+```
+									Throttle Rule Ca
+request -> Client Identifier Builder -> Rate Limiter -> allow -> Request Processor
+```
 #### Rules Retriever
 - Each rule specifies a number of requests allowed for a particular client per second.
 - These rules are defined by service owners and stored in a database.
@@ -227,6 +230,5 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mjc0OTIyMzAsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTQ2MTEwMTAwMSwtMjA4ODc0NjYxMl19
 -->
