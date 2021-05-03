@@ -16,7 +16,7 @@
 - using the wrong methods to update the state some of them may be updating state directly instead of creating a copy of it
 - it is also possible they all your assets are loading slowly a lot of time if you have videos and images in your application and they may be loading slowly because of the location where this asset are stored and you can easily find out in a profiler
 - you may be using classes if you make them functions that may improve your application as well
-- 
+- for class property functions like those event handlers you may be using regular functions and binding them inside a constructor that also can slow things down
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNzUzNDM3N119
+eyJoaXN0b3J5IjpbLTExNzYyMzczOTBdfQ==
 -->
