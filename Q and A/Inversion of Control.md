@@ -16,6 +16,8 @@
 	- Dependency Injection is a design pattern allows us to write loose coupled code
 	- Dependency Injections helps us to manage future changes in code i.e. code maintainability
 	- Dependency Injection uses a builder object to initialize objects and provide the required dependencies to the object means it allows you to ‘inject’ a dependency from outside the class
+### For Example
+- You have a class User which depends on a MySQLDatabase, every time you initiate the User object it binds with MySqlDatabase. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjEzMTUxODRdfQ==
+eyJoaXN0b3J5IjpbMTg5MTMzMDY4NCwtMTM2MTMxNTE4NF19
 -->
