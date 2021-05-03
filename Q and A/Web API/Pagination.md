@@ -36,8 +36,10 @@ LIMIT 50;
 ```
 #### Pros
 - Improved performance, with indexing on the cursor
-- Return consistent results, the addition or removal of items during requests does not bring in 
-- 
+- Return consistent results, the addition or removal of items during requests does not bring in consistent results as the offset-based pagination
+#### Cons
+- Clients need to traverse through each page one by one
+- Records need to be added sequentially to the DB at a random positions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjM0MjU3MTJdfQ==
+eyJoaXN0b3J5IjpbLTE0NTM3MjU5NjJdfQ==
 -->
