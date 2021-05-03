@@ -129,8 +129,12 @@ Client -> top K -> API Gateway -> Storage ->	topK  topK  topK  topK  topK(fast)
 - When user asks for the top k list for the last 5 minutes, we just merge together 5 1-minute lists. And get the final list, which is also approximate.
 - When user asks for the top k list for some 1-hour interval, for example from 1 pm till 2 pm, it is easy, we have precise lists calculated for each hour of the day.
 - But when user asks for the top k list for some 2-hour interval, for example from 1 pm till 3 pm, we cannot give back a precise list. The best we can do is to merge together 2 1-hour lists. And results may no longer be 100% correct.
+### Lambda Architecture
+- Lambda Architecture is an approach to building stream processing applications on top of MapReduce and stream processing engines.
+- We send events to a batch system and a stream processing system in parallel. And we stitch together the results from both systems at query time.
+- if you look at the fast path once again, you will see that it is very simple. But by introducing the slow path, we greatly increased overall complexity of the system. Yes, we did this to have accurate results and to aggregate data over long time intervals. But these benefits come with a price. And this price is complexity.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODU3MzE5MDMsMTM5MDc5NzI2Myw5Nz
+eyJoaXN0b3J5IjpbLTEyMjQzNDkzNzQsMTM5MDc5NzI2Myw5Nz
 kzMzUxNCwxMDMyOTY1Njk0LC0xMTU3NjMxODE5LDE1OTU2MzU1
 OTAsLTIwODg3NDY2MTJdfQ==
 -->
