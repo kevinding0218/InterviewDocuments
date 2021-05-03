@@ -58,7 +58,7 @@ A E C F A D C A B B -> Data Partitioner - Processor Host A[B = 2, F = 1, A = 3] 
 ```
 Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Sketch Processcor -> Storage
 													  \
-														 Slow Path Data Partitioner
+														 Slow Path Data Partitioner -> Distributed Messaging System -> Partition Processor -> Distributed File System -> F
 ```
 #### API Gateway
 - **Every time user clicks on a video**, request goes through API Gateway, component that represents a **single-entry point** into a video content delivery system.
@@ -86,9 +86,9 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 - SQL or NoSQL, stores a list of top k elements for a period of time,  we only deal with a small fraction of requests that landed initially on API Gateway hosts.
 - Data replication is required
 #### Slow Path
-- On the slow path we also need to aggregate data, but we want to **count everything precisely.** There are several options how to do this. One option is to let **MapReduce** do the trick. We dump all the data to the distributed file system, for example HDFS or object storage, for example S3. And run two MapReduce jobs, one job to calculate frequency counts and another job to calculate the actual top k list.
+- On the slow path we also need to aggregate data, but we want to **count everything precisely.** There are several options how to do this. One option is to let **MapReduce** do the trick. We dump all the data to the **distributed file system**, for example HDFS or object storage, for example **S3**. And run two MapReduce jobs, **one job to calculate frequency counts and another job to calculate the actual top k list.**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAzNzkwMjM5LC0xMTU3NjMxODE5LDE1OT
-U2MzU1OTAsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTQzNTA2MDQzMywtMTE1NzYzMTgxOSwxNT
+k1NjM1NTkwLC0yMDg4NzQ2NjEyXX0=
 -->
