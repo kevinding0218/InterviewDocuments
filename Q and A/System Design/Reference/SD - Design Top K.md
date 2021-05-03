@@ -49,8 +49,12 @@ A E C F A D C A B B -> Data Partitioner - Processor Host A[B = 2, F = 1, A = 3] 
 - By partitioning the data, we **increased both scalability and throughput**.
 #### Cons
 - All this time we were talking about bounded data sets or data sets of limited size. Such data sets can indeed be split into chunks, and after finding top k heavy hitters for each chunk we just merge results together.
-- But **streaming data is unbounded**, essentially infinite. Users keep clicking on videos every second. In these circumstances, Processor hosts can accumulate data only for some period of time, let's say 1-minute, and will flush 1-minute data to the Storage host. So, the Storage host stores a list of heavy hitters for every minute. And remember that this is only top k heavy hitters. Information about all other elements, that did not make to the top k list is lost. We cannot afford storing information about every video in memory.
+- But **streaming data is unbounded**, essentially **infinite**. Users keep clicking on videos every second. In these circumstances, Processor hosts can **accumulate data only for some period of time**, let's say 1-minute, and will flush 1-minute data to the Storage host. So, the Storage host stores a list of heavy hitters for every minute. And remember that this is only top k heavy hitters. **Information about all other elements, that did not make to the top k list is lost.** We cannot afford storing information about every video in memory.
+### Challenge
+- on one hand we need the whole data set for a particular time period, let's say 1-day. And on the other hand, we cannot accumulate data in memory for the whole day. What should we do?
+- Let's store all the data on disk and use batch processing framework to calculate a top k list, and this is where MapReduce comes into play.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMzk5Mzc1MCwxNTk1NjM1NTkwLC0yMD
+eyJoaXN0b3J5IjpbMTA3ODkzMTkxMywxNTk1NjM1NTkwLC0yMD
 g4NzQ2NjEyXX0=
 -->
