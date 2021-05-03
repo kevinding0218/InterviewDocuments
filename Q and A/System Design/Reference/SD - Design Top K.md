@@ -98,8 +98,19 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 - And if time is not an issue but we still need accurate results and data set is big, Hadoop MapReduce should be our choice.
 #### Map Reduce
 - In MapReduce data processing is split into phases. The input to a MapReduce job is a set of files split into independent chunks which are processed by the map tasks in a parallel manner.
-- 
+```
+Frequency Count MapReducer
+Input		Split		Map		Shuffle and Sort		Reduce		Output
+B = 3					B,3
+A = 5		~			A,5
+C = 2					C,2
+
+B = 6					B,
+D = 15		~
+A = 7
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc5MzM1MTQsMTAzMjk2NTY5NCwtMTE1Nz
-YzMTgxOSwxNTk1NjM1NTkwLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTYzMTE4ODM3Nyw5NzkzMzUxNCwxMDMyOT
+Y1Njk0LC0xMTU3NjMxODE5LDE1OTU2MzU1OTAsLTIwODg3NDY2
+MTJdfQ==
 -->
