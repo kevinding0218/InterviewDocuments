@@ -11,7 +11,16 @@
 - Event Delegation is a method of attaching event handlers NOT to the elements from which you actually want to handle events, but to a higher-level element.
 ### List all the inbuilt hooks in React 
 #### Main Hooks
-- useState: allows you to define state and use
+- useState: allows you to define state 
+- useEffect: allows you to handle life cycle method
+- useRef: allows you to set a reference to specific DOM element or others
+- useContext: so you can set something globally similar to redux.
+#### Other Hooks
+- useReducer: 
+- useMemo
+- useImparativeHandle:
+- useLayoutEffect
+- useDebugValue
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0OTMxNTI2Ml19
+eyJoaXN0b3J5IjpbLTExNjQyMTIzODVdfQ==
 -->
