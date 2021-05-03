@@ -21,6 +21,10 @@
 - useImparativeHandle:
 - useLayoutEffect
 - useDebugValue
+### What are some of the Best Practises using React Hooks?
+- Follow the Hook's rules
+- Use linter and follow linter (ES-lint)
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjQyMTIzODVdfQ==
+eyJoaXN0b3J5IjpbLTE3NTkzMTkxMV19
 -->
