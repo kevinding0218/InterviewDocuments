@@ -40,7 +40,15 @@ LIMIT 50;
 #### Cons
 - Clients need to traverse through each page one by one
 - Records need to be added sequentially to the DB at a random positions
-- Clients need to manage the next cursor value and send it along with each request so it's oneex
+- Clients need to manage the next cursor value and send it along with each request so it's one extra things that client needs to do when you 
+### Summary
+#### Offset-based Pagination
+- Best suited for apps that use small datasets
+- Clients need to jump around pages and can tolerate duplicate or missed item
+#### Cursor-based Pagination
+- Best suited for apps that use large datasets
+- Consistency of result is critical
+- Traversing pags is acceptable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MDU5MjQ0OV19
+eyJoaXN0b3J5IjpbNTU2MjcxNzE0XX0=
 -->
