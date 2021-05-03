@@ -75,6 +75,7 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 - We will split our data processing pipeline into two parts: fast path and slow path. 
 - On the **fast path**, we will calculate a list of k heavy hitters **approximately**. And **results will be available within seconds**.
 - On the **slow path**, we will calculate a list of k heavy hitters **precisely**. And results **will be available within minutes or hours**, depending on the data volume.
+- As you may see, the value of k plays its role in several places. On the fast path we merge top k lists together on data retrieval. On the slow path, in Top K MapReduce job, all mappers send local top k lists to a single reducer.
 #### Fast Path
 - **Every time we keep data in memory, even for a short period of time, we need to think about data replication. Otherwise, we cannot claim high availability for a service, as data may be lost due to hardware failures.**
 - Create count-min sketch and aggregates data for a shor period of time(seconds)
@@ -129,7 +130,7 @@ Client -> top K -> API Gateway -> Storage ->	topK  topK  topK  topK  topK(fast)
 - When user asks for the top k list for some 1-hour interval, for example from 1 pm till 2 pm, it is easy, we have precise lists calculated for each hour of the day.
 - But when user asks for the top k list for some 2-hour interval, for example from 1 pm till 3 pm, we cannot give back a precise list. The best we can do is to merge together 2 1-hour lists. And results may no longer be 100% correct.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MDc5NzI2Myw5NzkzMzUxNCwxMDMyOT
-Y1Njk0LC0xMTU3NjMxODE5LDE1OTU2MzU1OTAsLTIwODg3NDY2
-MTJdfQ==
+eyJoaXN0b3J5IjpbLTEzODU3MzE5MDMsMTM5MDc5NzI2Myw5Nz
+kzMzUxNCwxMDMyOTY1Njk0LC0xMTU3NjMxODE5LDE1OTU2MzU1
+OTAsLTIwODg3NDY2MTJdfQ==
 -->
