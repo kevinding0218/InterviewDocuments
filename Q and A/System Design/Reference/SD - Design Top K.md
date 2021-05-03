@@ -119,8 +119,9 @@ D = 15
 ```
 												Merge 1 min list to get 5 min list
 												1:00  1:01  1:02  1:03  1:04
-Client -> top K -> API Gateway -> Storage ->	topK  topK  topK  topK  topK
-									
+Client -> top K -> API Gateway -> Storage ->	topK  topK  topK  topK  topK(fast)
+												1hr			1hr
+												topK		topK			(slow)
 ```
 - First of all API Gateway should expose topK operation. API Gateway will route data retrieval calls to the Storage service. And the Storage service just retrieves the data from its underlying database. This requires some more explanation.
 - Let's say our fast path creates approximate top k list for every 1-minute interval. And our slow path creates precise top k list for every 1-hour interval, 24 lists total for a day.
@@ -128,7 +129,7 @@ Client -> top K -> API Gateway -> Storage ->	topK  topK  topK  topK  topK
 - When user asks for the top k list for some 1-hour interval, for example from 1 pm till 2 pm, it is easy, we have precise lists calculated for each hour of the day.
 - But when user asks for the top k list for some 2-hour interval, for example from 1 pm till 3 pm, we cannot give back a precise list. The best we can do is to merge together 2 1-hour lists. And results may no longer be 100% correct.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjA2NjE3MTgsOTc5MzM1MTQsMTAzMj
-k2NTY5NCwtMTE1NzYzMTgxOSwxNTk1NjM1NTkwLC0yMDg4NzQ2
-NjEyXX0=
+eyJoaXN0b3J5IjpbMTM5MDc5NzI2Myw5NzkzMzUxNCwxMDMyOT
+Y1Njk0LC0xMTU3NjMxODE5LDE1OTU2MzU1OTAsLTIwODg3NDY2
+MTJdfQ==
 -->
