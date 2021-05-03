@@ -7,7 +7,8 @@
 - There is a way to use native events, 
 ### How event delegation works in React? How does react handles events in a list element? 
 - for example, you have a list of element where each has a `onClick` event.
-
+- You can declare it at the parent level, actually react does it internally, react actually attach that event handler to the document level, 
+- Event Delegation is a method of attaching event handlers 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTExMDQ3NDBdfQ==
+eyJoaXN0b3J5IjpbMTQ4OTI2OTU2MF19
 -->
