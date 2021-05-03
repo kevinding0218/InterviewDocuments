@@ -56,9 +56,9 @@ A E C F A D C A B B -> Data Partitioner - Processor Host A[B = 2, F = 1, A = 3] 
 - Let's **store all the data on disk and use batch processing framework to calculate a top k list**, and this is where **MapReduce** comes into play.
 ### High Level Architecture
 ```
-Client -> API Gateway -> Distributed Messaging System -> Fast Processcor -> Storage
+Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Sketch Processcor -> Storage
 													  \
-														 Slow Processor
+														 Slow Path Data Partitioner
 ```
 #### API Gateway
 - **Every time user clicks on a video**, request goes through API Gateway, component that represents a **single-entry point** into a video content delivery system.
@@ -83,9 +83,11 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Processcor -> Stor
 - Every several seconds Fast Processor flushes data to the Storage. **Remember that count-min sketch has a predefined size, it does not grow over time**. Nothing stops us from aggregating for longer than several seconds, we may wait for minutes.
 #### Storage
 - The Storage component is a service in front of a database. And it stores the final top k list for some time interval, for example every 1 minute or 5 minutes.
-- SQL or NoSQL
+- SQL or NoSQL, stores a list of top k elements for a period of time
+- Data replication is required
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NDYyMTczLC0xMTU3NjMxODE5LDE1OT
+eyJoaXN0b3J5IjpbMjQ3MDc0OTEzLC0xMTU3NjMxODE5LDE1OT
 U2MzU1OTAsLTIwODg3NDY2MTJdfQ==
 -->
