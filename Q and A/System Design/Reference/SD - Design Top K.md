@@ -58,7 +58,7 @@ A E C F A D C A B B -> Data Partitioner - Processor Host A[B = 2, F = 1, A = 3] 
 ```
 Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Sketch Processcor -> Storage
 													  \
-														 Slow Path Data Partitioner -> Distributed Messaging System -> Partition Processor -> Distributed File System -> F
+														 Slow Path Data Partitioner -> Distributed Messaging System -> Partition Processor -> Distributed File System -> Frequency Count MR Job -> Top K MR Job
 ```
 #### API Gateway
 - **Every time user clicks on a video**, request goes through API Gateway, component that represents a **single-entry point** into a video content delivery system.
@@ -87,8 +87,11 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 - Data replication is required
 #### Slow Path
 - On the slow path we also need to aggregate data, but we want to **count everything precisely.** There are several options how to do this. One option is to let **MapReduce** do the trick. We dump all the data to the **distributed file system**, for example HDFS or object storage, for example **S3**. And run two MapReduce jobs, **one job to calculate frequency counts and another job to calculate the actual top k list.**
+#### Data Partitioner
+- Partitioner will take each video identifier and send information to a correspondent partition in another Kafka cluster. And as we mentioned before, every time we partition data, we need to think about possibility of hot partitions.
+- And our partitioner service should take care of it. Now, each partition in Kafka or shard in Kinesis, depending on what we use, stores a subset of data. Both Kafka and Kinesis will take care of data replication.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNTA2MDQzMywtMTE1NzYzMTgxOSwxNT
+eyJoaXN0b3J5IjpbMTAzMjk2NTY5NCwtMTE1NzYzMTgxOSwxNT
 k1NjM1NTkwLC0yMDg4NzQ2NjEyXX0=
 -->
