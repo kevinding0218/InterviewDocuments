@@ -22,12 +22,10 @@ https://slack.com/api/chat.scheduleMessage
 - High performance: because they are so action oriented
 ##### Cons
 - Discovery is difficult: it is not possible to assume operations available on resources because they are not standardized like rest apis
-- Limited Standardization: can become tedious to work with
-referencing
-documentation becomes super important
-
+- Limited Standardization: can become tedious to work with referencing documentation becomes super important
+- Leads to function explosion: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjE3ODIwNDQsLTE4NjQ2NTk1OTAsLT
-E4Mzc2OTY0OCwzNzk1NDI2MTMsNzQyMDI5OTAwLC0xMTA4MjM5
-OTA2XX0=
+eyJoaXN0b3J5IjpbLTg5MzkzNjE1NiwtMTg2NDY1OTU5MCwtMT
+gzNzY5NjQ4LDM3OTU0MjYxMyw3NDIwMjk5MDAsLTExMDgyMzk5
+MDZdfQ==
 -->
