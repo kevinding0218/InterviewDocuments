@@ -8,16 +8,10 @@
 - Utilized HTTP features really well by using the http verbs to describe the precise operation that you're trying to perform
 - Easy to maintain
 ##### Cons
-- Big payloads, for example i might be getting the entire user entity but i only probably want to use
-maybe the name or maybe another
-particular field
-unfortunately you're gonna be getting
-the entire resource back
-and this is quite unnecessary so it
-leads to big payloads
-- Multiple HTTP roundtrips
+- Big payloads, for example i might be getting the entire user entity but i only probably want to use maybe the name or maybe another particular field.  Unfortunately you're gonna be getting the entire resource back and this is quite unnecessary so it leads to big payloads
+- Multiple HTTP roundtrips, for example if you want to get a resource and it's sub-resource well you have to make two separate calls first to get the resource and second to get the sub-resource there's no way of combining the results together not in a restful manner anyway
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDM5MTI2NTgsMzc5NTQyNjEzLDc0Mj
-AyOTkwMCwtMTEwODIzOTkwNl19
+eyJoaXN0b3J5IjpbLTE4Mzc2OTY0OCwzNzk1NDI2MTMsNzQyMD
+I5OTAwLC0xMTA4MjM5OTA2XX0=
 -->
