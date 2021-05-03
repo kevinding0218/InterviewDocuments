@@ -56,7 +56,7 @@ A E C F A D C A B B -> Data Partitioner - Processor Host A[B = 2, F = 1, A = 3] 
 - Let's **store all the data on disk and use batch processing framework to calculate a top k list**, and this is where **MapReduce** comes into play.
 ### High Level Architecture
 ```
-Client -> API Gateway
+Client -> API Gateway -> Distributed Messaging System
 ```
 #### API Gateway
 - **Every time user clicks on a video**, request goes through API Gateway, component that represents a **single-entry point** into a video content delivery system.
@@ -65,8 +65,10 @@ Client -> API Gateway
 - We may implement a background process that reads data from logs, does some initial aggregation, and sends this data for further processing. We **allocate a buffer in memory on the API Gateway host, read every log entry and build a frequency count hash table** we discussed before.
 - This **buffer should have a limited size**, and **when buffer is full, data is flushed**. If buffer is **not full** for a specified period of time, we can **flush based on time**.
 - There are also other options, like aggregating data on the fly, without even writing to logs. Or completely skip all the aggregation on the API Gateway side and send information about every individual video view further down for processing.
+- We better serialize data into a compact binary format. This way we save on network IO utilization if request rate is very high. And let CPU pay the price. Once again, all these considerations depend on what resources are available on the API Gateway host: memory, CPU, network or disk IO.
+#### Distributed Messaging System
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAxOTgyMDIsMTU5NTYzNTU5MCwtMjA4OD
-c0NjYxMl19
+eyJoaXN0b3J5IjpbLTExNTc2MzE4MTksMTU5NTYzNTU5MCwtMj
+A4ODc0NjYxMl19
 -->
