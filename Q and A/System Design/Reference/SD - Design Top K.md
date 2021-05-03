@@ -30,9 +30,12 @@ Elements with higher frequency count remain in the heap, while elements with low
 A B C A A D C A B C -> LB -	Processor Host A[C = 2, D = 1, A = 2, B = 1]- Storage Host [C = 3, D = 1..]
 						  \												/
 							Processor Host B[C = 1, A = 2, B = 1]		
-
 ```
+#### Pros
+- It is a bit better now, we can process events in parallel. Total throughput of the system has increased.
+#### Cons
+- another evident problem of this solution is memory. We may use too much memory on each Processor host as well as Storage host. There are billions of videos on Youtube. Even if we store a fraction of this number in memory, hash table will become huge.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MzYwOTEzMywxNTk1NjM1NTkwLC0yMD
+eyJoaXN0b3J5IjpbLTI4OTg5NTkxMSwxNTk1NjM1NTkwLC0yMD
 g4NzQ2NjEyXX0=
 -->
