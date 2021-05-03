@@ -20,7 +20,9 @@ LIMIT 50 OFFSET 100;
 - e.g, distributed storage, your data storage scan might include a number of shards before the desired results are received.
 ### Cursor-based Pagination
 #### Client provides
-- Limit: 
+- Limit: `https://www.myWebsite.com/products?limit=50`
+#### Server responses with results and a next-cursor
+- next-cursor=12345678
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MzkyMTg0NV19
+eyJoaXN0b3J5IjpbLTgxMTkwNjQzXX0=
 -->
