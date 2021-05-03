@@ -1,5 +1,5 @@
-### Request-Response API Paradigms
-
+### Request-Response API Paradigms (Client <-> Server)
+- Fund
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMzE3NjI4NF19
+eyJoaXN0b3J5IjpbLTExMDgyMzk5MDZdfQ==
 -->
