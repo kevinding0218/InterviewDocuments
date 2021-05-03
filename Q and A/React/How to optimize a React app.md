@@ -7,7 +7,9 @@
 	- First Profiler to the app and then run the app to see which areas of the app is behaving badly, make sure you disable other plugin because it can interfere in the performance
 - Speed
 	- You might be rendering components that are not supposed to be re-rendering, for example if you are not changing a state but you're still setting the same state over and over that  would result in updating the virtual DOM which you don't need to do that.
-	- We can stop rendering of certain components by using `shouldComponentUpdate`
+	- We can stop rendering of certain components by using `shouldComponentUpdate` lifecycle method or if you have a newer version you can use react.memo or react pure components
+- Package size huge
+	- it may take too long to load you can use lazy loading, to lazy load on certain routes that you or the client may be using later on or may not be even using it
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDk2MTk3ODRdfQ==
+eyJoaXN0b3J5IjpbLTI4Mjc0ODU3Ml19
 -->
