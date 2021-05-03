@@ -8,7 +8,10 @@
 ### How event delegation works in React? How does react handles events in a list element? 
 - for example, you have a list of element where each has a `onClick` event.
 - You can declare it at the parent level, actually react does it internally, react actually attach that event handler to the document level, 
-- Event Delegation is a method of attaching event handlers 
+- Event Delegation is a method of attaching event handlers NOT to the elements from which you actually want to handle events, but to a higher-level element.
+### List all the inbuilt hooks in React 
+#### Main Hooks
+- useState: allows you to define state and use
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4OTI2OTU2MF19
+eyJoaXN0b3J5IjpbLTg0OTMxNTI2Ml19
 -->
