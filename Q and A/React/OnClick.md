@@ -24,7 +24,14 @@
 ### What are some of the Best Practises using React Hooks?
 - Follow the Hook's rules
 - Use linter and follow linter (ES-lint)
-- 
+- for example you have some states
+```
+const[a, setA] = useState();
+const[b, setB] = useState();
+setA();
+setB();
+```
+- when you call `setA()`, this is an async event which means it's going to read under the page, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTkzMTkxMV19
+eyJoaXN0b3J5IjpbMTUxOTQwMDIwNl19
 -->
