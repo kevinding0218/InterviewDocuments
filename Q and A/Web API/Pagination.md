@@ -12,8 +12,11 @@ LIMIT 50 OFFSET 100;
 #### Pros
 - Simple implementation for client and server
 - Possible to jump to arbitrary pages instead of being forced to scroll through each page
-- e.g: if user wants to skip to the 6th page from the frist page, 
+- e.g: if user wants to skip to the 6th page from the frist page, they can just directly jump to the 6th page without having to scroll through 2, 3, 4, 5
+#### Cons
+- Can be unreliable at times, if there are frequent changes to your data as the pagination, then you might run into missing items or duplicate items
+- Inefficient for la
 ### Cursor-based Pagination
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAyMTM4ODAwXX0=
+eyJoaXN0b3J5IjpbLTE2OTYzNTQ4NjZdfQ==
 -->
