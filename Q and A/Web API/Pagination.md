@@ -34,6 +34,10 @@ WHERE created_timestamp < 12345678
 ORDER BY created_timestamp
 LIMIT 50;
 ```
+#### Pros
+- Improved performance, with indexing on the cursor
+- Return consistent results, the addition or removal of items during requests does not bring in 
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAwNTM0NTIwXX0=
+eyJoaXN0b3J5IjpbLTE3NjM0MjU3MTJdfQ==
 -->
