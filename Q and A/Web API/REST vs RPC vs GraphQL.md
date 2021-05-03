@@ -26,8 +26,10 @@ https://slack.com/api/chat.scheduleMessage
 - Leads to function explosion: over time as features are added to your products the number of endpoints representing
 these functions can grow out of control this leads to function explosion overall. 
 - Overall RPC apis are good for apis exposing actions rather than crude-like operations
+#### GraphQL API
+- GraphQL is a query language for apis
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MzgwMzAwMSwtMTg2NDY1OTU5MCwtMT
-gzNzY5NjQ4LDM3OTU0MjYxMyw3NDIwMjk5MDAsLTExMDgyMzk5
-MDZdfQ==
+eyJoaXN0b3J5IjpbLTExNTYyMDM5MDcsLTE4NjQ2NTk1OTAsLT
+E4Mzc2OTY0OCwzNzk1NDI2MTMsNzQyMDI5OTAwLC0xMTA4MjM5
+OTA2XX0=
 -->
