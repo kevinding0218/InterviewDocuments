@@ -35,9 +35,10 @@ from a resource in a single call for example getting the orders and the users ca
 - **Avoid versioning**: in graphql apis you don't necessarily have to do that you can add new fields without breaking the existing queries similarly you can deprecate existing fields
 - **Smaller payload size**: client definition results in smaller payload
 ##### Cons
-- 
+- **Added Complexity**: the **server needs to handle the complexity of the type of query the client constructs** this can get quite complicated depending on the nature of your data optimizing performance in the backend
+- Optimizing performance is difficult: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTkzMzAyODEsLTExNTYyMDM5MDcsLT
+eyJoaXN0b3J5IjpbLTE2NzkzMzQ0MDIsLTExNTYyMDM5MDcsLT
 E4NjQ2NTk1OTAsLTE4Mzc2OTY0OCwzNzk1NDI2MTMsNzQyMDI5
 OTAwLC0xMTA4MjM5OTA2XX0=
 -->
