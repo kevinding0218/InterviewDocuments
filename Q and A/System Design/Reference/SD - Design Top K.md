@@ -52,10 +52,10 @@ A E C F A D C A B B -> Data Partitioner - Processor Host A[B = 2, F = 1, A = 3] 
 - But **streaming data is unbounded**, essentially **infinite**. Users keep clicking on videos every second. In these circumstances, Processor hosts can **accumulate data only for some period of time**, let's say 1-minute, and will flush 1-minute data to the Storage host. So, the Storage host stores a list of heavy hitters for every minute. And remember that this is only top k heavy hitters. **Information about all other elements, that did not make to the top k list is lost.** We cannot afford storing information about every video in memory.
 - Another problem with this architecture, is that although it may seem simple, it is not. Every time we introduce data partitioning, we need to deal with data replication, so that copies of each partition are stored on multiple nodes. We need to think about rebalancing, when a new node is added to the cluster or removed from it. We need to deal with hot partitions.
 ### Challenge
-- on one hand we need the whole data set for a particular time period, let's say 1-day. And on the other hand, we cannot accumulate data in memory for the whole day. What should we do?
+- On one hand we need the whole data set for a particular time period, let's say 1-day. And on the other hand, we cannot accumulate data in memory for the whole day. What should we do?
 - Let's **store all the data on disk and use batch processing framework to calculate a top k list**, and this is where **MapReduce** comes into play.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4Njc1MTc5MywxNTk1NjM1NTkwLC0yMD
-g4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE0ODYyMjE1ODUsMTU5NTYzNTU5MCwtMj
+A4ODc0NjYxMl19
 -->
