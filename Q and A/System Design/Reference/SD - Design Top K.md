@@ -75,7 +75,7 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 - We will split our data processing pipeline into two parts: fast path and slow path. 
 - On the **fast path**, we will calculate a list of k heavy hitters **approximately**. And **results will be available within seconds**.
 - On the **slow path**, we will calculate a list of k heavy hitters **precisely**. And results **will be available within minutes or hours**, depending on the data volume.
-##### Fast Path
+#### Fast Path
 - **Every time we keep data in memory, even for a short period of time, we need to think about data replication. Otherwise, we cannot claim high availability for a service, as data may be lost due to hardware failures.**
 - Create count-min sketch and aggregates data for a shor period of time(seconds)
 - Because memory is no longer a problem, no need to partition the data
@@ -83,11 +83,13 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 - Every several seconds Fast Processor flushes data to the Storage. **Remember that count-min sketch has a predefined size, it does not grow over time**. Nothing stops us from aggregating for longer than several seconds, we may wait for minutes.
 #### Storage
 - The Storage component is a service in front of a database. And it stores the final top k list for some time interval, for example every 1 minute or 5 minutes.
-- SQL or NoSQL, stores a list of top k elements for a period of time
+- SQL or NoSQL, stores a list of top k elements for a period of time,  we only deal with a small fraction of requests that landed initially on API Gateway hosts.
 - Data replication is required
-- 
+#### Slow Path
+- On the slow path we also need to aggregate data, but we want to count everything precisely. There are several options how to do this. One option is to let MapReduce do the trick. We dump all the data to the distributed file system, for example HDFS or object storage, for example S3. And run two MapReduce jobs, one job to calculate frequency counts and another job to calculate
+the actual top k list.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ3MDc0OTEzLC0xMTU3NjMxODE5LDE1OT
-U2MzU1OTAsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTQ5NjUzMDA0MywtMTE1NzYzMTgxOSwxNT
+k1NjM1NTkwLC0yMDg4NzQ2NjEyXX0=
 -->
