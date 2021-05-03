@@ -71,9 +71,19 @@ Client -> API Gateway -> Distributed Messaging System
 - Internally Kafka splits messages across several partitions, where each partition can be placed on a separate machine in a cluster. At this point we do not have any preferences how messages are partitioned. Default random partitioning will help to distribute messages uniformly across partitions. 
 #### Fast/Slow Path
 - We will split our data processing pipeline into two parts: fast path and slow path. 
-- On the fast path, we will calculate a list of k heavy hitters approximately. And results will be available within seconds.
-- On the slow path, we will calculate a list of k heavy hitters precisely. And results will be available within minutes or hours, depending on the data volume.
+- On the **fast path**, we will calculate a list of k heavy hitters **approximately**. And **results will be available within seconds**.
+- On the **slow path**, we will calculate a list of k heavy hitters **precisely**. And results **will be available within minutes or hours**, depending on the data volume.
+##### Fast Path
+- We have a service, let's call it fast processor, that creates count-min sketch for some short time interval and aggregates data.
+And because memory is no longer a problem, we do not need to partition the data.
+Any message from Kafka can be processed by any Fast Processor host.
+Every time we keep data in memory, even for a short period of time, we need to think about
+data replication.
+Otherwise, we cannot claim high availability for a service, as data may be lost due to
+hardware failures.
+Because count-min sketch already produces approximate results, meaning we lose data
+already in some way, it may be ok if we lose data in some rare cases when host dies.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzNjQ4MDA0LC0xMTU3NjMxODE5LDE1OT
+eyJoaXN0b3J5IjpbOTIyODg1NjE4LC0xMTU3NjMxODE5LDE1OT
 U2MzU1OTAsLTIwODg3NDY2MTJdfQ==
 -->
