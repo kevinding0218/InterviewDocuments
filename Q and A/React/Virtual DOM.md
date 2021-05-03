@@ -1,6 +1,7 @@
 ### Explain Virtual DOM
-- before react came along with
-virtual dome
+- Before react came along with virtual dome, updating the dome is really expensive because every time you update something you have to repaint that on the dome every time and that can be time-consuming
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNDY3Mjg5NywtMTU5MTM1NTgxMl19
+eyJoaXN0b3J5IjpbLTIwNTM3NjQxNTMsLTE1OTEzNTU4MTJdfQ
+==
 -->
