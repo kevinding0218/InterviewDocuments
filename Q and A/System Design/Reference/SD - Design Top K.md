@@ -109,10 +109,14 @@ B = 6					B,6		C(2)				C, 2
 D = 15		~			D,15	D(15)				D, 15
 A = 7					A,7
 
-To
+Top K Map Reducer
+A = 12					Local Top K
+B = 9					Local Top K					Global Top K Final Top K
+C = 2					Local Top K
+D = 15
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODA1NTAzMSw5NzkzMzUxNCwxMDMyOT
-Y1Njk0LC0xMTU3NjMxODE5LDE1OTU2MzU1OTAsLTIwODg3NDY2
-MTJdfQ==
+eyJoaXN0b3J5IjpbLTE1OTk2MzA2MDAsOTc5MzM1MTQsMTAzMj
+k2NTY5NCwtMTE1NzYzMTgxOSwxNTk1NjM1NTkwLC0yMDg4NzQ2
+NjEyXX0=
 -->
