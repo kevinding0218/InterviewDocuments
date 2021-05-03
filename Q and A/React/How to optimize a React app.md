@@ -6,7 +6,8 @@
 - Performance related instead of speed
 	- First Profiler to the app and then run the app to see which areas of the app is behaving badly, make sure you disable other plugin because it can interfere in the performance
 - Speed
-	- You might be rendering components that are not supposed to be re-rendering, for example if you are not changing a state but you're still setting the same state over and over that  
+	- You might be rendering components that are not supposed to be re-rendering, for example if you are not changing a state but you're still setting the same state over and over that  would result in updating the virtual DOM which you don't need to do that.
+	- We can stop rendering of certain components by using `shouldComponentUpdate`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3OTA2MDI2Nl19
+eyJoaXN0b3J5IjpbLTEyNDk2MTk3ODRdfQ==
 -->
