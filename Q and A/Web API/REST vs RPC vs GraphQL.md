@@ -16,8 +16,12 @@
 https://slack.com/api/chat.postMessage
 https://slack.com/api/chat.scheduleMessage
 ```
+##### Pros
+- Easy to understand:  as the action is usually a part of the url itself they are pretty self-descriptive
+- Lightweight payloads: because they are tied to actions directly payloads tend to be associated with the action itself and therefore tends to be lightweight
+- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU2MDk2NDkzLC0xODM3Njk2NDgsMzc5NT
-QyNjEzLDc0MjAyOTkwMCwtMTEwODIzOTkwNl19
+eyJoaXN0b3J5IjpbLTU3NzA0NDEwMywtMTgzNzY5NjQ4LDM3OT
+U0MjYxMyw3NDIwMjk5MDAsLTExMDgyMzk5MDZdfQ==
 -->
