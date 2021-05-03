@@ -94,8 +94,9 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 - we need a component that will read data from each partition and aggregate it further.
 - It will aggregate data in memory over the course of several minutes, batch this information into files of the predefined size and send it to the distributed file system, where it will be further processed by MapReduce jobs.
 - Partition Processor may also send aggregated information to the Storage service.
-- If accuracy is important and results should be calculated in a matter of minutes, we need to partition the data and aggregate in memory. And if time is not an issue but we still need accurate results and data set is big, Hadoop MapReduce should be our choice.
+- If accuracy is important and results should be calculated in a matter of minutes, we need to partition the data and aggregate in memory. 
+- And if time is not an issue but we still need accurate results and data set is big, Hadoop MapReduce should be our choice.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzcwNjMxNTEsMTAzMjk2NTY5NCwtMT
-E1NzYzMTgxOSwxNTk1NjM1NTkwLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNTI0NzU0NjgsMTAzMjk2NTY5NCwtMTE1Nz
+YzMTgxOSwxNTk1NjM1NTkwLC0yMDg4NzQ2NjEyXX0=
 -->
