@@ -320,7 +320,7 @@ class ThemedButton extends React.Component {
 - You can do inline css which you can conditional render without polluting other parts
 - a good starting point is to define your styles in a separate  `*.css`  file as usual and refer to them using  [`className`](https://reactjs.org/docs/dom-elements.html#classname).
 ### What is react hooks
-- Hooks are functions that lets you "hook into" React state and lifecycle features from function component
+- Hooks are **functions** that lets you **hook into** React **state** and **lifecycle** features from function component
 ### Why use react hooks
 - different way of doing the same thing
 - no more complex lifecycle methods
@@ -724,11 +724,11 @@ function ChatRecipientPicker() {
 #### reselect
 -https://stackoverflow.com/questions/58587126/can-someone-explain-how-input-functions-are-used-in-functions-in-reselect-librar
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTUxOTA2MzEsODAwNjk5NTc4LC01Mz
-IwMjE4OTUsLTE4MjY1NzQ4MTYsMjA1MzQxOTM1MSwtNDgwODU1
-OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OSwtNDU2Nzk5MjE4LC
-01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMwOTk4MjE3LC0xMjgy
-MDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1NDEzMzk5LDI3MTEzOT
-kzNSwtMTI2NjAyMzA3MCw3NTk1ODA2NzksNzIzOTEwNzA3LDIw
-NzU5ODA2NDldfQ==
+eyJoaXN0b3J5IjpbLTE1MjAwMTY5MzUsLTEzMTUxOTA2MzEsOD
+AwNjk5NTc4LC01MzIwMjE4OTUsLTE4MjY1NzQ4MTYsMjA1MzQx
+OTM1MSwtNDgwODU1OTc4LC05Nzk3MzY4ODIsMTk5MTk2MzI1OS
+wtNDU2Nzk5MjE4LC01NTY2MjM1ODcsNTg4NDkyNjE2LC0yMTMw
+OTk4MjE3LC0xMjgyMDI4NjAwLC0xOTA3MzA2NTQ1LC0xNDc1ND
+EzMzk5LDI3MTEzOTkzNSwtMTI2NjAyMzA3MCw3NTk1ODA2Nzks
+NzIzOTEwNzA3XX0=
 -->
