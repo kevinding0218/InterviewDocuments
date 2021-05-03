@@ -67,15 +67,14 @@ Client -> API Gateway -> Distributed Messaging System
 - There are also other options, like aggregating data on the fly, without even writing to logs. Or completely skip all the aggregation on the API Gateway side and send information about every individual video view further down for processing.
 - We better serialize data into a compact binary format. This way we save on network IO utilization if request rate is very high. And let CPU pay the price. Once again, all these considerations depend on what resources are available on the API Gateway host: memory, CPU, network or disk IO.
 #### Distributed Messaging System
-- Initially aggregated data is then sent to a distributed messaging system, like Apache Kafka. 
+- Initially aggregated data is then sent to a distributed messaging system, like **Apache Kafka, AWS Kinesis**. 
 - Internally Kafka splits messages across several partitions, where each partition can be placed on a separate machine in a cluster. At this point we do not have any preferences how messages are partitioned. Default random partitioning will help to distribute messages uniformly across partitions. 
 #### Fast/Slow Path
 - We will split our data processing pipeline into two parts: fast path and slow path. 
 - On the **fast path**, we will calculate a list of k heavy hitters **approximately**. And **results will be available within seconds**.
 - On the **slow path**, we will calculate a list of k heavy hitters **precisely**. And results **will be available within minutes or hours**, depending on the data volume.
 ##### Fast Path
-- We have a service, let's call it fast processor, that creates count-min sketch for some short time interval and aggregates data.
-And because memory is no longer a problem, we do not need to partition the data.
+- We have a service, let's call it fast processor, that creates count-min sketch for some short time interval and aggregates data. And because memory is no longer a problem, we do not need to partition the data.
 Any message from Kafka can be processed by any Fast Processor host.
 Every time we keep data in memory, even for a short period of time, we need to think about
 data replication.
@@ -84,6 +83,6 @@ hardware failures.
 Because count-min sketch already produces approximate results, meaning we lose data
 already in some way, it may be ok if we lose data in some rare cases when host dies.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyODg1NjE4LC0xMTU3NjMxODE5LDE1OT
-U2MzU1OTAsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTEzOTY0Nzg3NTksLTExNTc2MzE4MTksMT
+U5NTYzNTU5MCwtMjA4ODc0NjYxMl19
 -->
