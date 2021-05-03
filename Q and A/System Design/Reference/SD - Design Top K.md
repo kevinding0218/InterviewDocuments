@@ -74,15 +74,13 @@ Client -> API Gateway -> Distributed Messaging System
 - On the **fast path**, we will calculate a list of k heavy hitters **approximately**. And **results will be available within seconds**.
 - On the **slow path**, we will calculate a list of k heavy hitters **precisely**. And results **will be available within minutes or hours**, depending on the data volume.
 ##### Fast Path
-- We have a service, let's call it fast processor, that creates count-min sketch for some short time interval and aggregates data. And because memory is no longer a problem, we do not need to partition the data.
-Any message from Kafka can be processed by any Fast Processor host.
-Every time we keep data in memory, even for a short period of time, we need to think about
-data replication.
-Otherwise, we cannot claim high availability for a service, as data may be lost due to
-hardware failures.
+- Every time we keep data in memory, even for a short period of time, we need to think about data replication. Otherwise, we cannot claim high availability for a service, as data may be lost due to hardware failures.
 Because count-min sketch already produces approximate results, meaning we lose data
 already in some way, it may be ok if we lose data in some rare cases when host dies.
+- Create count-min sketch and aggregates data for a shor period of time(seconds)
+- Because memory is no longer a problem, no need to partition the data
+- Data replicate is nice to have, but may not be strictly required.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTY0Nzg3NTksLTExNTc2MzE4MTksMT
-U5NTYzNTU5MCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbOTI0MzQ3OTMsLTExNTc2MzE4MTksMTU5NT
+YzNTU5MCwtMjA4ODc0NjYxMl19
 -->
