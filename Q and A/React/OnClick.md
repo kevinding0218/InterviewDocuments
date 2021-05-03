@@ -9,18 +9,8 @@
 - for example, you have a list of element where each has a `onClick` event.
 - You can declare it at the parent level, actually react does it internally, react actually attach that event handler to the document level, 
 - Event Delegation is a method of attaching event handlers NOT to the elements from which you actually want to handle events, but to a higher-level element.
-### List all the inbuilt hooks in React 
-#### Main Hooks
-- useState: allows you to define state 
-- useEffect: allows you to handle life cycle method
-- useRef: allows you to set a reference to specific DOM element or others
-- useContext: so you can set something globally similar to redux.
-#### Other Hooks
-- useReducer: 
-- useMemo
-- useImparativeHandle:
-- useLayoutEffect
-- useDebugValue
+
+
 ### What are some of the Best Practises using React Hooks?
 - Follow the Hook's rules
 - Use linter and follow linter (ES-lint)
@@ -33,5 +23,5 @@ setB();
 ```
 - when you call `setA()`, this is an async event which means it's going to read under the page, and later comes to setB, so you can create a setAB that update both in a same statement.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MTgzNjMyNF19
+eyJoaXN0b3J5IjpbLTE1MTcwMjgxNzEsMTM4MTgzNjMyNF19
 -->
