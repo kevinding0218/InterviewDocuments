@@ -22,7 +22,9 @@ LIMIT 50 OFFSET 100;
 #### Client provides
 - Limit: `https://www.myWebsite.com/products?limit=50`
 #### Server responses with results and a next-cursor
-- next-cursor=12345678
+- next-cursor=12345678, in some cases, these are known as continuation tokens.
+#### Client continue sending request that includes this cursor in subsequent
+- e.g `https://www.myWebsite.com/products?limit=50&nextCursor=12345678`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMTkwNjQzXX0=
+eyJoaXN0b3J5IjpbNDA4MzgwNTIxXX0=
 -->
