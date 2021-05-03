@@ -81,8 +81,11 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Processcor -> Stor
 - Because memory is no longer a problem, no need to partition the data
 - Data replicate is nice to have, but may not be strictly required.
 - Every several seconds Fast Processor flushes data to the Storage. **Remember that count-min sketch has a predefined size, it does not grow over time**. Nothing stops us from aggregating for longer than several seconds, we may wait for minutes.
+#### Storage
+- The Storage component is a service in front of a database. And it stores the final top k list for some time interval, for example every 1 minute or 5 minutes.
+- SQL or NoSQL
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMjIwMTI1NCwtMTE1NzYzMTgxOSwxNT
-k1NjM1NTkwLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTQ1NDYyMTczLC0xMTU3NjMxODE5LDE1OT
+U2MzU1OTAsLTIwODg3NDY2MTJdfQ==
 -->
