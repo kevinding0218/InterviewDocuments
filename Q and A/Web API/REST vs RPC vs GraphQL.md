@@ -5,13 +5,19 @@
 - REST apis are **all about resources**, typically you would name your resources using nouns and your method using verbs with `CRUD like` Options in HTTP verbs like POST/PUT/PATCH/GET/DELETE/OPTIONS
 ##### Pros
 - Standard method names, arguments and status codes
-- Utilized HTTP features
+- Utilized HTTP features really well by using the http verbs to describe the precise operation that you're trying to perform
 - Easy to maintain
 ##### Cons
-- Big payloads
+- Big payloads, for example i might be getting the entire user entity but i only probably want to use
+maybe the name or maybe another
+particular field
+unfortunately you're gonna be getting
+the entire resource back
+and this is quite unnecessary so it
+leads to big payloads
 - Multiple HTTP roundtrips
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAwMzMxMjg4LDM3OTU0MjYxMyw3NDIwMj
-k5MDAsLTExMDgyMzk5MDZdfQ==
+eyJoaXN0b3J5IjpbLTE3NDM5MTI2NTgsMzc5NTQyNjEzLDc0Mj
+AyOTkwMCwtMTEwODIzOTkwNl19
 -->
