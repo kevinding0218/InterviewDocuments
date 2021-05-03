@@ -17,7 +17,8 @@
 	- Dependency Injections helps us to manage future changes in code i.e. code maintainability
 	- Dependency Injection uses a builder object to initialize objects and provide the required dependencies to the object means it allows you to ‘inject’ a dependency from outside the class
 ### For Example
-- You have a class User which depends on a MySQLDatabase, every time you initiate the User object it binds with MySqlDatabase. 
+- You have a class User which depends on a MySQLDatabase, every time you initiate the User object it binds with MySqlDatabase. it's going to be really really hard to test the internals of this code because we can't pass in a mock instance of a database second if we wanted to actually rip ourselves away from the internal implementation of connecting to MySQL and utilize another database we can't do that because we've hard-coded our Association of this user to a MySQL  database instance
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MTMzMDY4NCwtMTM2MTMxNTE4NF19
+eyJoaXN0b3J5IjpbMTE5ODc2Mzc4MCwtMTM2MTMxNTE4NF19
 -->
