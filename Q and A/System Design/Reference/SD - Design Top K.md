@@ -100,17 +100,19 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 - In MapReduce data processing is split into phases. The input to a MapReduce job is a set of files split into independent chunks which are processed by the map tasks in a parallel manner.
 ```
 Frequency Count MapReducer
-Input		Split		Map		Shuffle and Sort		Reduce		Output
-B = 3					B,3
-A = 5		~			A,5
-C = 2					C,2
+Input		Split		Map		Shuffle and Sort	Reduce		Output
+B = 3					B,3		A(5,7)				A, 12		A = 12
+A = 5		~			A,5		B(3,6)				B, 9		B = 9
+C = 2					C,2										C = 2
+																D = 15
+B = 6					B,6		C(2)				C, 2
+D = 15		~			D,15	D(15)				D, 15
+A = 7					A,7
 
-B = 6					B,
-D = 15		~
-A = 7
+To
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMTE4ODM3Nyw5NzkzMzUxNCwxMDMyOT
+eyJoaXN0b3J5IjpbMjA2ODA1NTAzMSw5NzkzMzUxNCwxMDMyOT
 Y1Njk0LC0xMTU3NjMxODE5LDE1OTU2MzU1OTAsLTIwODg3NDY2
 MTJdfQ==
 -->
