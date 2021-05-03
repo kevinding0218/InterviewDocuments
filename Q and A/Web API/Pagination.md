@@ -40,6 +40,7 @@ LIMIT 50;
 #### Cons
 - Clients need to traverse through each page one by one
 - Records need to be added sequentially to the DB at a random positions
+- Clients need to manage the next cursor value and send it along with each request so it's oneex
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTM3MjU5NjJdfQ==
+eyJoaXN0b3J5IjpbLTg4MDU5MjQ0OV19
 -->
