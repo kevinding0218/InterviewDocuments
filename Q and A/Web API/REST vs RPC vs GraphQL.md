@@ -37,9 +37,9 @@ from a resource in a single call for example getting the orders and the users ca
 ##### Cons
 - **Added Complexity**: the **server needs to handle the complexity of the type of query the client constructs** this can get quite complicated depending on the nature of your data optimizing performance in the backend
 - **Optimizing performance is difficult**: when working with external users it becomes difficult to identify their use cases as they can vary quite a bit
-- Too complicated for a simple API: 
+- **Too complicated for a simple API**: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MjM5MDQxNiwtMTE1NjIwMzkwNywtMT
-g2NDY1OTU5MCwtMTgzNzY5NjQ4LDM3OTU0MjYxMyw3NDIwMjk5
-MDAsLTExMDgyMzk5MDZdfQ==
+eyJoaXN0b3J5IjpbLTU1NjExNzI4LC02ODIzOTA0MTYsLTExNT
+YyMDM5MDcsLTE4NjQ2NTk1OTAsLTE4Mzc2OTY0OCwzNzk1NDI2
+MTMsNzQyMDI5OTAwLC0xMTA4MjM5OTA2XX0=
 -->
