@@ -27,7 +27,13 @@ LIMIT 50 OFFSET 100;
 - e.g `https://www.myWebsite.com/products?limit=50&nextCursor=12345678`
 #### Server will use these next cursors
 - Implement efficient queries so as to avoid reading through the same records over and over again like in offset-based pagination
-- It's basically a pointer that the server can use to improve performance. The value of the cursor is totally up to you as sometimes your database does the job by providing such information so you don't need to worry about it, or you can come up with your own cursor value as well.
+- It's basically a pointer that the server can use to improve performance. The value of the cursor is totally up to you as sometimes your database does the job by providing such information so you don't need to worry about it, or you can come up with your own cursor value as well, for example, you may go with a timestamp, the sample query would look something like this
+```
+SELECT * FROM products
+WHERE created_timestamp < 12345678
+ORDER BY created_timestamp
+LIMIT 50;
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwOTAwMzE1MV19
+eyJoaXN0b3J5IjpbODExMjYyMDk4XX0=
 -->
