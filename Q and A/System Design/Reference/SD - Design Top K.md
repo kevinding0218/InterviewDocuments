@@ -35,7 +35,9 @@ A B C A A D C A B C -> LB -	Processor Host A[C = 2, D = 1, A = 2, B = 1]- Storag
 - It is a bit better now, we can process events in parallel. Total throughput of the system has increased.
 #### Cons
 - another evident problem of this solution is memory. We may use too much memory on each Processor host as well as Storage host. There are billions of videos on Youtube. Even if we store a fraction of this number in memory, hash table will become huge.
+### Data Partitioner
+- this component is responsible for routing each individual video identifier to its own Processor host. Each Processor host only stores a subset of all the data.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4OTg5NTkxMSwxNTk1NjM1NTkwLC0yMD
-g4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE0NDc4MDc1MTAsMTU5NTYzNTU5MCwtMj
+A4ODc0NjYxMl19
 -->
