@@ -15,6 +15,7 @@
 - **Scalable** (so that rate limiter scales out together with the service itself). If we need to add more hosts to the web service cluster, this should not be a problem for the rate limiter.
 - **Low latency** (make decision ASAP)
 - **Accurate** (as we do not want to throttle customers unless it is absolutely required)
+- **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
 #### What about high availability and fault tolerance?
 - Two common requirements for many distributed systems but not so much important to a rate limiter
 ### Build Solution
@@ -202,6 +203,6 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NjY5Nzg0MCw2NjcwNDQxNjIsNTUxNz
+eyJoaXN0b3J5IjpbMTk4MDEyMDYyMCw2NjcwNDQxNjIsNTUxNz
 M2Nzg1LDk0MjA3ODk2MywtMjA4ODc0NjYxMl19
 -->
