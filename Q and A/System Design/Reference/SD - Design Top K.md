@@ -24,9 +24,13 @@ Elements with higher frequency count remain in the heap, while elements with low
 ```
 #### Cons
 -  the first and the most obvious problem with this solution - **it is not scalable**. If events are coming with a high rate, **single host will quickly become a bottleneck**. So, we may want to start **processing events in parallel.**
-#### How to achieve this?
-- 
+### Load Balancer
+- This may be a classic load balancer or a distributed queue. Each event then goes to one of the hosts in a cluster. Let's call them Processor hosts. And because the same video identifier may appear on different Processor hosts, each Processor needs to flush accumulated data to a single Storage host.
+```
+A B C A A D C A B C
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2ODk2NzIzNCwxNTk1NjM1NTkwLC0yMD
+eyJoaXN0b3J5IjpbMTMyODQ4NDAwNywxNTk1NjM1NTkwLC0yMD
 g4NzQ2NjEyXX0=
 -->
