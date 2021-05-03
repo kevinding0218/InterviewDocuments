@@ -33,8 +33,11 @@ these functions can grow out of control this leads to function explosion overall
 - **Save multiple round trips**: the client can define the exact data that is required and this is going to save the number of trips the client is going to need to make to get that requested data a client could request multiple nested levels of data
 from a resource in a single call for example getting the orders and the users can be done in a single call in this case as long as you structure the data the way you require it to be
 - **Avoid versioning**: in graphql apis you don't necessarily have to do that you can add new fields without breaking the existing queries similarly you can deprecate existing fields
+- **Smaller payload size**: client definition results in smaller payload
+##### Cons
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2ODg2ODgxNSwtMTE1NjIwMzkwNywtMT
-g2NDY1OTU5MCwtMTgzNzY5NjQ4LDM3OTU0MjYxMyw3NDIwMjk5
-MDAsLTExMDgyMzk5MDZdfQ==
+eyJoaXN0b3J5IjpbLTEyMTkzMzAyODEsLTExNTYyMDM5MDcsLT
+E4NjQ2NTk1OTAsLTE4Mzc2OTY0OCwzNzk1NDI2MTMsNzQyMDI5
+OTAwLC0xMTA4MjM5OTA2XX0=
 -->
