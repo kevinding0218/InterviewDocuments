@@ -23,9 +23,11 @@ https://slack.com/api/chat.scheduleMessage
 ##### Cons
 - Discovery is difficult: it is not possible to assume operations available on resources because they are not standardized like rest apis
 - Limited Standardization: can become tedious to work with referencing documentation becomes super important
-- Leads to function explosion: 
+- Leads to function explosion: over time as features are added to your products the number of endpoints representing
+these functions can grow out of control this leads to function explosion overall. 
+- Overall RPC apis are good for apis exposing actions rather than crude-like operations
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MzkzNjE1NiwtMTg2NDY1OTU5MCwtMT
+eyJoaXN0b3J5IjpbMjA1MzgwMzAwMSwtMTg2NDY1OTU5MCwtMT
 gzNzY5NjQ4LDM3OTU0MjYxMyw3NDIwMjk5MDAsLTExMDgyMzk5
 MDZdfQ==
 -->
