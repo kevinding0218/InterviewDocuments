@@ -15,8 +15,8 @@ LIMIT 50 OFFSET 100;
 - e.g: if user wants to skip to the 6th page from the frist page, they can just directly jump to the 6th page without having to scroll through 2, 3, 4, 5
 #### Cons
 - Can be unreliable at times, if there are frequent changes to your data as the pagination, then you might run into missing items or duplicate items
-- Inefficient for la
+- Inefficient for large or distributed datasets, this is because your database query will most likely have to count and skip rows the offset before returning the actual results. The larger your offset the more inefficient your query becomes.
 ### Cursor-based Pagination
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTYzNTQ4NjZdfQ==
+eyJoaXN0b3J5IjpbMTM5NTI3MTk1Ml19
 -->
