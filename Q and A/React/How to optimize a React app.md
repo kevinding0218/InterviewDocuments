@@ -13,7 +13,10 @@
 - it may take too long to load you can use lazy loading, to lazy load on certain routes that you or the client may be using later on or may not be even using it
 #### Something else
 - you may find out the api's are slow so there may be some improvement needed on the server side that may be a bottleneck as well it's not always a react app is slow it could be something else.
-- re using the wrong methods to update the state some of them may be updating state directly instead of creating a copy ofit
+- using the wrong methods to update the state some of them may be updating state directly instead of creating a copy of it
+- it is also possible they all your assets are loading slowly a lot of time if you have videos and images in your application and they may be loading slowly because of the location where this asset are stored and you can easily find out in a profiler
+- you may be using classes if you make them functions that may improve your application as well
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMTE5OTE4NF19
+eyJoaXN0b3J5IjpbMjAwNzUzNDM3N119
 -->
