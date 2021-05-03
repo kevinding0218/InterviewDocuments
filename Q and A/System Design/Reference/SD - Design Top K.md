@@ -88,10 +88,12 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 #### Slow Path
 - On the slow path we also need to aggregate data, but we want to **count everything precisely.** There are several options how to do this. One option is to let **MapReduce** do the trick. We dump all the data to the **distributed file system**, for example HDFS or object storage, for example **S3**. And run two MapReduce jobs, **one job to calculate frequency counts and another job to calculate the actual top k list.**
 #### Data Partitioner
-- Partitioner will take each video identifier and send information to a correspondent partition in another Kafka cluster. And as we mentioned before, every time we partition data, we need to think about possibility of hot partitions.
-- And our partitioner service should take care of it. Now, each partition in Kafka or shard in Kinesis, depending on what we use, stores a subset of data. Both Kafka and Kinesis will take care of data replication.
+- Partitioner will take each video identifier and send information to a correspondent partition in another Kafka cluster. And as we mentioned before, every time we partition data, we need to think about possibility of hot partitions, Data Partitioner read batches of events and parse them into individual events.
+- And our partitioner service should take care of it. Now, each partition in Kafka or shard in Kinesis, depending on what we use, stores a subset of data. **Both Kafka and Kinesis will take care of data replication**.
+#### Partition Processor
+- we need a component that will read data from each partition and aggregate it further.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMjk2NTY5NCwtMTE1NzYzMTgxOSwxNT
-k1NjM1NTkwLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTExMjcwNjgzNSwxMDMyOTY1Njk0LC0xMT
+U3NjMxODE5LDE1OTU2MzU1OTAsLTIwODg3NDY2MTJdfQ==
 -->
