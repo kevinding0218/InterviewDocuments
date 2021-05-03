@@ -16,7 +16,8 @@ LIMIT 50 OFFSET 100;
 #### Cons
 - Can be unreliable at times, if there are frequent changes to your data as the pagination, then you might run into missing items or duplicate items
 - Inefficient for large or distributed datasets, this is because your database query will most likely have to count and skip rows the offset before returning the actual results. The larger your offset the more inefficient your query becomes.
+- e.g, offset from 1000 to 2000 to 3000, the first 1000 records were read three tims, and first 2000 were read twice.
 ### Cursor-based Pagination
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NTI3MTk1Ml19
+eyJoaXN0b3J5IjpbLTc5OTgyMDExMF19
 -->
