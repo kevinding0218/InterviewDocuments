@@ -11,11 +11,10 @@
 - **High performant**: keep end-to-end **latency as low as possible**, avoid heavy calculations while calling the topK API.
 - Accuracy
 ### Start with Single Host
-- let's assume the whole data set can be loaded into a memory of that single host. For example, we have a list of events (video views). Every time user opens a video, we log such event by adding video identifier to the list
-of events. A, B, C, D represent unique video identifiers. Given a list of events, how do we calculate the k most frequent elements?
+- let's assume the whole data set can be loaded into a memory of that single host. For example, we have a list of events (video views). Every time user opens a video, we log such event by adding video identifier to the list of events. A, B, C, D represent unique video identifiers. Given a list of events, how do we calculate the k most frequent elements?
 - First, we calculate how many times each element appears in the list. So, we create a hash table that contains frequency counts.
 - And to get top k elements we can either sort the hash table based on frequency counts. Or we can add all elements into a heap data structure. We make sure heap contains only k elements every time we add new element to the heap.
-- Heap approach is faster. When we sort all elements in the hash table, the time complexity of such algorithm is n*log(n), where n is the number of elements in the hash table. By using heap, we can reduce time complexity to be n*log(k).
+- Heap approach is faster. When we sort all elements in the hash table, the time complexity of such algorithm is n*log(n), where n is the number of elements in the hash table. By using heap, we can reduce time complexity to be **n*log(k)**.
 ```
 TopK method gets a list of events as the input And returns a list of k heavy hitters.
 We then create a hash table that counts how many times each video appeared in the list of events.
@@ -23,8 +22,11 @@ We define a min heap data structure (priority queue in Java) And add each elemen
 While doing this, we check if heap has more than k elements. And if this is the case, we remove a top element from the heap. Because this is a min heap, the top element of the heap is the one with the minimum frequency count.
 Elements with higher frequency count remain in the heap, while elements with lower frequency count are removed periodically.This way we make sure that only heavy hitters remain in the heap.
 ```
-
+#### Cons
+-  the first and the most obvious problem with this solution - **it is not scalable**. If events are coming with a high rate, **single host will quickly become a bottleneck**. So, we may want to start **processing events in parallel.**
+#### How to achieve this?
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjU3MzM0NzQsMTU5NTYzNTU5MCwtMj
-A4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTk2ODk2NzIzNCwxNTk1NjM1NTkwLC0yMD
+g4NzQ2NjEyXX0=
 -->
