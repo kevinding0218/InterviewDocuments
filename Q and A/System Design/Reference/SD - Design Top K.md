@@ -39,12 +39,13 @@ A B C A A D C A B C -> LB -	Processor Host A[C = 2, D = 1, A = 2, B = 1]- Storag
 - this component is responsible for **routing each individual video identifier to its own Processor host. Each Processor host only stores a subset of all the data.**
 - we follow the same procedure as we did for a single host. We build a hash table, create a heap and add all elements from the hash table to the heap. Now, **each Processor host contains its own list of k heavy hitters. And each such list is sorted.**
 ```
-A E C F A D C A B B -> Data Partitioner - 
+A E C F A D C A B B -> Data Partitioner - Processor Host A[B = 2, F = 1, A = 3] -> heapify [B = 2, A = 3]	-> sorted								\
+										  Processor Host B	[C = 2, D = 1, E = 1] -> heapify [C = 2, D = 1]	-> sorted	- Storage host	
 ```
 #### Merge K sorted Lists 
 - How do we create a final list that combines information from every Processor host? **It is important to note that Processor hosts only pass a list of size k to the Storage host.**
 - We cannot pass all the data, meaning that we cannot pass each Processor hash table to the Storage host, as one combined hash table may be too big to fit in memory. That was the whole point of data partitioning after all, to not accumulate all the data on a single host.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3ODg2ODc3MCwxNTk1NjM1NTkwLC0yMD
-g4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTEzMTkxMjQ0NzAsMTU5NTYzNTU5MCwtMj
+A4ODc0NjYxMl19
 -->
