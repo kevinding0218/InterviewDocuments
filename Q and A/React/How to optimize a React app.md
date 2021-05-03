@@ -12,12 +12,8 @@
 #### Package size huge
 - it may take too long to load you can use lazy loading, to lazy load on certain routes that you or the client may be using later on or may not be even using it
 #### Something else
-- you may find out the api's
-are slow so there may be some
-improvement needed on the server side
-that may be a bottleneck as well it's
-not always a react app is slow it could
-be something else
+- you may find out the api's are slow so there may be some improvement needed on the server side that may be a bottleneck as well it's not always a react app is slow it could be something else.
+- re using the wrong methods to update the state some of them may be updating state directly instead of creating a copy ofit
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk2MDU4Mzk2XX0=
+eyJoaXN0b3J5IjpbMTMxMTE5OTE4NF19
 -->
