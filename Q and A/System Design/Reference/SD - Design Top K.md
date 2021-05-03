@@ -54,8 +54,11 @@ A E C F A D C A B B -> Data Partitioner - Processor Host A[B = 2, F = 1, A = 3] 
 ### Challenge
 - On one hand we need the whole data set for a particular time period, let's say 1-day. And on the other hand, we cannot accumulate data in memory for the whole day. What should we do?
 - Let's **store all the data on disk and use batch processing framework to calculate a top k list**, and this is where **MapReduce** comes into play.
-- 
+### High Level Architecture
+```
+Client -> API Gateway
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODYyMjE1ODUsMTU5NTYzNTU5MCwtMj
-A4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTM5MjE0NjI5NiwxNTk1NjM1NTkwLC0yMD
+g4NzQ2NjEyXX0=
 -->
