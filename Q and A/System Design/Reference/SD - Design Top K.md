@@ -67,8 +67,13 @@ Client -> API Gateway -> Distributed Messaging System
 - There are also other options, like aggregating data on the fly, without even writing to logs. Or completely skip all the aggregation on the API Gateway side and send information about every individual video view further down for processing.
 - We better serialize data into a compact binary format. This way we save on network IO utilization if request rate is very high. And let CPU pay the price. Once again, all these considerations depend on what resources are available on the API Gateway host: memory, CPU, network or disk IO.
 #### Distributed Messaging System
-- 
+- Initially aggregated data is then sent to a distributed messaging system, like Apache Kafka. 
+- Internally Kafka splits messages across several partitions, where each partition can be placed on a separate machine in a cluster. At this point we do not have any preferences how messages are partitioned. Default random partitioning will help to distribute messages uniformly across partitions. 
+#### Fast/Slow Path
+- We will split our data processing pipeline into two parts: fast path and slow path. 
+- On the fast path, we will calculate a list of k heavy hitters approximately. And results will be available within seconds.
+- On the slow path, we will calculate a list of k heavy hitters precisely. And results will be available within minutes or hours, depending on the data volume.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTc2MzE4MTksMTU5NTYzNTU5MCwtMj
-A4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNDIzNjQ4MDA0LC0xMTU3NjMxODE5LDE1OT
+U2MzU1OTAsLTIwODg3NDY2MTJdfQ==
 -->
