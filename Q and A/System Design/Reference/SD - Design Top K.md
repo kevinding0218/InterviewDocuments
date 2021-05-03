@@ -46,10 +46,11 @@ A E C F A D C A B B -> Data Partitioner - Processor Host A[B = 2, F = 1, A = 3] 
 - How do we create a final list that combines information from every Processor host? **It is important to note that Processor hosts only pass a list of size k to the Storage host.**
 - We cannot pass all the data, meaning that we cannot pass each Processor hash table to the Storage host, as one combined hash table may be too big to fit in memory. That was the whole point of data partitioning after all, to not accumulate all the data on a single host.
 #### Pros
-- By partitioning the data, we increased both scalability and throughput.
+- By partitioning the data, we **increased both scalability and throughput**.
 #### Cons
-- 
+- All this time we were talking about bounded data sets or data sets of limited size. Such data sets can indeed be split into chunks, and after finding top k heavy hitters for each chunk we just merge results together.
+- But **streaming data is unbounded**, essentially infinite. Users keep clicking on videos every second. In these circumstances, Processor hosts can accumulate data only for some period of time, let's say 1-minute, and will flush 1-minute data to the Storage host. So, the Storage host stores a list of heavy hitters for every minute. And remember that this is only top k heavy hitters. Information about all other elements, that did not make to the top k list is lost. We cannot afford storing information about every video in memory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NzAwNTcyMSwxNTk1NjM1NTkwLC0yMD
+eyJoaXN0b3J5IjpbMTMzMzk5Mzc1MCwxNTk1NjM1NTkwLC0yMD
 g4NzQ2NjEyXX0=
 -->
