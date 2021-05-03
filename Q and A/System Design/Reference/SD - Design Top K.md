@@ -34,14 +34,17 @@ A B C A A D C A B C -> LB -	Processor Host A[C = 2, D = 1, A = 2, B = 1]- Storag
 #### Pros
 - It is a bit better now, we can process events in parallel. **Total throughput of the system has increased**.
 #### Cons
-- another evident problem of this solution is memory. We may use too much memory on each Processor host as well as Storage host. There are billions of videos on Youtube. Even if we store a fraction of this number in memory, hash table will become huge.
+- another evident problem of this solution is memory. We may **use too much memory on each Processor host as well as Storage host**. There are billions of videos on Youtube. Even if we store a fraction of this number in memory, hash table will become huge.
 ### Data Partitioner
-- this component is responsible for routing each individual video identifier to its own Processor host. Each Processor host only stores a subset of all the data.
-- we follow the same procedure as we did for a single host. We build a hash table, create a heap and add all elements from the hash table to the heap. Now, each Processor host contains its own list of k heavy hitters. And each such list is sorted.
+- this component is responsible for **routing each individual video identifier to its own Processor host. Each Processor host only stores a subset of all the data.**
+- we follow the same procedure as we did for a single host. We build a hash table, create a heap and add all elements from the hash table to the heap. Now, **each Processor host contains its own list of k heavy hitters. And each such list is sorted.**
+```
+A E C F A D C A B B -> Data Partitioner - 
+```
 #### Merge K sorted Lists 
 - How do we create a final list that combines information from every Processor host? **It is important to note that Processor hosts only pass a list of size k to the Storage host.**
 - We cannot pass all the data, meaning that we cannot pass each Processor hash table to the Storage host, as one combined hash table may be too big to fit in memory. That was the whole point of data partitioning after all, to not accumulate all the data on a single host.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0OTk3OTc5OSwxNTk1NjM1NTkwLC0yMD
+eyJoaXN0b3J5IjpbMTk3ODg2ODc3MCwxNTk1NjM1NTkwLC0yMD
 g4NzQ2NjEyXX0=
 -->
