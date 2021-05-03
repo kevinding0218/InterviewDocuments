@@ -10,8 +10,10 @@
 ##### Cons
 - Big payloads, for example i might be getting the entire user entity but i only probably want to use maybe the name or maybe another particular field.  Unfortunately you're gonna be getting the entire resource back and this is quite unnecessary so it leads to big payloads
 - Multiple HTTP roundtrips, for example if you want to get a resource and it's sub-resource well you have to make two separate calls first to get the resource and second to get the sub-resource there's no way of combining the results together not in a restful manner anyway
-#
+#### RPC API
+- RPC apis are **all about actions**.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk5NjU1MzQyLC0xODM3Njk2NDgsMzc5NT
+eyJoaXN0b3J5IjpbLTEyMzIzOTI4LC0xODM3Njk2NDgsMzc5NT
 QyNjEzLDc0MjAyOTkwMCwtMTEwODIzOTkwNl19
 -->
