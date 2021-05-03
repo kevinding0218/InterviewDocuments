@@ -1,3 +1,7 @@
+### Why GraphQL
+- GraphQL along with Apollo provide a unified browser and server solution for data and state management
+- Provides a single abstraction backed by many data stores/microservices
+- It handles complex state and cache management for both the frontend and backend
 #### What is GraphQL
 - Is a query language for your API, not a library, not a product and not a database
 - Traditional way of not using GraphQL is we request the API endpint while expect to receive a massive JSON object from response
@@ -297,8 +301,8 @@ user {
 - Tools
 	- GraphiQL: an in-browser IDE for writing, validating and testing GraphQL queries
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU1ODcyNzg0LC0xNTY2OTc1OTkzLDIxMj
-kxNTczNDcsMTc2MDE1NTYyOCwtMTkxNTgyNTY1OSwtMzMyMjUz
-Mzk4LDE0MDUzMDQzMTksLTEwNTkyNTQzNzIsLTU5ODg3NTAzMi
-w3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbNjc1ODU3ODI4LDc1NTg3Mjc4NCwtMTU2Nj
+k3NTk5MywyMTI5MTU3MzQ3LDE3NjAxNTU2MjgsLTE5MTU4MjU2
+NTksLTMzMjI1MzM5OCwxNDA1MzA0MzE5LC0xMDU5MjU0MzcyLC
+01OTg4NzUwMzIsNzMwOTk4MTE2XX0=
 -->
