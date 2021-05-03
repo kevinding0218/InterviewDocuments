@@ -25,6 +25,9 @@ LIMIT 50 OFFSET 100;
 - next-cursor=12345678, in some cases, these are known as continuation tokens.
 #### Client continue sending request that includes this cursor in subsequent
 - e.g `https://www.myWebsite.com/products?limit=50&nextCursor=12345678`
+#### Server will use these next cursors
+- Implement efficient queries so as to avoid reading through the same records over and over again like in offset-based pagination
+- It's basically a pointer that the server can use to improve performance.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA4MzgwNTIxXX0=
+eyJoaXN0b3J5IjpbNDMyNTI2ODQwXX0=
 -->
