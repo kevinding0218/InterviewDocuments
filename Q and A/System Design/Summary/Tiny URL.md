@@ -5,8 +5,8 @@
 - **Discussion**: Should shorten url link be expire or does it have a Time To Live? Who would make the decision? User or Us?
 - **Discussion**: Users should optionally be able to pick a custom short link for their URL. `URlService.createCustomTinyURL(String longUrl, String customName);`
 #### Non Functional
-- High Availablity: if our service is down, all the URL redirections will start failing.
-- High Performant: with minimal latency < 200ms
+- **High Availablity**: if our service is down, all the URL redirections will start failing.
+- **High Performant**: with minimal latency < 200ms
 - Discussion High Secure: not predictable
 - Discussion: Expose to external service or just internal application usage (SOAP & REST)
 - **Daily Usage** (QPS + Storage)
@@ -258,6 +258,7 @@ public String longToShort(String url) {
 	- Insert a new column in URLTable as most of the data might be null
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MzAxMTg3OCwxOTI3NTc2MDE4LDIwND
-Y4ODYyMSwxMTE4MTU4MjAxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTQ0OTc3ODA4NiwtNzkzMDExODc4LDE5Mj
+c1NzYwMTgsMjA0Njg4NjIxLDExMTgxNTgyMDEsLTIwODg3NDY2
+MTJdfQ==
 -->
