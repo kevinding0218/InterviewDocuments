@@ -62,14 +62,11 @@ Client -> API Gateway
 - **Every time user clicks on a video**, request goes through API Gateway, component that represents a **single-entry point** into a video content delivery system.
 - API Gateway **routes client requests to backend services**. Nowadays majority of public distributed systems use API Gateways, it's a widely spread practice.
 - For our use case, we are interested in one specific function of API Gateways, **log generation, when every call to API is logged.** Usually these logs are used for **monitoring, audit, billing**. We will use these logs for counting how many times each video was viewed.
-- We may implement a background process that reads data from logs, does some initial aggregation, and sends this data for further processing. We allocate a buffer in memory on the API Gateway host, read every log entry and build
-a frequency count hash table we discussed before.
-This buffer should have a limited size, and when buffer is full, data is flushed.
-If buffer is not full for a specified period of time, we can flush based on time.
-There are also other options, like aggregating data on the fly, without even writing to logs.
-Or completely skip all the aggregation on the API Gateway side and send information
-about every individual video view further down for processing.
+- We may implement a background process that reads data from logs, does some initial aggregation, and sends this data for further processing. We **allocate a buffer in memory on the API Gateway host, read every log entry and build a frequency count hash table** we discussed before.
+- This **buffer should have a limited size**, and **when buffer is full, data is flushed**. If buffer is **not full** for a specified period of time, we can **flush based on time**.
+- There are also other options, like aggregating data on the fly, without even writing to logs. Or completely skip all the aggregation on the API Gateway side and send information about every individual video view further down for processing.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxOTcwNTAxOSwxNTk1NjM1NTkwLC0yMD
-g4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNjAxOTgyMDIsMTU5NTYzNTU5MCwtMjA4OD
+c0NjYxMl19
 -->
