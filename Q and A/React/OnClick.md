@@ -31,7 +31,7 @@ const[b, setB] = useState();
 setA();
 setB();
 ```
-- when you call `setA()`, this is an async event which means it's going to read under the page, 
+- when you call `setA()`, this is an async event which means it's going to read under the page, and later comes to setB, so you can create a setAB that update both in a same statement.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxOTQwMDIwNl19
+eyJoaXN0b3J5IjpbMTM4MTgzNjMyNF19
 -->
