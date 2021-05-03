@@ -27,10 +27,12 @@ Elements with higher frequency count remain in the heap, while elements with low
 ### Load Balancer
 - This may be a classic load balancer or a distributed queue. Each event then goes to one of the hosts in a cluster. Let's call them Processor hosts. And because the same video identifier may appear on different Processor hosts, each Processor needs to flush accumulated data to a single Storage host.
 ```
-A B C A A D C A B C
+A B C A A D C A B C -> LB -	Processor Host A[C = 2, D = 1, A = 2, B = 1]- Storage Host [C = 3, D = 1..]
+						  \												/
+							Processor Host B[C = 1, A = 2, B = 1]		
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyODQ4NDAwNywxNTk1NjM1NTkwLC0yMD
+eyJoaXN0b3J5IjpbMTE3MzYwOTEzMywxNTk1NjM1NTkwLC0yMD
 g4NzQ2NjEyXX0=
 -->
