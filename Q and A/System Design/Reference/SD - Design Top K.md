@@ -96,7 +96,10 @@ Client -> API Gateway -> Distributed Messaging System -> Fast Path Count-Min Ske
 - Partition Processor may also send aggregated information to the Storage service.
 - If accuracy is important and results should be calculated in a matter of minutes, we need to partition the data and aggregate in memory. 
 - And if time is not an issue but we still need accurate results and data set is big, Hadoop MapReduce should be our choice.
+#### Map Reduce
+- In MapReduce data processing is split into phases. The input to a MapReduce job is a set of files split into independent chunks which are processed by the map tasks in a parallel manner.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI0NzU0NjgsMTAzMjk2NTY5NCwtMTE1Nz
+eyJoaXN0b3J5IjpbOTc5MzM1MTQsMTAzMjk2NTY5NCwtMTE1Nz
 YzMTgxOSwxNTk1NjM1NTkwLC0yMDg4NzQ2NjEyXX0=
 -->
