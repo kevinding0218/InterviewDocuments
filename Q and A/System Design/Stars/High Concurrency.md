@@ -1,8 +1,9 @@
 Filter request
 1. Static Page Technology - CDN
-2. Cache Warm-up
-3. Asynchronous
-4. Peak Load Shifting, create order via message queue
+	- Pag
+3. Cache Warm-up
+4. Asynchronous
+5. Peak Load Shifting, create order via message queue
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjc2OTE3OTJdfQ==
+eyJoaXN0b3J5IjpbLTIwMDUwMjQzOF19
 -->
