@@ -3,7 +3,7 @@ I use React professionally; but am happy enough switching between frameworks.
 _Likes_:
 -   easy enough to learn
 -   component based
--   version stable
+-   version stable (compared to Angular)
 -   plenty of support/instructions available
 -   flexible
 -   available libraries
@@ -19,5 +19,5 @@ _Dislikes_:
 -   powerful backing isn't always a good thing: facebook aren't getting very good press in terms of their ethics lately
 -   almost too popular: reduced competition can lead to stagnation and complacency. Too much noise when searching for solutions/libraries etc.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTE4Mjc2NDRdfQ==
+eyJoaXN0b3J5IjpbLTEyMTk5NTMwMzNdfQ==
 -->
