@@ -9,7 +9,7 @@
 	- SET
 	- ZSET (order Set)
 -  All operation are Atomic, meaning either fully execute succesfully or failed
-- Support distributed cluster
+- Support distributed clusters
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc4Mjk0Nzc4XX0=
+eyJoaXN0b3J5IjpbMTUyMTI2NDM5MV19
 -->
