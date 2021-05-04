@@ -2,7 +2,7 @@
 I use React professionally; but am happy enough switching between frameworks.
 
 ### Likes_:
--   easy enough to learn
+-   easy enough to learn (compared to Angular)
 -   component based
 -   version stable (compared to Angular)
 -   plenty of support/instructions available
@@ -20,5 +20,5 @@ I use React professionally; but am happy enough switching between frameworks.
 - less to think about; but less flexible and more to learn. 
 - Well established and backed by Google
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2ODUxNzgyNl19
+eyJoaXN0b3J5IjpbLTgxNDM1MzQ4M119
 -->
