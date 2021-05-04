@@ -1,7 +1,6 @@
 ### Load balancing
 - Load balancing is a big topic. And unless interviewer encourages you to dive deep into load balancing topic, we better not deviate too much from the main question of the interview. Always try to stay focused on what really matters.
-- load balancers will help us achieve high throughput and availability, ensure requests are equally distributed among processing servers at an ideal expectation, also keeps track of the status of all the resources while distributing requests.
-If a server is not available to take new requests or is not responding or has elevated error rate, LB will stop sending traffic to such a server.
+- load balancers will **help us achieve high throughput and availability**, **ensure requests are equally distributed among processing servers at an ideal expectation**, also **keeps track of the status of all the resources** while distributing requests. **If a server is not available** to take new requests or is not responding **or has elevated error rate**, LB will **stop sending traffic to such a server**.
 ### Pros
 - Users experience faster, uninterrupted service. Users won’t have to wait for a single struggling server to finish its previous tasks
 - help us achieve high throughput and availability, only forward traffic to “healthy” backend servers. To monitor the health of a backend server, “health checks” regularly attempt to connect to backend servers to ensure that servers are listening.
@@ -44,5 +43,5 @@ P4			24		=>		24 - 20 = 4 => COmpleted
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTI0MDY4MDldfQ==
+eyJoaXN0b3J5IjpbLTM4MjE1NjU3MSwtMTUxMjQwNjgwOV19
 -->
