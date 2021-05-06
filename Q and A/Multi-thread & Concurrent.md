@@ -54,9 +54,9 @@
 	- The JVM is able to detect deadlock situation, and can log information help debug the application, unfortunately there is not much we can do if a deadlock situation occurs, besides rebooting the JVM
 #### Runnable Pattern
 - The most basic way to **create thread** in Java is to use **Runnable Pattern**
-	- First create an instance of Runnable
-	- Then pass it to the constructor of the Thread class
-	- Then call the start() method of this thread object
+	- First create an instance of **Runnable**
+	- Then **pass it to the constructor** of the Thread class
+	- Then call the **start() method** of this thread object
 		```
 		Runnable runnable = () -> {
 			String name = Thread.currentThread().getName();
@@ -105,7 +105,7 @@
 	```
 - The above code was **wrong at race condition** here, if my producers and consumers are run in their own threads, it means that **several threads are reading and writing the buffer at the same time = race condition**, this will corrupt the array that **I will not be able to write or read values from array because of concurrent access to the array**
 #### Synchronize the access to the array, 
-- by adding the synchronized keyword on it like `public void synchronized produce ()` or `public void synchronized consume()` , 
+- by **adding the synchronized keyword** on it like `public void synchronized produce ()` or `public void synchronized consume()` , 
 	- however this will not fix our problem because synchronization can fix our race condition problem, but not if we write it like that.
 	- why? because if we write synchronized like that, it means that the object holding the key that thread will need to run the `consume/produce` method is the `consumer/producer` instance itself, what we want is to avoid a thread from running the consume method when another thread is running the produce method
 	- so we need a common synchronization object to all the instances of consumer and producer. This code will work if the lock object is the same for all the producers and consumers instances
@@ -453,11 +453,11 @@ void second Method() {
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjU3NDUzNzMsLTI3NTE1MTMyNSwtMT
-MwODM2NjAxMCwtMTgxMTI4OTg0MywxMTY5NDc0NTY3LC0xNjYx
-MDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEwOD
-QxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0ODMs
-MjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3Mj
-E1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MTYw
-LC0yMTM3NzM4OTI1XX0=
+eyJoaXN0b3J5IjpbLTExMDY3NjQxMjUsLTExNjU3NDUzNzMsLT
+I3NTE1MTMyNSwtMTMwODM2NjAxMCwtMTgxMTI4OTg0MywxMTY5
+NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOT
+A0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1
+LDExOTE0MDg0ODMsMjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMD
+E2MjM3MSwzNTg3MjE1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3
+OSwxNzQxNjE1MTYwXX0=
 -->
