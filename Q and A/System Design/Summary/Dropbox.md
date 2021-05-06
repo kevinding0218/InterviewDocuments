@@ -19,7 +19,11 @@ servers and other online devices.
 Client	-	Metadata Service	-	Metadata Storage
 		\	Sync Service
 ```
-
+- The user will specify a folder as the workspace on their device. Any file/photo/folder placed in this folder will be uploaded to the cloud, and whenever a file is modified or deleted, it will be reflected in the same way in the cloud storage.
+- At a high level, we need to store files and their metadata information like File Name, File Size, Directory, etc., and who this file is shared with. So, we need some servers that can help the clients to upload/download files to Cloud Storage and some servers that can facilitate updating metadata about files and users. We also need some mechanism to notify all clients whenever an update happens so they can synchronize their files.
+- Processing services will work with the clients to upload/download files from cloud storage 
+- Metadata serwill keep metadata of files updated in a SQL or NoSQL database. 
+- Synchronization services will handle the workflow of notifying all clients about different changes for synchronization. High
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NjUxODI0NF19
+eyJoaXN0b3J5IjpbNzAwOTc3NjI1XX0=
 -->
