@@ -5,6 +5,10 @@ How would we efficiently send/receive messages? To send messages, a user needs t
 to notify them whenever there are new messages.
 - If we go with our first approach, then the server needs to keep track of messages that are still waiting to be delivered, and as soon as the receiving user connects to the server to ask for any new message, the server can return all the pending messages. To minimize latency for the user, they have to check the server quite frequently, and most of the time they will be getting an empty response if there are no pending message. This will waste a lot of resources and does not look like an efficient solution.
 - If we go with our second approach, where all the active users keep a connection open with the server, then as soon as the server receives a message it can immediately pass the message to the intended user. This way, the server does not need to keep track of the pending messages, and we will have minimum latency, as the messages are delivered instantly on the opened connection.
+### How will clients maintain an open connection with the server?
+- We can use HTTP Long Polling or WebSockets. 
+- In long polling, clients can request information from the server with the expectation that the server may not respond immediately. If the server has no new data for the client when the poll is received, instead of sending an empty response, the server holds the request open and waits for response information to become available. Once it does have new information, the server immediately sends the response to the client, completing the open request.
+- This gives a lot of improvements in latencies, throughputs, and performance. The long polling request can timeout or can receive a disconnect from the server, in that case, the client has to open a new request.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NTI4MDAwOF19
+eyJoaXN0b3J5IjpbLTExMzIxMjQ3NzRdfQ==
 -->
