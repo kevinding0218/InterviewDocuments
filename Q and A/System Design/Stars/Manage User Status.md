@@ -10,6 +10,8 @@ Client A	\
 Client B	-	Load Balancer (Chat Server Mapping) - Chat Servers - LB (Cache Server Mapping) - Cache
 Client C	/										DB Shard 1, 2, 3
 ```
+### Data partitioning
+- Partitioning based on UserID
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYwODMwMTI2XX0=
+eyJoaXN0b3J5IjpbMTQyOTQzMTI4MF19
 -->
