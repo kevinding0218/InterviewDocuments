@@ -24,6 +24,9 @@ Client	-	Metadata Service	-	Metadata Storage
 - Processing services will work with the clients to upload/download files from cloud storage 
 - Metadata services will keep metadata of files updated in a SQL or NoSQL database. 
 - Synchronization services will handle the workflow of notifying all clients about different changes for synchronization. High
+#### How can clients efficiently listen to changes happening with other clients?
+- A solution to the above problem could be to use HTTP long polling. With long polling the client requests information from the server with the expectation that the server may not respond immediately.
+- If the server has no new data for the client when the poll is received, instead of sending an empty response, the server holds the request open and waits for response information to become available.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzc2NjYyNDldfQ==
+eyJoaXN0b3J5IjpbLTE1NTY4NjExMjJdfQ==
 -->
