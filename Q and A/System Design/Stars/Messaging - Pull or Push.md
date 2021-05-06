@@ -9,6 +9,9 @@ to notify them whenever there are new messages.
 - We can use HTTP Long Polling or WebSockets. 
 - In long polling, clients can request information from the server with the expectation that the server may not respond immediately. If the server has no new data for the client when the poll is received, instead of sending an empty response, the server holds the request open and waits for response information to become available. Once it does have new information, the server immediately sends the response to the client, completing the open request.
 - This gives a lot of improvements in latencies, throughputs, and performance. The long polling request can timeout or can receive a disconnect from the server, in that case, the client has to open a new request.
+### What will happen when the server receives a message for a user who has gone offline? 
+- If the receiver has disconnected, the server can notify the sender about the delivery failure. 
+- If it is a temporary disconnect, e.g., the receiver’s long-poll request just timed out, then we should expect a reconnect from the user. In that case, we can ask the sender to retry sending the message. This retry could be embedded in the client’s logic so that users don’t have to retype the message. The server can also store the message for a while and retry sending it once the receiver reconnects.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzIxMjQ3NzRdfQ==
+eyJoaXN0b3J5IjpbLTQwMTMyMDc5NV19
 -->
