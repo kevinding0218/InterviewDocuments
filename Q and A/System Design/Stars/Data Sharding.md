@@ -15,7 +15,9 @@
 - Storing tweets based on creation time will give us the advantage of fetching all the top tweets quickly and we only have to query a very small set of servers. 
 - The problem here is that the traffic load will not be distributed, e.g., while writing, all new tweets will be going to one server and the remaining servers will be sitting idle. Similarly, while reading, the server holding the latest data will have a very high load as compared to servers holding old data.
 #### Sharding based on XXXID and creation time
-- 
+- This way it will be quite quick to find the latest Tweets. For this, we must make each TweetID universally unique in our system and each TweetID should contain a timestamp too.
+1. Since we don’t have any secondary index (on creation time) this will reduce our write latency.
+2. While reading, we don’t need to filter on creation-time as our primary key has epoch timeincluded in it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NzcyODQ4M119
+eyJoaXN0b3J5IjpbLTc3NzkzNzc1NF19
 -->
