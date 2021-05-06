@@ -83,7 +83,7 @@ However, if you are in a transaction and want the ability to "undo" this delete,
 
 In SQL Server, it is possible to rollback a truncate operation if you are inside a transaction and the transaction has not been committed.
 
-What is an index? What are the types of indexes? How many clustered indexes can be created on a table? I create a separate index on each column of a table. what are the advantages and disadvantages of this approach?
+### What is an index? What are the types of indexes? How many clustered indexes can be created on a table? I create a separate index on each column of a table. what are the advantages and disadvantages of this approach?
 
 Indexes in SQL Server are similar to the indexes in books. They help SQL Server retrieve the data quicker.
 
@@ -193,6 +193,6 @@ When you specify a column or set of columns with PARTITION BY clause then it wil
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDM4NjkxNiw1MjI4MzY3MDUsLTUwOT
-A1Mzg5NF19
+eyJoaXN0b3J5IjpbLTEwOTA1MzE4MDcsMTAzMDM4NjkxNiw1Mj
+I4MzY3MDUsLTUwOTA1Mzg5NF19
 -->
