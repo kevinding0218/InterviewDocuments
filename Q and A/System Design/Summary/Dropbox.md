@@ -27,10 +27,7 @@ Client	-	Metadata Service	-	Metadata Storage
 #### How can clients efficiently listen to changes happening with other clients?
 - A solution to the above problem could be to use HTTP long polling. With long polling the client requests information from the server with the expectation that the server may not respond immediately.
 - If the server has no new data for the client when the poll is received, instead of sending an empty response, the server holds the request open and waits for response information to become available.
-#### Which storage system we should use? 
-- We need to have a database that can support a very high rate of small updates and also fetch a range of records quickly. This is required because we have a huge number of small messages that need to be inserted in the database and, while querying, a user is mostly interested in sequentially accessing the messages.
-- We cannot use RDBMS like MySQL or NoSQL like MongoDB because we cannot afford to read/write a row from the database every time a user receives/sends a message. This will not only make the basic operations of our service run with high latency, but also create a huge load on databases.
-- Both of our requirements can be easily met with a wide-column database solution like HBase. HBase is a column-oriented key-value NoSQL database that can store multiple values against one key into multiple columns. HBase is modeled after Google’s BigTable and runs on top of Hadoop Distributed File System (HDFS). HBase groups data together to store new data in a memory buffer and, once the buffer is full, it dumps the data to the disk. This way of storage not only helps storing a lot of small data quickly, but also fetching rows by the key or scanning ranges of rows. HBase is also an efficient database to store variably sized data, which is also required by our service.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMzAzMTY1NiwtMTU1Njg2MTEyMl19
+eyJoaXN0b3J5IjpbLTE1NTY4NjExMjIsLTE1NTY4NjExMjJdfQ
+==
 -->
