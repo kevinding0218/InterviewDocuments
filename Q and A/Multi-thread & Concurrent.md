@@ -43,17 +43,17 @@
 		```
 - **How it work**: synchronize means **protecting this method by a fence**, so that Java machine uses a **lock** object, every object in the Java language has this key, when a thread tries to enter this protected block of code, it will make a request on this lock object, like "give me your key", **if the object has the key available, it will give it to the thread, and this thread will be able to run the code freely**. If another thread comes and make the same request, this time the lock object has **no key to give** because it already gives its key to the previous thread, the lock object has only **one single key**, so this thread has to be waiting for the key to be available, at some time previous thread complete its executing and will give key to the object so that the waiting thread can now execute it. 
 #### Synchronization over multiple methods
-- Supposer we have synchronized on a class `Person` of `getName()` and `getAge()`, when a thread wants to access an instance of Person `getName()`, it will just take the key of the lock object which is the current instance itself, meaning at same time if another thread wants to access same instance's `getAge()`, it cannot because same lock key is using on two methods.
-	- we might need to create two lock objects if we want synchronized in both `getName()` and `getAge()`
+- Supposer we have synchronized on a class `Person` of `getName()` and `getAge()`, when a thread wants to access an instance of Person `getName()`, it will just take the key of the lock object which is the current instance itself, meaning at same time if another thread wants to access same instance's `getAge()`, **it cannot because same lock key is using on two methods.**
+	- we might need to **create two lock objects** if we want synchronized in both `getName()` and `getAge()`
 - If we have two instances of `Person`, lock in `getName()` of first instance won't stop another thread from trying to access `getAge()` in second instance
-- If we want to allow only one thread to access one instance, we need to our lock object to be bound on class itself
+- If we want to allow **only one thread to access one instance**, we need to our **lock object to be bound on class itself**
 - Using the `synchronized` keyword on a method declaration, uses an implicit lock object, which is the class object in the case of a static method or the instance object itself in the case of a non-static method
 #### Reentrant Locks and Deadlocks
-- Reentrant Locks: In Java, locks are reentrant, meaning when a thread holds a lock, it can enter a block synchronized on the lock it is holding
-- Deadlocks: is a situation where **a thread T1 holds a key needed by a thread T2, and T2 also holds the key needed by T1**
+- **Reentrant Locks**: In Java, locks are reentrant, meaning when a thread holds a lock, it can enter a block synchronized on the lock it is holding
+- **Deadlocks**: is a situation where **a thread T1 holds a key needed by a thread T2, and T2 also holds the key needed by T1**
 	- The JVM is able to detect deadlock situation, and can log information help debug the application, unfortunately there is not much we can do if a deadlock situation occurs, besides rebooting the JVM
 #### Runnable Pattern
-- The most basic way to create thread in Java is to use Runnable Pattern
+- The most basic way to **create thread** in Java is to use **Runnable Pattern**
 	- First create an instance of Runnable
 	- Then pass it to the constructor of the Thread class
 	- Then call the start() method of this thread object
@@ -453,11 +453,11 @@ void second Method() {
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0OTg2OTA5LC0yNzUxNTEzMjUsLTEzMD
-gzNjYwMTAsLTE4MTEyODk4NDMsMTE2OTQ3NDU2NywtMTY2MTAx
-NzY1NCwtMTUyOTcwODMxNSwtMjAwMjkwNDA0OSw2ODQxMDg0MT
-UsMTEyNTAzMTU3NSwtMTE3NDc1MTYyNSwxMTkxNDA4NDgzLDIx
-MjU0MzAzNCwtMTY1NjY0NzQ2MSw1MTAxNjIzNzEsMzU4NzIxNT
-czLC00ODQ1MjczNzEsLTE4OTE2MDg3NzksMTc0MTYxNTE2MCwt
-MjEzNzczODkyNV19
+eyJoaXN0b3J5IjpbLTIxOTI3ODEwOSwtMjc1MTUxMzI1LC0xMz
+A4MzY2MDEwLC0xODExMjg5ODQzLDExNjk0NzQ1NjcsLTE2NjEw
+MTc2NTQsLTE1Mjk3MDgzMTUsLTIwMDI5MDQwNDksNjg0MTA4ND
+E1LDExMjUwMzE1NzUsLTExNzQ3NTE2MjUsMTE5MTQwODQ4Mywy
+MTI1NDMwMzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMT
+U3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAs
+LTIxMzc3Mzg5MjVdfQ==
 -->
