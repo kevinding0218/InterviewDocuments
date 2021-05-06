@@ -106,7 +106,7 @@
 - The above code was **wrong at race condition** here, if my producers and consumers are run in their own threads, it means that **several threads are reading and writing the buffer at the same time = race condition**, this will corrupt the array that **I will not be able to write or read values from array because of concurrent access to the array**
 #### Synchronize the access to the array, 
 - by **adding the synchronized keyword** on it like `public void synchronized produce ()` or `public void synchronized consume()` , 
-	- however this will not fix our problem because synchronization can fix our race condition problem, but not if we write it like that.
+	- however this will not fix our problem because **synchronization can fix our race condition problem**, but not if we write it like that.
 	- why? because if we write synchronized like that, it means that the object holding the key that thread will need to run the `consume/produce` method is the `consumer/producer` instance itself, what we want is to avoid a thread from running the consume method when another thread is running the produce method
 	- so we need a common synchronization object to all the instances of consumer and producer. This code will work if the lock object is the same for all the producers and consumers instances
 		```
@@ -133,7 +133,7 @@
 	- So we need a way to "park" a thread while he is waiting for some data to be produced, and when the thread is "parked", it should not block all other threads, so the key held by this thread should be released while this thread is "parked", and this is the wait/notify pattern
 #### Wait / Notify Pattern
 - `wait()` and `notify()` are two methods from the Object class
-- They are invoked on a given object
+- They are **invoked on a given object**
 - The thread executing the invocation should hold the key of that object, if the thread that is executing a `wait` method does not hold the key of the object on which it is executing this method, then an exception is raised
 - Note: `wait()` and `notify()` cannot be invokved outside a synchronized block
 - Calling `wait()`
@@ -453,7 +453,7 @@ void second Method() {
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDY3NjQxMjUsLTExNjU3NDUzNzMsLT
+eyJoaXN0b3J5IjpbLTEzMTI5MDI3NDksLTExNjU3NDUzNzMsLT
 I3NTE1MTMyNSwtMTMwODM2NjAxMCwtMTgxMTI4OTg0MywxMTY5
 NDc0NTY3LC0xNjYxMDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOT
 A0MDQ5LDY4NDEwODQxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1
