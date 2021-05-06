@@ -5,7 +5,17 @@
 	- Over time some users can end up storing a lot of tweets or having a lot of follows compared to others. Maintaining a uniform distribution of growing user data is quite difficult.
 #### Sharding based on XXXID
 - Our hash function will map each TweetID to a random server where we will store that Tweet. To search for tweets, we have to query all servers, and each server will return a set of tweets. A centralized server will aggregate these results to return them to the user.
+1. Our application (app) server will find all the people the user follows.
+2. App server will send the query to all database servers to find tweets from these people.
+3. Each database server will find the tweets for each user, sort them by recency and return the top tweets.
+4. App server will merge all the results and sort them again to return the top results to the user.
+- This approach solves the problem of hot users, but, in contrast to sharding by UserID, we have to query all database 
+
+#### Sharding based on Creation Time
+- Storing tweets based on creation time will give us the advantage of fetching all the top tweets quickly and we only have to query a very small set of servers. 
+- The problem here is that the traffic load will not be distributed, e.g., while writing, all new tweets will be going to one server and the remaining servers will be sitting idle. Similarly, while reading, the server holding the latest data will have a very high load as compared to servers holding old data.
+#### Sharding based on XXXID and creation time
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNDY2NjMxMV19
+eyJoaXN0b3J5IjpbMTI5NzcyODQ4M119
 -->
