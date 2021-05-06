@@ -66,12 +66,12 @@
 		thread.start();
 		```
 #### How to stop a thread
-	- method `stop()` should not be used and it's there for legacy, backward compatibility reasons.
-	- should use `interrupt()` method, it will not stop the thread but merely send a signal to the task the thread is running and telling it that it is time for this task to stop itself.
-	- The code of the task should call `isInterrupted()` to terminate itself
-		- if the thread was not interrupted, do what the task should do
-		- if the thread was interrupted, then should stop the task, cleaning all the resource I have opened.
-		- if the thread is blocked, or waiting, then the corresponding method will throw an InterruptedException, such as method `wait()/notify(),join()` throws the InterruptedException
+- method `stop()` should not be used and it's there for legacy, backward compatibility reasons.
+- should use `interrupt()` method, **it will not stop the thread but merely send a signal to the task the thread is running and telling it that it is time for this task to stop itself**.
+- The code of the task should call `isInterrupted()` to terminate itself
+	- if the thread was not interrupted, do what the task should do
+	- if the thread was interrupted, then should stop the task, cleaning all the resource I have opened.
+	- if the thread is blocked, or waiting, then the corresponding method will throw an InterruptedException, such as method `wait()/notify(),join()` throws the InterruptedException
 	```
 	Runnable task = () -> {
 		while(!Thread.currentThread().isInterrupted()) {
@@ -82,7 +82,7 @@
 #### Producer / Consumer Pattern
 - A producer produces values in a buffer
 - A consumer consumes the values from this buffer
-- Most of the time, will have more than one producers and more than one consumers, and they all will be **executed in their own thread**, which means these buffers will be shared among all the threads, maybe the object of a race condition if I do not properly synchronize my code.
+- Most of the time, will have more than one producers and more than one consumers, and they all will be **executed in their own thread**, which means **these buffers will be shared among all the threads, maybe the object of a race condition if I do not properly synchronize my code.**
 - Be careful, the buffer can be empty or full, if it's empty then consumer cannot consume any value and if it's full, then producer cannot write any values in it.
 	```
 	// Simple Producer
@@ -103,7 +103,7 @@
 		}
 	}
 	```
-- The above code was wrong at race condition here, if my producers and consumers are run in their own threads, it means that several threads are reading and writing the buffer at the same time = race condition, this will corrupt the array that I will not be able to write or read values from array because of concurrent access to the array
+- The above code was **wrong at race condition** here, if my producers and consumers are run in their own threads, it means that **several threads are reading and writing the buffer at the same time = race condition**, this will corrupt the array that **I will not be able to write or read values from array because of concurrent access to the array**
 #### Synchronize the access to the array, 
 - by adding the synchronized keyword on it like `public void synchronized produce ()` or `public void synchronized consume()` , 
 	- however this will not fix our problem because synchronization can fix our race condition problem, but not if we write it like that.
@@ -453,11 +453,11 @@ void second Method() {
 		}
 		```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxOTI3ODEwOSwtMjc1MTUxMzI1LC0xMz
-A4MzY2MDEwLC0xODExMjg5ODQzLDExNjk0NzQ1NjcsLTE2NjEw
-MTc2NTQsLTE1Mjk3MDgzMTUsLTIwMDI5MDQwNDksNjg0MTA4ND
-E1LDExMjUwMzE1NzUsLTExNzQ3NTE2MjUsMTE5MTQwODQ4Mywy
-MTI1NDMwMzQsLTE2NTY2NDc0NjEsNTEwMTYyMzcxLDM1ODcyMT
-U3MywtNDg0NTI3MzcxLC0xODkxNjA4Nzc5LDE3NDE2MTUxNjAs
-LTIxMzc3Mzg5MjVdfQ==
+eyJoaXN0b3J5IjpbLTExNjU3NDUzNzMsLTI3NTE1MTMyNSwtMT
+MwODM2NjAxMCwtMTgxMTI4OTg0MywxMTY5NDc0NTY3LC0xNjYx
+MDE3NjU0LC0xNTI5NzA4MzE1LC0yMDAyOTA0MDQ5LDY4NDEwOD
+QxNSwxMTI1MDMxNTc1LC0xMTc0NzUxNjI1LDExOTE0MDg0ODMs
+MjEyNTQzMDM0LC0xNjU2NjQ3NDYxLDUxMDE2MjM3MSwzNTg3Mj
+E1NzMsLTQ4NDUyNzM3MSwtMTg5MTYwODc3OSwxNzQxNjE1MTYw
+LC0yMTM3NzM4OTI1XX0=
 -->
