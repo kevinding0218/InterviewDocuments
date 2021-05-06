@@ -7,9 +7,9 @@ We need to keep track of user’s online/offline status and notify all the relev
 5. Whenever the client starts a new chat with another user, we can pull the status at that time.
 ```
 Client A	\
-Client B	-	Load Balancer (Chat Server Mapping) - Chat Servers - LB (Cache Server Mapping) - Cahce
-Client C	/										
+Client B	-	Load Balancer (Chat Server Mapping) - Chat Servers - LB (Cache Server Mapping) - Cache
+Client C	/										DB Shard 1, 2, 3
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzYxODAwNzRdfQ==
+eyJoaXN0b3J5IjpbNjYwODMwMTI2XX0=
 -->
