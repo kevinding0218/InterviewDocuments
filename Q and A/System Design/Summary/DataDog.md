@@ -40,8 +40,12 @@ AND timestamp <= 1411845300;
 - Interviewer: Do we need to get the metrics out of the server? 
 	- If not, we can have our server expose an endpoint service with the metrics or it may just save the metrics to local disks and we can do that later
 	- If yes, in above approatch, we’ll lose access to the metrics when the server is slow or down — just when we need them the most. We’d also want to put the metrics in a centralized place for better global monitoring and alerting.
-
+#### Pull
+- it is more convenient. Each server being monitored only needs to gather the metrics in memory and serve them through an endpoint. It doesn’t need to care where the monitoring system is. It doesn’t need to worry about overloading the monitoring system if they send too much and/or too frequently. A global configuration about what to collect and the collection interval can be tuned in the monitoring system.
+- disadvantage of pulling that the blog post didn’t mention is that it’s challenging to offer high availability and scalability with a pull-only model.
+#### Push
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NTM3ODExMiwxNjIwNTI0ODIsLTQ4MT
+eyJoaXN0b3J5IjpbMjA5MzIxNzMwNSwxNjIwNTI0ODIsLTQ4MT
 M4MjY4M119
 -->
