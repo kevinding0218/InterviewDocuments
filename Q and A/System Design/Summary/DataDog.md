@@ -4,7 +4,7 @@
 ### Non Functional Req
 
 ### Metrics Data
-#### 
+#### Application level
 - service name
 - instance (instance id or ip address)
 - code (http code)
@@ -12,7 +12,7 @@
 - path (url path)
 - duration (how long API request takes)
 - count (number of requests in an interval)
-#### Other spec related to host
+#### Other spec related to host level
 - CPU/memory/disk usage
 - Avaialbility
 - bytes of memory allocated or released
@@ -36,6 +36,6 @@ AND timestamp <= 1411845300;
 	- This would create a single hotspot that would move around the cluster as the interval changed. Keep in mind that a materialized view would result in the same problem, since the view itself would contain hotspots. 
 - As a result, it is imperative that **we determine some sentinel value that can be used in place of the service name, and that is not time oriented**. **For example, API method or url path or instance ip address could be a good value**. In practice I have found that this use case is rare, or that the real use case requires a queue or cache.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMzM5MDQxLDE2MjA1MjQ4MiwtNDgxMz
-gyNjgzXX0=
+eyJoaXN0b3J5IjpbLTg4MzMyOTcxOSwxNjIwNTI0ODIsLTQ4MT
+M4MjY4M119
 -->
