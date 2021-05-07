@@ -43,7 +43,12 @@ AND timestamp <= 1411845300;
 	- WAL doesn’t incur a big IO penalty because sequential file access is relatively fast.
 	- We can buffer the data samples in memory for a while, which opens doors for better write efficiency.
 - **How we structure the data in files**. One time series per file sounds like a simple solution, but unfortunately, it won’t scale. There are just too many time series to create individual files for. We have to store multiple time series in a file. On the other hand, we can’t just put everything in a monolithic file. That file will be too big to operate.
-- We need to **cut the file in some way**. The natural choice here is to **cut the file by the time dimension**. We can create one file **per day or other configurable time window**. Let’s call the data in a time window a block. If the data volume in a block is too big for one file, we can shard it across a few files. We also need an index file in each block to tell us which file and what file position to look for in a particular time series. (Check Datadog 
+- We need to **cut the file in some way**. The natural choice here is to **cut the file by the time dimension**. We can create one file **per day or other configurable time window**. Let’s call the data in a time window a block. If the data volume in a block is too big for one file, we can shard it across a few files. We also need an index file in each block to tell us which file and what file position to look for in a particular time series. (**Check Datadog in Reference**)
+- As data samples arrive in memory, we buffer them until we need to flush them to disk. When we flush them to disk, we organize them in blocks. **The block for the most recent data samples typically represents a small time window.**
+```
+Block 0 | Block 1 | Block 2, ...
+15m		  1h		4h
+```
 ### Data Processing - Push vs Pull
 - Interviewer: Do we need to get the metrics out of the server? 
 	- If not, we can have our server expose an endpoint service with the metrics or it may just save the metrics to local disks and we can do that later
@@ -55,6 +60,6 @@ AND timestamp <= 1411845300;
 #### Push
 - If we’re using push, we can put a load balancer in front of a set of monitoring system replicas and have the servers being monitored send metrics through the load balancer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjAzMzc4NTAsMTYyMDUyNDgyLC00OD
-EzODI2ODNdfQ==
+eyJoaXN0b3J5IjpbMTM1MTUzNDI0MywxNjIwNTI0ODIsLTQ4MT
+M4MjY4M119
 -->
