@@ -17,7 +17,7 @@
 - Avaialbility
 - bytes of memory allocated or released
 - heap size, etc
-#### Schema
+### Data Storage Schema
 - Because most of time we query by time range to list service instances’ API methods (sample picture below), the sharding key can be **“time bucket” + “service” **, where the **time bucket is a timestamp rounded to some interval**.
 - This gives us a known, time-based value to use as **a means of further partitioning our data**, and also allows us to easily **find keys that can be safely archived**. 
 - The time bucket is an example of a **sentinel**, and is a useful construct in a number of models where you need better distribution than your natural key provides. When choosing values for your time buckets, a rule of thumb is to select an interval that allows you to perform the bulk of your queries using only two buckets. **The more buckets you query, the more nodes will be involved to produce your result**. It’s also worth noting that this would be an excellent time to use time-window compaction.
@@ -35,7 +35,9 @@ AND timestamp <= 1411845300;
 	- It would be tempting to simply remove service name from the primary key, using only time_bucket as the partition key. The problem with this strategy is that all writes and most reads would be against a single partition key. 
 	- This would create a single hotspot that would move around the cluster as the interval changed. Keep in mind that a materialized view would result in the same problem, since the view itself would contain hotspots. 
 - As a result, it is imperative that **we determine some sentinel value that can be used in place of the service name, and that is not time oriented**. **For example, API method or url path or instance ip address could be a good value**. In practice I have found that this use case is rare, or that the real use case requires a queue or cache.
-
+### How to store
+- **We absolutely cannot just write individual data samples to files as they arrive**. That’ll be prohibitively inefficient because the monitoring system may end up collecting a million data samples or more every minute.
+-  With batching in memory, there comes the risk of losing data. It may not be a big deal if we’re only batching for a short period of time, as typical time series use cases can tolerate the loss of a few data samples.
 ### Data Processing - Push vs Pull
 - Interviewer: Do we need to get the metrics out of the server? 
 	- If not, we can have our server expose an endpoint service with the metrics or it may just save the metrics to local disks and we can do that later
@@ -47,6 +49,6 @@ AND timestamp <= 1411845300;
 #### Push
 - If we’re using push, we can put a load balancer in front of a set of monitoring system replicas and have the servers being monitored send metrics through the load balancer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMTYyNDc4LDE2MjA1MjQ4MiwtNDgxMz
+eyJoaXN0b3J5IjpbNDU1ODYyNTY5LDE2MjA1MjQ4MiwtNDgxMz
 gyNjgzXX0=
 -->
