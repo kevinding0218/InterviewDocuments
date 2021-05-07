@@ -29,9 +29,13 @@
 -  The GET method cannot be used for passing sensitive information like usernames and passwords.
 -  The length of the URL is limited.
 #### Post Pros
-- 
-
-
+-  You can send user-generated data to the web server.
+- POST is a secure method as its requests do not remain in browser history.
+- You can effortlessly transmit a large amount of data using post.
+- You can keep the data private.
+#### Post Cons
+-   It is not possible to save data as the data sent by the POST method is not visible in the URL.
+-   You cannot see POST requests in browser history.
 
 
 
@@ -56,5 +60,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNzE2NTQxNV19
+eyJoaXN0b3J5IjpbMTI4NDUxMzY1OV19
 -->
