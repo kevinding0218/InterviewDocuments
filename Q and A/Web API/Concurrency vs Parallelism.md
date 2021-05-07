@@ -5,6 +5,7 @@
 
 - **Parallelism**  is when tasks  _literally_  run at the same time, e.g., on a multicore processor.
 	- If one problem is solved by multiple processors.
+		- the rule is still singing and eating concurrently**,** but this time, you play in a team of two. You probably will eat and let your friend sing. So this time, the two tasks are really executed simultaneously, and it’s called _parallel_.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMTM0OTYxOV19
+eyJoaXN0b3J5IjpbNDIyNTkzODcwXX0=
 -->
