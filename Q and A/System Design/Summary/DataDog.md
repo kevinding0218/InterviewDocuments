@@ -1,9 +1,10 @@
 ### Functional Req
 - Should be able to catch a series of metrics data and store for every API request
-- Should be able to fetch from our storage in a
+- Should be able to fetch from our storage in an easy way 
 ### Non Functional Req
 
 ### Metrics Data
+#### 
 - service name
 - instance (instance id or ip address)
 - code (http code)
@@ -11,8 +12,11 @@
 - path (url path)
 - duration (how long API request takes)
 - count (number of requests in an interval)
-####
-
+#### Other spec related to host
+- CPU/memory/disk usage
+- Avaialbility
+- bytes of memory allocated or released
+- heap size, etc
 #### Schema
 - Because most of time we query by time range to list service instances’ API methods (sample picture below), the sharding key can be **“time bucket” + “service” **, where the **time bucket is a timestamp rounded to some interval**.
 - This gives us a known, time-based value to use as **a means of further partitioning our data**, and also allows us to easily **find keys that can be safely archived**. 
@@ -32,6 +36,6 @@ AND timestamp <= 1411845300;
 	- This would create a single hotspot that would move around the cluster as the interval changed. Keep in mind that a materialized view would result in the same problem, since the view itself would contain hotspots. 
 - As a result, it is imperative that **we determine some sentinel value that can be used in place of the service name, and that is not time oriented**. **For example, API method or url path or instance ip address could be a good value**. In practice I have found that this use case is rare, or that the real use case requires a queue or cache.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzU3ODg4MjIsMTYyMDUyNDgyLC00OD
-EzODI2ODNdfQ==
+eyJoaXN0b3J5IjpbLTQxMzM5MDQxLDE2MjA1MjQ4MiwtNDgxMz
+gyNjgzXX0=
 -->
