@@ -2,7 +2,10 @@
 - Should be able to catch a series of metrics data and store for every API request
 - Should be able to fetch from our storage in an easy way 
 ### Non Functional Req
-
+- **High scalability**: supports an arbitrarily large number of posts or able to **handle load increase**
+- **High availability**: **survives hardware/network failures**
+- **High performant**: keep end-to-end **latency as low as possible**, GEO might be a considration
+- Tolerancy maybe allow of a little
 ### Metrics Data
 #### Application level
 - service name
@@ -64,6 +67,6 @@ Block 0 | Block 1 | Block 2, ...
 #### Push
 - If we’re using push, we can put a load balancer in front of a set of monitoring system replicas and have the servers being monitored send metrics through the load balancer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MDE4NzcxOCwxNjIwNTI0ODIsLTQ4MT
-M4MjY4M119
+eyJoaXN0b3J5IjpbLTEwNjc0MDI2MTksMjA1MDE4NzcxOCwxNj
+IwNTI0ODIsLTQ4MTM4MjY4M119
 -->
