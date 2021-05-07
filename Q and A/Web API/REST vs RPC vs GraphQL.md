@@ -3,6 +3,7 @@
 - When it comes to request response style apis there are three commonly used standards here they are **representational state transfer which is more commonly referred to as rest apis** and then you have **remote procedure call or rpc style apis** and finally you have **GraphQL apis**
 #### REST API
 - REST apis are **all about resources**, typically you would name your resources using nouns and your method using verbs with `CRUD like` Options in HTTP verbs like POST/PUT/PATCH/GET/DELETE/OPTIONS
+- REST are **STATELESS**
 ##### Pros
 - **Standard method names, arguments and status codes**
 - **Utilized HTTP features really well** by using the http verbs to describe the precise operation that you're trying to perform
@@ -39,7 +40,8 @@ from a resource in a single call for example getting the orders and the users ca
 - **Optimizing performance is difficult**: when working with external users it becomes difficult to identify their use cases as they can vary quite a bit
 - **Too complicated for a simple API**: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NjExNzI4LC02ODIzOTA0MTYsLTExNT
-YyMDM5MDcsLTE4NjQ2NTk1OTAsLTE4Mzc2OTY0OCwzNzk1NDI2
-MTMsNzQyMDI5OTAwLC0xMTA4MjM5OTA2XX0=
+eyJoaXN0b3J5IjpbLTEyMDEwMTI2MDEsLTU1NjExNzI4LC02OD
+IzOTA0MTYsLTExNTYyMDM5MDcsLTE4NjQ2NTk1OTAsLTE4Mzc2
+OTY0OCwzNzk1NDI2MTMsNzQyMDI5OTAwLC0xMTA4MjM5OTA2XX
+0=
 -->
