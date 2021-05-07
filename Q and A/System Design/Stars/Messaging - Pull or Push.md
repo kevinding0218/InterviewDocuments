@@ -1,3 +1,4 @@
+[Link](https://medium.com/@_JeffPoole/thoughts-on-push-vs-pull-architectures-666f1eab20c2)
 ### Messages Handling
 How would we efficiently send/receive messages? To send messages, a user needs to connect to the server and post messages for the other users. To get a message from the server, the user has two options:
 1. **Pull model**: Users can periodically ask the server if there are any new messages for them.
@@ -7,6 +8,8 @@ How would we efficiently send/receive messages? To send messages, a user needs t
 to notify them whenever there are new messages.
 - This is when a client requests work from a server — the work is “pushed” to the server, which has no choice in the matter. This is probably the most common pattern, and the most common examples are requests to a REST API or RPC
 - If we go with our second approach, where all the active users keep a connection open with the server, then as soon as the server receives a message it can immediately pass the message to the intended user. This way, the server does not need to keep track of the pending messages, and we will have minimum latency, as the messages are delivered instantly on the opened connection.
+#### Cons
+- You need to know where to send your request. You need a hard-coded list of addresses, a set of load balancer endpoints, DNS names that can be used with lookups config, or a whole service discovery system such as [Zookeeper](https://zookeeper.apache.org/), or something else.
 ### How will clients maintain an open connection with the server?
 - We can use HTTP Long Polling or WebSockets. 
 - In long polling, clients can request information from the server with the expectation that the server may not respond immediately. If the server has no new data for the client when the poll is received, instead of sending an empty response, the server holds the request open and waits for response information to become available. Once it does have new information, the server immediately sends the response to the client, completing the open request.
@@ -15,5 +18,5 @@ to notify them whenever there are new messages.
 - If the receiver has disconnected, the server can notify the sender about the delivery failure. 
 - If it is a temporary disconnect, e.g., the receiver’s long-poll request just timed out, then we should expect a reconnect from the user. In that case, we can ask the sender to retry sending the message. This retry could be embedded in the client’s logic so that users don’t have to retype the message. The server can also store the message for a while and retry sending it once the receiver reconnects.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1OTY2NTk1OSwtNDAxMzIwNzk1XX0=
+eyJoaXN0b3J5IjpbMTEyNTkxMTA2MiwtNDAxMzIwNzk1XX0=
 -->
