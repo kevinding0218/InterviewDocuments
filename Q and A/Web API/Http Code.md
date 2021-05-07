@@ -12,7 +12,12 @@
 - 401 Unauthorized: The request has not been applied because it lacks valid authentication credentials for the target resource.
 - 403 Forbidden: The request is a legal request, but the server is refusing to respond to it due to some factor.
 - 404 Page Not Found: Requested page is not found.
+- 408 Request Timeout: The Server time out waiting for the request
+- 415 Unsupported Media Type: If media type is not supported, it won't accept the request.
+- 422 Unprocessable
+#### 5xx Server Error
+- 500
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MTQzMjgyMCwxNjk3MzAxMTM0LDczMD
+eyJoaXN0b3J5IjpbMTMxMDU4MDY2MSwxNjk3MzAxMTM0LDczMD
 k5ODExNl19
 -->
