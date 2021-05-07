@@ -42,10 +42,11 @@ AND timestamp <= 1411845300;
 	- If yes, in above approatch, we’ll lose access to the metrics when the server is slow or down — just when we need them the most. We’d also want to put the metrics in a centralized place for better global monitoring and alerting.
 #### Pull
 - it is more convenient. Each server being monitored only needs to gather the metrics in memory and serve them through an endpoint. It doesn’t need to care where the monitoring system is. It doesn’t need to worry about overloading the monitoring system if they send too much and/or too frequently. A global configuration about what to collect and the collection interval can be tuned in the monitoring system.
-- disadvantage of pulling that the blog post didn’t mention is that it’s challenging to offer high availability and scalability with a pull-only model.
+- disadvantage of pulling that the blog post didn’t mention is that it’s challenging to offer high availability and scalability with a pull-only model. with a pull-only model, the metrics are collected directly by a monitoring system instance. We’ll have to shard the metrics deliberately when pulling and deploy backup instances explicitly to support replication and failover.
+- monitoring systems usually have more than one layer of push/pull to aggregate metrics in a hierarchy.
 #### Push
-- 
+- If we’re using push, we can put a load balancer in front of a set of monitoring system replicas and have the servers being monitored send metrics through the load balancer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MzIxNzMwNSwxNjIwNTI0ODIsLTQ4MT
-M4MjY4M119
+eyJoaXN0b3J5IjpbMTIwMTYyNDc4LDE2MjA1MjQ4MiwtNDgxMz
+gyNjgzXX0=
 -->
