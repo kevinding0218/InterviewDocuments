@@ -10,6 +10,7 @@
 #### 4xx Client Error
 - 400 Bad Request: The Request can not be fulfilled because of some bad syntax.
 - 401 Unauthorized: The request has not been applied because it lacks valid authentication credentials for the target resource.
+- 402 Method Not Allowed: using the 
 - 403 Forbidden: The request is a legal request, but the server is refusing to respond to it due to some factor.
 - 404 Page Not Found: Requested page is not found.
 - 408 Request Timeout: The Server time out waiting for the request
@@ -21,6 +22,6 @@
 - 503 Service Unavailable: The server is currently unavailable
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODkxNzM0MCwxNjk3MzAxMTM0LDczMD
+eyJoaXN0b3J5IjpbLTY1MzI4OTg1NiwxNjk3MzAxMTM0LDczMD
 k5ODExNl19
 -->
