@@ -1,3 +1,4 @@
+[Link](https://serhatgiydiren.github.io/system-design-interview-distributed-message-queue)
 ### What is distributed message queue
 - Let's say there are two web-services called producer and consumer, and they need to communicate with each other.
 - One option is to setup a synchronous communication, when producer makes a call to a consumer and waits for a response.
@@ -158,5 +159,5 @@ For these reasons many distributed queue solutions out there either does not gua
 - Is our system durable?
 	- Yes, We replicate data while storing and ensure messages are not lost during the transfer from a producer and to a consumer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0OTk4ODc5N119
+eyJoaXN0b3J5IjpbMTIyODEyMTUzOSwxOTQ5OTg4Nzk3XX0=
 -->
