@@ -38,8 +38,10 @@ AND timestamp <= 1411845300;
 
 ### Data Processing - Push vs Pull
 - Interviewer: Do we need to get the metrics out of the server? 
-	- If not, we can have our server expose an endpoint service with the metrics or it may just save the metrics to local disks and we can SSH onto it to inspect.
+	- If not, we can have our server expose an endpoint service with the metrics or it may just save the metrics to local disks and we can do that later
+	- If yes, in above approatch, we’ll lose access to the metrics when the server is slow or down — just when we need them the most. We’d also want to put the metrics in a centralized place for better global monitoring and alerting.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNzcxNTUzOSwxNjIwNTI0ODIsLTQ4MT
+eyJoaXN0b3J5IjpbLTI5NTM3ODExMiwxNjIwNTI0ODIsLTQ4MT
 M4MjY4M119
 -->
