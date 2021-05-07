@@ -1,5 +1,5 @@
 ### GET vs POST:
-**GET**
+#### GET
 - In GET method, values are visible in the URL.
 - GET has a limitation on the length of the values, generally 255 characters.
 - GET performs are better compared to POST because of the simple nature of appending the values in the URL.
@@ -8,7 +8,7 @@
 - GET request is often cacheable.
 - GET Parameters remain in web browser history.
 
-**POST**
+#### POST
 - In POST method, values are not visible in the URL.
 - POST has no limitation on the length of the values since they are submitted via the body of HTTP.
 - It has lower performance as compared to GET method because of time spent in including POST values in the HTTP body.
@@ -37,6 +37,11 @@
 -   It is not possible to save data as the data sent by the POST method is not visible in the URL.
 -   You cannot see POST requests in browser history.
 
+### Post vs Put
+#### Post 
+- This method is not idempotent.So if you retry the request N times, you will end up having N resources with N different URIs created on server.
+- POST method is call when you have to add a child resource under resources collection.
+- 
 
 
 
@@ -60,5 +65,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NDUxMzY1OV19
+eyJoaXN0b3J5IjpbMTMyODU3ODc3MSwxMjg0NTEzNjU5XX0=
 -->
