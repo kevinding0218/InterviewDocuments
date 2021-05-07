@@ -17,7 +17,19 @@
 - The POST request is hardly cacheable.
 - Parameters are not saved in web browser history.
 
-
+### Pros and Cons
+#### Get Pros
+- The GET method can retrieve information identified by the request-URl (Uniform Resource Identifier).
+-  GET requests can be viewed in the browser history.
+-  It enables you to save the results of a HTML form.
+-  You can easily use GET method to request required data.
+#### Get Cons
+- GET can't be used to send word documents or images.
+-  GET requests can be used only to retrieve data
+-  The GET method cannot be used for passing sensitive information like usernames and passwords.
+-  The length of the URL is limited.
+#### Post Pros
+- 
 
 
 
@@ -44,5 +56,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTg0ODU2MTRdfQ==
+eyJoaXN0b3J5IjpbMjAyNzE2NTQxNV19
 -->
