@@ -5,6 +5,8 @@
 - 201 Created usually work with Post
 - 202 Accepted
 - 204 No Content
+#### 3xx Redirection
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjg0NzIwNjAsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTY5NzMwMTEzNCw3MzA5OTgxMTZdfQ==
 -->
