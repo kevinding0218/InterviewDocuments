@@ -3,13 +3,16 @@
 #### 2xx Success
 - 200 OK
 - 201 Created usually work with Post
-- 202 Accepted
-- 204 No Content
+- 202 Accepted: The request is accepted for processing, but the processing is not complete.
+- 204 No Content: A status code and a header are given in the response, but there is no entity-body in the reply.
 #### 3xx Redirection
 - 301 Moved Permanently: make sure that search engines or application and users are sent to the correct page. A 301 status code is used when any page has been permanently moved to another location
 #### 4xx Client Error
-- 400 Bad Request: 
+- 400 Bad Request: The Request can not be fulfilled because of some bad syntax.
+- 401 Unauthorized: The request has not been applied because it lacks valid authentication credentials for the target resource.
+- 403 Forbidden: The request is a legal request, but the server is refusing to respond to it due to some factor.
+- 404 Page Not Found: Requested page is not found.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTA0NDA4MDcsMTY5NzMwMTEzNCw3Mz
+eyJoaXN0b3J5IjpbLTE4NjIyNDkxNTEsMTY5NzMwMTEzNCw3Mz
 A5OTgxMTZdfQ==
 -->
