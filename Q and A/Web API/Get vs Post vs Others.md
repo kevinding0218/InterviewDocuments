@@ -41,7 +41,12 @@
 #### Post 
 - This method is not idempotent.So if you retry the request N times, you will end up having N resources with N different URIs created on server.
 - POST method is call when you have to add a child resource under resources collection.
-- 
+- You cannot cache PUT method responses.
+- If you send the same POST request more than one time, you will receive different results.
+#### Put
+- This method is idempotent.
+- PUT method is call when you have to modify a single resource, which is already a part of resource collection.
+- Put method usually comes with a specific item Id
 
 
 
@@ -65,5 +70,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyODU3ODc3MSwxMjg0NTEzNjU5XX0=
+eyJoaXN0b3J5IjpbLTUzMTU1MjA0MCwxMjg0NTEzNjU5XX0=
 -->
