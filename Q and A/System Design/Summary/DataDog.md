@@ -38,7 +38,11 @@ AND timestamp <= 1411845300;
 ### How to store
 - **We absolutely cannot just write individual data samples to files as they arrive**. That’ll be prohibitively inefficient because the monitoring system may end up collecting a million data samples or more every minute.
 -  With batching in memory, there comes the risk of losing data. It may not be a big deal if we’re only batching for a short period of time, as typical time series use cases can tolerate the loss of a few data samples. But if we want to batch for a longer period of time, a durability safeguard should be put in place.
-- **We can use Write-ahead-log (WAL)** to achieve what we're looking for. On a high level, WAL pipes the changes to a log file on disk that can be used to restore the system state after crashing. WAL doesn’t incur a big IO penalty because sequential file access is relatively fast.
+- **We can use Write-ahead-log (WAL)** to achieve what we're looking for. 
+	- On a high level, WAL pipes the changes to a log file on disk that can be used to restore the system state after crashing. 
+	- WAL doesn’t incur a big IO penalty because sequential file access is relatively fast.
+	- We can buffer the data samples in memory for a while, which opens doors for better write efficiency.
+- **How we structure the data in files**. One time series per file sounds like a simple solution, but unfortunately, it won’t scale. There are just too many time series to create individual files for. We have to store multiple time series in a file. On the other hand, we can’t just put everything in a monolithic file. That file will be too big to operate.
 ### Data Processing - Push vs Pull
 - Interviewer: Do we need to get the metrics out of the server? 
 	- If not, we can have our server expose an endpoint service with the metrics or it may just save the metrics to local disks and we can do that later
@@ -50,6 +54,6 @@ AND timestamp <= 1411845300;
 #### Push
 - If we’re using push, we can put a load balancer in front of a set of monitoring system replicas and have the servers being monitored send metrics through the load balancer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyOTkwNjkwMiwxNjIwNTI0ODIsLTQ4MT
+eyJoaXN0b3J5IjpbMTgwMTg3MzU4OCwxNjIwNTI0ODIsLTQ4MT
 M4MjY4M119
 -->
