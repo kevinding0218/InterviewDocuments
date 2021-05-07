@@ -49,6 +49,10 @@ AND timestamp <= 1411845300;
 Block 0 | Block 1 | Block 2, ...
 15m		  1h		4h
 ```
+#### Compression should be employed to reduce the overall data volume.
+### Support Querying and Alerting
+- querying is easy to envision. Time is a universal filtering criterion in all metrics searches. We use a time range to narrow the search down to a set of continuous blocks. If we know the time series ID, we can retrieve it from the files in those blocks. Otherwise, we’d need to add a reversed index to go from the search criteria to time series IDs and then follow the index files in blocks to locate the time series files.
+- 
 ### Data Processing - Push vs Pull
 - Interviewer: Do we need to get the metrics out of the server? 
 	- If not, we can have our server expose an endpoint service with the metrics or it may just save the metrics to local disks and we can do that later
@@ -60,6 +64,6 @@ Block 0 | Block 1 | Block 2, ...
 #### Push
 - If we’re using push, we can put a load balancer in front of a set of monitoring system replicas and have the servers being monitored send metrics through the load balancer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MTUzNDI0MywxNjIwNTI0ODIsLTQ4MT
+eyJoaXN0b3J5IjpbMjA1MDE4NzcxOCwxNjIwNTI0ODIsLTQ4MT
 M4MjY4M119
 -->
