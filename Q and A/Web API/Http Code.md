@@ -16,8 +16,11 @@
 - 415 Unsupported Media Type: If media type is not supported, it won't accept the request.
 - 422 Unprocessable
 #### 5xx Server Error
-- 500
+- 500 Internal Server Error: The request was not completed. The server met an unexpected condition.
+- 502 Bad Gateway: The server, while acting as a gateway or proxy, received an invalid response from an inbound server it accessed while attempting to fulfill the request.
+- 503 Service Unavailable: The server is currently unavailable
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMDU4MDY2MSwxNjk3MzAxMTM0LDczMD
+eyJoaXN0b3J5IjpbMjA2ODkxNzM0MCwxNjk3MzAxMTM0LDczMD
 k5ODExNl19
 -->
