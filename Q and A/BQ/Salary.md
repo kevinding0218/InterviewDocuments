@@ -2,6 +2,7 @@
 - Hey I'm just curious, what's the compensation band for this position?
 - I actually haven't put much thought into this. This is a really important thing, so let me take some time to just think about this and can we revisit this later?
 - I am very glad you ask about this, but my top priority is finding the right fit, so once we find that, I'm happy to discuss salary.
+- Thank you so much for investing the time
 #### How does the salary range sound to you? Do you like this number?
 - That's a really good start
 #### When got the job offer
@@ -11,10 +12,11 @@
 - Bouns structure: how does that work? When is the payout, is it once a year or twice a year,
 - Is there any other bonus on top of, you know, what you guys offer and things like 
 #### For companies that don't offer a bonus
-- Hey since you don't offer me any bonuses, what I want to be mindful of this inflation, and you know living costs are just keep going up. So essentially if I don't take this into consideration now, the longer I stay with the company, essentially the less my take-home pay is going to be, and I don't want to be in a position where salary is a thing for me to have to leave the company, so I hope you understand where I'm coming from.
+- Hey since you don't offer me any bonuses, what I want to be mindful of this inflation, and you know living costs are just keep going up. So essentially if I don't take this into consideration now, the longer I stay with the company, essentially the less my take-home pay is going to be, and **I don't want to be in a position where salary is a thing for me to have to leave the company**, so I hope you understand where I'm coming from.
 #### Comminucate via Email
 - This is a lot of good information, let me just take some time to process all of this and get back to you later. Would that make sense for you/would that work for you?
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjA2NjY2MTAsLTQwMzczNDcwOV19
+eyJoaXN0b3J5IjpbMTE4MDExNjM4MywtMjEyMDY2NjYxMCwtND
+AzNzM0NzA5XX0=
 -->
