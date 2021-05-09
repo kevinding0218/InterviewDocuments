@@ -1,5 +1,5 @@
 ### Inner class vs Inner Static class
-####
+#### Initiation
 - Inner class require instance of outer class for initialization and they are always associated with instance of enclosing class. 
 - On the other hand nested static class is not associated with any instance of enclosing class.  
 ```
@@ -20,6 +20,6 @@ OuterClass.InnerClass innerObject = outerObject.new InnerClass();
 OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzUyMTcxMzYsLTIxMDA0MTI3Nyw3Mz
-A5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTY4MDAxMjUyLC0yMTAwNDEyNzcsNzMwOT
+k4MTE2XX0=
 -->
