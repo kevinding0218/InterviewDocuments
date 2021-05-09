@@ -1,7 +1,7 @@
 #### What's your expected salary
 - Hey I'm just curious, what's the compensation band for this position?
 - I actually haven't put much thought into this. This is a really important thing, so let me take some time to just think about this and can we revisit this later?
-- I am very glad you ask about this, but my top priority is finding the right fit, so once we find that, I'm happy to discuss salary, I really love getting to know you guys, I did a little bit research, and I saw that the industry average is X, and the offer that you gave me is slightly below that, is there anyways that we could possibly make up the differ
+- I am very glad you ask about this, but my top priority is finding the right fit, so once we find that, I'm happy to discuss salary, I really love getting to know you guys, I did a little bit research, and I saw that the industry average is X, and the offer that you gave me is slightly below that, is there anyways that we could possibly make up the difference?
 - Thank you so much for investing the time and resources throughout the process to meet with me to chat with me, 
 #### How does the salary range sound to you? Do you like this number?
 - That's a really good start
@@ -17,6 +17,6 @@
 - This is a lot of good information, let me just take some time to process all of this and get back to you later. Would that make sense for you/would that work for you?
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjE1MzEzODUsLTIxMjA2NjY2MTAsLT
+eyJoaXN0b3J5IjpbLTE0OTc3MTczNjcsLTIxMjA2NjY2MTAsLT
 QwMzczNDcwOV19
 -->
