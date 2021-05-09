@@ -19,7 +19,12 @@ OuterClass.InnerClass innerObject = outerObject.new InnerClass();
 // Static nested classes are accessed using the enclosing class name:
 OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();
 ```
+#### Import
+- Nested static class can be imported using **static import in Java**
+#### Access
+- static nested inner classes are static member of class and can be accessed like any other static member of class.  
+#### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MDAxMjUyLC0yMTAwNDEyNzcsNzMwOT
-k4MTE2XX0=
+eyJoaXN0b3J5IjpbLTExOTUyNzEwNCwtMjEwMDQxMjc3LDczMD
+k5ODExNl19
 -->
