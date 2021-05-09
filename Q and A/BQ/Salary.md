@@ -1,6 +1,7 @@
 #### What's your expected salary
 - Hey I'm just curious, what's the compensation band for this position?
 - I actually haven't put much thought into this. This is a really important thing, so let me take some time to just think about this and can we revisit this later?
+- I am very glad you ask about this, but my top priority is finding the right fit, so once we 
 #### How does the salary range sound to you? Do you like this number?
 - That's a really good start
 #### When got the job offer
@@ -15,5 +16,5 @@
 - This is a lot of good information, let me just take some time to process all of this and get back to you later. Would that make sense for you/would that work for you?
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMzczNDcwOV19
+eyJoaXN0b3J5IjpbMTgxMjk4NzUzNCwtNDAzNzM0NzA5XX0=
 -->
