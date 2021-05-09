@@ -4,7 +4,9 @@
 ```
 class OuterClass {
     ...
-    static class 
+    static class StaticNestedClass {
+        ...
+    }
     class InnerClass {
         ...
     }
@@ -12,5 +14,5 @@ class OuterClass {
 ```
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MDgzNjkwMCw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMDA0MTI3Nyw3MzA5OTgxMTZdfQ==
 -->
