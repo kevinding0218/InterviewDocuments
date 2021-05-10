@@ -87,24 +87,8 @@ https://www.baeldung.com/java-static-default-methods
 		public void baz() {}
 	}
 	```
-
-
-
-### How concurrenthashmap works
-- **ConcurrentHashMap:** It allows concurrent access to the map. Part of the map called _Segment (internal data structure)_ is only getting locked while adding or updating the map. So ConcurrentHashMap allows concurrent threads to read the value without locking at all.
-	- **Concurrency-Level:** Defines the number which is an estimated number of concurrently updating threads. The implementation performs internal sizing to try to accommodate this many threads.
-	- **Load-Factor:** It's a threshold, used to control resizing.
-	- **Initial Capacity:** The implementation performs internal sizing to accommodate these many elements.
-- A ConcurrentHashMap has internal final class called Segment so we can say that ConcurrentHashMap is internally divided in segments of size 32, so at max 32 threads can work at a time. It means each thread can work on a each segment during high concurrency and atmost 32 threads can operate at max which simply maintains 32 locks to guard each bucket of the ConcurrentHashMap.
-#### Inserting (Put) Element in ConcurrentHashMap:
-- 1st calculate the hash of key
-- decide the Segment, Since it's all about concurrency, we need synchronized block on the above Segment
-#### Size of ConcurrentHashMap
-- return the sum of all segments' count
-#### Getting (get) Element From ConcurrentHashMap
-- When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTk4MjEwMCwxMDg0MDgxNjY0LC0zNj
+eyJoaXN0b3J5IjpbLTgzMjU5NTA1OCwxMDg0MDgxNjY0LC0zNj
 E5MDE4MDUsMTcwNzU3MzU4MywtNTkzNzYyNzE4LC02OTE3NDQz
 NTUsMTg4NDE3MzEyNiwyMDQ4MzA1NTAyLDM1OTY4NjE3NiwxMT
 EzOTU3ODkxLDE1MjIyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5
