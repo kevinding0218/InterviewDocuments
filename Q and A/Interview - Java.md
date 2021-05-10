@@ -86,13 +86,8 @@ public  class  Memory {
 ###  ArrayList vs LinkedList
 - **ArrayList is using an array to implement the _List_ interface**. As arrays are fixed size in Java, _ArrayList_ creates an array with some initial capacity. Along the way, if we need to store more items than that default capacity, it will replace that array with a new and more spacious one. So the cost of inserting/deleting will be expensive in memory usage but access is faster as through array index
 - **LinkedList internally uses a doubly linked list** to store the elements, so inserting and deleting are faster but reading is slower as it has to go through some traverse manually
-### Interface Default Method vs Static Method [Link](https://www.journaldev.com/2752/java-8-interface-changes-static-method-default-method)
-- Default Method
-	- "default" keyword infront of the implementation method with in the interface. This is the new way of declaring the method body in Java 8 for an interface, default methods comes along with implementation.
-	- help us in extending interfaces without having the fear of breaking implementation classes, it will help us in removing base implementation classes, we can provide default implementation and the implementation classes can chose which one to override.
-- Static Method;
-	- Java interface static method is similar to default method except that we can’t override them in the implementation classes. This feature helps us in avoiding undesired results incase of poor implementation in implementation classes, static method is visible to interface methods only
-	- static methods are good for providing utility methods, for example null check, collection sorting etc.
+
+
 ### Java main method [Link](https://www.journaldev.com/12552/public-static-void-main-string-args-java-main-method)
 ### Java Static [Link](https://www.javainterviewpoint.com/top-10-java-interview-questions-on-static-keyword/)
 ### Java Default Method
@@ -190,7 +185,7 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTIyNjkzNTAsMTA4NDA4MTY2NCwtMz
+eyJoaXN0b3J5IjpbLTE3NDkzNDk5MTAsMTA4NDA4MTY2NCwtMz
 YxOTAxODA1LDE3MDc1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0
 MzU1LDE4ODQxNzMxMjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMT
 ExMzk1Nzg5MSwxNTIyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0
