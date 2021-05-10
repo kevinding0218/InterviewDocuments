@@ -15,9 +15,10 @@ HashMap works on the principle of Hashing.
 - Since bucket is one and we have two objects with the same hashcode. The bucket is the linked list effectively. So we traverse through linked list , comparing keys in each entries using keys.equals() until it return true. Then the corresponding entry object Value is returned .
 ### Hash Collision
 - Collisions happen when 2 distinct keys generate the same hashCode() value.
-- There are many collision-resolution strategies – chaining, double-hashing, clustering.
-
-However, java has chosen chaining strategy for hashMap, so in case of collisions, items are chained together just like in a linkedList.
+- There are many collision-resolution strategies – chaining, double-hashing, clustering. However, java has chosen chaining strategy for hashMap, so in case of collisions, items are chained together just like in a linkedList.
+### What is ConcurrentHashMap
+- A concurrentHashMap is divided into number of segments [default 16] on initialization.
+- ConcurrentHashMap allows similar number (16) of threads to access these segments concurrently so that each thread work on a specific segment during high concurrency.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzYxNzUxMTksODk0OTAyNzc5XX0=
+eyJoaXN0b3J5IjpbLTEwMDIxMTM2MDYsODk0OTAyNzc5XX0=
 -->
