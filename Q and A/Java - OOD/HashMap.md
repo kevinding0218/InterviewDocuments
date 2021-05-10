@@ -23,7 +23,16 @@ HashMap works on the principle of Hashing.
 - In other words, ConcurrentHashMap uses a multitude of locks, each lock controls one segment of the map.
 	- When setting data in a particular segment, the lock for that segment is obtained. So essentially update operations are synchronized.
 	- When getting data, a volatile read is used without any synchronization. If the volatile read results in a miss, then the lock for that segment is obtained and entry is again searched in synchronized block.
+### HashTable vs HashMap vs HashSet
+- HashTable for multi thread, that it's safe to visit HashTable across multi thread
+- HashMap for single thread
+- HashSet no value
+### HashMap vs LinkedHashMap vs TreeMap
+1.  **HashMap**  :-  `HashMap`  never preserves your Insertion Order. It Internally Use a hashing Concept by which it generate a  `HashCode`  to the Corresponding  `key`  and add it to the  `HashMap`.
+2.  **LinkedHashMap**  :-  `LinkedHashMap`  It preserves your Insertion Order. and  `keys`  will be found as same order you Insert into this  `LinkedHashMap`.
+3.  **TreeMap**  :- The  `TreeMap`  class implements the  `Map`  **interface**  by using a  **Tree**. A  `TreeMap`  provides an efficient means of storing  **key/value**  pairs in sorted order, and allows rapid retrieval.
+	- unlike a `HashMap`, a tree map guaran
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNTcyMDM1NCw4OTQ5MDI3NzldfQ==
+eyJoaXN0b3J5IjpbLTExOTI3MjMxMTIsODk0OTAyNzc5XX0=
 -->
