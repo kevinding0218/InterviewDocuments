@@ -13,7 +13,11 @@ HashMap works on the principle of Hashing.
 ### What if when two different keys have the same HashCode?
 - In this situation equals() method comes to rescue.
 - Since bucket is one and we have two objects with the same hashcode. The bucket is the linked list effectively. So we traverse through linked list , comparing keys in each entries using keys.equals() until it return true. Then the corresponding entry object Value is returned .
-### 
+### Hash Collision
+- Collisions happen when 2 distinct keys generate the same hashCode() value.
+- There are many collision-resolution strategies – chaining, double-hashing, clustering.
+
+However, java has chosen chaining strategy for hashMap, so in case of collisions, items are chained together just like in a linkedList.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkyNjEyMDcyLDg5NDkwMjc3OV19
+eyJoaXN0b3J5IjpbLTE5NzYxNzUxMTksODk0OTAyNzc5XX0=
 -->
