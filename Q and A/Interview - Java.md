@@ -1,13 +1,6 @@
 
 
 
-#### Java Heap Space [Link](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
-- Java **Heap space is used by java runtime to allocate memory to Objects and JRE classes**. Whenever we create an object, it’s always created in the Heap space.
-- **Garbage Collection runs on the heap memory to free the memory** used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
-
-
-##### What Happens When There Is Not Enough Heap Space
-- If there is no memory space for creating a new object in Heap, Java Virtual Machine throws _OutOfMemoryError_ or more specifically **java.lang.OutOfMemoryError_  heap space.**
 - 
 ##### How Are Strings Represented in Memory?
 - A  _String_  instance in Java is an object with two fields: a  _char[] value_  field and an  _int hash_  field. The  _value_  field is an array of chars representing the string itself, and the  _hash_  field contains the  _hashCode_  of a string which is initialized with zero, calculated during the first  _hashCode()_  call and cached ever since.
@@ -151,9 +144,9 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk5MzczMjYyLDEwODQwODE2NjQsLTM2MT
-kwMTgwNSwxNzA3NTczNTgzLC01OTM3NjI3MTgsLTY5MTc0NDM1
-NSwxODg0MTczMTI2LDIwNDgzMDU1MDIsMzU5Njg2MTc2LDExMT
-M5NTc4OTEsMTUyMjIzNTI1MCwxNjE0NTM3ODYwLC0xNzMwNDk1
-MDM5LC0xNDAyNjY0NzkzLDE4NzQwMjEyNTRdfQ==
+eyJoaXN0b3J5IjpbMjExNTI0MDAxMSwxMDg0MDgxNjY0LC0zNj
+E5MDE4MDUsMTcwNzU3MzU4MywtNTkzNzYyNzE4LC02OTE3NDQz
+NTUsMTg4NDE3MzEyNiwyMDQ4MzA1NTAyLDM1OTY4NjE3NiwxMT
+EzOTU3ODkxLDE1MjIyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5
+NTAzOSwtMTQwMjY2NDc5MywxODc0MDIxMjU0XX0=
 -->
