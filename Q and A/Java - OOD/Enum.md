@@ -23,8 +23,21 @@ public  enum ContactMethod {
 			EmailClient.sendTo(user.getEmailAddress()); 
 		} 
 	}, 
-	SKYPE("skype.png") { ... }; ContactMethod(String icon) { this.icon = icon; } private  final String icon; public abstract void initiate(User user); public String getIcon() { return icon; } }
+	SKYPE("skype.png") { ... }; 
+	ContactMethod(String icon) { this.icon = icon; } 
+	private  final String icon; 
+	public abstract void initiate(User user); 
+	public String getIcon() { return icon; } }
 ```
+- We can dispense with  `switch`  statements entirely by simply using instances of  `ContactMethod`:
+
+```java
+        ContactMethod method = user.getPrimaryContactMethod();
+        displayIcon(method.getIcon());
+        method.initiate(user);
+```
+
+This is just the beginning of what can be done with enums. Generally, the safety and flexibility of enums means they should be used in place of integer constants, and switch statements can be eliminated with liberal use of abstract methods.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDA4Mzc5OTRdfQ==
+eyJoaXN0b3J5IjpbMzQ0Nzk4NDY4XX0=
 -->
