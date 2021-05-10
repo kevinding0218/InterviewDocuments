@@ -6,6 +6,8 @@
 - In Java, threads are mapped to system-level threads which are operating system's resources.
 - The context switching between threads is done by the operating system as well – in order to emulate parallelism.
 - When you use a thread pool, you **write your concurrent code in the form of parallel tasks and submit them for execution to an instance of a thread pool**.
+### How can you catch an exception thrown by another thread in Java?
+- This can be done using **Thread.UncaughtExceptionHandler**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNjUwNDYxM119
+eyJoaXN0b3J5IjpbMTI2NDQzMzc5MiwxMTM2NTA0NjEzXX0=
 -->
