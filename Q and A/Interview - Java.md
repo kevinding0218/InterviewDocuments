@@ -188,15 +188,8 @@ https://www.baeldung.com/java-static-default-methods
 	- **We should know that we can retrieve a value of the version attribute via entity, but we mustn't update or increment it.** Only the persistence provider can do that, so data stays consistent.
 4. **pessimistic locking** mechanism involves locking entities on the database level.
 	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
-### HashTable vs HashMap vs HashSet
-- HashTable for multi thread, that it's safe to visit HashTable across multi thread
-- HashMap for single thread
-- HashSet no value
-### HashMap vs LinkedHashMap vs TreeMap
-1.  **HashMap**  :-  `HashMap`  never preserves your Insertion Order. It Internally Use a hashing Concept by which it generate a  `HashCode`  to the Corresponding  `key`  and add it to the  `HashMap`.
-2.  **LinkedHashMap**  :-  `LinkedHashMap`  It preserves your Insertion Order. and  `keys`  will be found as same order you Insert into this  `LinkedHashMap`.
-3.  **TreeMap**  :- The  `TreeMap`  class implements the  `Map`  **interface**  by using a  **Tree**. A  `TreeMap`  provides an efficient means of storing  **key/value**  pairs in sorted order, and allows rapid retrieval.
-	- unlike a `HashMap`, a tree map guarantees that its elements will be sorted in ascending key order
+
+tees that its elements will be sorted in ascending key order
 ### How concurrenthashmap works
 - **ConcurrentHashMap:** It allows concurrent access to the map. Part of the map called _Segment (internal data structure)_ is only getting locked while adding or updating the map. So ConcurrentHashMap allows concurrent threads to read the value without locking at all.
 	- **Concurrency-Level:** Defines the number which is an estimated number of concurrently updating threads. The implementation performs internal sizing to try to accommodate this many threads.
@@ -211,9 +204,9 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NDA4MTY2NCwtMzYxOTAxODA1LDE3MD
-c1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0MzU1LDE4ODQxNzMx
-MjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMTExMzk1Nzg5MSwxNT
-IyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0OTUwMzksLTE0MDI2
-NjQ3OTMsMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTg0ODkzMTQxOCwxMDg0MDgxNjY0LC0zNj
+E5MDE4MDUsMTcwNzU3MzU4MywtNTkzNzYyNzE4LC02OTE3NDQz
+NTUsMTg4NDE3MzEyNiwyMDQ4MzA1NTAyLDM1OTY4NjE3NiwxMT
+EzOTU3ODkxLDE1MjIyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5
+NTAzOSwtMTQwMjY2NDc5MywxODc0MDIxMjU0XX0=
 -->
