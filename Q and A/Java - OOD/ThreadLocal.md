@@ -28,7 +28,16 @@ queryUserAsset(userInfo);
 }
 ```
 - Each thread that accesses the `get()` or `set()` method of a `ThreadLocal` instance is accessing its own, independently initialized copy of the variable.
-- `ThreadLocal` instances are typically private static fields in classes that wish to associate state with a thread (e.g., a user ID or transaction ID)
+### How does it work?
+- 首先我们通过`ThreadLocal<UserInfo> userInfoThreadLocal = new ThreadLocal()`  初始化了一个Threadlocal 对象，就是上图中说的Threadlocal 引用，这个引用指向堆中的ThreadLocal 对象；
+- 然后我们调用`userInfoThreadLocal.set(userInfo);`  这里做了什么事呢？
+    我们把源代码拿出来，看一看就清晰了。
+-**我们知道 Thread 类有个 ThreadLocalMap 成员变量，这个Map key是Threadlocal 对象，value是你要存放的线程局部变量。**
+    - 这里是在当前线程对象的ThreadlocalMap中put了一个元素(Entry)，key是**Threadlocal对象**，value是userInfo。
+    理解二件事就都清楚了：
+    ThreadLocalMap 类的定义在 Threadlocal中。
+-   第一，Thread 对象是Java语言中线程运行的载体，每个线程都有对应的Thread 对象，存放线程相关的一些信息，
+-   第二，Thread类中有个成员变量ThreadlocalMap，你就把他当成普通的Map，key存放的是Threadlocal对象，value是你要跟线程绑定的值（线程隔离的变量），比如这里是用户信息对象（UserInfo）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMTI4ODE0MywxOTMwNTI1MzY5XX0=
+eyJoaXN0b3J5IjpbMTI4NDcxMjM5NiwxOTMwNTI1MzY5XX0=
 -->
