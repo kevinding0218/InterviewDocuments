@@ -7,33 +7,8 @@
 ##### What Is a Stringbuilder and What Are Its Use Cases?
 - When concatenating two  _String_  instances, a new object is created, and strings are copied. This could bring a huge garbage collector overhead if we need to create or modify a string in a loop.  _StringBuilder_  allows handling string manipulations much more efficiently.
 - _StringBuffer_  is different from  _StringBuilder_  in that it is thread-safe. If you need to manipulate a string in a single thread, use  _StringBuilder_  instead.
-####  Java Stack Memory
-- Java **Stack memory is used for the execution of a thread**. They contain method-specific values that are short-lived and references to other objects in the heap that is getting referred from the method.
-- Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method.
-- As soon as the method ends, the block becomes unused and becomes available for the next method.  
-- Stack memory size is very less compared to Heap memory.
-#### Example
-```
-public  class  Memory { 
-	public static void main(String[] args) { // Line 1  				    
-		int i=1; // Line 2 
-		Object obj = new Object(); // Line 3 
-		Memory mem = new Memory(); // Line 4 	
-		mem.foo(obj); // Line 5 
-	} // Line 9  
-	private void foo(Object param) { // Line 6 
-		String str = param.toString(); // Line 7 	
-		System.out.println(str); 
-	} // Line 8 
-}
-```
--   As soon as we **run the program**, it **loads all the Runtime classes into the Heap space**. When the **main()** method is found at line 1, **Java Runtime creates stack memory to be used by main() method thread**.
--   We are creating **primitive local variable** at line 2, so it’s **created and stored in the stack** memory of main() method.
--   Since we are creating an **Object** in the 3rd line, it’s created in **heap memory and stack memory contains the reference for it**. A **similar** process occurs when we create **Memory object** in the 4th line.
--   Now when we call the **foo() method** in the 5th line, **a block in the top of the stack is created** to be used by the foo() method. Since Java is pass-by-value, **a new reference to Object is created in the foo() stack block** in the 6th line.
--   A **string** is created in the 7th line, it goes in the **String Pool** in the **heap space and a reference is created in the foo() stack space** for it.
--   foo() method is terminated in the 8th line, **at this time memory block allocated for foo() in stack becomes free**.
--   In line 9, **main() method terminates** and the **stack memory created for main() method is destroyed**. Also, the **program ends** at this line, hence **Java Runtime frees all the memory and ends the execution of the program**.
+
+
 #### Difference between Java Heap Space and Stack Memory
 1.  **Heap** memory is used by **all the parts of the application** whereas **stack** memory is used only by **one thread of execution**.
 2.  Whenever an **object** is created, it’s always **stored in the Heap space and stack memory c ontains the reference to it. Stack memory only contains local primitive variables and reference variables to objects in heap space**.
@@ -144,9 +119,9 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNTI0MDAxMSwxMDg0MDgxNjY0LC0zNj
-E5MDE4MDUsMTcwNzU3MzU4MywtNTkzNzYyNzE4LC02OTE3NDQz
-NTUsMTg4NDE3MzEyNiwyMDQ4MzA1NTAyLDM1OTY4NjE3NiwxMT
-EzOTU3ODkxLDE1MjIyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5
-NTAzOSwtMTQwMjY2NDc5MywxODc0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTE5NjMwNDQ3MjIsMTA4NDA4MTY2NCwtMz
+YxOTAxODA1LDE3MDc1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0
+MzU1LDE4ODQxNzMxMjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMT
+ExMzk1Nzg5MSwxNTIyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0
+OTUwMzksLTE0MDI2NjQ3OTMsMTg3NDAyMTI1NF19
 -->
