@@ -3,7 +3,7 @@
 	- What this means is that, **once a String is created, it stays in the pool in memory until being garbage collected**. 
 	- Therefore, **even after you’re done processing the string value** (e.g., the password), **it remains available in memory for an indeterminate period of time thereafter** (again, until being garbage collected) **which you have no real control over**. 
 	- Therefore, **anyone having access to a memory dump can potentially extract the sensitive data and exploit it**.
-- In contrast, if you use a mutable object like a character array, for example, to store the value, you can set it to blank once you are done with it with confidence that it will no longer be retained in memory.
+- In contrast, if you use a **mutable object like a character array**, for example, to store the value, you can **set it to blank once you are done with it with confidence that it will no longer be retained in memory**.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0ODg1NTgzMV19
+eyJoaXN0b3J5IjpbMzgzNTYzNjg5XX0=
 -->
