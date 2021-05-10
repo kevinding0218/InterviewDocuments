@@ -24,8 +24,7 @@
 #### Observer
 - Observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. It is also referred to as the publish-subscribe pattern.
 #### State
--   
-In state pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class. There shall be a separate concrete class per possible state of an object.
+- In state pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class. There shall be a separate concrete class per possible state of an object.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Nzc2NDgxMjldfQ==
+eyJoaXN0b3J5IjpbMjAwNjg3NTcyOV19
 -->
