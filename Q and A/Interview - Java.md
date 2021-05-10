@@ -1,9 +1,6 @@
 
 
-### JVM 
-- JVM is a virtual machine that understands and runs java bytecodes, works for memory management in heap space and stack memory
-- JVM will mostly distribute objects to HEAP level, when JVM execute the code, every thread will have a thread stack
-- Since program is running on virtual machine, it would also have some local method stack like it will calling some C library e.g Sleep
+
 #### Java Heap Space [Link](https://www.journaldev.com/4098/java-heap-space-vs-stack-memory)
 - Java **Heap space is used by java runtime to allocate memory to Objects and JRE classes**. Whenever we create an object, it’s always created in the Heap space.
 - **Garbage Collection runs on the heap memory to free the memory** used by objects that don’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
@@ -169,7 +166,7 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MzQwODAxMywxMDg0MDgxNjY0LC0zNj
+eyJoaXN0b3J5IjpbMTcyMDM2ODU1MiwxMDg0MDgxNjY0LC0zNj
 E5MDE4MDUsMTcwNzU3MzU4MywtNTkzNzYyNzE4LC02OTE3NDQz
 NTUsMTg4NDE3MzEyNiwyMDQ4MzA1NTAyLDM1OTY4NjE3NiwxMT
 EzOTU3ODkxLDE1MjIyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5
