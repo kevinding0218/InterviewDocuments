@@ -16,6 +16,8 @@ HashMap works on the principle of Hashing.
 ### Hash Collision
 - Collisions happen when 2 distinct keys generate the same hashCode() value.
 - There are many collision-resolution strategies – chaining, double-hashing, clustering. However, java has chosen chaining strategy for hashMap, so in case of collisions, items are chained together just like in a linkedList.
+### Load Factor
+- The Load factor is a measure that decides when to **increase** the HashMap capacity to maintain the get() and put() operation complexity of **O(1)**. The default load factor of HashMap is **0.75f** (75% of the map size).
 ### HashTable vs HashMap vs HashSet
 - HashTable for multi thread, that it's safe to visit HashTable across multi thread
 - HashMap for single thread
@@ -34,5 +36,5 @@ HashMap works on the principle of Hashing.
 	- When getting data, a volatile read is used without any synchronization. If the volatile read results in a miss, then the lock for that segment is obtained and entry is again searched in synchronized block.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NjkzODU4NCw4OTQ5MDI3NzldfQ==
+eyJoaXN0b3J5IjpbNDY1NDc2ODI1LDg5NDkwMjc3OV19
 -->
