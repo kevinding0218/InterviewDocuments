@@ -173,23 +173,9 @@ https://www.baeldung.com/java-static-default-methods
 		public void baz() {}
 	}
 	```
-### Deadlock
-#### What is deadlock?
-- a deadlock is a situation where **minimum two threads are holding the lock on some different resource, and both are waiting for other’s resource to complete its task. And, none is able to leave the lock on the resource it is holding**.
-#### How deadlock happens?
-- Resources are Mutually exclusive, meaning each time one resource can only be used by one thread
-- When thread A was blocked during requesting a resource, the resource was not released and keep holding by thread B
-- Reentrant Locks: **a thread A holds a key needed by a thread B, and B also holds the key needed by A**
-#### How to prevent?
-1. use `ThreadLocal` to make each thread not exclusive
-2. use `volatile` which would refresh object from L1, L2 cache to main thread, so every thread can have visibility of the object
-3. use distributed lock like [Optimistic Locking](https://www.baeldung.com/jpa-optimistic-locking) by database or redis, **optimistic locking is based on detecting changes on entities by checking their version attribute**.
-	- Version attributes are properties with _@Version_ annotation. **They are necessary for enabling optimistic locking**
-	- **We should know that we can retrieve a value of the version attribute via entity, but we mustn't update or increment it.** Only the persistence provider can do that, so data stays consistent.
-4. **pessimistic locking** mechanism involves locking entities on the database level.
-	- Each transaction can acquire a lock on data. As long as it holds the lock, no transaction can read, delete or make any updates on the locked data. We can presume that using pessimistic locking may result in deadlocks. However, it ensures greater integrity of data than optimistic locking.
 
-tees that its elements will be sorted in ascending key order
+
+
 ### How concurrenthashmap works
 - **ConcurrentHashMap:** It allows concurrent access to the map. Part of the map called _Segment (internal data structure)_ is only getting locked while adding or updating the map. So ConcurrentHashMap allows concurrent threads to read the value without locking at all.
 	- **Concurrency-Level:** Defines the number which is an estimated number of concurrently updating threads. The implementation performs internal sizing to try to accommodate this many threads.
@@ -204,9 +190,9 @@ tees that its elements will be sorted in ascending key order
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0ODkzMTQxOCwxMDg0MDgxNjY0LC0zNj
-E5MDE4MDUsMTcwNzU3MzU4MywtNTkzNzYyNzE4LC02OTE3NDQz
-NTUsMTg4NDE3MzEyNiwyMDQ4MzA1NTAyLDM1OTY4NjE3NiwxMT
-EzOTU3ODkxLDE1MjIyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5
-NTAzOSwtMTQwMjY2NDc5MywxODc0MDIxMjU0XX0=
+eyJoaXN0b3J5IjpbLTE5NTIyNjkzNTAsMTA4NDA4MTY2NCwtMz
+YxOTAxODA1LDE3MDc1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0
+MzU1LDE4ODQxNzMxMjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMT
+ExMzk1Nzg5MSwxNTIyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0
+OTUwMzksLTE0MDI2NjQ3OTMsMTg3NDAyMTI1NF19
 -->
