@@ -1,12 +1,5 @@
-### int vs Integer
-- int is a primitive data type while Integer is a Wrapper class
-- int as other **primitive type was stored in stack**, so we usually use `int` for temp value, while Integer as other **reference type was stored in heap**, we usually use `Integer` for POJO so that we can serialize or deserialize by telling if we have the value
-- int was designed for JVM cost and performance perpective, it is not designed for Object Oriented. 
-- int default value is 0 while Integer default as null
-- Integer was a class , when it was initialized will have a reference in JVM. Variables of type Integer store references to Integer objects, just as with any other reference (object) type
-- we can't assign a String value to an int value directly or even by casting, but we can do this with Integer
-- Integer can be directly converted to other types like binary or hex
-- int can be compared by using `==` , while Integer usually compares by using `equals`, if number ranges is within ~127 - 128 then we can use "because when using `=="` to compare Integer as during this data range, it uses primitive type as cache in memory, otherwise it, it's actually a reference type so the comparison was happening at pointer which referenced to the object memory address, Integer also have a mechanism like cache so it can be comparesd by address and value (reference type)using `==` when value between -128 ~ 127
+
+
 ### JVM 
 - JVM is a virtual machine that understands and runs java bytecodes, works for memory management in heap space and stack memory
 - JVM will mostly distribute objects to HEAP level, when JVM execute the code, every thread will have a thread stack
@@ -79,15 +72,6 @@ public  class  Memory {
 - The stack is a part of memory that contains information about **nested method** calls down to the current position in the program. It also contains all **local variables and references to objects on the heap** defined in currently executing methods.
 - This structure allows the runtime to return from the method knowing the address whence it was called, and also clear all local variables after exiting the method. Every thread has its own stack.
 - The heap is a large bulk of memory intended for allocation of objects. When you create an object with the  **new**  keyword, it gets allocated on the heap. **However, the reference to this object lives on the stack.**
-### Array vs ArrayList
-- Array is a fixed length data structure/object whereas ArrayList is a variable length Collection class, it implements **List<E>, Collection<E>, Iterable<E>, Cloneable, and Serializable** interfaces. It extends **AbstractList<E>** class.
-- We **cannot change length of array once created** in Java but **ArrayList can be changed**.
-- We **cannot store primitives in ArrayList, it can only store objects**. But array can contain both primitives and objects in Java
-###  ArrayList vs LinkedList
-- **ArrayList is using an array to implement the _List_ interface**. As arrays are fixed size in Java, _ArrayList_ creates an array with some initial capacity. Along the way, if we need to store more items than that default capacity, it will replace that array with a new and more spacious one. So the cost of inserting/deleting will be expensive in memory usage but access is faster as through array index
-- **LinkedList internally uses a doubly linked list** to store the elements, so inserting and deleting are faster but reading is slower as it has to go through some traverse manually
-
-
 ### Java main method [Link](https://www.journaldev.com/12552/public-static-void-main-string-args-java-main-method)
 ### Java Static [Link](https://www.javainterviewpoint.com/top-10-java-interview-questions-on-static-keyword/)
 ### Java Default Method
@@ -185,9 +169,9 @@ https://www.baeldung.com/java-static-default-methods
 #### Getting (get) Element From ConcurrentHashMap
 - When we are getting an element from ConcurrentHashMap we are simply passing key and hash of key is getting calculated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDkzNDk5MTAsMTA4NDA4MTY2NCwtMz
-YxOTAxODA1LDE3MDc1NzM1ODMsLTU5Mzc2MjcxOCwtNjkxNzQ0
-MzU1LDE4ODQxNzMxMjYsMjA0ODMwNTUwMiwzNTk2ODYxNzYsMT
-ExMzk1Nzg5MSwxNTIyMjM1MjUwLDE2MTQ1Mzc4NjAsLTE3MzA0
-OTUwMzksLTE0MDI2NjQ3OTMsMTg3NDAyMTI1NF19
+eyJoaXN0b3J5IjpbLTY5MzQwODAxMywxMDg0MDgxNjY0LC0zNj
+E5MDE4MDUsMTcwNzU3MzU4MywtNTkzNzYyNzE4LC02OTE3NDQz
+NTUsMTg4NDE3MzEyNiwyMDQ4MzA1NTAyLDM1OTY4NjE3NiwxMT
+EzOTU3ODkxLDE1MjIyMzUyNTAsMTYxNDUzNzg2MCwtMTczMDQ5
+NTAzOSwtMTQwMjY2NDc5MywxODc0MDIxMjU0XX0=
 -->
