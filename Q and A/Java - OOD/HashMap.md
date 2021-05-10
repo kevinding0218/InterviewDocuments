@@ -18,6 +18,14 @@ HashMap works on the principle of Hashing.
 - There are many collision-resolution strategies – chaining, double-hashing, clustering. However, java has chosen chaining strategy for hashMap, so in case of collisions, items are chained together just like in a linkedList.
 ### Load Factor
 - The Load factor is a measure that decides when to **increase** the HashMap capacity to maintain the get() and put() operation complexity of **O(1)**. The default load factor of HashMap is **0.75f** (75% of the map size).
+### How Load Factor is calculated
+- **Load Factor decides "when to increase the number of buckets."**
+We can find when to increase the hashmap size by using the following formula:
+1.  initial capacity of the hashmap*Load factor of the hashmap.
+**The initial capacity of hashmap is=16**  
+**The default load factor of hashmap=0.75**  
+**According to the formula as mentioned above: 16*0.75=12**
+It represents that 12th  key-value pair of hashmap will keep its size to 16. As soon as 13th  element (key-value pair) will come into the Hashmap, it will increase its size from default  **24  = 16**  buckets to  **25  = 32**  buckets.
 ### HashTable vs HashMap vs HashSet
 - HashTable for multi thread, that it's safe to visit HashTable across multi thread
 - HashMap for single thread
@@ -36,5 +44,5 @@ HashMap works on the principle of Hashing.
 	- When getting data, a volatile read is used without any synchronization. If the volatile read results in a miss, then the lock for that segment is obtained and entry is again searched in synchronized block.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY1NDc2ODI1LDg5NDkwMjc3OV19
+eyJoaXN0b3J5IjpbMjEyNTczMzIzNyw4OTQ5MDI3NzldfQ==
 -->
