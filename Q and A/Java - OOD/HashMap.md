@@ -19,6 +19,11 @@ HashMap works on the principle of Hashing.
 ### What is ConcurrentHashMap
 - A concurrentHashMap is divided into number of segments [default 16] on initialization.
 - ConcurrentHashMap allows similar number (16) of threads to access these segments concurrently so that each thread work on a specific segment during high concurrency.
+- This way, if when your key-value pair is stored in segment 10; code does not need to block other 15 segments additionally. This structure provides a very high level of concurrency.
+- In other words, ConcurrentHashMap uses a multitude of locks, each lock controls one segment of the map.
+	- When setting data in a particular segment, the lock for that segment is obtained. So essentially update operations are synchronized.
+	- When getting data, a volatile read is used without any synchronization. If the volatile read results in a miss, then the lock for that segment is obtained and entry is again searched in synchronized block.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDIxMTM2MDYsODk0OTAyNzc5XX0=
+eyJoaXN0b3J5IjpbMTIxNTcyMDM1NCw4OTQ5MDI3NzldfQ==
 -->
