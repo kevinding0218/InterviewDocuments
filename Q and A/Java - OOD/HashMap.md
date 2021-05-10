@@ -25,7 +25,7 @@ We can find when to increase the hashmap size by using the following formula:
 **The initial capacity of hashmap is=16**  
 **The default load factor of hashmap=0.75**  
 **According to the formula as mentioned above: 16*0.75=12**
-It represents that 12th  key-value pair of hashmap will keep its size to 16. As soon as 13th  element (key-value pair) will come into the Hashmap, it will increase its size from default  **24  = 16**  buckets to  **25  = 32**  buckets.
+It represents that 12th  key-value pair of hashmap will keep its size to 16. As soon as 13th  element (key-value pair) will come into the Hashmap, it will increase its size from default  **2^4  = 16**  buckets to  **2^5  = 32**  buckets.
 ### HashTable vs HashMap vs HashSet
 - HashTable for multi thread, that it's safe to visit HashTable across multi thread
 - HashMap for single thread
@@ -44,5 +44,5 @@ It represents that 12th  key-value pair of hashmap will keep its size to 16. As 
 	- When getting data, a volatile read is used without any synchronization. If the volatile read results in a miss, then the lock for that segment is obtained and entry is again searched in synchronized block.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNTczMzIzNyw4OTQ5MDI3NzldfQ==
+eyJoaXN0b3J5IjpbMTYwMjM4NDQ1LDg5NDkwMjc3OV19
 -->
