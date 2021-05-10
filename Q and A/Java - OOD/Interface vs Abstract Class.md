@@ -20,6 +20,46 @@
 #### Constructor
 - An interface cannot declare constructors or destructors.
 - An abstract class can declare constructors and destructors.
+### When designing an abstract class, why should you avoid calling abstract methods inside its constructor?
+- This is a problem of initialization order. The subclass constructor will not have had a chance to run yet and there is no way to force it to run it before the parent class. Consider the following example class:
+```
+public  abstract  class Widget { 
+	private  final  int cachedWidth; 
+	private  final  int cachedHeight; 
+	public Widget() { 
+		this.cachedWidth = width(); 
+		this.cachedHeight = height(); 
+	} 
+	protected abstract int width(); 
+	protected abstract int height(); 
+}
+```
+This seems like a good start for an abstract Widget: it allows subclasses to fill in  `width`  and  `height`, and caches their initial values. However, look when you spec out a typical subclass implementation like so:
+
+```java
+        public class SquareWidget extends Widget {
+	        private final int size;
+	
+	        public SquareWidget(int size) {
+	            this.size = size;
+	        }
+	
+	        @Override
+	        protected int width() {
+	            return size;
+	        }
+	
+	        @Override
+	        protected int height() {
+	            return size;
+	        }
+	    }
+
+```
+
+Now we’ve introduced a subtle bug:  `Widget.cachedWidth`  and  `Widget.cachedHeight`  will always be zero for  `SquareWidget`  instances! This is because the  `this.size = size`  assignment occurs  _after_  the  `Widget`  constructor runs.
+
+Avoid calling abstract methods in your abstract classes’ constructors, as it restricts how those abstract methods can be implemented.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcyNDgzNjgyXX0=
+eyJoaXN0b3J5IjpbNDY4NDg3MjExXX0=
 -->
