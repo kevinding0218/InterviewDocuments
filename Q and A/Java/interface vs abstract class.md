@@ -15,8 +15,11 @@
 - While adding new stuff to the interface, it is a nightmare to find all the implementors and implement newly defined stuff.
 - In case of Abstract Class, you can take advantage of the default implementation.
 #### When to use
-- It is better to use interface when various implementations share only method signature. Polymorphic hierarchy of value types.
-- It should be used when various implementations of the same kind share a common behavior.
+- It is better to use interface when various implementations share only method signature. Polymorphic hierarchy of value types. (Future enhancement)
+- It should be used when various implementations of the same kind share a common behavior. (To avoid independence)
+#### Constructor
+- An interface cannot declare constructors or destructors.
+- An abstract class can declare constructors and destructors.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NTc2NDU4MiwxNzk0OTY4NTIyXX0=
+eyJoaXN0b3J5IjpbLTc1MTU3NDMxNywxNzk0OTY4NTIyXX0=
 -->
