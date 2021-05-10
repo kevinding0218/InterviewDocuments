@@ -1,5 +1,6 @@
 ### Interface vs Abstract Class
+#### Method Type
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NDk2ODUyMl19
+eyJoaXN0b3J5IjpbMTI3MTcyNDk1OSwxNzk0OTY4NTIyXX0=
 -->
