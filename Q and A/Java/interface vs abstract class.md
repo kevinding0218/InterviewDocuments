@@ -4,7 +4,7 @@
 - Abstract class can have final, non-final, static and non-static variables. 
 #### Method Type
 - Interface can have only abstract methods. 
-- An abstract class can have abstract and non-abstract/concrete methods
+- An abstract class has protected and public abstract methods.
 #### Implementation
 - A Class can implement multiple interfaces
 - A Class can inherit only one Abstract Class because Java does not support multiple inheritances
@@ -21,5 +21,5 @@
 - An interface cannot declare constructors or destructors.
 - An abstract class can declare constructors and destructors.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MTU3NDMxNywxNzk0OTY4NTIyXX0=
+eyJoaXN0b3J5IjpbMzcyNDgzNjgyLDE3OTQ5Njg1MjJdfQ==
 -->
