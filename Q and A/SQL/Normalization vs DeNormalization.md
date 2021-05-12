@@ -9,11 +9,13 @@
 - Meet with 1NF requirement
 - All columns depends on the table's primary key 
 - Move redundant data to a separate tableCreate relationship between the tables using foreign keys.
-
+#### 3NF
+- Meet with 2NF requirement
+- All of its columns are not transitively dependant on the primary key
 ### Denormalization
 - Denormalization is used to combine multiple table data into one so that it can be queried quickly. The process of attempting to optimize the performance of a database by adding redundant data.
 - Focus on achieve the faster execution of the queries
 - Denormalization introduces some sort of wastage of memory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjQzNDMyODIsMjYzMzUxNTldfQ==
+eyJoaXN0b3J5IjpbLTEyNTA3NDM2ODEsMjYzMzUxNTldfQ==
 -->
