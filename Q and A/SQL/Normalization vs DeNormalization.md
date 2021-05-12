@@ -12,10 +12,13 @@
 #### 3NF
 - Meet with 2NF requirement
 - All of its columns are not transitively dependant on the primary key
+#### 4NF
+- Meet with 3NF requirement
+- Does not contain two or more independent multi-valued facts about an entity
 ### Denormalization
 - Denormalization is used to combine multiple table data into one so that it can be queried quickly. The process of attempting to optimize the performance of a database by adding redundant data.
 - Focus on achieve the faster execution of the queries
 - Denormalization introduces some sort of wastage of memory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTA3NDM2ODEsMjYzMzUxNTldfQ==
+eyJoaXN0b3J5IjpbMjAyMTU3ODE1MywyNjMzNTE1OV19
 -->
