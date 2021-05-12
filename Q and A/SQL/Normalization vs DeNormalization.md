@@ -6,14 +6,14 @@
 #### 1NF
 - Each column contains atomic values and there are not repeating groups of columns, e.g: 
 	- A column stores both Physical Address and Email Address needs to separate it out
-	- A co
+	- A column stores repeating info needs to seraprate into multiple rows
 #### 2NF
-- 
+- Meet with 1NF requirement + all columns depends on the table's primary key 
 ### Denormalization
 - Denormalization is used to combine multiple table data into one so that it can be queried quickly. The process of attempting to optimize the performance of a database by adding redundant data.
 - Focus on achieve the faster execution of the queries
 - Denormalization data is integrated into the same database and hence a number of tables to store that data increases in number.
 - Denormalization introduces some sort of wastage of memory.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjMzMjc0NzksMjYzMzUxNTldfQ==
+eyJoaXN0b3J5IjpbLTEwMDg4MDk2NzAsMjYzMzUxNTldfQ==
 -->
