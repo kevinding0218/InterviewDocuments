@@ -1,12 +1,12 @@
 ### Pre-Question to Interviewer
 #### What about auto-scaling?
-	- problem with scaling up or scaling out is that it is not happening immediately, even autoscaling takes time.
-	- And by the time scaling process completes it may already be late. Our service may already crash.
+- problem with scaling up or scaling out is that it is not happening immediately, even autoscaling takes time.
+- And by the time scaling process completes it may already be late. Our service may already crash.
 #### What about load balancer?
-	- Load balancer will either reject any request over the limit or send the request to a queue, so that it can be processed later, but rate limiter cannot be applied on load balancer level
-	- Load balancer does not have knowledge about a cost of each operation. And if we want to limit number of requests for a particular operation, we can do this on application server only, not at a load balancer level.
-	- If we have a load balancer in front of our web service and this load balancer spreads requests evenly across application servers and each request takes the same amount of time to complete - you are right. In this case this is a single instance problem and there is no need in any distributed solution. Application servers do not need to talk to each other. They throttle requests independently.
-	- But in the real-world load balancers cannot distribute requests in a perfectly even manner. Plus, as we discussed before different web service operations cost differently. And each application server itself may become slow due to software failures or overheated due to some other background process running on it. All this leads to a conclusion that we will need a solution where application servers will communicate with each other and share information about how many client requests each one of them processed so far.
+- Load balancer will either reject any request over the limit or send the request to a queue, so that it can be processed later, but rate limiter cannot be applied on load balancer level
+- Load balancer does not have knowledge about a cost of each operation. And if we want to limit number of requests for a particular operation, we can do this on application server only, not at a load balancer level.
+- If we have a load balancer in front of our web service and this load balancer spreads requests evenly across application servers and each request takes the same amount of time to complete - you are right. In this case this is a single instance problem and there is no need in any distributed solution. Application servers do not need to talk to each other. They throttle requests independently.
+- But in the real-world load balancers cannot distribute requests in a perfectly even manner. Plus, as we discussed before different web service operations cost differently. And each application server itself may become slow due to software failures or overheated due to some other background process running on it. All this leads to a conclusion that we will need a solution where application servers will communicate with each other and share information about how many client requests each one of them processed so far.
 ### Functional Requirements
 - For a given request our rate limiting solution should return a boolean value, whether request is throttled or not.
 - API: `allowRequest(request)`
@@ -203,6 +203,7 @@ from memory. And bucket will be re-created again when client makes a new request
 - When request comes, rate limiter client builds client identifier and passes it to the rate limiter to make a decision.
 - Rate limiter communicates with a message broadcaster, that talks to other hosts in the cluster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MDEyMDYyMCw2NjcwNDQxNjIsNTUxNz
-M2Nzg1LDk0MjA3ODk2MywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbOTI1NzM1MDAsMTk4MDEyMDYyMCw2NjcwND
+QxNjIsNTUxNzM2Nzg1LDk0MjA3ODk2MywtMjA4ODc0NjYxMl19
+
 -->
