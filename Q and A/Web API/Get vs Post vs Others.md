@@ -50,6 +50,9 @@
 - PUT method answer can be cached.
 - If you send the same request multiple times, the result will remain the same.
 
+### [Options](https://www.toptal.com/web/interview-questions)
+-  Allows a client to request information about the request methods supported by a service. The relevant response header is Allow and it simply lists the supported methods. (It can also be used to request information about the request methods supported for the server where the service resides by using a * wildcard in the URI.)
+
 
 
 
@@ -71,5 +74,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwOTQxMTkyMSwxMjg0NTEzNjU5XX0=
+eyJoaXN0b3J5IjpbMTU2MjMzNTIzOCwxMjg0NTEzNjU5XX0=
 -->
