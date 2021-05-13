@@ -15,7 +15,7 @@ HashMap works on the principle of Hashing.
 - Since bucket is one and we have two objects with the same hashcode. The bucket is the linked list effectively. So we traverse through linked list , comparing keys in each entries using keys.equals() until it return true. Then the corresponding entry object Value is returned .
 ### What is Hashing?
 - **Hashing** is the practice of using **an algorithm (or hash function)** to map data of _any_ size to a _fixed_ length. 
-- keys are converted into _hash values_ or _indexes_ by using **hash functions**. Hashing is a one-way function.
+- keys are converted into _hash values_ or _indexes_ by using **hash functions**. Hashing is a **one-way function.**
 ### Hash Collision
 - Collisions happen when 2 distinct keys generate the same hashCode() value.
 - There are many collision-resolution strategies – chaining, double-hashing, clustering. However, java has chosen chaining strategy for hashMap, so in case of collisions, items are chained together just like in a linkedList.
@@ -42,6 +42,6 @@ It represents that 12th  key-value pair of hashmap will keep its size to 16. As 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNjc1NjY4OCwtMTI1OTEyMDAxNiwxNj
+eyJoaXN0b3J5IjpbLTg4NTIyMTE2OCwtMTI1OTEyMDAxNiwxNj
 AyMzg0NDUsODk0OTAyNzc5XX0=
 -->
