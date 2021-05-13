@@ -4,13 +4,12 @@
 ```
 ETag: "unique_id_of_resource_version"
 ```
-The client may then decide to cache the resource, along with its  `ETag`. Later, if the client wants to retrieve the same URL again, it will send its previously saved copy of the ETag along with the request in a  `"If-None-Match"`  field.
+The client may then decide to cache the resource, along with its  `ETag`. Later, if the client wants to retrieve the same URL again, it will send its previously saved copy of the ETag along with the request in a  **"If-None-Match"**  field.
 ```
 If-None-Match: "unique_id_of_resource_version"
-
 ```
 On this subsequent request, the server may now compare the client’s  `ETag`  with the  `ETag`  for the current version of the resource. If the  `ETag`  values match, meaning that the resource has not changed, then the server may send back a very short response with a  `HTTP 304 Not Modified`  status. The 304 status tells the client that its cached version is still good and that it should use that.
 However, if the  `ETag`  values do not match, meaning the resource has likely changed, then a full response including the resource’s content is returned, just as if  `ETag`  were not being used. In this case the client may decide to replace its previously cached version with the newly returned resource and the new  `ETag`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3Mzg4OTc5XX0=
+eyJoaXN0b3J5IjpbMTEzMzYzNzAyNV19
 -->
