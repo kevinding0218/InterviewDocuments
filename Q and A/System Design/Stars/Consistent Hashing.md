@@ -15,7 +15,7 @@ Host 3		Host 5
 #### what happens when we add new host to the cache cluster?
 - Same as before, **we calculate a hash for a new host, and this new host becomes responsible for its own range of keys on the circle**. While its counter clockwise neighbor (host 4 in this case) becomes responsible for a smaller range.
 - In other words, host 6 took responsibility for a subset of what was formerly owned by host 4. And nothing has changed for all the other hosts. Which is exactly what we wanted, to minimize a number of keys we need to re-hash.
-- Consistent hashing is much better than MOD hashing, as significantly smaller fraction of keys is re-hashed when new host is added or host is removed from the cache cluster.
+- Consistent hashing is much better than MOD hashing, as **significantly smaller fraction of keys is re-hashed when new host is added or host is removed from the cache cluster.**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MjEzOTk0OF19
+eyJoaXN0b3J5IjpbLTIwMDUzNTc5MDgsMTI0MjEzOTk0OF19
 -->
