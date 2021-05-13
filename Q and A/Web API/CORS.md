@@ -3,7 +3,7 @@
 - CORS adds new HTTP headers that provide access to permitted origin domains. For HTTP methods other than GET (or POST with certain MIME types), the specification mandates that browsers first use an HTTP OPTIONS request header to solicit a list of supported (and available) methods from the server. The actual request can then be submitted. Servers can also notify clients whether “credentials” (including Cookies and HTTP Authentication data) should be sent with requests.
 - CORS behavior is not an error,  it’s a **security mechanism to protect users**.
 - CORS is designed to **prevent a malicious website that a user may unintentionally visit** from making a request to a legitimate website to read their personal data or perform actions against their will.
-**Access-Control-Allow-Origin**
+- res.header("**Access-Control-Allow-Origin**", "*");
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MTQ5Mzk4M119
+eyJoaXN0b3J5IjpbMTczNzIyOTczMSwxMjgxNDkzOTgzXX0=
 -->
