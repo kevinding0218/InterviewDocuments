@@ -45,7 +45,7 @@ AND timestamp <= 1411845300;
 - As a result, it is imperative that **we determine some sentinel value that can be used in place of the service name, and that is not time oriented**. **For example, API method or url path or instance ip address could be a good value**. In practice I have found that this use case is rare, or that the real use case requires a queue or cache.
 ### How to store
 - **We absolutely cannot just write individual data samples to files as they arrive**. That’ll be prohibitively inefficient because the monitoring system may end up collecting a million data samples or more every minute.
--  **With batching in memory, there comes the risk of losing data**. It may not be a big deal if we’re only batching for a short period of time, as typical time series use cases can tolerate the loss of a few data samples. But if we want to batch for a longer period of time, a durability safeguard should be put in place.
+-  **With batching in memory, there comes the risk of losing data**. It may not be a big deal if we’re only batching for a short period of time, as typical time series use cases can tolerate the loss of a few data samples. But **if we want to batch for a longer period of time, a durability safeguard should be put in place.**
 - **We can use Write-ahead-log (WAL)** to achieve what we're looking for. 
 	- On a high level, WAL pipes the changes to a log file on disk that can be used to restore the system state after crashing. 
 	- WAL doesn’t incur a big IO penalty because sequential file access is relatively fast.
@@ -63,7 +63,7 @@ Block 0 | Block 1 | Block 2, ...
 - 
 ### Data Processing - Push vs Pull
 - Interviewer: Do we need to get the metrics out of the server? 
-	- If not, we can have our server expose an endpoint service with the metrics or it may just save the metrics to local disks and we can do that later
+	- If not, we can have our server expose an endpoint service with the metrics or **it may just save the metrics to local disks and we can do that later**
 	- If yes, in above approatch, we’ll lose access to the metrics when the server is slow or down — just when we need them the most. We’d also want to put the metrics in a centralized place for better global monitoring and alerting.
 #### Pull
 - it is more convenient. Each server being monitored only needs to gather the metrics in memory and serve them through an endpoint. It doesn’t need to care where the monitoring system is. It doesn’t need to worry about overloading the monitoring system if they send too much and/or too frequently. A global configuration about what to collect and the collection interval can be tuned in the monitoring system.
@@ -72,6 +72,6 @@ Block 0 | Block 1 | Block 2, ...
 #### Push
 - If we’re using push, we can put a load balancer in front of a set of monitoring system replicas and have the servers being monitored send metrics through the load balancer.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2Mjg0ODQ4MiwtMTM3MTMzODUyNiwyMD
-UwMTg3NzE4LDE2MjA1MjQ4MiwtNDgxMzgyNjgzXX0=
+eyJoaXN0b3J5IjpbOTk3MTAxNjAyLC0xMzcxMzM4NTI2LDIwNT
+AxODc3MTgsMTYyMDUyNDgyLC00ODEzODI2ODNdfQ==
 -->
