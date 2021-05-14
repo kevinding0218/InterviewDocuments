@@ -20,7 +20,22 @@
 - Limitation of HTTP
 	- HTTP is part of bi-direction protocol, which means at same time data will transfer in one direction
 	- Server cannot actively send data to client, which makes it hard to implement chat functionality.
-- 
+
+### Compare WebSocket vs REST/Ajax
+**webSocket**
+1.  Server sees that a price has changed and immediately sends a message to each client.
+2.  Client receives the message about new price.
+**Rest/Ajax**
+1.  Client sets up a polling interval
+2.  Upon next polling interval trigger, client creates socket connection to server
+3.  Server receives request to open new socket
+4.  When connection is made with the server, client sends request for new pricing info to server
+5.  Server receives request for new pricing info and sends reply with new data (if any).
+6.  Client receives new pricing data
+7.  Client closes socket
+8.  Server receives socket close
+- As you can see there's a lot more going on in the Rest/Ajax call from a networking point of view because a new connection has to be established for every new call whereas the webSocket uses an already open call. In addition, in the webSocket cases, the server just sends the client new data when new data is available - the client doens't have to regularly request it.
+- A webSocket can also be faster and easier on your networking infrastructure simply because fewer network operations are involved to simply send a packet over an already open webSocket connection versus creating a new connection for each REST/Ajax call, sending new data, then closing the connection. How much of a difference/improvement this makes in your particular application would be something you'd have to measure to really know.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2ODEzNTI3NywtMjAwODgwMDA5NV19
+eyJoaXN0b3J5IjpbMTM3NDk5Njg4NiwtMjAwODgwMDA5NV19
 -->
