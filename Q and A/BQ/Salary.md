@@ -5,6 +5,7 @@
 - Thank you so much for investing the time and resources throughout the process to meet with me to chat with me, 
 - Compensation is important to me, I really want to look at the entire value of working at your company, what I get to do, who I get to do with, the training opportunities, the career advancement opportunities, the benefit, vacation and all of the things that's going along with the company. 
 - At the moment, to give you any kind of estimate would be uneducated on my part. 
+- 
 #### How does the salary range sound to you? Do you like this number?
 - That's a really good start
 #### When got the job offer
@@ -19,6 +20,6 @@
 - This is a lot of good information, let me just take some time to process all of this and get back to you later. Would that make sense for you/would that work for you?
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NTY0ODEwNSwtMTQ5NzcxNzM2NywtMj
+eyJoaXN0b3J5IjpbMTAxNDU0MDY2OCwtMTQ5NzcxNzM2NywtMj
 EyMDY2NjYxMCwtNDAzNzM0NzA5XX0=
 -->
