@@ -14,6 +14,12 @@ Some of the advantages of REST web services are:
 -   REST is stateless, therefore the SERVER has no state (or session data)
 -   With a well-applied REST API, the server could be restarted between two calls as every data is passed to the server
 -   Web service mostly uses POST method to make operations, whereas REST uses GET to access resources
+### Explain the architectural style for creating web API?
+The architectural style for creating web api are
+-   HTTP for client server communication
+-   XML/JSON as formatting language
+-   Simple URI as the address for the services
+-   Stateless communication
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDY0NzA3OTJdfQ==
+eyJoaXN0b3J5IjpbMTgxMzg2NDUxMl19
 -->
