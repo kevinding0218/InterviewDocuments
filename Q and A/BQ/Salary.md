@@ -1,7 +1,7 @@
 #### What's your expected salary
-- Hey I'm just curious, what's the compensation band for this position?
-- I actually haven't put much thought into this. This is a really important thing, so let me take some time to just think about this and can we revisit this later?
-- I am very glad you ask about this, but my top priority is finding the right fit, so once we find that, I'm happy to discuss salary, I really love getting to know you guys, I did a little bit research, and I saw that the industry average is X, and the offer that you gave me is slightly below that, is there anyways that we could possibly make up the difference?
+- Hey I'm just curious, **what's the compensation band for this position**?
+- **I actually haven't put much thought into this.** This is a really important thing, so let me take some time to just think about this and can we revisit this later?
+- I am very glad you ask about this, but my top priority is finding the right fit, so once we find that, I'm happy to discuss salary, **I really love getting to know you guys**, I did a little bit research, and I saw that the industry average is X, and the offer that you gave me is slightly below that, is there anyways that we could possibly make up the difference?
 - Thank you so much for investing the time and resources throughout the process to meet with me to chat with me, 
 - Compensation is important to me, I really want to look at the entire value of working at your company, what I get to do, who I get to do with, the training opportunities, the career advancement opportunities, the benefit, vacation and all of the things that's going along with the company. 
 - At the moment, to give you any kind of estimate would be uneducated on my part. 
@@ -20,6 +20,6 @@
 - This is a lot of good information, let me just take some time to process all of this and get back to you later. Would that make sense for you/would that work for you?
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE5NTUxMjcwLC0xNDk3NzE3MzY3LC0yMT
-IwNjY2NjEwLC00MDM3MzQ3MDldfQ==
+eyJoaXN0b3J5IjpbLTY2MDQ4MjIwMiw2MTk1NTEyNzAsLTE0OT
+c3MTczNjcsLTIxMjA2NjY2MTAsLTQwMzczNDcwOV19
 -->
