@@ -420,7 +420,8 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 #### Partition Service Client
 ##### Blocking vs non-blocking I/O
 	1. When client makes a request to a server, server processes the request and sends back a response.
-	2. The client initiates the connection by using sockets. When a client makes a request, the socket that handles that connection on the server-side is blocked. This happens within a single execution thread. So the thread that handles that connection is blocked as well.
+	2. The client initiates the connection by using sockets.          
+		3. ** When a client makes a request, the socket that handles that connection on the server-side is blocked.** This happens within a single execution thread. So the thread that handles that connection is blocked as well.
 	3. When another client sends a request at the same time, we need to create one more thread to process that request. This is how blocking systems work.They create one thread per connection. 
 	4. Modern multi-core machines can handle hundreds of concurrent connections each. But let's say server starts to experience a slow down and number of active connections and threads increases. When this happens, machines can go into a death spiral and the whole cluster of machines may die. This is why we need `Rate Limiting` solution, to help keep systems stable during traffic peeks.
 -  non-blockingI/O
@@ -666,5 +667,6 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY2MTA0NTA5LDY4NzAzMDE3Nl19
+eyJoaXN0b3J5IjpbLTM3MTM5MTI2MCw5NjYxMDQ1MDksNjg3MD
+MwMTc2XX0=
 -->
