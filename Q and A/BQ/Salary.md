@@ -34,8 +34,18 @@ _**Recruiter:**_  _“I completely understand that you want to find a good fit �
 Start off the conversation like this…
 
 _“[Name], thank you very much for your consideration – I am incredibly thrilled to have this opportunity and I really appreciate all of the time and effort you all have put into this process. I have done some comprehensive research during my process and have found that the average salary for this position is around  **$XXX,XXX – $YYY,YYY***. Is there any way we can make up the difference there?”_
+
+_"Thanks so much for the information around the position. I really appreciate it! I mentioned that I did some research and I wanted to share what I found. From ~25 submissions, the average salary for this position appears to be  **$XXX,XXX**. Additionally, the lowest salary in the range is  **$YYY,YYY** however almost 70% of the salaries are at least $30,000 higher. I am curious as to why this salary is much lower than the average that you are paying other people for this position._
+
+_I don’t mean to come off as aggressive or pushy, I would just like to have all of my bases covered before I make a decision. I am extremely excited about the opportunity to work for  **[Company]**  and I am ready to say yes pending this one detail._
+
+_Lastly, I’ve put together a proposal that includes several solutions to some of the largest challenges the team is current facing. I’ve attached it here but it should help the team overcome some of the obstacles they have been facing and help boost  **[Performance Metric]**._
+
+_Please let me know if it would be possible for you all to take another look given the information above._
+
+_Best,_"
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzMzg3OTg2NywxMTcxMzAwNDEsMjE5Mz
-Q5NTAsNjE5NTUxMjcwLC0xNDk3NzE3MzY3LC0yMTIwNjY2NjEw
-LC00MDM3MzQ3MDldfQ==
+eyJoaXN0b3J5IjpbMjIxMDI5ODY2LDExNzEzMDA0MSwyMTkzND
+k1MCw2MTk1NTEyNzAsLTE0OTc3MTczNjcsLTIxMjA2NjY2MTAs
+LTQwMzczNDcwOV19
 -->
