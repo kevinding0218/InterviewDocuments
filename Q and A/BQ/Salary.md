@@ -18,8 +18,10 @@
 - Hey since you don't offer me any bonuses, what I want to be mindful of this inflation, and you know living costs are just keep going up. So essentially if I don't take this into consideration now, the longer I stay with the company, essentially the less my take-home pay is going to be, and **I don't want to be in a position where salary is a thing for me to have to leave the company**, so I hope you understand where I'm coming from.
 #### Comminucate via Email
 - This is a lot of good information, let me just take some time to process all of this and get back to you later. Would that make sense for you/would that work for you?
-- 
+#### Negotiate
+- I know I said a different target salary, but after interviewing with other companies, and getting a better sense of my value, I've seen that I should be aiming for X dollars, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE5MzQ5NTAsNjE5NTUxMjcwLC0xNDk3Nz
-E3MzY3LC0yMTIwNjY2NjEwLC00MDM3MzQ3MDldfQ==
+eyJoaXN0b3J5IjpbOTUwNDUxNDU1LDIxOTM0OTUwLDYxOTU1MT
+I3MCwtMTQ5NzcxNzM2NywtMjEyMDY2NjYxMCwtNDAzNzM0NzA5
+XX0=
 -->
