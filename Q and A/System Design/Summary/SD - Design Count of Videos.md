@@ -113,7 +113,7 @@
  - Individual events Cons
 	 - we **cannot read data quickly**, we need to count each individual event when total count is requested, this takes time.
 	 - it may **cost a lot of money to store** all the raw events, costly for a large scale (many events), Youtube generates billions of views every day so raw events storage must be huge.
- - Aggregate events Pros
+ - **Aggregate events** Pros
 	 - **Fast read**: we do not need to calculate each indivudal event, we just retrieve total count value.
 	 - **Decision making in real-time**, for exmaple, we may send the total count value to a recommendation service or trending service for popular videos to be promoted to trends.
  - Aggregate events Cons
@@ -122,10 +122,10 @@
 	 - Important: It's **hard to even impossible to fix errors**. Let's say we introduced a bug in the aggregation logic. Then how do we fix total counts after the bug was fixed?
 ##### Which approatch to choose?
  - we need interviewer to help us make a decision, we should ask interviewer about expected data delay, time between when event happened and when it was processed.
-	 - If it should be no more than several minutes, we must aggregate data on the fly, this is called batch data.
-	 - if several hours is ok, then we can store raw events and process them in the background, this is known as stream data processing.
+	 - If it should be no more than several minutes, we must **aggregate data on the fly**, this is called **batch data**.
+	 - if several hours is ok, then we can **store raw events and process them in the background**, this is known as **stream data processing.**
  - we can also combine both approaches which makes a lot of sense for many systems out there.
-	 - we will store raw events, and because there are so many of the, we will store events for several days or weeks only. And then purge old data, and we will also calculate and store numbers in real-time. So that statistics is available for users right away, by storing both raw events and aggreated data we get the best of both words: Fast Read, ability to aggregate data differently and re-calculate statistics if there were bugs or failures on a real-time path.
+	 - we will store raw events, and because there are so many of the, we will **store events for several days or weeks only**. And then **purge old data**, and we will also **calculate and store numbers in real-time**. So that statistics is available for users right away, by storing both raw events and aggreated data we get the best of both words: Fast Read, ability to aggregate data differently and re-calculate statistics if there were bugs or failures on a real-time path.
 	 - But there is a price to pay for all the flexibility, the system becomes more complex and expensive.
 #### Where we store the data
 - Interviewer wants to know specific database name and why we make this choice, you should know both SQL and NoSQL database can scale and perform well, so we should evaulate both types. Here is what we should recall non-functional requirements: Scalability, performance and availability, we should evaluate databases against these requirements.
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Njk5NDkxMiw2ODcwMzAxNzZdfQ==
+eyJoaXN0b3J5IjpbMTIyODc0ODE5Miw2ODcwMzAxNzZdfQ==
 -->
