@@ -204,11 +204,11 @@
 #### NoSQL
 ##### Nodes and Shards
 - In NoSQL world, we **split data into chunks, shards, also known as nodes**
-- Instead of having leaders and followers, we say that each shard is Equal, we no longer need configuration service to monitor health of each shard. Instead, let's allow shards talk to each other and exchange information about their state.
+- Instead of having leaders and followers, we say that **each shard is Equal, we no longer need configuration service to monitor health of each shard.** Instead, let's **allow shards talk to each other and exchange information about their state**.
 - To reduce network load, we don't need each shard to talk to every other shard. Every second shard may exchange information with a few other shards, no more than 3. Qucik enough state information about every node propagates throughout the cluster. This procedure is called a gossip protocol.
-- Ok, each node in the cluster knows about other node and this is a big deal. Remember preivously we used `Cluster Proxy` component to route requests to a particular shard, as `Cluster Proxy` was the only one who knew about all shards, but now every node knows about each other. So clients of our database no longer need to call a special component for routng requests.
+- Ok, **each node in the cluster knows about other node and this is a big deal**. Remember preivously we used `Cluster Proxy` component to route requests to a particular shard, as `Cluster Proxy` was the only one who knew about all shards, but now every node knows about each other. **So clients of our database no longer need to call a special component for routng requests.**
 ##### How NoSQL Shards work
-- Clients may call any node in the cluster and node itself will decide where to forward this request further.
+- Clients may **call any node in the cluster and node itself will decide where to forward this request further**.
 	```
 	Node1(A-F) - Node2(G-L) 
 		|			|
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjM2ODE0NDAsNjg3MDMwMTc2XX0=
+eyJoaXN0b3J5IjpbLTEwMTc2OTA1OTIsNjg3MDMwMTc2XX0=
 -->
