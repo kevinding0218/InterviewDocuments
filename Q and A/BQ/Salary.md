@@ -22,9 +22,16 @@
 - I know I said a different target salary, but after interviewing with other companies, and getting a better sense of my value, I've seen that I should be aiming for X dollars, 
 - I've seen that the range in the market is X to Y salary, could we make up the difference
 - Upon reflection of thinking through my next career step, I realized my desired salary is X, I appreciated your understanding. 
-- I've been dreaming about working for you guys since I started interviewing here, so I just want to ask one more time, is there any p
+- I've been dreaming about working for you guys since I started interviewing here, so I just want to ask one more time, is there any possible way that we can make up a bit of the gap?
+
+### Example
+_**Recruiter:** “May I ask how much you make at your current company? We're trying to gauge if you're in the right range.”_
+_**You:**_ _“I am very open to negotiation, but my top priority is finding the right fit. Once that is established, I am more than happy to talk salary.”_
+
+_**Recruiter:**_  _“I completely understand that you want to find a good fit – so do we! However, we don't move forward with candidates unless we know what range they fit in.”_
+**You:** “Of course, that makes sense! Would you be open to sharing the range you have budgeted for this role? That way we can make sure we're aligned from the get go and we're making the best use of both our time.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MTM1MjUwMiwxMTcxMzAwNDEsMjE5Mz
-Q5NTAsNjE5NTUxMjcwLC0xNDk3NzE3MzY3LC0yMTIwNjY2NjEw
-LC00MDM3MzQ3MDldfQ==
+eyJoaXN0b3J5IjpbLTEyNjcwMTM1ODUsMTE3MTMwMDQxLDIxOT
+M0OTUwLDYxOTU1MTI3MCwtMTQ5NzcxNzM2NywtMjEyMDY2NjYx
+MCwtNDAzNzM0NzA5XX0=
 -->
