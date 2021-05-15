@@ -365,25 +365,25 @@
 	- **Aggregator**
 		- Even then comes to the component that does in-memory counting. Let's call it `Aggregator`
 		- Think of it as a hash table that accumulates data for some period of time.
-		- Periodically, we stop writing to the current hash table and create a new one, the new hash table keeps accumulating incoming data, while old hash table is no longer counting any data and each counter from the old hash table is sent to the internal queue for further processing.
-	- Internal Queue
+		- **Periodically, we stop writing to the current hash table and create a new one, the new hash table keeps accumulating incoming data, while old hash table is no longer counting any data and each counter from the old hash table is sent to the internal queue for further processing.**
+	- **Internal Queue**
 		- Why do we need this internal queue? Why can't we send data directly to the database?
-			- Remember we have a single thread that reads events from the partition, but nothing stops us from processing these events by multiple threads, to speed up processing, especially if processing takes time.
-			- By sending data to the internal queue we decouple consumption and processing.
-	- Database Write
+			- Remember we have a **single thread that reads events from the partition, but nothing stops us from processing these events by multiple threads, to speed up processing**, especially if processing takes time.
+			- By sending data to the internal queue we **decouple consumption and processing**.
+	- **Database Write**
 		- either a single-thread or a multi-threaded component.
-		- Each thread takes a message from the internal queue and stores pre-aggregated views count into database.
+		- **Each thread takes a message from the internal queue and stores pre-aggregated views count into database.**
 	- Single Thread vs Multi Threads
-		- Single Thread makes checkpointing easier, but multi-threaded version increases throughput.
-- Deadletter Queue
-	- The DLQ is a queu to which messages are sent if they cannot be routed to their correct destination
+		- **Single Thread makes checkpointing easier, but multi-threaded version increases throughput**.
+- **Deadletter Queue**
+	- The **DLQ is a queue to which messages are sent if they cannot be routed to their correct destination**
 	- Why need it? To protect ourselves from database performance or availability issues. If database becomes slow or we cannot reach database due to network issues, we simply push messages to the dead letter queue.
 	- There is a separate process that reads messages from this queue and sends them to the database
 	- The DLQ is widely used when you need to preserve data in case of downstream services degradation, but you can also store the undeliverable messages in local disk
-- Data Enrichment
+- **Data Enrichment**
 	- Like Cassandra, we store data the way it would be queried. For example, if we want to show video title in the report, we need to store video title together with views count.
 	- Same is true for the channel name and many other attribute that we may want to display, but all these attributes do not come to the `Processing Service` with every video view event.
-	- Event contains minimum information, like videoId and timestamp. It doesn't need to contain video title or channel name or video creation date. There information is going to be coming from somewhere else, like some Embedded Database.
+	- Event contains **minimum information**, like videoId and timestamp. It doesn't need to contain video title or channel name or video creation date. There information is going to be coming from somewhere else, like some Embedded Database.
 	- But the trick here is that this database lives on the same machine as the `Processing Service`. All these additional attributes should be retrieved from the database really quickly. Thus, having it on the same machine eliminates a need for remote calls.
 		```
 												In-memory Store							Embedded Database
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDMzNTg4ODAsNjg3MDMwMTc2XX0=
+eyJoaXN0b3J5IjpbMTAyODExMzA4NSw2ODcwMzAxNzZdfQ==
 -->
