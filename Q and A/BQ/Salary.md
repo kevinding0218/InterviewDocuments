@@ -20,8 +20,10 @@
 - This is a lot of good information, let me just take some time to process all of this and get back to you later. Would that make sense for you/would that work for you?
 #### Negotiate
 - I know I said a different target salary, but after interviewing with other companies, and getting a better sense of my value, I've seen that I should be aiming for X dollars, 
+- I've seen that the range in the market is X to Y salary, could we make up the difference
+- Upon refle
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUwNDUxNDU1LDIxOTM0OTUwLDYxOTU1MT
-I3MCwtMTQ5NzcxNzM2NywtMjEyMDY2NjYxMCwtNDAzNzM0NzA5
-XX0=
+eyJoaXN0b3J5IjpbLTc4NzcxNzMxNiwyMTkzNDk1MCw2MTk1NT
+EyNzAsLTE0OTc3MTczNjcsLTIxMjA2NjY2MTAsLTQwMzczNDcw
+OV19
 -->
