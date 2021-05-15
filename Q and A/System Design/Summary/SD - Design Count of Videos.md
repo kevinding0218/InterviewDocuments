@@ -163,7 +163,7 @@
 	```
 - Moreover, `Cluster Proxy` needs to know **when some shard dies or become unavailable due to network partition**. And **if new shard has been added to the database cluster, proxy should become aware of it**.
 ##### Add Configuration Service
-- We introduce a new component - `Configuration Service(e.g ZooKeeper)`, which maintains a health check connection to all shards, so it alwasy knows what database machines are available. So `Cluster Proxy` calls a particular shard
+- We introduce a new component - `Configuration Service(e.g ZooKeeper)`, which **maintains a health check connection to all shards**, so it alwasy knows what database machines are available. So `Cluster Proxy` calls a particular shard
 	```
 				 	  	Config Service		MySQL-I (A-M)
 	Processing Service		  |
@@ -172,7 +172,7 @@
 	Query Service							MySQL-II(N-Z)
 	```
 ##### Add Shard Proxy
-- And Instead of calling database instance directly, we can introduce one more proxy - `Shard Proxy`, that sits in front of database. `Shard Proxy` will help us in many different ways: it can cache query results, monitor database instance health and publish metrics, terminate queries that take too long to return data and many more.
+- And Instead of calling database instance directly, we can introduce one more proxy - `Shard Proxy`, that sits in front of database. `Shard Proxy` will help us in many different ways: it can **cache query results, monitor database instance health and publish metrics, terminate queries that take too long to return data and many more.**
 	```
 				 	  	Config Service		Shard Proxy + MySQL-I (A-M)
 	Processing Service		  |
@@ -183,8 +183,8 @@
 - This setup helps us address several requirements we mentioned before, like scalability and performance. But availability is not yet addressed.
 ##### Add Replica Lead/Follower (Master/Read) 
 - What if database shard died? How to make sure data is not getting lost?
-- We need replicate data. Lets call each existed shard a leader shard or a master shard.
-- For every master shard we introduce a copy of it, called follower replica or a read replica. We call it follower replica because writes still go through a leader shard, but reads may go through both leader shard and a follower replica.
+- We need **replicate data**. Lets call **each existed shard a leader shard or a master shard.**
+- For every master shard we introduce **a copy of it, called follower replica or a read replica**. We call it follower replica because **writes still go through a leader shard, but reads may go through both leader shard and a follower replica**.
 ##### Add Data Center
 - We also put some replicates to a data center different from their master shard, so that if the whole data center goes down, we still have a copy of data available.
 	```	
@@ -197,13 +197,13 @@
 	Query Service	       //retrieve			Shard Proxy + MySQL-II(N-Z)     Shard Proxy + MySQL-II(N-Z)
 														Data Center A					Data Center B
 	```
-- When store data request comes, based on the information provided by `Configuration Service`, `Cluster Proxy` sends data to a shard. And data is either synchronously or asynchronously replicated to a corresponding read replica.
-- When retrieve data request comes, `Cluster Proxy` may retrieve data either from a master or read replica
+- When store data request comes, based on the information provided by `Configuration Service`, `Cluster Proxy` sends data to a shard. And **data is either synchronously or asynchronously replicated to a corresponding read replica**.
+- When retrieve data request comes, `Cluster Proxy` may r**etrieve data either from a master or read replica**
 ##### Cons
 - This solution doesn't seems simple, we have all these proxies, configuration service, leader and follower replica instances, maybe we can use NoSQL to simplify things a little bit.
 #### NoSQL
 ##### Nodes and Shards
-- In NoSQL world, we split data into chunks, shards, also known as nodes
+- In NoSQL world, we **split data into chunks, shards, also known as nodes**
 - Instead of having leaders and followers, we say that each shard is Equal, we no longer need configuration service to monitor health of each shard. Instead, let's allow shards talk to each other and exchange information about their state.
 - To reduce network load, we don't need each shard to talk to every other shard. Every second shard may exchange information with a few other shards, no more than 3. Qucik enough state information about every node propagates throughout the cluster. This procedure is called a gossip protocol.
 - Ok, each node in the cluster knows about other node and this is a big deal. Remember preivously we used `Cluster Proxy` component to route requests to a particular shard, as `Cluster Proxy` was the only one who knew about all shards, but now every node knows about each other. So clients of our database no longer need to call a special component for routng requests.
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMzM2MDM1Miw2ODcwMzAxNzZdfQ==
+eyJoaXN0b3J5IjpbLTE2MjM2ODE0NDAsNjg3MDMwMTc2XX0=
 -->
