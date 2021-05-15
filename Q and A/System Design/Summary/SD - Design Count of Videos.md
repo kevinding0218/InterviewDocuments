@@ -454,9 +454,9 @@ To choose a request timeout value we need to analyze latency percentiles.
 	- For example we measure latency of 1% of the slowest requests in the system. And set this value as a request timeout. It means that about 1% of requests in the system will timeout.
 ##### Retires
 - What should we do with these failed requests? Let's retry them. May be we just hit a bad server machine with the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
-- But we should be smart when retry. Because if all clients retry at the same time or do it aggressively, we may create a so-called **retry storm event** and **overload sever** with too many requests.
+- But we should **be smart when retry.** Because if all clients retry at the same time or do it aggressively, we may create a so-called **retry storm event** and **overload sever** with too many requests.
 ##### Exponential backoff and jitter 
-- Exponential backoff algorithm increases the waiting time between retries up to a maximum backoff time. We retry requests several times, but wait a bit longer with every retry attempt(1s, 2s, 4s, 8s, etc).
+- **Exponential backoff** algorithm increases the waiting time between retries up to a maximum backoff time. We retry requests several times, but wait a bit longer with every retry attempt(1s, 2s, 4s, 8s, etc).
 - Jitter adds randomness to retry intervals to spread out the load. If we do not add jitter, backoff algorithm will retry requests at the same time. And jitter helps to separate retries.
 - Even with exponential backoff and jitter we may still be in danger of too many retries.
 	- For example when partitioner service is down or degraded. And majority of requests are retried. 
@@ -469,10 +469,9 @@ To choose a request timeout value we need to analyze latency percentiles.
 #### Load Balancer
 - distribute datatraffic between multiple servers. There are two types of load balancers: hardware and software.
 ##### Hardware Load Balancer
-- Hardware Load Balancer are network devices we buy from known organizations. Theses are powerful machines with many CPU
-cores, memory and they are optimized to handle very high throughput, e.g millions of requests per second.
+- Hardware Load Balancer are network devices we buy from known organizations. Theses are **powerful machines with many CPU cores, memory and they are optimized to handle very high throughput**, e.g millions of requests per second.
 ##### Software Load Balancer
-- Software Load Balancers are only softwares that we install on hardware we choose. Load balancers provided by public clouds (for example ELB from AWS) are examples of software load balancer type as well.
+- Software Load Balancers are only softwares that we install on hardware we choose. **Load balancers provided by public clouds (for example ELB from AWS)** are examples of software load balancer type as well.
 ##### TCP Load Balancer
 - TCP Load Balancers simply forward network packets without inspecting the content of the packets. Think of it as if we established a single end-to-end TCP connection between a client and a server. This allows TCP load balancers to be super fast and handle millions of requests per second.
 ##### HTTP Load Balancer
@@ -665,6 +664,6 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MjUxOTg0NSw5NjYxMDQ1MDksNjg3MD
-MwMTc2XX0=
+eyJoaXN0b3J5IjpbLTEwMDU3ODI0MTEsOTY2MTA0NTA5LDY4Nz
+AzMDE3Nl19
 -->
