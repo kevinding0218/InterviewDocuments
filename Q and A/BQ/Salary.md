@@ -30,8 +30,12 @@ _**You:**_ _“I am very open to negotiation, but my top priority is finding the
 
 _**Recruiter:**_  _“I completely understand that you want to find a good fit – so do we! However, we don't move forward with candidates unless we know what range they fit in.”_
 **You:** “Of course, that makes sense! Would you be open to sharing the range you have budgeted for this role? That way we can make sure we're aligned from the get go and we're making the best use of both our time.
+
+Start off the conversation like this…
+
+_“[Name], thank you very much for your consideration – I am incredibly thrilled to have this opportunity and I really appreciate all of the time and effort you all have put into this process. I have done some comprehensive research during my process and have found that the average salary for this position is around  **$XXX,XXX – $YYY,YYY***. Is there any way we can make up the difference there?”_
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjcwMTM1ODUsMTE3MTMwMDQxLDIxOT
-M0OTUwLDYxOTU1MTI3MCwtMTQ5NzcxNzM2NywtMjEyMDY2NjYx
-MCwtNDAzNzM0NzA5XX0=
+eyJoaXN0b3J5IjpbMTYzMzg3OTg2NywxMTcxMzAwNDEsMjE5Mz
+Q5NTAsNjE5NTUxMjcwLC0xNDk3NzE3MzY3LC0yMTIwNjY2NjEw
+LC00MDM3MzQ3MDldfQ==
 -->
