@@ -226,7 +226,7 @@
 	Query Service	====>		Node3(M-R) - Node4(S-Z)
 	```
 ##### NoSQL Availability
-- Cassandra uses version numbers to determine staleness of data, and similar to SQL database, we want to store copies of data across several different data centers for high availabilities.
+- Cassandra uses version numbers to determine staleness of data, and similar to SQL database, **we want to store copies of data across several different data centers for high availabilities.**
 	```
 		Processing Service			Node1(A-F) - Node2(G-L) 		Node1(A-F) - Node2(G-L) 
 							\\			|			|					|			|
@@ -235,11 +235,11 @@
 	```
 #### Consistency
 ##### Cons of not choose consistency
-- If we choose availability over consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all.
-- Synchronous data replicate is slow, we usually replicate data asynchronously.
+- If we choose **availability over consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all**.
+- **Synchronous data replicate is slow**, we usually replicate data asynchronously.
 ##### Eventual Consistency
-- In case of a leader-follower replication for example, some read replicas may be behind their master. Which leads to a situation when different users see different total count for a video.
-- This inconsistency is temporary, over time all writes will propagate to replicas. This effect is known as `Eventual Consistency`
+- In case of a leader-follower replication for example, **some read replicas may be behind their master**. Which leads to a situation when different users see different total count for a video.
+- This inconsistency is **temporary, over time all writes will propagate to replica**s. This effect is known as `Eventual Consistency`
 ##### Cassandra (Tunable Consistency)
 ### How we can store the data
 #### Data Modeling between SQL and NoSQL databases
@@ -262,12 +262,12 @@
 			- channel_id
 			- name
 			- ...
-	- To generate report mentioned above, we run a JOIN query that retrieves data from all three tables
+	- To generate report mentioned above, we run a **JOIN query** that retrieves data from all three tables
 	- Import property of a relational database: data is normalized
 		- it simply means we minimize data duplication across different tables
 		- e.g, we store video names in the video info table only, and we don't store video name in other tables, otherwise because if some video name changes, we have to change it in several places which may leads to inconsistent data.
 - NoSQL
-	- Cassandra, logical view, we choose Cassandra because it is fault-tolerant, scalable (both read and write throughput increases linearly as new machines are added), it support multi data center replication and works well with time-series data. It's a wide column database that supports asynchronous masterless replication.
+	- Cassandra, logical view, we choose **Cassandra because it is fault-tolerant, scalable (both read and write throughput increases linearly as new machines are added), it support multi data center replication and works well with time-series data. It's a wide column database that supports asynchronous masterless replication**.
 	- 
 | videoId | channelName | videoName | 15:00 | 16:00 | 17:00 | ... |
 |--|--|--|--|--|--|--|
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTc2OTA1OTIsNjg3MDMwMTc2XX0=
+eyJoaXN0b3J5IjpbLTgyMDc1Mjk2LDY4NzAzMDE3Nl19
 -->
