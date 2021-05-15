@@ -426,17 +426,17 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 -  non-blockingI/O
 	- When we can use a single thread on the server side to handle multiple concurrent connections. **Server just queues the request and the actual I/O is then processed at some later point.** 
 	- Piling up requests in the queue are far less expensive than piling up threads. **Non-blocking systems are more efficient and as a result has higher throughput.** 
-	- You may be wondering that if non-blocking systems are so great, why we still have so many blocking systems out there? Because everything has a price. And the price of non-blocking systems is increased complexity of operations. Blocking systems are easy to debug. 
+	- You may be wondering that if non-blocking systems are so great, why we still have so many blocking systems out there? Because everything has a price. And the price of **non-blocking systems is increased complexity of operations**. Blocking systems are easy to debug. 
 - Blocking Pros
 	- Blocking systems are easy to debug.And this is a big deal.
 	- In blocking systems we have a thread per request and we can easily track progress of the request by looking into the thread's stack. Exceptions pop up the stack and it is easy to catch and handle them. We can use thread local variables in blocking systems.
 ##### Buffering and Batching
 - Why use Buffering and Batching
-	- There are thousands of video view events happening on Youtube every second. To process all these requests, API Gateway cluster has to be big in size. Thousands of machines.
+	- There are thousands of video view events happening on Youtube every second. **To process all these requests, API Gateway cluster has to be big in size. Thousands of machines.**
 	- If we then pass each individual event to the partitioner service, partitioner service cluster of machines has to be big as well. This is not efficient.
 - How it works
-	- Batching: We should somehow combine events together and send several of them in a single request to the partitioner service. This is what batching is about.
-	- Buffering: Instead of sending each event individually, we first put events into a buffer. We then wait up to several seconds before sending buffer's content or until batch fills up, whichever comes first.
+	- **Batching**: **We should somehow combine events together and send several of them in a single request to the partitioner service.** This is what batching is about.
+	- **Buffering**: **Instead of sending each event individually, we first put events into a buffer. We then wait up to several seconds before sending buffer's content or until batch fills up, whichever comes first**.
 	- There are many benefits of batching: 
 		- it increases throughput, 
 		- it helps to save on cost, 
@@ -445,16 +445,15 @@ User => API Gateway => Load Balancer => Patitioner Service =>   Queue B	=>	Proce
 	- It introduces some complexity both on the client and the server side.
 	- For example think of a scenario when partitioner service processes a batch request and several events from the batch fail, while other succeed. Should we re-send the whole batch? Or only failed events?
 ##### Timeout
-- Timeouts define how much time a client is willing to wait for a response from a server. We have two types of timeouts: connection timeout and request timeout.
+- Timeouts define how much time a client is willing to wait for a response from a server. We have two types of timeouts: **connection timeout and request timeout.**
 - Connection timeout 
-	- defines how much time a client is willing to wait for a connection to establish. Usually this value is relatively small, tens of milliseconds. Because we only try to establish a connection, no heavy request processing is happening just yet.
+	- defines **how much time a client is willing to wait for a connection to establish**. Usually this value is relatively small, tens of milliseconds. Because we only try to establish a connection, no heavy request processing is happening just yet.
 - Request timeout 
-	- happens when request processing takes too much time, and a client is not willing to wait any longer.
+	- happens **when request processing takes too much time, and a client is not willing to wait any longer**.
 To choose a request timeout value we need to analyze latency percentiles.
 	- For example we measure latency of 1% of the slowest requests in the system. And set this value as a request timeout. It means that about 1% of requests in the system will timeout.
 ##### Retires
-- What should we do with these failed requests? Let's retry them. May be we just hit a bad server machine with
-the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
+- What should we do with these failed requests? Let's retry them. May be we just hit a bad server machine with the first request. And the second attempt may hit a different server machine, increasing our chances to succeed.
 - But we should be smart when retry. Because if all clients retry at the same time or do it aggressively, we may create a so-called **retry storm event** and **overload sever** with too many requests.
 ##### Exponential backoff and jitter 
 - Exponential backoff algorithm increases the waiting time between retries up to a maximum backoff time. We retry requests several times, but wait a bit longer with every retry attempt(1s, 2s, 4s, 8s, etc).
@@ -666,6 +665,6 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzY3NDE5NTUsOTY2MTA0NTA5LDY4Nz
-AzMDE3Nl19
+eyJoaXN0b3J5IjpbMTI4MjUxOTg0NSw5NjYxMDQ1MDksNjg3MD
+MwMTc2XX0=
 -->
