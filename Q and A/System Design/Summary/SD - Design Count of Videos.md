@@ -383,7 +383,7 @@
 - **Data Enrichment**
 	- Like Cassandra, we store data the way it would be queried. For example, if we want to show video title in the report, we need to store video title together with views count.
 	- Same is true for the channel name and many other attribute that we may want to display, but all these attributes do not come to the `Processing Service` with every video view event.
-	- Event contains **minimum information**, like videoId and timestamp. It doesn't need to contain video title or channel name or video creation date. There information is going to be coming from somewhere else, like some Embedded Database.
+	- Event contains **minimum information**, like videoId and timestamp. It doesn't need to contain video title or channel name or video creation date. **There information is going to be coming from somewhere else, like some Embedded Database.**
 	- But the trick here is that this database lives on the same machine as the `Processing Service`. All these additional attributes should be retrieved from the database really quickly. Thus, having it on the same machine eliminates a need for remote calls.
 		```
 												In-memory Store							Embedded Database
@@ -394,10 +394,10 @@
 							Deduplicate Cache				
 		```
 	- LinkedIn for example uses this concept for the "who viewed your profile" feature, when they show additional information about people who viewed your profile, e.g: how many viewers have recruiter job title.
-- State Management
-	- Since we keep counters in memory for some period of time, either in in-memory store or internal queue, and everytime we keep anything in memory we need to understand what to do when machine fails and this in-memory state is lost.
-	- We have events stored in the partition, let's just re-create the state from the point where we failed and re-process one more time, this approach will work well if we store data in-memory for a relatively short period of time and state is small.
-	- But sometimes it may be hard to re-create the state from raw events from scratch. The solution in this case is to periodically save the entire in-memory data to a durable storage.
+- **State Management**
+	- Since we **keep counters in memory for some period of time**, either in in-memory store or internal queue, and everytime we keep anything in memory we need to understand **what to do when machine fails and this in-memory state is lost.**
+	- We have **events stored in the partition**, let's just **re-create the state from the point where we failed and re-process one more time**, this approach will work well if we store data in-memory for a relatively short period of time and state is small.
+	- But sometimes it may be hard to re-create the state from raw events from scratch. The solution in this case is to **periodically save the entire in-memory data to a durable storage**.
 		```
 												In-memory Store							Embedded Database
 														|										|
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODExMzA4NSw2ODcwMzAxNzZdfQ==
+eyJoaXN0b3J5IjpbOTY2MTA0NTA5LDY4NzAzMDE3Nl19
 -->
