@@ -21,9 +21,9 @@
 #### Negotiate
 - I know I said a different target salary, but after interviewing with other companies, and getting a better sense of my value, I've seen that I should be aiming for X dollars, 
 - I've seen that the range in the market is X to Y salary, could we make up the difference
-- Upon refle
+- Upon reflection of thinking through my next career step, I realized my desired salary is X, I appreciated your understanding. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NzcxNzMxNiwyMTkzNDk1MCw2MTk1NT
-EyNzAsLTE0OTc3MTczNjcsLTIxMjA2NjY2MTAsLTQwMzczNDcw
-OV19
+eyJoaXN0b3J5IjpbMTE3MTMwMDQxLDIxOTM0OTUwLDYxOTU1MT
+I3MCwtMTQ5NzcxNzM2NywtMjEyMDY2NjYxMCwtNDAzNzM0NzA5
+XX0=
 -->
