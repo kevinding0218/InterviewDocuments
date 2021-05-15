@@ -521,8 +521,8 @@ ring splits a range of keys into two new ranges.
 - Let's go with single leader replication. Each partition will have a leader and several followers.
 	- We always **write events and read them from the leader only**.
 	- While **a leader stays alive, all followers copy events from their leader**. And if the leader dies, we **choose a new leader from its followers.**
-	- The leader keeps track of its followers: checks whether the followers are alive and whether any of the followers is too far behind. If a follower dies, gets stuck, or falls behind, the leader will remove it from the list of its followers.
-- Remember a concept of a quorum write in Cassandra? We consider a write to be successful, when predefined number of replicas acknowledge the write. Similar concept applies to partitions. When partitioner service makes a call to a partition, we may send response back as soon as leader partition persisted the message, or only when message was replicated to a specified number of replicas.
+	- The leader keeps track of its followers: checks whether the followers are alive and whether any of the followers is too far behind. **If a follower dies, gets stuck, or falls behind, the leader will remove it from the list of its followers.**
+- Remember a concept of a quorum write in Cassandra? We **consider a write to be successful,** when predefined number of replicas acknowledge the write. Similar concept applies to partitions. When partitioner service makes a call to a partition, we may send response back as soon as leader partition persisted the message, or only when message was replicated to a specified number of replicas.
 - When we write to a leader only, we may still lose data if leader goes down before replication really happened. When we wait for the replication to complete, we increase durability of the system, but latency will increase. Plus, if required number of replicas is not available at the moment, availability will suffer. Tradeoffs, as usual. 
 ##### Message Format
 - We can use either textual or binary formats for messages. Popular textual formats are XML, CSV, JSON. Popular binary formats are Thrift, Protocol Buffers and Avro.
@@ -538,16 +538,16 @@ Important to mention that schemas may and will change over time. We may want to 
 ### Data Retrieval Path
 - When users open a video on Youtube, we need to show total views count for this video. To build a video web page, several web services are called. A web service that retrieves information about the video, a web service that retrieves comments, another one for recommendations. Among them there is our Query web service that is responsible for video statistics.
 - All these web services are typically hidden behind an API Gateway service, a single-entry point. API Gateway routes client requests to backend services. So, get total views count request comes to the Query service.
-- We can retrieve the total count number directly from the database. Remember we discussed before how both SQL
+- We can **retrieve the total count number directly from the database**. Remember we discussed before how both SQL
 and NoSQL databases scale for reads. But total views count scenario is probably the simplest one. This is just a single value in the database per video.
 - The more interesting use case is when users retrieve time-series data, which is a sequence of data points ordered in time. For example, when channel owner wants to see statistics for her videos.
-- As discussed before, we aggregate data in the database per some time interval, let's say per hour. Every hour for every video. That is a lot of data, right? And it grows over time. Fortunately, this is not a new problem and solution is known. Monitoring systems, for example, aggregate data for every 1 minute interval or even 1 second. You can imaging how huge those data sets can be. So, we cannot afford storing time series data at this low granularity for a long period of time. The solution to this problem is to rollup the data.
-For example, we store per minute count for several days. After let's say one week, per minute data is aggregated into per hour data. And we store per hour count for several months. Then we rollup counts even further and data
-that is older than let's say 3 months, is stored with 1 day granularity. And the trick here is that we do not need to store old data in the database. We keep data for the last several days in the database, but the older data can be stored somewhere else, for example, object storage like AWS S3.
+- As discussed before, we **aggregate data in the database per some time interval,** let's say per hour. Every hour for every video. That is a lot of data, right? And it grows over time. Fortunately, this is not a new problem and solution is known. Monitoring systems, for example, aggregate data for every 1 minute interval or even 1 second. You can imaging how huge those data sets can be. So, we cannot afford storing time series data at this low granularity for a long period of time. The solution to this problem is to rollup the data.
+For example, **we store per minute count for several days. After let's say one week, per minute data is aggregated into per hour data. And we store per hour count for several months. Then we rollup counts even further and data
+that is older than let's say 3 months, is stored with 1 day granularity**. And the trick here is that we do not need to store old data in the database. We keep data for the last several days in the database, but the older data can be stored somewhere else, for example, object storage like AWS S3.
 #### hot storage and a cold storage.
 - Hot storage represents frequently used data that must be accessed fast.
 - Cold storage doesn’t require fast access. It mostly represents archived and infrequently accessed data.
-- When request comes to the Query service, it does so-called data federation, when it may need to call several storages to fulfill the request. Most recent statistics is retrieved from the database, while older statistics is retrieved from the Object Storage.
+- When request comes to the Query service, it does so-called **data federation, when it may need to call several storages to fulfill the request**. Most recent statistics is retrieved from the database, while older statistics is retrieved from the Object Storage.
 - Query service then stitches the data. And this is ideal use case for the cache. We should store query results in a distributed cache.
 ### Data flow simulation
 1. Three users opened some video A. And API Gateway got 3 requests.
@@ -664,6 +664,6 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTg0ODUyNTksOTY2MTA0NTA5LDY4Nz
+eyJoaXN0b3J5IjpbLTIwOTQ1MTQ3NjMsOTY2MTA0NTA5LDY4Nz
 AzMDE3Nl19
 -->
