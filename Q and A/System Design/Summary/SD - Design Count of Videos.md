@@ -125,7 +125,7 @@
 	 - If it should be no more than several minutes, we must **aggregate data on the fly**, this is called **batch data**.
 	 - if several hours is ok, then we can **store raw events and process them in the background**, this is known as **stream data processing.**
  - we can also combine both approaches which makes a lot of sense for many systems out there.
-	 - we will store raw events, and because there are so many of the, we will **store events for several days or weeks only**. And then **purge old data**, and we will also **calculate and store numbers in real-time**. So that statistics is available for users right away, by storing both raw events and aggreated data we get the best of both words: Fast Read, ability to aggregate data differently and re-calculate statistics if there were bugs or failures on a real-time path.
+	 - we will store raw events, and because there are so many of the, we will **store events for several days or weeks only**. And then **purge old data**, and we will also **calculate and store numbers in real-time**. So that statistics is available for users right away, by **storing both raw events and aggreated data** we get the best of both words: **Fast Read, ability to aggregate data differently and re-calculate statistics** if there were bugs or failures on a real-time path.
 	 - But there is a price to pay for all the flexibility, the system becomes more complex and expensive.
 #### Where we store the data
 - Interviewer wants to know specific database name and why we make this choice, you should know both SQL and NoSQL database can scale and perform well, so we should evaulate both types. Here is what we should recall non-functional requirements: Scalability, performance and availability, we should evaluate databases against these requirements.
@@ -146,7 +146,7 @@
 ``MySQL-I (A-Z)``
 - But when a single machine is not enough, we need to introduce more machines and split data between them, this procedure is called sharding or horizontal partitioning, each shard stores a subset of all the data.
 ``MySQL-I (A-M) + MySQL-II(N-Z)``
-- And because we now have several machines, services that talk to the database need to know how many machines exist and which one to pick to store and retrieve data.
+- And because w**e now have several machines, services that talk to the database need to know how many machines exist and which one to pick to store and retrieve data.**
 - We discussed before that we have `Processing Service` that stores data in the database, and `Query Service` that retrieve data from the database, we could have made both these services to call every database machine directly.
 	```
 	Processing Service 	  -			MySQL-I (A-M)
@@ -154,14 +154,14 @@
 	Query Service		  -			MySQL-II(N-Z)
 	```
 ##### Add Cluster Proxy Server
-- A better approatch is to introduce a light `Cluster Proxy Server` that knows about all database machines and route traffic to the correct shard, now both services talk to the `Cluster Proxy` only, services do not need to know about each and every database machine anymore, but `Cluster Proxy` has to know.
+- A better approatch is to introduce a light `Cluster Proxy Server` that **knows about all database machines and route traffic to the correct shard**, now both services talk to the `Cluster Proxy` only, services do not need to know about each and every database machine anymore, but `Cluster Proxy` has to know.
 	```
 	Processing Service 	  				MySQL-I (A-M)
 						\ ClusterProxy
 						/
 	Query Service		  				MySQL-II(N-Z)
 	```
-- Moreover, `Cluster Proxy` needs to know when some shard dies or become unavailable due to network partition. And if new shard has been added to the database cluster, proxy should become aware of it.
+- Moreover, `Cluster Proxy` needs to know **when some shard dies or become unavailable due to network partition**. And **if new shard has been added to the database cluster, proxy should become aware of it**.
 ##### Add Configuration Service
 - We introduce a new component - `Configuration Service(e.g ZooKeeper)`, which maintains a health check connection to all shards, so it alwasy knows what database machines are available. So `Cluster Proxy` calls a particular shard
 	```
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyODc0ODE5Miw2ODcwMzAxNzZdfQ==
+eyJoaXN0b3J5IjpbMTEzMzM2MDM1Miw2ODcwMzAxNzZdfQ==
 -->
