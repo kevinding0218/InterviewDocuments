@@ -281,7 +281,7 @@
 		- Graph
 ### Data Process
 #### Define Process in our example
-- Process basically means we get a video view event and increment several counters, total and per hour counters.
+- Process basically means **we get a video view event and increment several counters, total and per hour counters**.
 - Where to start? Start with requirement we wrote on the whiteboard, we want the processing service to scale together with increase in video views.
 #### Think of following questions
 - How to scale?
@@ -289,26 +289,26 @@
 - How not to lose data when processing service machine node crashes?
 - What to do when database is unavailable or slow?
 - How to make data processing scalable, reliable and fast?
-	- Scalable = Partitioning
-	- Reliable = Replication and checkpointing to avoid data loss
-	- Fast = Keep things In-memory and minimize disk reads
+	- **Scalable = Partitioning**
+	- **Reliable = Replication and checkpointing to avoid data loss**
+	- **Fast = Keep things In-memory and minimize disk reads**
 	- Let's see if we can combine all 3
 #### Should pre-aggregate data in the processing service?
 ##### 1st Option
 - `Processing Service` increment counter for every incoming event, 
 	- for example, if 3 users opened the same video A, the `Processing Service` simply increment total count in the database 3 times
 ##### 2nd Option
-- We accumulate data in the `Processing Service` memory for some period of time, let's say several seconds, and then add the accumulated value to the database counter.
-	- for example, if 3 users opened the same video A, the `Processing Service` takes each event and increments in-memory counter, and every several seconds in-memory counter value is sent to the database to calculate the final count
+- We accumulate data in the `Processing Service` memory for some period of time, let's say several seconds, and then **add the accumulated value to the database counter**.
+	- for example, if 3 users opened the same video A, the `Processing Service` **takes each event and increments in-memory counter, and every several seconds in-memory counter value is sent to the database to calculate the final count**
 - 2nd Option might be better when work in large scale systems, let's assuming we go with 2nd option
 ### Some Important Concept
 #### Push or Pull?
 ##### Push
-- Push means that some other service sends events synchronously to the processing service.
+- **Push** means that **some other service sends events synchronously to the processing service.**
 ##### Pull
-- Pull means that the processing service pulls events from some temporary storage.
+- **Pull** means that the **processing service pulls events from some temporary storage.**
 ##### Which is better?
-- Although answer is that both options are totally valid and we can make both work, `Pull` has more advantages, as it provides a better fault-tolerance support and easier to scale.
+- Although answer is that both options are totally valid and we can make both work, `Pull` has more advantages, as **it provides a better fault-tolerance support and easier to scale.**
 - Let's say we have 2 users opening two different videos A and B
 	- Processing service updates in-memory counters, returns successful responses back to client and the machine crashes without sending this updated in-memory data to the database, then Data is lost.
 ##### Alternative Push
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMDc1Mjk2LDY4NzAzMDE3Nl19
+eyJoaXN0b3J5IjpbMzA5NzUwODgwLDY4NzAzMDE3Nl19
 -->
