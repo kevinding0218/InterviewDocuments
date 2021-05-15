@@ -346,14 +346,14 @@
 	- As you may see, **partitioning allows us to parrallelize events processing**
 	- More events we get, more partitions we create.
 ### Processing Service Detail Design
-- `Processing Service` reads events from partition one by one, count events in memory, and flushes this counted values to the database periodically, so we need a component to read events.
+- `Processing Service` reads events from **partition one by one, count events in memory, and flushes this counted values to the database periodically**, so we need a component to read events.
 - Partition Consumer
-	- The consumer establishes and maintains TCP connection with the partition to fetch data, we can think of it as an infinite loop that polls data from the partition.
-	- When consumer reads event, it deserializes it, meaning it converts byte array into the actual object.
-	- Usually, consumer is a single threaded component, we can also implement multi-threaded access. When several threads read from the partition in parallel, but this approach comes with a cost, checkpointing becomes more complicated and it's hard to perserve order of events if needed.
+	- The consumer **establishes and maintains TCP connection with the partition to fetch data**, we can think of it as an infinite loop that polls data from the partition.
+	- When **consumer reads event, it deserializes it, meaning it converts byte array into the actual object**.
+	- Usually, **consumer is a single threaded component, we can also implement multi-threaded access. When several threads read from the partition in parallel, but this approach comes with a cost, checkpointing becomes more complicated and it's hard to perserve order of events if needed.**
 - Deduplicate Cache
-	- Consumer does one more important thing - helps to eliminate duplicate events. If the same message was submitted to the partition several times, we need a mechanism to avoid double counting.
-	- To achieve this we use a distributed cache that stores unique event identifiers for, let's say last 10 minutes, and if several identical messages arrived within a 10 minutes interval, only one of them (the first one) will be processed.
+	- Consumer does one more important thing - helps to eliminate duplicate events. If **the same message was submitted to the partition several times, we need a mechanism to avoid double counting**.
+	- To achieve this we use a **distributed cache that stores unique event identifiers** for, let's say last 10 minutes, and if several identical messages arrived within a 10 minutes interval, only one of them (the first one) will be processed.
 		```
 												In-memory Store	
 														|
@@ -362,7 +362,7 @@
 								    |													Dead-letter Queue
 							Deduplicate Cache				
 		```
-	- Aggregator
+	- **Aggregator**
 		- Even then comes to the component that does in-memory counting. Let's call it `Aggregator`
 		- Think of it as a hash table that accumulates data for some period of time.
 		- Periodically, we stop writing to the current hash table and create a new one, the new hash table keeps accumulating incoming data, while old hash table is no longer counting any data and each counter from the old hash table is sent to the internal queue for further processing.
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjMzOTA2ODgsNjg3MDMwMTc2XX0=
+eyJoaXN0b3J5IjpbLTE4MDMzNTg4ODAsNjg3MDMwMTc2XX0=
 -->
