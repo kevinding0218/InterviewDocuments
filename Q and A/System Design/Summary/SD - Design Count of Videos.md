@@ -473,9 +473,9 @@ To choose a request timeout value we need to analyze latency percentiles.
 ##### Software Load Balancer
 - Software Load Balancers are only softwares that we install on hardware we choose. **Load balancers provided by public clouds (for example ELB from AWS)** are examples of software load balancer type as well.
 ##### TCP Load Balancer
-- TCP Load Balancers simply forward network packets without inspecting the content of the packets. Think of it as if we established a single end-to-end TCP connection between a client and a server. This allows TCP load balancers to be super fast and handle millions of requests per second.
+- TCP Load Balancers simply forward network packets without inspecting the content of the packets. Think of it as if we established a single end-to-end TCP connection between a client and a server. This **allows TCP load balancers to be super fast and handle millions of requests per second.**
 ##### HTTP Load Balancer
-- HTTP load balancers, on contrast, terminate the connection. Load balancer gets an HTTP request from a client, establishes a connection to a server and sends request to this server. HTTP load balancer can look inside a message and make a load‑balancing decision based on the content of the message.
+- HTTP load balancers, on contrast, terminate the connection. **Load balancer gets an HTTP request from a client, establishes a connection to a server and sends request to this server.** HTTP load balancer can look inside a message and make a load‑balancing decision based on the content of the message.
 - For example based on a cookie information or a header.
 ##### Load balancers algorithms
 - Round robin algorithm distributes requests in order across the list of servers.
@@ -514,13 +514,13 @@ ring splits a range of keys into two new ranges.
 - Example of such registry service is Zookeeper. In our case each partition registers itself in Zookeeper, while every partitioner service instance queries Zookeeper for the list of partitions.
 - One more option for service discovery is similar to what Cassandra does. Remember we mentioned before that Cassandra nodes talk to each other? So, every node in the cluster knows about other nodes. It means clients only need to contact one node from the server cluster to figure out information about the whole cluster. Think about this.
 ##### Replication
-- We must not lose events when store them in partitions. So, when event is persisted in a partition, we need to replicate it. If this partition machine goes down, events are not lost. There are three main approaches to replication: single leader replication, multi leader replication and leaderless replication.
-	1. We use single leader replication when discussed how to scale a SQL database.
-	2. We use leaderless replication when discussed how Cassandra works
+- We must not lose events when store them in partitions. So, **when event is persisted in a partition, we need to replicate it. If this partition machine goes down, events are not lost**. There are three main approaches to replication: single leader replication, multi leader replication and leaderless replication.
+	1. We use **single leader replication** when discussed how to **scale a SQL database.**
+	2. We use **leaderless replication** when discussed how **Cassandra works**
 	3. multi leader replication is mostly used to replicate between several data centers.
 - Let's go with single leader replication. Each partition will have a leader and several followers.
-	- We always write events and read them from the leader only.
-	- While a leader stays alive, all followers copy events from their leader. And if the leader dies, we choose a new leader from its followers.
+	- We always **write events and read them from the leader only**.
+	- While **a leader stays alive, all followers copy events from their leader**. And if the leader dies, we **choose a new leader from its followers.**
 	- The leader keeps track of its followers: checks whether the followers are alive and whether any of the followers is too far behind. If a follower dies, gets stuck, or falls behind, the leader will remove it from the list of its followers.
 - Remember a concept of a quorum write in Cassandra? We consider a write to be successful, when predefined number of replicas acknowledge the write. Similar concept applies to partitions. When partitioner service makes a call to a partition, we may send response back as soon as leader partition persisted the message, or only when message was replicated to a specified number of replicas.
 - When we write to a leader only, we may still lose data if leader goes down before replication really happened. When we wait for the replication to complete, we increase durability of the system, but latency will increase. Plus, if required number of replicas is not available at the moment, availability will suffer. Tradeoffs, as usual. 
@@ -664,6 +664,6 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDU3ODI0MTEsOTY2MTA0NTA5LDY4Nz
+eyJoaXN0b3J5IjpbLTExMTg0ODUyNTksOTY2MTA0NTA5LDY4Nz
 AzMDE3Nl19
 -->
