@@ -64,20 +64,20 @@
 ### Non-Functional APIs
  - Usually interviewers will not tell us specific non-function requirements, most likely will challenge use with mentioning big scale and high performance, and we will need to find trade offs.
  - Focus on scalability, performance and availability as top priority requirements, e.g
-	- Scalable: we need to design such should handle tens of thousands of requests per second
-	- Highly Performant: we want view count statistic to be returned in a matter of few tends of milliseconds.
-	- Highly Available: we want statistics to be shown to users all the time, survives hardware/network failures, no single point of failure
+	- **Scalable**: we need to design such should handle tens of thousands of requests per second
+	- **Highly Performant**: we want view count statistic to be returned in a matter of few tends of milliseconds.
+	- **Highly Available**: we want statistics to be shown to users all the time, survives hardware/network failures, no single point of failure
  - CAP theorem tells me I should be choosing between Availability and Consistency
 	- If we choose availability over consistency, it simply means we prefer to show stale (not up-to-date) data than no data at all.
 	- Consistency: Synchronous data replicate is slow, we usually replicate data asynchronously.
-	- Cost(hardware, development, maintenance)
+	- **Cost**(hardware, development, maintenance)
 		
 ### High-level architecture
 #### Start with something SIMPLE
 - we need a database to store data and services to interact with database
 #### Services
 - we will have a web service that processing incoming video view events and stores data in the database - "Processing Service"
-- we will have another web service that to retrieve view counts from the database - "Query Service"
+- we will have another web service that to **retrieve view counts from the database - "Query Service"**
 ``User -> Browser -> Processing Service -> Database -> Query Service -> Browser -> User``
  - Interviewers may start asking questions about any component we outlined in the high-level architecture, but we may not feel comfortable discussing any component just yet, we need to start with something simple and construct the puzzle/frame with the outside pieces.
  - What is the frame of outside pieces of a system design puzzle? **DATA**!!!
@@ -666,5 +666,5 @@ Function Requirements (API) => Non-functional requirements (qualities) => High-l
 	- When we design recommendation service we may use counts as input to machine learning models.
 	- When we design "what's trending" service, we count all sorts of different reactions: views, re-tweets, comments, likes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg3MDMwMTc2XX0=
+eyJoaXN0b3J5IjpbLTE2Njk5NDkxMiw2ODcwMzAxNzZdfQ==
 -->
