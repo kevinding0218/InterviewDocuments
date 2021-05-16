@@ -65,6 +65,9 @@ COMMIT TRANSACTION
 - **Vertically Scale Service**: We can get more powerful machines that could improve time to build down from 15 mins to 10 mins.
 ### Blob Storage
 - Once build job done, we can store the binary into blob storage, **after saving successfully we will then update the table status to be Success**
+#### Storage Scale
+- We can have regional clusters like regional GCS. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODMzNzk2MiwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE4NTg2MDI0OTEsLTIwODg3NDY2MTJdfQ
+==
 -->
