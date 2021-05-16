@@ -67,7 +67,7 @@ COMMIT TRANSACTION
 - Once build job done, we can store the binary into blob storage, **after saving successfully we will then update the table status to be Success**
 #### Storage Scale
 - We can have regional clusters like regional GCS. 
+- Async replicate from main Storage to regional Storage, which won't take extra time after copying the binary into storage.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTg2MDI0OTEsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbMTU0NjA2MzMxMCwtMjA4ODc0NjYxMl19
 -->
