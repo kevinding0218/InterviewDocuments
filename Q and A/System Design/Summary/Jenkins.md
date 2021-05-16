@@ -28,10 +28,15 @@ Queue -> Build Services -> S3/Google Cloud Storage
 ##### How to work with multiple works concurrently?
 -  **ACID trasactions**. which is the key to having like hundreds of workers be able to **go into the database and perform updates or read in this database all at once without worrying about concurrency**, **because we can use Transaction executed as if they were sequential.** 
 ```
-
+BEGIN TRANSACTION;
+SELECT * FROM BuildJobs WHERE STATUS = "READY"
+ORDER BY createdAt AT DESC
+LIMIT 1;
+UPDATE JOBS SET STATUS = "PROCESSING
+COMMIT TRANSACTION
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMzIzNjYwMSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTc3NjE2MjQzOSwtMjA4ODc0NjYxMl19
 -->
