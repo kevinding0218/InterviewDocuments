@@ -44,8 +44,17 @@ _Lastly, I’ve put together a proposal that includes several solutions to some 
 _Please let me know if it would be possible for you all to take another look given the information above._
 
 _Best,_"
+
+
+
+### Decline
+```
+Hi XXX,
+Thank you so much for the offer and taking the time to get to know me. It has been such as pleasure meeting with XXX team/company, and I feel fortunate that I was offered the chance to join you all.
+I have decided to accept another opportunity, and decline this offer.Ultimately I chose a role that ended up fitting my lifestyle better, both because of the commute and the role. If there
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIxMDI5ODY2LDExNzEzMDA0MSwyMTkzND
-k1MCw2MTk1NTEyNzAsLTE0OTc3MTczNjcsLTIxMjA2NjY2MTAs
-LTQwMzczNDcwOV19
+eyJoaXN0b3J5IjpbMTUxMzMzOTkwLDIyMTAyOTg2NiwxMTcxMz
+AwNDEsMjE5MzQ5NTAsNjE5NTUxMjcwLC0xNDk3NzE3MzY3LC0y
+MTIwNjY2NjEwLC00MDM3MzQ3MDldfQ==
 -->
