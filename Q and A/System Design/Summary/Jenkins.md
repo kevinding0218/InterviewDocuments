@@ -9,7 +9,7 @@
 
 ### High Level
 ```
-Queue -> Build Services -> BlobStorage/S3/Google Cloud Storage
+Queue -> Build Services(Scale) -> BlobStorage/S3/Google Cloud Storage (Scale) -> deployment machines
 				|						|
 			GuardService		replication monitor service
 ```
@@ -73,7 +73,9 @@ COMMIT TRANSACTION
 - Add extra service to check replication status of the binary. 
 - A table with versionId and replicate status/count that deploy service will use to make sure replication completed in all regions
 ### Deploy to 10000 machines
-- We can have all **deploy machines in a sort of regional cluster**, and all machines in one regional cluster, while through the peer to peer network they can actually download this
+- We can have all **deploy machines in a sort of regional cluster**, and all machines in one regional cluster, while through the **peer to peer network** they can actually download this
+#### What happened when press 'deploy' button/How to inform all deploy machines
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NDU2MzY0OCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTgxODMwODQ1OSwtMjA4ODc0NjYxMl19
 -->
