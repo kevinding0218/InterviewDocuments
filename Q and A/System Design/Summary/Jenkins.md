@@ -71,8 +71,9 @@ COMMIT TRANSACTION
 ##### How to check that all regions completed replication?
 - Only allow deploy once all regions data storage are replicated
 - Add extra service to check replication status of the binary. 
-- A table with versionId and replicate status/count
--
+- A table with versionId and replicate status/count that deploy service will use to make sure replication completed in all regions
+### Deploy Service to 10000 machines
+- We can have all deploy machines in 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNTI5NzI1NSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTU5MDQ5NTM1MywtMjA4ODc0NjYxMl19
 -->
