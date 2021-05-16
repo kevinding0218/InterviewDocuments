@@ -52,7 +52,7 @@ COMMIT TRANSACTION
 	- A complete separate service like ZooKeeper or GuardService, **This component knows about all the builder service hosts, as those hosts constantly send heartbeats to it.**
 	- Add **extra column** in table like **Last_HeartBeat**
 	- **Builder Service can send heart beat to the Jobs Table** whenever they're performing the build job **periodically** like every 3 mins.
-	- GuardService check Jobs table to figure out when the last heart beat time, not the wa
+	- **GuardService check Jobs table** to figure out **when the last heart beat time,** not the waiting jobs, not the succeeded or failed jobs but **status as running jobs**, determine if a job has unexpected behavior if there is time period more than a certain minutes
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkzMzEzMywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTc3Mzc4ODE2NywtMjA4ODc0NjYxMl19
 -->
