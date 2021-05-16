@@ -17,9 +17,12 @@ Queue -> Build Services -> S3/Google Cloud Storage
 - Data Structure in memory on some server?
 - If server goes down you lose all the state for all your jobs
 - typically you want to have all historical builds or jobs that avoid losing that state
-#### SQL db fo
-- 
+#### SQL db Table for the queue
+- Columns
+	- job Id
+	- versionId
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1ODc5MTcwOSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE2ODEyNDM3MDMsLTIwODg3NDY2MTJdfQ
+==
 -->
