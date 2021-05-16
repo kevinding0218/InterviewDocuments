@@ -53,6 +53,11 @@ COMMIT TRANSACTION
 	- Add **extra column** in table like **Last_HeartBeat**
 	- **Builder Service can send heart beat to the Jobs Table** whenever they're performing the build job **periodically** like every 3 mins.
 	- **GuardService check Jobs table** to figure out **when the last heart beat time,** not the waiting jobs, not the succeeded or failed jobs but **status as running jobs**, determine if a job has unexpected behavior if there is time period more than a certain minutes
+	```
+	UPDATE BuildJobs SET STATUS = 'READY' WHERE STATUS = 'RUNNING' AND TIME_DIFFER(now, last_hb) > 3 mins
+	```
+##### M
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3Mzc4ODE2NywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTEwMTQ3MTUxMjAsLTIwODg3NDY2MTJdfQ
+==
 -->
