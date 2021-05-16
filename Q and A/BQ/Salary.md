@@ -51,10 +51,13 @@ _Best,_"
 ```
 Hi XXX,
 Thank you so much for the offer and taking the time to get to know me. It has been such as pleasure meeting with XXX team/company, and I feel fortunate that I was offered the chance to join you all.
-I have decided to accept another opportunity, and decline this offer.Ultimately I chose a role that ended up fitting my lifestyle better, both because of the commute and the role. If there
+I have decided to accept another opportunity, and decline this offer.Ultimately I chose a role that ended up fitting my lifestyle better, both because of the commute and the role. If there is anything further you would like to discuss, I am happy to set up a call with you.
+Send my gratitude to the rest of the team.
+Wishing you all the best
+XXX
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzMzOTkwLDIyMTAyOTg2NiwxMTcxMz
-AwNDEsMjE5MzQ5NTAsNjE5NTUxMjcwLC0xNDk3NzE3MzY3LC0y
-MTIwNjY2NjEwLC00MDM3MzQ3MDldfQ==
+eyJoaXN0b3J5IjpbMTUwODUzMzU4NywyMjEwMjk4NjYsMTE3MT
+MwMDQxLDIxOTM0OTUwLDYxOTU1MTI3MCwtMTQ5NzcxNzM2Nywt
+MjEyMDY2NjYxMCwtNDAzNzM0NzA5XX0=
 -->
