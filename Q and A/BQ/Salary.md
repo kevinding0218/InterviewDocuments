@@ -15,7 +15,7 @@
 - **Bouns structure**: how does that work? When is the payout, is it once a year or twice a year,
 - **Is there any other bonus on top of**, you know, what you guys offer and things like 
 #### For companies that don't offer a bonus
-- Hey since you don't offer me any bonuses, what I want to be mindful of this inflation, and you know living costs are just keep going up. So essentially if I don't take this into consideration now, the longer I stay with the company, essentially the less my take-home pay is going to be, and **I don't want to be in a position where salary is a thing for me to have to leave the company**, so I hope you understand where I'm coming from.
+- Hey since you don't offer me any bonuses, what I want to be mindful of this inflation, and you know living costs are just keep going up. So essentially if I don't take this into consideration now, the longer I stay with the company, essentially the less my take-home pay is going to be, and **What I really want to focus on is a job where I can use my skills and enjoy the work I do every day, that's whay fulfills., I don't want to be in a position where salary is a thing for me to have to leave the company**, so I hope you understand where I'm coming from.
 #### Comminucate via Email
 - This is a lot of good information, let me just take some time to process all of this and get back to you later. Would that make sense for you/would that work for you?
 #### Negotiate
@@ -32,6 +32,7 @@ _**Recruiter:**_  _“I completely understand that you want to find a good fit �
 **You:** “Of course, that makes sense! Would you be open to sharing the range you have budgeted for this role? That way we can make sure we're aligned from the get go and we're making the best use of both our time.
 
 [Link](https://www.youtube.com/watch?v=07E9FKXHxyE)
+- 
 - I would hate to waste your time going forward and hiring manager's time if this isn't a good fit monetarily, I know you can't give me a hard set number but is there anyway you could possibly give me the salary range so we know if this is worth moving forward, 
 
 Start off the conversation like this…
@@ -60,7 +61,7 @@ Wishing you all the best
 XXX
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MjM5MTI1LDE1MDg1MzM1ODcsMjIxMD
-I5ODY2LDExNzEzMDA0MSwyMTkzNDk1MCw2MTk1NTEyNzAsLTE0
-OTc3MTczNjcsLTIxMjA2NjY2MTAsLTQwMzczNDcwOV19
+eyJoaXN0b3J5IjpbLTEyOTg2MzExOTksMTUwODUzMzU4NywyMj
+EwMjk4NjYsMTE3MTMwMDQxLDIxOTM0OTUwLDYxOTU1MTI3MCwt
+MTQ5NzcxNzM2NywtMjEyMDY2NjYxMCwtNDAzNzM0NzA5XX0=
 -->
