@@ -19,24 +19,32 @@ Queue -> Build Services -> S3/Google Cloud Storage
 - typically you want to have all historical builds or jobs that avoid losing that state
 #### SQL db Table for the queue
 - Columns
-	- job Id
+	- job Id	(ClusteredIndex PK)
 	- versionId	(refereced in GCS)
 	- SHA merge commit
-	- createdAt
+	- createdAt    	(Non-ClusteredIndex)
 	- Status (Ready/Processing/Succeeded/Failed/Cancel)
 - Not only we have the queue very clear structure here,
 ##### How to work with multiple works concurrently?
 -  **ACID trasactions**. which is the key to having like hundreds of workers be able to **go into the database and perform updates or read in this database all at once without worrying about concurrency**, **because we can use Transaction executed as if they were sequential.** 
 ```
 BEGIN TRANSACTION;
-SELECT * FROM BuildJobs WHERE STATUS = "READY"
+SELECT @JobId = JobId FROM BuildJobs WHERE STATUS = "READY"
 ORDER BY createdAt AT DESC
 LIMIT 1;
-UPDATE JOBS SET STATUS = "PROCESSING
+IF (@JobId <> NULL)
+BEGIN
+UPDATE JOBS SET STATUS = "PROCESSING" WHERE JobId = @JobId
+END
+ELSE
+BEGIN
+ROLL_BACK;
+END
 COMMIT TRANSACTION
 ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NjE2MjQzOSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE4NjAxNjEyODMsLTIwODg3NDY2MTJdfQ
+==
 -->
