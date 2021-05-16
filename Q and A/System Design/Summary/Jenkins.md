@@ -26,9 +26,12 @@ Queue -> Build Services -> S3/Google Cloud Storage
 	- Status (Ready/Processing/Succeeded/Failed/Cancel)
 - Not only we have the queue very clear structure here,
 ##### How to work with multiple works concurrently?
--  ACID trasactions. which is the key to having like hundreds of workers be able to 
+-  **ACID trasactions**. which is the key to having like hundreds of workers be able to **go into the database and perform updates or read in this database all at once without worrying about concurrency**, **because we can use Transaction executed as if they were sequential.** 
+```
+
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MjUxMTYyMSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTIwMzIzNjYwMSwtMjA4ODc0NjYxMl19
 -->
