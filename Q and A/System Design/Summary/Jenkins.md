@@ -50,7 +50,8 @@ COMMIT TRANSACTION
 - That Job will remain in a running state basically forever, you have nothing that's monitoring running jobs to make sure that they eventually finish
 - Some sort of health check
 	- A complete separate service like ZooKeeper, **This component knows about all the builder service hosts, as those hosts constantly send heartbeats to it.**
-	- Add extra column in table like `Last_HeartBeat`
+	- Add **extra column** in table like **Last_HeartBeat**
+	- Builder Service can send heart beat to the Jobs Table whenever they're performing the build job. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU0MTg5ODUyLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTk2NjIzODA1OCwtMjA4ODc0NjYxMl19
 -->
