@@ -24,9 +24,11 @@ Queue -> Build Services -> S3/Google Cloud Storage
 	- SHA merge commit
 	- createdAt
 	- Status (Ready/Processing/Succeeded/Failed/Cancel)
-- Not only we have the queue very clear structure here, 
+- Not only we have the queue very clear structure here,
+##### How to work with multiple works concurrently?
+-  ACID trasactions. which is the key to having like hundreds of workers be able to 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MzYyNzkwNSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTA3MjUxMTYyMSwtMjA4ODc0NjYxMl19
 -->
