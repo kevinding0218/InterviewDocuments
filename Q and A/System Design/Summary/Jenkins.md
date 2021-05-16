@@ -11,7 +11,7 @@
 ```
 Queue -> Build Services -> S3/Google Cloud Storage
 				|
-		Configuration Service
+			GuardService
 ```
 - First design build the code
 - Then deploy the code
@@ -49,9 +49,10 @@ COMMIT TRANSACTION
 ##### What to do if work power goes off?
 - That Job will remain in a running state basically forever, you have nothing that's monitoring running jobs to make sure that they eventually finish
 - Some sort of health check
-	- A complete separate service like ZooKeeper, **This component knows about all the builder service hosts, as those hosts constantly send heartbeats to it.**
+	- A complete separate service like ZooKeeper or GuardService, **This component knows about all the builder service hosts, as those hosts constantly send heartbeats to it.**
 	- Add **extra column** in table like **Last_HeartBeat**
-	- Builder Service can send heart beat to the Jobs Table whenever they're performing the build job. 
+	- **Builder Service can send heart beat to the Jobs Table** whenever they're performing the build job **periodically** like every 3 mins.
+	- GuardService check Jobs table to figure out when the last heart beat time, not the wa
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NjIzODA1OCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbNDkzMzEzMywtMjA4ODc0NjYxMl19
 -->
