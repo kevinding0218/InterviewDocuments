@@ -49,7 +49,7 @@ COMMIT TRANSACTION
 ##### What to do if work power goes off?
 - That Job will remain in a running state basically forever, you have nothing that's monitoring running jobs to make sure that they eventually finish
 - Some sort of health check
-	- A complete separate service like ZooKeeper or GuardService, **This component knows about all the builder service hosts, as those hosts constantly send heartbeats to it.**
+	- A complete separate service like GuardService, **This component knows about all the builder service hosts, as those hosts constantly send heartbeats to it.**
 	- Add **extra column** in table like **Last_HeartBeat**
 	- **Builder Service can send heart beat to the Jobs Table** whenever they're performing the build job **periodically** like every 3 mins.
 	- **GuardService check Jobs table** to figure out **when the last heart beat time,** not the waiting jobs, not the succeeded or failed jobs but **status as running jobs**, determine if a job has unexpected behavior if there is time period more than a certain minutes
@@ -75,9 +75,8 @@ COMMIT TRANSACTION
 ### Deploy to 10000 machines
 - We can have all **deploy machines in a sort of regional cluster**, and all machines in one regional cluster, while through the **peer to peer network** they can actually download this
 #### What happened when press 'deploy' button/How to inform all deploy machines to download the binary file
-- You might have different user press button sequentially one after the other, so we can set e target state of build version
-- 
+- You might have different user press button sequentially one after the other, so we can **set a target state of build version**
+- Have a key/value store as a confugration for our system as a whole or parts, one of the configuration parameters would be the build version, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzE3Nzc3NjMsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbMjAyNjIyMjE3NywtMjA4ODc0NjYxMl19
 -->
