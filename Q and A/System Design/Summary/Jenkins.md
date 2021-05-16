@@ -67,18 +67,18 @@ COMMIT TRANSACTION
 - Once build job done, we can store the binary into blob storage, **after saving successfully we will then update the table status to be Success**
 #### Storage Scale
 - We can have regional clusters like regional GCS. 
-- Async replicate from main Storage to regional Storage, which won't take extra time after copying the binary into storage or update Jobs table as we mentioned above.
+- **Async replicate from main Storage to regional Storage**, which won't take extra time after copying the binary into storage or update Jobs table as we mentioned above.
 ##### How to check that all regions completed replication?
 - Only allow deploy once all regions data storage are replicated
-- Add extra service to check replication status of the binary. 
-- A table with versionId and replicate status/count that deploy service will use to make sure replication completed in all regions
+- **Add extra service to check replication status of the binary**. 
+- A table with **versionId and replicate status/count** that **deploy service will use to make sure replication completed in all regions**
 ### Deploy to 10000 machines
 - We can have all **deploy machines in a sort of regional cluster**, and all machines in one regional cluster, while through the **peer to peer network** they can actually download this
 #### What happened when press 'deploy' button/How to inform all deploy machines to download the binary file
 - You might have different user press button sequentially one after the other, so we can **set a target state of build version**
-- Have a key/value store as a confugration for our system as a whole or parts, one of the configuration parameters would be the build version, when user deploy v1 update the value to be v1, another user deploy v2, update to be v2
-- Taking advantage of regional stuff, our key/value store can be at regional level, every region of the blob storage would have a KVS, these KVS will be pulling from the global KVS, watch for changes periodically and update their value for example, v1 -> v2 and 
+- Have a **key/value store as a confugration** for **our system as a whole at global level**, one of the configuration parameters would be the **build version**, when user deploy v1 update the value to be v1, another user deploy v2, update to be v2
+- **Taking advantage of regional stuff**, our **key/value store can be at regional level, every region of the blob storage would have a KVS, these KVS will be pulling from the global KVS, watch for changes periodically and update their value** for example, v1 -> v2 and do the peer-to-peero network to start downloading
 ### Summary
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5Nzk1Mzc3LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTUwNjYxMzgyMSwtMjA4ODc0NjYxMl19
 -->
