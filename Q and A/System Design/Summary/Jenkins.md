@@ -43,10 +43,10 @@ END
 COMMIT TRANSACTION
 ```
 #### How Builder Service works
-- Every 5 seconds, execute the Lookup Process 
-
+- Every 5 seconds, execute the Lookup Process like above
+##### What to do if work power goes off?
+- That Job will remain in a running state basically forever, you have nothing that's monitoring running jobs to make sure that they eventually finish
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDI3NDMxNTgsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbMzg3NDA1MDQzLC0yMDg4NzQ2NjEyXX0=
 -->
