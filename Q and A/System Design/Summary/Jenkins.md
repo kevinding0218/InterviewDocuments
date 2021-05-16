@@ -20,9 +20,11 @@ Queue -> Build Services -> S3/Google Cloud Storage
 #### SQL db Table for the queue
 - Columns
 	- job Id
-	- versionId
+	- versionId	(refereced in GCS)
+	- SHA merge commit
+	- createdAt
+	- Status (
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODEyNDM3MDMsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTk4MzcyMTMxNiwtMjA4ODc0NjYxMl19
 -->
