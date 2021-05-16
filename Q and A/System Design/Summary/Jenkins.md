@@ -10,8 +10,8 @@
 ### High Level
 ```
 Queue -> Build Services -> BlobStorage/S3/Google Cloud Storage
-				|
-			GuardService
+				|						|
+			GuardService		replication monitor service
 ```
 - First design build the code
 - Then deploy the code
@@ -70,7 +70,9 @@ COMMIT TRANSACTION
 - Async replicate from main Storage to regional Storage, which won't take extra time after copying the binary into storage or update Jobs table as we mentioned above.
 ##### How to check that all regions completed replication?
 - Only allow deploy once all regions data storage are replicated
+- Add extra service to check replication status of the binary. 
+- A table with versionId and replicate status/count
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTkyMzExNTEsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbMTkzNTI5NzI1NSwtMjA4ODc0NjYxMl19
 -->
