@@ -72,8 +72,8 @@ COMMIT TRANSACTION
 - Only allow deploy once all regions data storage are replicated
 - Add extra service to check replication status of the binary. 
 - A table with versionId and replicate status/count that deploy service will use to make sure replication completed in all regions
-### Deploy Service to 10000 machines
-- We can have all deploy machines in 
+### Deploy to 10000 machines
+- We can have all **deploy machines in a sort of regional cluster**, and all machines in one regional cluster, while through the peer to peer network they can actually download this
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MDQ5NTM1MywtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTM1NDU2MzY0OCwtMjA4ODc0NjYxMl19
 -->
