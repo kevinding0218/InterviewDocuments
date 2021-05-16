@@ -31,7 +31,7 @@ _**You:**_ _“I am very open to negotiation, but my top priority is finding the
 _**Recruiter:**_  _“I completely understand that you want to find a good fit – so do we! However, we don't move forward with candidates unless we know what range they fit in.”_
 **You:** “Of course, that makes sense! Would you be open to sharing the range you have budgeted for this role? That way we can make sure we're aligned from the get go and we're making the best use of both our time.
 
-- I would hate to waste your time going forward and hiring manager's 
+- I would hate to waste your time going forward and hiring manager's time if this isn't a good fit monetarily, I know you can't give me a hard set number but is there anyway you could possibly give me the salary range so we know if this is worth moving forward, 
 
 Start off the conversation like this…
 
@@ -59,7 +59,7 @@ Wishing you all the best
 XXX
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzgzMjM3MjcsMTUwODUzMzU4NywyMj
-EwMjk4NjYsMTE3MTMwMDQxLDIxOTM0OTUwLDYxOTU1MTI3MCwt
-MTQ5NzcxNzM2NywtMjEyMDY2NjYxMCwtNDAzNzM0NzA5XX0=
+eyJoaXN0b3J5IjpbLTc5NTc4ODY4NCwxNTA4NTMzNTg3LDIyMT
+AyOTg2NiwxMTcxMzAwNDEsMjE5MzQ5NTAsNjE5NTUxMjcwLC0x
+NDk3NzE3MzY3LC0yMTIwNjY2NjEwLC00MDM3MzQ3MDldfQ==
 -->
