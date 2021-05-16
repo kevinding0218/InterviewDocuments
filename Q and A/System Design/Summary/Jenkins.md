@@ -56,8 +56,12 @@ COMMIT TRANSACTION
 	```
 	UPDATE BuildJobs SET STATUS = 'READY' WHERE STATUS = 'RUNNING' AND TIME_DIFFER(now, last_hb) > 3 mins
 	```
-##### M
+##### Measure how many works we need per day
+- 5000 builds/d
+- 100 builds/d/worker (from builder takes 15 mins each)
+- results = 5000/100
+- Consider busy hour and lazy hour
+- Consider our 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTQ3MTUxMjAsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTc5NDQyMTkyMywtMjA4ODc0NjYxMl19
 -->
