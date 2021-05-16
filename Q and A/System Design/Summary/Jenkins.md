@@ -46,7 +46,8 @@ COMMIT TRANSACTION
 - Every 5 seconds, execute the Lookup Process like above
 ##### What to do if work power goes off?
 - That Job will remain in a running state basically forever, you have nothing that's monitoring running jobs to make sure that they eventually finish
-
+- Some sort of health check
+	- A complete separate service like ZooKeeper 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg3NDA1MDQzLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMTY2NTYzMjUzNSwtMjA4ODc0NjYxMl19
 -->
