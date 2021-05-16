@@ -8,10 +8,13 @@
 - How often are we going to deploy code and how big are these binaries that we're going to be getting,  (1000s deploy per day, 10GB per binary)
 
 ### High Level
+```
+Queue -> Build Services -> S3/Google Cloud Storage
+```
 - First design build the code
 - Then deploy the code
-
+#### How queue is struc
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMjczOTIxLC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbMjQxMDczMjM0LC0yMDg4NzQ2NjEyXX0=
 -->
