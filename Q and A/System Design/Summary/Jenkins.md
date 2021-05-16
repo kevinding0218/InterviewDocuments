@@ -23,8 +23,10 @@ Queue -> Build Services -> S3/Google Cloud Storage
 	- versionId	(refereced in GCS)
 	- SHA merge commit
 	- createdAt
-	- Status (
+	- Status (Ready/Processing/Succeeded/Failed/Cancel)
+- Not only we have the queue very clear structure here, 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MzcyMTMxNiwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTQ3MzYyNzkwNSwtMjA4ODc0NjYxMl19
 -->
