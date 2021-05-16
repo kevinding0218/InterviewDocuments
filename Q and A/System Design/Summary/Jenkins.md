@@ -65,8 +65,8 @@ COMMIT TRANSACTION
 - **Vertically Scale Service**: We can get more powerful machines that could improve time to build down from 15 mins to 10 mins.
 ### Blob Storage
 - Once build job done, we can store the binary into blob storage, **after saving successfully we will then update the table status to be Success**
-#### Storage Scale
-- We can have regional clusters like regional GCS. 
+#### Storage Scale Regionally
+- We can have **regional clusters like regional GCS**. 
 - **Async replicate from main Storage to regional Storage**, which won't take extra time after copying the binary into storage or update Jobs table as we mentioned above.
 ##### How to check that all regions completed replication?
 - Only allow deploy once all regions data storage are replicated
@@ -80,5 +80,5 @@ COMMIT TRANSACTION
 - **Taking advantage of regional stuff**, our **key/value store can be at regional level, every region of the blob storage would have a KVS, these KVS will be pulling from the global KVS, watch for changes periodically and update their value** for example, v1 -> v2 and do the peer-to-peero network to start downloading
 ### Summary
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNjYxMzgyMSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE4ODcwMTczMSwtMjA4ODc0NjYxMl19
 -->
