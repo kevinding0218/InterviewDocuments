@@ -1,10 +1,14 @@
 ### Functional
 - Building Code
 - Deploying Code
-- ask scale like how many machines across world
+- 
+- deploy time (within 30 mins?)
+### Non Functional
+- High Scalability : ask scale like how many machines across world
+- High Availability:
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDU2NTc1NDQsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTcyNzIzMjQwNywtMjA4ODc0NjYxMl19
 -->
