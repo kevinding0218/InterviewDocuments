@@ -77,8 +77,8 @@ COMMIT TRANSACTION
 #### What happened when press 'deploy' button/How to inform all deploy machines to download the binary file
 - You might have different user press button sequentially one after the other, so we can **set a target state of build version**
 - Have a key/value store as a confugration for our system as a whole or parts, one of the configuration parameters would be the build version, when user deploy v1 update the value to be v1, another user deploy v2, update to be v2
-- Taking advantage of regional stuff, our key/value store can be at regional level, every region of the blob storage would have a KVS, these KVS will be pulling from the global KVS and t
+- Taking advantage of regional stuff, our key/value store can be at regional level, every region of the blob storage would have a KVS, these KVS will be pulling from the global KVS, watch for changes periodically and update their value for example, v1 -> v2 and 
+### Summary
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTA0OTcyMDIsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTg5Nzk1Mzc3LC0yMDg4NzQ2NjEyXX0=
 -->
