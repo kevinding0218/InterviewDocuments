@@ -19,10 +19,10 @@ Queue -> Build Services -> S3/Google Cloud Storage
 - typically you want to have all historical builds or jobs that avoid losing that state
 #### SQL db Table for the queue
 - Columns
-	- job Id	(ClusteredIndex PK)
+	- job Id	(**ClusteredIndex PK**)
 	- versionId	(refereced in GCS)
 	- SHA merge commit
-	- createdAt    	(Non-ClusteredIndex)
+	- createdAt    	(**Non-ClusteredIndex**)
 	- Status (Ready/Processing/Succeeded/Failed/Cancel)
 - Not only we have the queue very clear structure here,
 ##### How to work with multiple works concurrently?
@@ -42,9 +42,11 @@ ROLL_BACK;
 END
 COMMIT TRANSACTION
 ```
+#### How Builder Service works
+- Every 5 seconds, execute the Lookup Process 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjAxNjEyODMsLTIwODg3NDY2MTJdfQ
+eyJoaXN0b3J5IjpbLTE4NDI3NDMxNTgsLTIwODg3NDY2MTJdfQ
 ==
 -->
