@@ -9,7 +9,7 @@
 
 ### High Level
 ```
-Queue -> Build Services -> S3/Google Cloud Storage
+Queue -> Build Services -> BlobStorage/S3/Google Cloud Storage
 				|
 			GuardService
 ```
@@ -61,10 +61,9 @@ COMMIT TRANSACTION
 - 100 builds/d/worker (from builder takes 15 mins each)
 - results = 5000/100
 - Consider busy hour and lazy hour
-- Horizontally Scale Services: Consider our system can scale as needed, we can add more workers during peak hours and remove during lazy hours
-- Vertically Scale Service: We can get more powerful machines that could improve time to build down from 15 mins to 10 mins.
+- **Horizontally Scale Services**: Consider our system can scale as needed, we can add more workers during peak hours and remove during lazy hours
+- **Vertically Scale Service**: We can get more powerful machines that could improve time to build down from 15 mins to 10 mins.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTk0NjM3NTMsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbNTAyNTE5Nzg0LC0yMDg4NzQ2NjEyXX0=
 -->
