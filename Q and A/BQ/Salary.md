@@ -61,8 +61,39 @@ Send my gratitude to the rest of the team.
 Wishing you all the best
 XXX
 ```
+#### 2nd
+```
+Hello (Recruiter Name),
+
+I would like to express my excitement and personally thank you for offering me the Project Manager position at XYZ Company. I greatly appreciate the opportunity to work for such a fast growing, forward-thinking company whose values align so well with my own. With my above average leadership experience and quality management skills, I'm confident that I will make strong contributions to your organization.
+
+I found the equity and signing bonus to be agreeable, and would like to thank you for making them so generous. However, I would like to discuss refining the base salary. The salary of $57,000 that you offered is a bit less than what I was hoping for. The industry average falls at $65,000 and I would like to propose raising my base salary to match that. I believe that amount better reflects the experience and skill set I would bring to this position.
+
+XYZ is a fantastic company and I look forward to joining the team! I appreciate you taking the time to consider my proposal and hope that we can come to an agreement. I would love to continue the discussion whenever you're ready. You can reach me at this email address or at  [123-456-7890](tel:123-456-7890)  and I'd be happy to arrange a meeting.
+
+I look forward to hearing from you soon!
+
+Kind regards,
+
+(Your Name)
+```
+#### 3rd
+```
+Hi (Recruiter Name),
+
+I would like to express my excitement and personally thank you for offering me the Project Manager position at XYZ Company. I greatly appreciate the opportunity to work for such a fast growing, forward-thinking company whose values align so well with my own. With my above average leadership experience and quality management skills, I'm confident that I would make strong contributions to your organization.
+
+I found the equity and signing bonus to be agreeable, and would like to thank you for making them so generous. However, I found the base salary to be somewhat disappointing. Based on my research, it is a bit lower than similar positions at this level. Are there any changes that can be made to the salary? If so, I would like to take them into account before making my final decision.
+
+Thank you for your consideration and I look forward to hearing from you soon!
+
+Kind regards,
+
+(Your Name)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5ODA2MDYyLDE1MDg1MzM1ODcsMjIxMD
-I5ODY2LDExNzEzMDA0MSwyMTkzNDk1MCw2MTk1NTEyNzAsLTE0
-OTc3MTczNjcsLTIxMjA2NjY2MTAsLTQwMzczNDcwOV19
+eyJoaXN0b3J5IjpbMjIyODUzMjYyLDEyOTgwNjA2MiwxNTA4NT
+MzNTg3LDIyMTAyOTg2NiwxMTcxMzAwNDEsMjE5MzQ5NTAsNjE5
+NTUxMjcwLC0xNDk3NzE3MzY3LC0yMTIwNjY2NjEwLC00MDM3Mz
+Q3MDldfQ==
 -->
