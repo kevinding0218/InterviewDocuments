@@ -14,7 +14,9 @@
 ### How to retrieve data
 - Among all the cells for A, we take the minimum value.
 - Because of collisions, some cells will contain overestimated values, and by taking minimum we decrease the chance of overestimation, that's why we need several hash functions by decreasing the error.
-- 
+### How to choose width and height?
+- There are formulas that help to calculate both parameters based on the accuracy we want to achieve and probability with which we reach the accuracy.
+### How to use it in prac
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI5NTk3NjU5XX0=
+eyJoaXN0b3J5IjpbOTAzMTY0NjVdfQ==
 -->
