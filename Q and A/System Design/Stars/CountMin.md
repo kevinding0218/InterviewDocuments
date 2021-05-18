@@ -12,7 +12,9 @@
 - When another A comes, we increment each cell value to 2.
 - Then B arrives, we add 1 to each of B cells, Hash function h1 may produced a collision so that we incremenet A's value as well. Then C arrives, and produces collisions with both A and B. 
 ### How to retrieve data
+- Among all the cells for A, we take the minimum value.
+- Because of collisions, some cells will contain overestimated values, and by taking minimum we decrease the chance of overestimation, that's why we need several hash functions by decreasing the error.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NDYzMzcxNF19
+eyJoaXN0b3J5IjpbNDI5NTk3NjU5XX0=
 -->
