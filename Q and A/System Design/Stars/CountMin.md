@@ -16,7 +16,8 @@
 - Because of collisions, some cells will contain overestimated values, and by taking minimum we decrease the chance of overestimation, that's why we need several hash functions by decreasing the error.
 ### How to choose width and height?
 - There are formulas that help to calculate both parameters based on the accuracy we want to achieve and probability with which we reach the accuracy.
-### How to use it in prac
+### How to use it in practise?
+- Roughly, think of a count-min sketch as a replacemenet of the hash table. We still need a heap to store a list of heavy hitters, but we replaced a hash table, that could grow big, with a count-min sketch that always have a predefined size and never grow in size, even when data set size increases.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAzMTY0NjVdfQ==
+eyJoaXN0b3J5IjpbNTE4MzQwNzU3XX0=
 -->
