@@ -1,6 +1,7 @@
 - thanks for taking the meeting with me I you know I actually wanted you to be one of the first people to know that I just received offers from other firms and I'm planning on taking it, over the last few years I learned a ton at this company and actually from you personally, it was a great learning experience in terms of learning how to lead a team too so thank you for that 
 
 - so my plan was to stay on for the next two weeks help train some of the new staff and just help with the transition in general and my last day would be July 01, the next next Thursday
+- 
 -  you guys can find a replacement but you know what if it helps I can help with the interview process as well and manage that - over the next couple weeks.
 
 - actually I haven't taken the offer yet so I can't say sorry 
@@ -12,5 +13,5 @@
 
 - so my decision is final at this point you know if you don't mind please let me know before the day if you'd like me to stay on for the next two weeks to help with the transition alright
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMjYwOTA5XX0=
+eyJoaXN0b3J5IjpbLTIxMDk3NzEwMTZdfQ==
 -->
