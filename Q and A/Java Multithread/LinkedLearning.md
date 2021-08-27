@@ -83,7 +83,11 @@
 - Mouse, Keyboard and GPU needs to execute concurrently
 - In multi-core system, the execution of those drivers might get split amongst the available processors.
 - However, since I/O operations occurs rather infrequently, relative to the speed at which computer operates, we don't really gain anything from parallel execution. Those separate tasks can run just fine on a single processor and we wouldn't feel difference
+
+## Execution Scheduling
+### Scheduler
+- Operating system function that assigns proces
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDg1MjU3NzEsMjEyMjk4OTgzNiwtMT
+eyJoaXN0b3J5IjpbLTE1MDY5NjE1MTUsMjEyMjk4OTgzNiwtMT
 QwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
