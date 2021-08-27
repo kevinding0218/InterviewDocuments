@@ -41,8 +41,10 @@
 - Each JVM instance is a separate, independent process
 ### Demo
 - create additional 6 threads and execute
-- we see there are 7 threads in runtime, but in resource monitor of our process **java.exe**, there are 24 threads display, this is because 
+- we see there are 7 threads in runtime, but in resource monitor of our process **java.exe**, there are 24 threads display, this is because JVM creates additional threads in the background to handle things like garbage collection and runtime compilation.
+	- From the program perspective, running within the JVM, it only had 7 threads.
+	- From the operating system that's running the JVM, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMjQ4NDg3OCwtMTQwMDgxMTk1NSwtMT
-M0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbNDU0NzM4NjY2LC0xNDAwODExOTU1LC0xMz
+QxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
