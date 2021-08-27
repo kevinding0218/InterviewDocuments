@@ -89,7 +89,10 @@
 - Operating system function that assigns processors and threads to run on available CPUs
 - Scheduler makes it possible for multiple programs to run concurrently on a single processor.
 - When a process is created and ready to run, it gets loaded into memory and placed in the ready queue.
+### Context Switch
+- The Operating System has to store the state of a process or thread that was running, so it can be resumed later.
+- It has to load the saved state for the new process or thread to run
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NTI1NTQ2NywyMTIyOTg5ODM2LC0xND
-AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTUyOTExNDc3LDIxMjI5ODk4MzYsLTE0MD
+A4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
