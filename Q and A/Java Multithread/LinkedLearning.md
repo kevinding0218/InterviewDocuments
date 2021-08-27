@@ -115,7 +115,7 @@
 - Main thread can then start or spawn additional threads to help out, referred to as its child threads, which are part of the same process, but execute independently to do other tasks.
 	- Those child threads can then spawn their own child threads if needed.
 - As each of those threads finish executing, they'll notify their parent and terminate, with the Main thread usually the last to finish execution.
-### Thread Status
+### 4 Thread Status
 #### New
 - Assigning the code it's going to execute.
 - Doesn't take any CPU resource
@@ -129,13 +129,16 @@
 - The Operating system will return it to the runnable state when condition gets resolved, and that will free up the processor for other threads to use.
 ##### join()
 - Some thread may eventually reach a point where it needs to wait until one of its children threads has finished for me to continue on
-- Wait until another thread completes its execution
 - When called with `join()`, my thread will enter a block state, waiting until another thread is done.
+#### Java Thread States (additional 2)
+##### WAITING
+- A th
+##### TIMED_WAITING
 #### Terminated
 - Thread goes to terminated state when it either completed its execution, or is abnormally aborted.
-- 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTc5MDY0MzIsMjEwNDU2MTk5NSwxMz
-Q1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3
-NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTI1MzQwMDk5OCwyMTA0NTYxOTk1LDEzND
+U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
+NzM2OSwtMTU0MTgzMzg3Ml19
 -->
