@@ -39,9 +39,10 @@
 - Each Java application executes within its own instance of the JVM
 	- If you run multiple Java application at same time, they'll each execute in a separate JVM process with their own independent memory space
 - Each JVM instance is a separate, independent process
-- 
-- 
+### Demo
+- create additional 6 threads and execute
+- we see there are 7 threads in runtime, but in resource monitor of our process **java.exe**, there are 24 threads display, this is because 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLT
-E1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbMTgzMjQ4NDg3OCwtMTQwMDgxMTk1NSwtMT
+M0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
