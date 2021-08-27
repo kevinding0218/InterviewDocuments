@@ -201,7 +201,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - A form of automatic memory managemet that runs in the background and attemps to relcaim garbage or memory that's no longer being used by the program.
 #### What if GC was created/spawed from current thread
 - While a function thread is executing, it spaws a separate child thread to provide the garbage collection service, the function thread would work fine until it's ready to finish executing.
-- When the function thread is ready to exit the program but it **can't because it's child thread, the GC is still running**. the function thread will be stuck forever if that child thread is not  and process will never terminate
+- When the function thread is ready to exit the program but it **can't because it's child thread, the GC is still running**. the function thread will be stuck forever if that child thread is not terminating, and process will never terminate
 #### Daemon Thread
 - Threads that are performing background tasks, like garbage collection, can be detached from the main program by making them what's called a daemon thread.
 - A thread that **does not prevent the process from terminating**
@@ -216,7 +216,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - However, if the daemon thread is doing some I/O operation, like writing to a file, then terminating in the middle of that operation could end up corruptting data
 	- If you detach a thread to make it a background task, make sure it won't have any negative side-effects!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTk4NzIxMzYsNzczMDQ3NTE1LDIxMD
-Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
-OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMTQ3OTkxODEyMiw3NzMwNDc1MTUsMjEwND
+U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
+NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
