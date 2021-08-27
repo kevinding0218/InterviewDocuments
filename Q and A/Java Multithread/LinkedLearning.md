@@ -189,12 +189,12 @@ Thread olivia = new Thread(new ChefOlivia());
 ```
 #### Thread vs Runnable
 ##### Extending Thread class
-- Java does not allow multiple inheritance
+- Cannot extend additional classes as Java does not allow multiple inheritance
 - 
 ##### Implementing Runnable interface
-
+- Can implement other interfaces and extend another class
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEzNDIxMzAyLDc3MzA0NzUxNSwyMTA0NT
-YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
-NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTI2MjY4OTA4Miw3NzMwNDc1MTUsMjEwND
+U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
+NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
