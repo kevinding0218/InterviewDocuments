@@ -48,8 +48,17 @@
 ## Concurrent vs Parallel
 ### Concurrency
 - Ability of a program to be broken into parts that can run independently of each other
-	- These parts can be executed out of order or partially out of order
+	- These parts can be executed out of order or partially out of order without affecting the end result.
+- About how a program is structured and the composition of independently executing processes.
+#### Example
+- Salad Receipt
+	1. Chop Lettuce
+	2. Chop Cucumbers
+	3. Chop Tomatoes
+	4. Chop Onions
+	5. Mix Vegs
+	6. A
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA1NDc0MjUxLC0xNDAwODExOTU1LC0xMz
-QxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMTczOTQ5ODY2OCwtMTQwMDgxMTk1NSwtMT
+M0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
