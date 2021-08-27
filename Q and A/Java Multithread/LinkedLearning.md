@@ -17,8 +17,12 @@
 - Includes code, data and state information
 - Independent instance of a running program
 - Separate address space
-- A computer can have hundreds of active processes at once, and an operatiing 
+- A computer can have hundreds of active processes at once, and an operating system's job is to manage all of them.
+### Thread
+- WIthin every process, there are one or more smaller sub elements called threads, kinda like tiny processes.
+- Each of those threads is an independent path of execution
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjI5MjI1MTgsLTEzNDE3NzczNjksLT
-E1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbNzgyOTY2NSwtMTM0MTc3NzM2OSwtMTU0MT
+gzMzg3Ml19
 -->
