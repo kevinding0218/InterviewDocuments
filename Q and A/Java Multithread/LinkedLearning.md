@@ -208,6 +208,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - By default, threads are created/spawned as non-daemon.
 - When New Thread is created, it will inherit daemon status from their parent.
 - use `setDaemon(true)` on Thread object to change status before starting that thread
+- When JVM halts, any remaining daemon threads are abandoned
 #### Why need Daemon Thread
 - So that when main thread is finishing executing and there aren't any non-daemon threads left running, this process can be terminated, and the daemon thread will terminate with it.
 - Since that Daemon Thread may terminate abruptly with the process, it doesn't have a chance to gracefully shut down and stop from what it was doing.
@@ -215,7 +216,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - However, if the daemon thread is doing some I/O operation, like writing to a file, then terminating in the middle of that operation could end up corruptting data
 	- If you detach a thread to make it a background task, make sure it won't have any negative side-effects!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE3NzA4ODY1LDc3MzA0NzUxNSwyMTA0NT
-YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
-NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTgyNzgyMDYwMCw3NzMwNDc1MTUsMjEwND
+U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
+NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
