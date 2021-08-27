@@ -187,6 +187,7 @@ public class ChefOlivia implements Runnable {
 ```
 Thread olivia = new Thread(new ChefOlivia());
 ```
+#### 
 #### Thread vs Runnable
 ##### Extending Thread class
 - Cannot extend additional classes as Java does not allow multiple inheritance
@@ -216,7 +217,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - However, if the daemon thread is doing some I/O operation, like writing to a file, then terminating in the middle of that operation could end up corruptting data
 	- If you detach a thread to make it a background task, make sure it won't have any negative side-effects!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwOTQyNTUxNCw3NzMwNDc1MTUsMjEwND
-U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
-NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMD
+Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
+OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
