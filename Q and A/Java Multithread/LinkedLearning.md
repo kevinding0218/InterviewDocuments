@@ -91,11 +91,23 @@
 - When a process is created and ready to run, it gets loaded into memory and placed in the ready queue.
 #### Example
 - Scheduler is like a head chef to tell other chef what and when to execute a chopping task.
-- 
 ### Context Switch
 - The Operating System has to store the state of a process or thread that was running, so it can be resumed later.
 - It has to load the saved state for the new process or thread to run
+### Scheduling Algorithms
+- First come, first served
+- Shortest job next
+- Priority
+- Shortest remaining time
+- Round-robin
+- Multiple-level queues
+### Scheduling Goals
+- Maximize throughput
+- Maximize fairness
+- Minimize wait time
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xND
-AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbNzU3ODI1NjU3LDEzNDU4MzAwMDEsMjEyMj
+k4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgz
+Mzg3Ml19
 -->
