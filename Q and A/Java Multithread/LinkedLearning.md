@@ -23,17 +23,20 @@
 - Each of those threads is an independent path of execution, a different sequential of instructions
 - It can only exist as part of a process, 
 - Operating system schedules threads for execution
-### Common
+### Inter-Thread Communication
 - Threads that belong to the same process share the process's address space
 - Given same resource in memory including the program executable code and data.
-- Threads are considered as light-weight than processors 
 ### Inter-Process Communication (IPC)
 - Ways to communicate and share data between processes, as it requires more work than communicating between threads.
 	- Sockets and pipes
 	- Shared memory
 	- Remote procedure calls (RPC)
+### Threads vs Processes
+- Threads are considered as light-weight than processors, require less overhead to create and terminate
+- Operating system can swtich between threads faster than processes
+- 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAxNjIwNzIzLC0xMzQxNzc3MzY5LC0xNT
-QxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTgwNTYzNjMzMCwtMTM0MTc3NzM2OSwtMT
+U0MTgzMzg3Ml19
 -->
