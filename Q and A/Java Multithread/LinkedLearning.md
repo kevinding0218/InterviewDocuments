@@ -185,10 +185,12 @@ public class ChefOlivia implements Runnable {
 	- Similar to the `run()` we override when extending the Thread class
 - Then you can create a instance of Thread by passing your subclass instance as the target for the Thread class constructor
 ```
-Thread olivia = n
+Thread olivia = new Thread(new ChefOlivia());
 ```
+#### Thread vs Runnable
+- Java does not allow multiple inheritance
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEzMzg3OTIzLDc3MzA0NzUxNSwyMTA0NT
-YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
-NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTYwODAwMjIyMiw3NzMwNDc1MTUsMjEwND
+U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
+NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
