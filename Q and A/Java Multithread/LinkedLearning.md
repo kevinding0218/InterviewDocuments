@@ -24,9 +24,10 @@
 - It can only exist as part of a process, 
 - Operating system schedules threads for execution
 ### Common
-- Threads that belong to the same process share the process's address space(code and data)
-- Given same resource in memory including
+- Threads that belong to the same process share the process's address space
+- Given same resource in memory including the program executable code and data.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg4MjQ3MzI3LC0xMzQxNzc3MzY5LC0xNT
+eyJoaXN0b3J5IjpbMjU0NDM2Nzc0LC0xMzQxNzc3MzY5LC0xNT
 QxODMzODcyXX0=
 -->
