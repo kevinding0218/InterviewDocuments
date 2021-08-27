@@ -145,9 +145,13 @@
 	- Postivie, long number
 	- Unique identifier for every thread
 	- long getID()
-	- 
+	- After a thread terminates, that ID number will be available for other new threads to reuse.
+- Thread Name
+	- String for identification
+	- Multiple threads can have the same name but not same thread ID
+	- Default name structure: Thread-N, where N is a pos
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM4NDg0NjgsNzczMDQ3NTE1LDIxMDQ1Nj
-E5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1
-LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMjY0NjEzNDE2LDc3MzA0NzUxNSwyMTA0NT
+YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
+NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
