@@ -152,8 +152,13 @@
 	- Multiple threads can have the same name but not same thread ID
 	- Default name structure: Thread-N, where N is a postive integer
 	- `void setName(String name)` you can change it after it's been created and get it using `String getName()`
+- Thread Priority
+	- Tells the JVM thread scheduler when each thread should run relative to other threads.
+	- Priority values range from 1 to 10 as lowest to highest
+	- `void setPriority(int newPriority)`
+	- `int getPriority()`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwODY3MjEyLDc3MzA0NzUxNSwyMTA0NT
-YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
-NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTEzMTgwNzIxMTIsNzczMDQ3NTE1LDIxMD
+Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
+OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
