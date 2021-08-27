@@ -117,11 +117,14 @@
 - As each of those threads finish executing, they'll notify their parent and terminate, with the Main thread usually the last to finish execution.
 ### Thread Status
 #### New
-- Assigning
+- Assigning the code it's going to execute.
 - Doesn't take any CPU resource
+- Some language explicity requires you to start a thread after creating it.
 #### Runnable
+- The Operating System can schedule the thread to execute
+- Through context switch, the thread will get swapped outwith other tr
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NDQ2Mzc3NCwyMTA0NTYxOTk1LDEzND
+eyJoaXN0b3J5IjpbLTkyNjQ4NzU2NiwyMTA0NTYxOTk1LDEzND
 U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
 NzM2OSwtMTU0MTgzMzg3Ml19
 -->
