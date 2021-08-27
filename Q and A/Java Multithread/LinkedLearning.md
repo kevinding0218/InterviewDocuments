@@ -193,9 +193,11 @@ Thread olivia = new Thread(new ChefOlivia());
 - When instantiate a class itself, each instance is a unique separate object
 ##### Implementing Runnable interface
 - Can implement other interfaces and extend another class
-- Can initiate the runnable object once, and then create multiple Threads from it. Multiple threads can share a single Runnable object, which has the benefit of reducing memory usage comparing to creating separate Thread objects for each Thread
+- Can initiate the runnable object once, and then create multiple Threads from it. 
+	- Any instance variable in the Runnable will be used and affected by all of the Threads.
+- Multiple threads can share a single Runnable object, which has the benefit of reducing memory usage comparing to creating separate Thread objects for each Thread
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMwMDA0ODc5LDc3MzA0NzUxNSwyMTA0NT
-YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
-NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMjA4ODM5MDE3MSw3NzMwNDc1MTUsMjEwND
+U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
+NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
