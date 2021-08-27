@@ -106,9 +106,11 @@
 - Maximize fairness
 - Minimize wait time
 - Minimize latency
-
+### We cannot control
+- Scheduling is not always consistent, we shouldn't rely on it for threads to be executed in equal amount of time or in a particular order
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMj
-I5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4
-MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbMTgyMTU3NTI5NCwyMTA0NTYxOTk1LDEzND
+U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
+NzM2OSwtMTU0MTgzMzg3Ml19
 -->
