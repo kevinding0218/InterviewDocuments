@@ -82,8 +82,8 @@
 ### I/O Devices
 - Mouse, Keyboard and GPU needs to execute concurrently
 - In multi-core system, the execution of those drivers might get split amongst the available processors.
-- However, since I/O operations occurs rather infrequently, relative to the speed at which computer operates, we don't really gain anything from parallel execution.
+- However, since I/O operations occurs rather infrequently, relative to the speed at which computer operates, we don't really gain anything from parallel execution. Those separate tasks can run just fine on a single processor and we wouldn't feel difference
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NzU2ODQwMiwyMTIyOTg5ODM2LC0xND
-AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTEzMDg1MjU3NzEsMjEyMjk4OTgzNiwtMT
+QwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
