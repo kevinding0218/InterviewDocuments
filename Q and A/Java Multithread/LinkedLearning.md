@@ -188,9 +188,13 @@ public class ChefOlivia implements Runnable {
 Thread olivia = new Thread(new ChefOlivia());
 ```
 #### Thread vs Runnable
+##### Extending Thread class
 - Java does not allow multiple inheritance
+- 
+##### Implementing Runnable interface
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwODAwMjIyMiw3NzMwNDc1MTUsMjEwND
-U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
-NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbNjEzNDIxMzAyLDc3MzA0NzUxNSwyMTA0NT
+YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
+NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
