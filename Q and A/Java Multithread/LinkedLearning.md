@@ -63,7 +63,10 @@
 	- Chop Cucumbers
 	- Chop Tomatoes
 	- Chop Onions
+#### Single Processor
+- Like one knife and one cutting board, for two threads like chopping lettuce and cumcumbers, we need to swtich the knife between two threads
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDkzMDk1OTUsLTE0MDA4MTE5NTUsLT
-EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTU1MDg5NDM2LC0xNDAwODExOTU1LC0xMz
+QxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
