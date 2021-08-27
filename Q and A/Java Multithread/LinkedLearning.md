@@ -190,11 +190,12 @@ Thread olivia = new Thread(new ChefOlivia());
 #### Thread vs Runnable
 ##### Extending Thread class
 - Cannot extend additional classes as Java does not allow multiple inheritance
-- 
+- When instantiate a class itself, each instance is a unique separate object
 ##### Implementing Runnable interface
 - Can implement other interfaces and extend another class
+- Can initiate the runnable object once, and then create multiple Threads from it. Multiple threads can share a single Runnable object, w
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MjY4OTA4Miw3NzMwNDc1MTUsMjEwND
-U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
-NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbMzU3ODYwNDU4LDc3MzA0NzUxNSwyMTA0NT
+YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
+NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
