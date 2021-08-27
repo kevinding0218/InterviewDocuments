@@ -195,7 +195,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - Can implement other interfaces and extend another class
 - Can initiate the runnable object once, and then create multiple Threads from it. 
 	- Any instance variable in the Runnable will be used and affected by all of the Threads.
-- Multiple threads can share a single Runnable object, which has the benefit of reducing memory usage comparing to creating separate Thread objects for each Thread
+- Multiple threads can share a single Runnable object, which has **the benefit of reducing memory usage comparing to creating separate Thread objects for each Thread**
 ### Daemon Thread
 #### E.g: Garbage Collector
 - A form of automatic memory managemet that runs in the background and attemps to relcaim garbage or memory that's no longer being used by the program.
@@ -216,7 +216,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - However, if the daemon thread is doing some I/O operation, like writing to a file, then terminating in the middle of that operation could end up corruptting data
 	- If you detach a thread to make it a background task, make sure it won't have any negative side-effects!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3OTkxODEyMiw3NzMwNDc1MTUsMjEwND
+eyJoaXN0b3J5IjpbMTYwOTQyNTUxNCw3NzMwNDc1MTUsMjEwND
 U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
 NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
