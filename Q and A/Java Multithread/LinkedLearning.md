@@ -206,9 +206,10 @@ Thread olivia = new Thread(new ChefOlivia());
 - Threads that are performing background tasks, like garbage collection, can be detached from the main program by making them what's called a daemon thread.
 - A thread that does not prevent the process from terminating
 - By default, threads are created/spawned as non-daemon.
-- 
+#### Why need Daemon Thread
+- So that when main thread is finishing executing and there aren't any non-daemon threads left running, this process can be terminated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NzAxNTkxMiw3NzMwNDc1MTUsMjEwND
+eyJoaXN0b3J5IjpbMTc3NTI4MjE4NSw3NzMwNDc1MTUsMjEwND
 U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
 NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
