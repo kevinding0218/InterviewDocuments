@@ -58,12 +58,12 @@
 	4. Chop Onions
 	5. Mix Vegs
 	6. Add dressing
-- Decompose some steps into a collection of concurrent tasks, because the relative order in which we do them doesn't matter
+- Decompose some steps into a collection of concurrent tasks, because the relative order in which we do them doesn't matter, they're order independent
 	- Chop Lettuce
 	- Chop Cucumbers
 	- Chop Tomatoes
 	- Chop Onions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNTE4NDU0NywtMTQwMDgxMTk1NSwtMT
-M0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTE3MDkzMDk1OTUsLTE0MDA4MTE5NTUsLT
+EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
