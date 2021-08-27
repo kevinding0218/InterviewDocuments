@@ -207,9 +207,11 @@ Thread olivia = new Thread(new ChefOlivia());
 - A thread that does not prevent the process from terminating
 - By default, threads are created/spawned as non-daemon.
 #### Why need Daemon Thread
-- So that when main thread is finishing executing and there aren't any non-daemon threads left running, this process can be terminated
+- So that when main thread is finishing executing and there aren't any non-daemon threads left running, this process can be terminated, and the daemon thread will terminate with it.
+- Since that Daemon Thread may terminate abruptly with the process, it doesn't have a chance to gracefully shut down and stop from what it was doing.
+- That's fine from a garba
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzQwMDQzMTMsNzczMDQ3NTE1LDIxMD
+eyJoaXN0b3J5IjpbLTIwNzQ3ODIyODksNzczMDQ3NTE1LDIxMD
 Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
 OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
