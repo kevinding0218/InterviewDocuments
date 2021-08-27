@@ -132,13 +132,14 @@
 - When called with `join()`, my thread will enter a block state, waiting until another thread is done.
 #### Java Thread States (additional 2)
 ##### WAITING
-- A th
+- A thread is waiting indefinitely for another thread to perform a particular action.
 ##### TIMED_WAITING
+- A thread will wait for another thread to perform a action for up to a specific waiting time
 #### Terminated
 - Thread goes to terminated state when it either completed its execution, or is abnormally aborted.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MzQwMDk5OCwyMTA0NTYxOTk1LDEzND
-U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
-NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NT
+gzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3
+MzY5LC0xNTQxODMzODcyXX0=
 -->
