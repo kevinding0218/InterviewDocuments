@@ -20,9 +20,11 @@
 - A computer can have hundreds of active processes at once, and an operating system's job is to manage all of them.
 ### Thread
 - WIthin every process, there are one or more smaller sub elements called threads, kinda like tiny processes.
-- Each of those threads is an independent path of execution
+- Each of those threads is an independent path of execution, a different sequential of instructions
+- It can only exist as part of a process, 
+- Operating system schedules threads for execution
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgyOTY2NSwtMTM0MTc3NzM2OSwtMTU0MT
-gzMzg3Ml19
+eyJoaXN0b3J5IjpbNDAzNjkyOTM4LC0xMzQxNzc3MzY5LC0xNT
+QxODMzODcyXX0=
 -->
