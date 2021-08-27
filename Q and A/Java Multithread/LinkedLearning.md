@@ -137,9 +137,17 @@
 - A thread will wait for another thread to perform a action for up to a specific waiting time
 #### Terminated
 - Thread goes to terminated state when it either completed its execution, or is abnormally aborted.
-
+## Java Thread
+### Getting the Current Thread
+- Thread	: currentThread()
+	- returns a reference to the currently executing thread object
+- Thread ID
+	- Postivie, long number
+	- Unique identifier for every thread
+	- long getID()
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NT
-gzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3
-MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbNDM4NDg0NjgsNzczMDQ3NTE1LDIxMDQ1Nj
+E5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1
+LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
