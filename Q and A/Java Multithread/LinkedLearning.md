@@ -115,8 +115,13 @@
 - Main thread can then start or spawn additional threads to help out, referred to as its child threads, which are part of the same process, but execute independently to do other tasks.
 	- Those child threads can then spawn their own child threads if needed.
 - As each of those threads finish executing, they'll notify their parent and terminate, with the Main thread usually the last to finish execution.
+### Thread Status
+#### New
+- Assigning
+- Doesn't take any CPU resource
+#### Runnable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYwMzgyMjM2LDIxMDQ1NjE5OTUsMTM0NT
-gzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3
-MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMTM0NDQ2Mzc3NCwyMTA0NTYxOTk1LDEzND
+U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
+NzM2OSwtMTU0MTgzMzg3Ml19
 -->
