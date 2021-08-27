@@ -105,9 +105,10 @@
 - Maximize throughput
 - Maximize fairness
 - Minimize wait time
-- 
+- Minimize latency
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU3ODI1NjU3LDEzNDU4MzAwMDEsMjEyMj
-k4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgz
-Mzg3Ml19
+eyJoaXN0b3J5IjpbMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMj
+I5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4
+MzM4NzJdfQ==
 -->
