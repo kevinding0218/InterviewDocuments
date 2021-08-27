@@ -170,14 +170,25 @@ public class ChefOlivia extends Thread {
 }
 ```
 - Then you can create instance of your subclass, and run them as threads.
+```
+Thread olivia = new ChefOlivia();
+```
 #### Runnable interface
 - Interface for a class that will be executed by a thread
 	- The **Class Thread** implements the Runnable Interface
+```
+public class ChefOlivia implements Runnable {
+	public void run() {}
+}
+```
 - Defining a class that implements the Runnable interface simply requires you to have a `void run()` method
 	- Similar to the `run()` we override when extending the Thread class
-- 
+- Then you can create a instance of Thread by passing your subclass instance as the target for the Thread class constructor
+```
+Thread olivia = n
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MTU0MDQyNyw3NzMwNDc1MTUsMjEwND
-U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
-NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbNzEzMzg3OTIzLDc3MzA0NzUxNSwyMTA0NT
+YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
+NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
