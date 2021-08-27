@@ -122,9 +122,10 @@
 - Some language explicity requires you to start a thread after creating it.
 #### Runnable
 - The Operating System can schedule the thread to execute
-- Through context switch, the thread will get swapped outwith other tr
+- Through context switch, the thread will get swapped outwith other threads to run on one of the available processors.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNjQ4NzU2NiwyMTA0NTYxOTk1LDEzND
+eyJoaXN0b3J5IjpbMTgzOTczNTYzNywyMTA0NTYxOTk1LDEzND
 U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
 NzM2OSwtMTU0MTgzMzg3Ml19
 -->
