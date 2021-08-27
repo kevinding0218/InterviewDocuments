@@ -126,9 +126,12 @@
 #### Blocked
 - When a thread needs to wait for an event to occur, like an external input or a timer, it goes into a block state while it waits.
 - When a thread is blocked, it's not using any CPU resources.
-- The Operating system will return it to the runnable s
+- The Operating system will return it to the runnable state when condition gets resolved, and that will free up the processor for other threads to use.
+#### join()
+- Wait until another thread completes its execution
+- When called with `join()`, my thread will enter a block state, waiting until another thread is done.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMzNzczNzA2LDIxMDQ1NjE5OTUsMTM0NT
-gzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3
-MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTIwNTc1MDg5MjQsMjEwNDU2MTk5NSwxMz
+Q1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3
+NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
