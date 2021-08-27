@@ -67,8 +67,11 @@
 - Like one knife and one cutting board, for two threads like chopping lettuce and cumcumbers, we need to swtich the knife between two threads
 - This is concurrent execution, because our two independent processes overlap in time
 - If it swaps places and take turns more frequently, it'll create the illusion that we're executing simultaneously on our single processor, but this is **NOT TRUE Parallel Execution**
-- 
+#### Parallel Hardware
+- In order to make it as true parallel execution, like we need another set of knife and cutting board. In computer system, we have couple of options
+	- Multi-Core Processors
+	- G
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMT
-M0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMTk2Njc3OTM5NSwyMTIyOTg5ODM2LC0xND
+AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
