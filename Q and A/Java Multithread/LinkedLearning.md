@@ -26,13 +26,14 @@
 ### Common
 - Threads that belong to the same process share the process's address space
 - Given same resource in memory including the program executable code and data.
+- Threads are considered as light-weight than processors 
 ### Inter-Process Communication (IPC)
-- Ways to communicate and share data between pr
-- Sockets and pipes
-- Shared memory
-- Remote procedure calls (RPC)
+- Ways to communicate and share data between processes, as it requires more work than communicating between threads.
+	- Sockets and pipes
+	- Shared memory
+	- Remote procedure calls (RPC)
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg4MjMxMDMwLC0xMzQxNzc3MzY5LC0xNT
+eyJoaXN0b3J5IjpbMzAxNjIwNzIzLC0xMzQxNzc3MzY5LC0xNT
 QxODMzODcyXX0=
 -->
