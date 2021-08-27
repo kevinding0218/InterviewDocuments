@@ -15,8 +15,10 @@
 ## Thread vs Process
 ### Process
 - Includes code, data and state information
-- Independent instance of a 
+- Independent instance of a running program
+- Separate address space
+- A computer can have hundreds of active processes at once, and an operatiing 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NjgyMzk4MywtMTM0MTc3NzM2OSwtMT
-U0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTExMjI5MjI1MTgsLTEzNDE3NzczNjksLT
+E1NDE4MzM4NzJdfQ==
 -->
