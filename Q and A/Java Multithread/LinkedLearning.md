@@ -157,8 +157,10 @@
 	- Priority values range from 1 to 10 as lowest to highest
 	- `void setPriority(int newPriority)`
 	- `int getPriority()`
+- No Parent Thread Reference
+	- Threads **do not** maintain a reference to their parent thread
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTgwNzIxMTIsNzczMDQ3NTE1LDIxMD
+eyJoaXN0b3J5IjpbLTE2NDQ2NTE3NjEsNzczMDQ3NTE1LDIxMD
 Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
 OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
