@@ -113,8 +113,9 @@
 ### Main Thread
 - When a new process or program begins running, it will start with just one thread, the Main Thread.
 - Main thread can then start or spawn additional threads to help out, referred to as its child threads, which are part of the same process, but execute independently to do other tasks.
+- Those child threads can then spawn their own child threads if needed.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNTM5MzEwNiwyMTA0NTYxOTk1LDEzND
+eyJoaXN0b3J5IjpbMjAxNDU4MjE5MiwyMTA0NTYxOTk1LDEzND
 U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
 NzM2OSwtMTU0MTgzMzg3Ml19
 -->
