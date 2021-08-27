@@ -75,11 +75,11 @@
 ### Concurrency vs Parallelism
 #### Concurrency 
 - The Program structure
-- Being able to **DEAL** with multiple things at once.
+- Figure out a way to be able to **DEAL** with multiple things at once.
 #### Parallelism
 - Simultaneous Execution
-- Actually **DOING** multiple things at once
+- **Actually DOING** multiple things at once
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MzE3NzY5LDIxMjI5ODk4MzYsLTE0MD
-A4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTIzNjE5OTA1MiwyMTIyOTg5ODM2LC0xND
+AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
