@@ -112,9 +112,9 @@
 ## Thread Lifecyle
 ### Main Thread
 - When a new process or program begins running, it will start with just one thread, the Main Thread.
-- Main thread can then start or spawn additional threads to help out.
+- Main thread can then start or spawn additional threads to help out, referred to as its child threads.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MTc1ODc3MywyMTA0NTYxOTk1LDEzND
-U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
-NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMzI4MjE2MDMwLDIxMDQ1NjE5OTUsMTM0NT
+gzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3
+MzY5LC0xNTQxODMzODcyXX0=
 -->
