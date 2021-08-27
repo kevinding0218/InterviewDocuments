@@ -139,19 +139,21 @@
 - Thread goes to terminated state when it either completed its execution, or is abnormally aborted.
 ## Java Thread
 ### Getting the Current Thread
-- Thread	: currentThread()
+- Thread	: 
+	- `currentThread()`
 	- returns a reference to the currently executing thread object
 - Thread ID
 	- Postivie, long number
 	- Unique identifier for every thread
-	- long getID()
+	- `long getID()`
 	- After a thread terminates, that ID number will be available for other new threads to reuse.
 - Thread Name
 	- String for identification
 	- Multiple threads can have the same name but not same thread ID
-	- Default name structure: Thread-N, where N is a pos
+	- Default name structure: Thread-N, where N is a postive integer
+	- `void setName(String name)` you can change it after it's been created and get it using `String getName()`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY0NjEzNDE2LDc3MzA0NzUxNSwyMTA0NT
+eyJoaXN0b3J5IjpbLTQwODY3MjEyLDc3MzA0NzUxNSwyMTA0NT
 YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
 NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
