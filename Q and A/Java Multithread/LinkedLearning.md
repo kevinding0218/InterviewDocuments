@@ -123,9 +123,12 @@
 #### Runnable
 - The Operating System can schedule the thread to execute
 - Through context switch, the thread will get swapped outwith other threads to run on one of the available processors.
-- 
+#### Blocked
+- When a thread needs to wait for an event to occur, like an external input or a timer, it goes into a block state while it waits.
+- When a thread is blocked, it's not using any CPU resources.
+- The Operating system will return it to the runnable s
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzOTczNTYzNywyMTA0NTYxOTk1LDEzND
-U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
-NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbOTMzNzczNzA2LDIxMDQ1NjE5OTUsMTM0NT
+gzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3
+MzY5LC0xNTQxODMzODcyXX0=
 -->
