@@ -43,8 +43,13 @@
 - create additional 6 threads and execute
 - we see there are 7 threads in runtime, but in resource monitor of our process **java.exe**, there are 24 threads display, this is because JVM creates additional threads in the background to handle things like garbage collection and runtime compilation.
 	- From the program perspective, running within the JVM, it only had 7 threads.
-	- From the operating system that's running the JVM, 
+	- From the operating system that's running the JVM, it sees those background threads for a total of 24
+
+## Concurrent vs Parallel
+### Concurrency
+- Ability of a program to be broken into parts that can run independently of each other
+	- These parts can be executed out of order or partially out of order
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU0NzM4NjY2LC0xNDAwODExOTU1LC0xMz
+eyJoaXN0b3J5IjpbNzA1NDc0MjUxLC0xNDAwODExOTU1LC0xMz
 QxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
