@@ -199,9 +199,10 @@ Thread olivia = new Thread(new ChefOlivia());
 ### Daemon Thread
 #### Garbage Collector
 - A form of automatic memory managemet that runs in the background and attemps to relcaim garbage or memory that's no longer being used by the program.
-- Running aa
+- Whilt running as a separate child thread from the main thread to provide the garbage collection service, my function thread would work fine until it's ready to finish executing.
+- When the function thread is ready to exit the program but it **
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNTQwMTQ3Myw3NzMwNDc1MTUsMjEwND
+eyJoaXN0b3J5IjpbMTY1NTA2Mjg3OSw3NzMwNDc1MTUsMjEwND
 U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
 NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
