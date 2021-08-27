@@ -11,8 +11,12 @@
 	- Parallel execution will increase the overall throughput of a program.
 		- Accomplish a single task faster
 		- Accomplish more tasks in a given time
-- 
+
+## Thread vs Process
+### Process
+- Includes code, data and state information
+- Independent instance of a 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ
-==
+eyJoaXN0b3J5IjpbMTY5NjgyMzk4MywtMTM0MTc3NzM2OSwtMT
+U0MTgzMzg3Ml19
 -->
