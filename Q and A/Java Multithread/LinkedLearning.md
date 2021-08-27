@@ -161,10 +161,13 @@
 	- Threads **do not** maintain a reference to their parent thread
 	- Reason is it can enable the parent thread to be garbage collected by the JVM to reclaim memory, which would not be possible if the child thread was holding a reference to it.
 ### Creating Threads 
-- Extend the Thread class and override its run method to provide your own custom code for the Thread to execute.
-- 
+#### Extend the Thread class 
+- By extending the Thread class, you can override its run method to provide your own custom code for the Thread to execute.
+	- Then you can create instance of your subclass, and run them as threads.
+- Implement the **Runnable** interface
+	-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDE4MjIwMDgsNzczMDQ3NTE1LDIxMD
-Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
-OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbNjY5OTI1NjA4LDc3MzA0NzUxNSwyMTA0NT
+YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
+NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
