@@ -79,7 +79,10 @@
 #### Parallelism
 - Simultaneous Execution
 - **Actually DOING** multiple things at once
+### I/O Devices
+- Mouse, Keyboard and GPU needs to execute concurrently
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjE5OTA1MiwyMTIyOTg5ODM2LC0xND
+eyJoaXN0b3J5IjpbMTE1MDE1OTU0MywyMTIyOTg5ODM2LC0xND
 AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
