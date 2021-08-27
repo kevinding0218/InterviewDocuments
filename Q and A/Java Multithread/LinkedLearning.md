@@ -37,11 +37,11 @@
 
 ## Java Virtual Machine (JVM)
 - Each Java application executes within its own instance of the JVM
-	- If you run multiple Java
+	- If you run multiple Java application at same time, they'll each execute in a separate JVM process with their own independent memory space
 - Each JVM instance is a separate, independent process
 - 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzOTg3NzU0OCwtMTM0MTc3NzM2OSwtMT
-U0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLT
+E1NDE4MzM4NzJdfQ==
 -->
