@@ -33,10 +33,10 @@
 	- Remote procedure calls (RPC)
 ### Threads vs Processes
 - Threads are considered as light-weight than processors, require less overhead to create and terminate
-- Operating system can swtich between threads faster than processes
+- Operating system can swtich between threads belong to single process faster than different processes
 - 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNTYzNjMzMCwtMTM0MTc3NzM2OSwtMT
-U0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTIxMzg5MzQ3NDAsLTEzNDE3NzczNjksLT
+E1NDE4MzM4NzJdfQ==
 -->
