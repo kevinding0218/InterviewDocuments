@@ -108,9 +108,13 @@
 - Minimize latency
 ### We cannot control
 - Scheduling is not always consistent, we shouldn't rely on it for threads to be executed in equal amount of time or in a particular order
-- 
+
+## Thread Lifecyle
+### Main Thread
+- When a new process or program begins running, it will start with just one thread, the Main Thread.
+- Main thread can then start or spawn additional threads to help out.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMTU3NTI5NCwyMTA0NTYxOTk1LDEzND
+eyJoaXN0b3J5IjpbMTQ2MTc1ODc3MywyMTA0NTYxOTk1LDEzND
 U4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3
 NzM2OSwtMTU0MTgzMzg3Ml19
 -->
