@@ -167,9 +167,11 @@
 #### Runnable interface
 - Interface for a class that will be executed by a thread
 	- The **Class Thread** implements the Runnable Interface
-- Defining a class that implements the Runnable interface 
+- Defining a class that implements the Runnable interface simply requires you to have a `void run()` method
+	- Similar to the `run()` we override when extending the Thread class
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2Njc2MjQwLDc3MzA0NzUxNSwyMTA0NT
-YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
-NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTIxNDUwNDc5OTAsNzczMDQ3NTE1LDIxMD
+Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
+OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
