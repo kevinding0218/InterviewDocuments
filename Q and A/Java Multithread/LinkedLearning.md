@@ -70,8 +70,14 @@
 #### Parallel Hardware
 - In order to make it as true parallel execution, like we need another set of knife and cutting board. In computer system, we have couple of options
 	- Multi-Core Processors
-	- G
+	- Graphics Processing Unit
+	- Computer Cluster
+### Concurrency vs Parallelism
+#### Concurrency 
+- The Program structure
+- Being able to **DEALINGwith multiple things at once.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2Njc3OTM5NSwyMTIyOTg5ODM2LC0xND
+eyJoaXN0b3J5IjpbMTU0MTUwMTAzMCwyMTIyOTg5ODM2LC0xND
 AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
