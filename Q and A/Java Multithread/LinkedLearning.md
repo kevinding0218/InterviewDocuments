@@ -198,9 +198,10 @@ Thread olivia = new Thread(new ChefOlivia());
 - Multiple threads can share a single Runnable object, which has the benefit of reducing memory usage comparing to creating separate Thread objects for each Thread
 ### Daemon Thread
 #### Garbage Collector
-- A form of automatic memory managemet that runs in the background and attemps to relcaim garbage or memory that's no long
+- A form of automatic memory managemet that runs in the background and attemps to relcaim garbage or memory that's no longer being used by the program.
+- Running aa
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjU0MjU5MjYsNzczMDQ3NTE1LDIxMD
-Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
-OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMjEzNTQwMTQ3Myw3NzMwNDc1MTUsMjEwND
+U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
+NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
