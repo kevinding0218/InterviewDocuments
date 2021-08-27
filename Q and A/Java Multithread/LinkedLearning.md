@@ -159,8 +159,9 @@
 	- `int getPriority()`
 - No Parent Thread Reference
 	- Threads **do not** maintain a reference to their parent thread
+	- Reason is it can enable the parent thread to be garbage collected by the JVM to reclaim memory, which would not be possible if the child thread was holding a reference to it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDQ2NTE3NjEsNzczMDQ3NTE1LDIxMD
-Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
-OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTgzMDU4MzY3MCw3NzMwNDc1MTUsMjEwND
+U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
+NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
