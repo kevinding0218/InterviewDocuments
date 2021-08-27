@@ -34,9 +34,14 @@
 ### Threads vs Processes
 - Threads are considered as light-weight than processors, require less overhead to create and terminate
 - Operating system can swtich between threads belong to single process faster than different processes
+
+## Java Virtual Machine (JVM)
+- Each Java application executes within its own instance of the JVM
+	- If you run multiple Java
+- Each JVM instance is a separate, independent process
 - 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzg5MzQ3NDAsLTEzNDE3NzczNjksLT
-E1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbMTIzOTg3NzU0OCwtMTM0MTc3NzM2OSwtMT
+U0MTgzMzg3Ml19
 -->
