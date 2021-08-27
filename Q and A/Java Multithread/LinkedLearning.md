@@ -197,7 +197,7 @@ Thread olivia = new Thread(new ChefOlivia());
 	- Any instance variable in the Runnable will be used and affected by all of the Threads.
 - Multiple threads can share a single Runnable object, which has the benefit of reducing memory usage comparing to creating separate Thread objects for each Thread
 ### Daemon Thread
-#### Garbage Collector
+#### E.g: Garbage Collector
 - A form of automatic memory managemet that runs in the background and attemps to relcaim garbage or memory that's no longer being used by the program.
 #### What if GC was created/spawed from current thread
 - While a function thread is executing, it spaws a separate child thread to provide the garbage collection service, the function thread would work fine until it's ready to finish executing.
@@ -209,7 +209,7 @@ Thread olivia = new Thread(new ChefOlivia());
 #### Why need Daemon Thread
 - So that when main thread is finishing executing and there aren't any non-daemon threads left running, this process can be terminated
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NTI4MjE4NSw3NzMwNDc1MTUsMjEwND
-U2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5
-NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTEyNzQwMDQzMTMsNzczMDQ3NTE1LDIxMD
+Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
+OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
