@@ -65,8 +65,9 @@
 	- Chop Onions
 #### Single Processor
 - Like one knife and one cutting board, for two threads like chopping lettuce and cumcumbers, we need to swtich the knife between two threads
-	- 
+- This is concurrent execution, because our two independent processes overlap in time
+- If it swaps places and take turns more frequently, it'll create the illusion that we're executing simultaneously on our sing
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MDg5NDM2LC0xNDAwODExOTU1LC0xMz
-QxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMTEzNjYzODg2NSwtMTQwMDgxMTk1NSwtMT
+M0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
