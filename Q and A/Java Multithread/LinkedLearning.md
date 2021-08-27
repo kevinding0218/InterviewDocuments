@@ -86,8 +86,10 @@
 
 ## Execution Scheduling
 ### Scheduler
-- Operating system function that assigns proces
+- Operating system function that assigns processors and threads to run on available CPUs
+- Scheduler makes it possible for multiple programs to run concurrently on a single processor.
+- When a process is created and ready to run, it gets loaded into memory and placed in the ready queue.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDY5NjE1MTUsMjEyMjk4OTgzNiwtMT
-QwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTk5NTI1NTQ2NywyMTIyOTg5ODM2LC0xND
+AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
