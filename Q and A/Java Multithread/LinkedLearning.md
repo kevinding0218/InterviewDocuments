@@ -163,11 +163,13 @@
 ### Creating Threads 
 #### Extend the Thread class 
 - By extending the Thread class, you can override its run method to provide your own custom code for the Thread to execute.
-	- Then you can create instance of your subclass, and run them as threads.
-- Implement the **Runnable** interface
-	-
+- Then you can create instance of your subclass, and run them as threads.
+#### Runnable interface
+- Interface for a class that will be executed by a thread
+	- The **Class Thread** implements the Runnable Interface
+- Defining a class that implements the Runnable interface 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY5OTI1NjA4LDc3MzA0NzUxNSwyMTA0NT
+eyJoaXN0b3J5IjpbLTQ2Njc2MjQwLDc3MzA0NzUxNSwyMTA0NT
 YxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1
 NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
