@@ -479,12 +479,13 @@ public class Shopper extends Thread {
 	- Recursive lock
 ### Java Class Implementing Lock Interface
 - ReentrantLock
+	- `getHoldCount()` to check how many lock are performed on current reentrant lock
 - ReentrantReadWriteLock.ReadLock
--ReentrantReadWriteLock.WriteLock
+- ReentrantReadWriteLock.WriteLock
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NzUzMzQwOCw5MTc2NDg5NjEsMjA2OT
+eyJoaXN0b3J5IjpbLTY2NTMwNTMzNyw5MTc2NDg5NjEsMjA2OT
 I3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1
 LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3Nz
 MwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4
