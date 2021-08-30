@@ -287,7 +287,7 @@ synchronized (object) {
 ```
 - Before a thread can execute the code contained within the synchronized statement, it must first acquire the intrinsic lock associated with the specific object
 - Then when the thread is done, it will release its hold on that lock.
-- For example, below both threads will acquire the same intrinsic locks assocaited witht the shopper class before and after they increment the garlicCount.
+- For example, below both threads will be acquiring and releasing the same intrinsic locks assocaited witht the shopper class before and after they increment the garlicCount.
 ```
 public class Shopper extends Thread {
 	static int garlicCount = 0;
@@ -315,9 +315,24 @@ public class Shopper extends Thread {
 	}
 }
 ```
+- For another example, if I replace the synchonized object with **this**,  I'll get incorrect result.
+	- Because each of the shopper threads is acquiring and releasing the intrinsic lock associated with their own instance.
+	- They are not synchronized to the same object now so the data race occurs.
+```
+public class Shopper extends Thread {
+	static Integer garlicCount = 0;
+	public void run() {
+		for (int i = 0; i < 10_000_000; i++) {
+			synchronized (garlicCount ) {
+				garlicCount++;
+			}
+		}
+	}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MzYzNzMyNSw3MDk2OTY3NjMsLTE4MT
-g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
-OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
-0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTEwOTkwMTAwNjYsNzA5Njk2NzYzLC0xOD
+E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
+OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
+wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
