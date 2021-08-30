@@ -241,7 +241,14 @@ Thread olivia = new Thread(new ChefOlivia());
 - A daemon thread will be abruptly terminated when the main thread finishes. If that occurs during a write operation the file could be corrupted.
 5. Which method must you include when defining a class that implements the Runnable interface?
 -   void run()
-6. 
+6. When defining a new Java class, which of these is NOT an advantage of implementing Java's Runnable interface rather than inheriting from the Thread class and overriding the run() method?
+-   The class can inherit from multiple other classes.
+- Java classes can only inherit from one other class. Java does not support multiple inheritance.
+7. What two states do Java threads have in addition to the standard four thread states? (NEW, RUNNABLE, BLOCKED, TERMINATED)
+-   WAITING and TIMED_WAITING
+8. Why would ThreadA call the ThreadB.join() method?
+-   ThreadA needs to wait until after ThreadB has terminated to continue.
+- 
 
 
 ## Data Race
@@ -435,7 +442,7 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDk2NDg3MjMsLTQyOTU2MTQ5NSw3MD
+eyJoaXN0b3J5IjpbLTExODU3NjAwNDIsLTQyOTU2MTQ5NSw3MD
 k2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3
 NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC
 0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
