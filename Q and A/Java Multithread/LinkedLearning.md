@@ -244,10 +244,12 @@ Thread olivia = new Thread(new ChefOlivia());
 - Used to prevent multiple threads from simultaneously accessing a shared resource, **forcing them to take turns**
 - For example, like we only have one pencil between two threads who tries to update a single note
 ### Atomic Operations
-- The operation to acquire a lock
+- The operation to acquire a lock, **uninterruptible**
+- It's always executed as a single, indivisible action, relative to other threads
+- Appears to happen instantaneously, **cannot** be interrupted by other concurrent threads.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyOTk1NDM0OCwtMTgxODgyMzUxOSwtMT
+eyJoaXN0b3J5IjpbLTcyOTE2NjU3OSwtMTgxODgyMzUxOSwtMT
 g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
 MDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNj
 ksLTE1NDE4MzM4NzJdfQ==
