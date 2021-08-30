@@ -482,17 +482,17 @@ public class Shopper extends Thread {
 	- `getHoldCount()` to check how many lock are performed on current reentrant lock
 - ReentrantReadWriteLock.ReadLock
 - ReentrantReadWriteLock.WriteLock
-### Try Lock
-- A non-blocking lock/acquire method for mutex
+### TryLock
+- A non-blocking lock/acquire method for mutex `boolean tryLock()`
 - It returns immediately and one of two things will happen, let the thread know whether or not it was successful in acquiring the lock.
 	- If the mutex is available, lock it and return TRUE
 	- If the mutex is unavailable, immediately return FALSE
 - For example, it's like you have a party going on in your house but only one restroom, if you need to go to the restroom, knock the door and know it was occupied/locked, you can either stand there and wait until someone come out or you may save time and do something else. As long as the restroom is available, anyone can access it from their own activities.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNj
-kyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5
-NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNz
-czMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5
-ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzOD
-cyXX0=
+eyJoaXN0b3J5IjpbNDEzMzg2NTIyLC0xMzU1Njk2MjQxLDkxNz
+Y0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEz
+LC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xOD
+c1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAw
+MDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OS
+wtMTU0MTgzMzg3Ml19
 -->
