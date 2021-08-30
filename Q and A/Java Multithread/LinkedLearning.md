@@ -130,7 +130,7 @@
 ##### join()
 - Some thread may eventually reach a point where it needs to wait until one of its children threads has finished for me to continue on
 - When called with `join()`, my thread will enter a block state, waiting until another thread is done.
-- For example, below program shows we started both threads, and then use the `join()` method to 
+- For example, below program shows we started both threads, and then use the `join()` method to wait until they're both done.
 ```
 Thread barron = new Shopper();
 Thread olivia = new Shopper();
@@ -233,7 +233,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - Right after Thread I read the value from that shared memory, Thread I gets paused. Thread II becomes active and changed the number, then Thread I become active and at this point, Thread  I was operating with old data in its local memory and overrite the value that was updated by Thread  II in the shared memory
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3ODM0MjExNywtMTg3NTI4NzYyOCw3Nz
+eyJoaXN0b3J5IjpbMTE3OTAyMDEwOSwtMTg3NTI4NzYyOCw3Nz
 MwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4
 MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4Nz
 JdfQ==
