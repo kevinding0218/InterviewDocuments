@@ -470,12 +470,13 @@ public class Shopper extends Thread {
 - A particulr type of mutex that can be locked multiple times by the same process or thread.
 - Internally, reentrant mutex keeps track of how many times it's been locked by the owing thread.
 - It has to be unlocked an equal number of times as it was locked to fully release it before another thread can lock it.
+- Make things easier, you don't need to worry about as much about what's already been locked, and it maeks easier to retrofit locks into existing code.
 - 
 - 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDA5NjM2ODEsMjA2OTI3NTQxOSwxMT
+eyJoaXN0b3J5IjpbLTE4OTYwOTY1MzIsMjA2OTI3NTQxOSwxMT
 Y1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2
 MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMj
 EwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4
