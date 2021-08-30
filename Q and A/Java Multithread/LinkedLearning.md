@@ -263,11 +263,13 @@ Thread olivia = new Thread(new ChefOlivia());
 - When a thread tries to invoke a synchronized method while another thread is executing a synchronized method for that same object, **the second thread will suspend execution until the first thread is done and exits**.
 - For example, below that I mark synchronized of the method with **static**, 
 	- this method is associated with the shopper class, and not a specific instance of shopper.
+	- By doing so, when either thread invokes the synchonized addGarlic method, it will acquire the intrinstic lock that's associated with the class object
+	- If removed the static keyword, then each shopper instance will invoke their own instance of the `addGarlick()` method, 
 ### Sychronized Statement
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTQ5OTA5NjAsNzA5Njk2NzYzLC0xOD
-E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
-OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
-wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMzM5NTgzNzgyLDcwOTY5Njc2MywtMTgxOD
+gyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5
+NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLT
+EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
