@@ -489,15 +489,17 @@ public class Shopper extends Thread {
 	- If the mutex is unavailable, immediately return FALSE
 - Much faster than traditional `lock()` as when one of the threads gets its turn in the critical section with the `tryLock` method in place, the other thread is able to jump past that section of code and is freed up to accomplish other useful things.
 - For example, it's like you have a party going on in your house but only one restroom, if you need to go to the restroom, knock the door and know it was occupied/locked, you can either stand there and wait until someone come out or you may save time and do something else. As long as the restroom is available, anyone can access it from their own activities.
-### Read-write Lock
+### Read-write Lock/Shared Mutex
 - It's Okay to allow multiple threads read from the same shared resource as long as no one else can change it
 - When we use a basic lock or a mutex or protect the sahred resource, we limit access so that only one of the threads can use it at a time. Regardless whether that thread is reading, writing or both. This works but not efficient when most of the threads is only to read
-- 
+- Read-write lock can lock in two ways
+	- It can be locked in a shared read mode that allows multiple threads that only need to read simultaneously to lock it
+	- It can be locked in an exclusive write mode that limits access to
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcxMjM3ODYxLC0xMzU1Njk2MjQxLDkxNz
-Y0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEz
-LC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xOD
-c1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAw
-MDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OS
-wtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTcyMDIzMDgwMCwtMTM1NTY5NjI0MSw5MT
+c2NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYx
+MywtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMT
+g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
+MDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNj
+ksLTE1NDE4MzM4NzJdfQ==
 -->
