@@ -244,7 +244,18 @@ Thread olivia = new Thread(new ChefOlivia());
 - Used to prevent multiple threads from simultaneously accessing a shared resource, **forcing them to take turns**
 - For example, like we only have one pencil between two threads who tries to update a single note
 ```
-class 
+public class Shopper extends Thread {
+	static int garlicCount = 0;
+	static Lock pencil = new ReentrantLock();
+	public void run() {
+		for (int i = 0; i < 10_000_000; i++) {
+			pencil.lock();
+			garlicCount++;
+			pencil.unlock();
+			System.out.println(Thread.currentThread().getName() + " is thinki
+		}
+	}
+}
 ```
 ### Atomic Operations
 - The operation to acquire a lock, **uninterruptible**
@@ -343,8 +354,8 @@ public class Shopper extends Thread {
 - Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMyMDc5MzUsNzA5Njk2NzYzLC0xODE4OD
-IzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1
-LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMT
-M0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMTE3MTA0MDQwMSw3MDk2OTY3NjMsLTE4MT
+g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
+OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
+0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
