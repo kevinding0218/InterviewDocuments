@@ -402,14 +402,16 @@ public class Shopper extends Thread {
 5. How many threads can possess a Lock at the same time?
 - 1
 6. What does it mean to protect a critical section of code with mutual exclusion?
--   Prevent multiple threads from concurrently executing in the critical section.
-7. 
-
+- Prevent multiple threads from concurrently executing in the critical section.
+7. Using the ++ operator to increment a variable in Java executes as `_____` at the lowest level.
+- multiple instructions (Read & Update & Write)
+8.  In the Java program to demonstrate a data race, why did the data race only occur when each of the threads were incrementing a shared variable a large number of time?
+9. 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTczODA0MDgxLDcwOTY5Njc2MywtMTgxOD
+eyJoaXN0b3J5IjpbNzk5NTQ4OTg1LDcwOTY5Njc2MywtMTgxOD
 gyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5
 NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLT
 EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
