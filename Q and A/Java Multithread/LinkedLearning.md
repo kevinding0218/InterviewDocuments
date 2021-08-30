@@ -236,9 +236,12 @@ Thread olivia = new Thread(new ChefOlivia());
 ## Mutual Exclusion
 ### Critical Section/Region
 - Part of a program that accesses a shared resource, such as a data structure memory, or an external device.
-- It may not opera
+- It may not operate correctly, if multiple threads concurrently access it.
+- This critical section needs to be protected, so that it only allows one thread or process to execute in it at a time.
+### Mutex (Lock)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODg2MDM3OSwtMTgxODgyMzUxOSwtMT
+eyJoaXN0b3J5IjpbMTUyOTczOTk1NSwtMTgxODgyMzUxOSwtMT
 g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
 MDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNj
 ksLTE1NDE4MzM4NzJdfQ==
