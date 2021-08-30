@@ -491,13 +491,13 @@ public class Shopper extends Thread {
 - For example, it's like you have a party going on in your house but only one restroom, if you need to go to the restroom, knock the door and know it was occupied/locked, you can either stand there and wait until someone come out or you may save time and do something else. As long as the restroom is available, anyone can access it from their own activities.
 ### Read-write Lock
 - It's Okay to allow multiple threads read from the same shared resource as long as no one else can change it
-- When we use a basic lock or a mutex or protect the sahred resource, we limit access so that only one of the threads can use it at a time. Regardless whether that thread is reading, writing or both. T
+- When we use a basic lock or a mutex or protect the sahred resource, we limit access so that only one of the threads can use it at a time. Regardless whether that thread is reading, writing or both. This works but not efficient when most of the threads is only to read
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTA3ODA5NTksLTEzNTU2OTYyNDEsOT
-E3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2
-MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLT
-E4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgz
-MDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3Mz
-Y5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMjcxMjM3ODYxLC0xMzU1Njk2MjQxLDkxNz
+Y0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEz
+LC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xOD
+c1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAw
+MDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OS
+wtMTU0MTgzMzg3Ml19
 -->
