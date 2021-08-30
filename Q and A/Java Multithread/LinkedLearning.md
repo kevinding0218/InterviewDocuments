@@ -285,10 +285,21 @@ synchronized (object) {
 	// protected code
 }
 ```
-- Before a thread can execute the code contained within the synchronized statement, it must first acquire
+- Before a thread can execute the code contained within the synchronized statement, it must first acquire the intrinsic lock associated with the specific object
+- Then when the thread is done, it will release its hold on that lock.
+```
+public class Shopper extends Thread {
+	static int garlicCount = 0;
+	public void run() {
+		for (int i = 0; i < 10_000_000; i++) {
+			synchronized (S
+		}
+	}
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTgzODIwNjQsNzA5Njk2NzYzLC0xOD
-E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
-OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
-wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMTM2MjcwNTc2OSw3MDk2OTY3NjMsLTE4MT
+g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
+OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
+0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
