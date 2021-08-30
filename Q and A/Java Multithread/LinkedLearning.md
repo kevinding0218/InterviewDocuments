@@ -260,9 +260,10 @@ Thread olivia = new Thread(new ChefOlivia());
 14. Which of these applications would benefit the most from parallel execution?
 -   math library for processing large matrices
 	- Mathematical operations on matrices are computationally intensive and therefore well suited to benefit from parallel execution.
-- The graphical user interface (GUI) should be structured for concurrency, but as an I/O bound task, it will generally run as well with parallel execution as without.
--
--
+- Following are not benefit from parallel execution
+	- The graphical user interface (GUI) should be structured for concurrency, but as an I/O bound task, it will generally run as well with parallel execution as without.
+	- System logging application that frequently writes to a database, The logging application should execute concurrent to other programs, but the access times to write to the database will be a limiting factor in it's execution speed. It is I/O bound and therefore will not benefit significantly from parallel execution.
+15. 
 -
 
 
@@ -457,8 +458,9 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgyNDAwNzQsLTQyOTU2MTQ5NSw3MDk2OT
-Y3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1
-LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xND
-AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMTQ0NTMyMjUyNiwtNDI5NTYxNDk1LDcwOT
+Y5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1
+MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLT
+E0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+
 -->
