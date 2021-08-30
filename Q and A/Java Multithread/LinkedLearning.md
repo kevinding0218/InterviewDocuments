@@ -259,12 +259,13 @@ Thread olivia = new Thread(new ChefOlivia());
 - A thread that needs exclusive access to an object's fields has to acquire that object's lock before accessing them and then release that intrinsic lock when it's done
 ### Sychronized Method
 - Add **synchronized** keyword to method declaration
-- When a thread invokes a **synchronized method**, it automatically acquires the intrinstic lock for that method object, that will prevent other threads that invoke a s
+- When a thread **invokes a synchronized method, it automatically acquires the intrinstic lock for that method object, that will prevent other threads that invoke a synchronized method on the same object from interleaving exection**
+- When a thread tries to invoke a synchronized method while another thread is executing a synchronized method for that same object, 
 ### Sychronized Statement
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNTk4MzkxMiw3MDk2OTY3NjMsLTE4MT
-g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
-OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
-0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTIwMTExMjk3MzUsNzA5Njk2NzYzLC0xOD
+E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
+OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
+wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
