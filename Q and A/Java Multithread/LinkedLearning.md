@@ -263,7 +263,11 @@ Thread olivia = new Thread(new ChefOlivia());
 - Following are not benefit from parallel execution
 	- The graphical user interface (GUI) should be structured for concurrency, but as an I/O bound task, it will generally run as well with parallel execution as without.
 	- System logging application that frequently writes to a database, The logging application should execute concurrent to other programs, but the access times to write to the database will be a limiting factor in it's execution speed. It is I/O bound and therefore will not benefit significantly from parallel execution.
-15. 
+15. Concurrent tasks execute at the same time. **False**
+- Concurrency describes the structure that enables a program to execute in parallel (given the necessary hardware), but a concurrent program is not inherently parallel.
+16. The operating system assigns each process a unique **process ID number**.
+
+-
 -
 
 
@@ -458,7 +462,7 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NTMyMjUyNiwtNDI5NTYxNDk1LDcwOT
+eyJoaXN0b3J5IjpbMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcwOT
 Y5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1
 MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLT
 E0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
