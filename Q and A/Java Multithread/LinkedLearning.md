@@ -230,8 +230,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - However, if the daemon thread is doing some I/O operation, like writing to a file, then terminating in the middle of that operation could end up corruptting data
 	- If you detach a thread to make it a background task, make sure it won't have any negative side-effects!
 ## Quiz
-1. A Java thread can be turned into a daemon thread after it has been started.
-- False
+1. A Java thread can be turned into a daemon thread after it has been started. **False**
 2. If a daemon thread in Java creates another thread, that child thread will **inherit the daemon status of its parent thread.**
 3. Why would you use daemon threads to handle continuous background tasks?
 - The daemon thread will not prevent the program from terminating when the main thread is finished.
@@ -466,7 +465,7 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MTUyMTg2OCwxNTkyOTQ4NjEzLC00Mj
+eyJoaXN0b3J5IjpbLTc3OTc0MTA0NywxNTkyOTQ4NjEzLC00Mj
 k1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3
 NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMj
 EyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0
