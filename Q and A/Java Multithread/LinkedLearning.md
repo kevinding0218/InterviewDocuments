@@ -233,10 +233,13 @@ Thread olivia = new Thread(new ChefOlivia());
 - Right after Thread I read the value from that shared memory, Thread I gets paused. Thread II becomes active and changed the number, then Thread I become active and at this point, Thread  I was operating with old data in its local memory and overrite the value that was updated by Thread  II in the shared memory
 ### Preventing Data Races
 - Pay attention whenever two or more threads access the same resource
-- 
+## Mutual Exclusion
+### Critical Section/Region
+- Part of a program that accesses a shared resource, such as a data structure memory, or an external device.
+- It may not opera
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNz
-czMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5
-ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzOD
-cyXX0=
+eyJoaXN0b3J5IjpbMTAyODg2MDM3OSwtMTgxODgyMzUxOSwtMT
+g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
+MDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNj
+ksLTE1NDE4MzM4NzJdfQ==
 -->
