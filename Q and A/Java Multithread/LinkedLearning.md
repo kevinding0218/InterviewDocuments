@@ -248,7 +248,7 @@ Thread olivia = new Thread(new ChefOlivia());
 -   WAITING and TIMED_WAITING
 8. Why would ThreadA call the ThreadB.join() method?
 -   ThreadA needs to wait until after ThreadB has terminated to continue.
-- 
+- Thread A: Main Thread, Thread B, new instance of a Thread Object
 
 
 ## Data Race
@@ -442,9 +442,8 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODU3NjAwNDIsLTQyOTU2MTQ5NSw3MD
-k2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3
-NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC
-0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
-
+eyJoaXN0b3J5IjpbNDY2ODAyMzg2LC00Mjk1NjE0OTUsNzA5Nj
+k2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUx
+NSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMT
+QwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
