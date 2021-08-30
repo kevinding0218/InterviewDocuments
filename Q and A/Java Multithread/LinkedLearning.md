@@ -242,7 +242,26 @@ Thread olivia = new Thread(new ChefOlivia());
 - A mechanism to implement mutual exclusion
 - Only one thread or process can possess at a time
 - Used to prevent multiple threads from simultaneously accessing a shared resource, **forcing them to take turns**
-- For example, like we only have one pencil between two threads who tries to update a single note
+- For example, like we only have one Lock, called pencil between two threads who tries to update a single garlicCount 
+	- Now, Thread 2 will wait to execute until Thread 1 finishes its `run()` method
+```
+public class Shopper extends Thread {
+	static int garlicCount = 0;
+	static Lock pencil = new ReentrantLock();
+	public void run() {
+		pencil.lock();
+		for (int i = 0; i < 5; i++) {
+			garlicCount++;
+			System.out.println(Thread.currentThread().getName() + " is thinking.");
+			try {
+			    Thread.sleep(500);
+			} catch (InterruptedException e) { e.printStackTrace(); }
+		}
+		pencil.unlock();
+	}
+}
+```
+- For another example
 ```
 public class Shopper extends Thread {
 	static int garlicCount = 0;
@@ -357,8 +376,8 @@ public class Shopper extends Thread {
 - Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDg2NDIxMzYsNzA5Njk2NzYzLC0xOD
-E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
-OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
-wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMTI3NTU3OTEyLDcwOTY5Njc2MywtMTgxOD
+gyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5
+NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLT
+EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
