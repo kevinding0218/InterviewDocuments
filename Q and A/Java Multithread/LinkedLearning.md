@@ -248,7 +248,7 @@ public class Shopper extends Thread {
 	static int garlicCount = 0;
 	static Lock pencil = new ReentrantLock();
 	public void run() {
-		for (int i = 0; i < 10_000_000; i++) {
+		for (int i = 0; i < 5; i++) {
 			pencil.lock();
 			garlicCount++;
 			pencil.unlock();
@@ -357,7 +357,7 @@ public class Shopper extends Thread {
 - Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTUyODUxNDAsNzA5Njk2NzYzLC0xOD
+eyJoaXN0b3J5IjpbLTE2NDg2NDIxMzYsNzA5Njk2NzYzLC0xOD
 E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
 OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
 wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
