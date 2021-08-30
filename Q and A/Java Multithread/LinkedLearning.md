@@ -243,7 +243,8 @@ Thread olivia = new Thread(new ChefOlivia());
 - Only one thread or process can possess at a time
 - Used to prevent multiple threads from simultaneously accessing a shared resource, **forcing them to take turns**
 - For example, like we only have one Lock, called pencil between two threads who tries to update a single garlicCount 
-	- Now, Thread 2 will wait to execute until Thread 1 finishes its `run()` method
+	- Now, Thread II will wait to execute until Thread I finishes its `run()` method at 5 times.
+	- Totally the program takes about 500 * 10 = 5 seconds to finish executing
 ```
 public class Shopper extends Thread {
 	static int garlicCount = 0;
@@ -376,8 +377,8 @@ public class Shopper extends Thread {
 - Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NTU3OTEyLDcwOTY5Njc2MywtMTgxOD
-gyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5
-NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLT
-EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbMTA0OTQ5NSw3MDk2OTY3NjMsLTE4MTg4Mj
+M1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUs
+MTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMz
+QxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
