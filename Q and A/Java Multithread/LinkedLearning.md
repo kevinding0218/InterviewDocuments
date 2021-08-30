@@ -235,6 +235,14 @@ Thread olivia = new Thread(new ChefOlivia());
 2. If a daemon thread in Java creates another thread, that child thread will `_____`.
 -   inherit the daemon status of its parent thread
 3. Why would you use daemon threads to handle continuous background tasks?
+-   The daemon thread will not prevent the program from terminating when the main thread is finished.
+4. Why can it be risky to use a daemon thread to perform a task that involves writing data to a log file?
+- -   The log file could be corrupted.
+- A daemon thread will be abruptly terminated when the main thread finishes. If that occurs during a write operation the file could be corrupted.
+5. Which method must you include when defining a class that implements the Runnable interface?
+-   void run()
+6. 
+
 
 ## Data Race
 ### Problem occurs when
@@ -427,8 +435,9 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM0NzkyMjkxLC00Mjk1NjE0OTUsNzA5Nj
-k2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUx
-NSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMT
-QwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTE2MDk2NDg3MjMsLTQyOTU2MTQ5NSw3MD
+k2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3
+NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC
+0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+
 -->
