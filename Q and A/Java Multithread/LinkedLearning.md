@@ -279,10 +279,16 @@ public class Shopper extends Thread {
 }
 ```
 ### Sychronized Statement
-- 
+- Speicfy the object to provide the intrinsic lock 
+```
+synchronized (object) {
+	// protected code
+}
+```
+- Before a thread can execute the code contained within the synchronized statement, it must first acquire
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MDk3MjUxMyw3MDk2OTY3NjMsLTE4MT
-g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
-OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
-0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTIxMTgzODIwNjQsNzA5Njk2NzYzLC0xOD
+E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
+OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
+wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
