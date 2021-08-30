@@ -462,15 +462,17 @@ public class Shopper extends Thread {
 10. Which of these scenarios does NOT have the potential for a data race?
 - Two threads are both reading the same shared variable.
 ## Lock
+### Deadlock
+- If a thread tries to lock a mutex that it's already locked, it'll enter into a waiting list for that mutex, which results in something called a deadlock
+- All processes and threads are unable to continue executing
 ### Reentrant Lock
-- If a thread tries to lock a mutex that it's already locked, it'll enter into a waiting list for that mutex, which results in something called a deadlock, all processes and threads are unable to continue executing
-- 
+- There may be times when a program needs lock a mutex multiple times before unlocking it.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTE1ODc3MDksMTE2NTExMDgxLDE1OT
-I5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1
-MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMT
-M0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQx
-Nzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mj
+k0ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUx
+OSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMz
+Q1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3
+NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
