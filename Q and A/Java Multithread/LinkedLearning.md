@@ -466,13 +466,17 @@ public class Shopper extends Thread {
 - If a thread tries to lock a mutex that it's already locked, it'll enter into a waiting list for that mutex, which results in something called a deadlock
 - All processes and threads are unable to continue executing
 ### Reentrant Lock
-- There may be times when a program needs lock a mutex multiple times before unlocking it. In tha
+- There may be times when a program needs lock a mutex multiple times before unlocking it. In that case, you should use a reentrant lock
+- A particulr type of mutex that can be locked multiple times by the same process or thread.
+- Internally, reentrant mutex keeps track of how many times it's been locked by the owing thread.
+- It has to be unlocked an equal number of times as it was locked
+- 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MjkyMTI0NywyMDY5Mjc1NDE5LDExNj
-UxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYz
-LC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMT
-A0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgx
-MTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbNjkxMTg3ODQ3LDIwNjkyNzU0MTksMTE2NT
+ExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMs
+LTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMD
+Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
+OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
