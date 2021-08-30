@@ -273,14 +273,15 @@ public class Shopper extends Thread {
 	}
 	public void run() {
 		for (int i = 0; i < 10_000_000; i++) {
-
-}
+			addGarlic();
+		}
+	}
 }
 ```
 ### Sychronized Statement
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NjA2MTg4MSw3MDk2OTY3NjMsLTE4MT
+eyJoaXN0b3J5IjpbMTQ5MDk3MjUxMyw3MDk2OTY3NjMsLTE4MT
 g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
 OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
 0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
