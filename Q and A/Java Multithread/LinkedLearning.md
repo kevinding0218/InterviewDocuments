@@ -252,8 +252,13 @@ Thread olivia = new Thread(new ChefOlivia());
 9. A thread that calls the join method on another thread will enter the **BLOCKED** state until the other thread finishes executing.
 10. Why do you have to start a thread after creating it?
 -   Threads do not automatically run when instantiated.
-11. You can safely expect threads to execute in the same relative order that you create them.
-
+11. You can safely expect threads to execute in the same relative order that you create them. **FALSE**
+12. In most operating systems, the **operating system** determines when each of the threads and processes gets scheduled to execute.
+13. It is possible for two tasks to execute **concurrently** using a single-core processor.
+- Concurrent tasks can take turns to execute on the same processor.
+- Cannot execute in parallel
+-
+-
 -
 
 
@@ -448,7 +453,7 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODY3MzA2MDAsLTQyOTU2MTQ5NSw3MD
+eyJoaXN0b3J5IjpbLTE0NTEyNTMyMjQsLTQyOTU2MTQ5NSw3MD
 k2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3
 NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC
 0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
