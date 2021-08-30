@@ -12,8 +12,9 @@
 		- Accomplish a single task faster
 		- Accomplish more tasks in a given time
 ## Quiz
-1. In most modern multi-core CPUs, cache coherency is usually handled by the
-- processor hardware
+1. In most modern multi-core CPUs, cache coherency is usually handled by the **processor hardware**
+2. A key advantage of distributed memory architectures is that they are **more scalable** than shared memory systems.
+3. The four classifications of Flynn's Taxonomy are based on the number of concurrent `_____` streams and `_____` streams available in the architecture.
 
 ## Thread vs Process
 ### Process
@@ -418,7 +419,7 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTQ2OTcyNDAsLTQyOTU2MTQ5NSw3MD
+eyJoaXN0b3J5IjpbLTEwNDIxMDEzNTYsLTQyOTU2MTQ5NSw3MD
 k2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3
 NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC
 0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
