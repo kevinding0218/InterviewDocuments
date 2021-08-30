@@ -233,7 +233,7 @@ Thread olivia = new Thread(new ChefOlivia());
 1. A Java thread can be turned into a daemon thread after it has been started. **False**
 2. If a daemon thread in Java creates another thread, that child thread will **inherit the daemon status of its parent thread.**
 3. Why would you use daemon threads to handle continuous background tasks?
-- The daemon thread will not prevent the program from terminating when the main thread is finished.
+- The daemon thread will **not prevent the program from terminating when the main thread is finished**.
 4. Why can it be risky to use a daemon thread to perform a task that involves writing data to a log file?
 - The log file could be corrupted.
 - A daemon thread will be abruptly terminated when the main thread finishes. If that occurs during a write operation the file could be corrupted.
@@ -245,7 +245,7 @@ Thread olivia = new Thread(new ChefOlivia());
 7. What two states do Java threads have in addition to the standard four thread states? (NEW, RUNNABLE, BLOCKED, TERMINATED)
 -   WAITING and TIMED_WAITING
 8. Why would ThreadA call the ThreadB.join() method?
-- ThreadA needs to wait until after ThreadB has terminated to continue.
+- **ThreadA needs to wait until after ThreadB has terminated to continue**.
 - For example, Thread A could be Main Thread and Thread B would be a new instance of Thread Object
 9. A thread that calls the join method on another thread will enter the **BLOCKED** state until the other thread finishes executing.
 10. Why do you have to start a thread after creating it?
@@ -258,8 +258,8 @@ Thread olivia = new Thread(new ChefOlivia());
 14. Which of these applications would benefit the most from parallel execution?
 -  math library for processing large matrices
 	- Mathematical operations on matrices are computationally intensive and therefore well suited to benefit from parallel execution.
-- Following are not benefit from parallel execution
-	- The graphical user interface (GUI) should be structured for concurrency, but as an I/O bound task, it will generally run as well with parallel execution as without.
+- Following are **NOT** benefit from parallel execution
+	- The graphical user interface (**GUI**) should be structured for **concurrency**, but as an I/O bound task, it will generally run as well with parallel execution as without.
 	- System logging application that frequently writes to a database, The logging application should execute concurrent to other programs, but the access times to write to the database will be a limiting factor in it's execution speed. It is I/O bound and therefore will not benefit significantly from parallel execution.
 15. Concurrent tasks execute at the same time. **False**
 - Concurrency describes the structure that enables a program to execute in parallel (given the necessary hardware), but a concurrent program is not inherently parallel.
@@ -465,7 +465,7 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3OTc0MTA0NywxNTkyOTQ4NjEzLC00Mj
+eyJoaXN0b3J5IjpbLTg5MjY5MjA1NSwxNTkyOTQ4NjEzLC00Mj
 k1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3
 NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMj
 EyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0
