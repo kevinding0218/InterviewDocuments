@@ -469,14 +469,15 @@ public class Shopper extends Thread {
 - There may be times when a program needs lock a mutex multiple times before unlocking it. In that case, you should use a reentrant lock
 - A particulr type of mutex that can be locked multiple times by the same process or thread.
 - Internally, reentrant mutex keeps track of how many times it's been locked by the owing thread.
-- It has to be unlocked an equal number of times as it was locked
+- It has to be unlocked an equal number of times as it was locked to fully release it before another thread can lock it.
+- 
 - 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkxMTg3ODQ3LDIwNjkyNzU0MTksMTE2NT
-ExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMs
-LTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMD
-Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
-OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTEwNDA5NjM2ODEsMjA2OTI3NTQxOSwxMT
+Y1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2
+MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMj
+EwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4
+MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
