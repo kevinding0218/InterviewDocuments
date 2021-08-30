@@ -487,12 +487,12 @@ public class Shopper extends Thread {
 - It returns immediately and one of two things will happen, let the thread know whether or not it was successful in acquiring the lock.
 	- If the mutex is available, lock it and return TRUE
 	- If the mutex is unavailable, immediately return FALSE
-
+- For example, it's like you have a party going on in your house but only one restroom, if you need to go to the restroom, knock the door and know it was occupied/locked, you can en may save time and do something else
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg5ODU5OTc1LDkxNzY0ODk2MSwyMDY5Mj
-c1NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUs
-NzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3Mz
-A0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgz
-NiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml
-19
+eyJoaXN0b3J5IjpbLTEwNjQ5ODQ5OCw5MTc2NDg5NjEsMjA2OT
+I3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1
+LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3Nz
+MwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4
+MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4Nz
+JdfQ==
 -->
