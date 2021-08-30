@@ -14,7 +14,8 @@
 ## Quiz
 1. In most modern multi-core CPUs, cache coherency is usually handled by the **processor hardware**
 2. A key advantage of distributed memory architectures is that they are **more scalable** than shared memory systems.
-3. The four classifications of Flynn's Taxonomy are based on the number of concurrent `_____` streams and `_____` streams available in the architecture.
+3. The four classifications of Flynn's Taxonomy are based on the number of concurrent **instruction** streams and **data** streams available in the architecture.
+4. Parallel computing can increase the `_____`.
 
 ## Thread vs Process
 ### Process
@@ -419,7 +420,7 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDIxMDEzNTYsLTQyOTU2MTQ5NSw3MD
+eyJoaXN0b3J5IjpbLTE5NzA3NjQzNDUsLTQyOTU2MTQ5NSw3MD
 k2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3
 NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC
 0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
