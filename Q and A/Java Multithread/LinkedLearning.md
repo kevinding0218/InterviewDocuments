@@ -244,7 +244,7 @@ Thread olivia = new Thread(new ChefOlivia());
 - Used to prevent multiple threads from simultaneously accessing a shared resource, **forcing them to take turns**
 - For example, like we only have one Lock, called pencil between two threads who tries to update a single garlicCount 
 	- Now, Thread II will wait to execute until Thread I finishes its `run()` method at 5 times.
-	- Totally the program takes about 500 * 10 = 5 seconds to finish executing
+	- Totally the program takes about 500ms * 10 = 5 seconds to finish executing
 	- Since each thread does its thinking while holding onto the pencil, the other thread is waiting outside the critical section during that time, 
 ```
 public class Shopper extends Thread {
@@ -265,6 +265,7 @@ public class Shopper extends Thread {
 ```
 - For another example, since above code the critical section is way bigger than it needs to be, I only really need to protect `garlicCount++`
 	- Now program will run twice as fast, because the threads aren't holding onto the pencil while they're busy thinking
+	- Thinking messages appear in paris, and only takes about 500ms * 5 = 2.5 seconds to finish
 ```
 public class Shopper extends Thread {
 	static int garlicCount = 0;
@@ -286,6 +287,24 @@ public class Shopper extends Thread {
 - The operation to acquire a lock, **uninterruptible**
 - It's always executed as a single, indivisible action, relative to other threads
 - Appears to happen instantaneously, **cannot** be interrupted by other concurrent threads.
+- For example
+```
+public class Shopper extends Thread {
+	static AtomicInteger garlicCount = new AtomicInteger(0);
+	static Lock pencil = new ReentrantLock();
+	public void run() {
+		for (int i = 0; i < 5; i++) {
+			pencil.lock();
+			garlicCount++;
+			pencil.unlock();
+			System.out.println(Thread.currentThread().getName() + " is thinking.");
+			try {
+			    Thread.sleep(500);
+			} catch (InterruptedException e) { e.printStackTrace(); }
+		}
+	}
+}
+```
 ### Acquiring a Lock
 - If lock is already taken, block/wait for it to be available
 - Don't forget to unblock
@@ -379,7 +398,7 @@ public class Shopper extends Thread {
 - Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwOTE4MzYyMSw3MDk2OTY3NjMsLTE4MT
+eyJoaXN0b3J5IjpbMTk0OTEyNTEwNSw3MDk2OTY3NjMsLTE4MT
 g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
 OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
 0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
