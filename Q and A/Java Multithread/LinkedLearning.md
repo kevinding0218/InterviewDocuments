@@ -263,7 +263,8 @@ public class Shopper extends Thread {
 	}
 }
 ```
-- For another example, since above code the critical section is way bigger than it needs to be, I only really need to protect `garlicCount
+- For another example, since above code the critical section is way bigger than it needs to be, I only really need to protect `garlicCount++`
+	- Now program will run twice as fast, because the threads aren't holding onto the pencil while they're busy thinking
 ```
 public class Shopper extends Thread {
 	static int garlicCount = 0;
@@ -378,7 +379,7 @@ public class Shopper extends Thread {
 - Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MTA1MjE2Myw3MDk2OTY3NjMsLTE4MT
+eyJoaXN0b3J5IjpbLTYwOTE4MzYyMSw3MDk2OTY3NjMsLTE4MT
 g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
 OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
 0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
