@@ -482,13 +482,17 @@ public class Shopper extends Thread {
 	- `getHoldCount()` to check how many lock are performed on current reentrant lock
 - ReentrantReadWriteLock.ReadLock
 - ReentrantReadWriteLock.WriteLock
-
+### Try Lock
+- A non-blocking lock/acquire method for mutex
+- It returns immediately and one of two things will happen
+	- If the mutex is available, lock it and return TRUE
+	- If the mutex is unavailable, immediately return FALSE
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTMwNTMzNyw5MTc2NDg5NjEsMjA2OT
-I3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1
-LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3Nz
-MwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4
-MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4Nz
-JdfQ==
+eyJoaXN0b3J5IjpbODIzOTEwNTk3LDkxNzY0ODk2MSwyMDY5Mj
+c1NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUs
+NzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3Mz
+A0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgz
+NiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml
+19
 -->
