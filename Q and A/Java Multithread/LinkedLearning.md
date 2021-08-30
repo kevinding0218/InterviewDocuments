@@ -487,13 +487,15 @@ public class Shopper extends Thread {
 - It returns immediately and one of two things will happen, let the thread know whether or not it was successful in acquiring the lock.
 	- If the mutex is available, lock it and return TRUE
 	- If the mutex is unavailable, immediately return FALSE
-- Much faster than traditional `lock()` as when one of the threads gets its turn in the critical section with the `tryLock` method in place, 
+- Much faster than traditional `lock()` as when one of the threads gets its turn in the critical section with the `tryLock` method in place, the other thread is able to jump past that section of code and is freed up to accomplish other useful things.
 - For example, it's like you have a party going on in your house but only one restroom, if you need to go to the restroom, knock the door and know it was occupied/locked, you can either stand there and wait until someone come out or you may save time and do something else. As long as the restroom is available, anyone can access it from their own activities.
+### Read-write Lock
+- It's Okay to all
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1ODEwNDc4OCwtMTM1NTY5NjI0MSw5MT
-c2NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYx
-MywtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMT
-g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
-MDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNj
-ksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTEzMTIwMzIzMDMsLTEzNTU2OTYyNDEsOT
+E3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2
+MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLT
+E4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgz
+MDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3Mz
+Y5LC0xNTQxODMzODcyXX0=
 -->
