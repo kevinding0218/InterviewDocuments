@@ -253,10 +253,14 @@ Thread olivia = new Thread(new ChefOlivia());
 ### Tips
 - Keep protected sections of code as short as possible
 - Only protect the code sections which needs to use the shared resource, not anything else.
-
+## Sychronized
+### Intrinsic Locks
+- Every Java Object has an intrinsitc lock associated with it
+- A thread that needs exclusive access to an object's fields has to acquire that object's lock before accessing them and then release that intrinsic lock when it's don
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xOD
-c1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAw
-MDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OS
-wtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMTI1NzUwMTg4LDcwOTY5Njc2MywtMTgxOD
+gyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5
+NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLT
+EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
