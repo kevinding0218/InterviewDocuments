@@ -496,12 +496,16 @@ public class Shopper extends Thread {
 - Read-write lock can lock in two ways
 	- It can be locked in a shared read mode that allows multiple threads that only need to read simultaneously to lock it
 	- It can be locked in an exclusive write mode that limits access to only one thread at a time, allowing that thread to safely write to the shared resource.
+#### ReadWriteLock Interface
+- Implemented by ReentrantReadWriteLock class
+- `readLock()` and `writeLock()`
+	- both method returns a `Lock` oject which we can then call the lock and unlock methods on.
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOT
-E3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2
-MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLT
-E4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgz
-MDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3Mz
-Y5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTEwODE3NzAzODEsLTE3Mzk4NjQzMDksLT
+EzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTEx
+MDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLT
+E4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1
+NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOT
+U1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
