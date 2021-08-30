@@ -315,9 +315,8 @@ public class Shopper extends Thread {
 	}
 }
 ```
-- For another example, if I replace the synchonized object with **this**,  I'll get incorrect result.
-	- Because each of the shopper threads is acquiring and releasing the intrinsic lock associated with their own instance.
-	- They are not synchronized to the same object now so the data race occurs.
+- For another example, if I replace the synchonized object with **garlicCount ** and change its type from `int` to `Integer` because I need to use an object for synchronization, and `garlicCount` is currently just a primitive int variable,  I'll still get incorrect result.
+	- Because `Integer` object is **Immutable**, once you create an Integer instance, you cannot chang
 ```
 public class Shopper extends Thread {
 	static Integer garlicCount = 0;
@@ -331,8 +330,8 @@ public class Shopper extends Thread {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTkwMTAwNjYsNzA5Njk2NzYzLC0xOD
-E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
-OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
-wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTE2NjU5NTg2Miw3MDk2OTY3NjMsLTE4MT
+g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
+OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
+0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
