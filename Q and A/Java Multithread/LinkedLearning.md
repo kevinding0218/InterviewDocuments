@@ -258,9 +258,9 @@ Thread olivia = new Thread(new ChefOlivia());
 14. Which of these applications would benefit the most from parallel execution?
 -  math library for processing large matrices
 	- Mathematical operations on matrices are computationally intensive and therefore well suited to benefit from parallel execution.
-- Following are **NOT** benefit from parallel execution
-	- The graphical user interface (**GUI**) should be structured for **concurrency**, but as an I/O bound task, it will generally run as well with parallel execution as without.
-	- System logging application that frequently writes to a database, The logging application should execute concurrent to other programs, but the access times to write to the database will be a limiting factor in it's execution speed. It is I/O bound and therefore will not benefit significantly from parallel execution.
+- Following are **NOT** benefit from **parallel** execution
+	- The graphical user interface (**GUI**) should be structured for **concurrency**, but **as an I/O bound task**, it will generally run as well with parallel execution as without.
+	- System logging application that frequently writes to a database, The logging application should execute concurrent to other programs, but the access times to write to the database will be a limiting factor in it's execution speed. It is **I/O bound and therefore will not benefit significantly from parallel execution**.
 15. Concurrent tasks execute at the same time. **False**
 - Concurrency describes the structure that enables a program to execute in parallel (given the necessary hardware), but a concurrent program is not inherently parallel.
 16. The operating system assigns each process a unique **process ID number**.
@@ -465,9 +465,9 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MjY5MjA1NSwxNTkyOTQ4NjEzLC00Mj
-k1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3
-NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMj
-EyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0
-MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMTE2NTExMDgxLDE1OTI5NDg2MTMsLTQyOT
+U2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2
+MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMT
+IyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQx
+ODMzODcyXX0=
 -->
