@@ -15,7 +15,7 @@
 1. In most modern multi-core CPUs, cache coherency is usually handled by the **processor hardware**
 2. A key advantage of distributed memory architectures is that they are **more scalable** than shared memory systems.
 3. The four classifications of Flynn's Taxonomy are based on the number of concurrent **instruction** streams and **data** streams available in the architecture.
-4. Parallel computing can increase the `_____`.
+4. Parallel computing can increase the speed at which a **program executes a set number of tasks, number of tasks a program executes in a set of time and scale of problems a program can tackle**.
 
 ## Thread vs Process
 ### Process
@@ -420,9 +420,9 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzA3NjQzNDUsLTQyOTU2MTQ5NSw3MD
-k2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3
-NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC
-0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTEwODYwMDUwOSwtNDI5NTYxNDk1LDcwOT
+Y5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1
+MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLT
+E0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 
 -->
