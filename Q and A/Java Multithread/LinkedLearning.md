@@ -187,7 +187,6 @@ public class ChefOlivia implements Runnable {
 ```
 Thread olivia = new Thread(new ChefOlivia());
 ```
-#### 
 #### Thread vs Runnable
 ##### Extending Thread class
 - Cannot extend additional classes as Java does not allow multiple inheritance
@@ -216,8 +215,14 @@ Thread olivia = new Thread(new ChefOlivia());
 - That's fine from a garbage collection routine because all of the memory this process was using will **get cleared as part of terminating it**
 - However, if the daemon thread is doing some I/O operation, like writing to a file, then terminating in the middle of that operation could end up corruptting data
 	- If you detach a thread to make it a background task, make sure it won't have any negative side-effects!
+## Data Race
+### Problem occurs when
+- Two or more concurrent threads access the same memory location
+- At least one thread is modifying it
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMD
-Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
-OTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbNTg1NjAxNTIyLC0xODc1Mjg3NjI4LDc3Mz
+A0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgz
+NiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml
+19
 -->
