@@ -390,10 +390,14 @@ public class Shopper extends Thread {
 #### Locks
 - There maybe times when you have to work with locks in more complex ways, perhaps acquiring and releasing a series of locks in a nested or hand over hand manner. which is not possible with synchronized statement.
 - Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
+## Quiz
+1. Why should you avoid using Java's synchronized statement on an immutable object such as an Integer?
+- -   If you change that variable's value you will be synchronized to a different object as Immutablility
+2. 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NjgzMTE2OCw3MDk2OTY3NjMsLTE4MT
-g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
-OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
-0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTE3OTgxNjkxMTAsNzA5Njk2NzYzLC0xOD
+E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
+OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
+wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
