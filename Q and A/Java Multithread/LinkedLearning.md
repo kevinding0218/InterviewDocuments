@@ -250,10 +250,13 @@ Thread olivia = new Thread(new ChefOlivia());
 ### Acquiring a Lock
 - If lock is already taken, block/wait for it to be available
 - Don't forget to unblock
-- 
+### Tips
+- Keep protected sections of code as short as possible
+- Only protect the code sections which needs to use the shared resource, not anything else.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MTg2MTUzOCwtMTgxODgyMzUxOSwtMT
-g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
-MDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNj
-ksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xOD
+c1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAw
+MDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OS
+wtMTU0MTgzMzg3Ml19
 -->
