@@ -396,17 +396,21 @@ public class Shopper extends Thread {
 2. Which of these is an advantage of using the "synchronized" methods in Java instead of creating explicit Locks?
 - It is easier to implement and can prevent many common pitfalls of using Locks.
 3. Why are Java's Atomic variable classes unique?
-4. 
-
-- 
-
+-   Their values update as a single, uninterrupted operation which makes them "thread-safe."
+4. What happens if Thread A calls the lock() method on a Lock that is already possessed by Thread B?
+- Thread A will block and wait until Thread B calls the unlock() method.
+5. How many threads can possess a Lock at the same time?
+- 1
+6. What does it mean to protect a critical section of code with mutual exclusion?
+-   Prevent multiple threads from concurrently executing in the critical section.
+7. 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODY4NTQzODYsNzA5Njk2NzYzLC0xOD
-E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
-OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
-wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbOTczODA0MDgxLDcwOTY5Njc2MywtMTgxOD
+gyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5
+NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLT
+EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
