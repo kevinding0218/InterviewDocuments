@@ -477,11 +477,14 @@ public class Shopper extends Thread {
 	- Reentrant lock
 	- Recursive mutex
 	- Recursive lock
-
+### Java Class Implementing Lock Interface
+#### ReentrantLock
+#### ReentrantReadWriteLock.ReadLock
+#### ReentrantReadWriteLock.WriteLock
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNDYyNTg2LDIwNjkyNzU0MTksMTE2NT
+eyJoaXN0b3J5IjpbOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NT
 ExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMs
 LTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMD
 Q1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODEx
