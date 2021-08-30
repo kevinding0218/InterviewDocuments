@@ -287,6 +287,7 @@ synchronized (object) {
 ```
 - Before a thread can execute the code contained within the synchronized statement, it must first acquire the intrinsic lock associated with the specific object
 - Then when the thread is done, it will release its hold on that lock.
+- For example, below both threads will acquire the same intrinsic locks assocaited witht the shopper class before and after they increment the garlicCount.
 ```
 public class Shopper extends Thread {
 	static int garlicCount = 0;
@@ -300,8 +301,8 @@ public class Shopper extends Thread {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODkyOTI3MTIsNzA5Njk2NzYzLC0xOD
-E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
-OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
-wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTc3NzI4MjUwMCw3MDk2OTY3NjMsLTE4MT
+g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
+OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
+0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
