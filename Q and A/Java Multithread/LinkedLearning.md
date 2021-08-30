@@ -247,9 +247,12 @@ Thread olivia = new Thread(new ChefOlivia());
 - The operation to acquire a lock, **uninterruptible**
 - It's always executed as a single, indivisible action, relative to other threads
 - Appears to happen instantaneously, **cannot** be interrupted by other concurrent threads.
+### Acquiring a Lock
+- If lock is already taken, block/wait for it to be available
+- Don't forget to unblock
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyOTE2NjU3OSwtMTgxODgyMzUxOSwtMT
+eyJoaXN0b3J5IjpbMTc3MTg2MTUzOCwtMTgxODgyMzUxOSwtMT
 g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
 MDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNj
 ksLTE1NDE4MzM4NzJdfQ==
