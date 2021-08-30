@@ -492,11 +492,13 @@ public class Shopper extends Thread {
 ### Read-write Lock/Shared Mutex
 - It's Okay to allow multiple threads read from the same shared resource as long as no one else can change it
 - When we use a basic lock or a mutex or protect the sahred resource, we limit access so that only one of the threads can use it at a time. Regardless whether that thread is reading, writing or both. This works but not efficient when most of the threads is only to read
+- A thread trying to acquire the lock i
 - Read-write lock can lock in two ways
 	- It can be locked in a shared read mode that allows multiple threads that only need to read simultaneously to lock it
-	- It can be locked in an exclusive write mode that limits access to
+	- It can be locked in an exclusive write mode that limits access to only one thread at a time, allowing that thread to safely write to the shared resource.
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMDIzMDgwMCwtMTM1NTY5NjI0MSw5MT
+eyJoaXN0b3J5IjpbLTcxMTkyMDM2NCwtMTM1NTY5NjI0MSw5MT
 c2NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYx
 MywtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMT
 g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
