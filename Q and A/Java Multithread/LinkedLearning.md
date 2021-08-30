@@ -232,33 +232,32 @@ Thread olivia = new Thread(new ChefOlivia());
 ## Quiz
 1. A Java thread can be turned into a daemon thread after it has been started.
 - False
-2. If a daemon thread in Java creates another thread, that child thread will `_____`.
--   inherit the daemon status of its parent thread
+2. If a daemon thread in Java creates another thread, that child thread will **inherit the daemon status of its parent thread.**
 3. Why would you use daemon threads to handle continuous background tasks?
--   The daemon thread will not prevent the program from terminating when the main thread is finished.
+- The daemon thread will not prevent the program from terminating when the main thread is finished.
 4. Why can it be risky to use a daemon thread to perform a task that involves writing data to a log file?
-- -   The log file could be corrupted.
+- The log file could be corrupted.
 - A daemon thread will be abruptly terminated when the main thread finishes. If that occurs during a write operation the file could be corrupted.
 5. Which method must you include when defining a class that implements the Runnable interface?
--   void run()
+- void run()
 6. When defining a new Java class, which of these is NOT an advantage of implementing Java's Runnable interface rather than inheriting from the Thread class and overriding the run() method?
--   The class can inherit from multiple other classes.
+- The class can inherit from multiple other classes.
 - Java classes can only inherit from one other class. Java does not support multiple inheritance.
 7. What two states do Java threads have in addition to the standard four thread states? (NEW, RUNNABLE, BLOCKED, TERMINATED)
 -   WAITING and TIMED_WAITING
 8. Why would ThreadA call the ThreadB.join() method?
--   ThreadA needs to wait until after ThreadB has terminated to continue.
+- ThreadA needs to wait until after ThreadB has terminated to continue.
 - For example, Thread A could be Main Thread and Thread B would be a new instance of Thread Object
 9. A thread that calls the join method on another thread will enter the **BLOCKED** state until the other thread finishes executing.
 10. Why do you have to start a thread after creating it?
--   Threads do not automatically run when instantiated.
+- Threads do not automatically run when instantiated.
 11. You can safely expect threads to execute in the same relative order that you create them. **FALSE**
 12. In most operating systems, the **operating system** determines when each of the threads and processes gets scheduled to execute.
 13. It is possible for two tasks to execute **concurrently** using a single-core processor.
 - Concurrent tasks can take turns to execute on the same processor.
 - Cannot execute in parallel
 14. Which of these applications would benefit the most from parallel execution?
--   math library for processing large matrices
+-  math library for processing large matrices
 	- Mathematical operations on matrices are computationally intensive and therefore well suited to benefit from parallel execution.
 - Following are not benefit from parallel execution
 	- The graphical user interface (GUI) should be structured for concurrency, but as an I/O bound task, it will generally run as well with parallel execution as without.
@@ -272,14 +271,9 @@ Thread olivia = new Thread(new ChefOlivia());
 18. If you run multiple Java applications at the same time, they will execute in **separate JVM processes**
 - When you run a Java application, it executes within its own instance of the Java Virtual Machine (or JVM), and the operating system treats that instance of the JVM as its own independent process.
 19. Processes **require more overhead** to create than threads.
-20. A process contains one or more **threads**.
-
--
--
--
--
--
-
+20. A **process** contains one or more **threads**.
+21. Every thread is independent and has its own separate address space in memory. **FALSE**
+- Threads that belong to the same process share that process's address space.
 
 ## Data Race
 ### Problem occurs when
@@ -472,9 +466,9 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NTA2OTI1LDE1OTI5NDg2MTMsLTQyOT
-U2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2
-MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMT
-IyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQx
-ODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTM3MTUyMTg2OCwxNTkyOTQ4NjEzLC00Mj
+k1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3
+NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMj
+EyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0
+MTgzMzg3Ml19
 -->
