@@ -252,7 +252,8 @@ public class Shopper extends Thread {
 			pencil.lock();
 			garlicCount++;
 			pencil.unlock();
-			System.out.println(Thread.currentThread().getName() + " is thinki
+			System.out.println(Thread.currentThread().getName() + " is thinking.");
+			Thread.sleep(500);
 		}
 	}
 }
@@ -354,7 +355,7 @@ public class Shopper extends Thread {
 - Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MTA0MDQwMSw3MDk2OTY3NjMsLTE4MT
+eyJoaXN0b3J5IjpbMTU4MTQ0MjcxMCw3MDk2OTY3NjMsLTE4MT
 g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
 OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
 0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
