@@ -406,13 +406,17 @@ public class Shopper extends Thread {
 7. Using the ++ operator to increment a variable in Java executes as `_____` at the lowest level.
 - multiple instructions (Read & Update & Write)
 8.  In the Java program to demonstrate a data race, why did the data race only occur when each of the threads were incrementing a shared variable a large number of time?
-9. 
+- The large number of write operations on the shared variable provided more opportunities for the data race to occur.
+9. Why can potential data races be hard to identify?
+- The data race may not always occur during execution to cause a problem. 
+10. Which of these scenarios does NOT have the potential for a data race?
+- Two threads are both reading the same shared variable.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk5NTQ4OTg1LDcwOTY5Njc2MywtMTgxOD
-gyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5
-NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLT
-EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MT
+g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
+OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
+0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
