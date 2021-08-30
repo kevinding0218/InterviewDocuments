@@ -219,10 +219,11 @@ Thread olivia = new Thread(new ChefOlivia());
 ### Problem occurs when
 - Two or more concurrent threads access the same memory location
 - At least one thread is modifying it
+### Read-Modify-Write
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg1NjAxNTIyLC0xODc1Mjg3NjI4LDc3Mz
-A0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgz
-NiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml
-19
+eyJoaXN0b3J5IjpbMTcyNjkxNTgxOCwtMTg3NTI4NzYyOCw3Nz
+MwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4
+MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4Nz
+JdfQ==
 -->
