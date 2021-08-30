@@ -301,7 +301,8 @@ public class Shopper extends Thread {
 }
 ```
 - For another example, if I replace the synchonized object from `Shopper.class` with **this**,  I'll get incorrect result.
-	- Because each of the shopper threads is acquiring and releasing the intrinsic 
+	- Because each of the shopper threads is acquiring and releasing the intrinsic lock associated with their own instance.
+	- They are not synchronized to the same object now so the data race occurs.
 ```
 public class Shopper extends Thread {
 	static int garlicCount = 0;
@@ -315,7 +316,7 @@ public class Shopper extends Thread {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxODIyODAzMSw3MDk2OTY3NjMsLTE4MT
+eyJoaXN0b3J5IjpbLTY1MzYzNzMyNSw3MDk2OTY3NjMsLTE4MT
 g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
 OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
 0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
