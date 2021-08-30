@@ -11,6 +11,9 @@
 	- Parallel execution will increase the overall throughput of a program.
 		- Accomplish a single task faster
 		- Accomplish more tasks in a given time
+## Quiz
+1. In most modern multi-core CPUs, cache coherency is usually handled by the
+- processor hardware
 
 ## Thread vs Process
 ### Process
@@ -415,8 +418,9 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MT
-g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
-OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
-0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTE4NTQ2OTcyNDAsLTQyOTU2MTQ5NSw3MD
+k2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3
+NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC
+0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+
 -->
