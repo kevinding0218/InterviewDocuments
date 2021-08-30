@@ -490,9 +490,11 @@ public class Shopper extends Thread {
 - Much faster than traditional `lock()` as when one of the threads gets its turn in the critical section with the `tryLock` method in place, the other thread is able to jump past that section of code and is freed up to accomplish other useful things.
 - For example, it's like you have a party going on in your house but only one restroom, if you need to go to the restroom, knock the door and know it was occupied/locked, you can either stand there and wait until someone come out or you may save time and do something else. As long as the restroom is available, anyone can access it from their own activities.
 ### Read-write Lock
-- It's Okay to all
+- It's Okay to allow multiple threads read from the same shared resource as long as no one else can change it
+- When we use a basic lock or a mutex or protect the sahred resource, we limit access so that only one of the threads can use it at a time. Regardless whether that thread is reading, writing or both. T
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTIwMzIzMDMsLTEzNTU2OTYyNDEsOT
+eyJoaXN0b3J5IjpbLTEwOTA3ODA5NTksLTEzNTU2OTYyNDEsOT
 E3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2
 MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLT
 E4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgz
