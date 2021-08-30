@@ -316,7 +316,9 @@ public class Shopper extends Thread {
 }
 ```
 - For another example, if I replace the synchonized object with **garlicCount ** and change its type from `int` to `Integer` because I need to use an object for synchronization, and `garlicCount` is currently just a primitive int variable,  I'll still get incorrect result.
-	- Because `Integer` object is **Immutable**, once you create an Integer instance, you cannot chang
+	- Because `Integer` object is **Immutable**, once you create an Integer instance, you cannot change its value 
+	- So that what happens is, every time a thread executes the `garlicCount++` operation, Java instantiate a new integer object which will have a different object ID.
+	- So each time the thread loops back around a
 ```
 public class Shopper extends Thread {
 	static Integer garlicCount = 0;
@@ -330,7 +332,7 @@ public class Shopper extends Thread {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjU5NTg2Miw3MDk2OTY3NjMsLTE4MT
+eyJoaXN0b3J5IjpbMTIzODM4MTkxMiw3MDk2OTY3NjMsLTE4MT
 g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
 OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
 0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
