@@ -484,12 +484,12 @@ public class Shopper extends Thread {
 - ReentrantReadWriteLock.WriteLock
 ### Try Lock
 - A non-blocking lock/acquire method for mutex
-- It returns immediately and one of two things will happen
+- It returns immediately and one of two things will happen, let the thread know whether or not it was successful in acquiring the lock.
 	- If the mutex is available, lock it and return TRUE
 	- If the mutex is unavailable, immediately return FALSE
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIzOTEwNTk3LDkxNzY0ODk2MSwyMDY5Mj
+eyJoaXN0b3J5IjpbMjg5ODU5OTc1LDkxNzY0ODk2MSwyMDY5Mj
 c1NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUs
 NzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3Mz
 A0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgz
