@@ -238,11 +238,14 @@ Thread olivia = new Thread(new ChefOlivia());
 - Part of a program that accesses a shared resource, such as a data structure memory, or an external device.
 - It may not operate correctly, if multiple threads concurrently access it.
 - This critical section needs to be protected, so that it only allows one thread or process to execute in it at a time.
-### Mutex (Lock)
-
+### Mutex Exclusion/Lock
+- A mechanism to implement mutual exclusion
+- Only one thread or process can possess at a time
+- Used to prevent multiple threads from simultaneously accessing a shared resource.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyOTczOTk1NSwtMTgxODgyMzUxOSwtMT
-g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
-MDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNj
-ksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbMzgyNjQyNTQ1LC0xODE4ODIzNTE5LC0xOD
+c1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAw
+MDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OS
+wtMTU0MTgzMzg3Ml19
 -->
