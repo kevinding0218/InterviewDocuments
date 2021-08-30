@@ -241,11 +241,14 @@ Thread olivia = new Thread(new ChefOlivia());
 ### Mutex Exclusion/Lock
 - A mechanism to implement mutual exclusion
 - Only one thread or process can possess at a time
-- Used to prevent multiple threads from simultaneously accessing a shared resource.
+- Used to prevent multiple threads from simultaneously accessing a shared resource, **forcing them to take turns**
+- For example, like we only have one pencil between two threads who tries to update a single note
+### Atomic Operations
+- The operation to acquire a lock
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgyNjQyNTQ1LC0xODE4ODIzNTE5LC0xOD
-c1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAw
-MDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OS
-wtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbMTgyOTk1NDM0OCwtMTgxODgyMzUxOSwtMT
+g3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMw
+MDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNj
+ksLTE1NDE4MzM4NzJdfQ==
 -->
