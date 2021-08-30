@@ -253,7 +253,9 @@ public class Shopper extends Thread {
 			garlicCount++;
 			pencil.unlock();
 			System.out.println(Thread.currentThread().getName() + " is thinking.");
-			Thread.sleep(500);
+			try {
+			    Thread.sleep(500);
+			} catch (InterruptedException e) { e.printStackTrace(); }
 		}
 	}
 }
@@ -355,8 +357,8 @@ public class Shopper extends Thread {
 - Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MTQ0MjcxMCw3MDk2OTY3NjMsLTE4MT
-g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
-OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
-0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbLTIwMTUyODUxNDAsNzA5Njk2NzYzLC0xOD
+E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
+OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
+wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
