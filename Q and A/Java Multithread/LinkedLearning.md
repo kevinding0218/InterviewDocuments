@@ -334,9 +334,12 @@ public class Shopper extends Thread {
 ### Locks vs Atomic variables vs Synchronized methods vs Synchronized statements
 #### Synchronized method and statements
 - **Easier to implement and prevents many pitfalls** that can occur when using **Locks**
-- 
+- Good default option
+#### Locks
+- There maybe times when you have to work with locks in more complex ways, perhaps acquiring and releasing a series of locks in a nested or hand over hand manner. which is not possible with synchronized statement.
+- Provide more flexibility to impelmen
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NDc5MDM1MSw3MDk2OTY3NjMsLTE4MT
+eyJoaXN0b3J5IjpbLTQxMDY3NDExMyw3MDk2OTY3NjMsLTE4MT
 g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
 OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
 0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
