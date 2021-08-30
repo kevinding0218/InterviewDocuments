@@ -220,10 +220,11 @@ Thread olivia = new Thread(new ChefOlivia());
 - Two or more concurrent threads access the same memory location
 - At least one thread is modifying it
 ### Read-Modify-Write
-
+- As concurrent threads, it's up to the operating system to schedule when each thread get to execute.
+- Right after thread 1 read the value from that shared memory, thread 1 gets paused. Thread 2 becomes active and changed the number, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNjkxNTgxOCwtMTg3NTI4NzYyOCw3Nz
-MwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4
-MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4Nz
-JdfQ==
+eyJoaXN0b3J5IjpbLTE5NTc3MTY2MjQsLTE4NzUyODc2MjgsNz
+czMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5
+ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzOD
+cyXX0=
 -->
