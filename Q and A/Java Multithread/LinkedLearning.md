@@ -257,6 +257,10 @@ Thread olivia = new Thread(new ChefOlivia());
 13. It is possible for two tasks to execute **concurrently** using a single-core processor.
 - Concurrent tasks can take turns to execute on the same processor.
 - Cannot execute in parallel
+14. Which of these applications would benefit the most from parallel execution?
+-   math library for processing large matrices
+	- Mathematical operations on matrices are computationally intensive and therefore well suited to benefit from parallel execution.
+- The graphical user interface (GUI) should be structured for concurrency, but as an I/O bound task, it will generally run as well with parallel execution as without.
 -
 -
 -
@@ -453,9 +457,8 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTEyNTMyMjQsLTQyOTU2MTQ5NSw3MD
-k2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3
-NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC
-0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
-
+eyJoaXN0b3J5IjpbMzgyNDAwNzQsLTQyOTU2MTQ5NSw3MDk2OT
+Y3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1
+LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xND
+AwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
