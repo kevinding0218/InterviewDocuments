@@ -269,8 +269,12 @@ Thread olivia = new Thread(new ChefOlivia());
 17. A hyperthreaded processor with eight logical cores will usually provide **lower** performance compared to a regular processor with eight physical cores.
 - Hyperthreading takes advantage of unused parts of the processor, so if one thread is paused or isn't using a certain resource, then the other thread may be able to use it. 
 - Under certain workloads, that can create performance improvements, but it’s highly application dependent.
-18. If you run multiple Java applications at the same time, they will execute in `_____`.
+18. If you run multiple Java applications at the same time, they will execute in **separate JVM processes**
+- When you run a Java application, it executes within its own instance of the Java Virtual Machine (or JVM), and the operating system treats that instance of the JVM as its own independent process.
+19. Processes **require more overhead** to create than threads.
+20. A process contains one or more **threads**.
 
+-
 -
 -
 -
@@ -468,9 +472,9 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODY0MDIzNDUsMTU5Mjk0ODYxMywtND
-I5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4
-NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLD
-IxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1
-NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbMTk4NTA2OTI1LDE1OTI5NDg2MTMsLTQyOT
+U2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2
+MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMT
+IyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQx
+ODMzODcyXX0=
 -->
