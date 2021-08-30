@@ -238,11 +238,14 @@ Thread olivia = new Thread(new ChefOlivia());
 - Part of a program that accesses a shared resource, such as a data structure memory, or an external device.
 - It may not operate correctly, if multiple threads concurrently access it.
 - This critical section needs to be protected, so that it only allows one thread or process to execute in it at a time.
-### Mutex Exclusion/Lock
+### Lock
 - A mechanism to implement mutual exclusion
 - Only one thread or process can possess at a time
 - Used to prevent multiple threads from simultaneously accessing a shared resource, **forcing them to take turns**
 - For example, like we only have one pencil between two threads who tries to update a single note
+```
+class 
+```
 ### Atomic Operations
 - The operation to acquire a lock, **uninterruptible**
 - It's always executed as a single, indivisible action, relative to other threads
@@ -337,10 +340,11 @@ public class Shopper extends Thread {
 - Good default option
 #### Locks
 - There maybe times when you have to work with locks in more complex ways, perhaps acquiring and releasing a series of locks in a nested or hand over hand manner. which is not possible with synchronized statement.
-- Provide more flexibility to impelmen
+- Provide more flexibility to be acquired and released in different scopes and to be acquired and released in any order.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMDY3NDExMyw3MDk2OTY3NjMsLTE4MT
-g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
-OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
-0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbNDMyMDc5MzUsNzA5Njk2NzYzLC0xODE4OD
+IzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1
+LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMT
+M0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
