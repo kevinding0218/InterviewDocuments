@@ -466,13 +466,13 @@ public class Shopper extends Thread {
 - If a thread tries to lock a mutex that it's already locked, it'll enter into a waiting list for that mutex, which results in something called a deadlock
 - All processes and threads are unable to continue executing
 ### Reentrant Lock
-- There may be times when a program needs lock a mutex multiple times before unlocking it.
+- There may be times when a program needs lock a mutex multiple times before unlocking it. In tha
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mj
-k0ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUx
-OSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMz
-Q1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3
-NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbMTI1MjkyMTI0NywyMDY5Mjc1NDE5LDExNj
+UxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYz
+LC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMT
+A0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgx
+MTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
