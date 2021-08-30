@@ -261,10 +261,12 @@ Thread olivia = new Thread(new ChefOlivia());
 - Add **synchronized** keyword to method declaration
 - When a thread **invokes a synchronized method, it automatically acquires the intrinstic lock for that method object, that will prevent other threads that invoke a synchronized method on the same object from interleaving exection**
 - When a thread tries to invoke a synchronized method while another thread is executing a synchronized method for that same object, **the second thread will suspend execution until the first thread is done and exits**.
+- For example, below that I mark synchronized of the method with **static**, 
+	- this method is associated with the shopper class, and not a specific instance of shopper.
 ### Sychronized Statement
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODcxMzQzNDUsNzA5Njk2NzYzLC0xOD
+eyJoaXN0b3J5IjpbLTEzNTQ5OTA5NjAsNzA5Njk2NzYzLC0xOD
 E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
 OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
 wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
