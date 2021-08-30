@@ -264,12 +264,24 @@ Thread olivia = new Thread(new ChefOlivia());
 - For example, below that I mark synchronized of the method with **static**, 
 	- this method is associated with the shopper class, and not a specific instance of shopper.
 	- By doing so, when either thread invokes the synchonized addGarlic method, it will acquire the intrinstic lock that's associated with the class object
-	- If removed the static keyword, then each shopper instance will invoke their own instance of the `addGarlick()` method, 
+	- If removed the static keyword, then each shopper instance will invoke their own instance of the `addGarlick()` method,  which associated with their own object's intrinstic lock, which would not be working as expected
+```
+public class Shopper extends Thread {
+	static int garlicCount = 0;
+	private synchronized void addGarlic() {
+		garlicCount++;
+	}
+	public void run() {
+		for (int i = 0; i < 10_000_000; i++) {
+
+}
+}
+```
 ### Sychronized Statement
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM5NTgzNzgyLDcwOTY5Njc2MywtMTgxOD
-gyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5
-NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLT
-EzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbMTc1NjA2MTg4MSw3MDk2OTY3NjMsLTE4MT
+g4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5
+OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOTU1LC
+0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
