@@ -221,10 +221,10 @@ Thread olivia = new Thread(new ChefOlivia());
 - At least one thread is modifying it
 ### Read-Modify-Write
 - As concurrent threads, it's up to the operating system to schedule when each thread get to execute.
-- Right after thread 1 read the value from that shared memory, thread 1 gets paused. Thread 2 becomes active and changed the number, 
+- Right after Thread I read the value from that shared memory, Thread I gets paused. Thread II becomes active and changed the number, then Thread I become active and at this point, Thread  I was operating with old data in its local memory and overrite the value that was updated by Thread  II in t
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTc3MTY2MjQsLTE4NzUyODc2MjgsNz
-czMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5
-ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzOD
-cyXX0=
+eyJoaXN0b3J5IjpbMjA5MDE1OTM5NCwtMTg3NTI4NzYyOCw3Nz
+MwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4
+MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4Nz
+JdfQ==
 -->
