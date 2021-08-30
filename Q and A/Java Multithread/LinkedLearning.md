@@ -229,6 +229,13 @@ Thread olivia = new Thread(new ChefOlivia());
 - That's fine from a garbage collection routine because all of the memory this process was using will **get cleared as part of terminating it**
 - However, if the daemon thread is doing some I/O operation, like writing to a file, then terminating in the middle of that operation could end up corruptting data
 	- If you detach a thread to make it a background task, make sure it won't have any negative side-effects!
+## Quiz
+1. A Java thread can be turned into a daemon thread after it has been started.
+- False
+2. If a daemon thread in Java creates another thread, that child thread will `_____`.
+-   inherit the daemon status of its parent thread
+3. Why would you use daemon threads to handle continuous background tasks?
+
 ## Data Race
 ### Problem occurs when
 - Two or more concurrent threads access the same memory location
@@ -420,9 +427,8 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODYwMDUwOSwtNDI5NTYxNDk1LDcwOT
-Y5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1
-MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLT
-E0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
-
+eyJoaXN0b3J5IjpbOTM0NzkyMjkxLC00Mjk1NjE0OTUsNzA5Nj
+k2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUx
+NSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMT
+QwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 -->
