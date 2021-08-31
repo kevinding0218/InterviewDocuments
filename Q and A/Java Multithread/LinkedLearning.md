@@ -570,12 +570,45 @@ new Philosopher("Steve", chopstickA, chopstickB).start();
 - If one or more processor thread takes action to resolve the deadlock, then those threads can end up being overly polite and stuck in a livelock, 
 #### How to fix
 - Ensure that only one process takes action, chosen by priority or some other mechanism like random selection.
+- For example, let thread to sleep at a random period
+```
+public void run() {
+        while(sushiCount > 0) { // eat sushi until it's all gone
+
+            // pick up chopsticks
+            firstChopstick.lock();
+            if (! secondChopstick.tryLock()) {
+                System.out.println(this.getName() + " released their first chopstick.");
+                firstChopstick.unlock();
+                try {
+                    Thread.sleep(rps.nextInt(3));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                try {
+                    // take a piece of sushi
+                    if (sushiCount > 0) {
+                        sushiCount--;
+                        System.out.println(this.getName() + " took a piece! Sushi remaining: " + sushiCount);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    // put down chopsticks
+                    secondChopstick.unlock();
+                    firstChopstick.unlock();
+                }
+            }
+        }
+    }
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOT
-Q0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMw
-OSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMT
-Y1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2
-MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMj
-EwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4
-MTE5NTVdfQ==
+eyJoaXN0b3J5IjpbLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNj
+Y5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1
+OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMj
+A2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYx
+NDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOC
+w3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5
+ODk4MzZdfQ==
 -->
