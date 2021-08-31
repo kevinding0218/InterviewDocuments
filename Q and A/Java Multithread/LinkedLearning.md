@@ -673,7 +673,8 @@ public void run() {
 7. What happens when a thread terminates while still holding onto a Lock?
 - The Lock will be stuck in the locked state forever and no other threads will be able to acquire it.
 8. Which of these is a possible strategy to prevent deadlocks when multiple threads will need to acquire multiple locks?
-
+- Prioritize the locks so that all threads will acquire them in the same relative order.
+9. The Dining Philosophers scenario demonstrates the deadlock situation that can occur when **multiple threads** need(s) to acquire **multiple locks**.
 -
 -
 -
@@ -681,7 +682,7 @@ public void run() {
 -
 -
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMDA5NTM0NCwtMjAzMDI0MTY3Nyw1MD
+eyJoaXN0b3J5IjpbMTk1Mzk1MzI3MSwtMjAzMDI0MTY3Nyw1MD
 U2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkx
 LC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLD
 kxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4
