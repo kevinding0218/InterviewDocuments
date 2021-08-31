@@ -720,7 +720,9 @@ private static Condition soupTaken = slowCookLid.newCondition();
 - Basic condition pattern invovles
 	- locking the mutex
 	- using a while loop to check if the condition we're looking for is true
-		- If not true, wai
+		- If not true, wait on the condition variable for another loop iteration
+		- if true, we'll continue pass the loop to execute the critical section of code
+	- finally release the lock
 ```
 mutex.lock();
 while(some condition is not true) {
@@ -730,11 +732,11 @@ while(some condition is not true) {
 mutex.unlock();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3Mzc2MDY5MywtMjExNDY4NzY2NSwxMj
-UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
-MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLT
-E3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3
-NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2MT
-MsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4
-NzUyODc2MjhdfQ==
+eyJoaXN0b3J5IjpbLTE0MjY4NTUwODcsLTIxMTQ2ODc2NjUsMT
+I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
+NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC
+0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkx
+NzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4Nj
+EzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0x
+ODc1Mjg3NjI4XX0=
 -->
