@@ -521,7 +521,7 @@ public class Shopper extends Thread {
 ### What is deadlock
 - Each member is waiting for another member to take action
 - For example Dining Philosipher, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up the closet chopstick to us and waiting for the other to release one.
-- How to solve, we can prioritize the two chopstick so if the higher priority chopstick is taken/locked, the other thread cannot continue access and acquire the lower priority/2nd 
+- How to solve, we can prioritize the two chopstick so if the 1st/higher priority chopstick is taken/locked, the other thread cannot continue access and acquire the 2nd/lower priority chopstick
 - We want our program to be free from deadlock and guarantee liveness
 ### Liveness
 - A set of properties that require concurrent programs to make progress
@@ -529,11 +529,11 @@ public class Shopper extends Thread {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTQ2MTk1NDAsLTE3NTkzMTQwNTgsLT
-E3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjky
-NzU0MTksMTE2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NS
-w3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzcz
-MDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5OD
-M2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcy
-XX0=
+eyJoaXN0b3J5IjpbMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMT
+czOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3
+NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LD
+cwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMw
+NDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4Mz
+YsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJd
+fQ==
 -->
