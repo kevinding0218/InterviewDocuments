@@ -785,6 +785,7 @@ public class ConditionVariableDemo {
 }
 ```
 - If you want a specific thread to wake up and see whether it's their turn, relying on the signal method to wake up the right thread, will lead the program getting stuck, then we need to use **signalAll** method
+
 ```
 class HungryPerson extends Thread {
 
@@ -826,12 +827,13 @@ public class ConditionVariableDemo {
     }
 }
 ```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMj
-ExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMw
-MjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LD
-E5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEz
-NTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMD
-gxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4
-MTg4MjM1MTldfQ==
+eyJoaXN0b3J5IjpbMTc2NDI4MTE2NCwxMTY2MjU0NTEyLC0xMj
+Y5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5
+NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NS
+wtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTcz
+OTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NT
+QxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcw
+OTY5Njc2M119
 -->
