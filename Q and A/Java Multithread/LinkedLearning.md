@@ -507,11 +507,15 @@ public class Shopper extends Thread {
 4. Which of these scenario describes the best use case for using a ReadWriteLock?
 - Lots of threads need to read the value of a shared variable, but only a few thread need to modify its value.
 5. What happens when a thread calls Java's tryLock() method on a Lock that is NOT currently locked by another thread?
-- 
+- The method immediately returns true
+6. What is the difference between the tryLock() and the regular lock() method in Java?
+- `tryLock()` is a **non-blocking version of the lock()** method
+7. Why is the tryLock() method useful?
+
 -
 -
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDEyNDQ0OTAsLTE3Mzk4NjQzMDksLT
+eyJoaXN0b3J5IjpbLTE1NjI0NzE4MDYsLTE3Mzk4NjQzMDksLT
 EzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTEx
 MDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLT
 E4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1
