@@ -694,18 +694,20 @@ public void run() {
 #### wait
 - Before using the conditional variable, I first need to acquire the mutex associated with it, check for my condition, see if it's not my turn for the condition, then becomes in **wait** operation
 - Automatically release lock on the mutex
-- Put current thread to sleep or paused state and place it into a queue waiting for another thread to signal that it's some other thread's
+- Put current thread to sleep or paused state and place it into a queue waiting for another thread to signal that it's some other thread's turn
 - Reacquire lock when woke up
 #### signal
+- Use the `signal` operation to wake up one thread from condition variable queue, so it can acquire the lock
+- Also see this operation called `notify or wake`
 #### broadcast
 - 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYxNjUzNjE4LDEyNTEyODkzOTIsLTE2Mj
-I5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3
-NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMT
-czOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3
-NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LD
-cwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMw
-NDc1MTVdfQ==
+eyJoaXN0b3J5IjpbLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMT
+YyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2
+OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC
+0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5
+Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OT
+UsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3
+MzA0NzUxNV19
 -->
