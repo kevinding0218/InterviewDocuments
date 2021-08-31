@@ -537,9 +537,10 @@ public class Shopper extends Thread {
 ## Abandoned Lock
 - For example, one of us grab the two chopstick without grabbing the sushe, he went away to do something else
 - If one thread or process acquires a lock, and then terminates because of some unexpected reason, it may not automatically release the lock before it disappears
+- That leaves other task stuck waiting for a lock that will never be released
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMzNDA2NTU3LC0zNjI5NDQ4NywxOTQ2Mj
+eyJoaXN0b3J5IjpbODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2Mj
 MyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2
 MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNT
 kyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIz
