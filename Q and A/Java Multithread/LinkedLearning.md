@@ -518,11 +518,15 @@ public class Shopper extends Thread {
 - As many times as that thread locked it
 10. A ReentrantLock can be locked **multiple times by the same thread**
 ## Deadlock
+### What is deadlock
 - Each member is waiting for another member to take action
 - For example, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up our chopstick and waiting for the other to release one.
-- 
+### Liveness
+- A set of properties that require concurrent programs to make progress
+- Some processes or threads may have to take turns in a critical section
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMjgxNjI3LC0xNzU5MzE0MDU4LC0xNz
+eyJoaXN0b3J5IjpbMzUzNDk4NTQ5LC0xNzU5MzE0MDU4LC0xNz
 M5ODY0MzA5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1
 NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNz
 A5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0
