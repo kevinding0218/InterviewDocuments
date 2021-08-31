@@ -541,6 +541,34 @@ public class Shopper extends Thread {
 - That leaves other task stuck waiting for a lock that will never be released
 #### How to fix
 - Put the **critical section in try block** and **release lock part in a finally block**
+- For example
+```
+    public void run() {
+        int sushiEaten = 0;
+        while(sushiCount > 0) { // eat sushi until it's all gone
+
+            // pick up chopsticks
+            firstChopstick.lock();
+            secondChopstick.lock();
+
+            try {
+                // take a piece of sushi
+                if (sushiCount > 0) {
+                    sushiCount--;
+                    sushiEaten++;
+                    System.out.println(this.getName() + " took a piece! Sushi remaining: " + sushiCount);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                // put down chopsticks
+                secondChopstick.unlock();
+                firstChopstick.unlock();
+            }
+        }
+        System.out.println(this.getName() + " took " + sushiEaten);
+    }
+```
 ### Starvation
 - Starvation occurs when a thread is unable to gain access to a necesssary resource therefore unable to make progress.
 - If another greedy thread is frequently holding a lock on the shared resource, then the starved thread won't get a chance to execute.
@@ -556,7 +584,7 @@ new Philosopher("Barron", chopstickA, chopstickB).start();
 new Philosopher("Olivia", chopstickB, chopstickC).start();
 new Philosopher("Steve", chopstickA, chopstickC).start();
 ```
-- For another example, if we want sushi to be distributed more even, we can have all three people acquire same lock as A & B
+- For another example, if we want sushi to be distributed more even, we can have all three people **acquire same lock as A & B**
 ```
 new Philosopher("Barron", chopstickA, chopstickB).start();
 new Philosopher("Olivia", chopstickA, chopstickB).start();
@@ -604,11 +632,11 @@ public void run() {
     }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNj
-Y5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1
-OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMj
-A2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYx
-NDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOC
-w3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5
-ODk4MzZdfQ==
+eyJoaXN0b3J5IjpbNjc2NTk4Njg0LC0yMDMwMjQxNjc3LDUwNT
+Y2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEs
+LTE3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOT
+E3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2
+MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLT
+E4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgz
+MDAwMV19
 -->
