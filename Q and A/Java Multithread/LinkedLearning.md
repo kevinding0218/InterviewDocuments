@@ -545,7 +545,7 @@ public class Shopper extends Thread {
 - If another greedy thread is frequently holding a lock on the shared resource, then the starved thread won't get a chance to execute.
 #### How would it happend?
 - How different thread priorities get treated will depend on the operating system. But, generally higher priority threads will be scheduled to execute more often, and that can leave low priority thread feeling hungry
-- Having too many concurrent threads. For example, a web server that crea
+- Having too many concurrent threads. For example, a web server that created new threads to handle a huge number of incoming requests, some of those requests may never get processed, and that would lead to some impatient and angry user on the other end.
 - For example, below Olivia would get more sushi because she only acuqire chopstick B and C, while other two people both needs chopstick A
 ```
 Lock chopstickA = new ReentrantLock();
@@ -563,11 +563,11 @@ new Philosopher("Steve", chopstickA, chopstickB).start();
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzA4OTAwMjksODE2Njk2OTc1LC0zNj
-I5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0
-MzA5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LD
-ExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2
-NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNS
-wyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQw
-MDgxMTk1NV19
+eyJoaXN0b3J5IjpbMjg5MjM0MjQsODE2Njk2OTc1LC0zNjI5ND
+Q4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5
+LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNj
+UxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYz
+LC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMT
+A0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgx
+MTk1NV19
 -->
