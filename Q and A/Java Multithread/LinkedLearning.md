@@ -520,18 +520,19 @@ public class Shopper extends Thread {
 ## Deadlock
 ### What is deadlock
 - Each member is waiting for another member to take action
-- For example, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up our chopstick and waiting for the other to release one.
+- For example, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up the closet chopstick to us and waiting for the other to release one.
 - We want our program to be free from deadlock and guarantee liveness
 ### Liveness
 - A set of properties that require concurrent programs to make progress
 - Some processes or threads may have to take turns in a critical section
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2Mzc1ODU3MywtMTc1OTMxNDA1OCwtMT
-czOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3
-NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LD
-cwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMw
-NDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4Mz
-YsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJd
-fQ==
+eyJoaXN0b3J5IjpbMzg3Njk5NzMzLC0xNzU5MzE0MDU4LC0xNz
+M5ODY0MzA5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1
+NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNz
+A5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0
+NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNi
+wtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+
 -->
