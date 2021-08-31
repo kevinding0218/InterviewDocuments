@@ -554,15 +554,20 @@ Lock chopstickC = new ReentrantLock();
 new Philosopher("Barron", chopstickA, chopstickB).start();
 new Philosopher("Olivia", chopstickB, chopstickC).start();
 new Philosopher("Steve", chopstickA, chopstickC).start();
-
+```
+- For another example, if we want sushi to be distributed more even, we can have all three people acquire same lock as A & B
+```
+new Philosopher("Barron", chopstickA, chopstickB).start();
+new Philosopher("Olivia", chopstickA, chopstickB).start();
+new Philosopher("Steve", chopstickA, chopstickB).start();
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzI4MzIyNTQsODE2Njk2OTc1LC0zNj
-I5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0
-MzA5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LD
-ExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2
-NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNS
-wyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQw
-MDgxMTk1NV19
+eyJoaXN0b3J5IjpbMTQ0NzkzMzA1Miw4MTY2OTY5NzUsLTM2Mj
+k0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQz
+MDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMT
+E2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3
+NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LD
+IxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAw
+ODExOTU1XX0=
 -->
