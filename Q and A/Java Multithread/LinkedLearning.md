@@ -705,13 +705,16 @@ public void run() {
 ### Use case
 - A more common use case that requires multiple condition variables, is implementing a shared queue or buffer.
 #### Shared Queue or Buffer
-- If multiple threads will be putting items in a queue and tak
+- If multiple threads will be putting items in a queue and taking them out, it needs a mutex to ensure that only one thread can add or remove items from it at a time
+- For that, we can use two condition variables
+	- If a thread tries to add an item to the queue, which is already full, then it can wait on a condition variable to indicate when the **BufferNotFull**
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzgwNTE1NjgsLTIxMTQ2ODc2NjUsMT
-I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
-NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC
-0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkx
-NzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4Nj
-EzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0x
-ODc1Mjg3NjI4XX0=
+eyJoaXN0b3J5IjpbMTQ5OTYzODczLC0yMTE0Njg3NjY1LDEyNT
+EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
+OTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMT
+c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
+NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMy
+wtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3
+NTI4NzYyOF19
 -->
