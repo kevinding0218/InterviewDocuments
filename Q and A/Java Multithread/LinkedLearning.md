@@ -675,13 +675,13 @@ public void run() {
 8. Which of these is a possible strategy to prevent deadlocks when multiple threads will need to acquire multiple locks?
 - Prioritize the locks so that all threads will acquire them in the same relative order.
 9. The Dining Philosophers scenario demonstrates the deadlock situation that can occur when **multiple threads** need(s) to acquire **multiple locks**.
-## Synchronization
+## Condition Variable
 ### Busy waiting/Spinning
 - Repeatly acquiring and releasing the lock to check for a certain condition to continue.
 #### Limitation of using mutex
 - The mutex restrict multiple threads from taking soup at the same time, but the mutex alone doesn't give our threads a way to signal each other to synchronzie our action.
 - To do that, we need another mechanism called **Conditional Variable**
-### Condition Variable
+### What is Condition Variable
 - Serves as a queue or container or threads that are waiting for a certain condition to occur.
 - Thinking of it as a place for threads to wait and be notified.
 - The conditional variable is associated with a mutex, and work together to implement a higher level construct called a monitor.
@@ -828,11 +828,11 @@ public class ConditionVariableDemo {
 ```
 ## Producer-Consumer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDIyOTU5MDAsMTE2NjI1NDUxMiwtMT
-I2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIy
-OTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5Nz
-UsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3
-Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNz
-U0MTksMTE2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3
-MDk2OTY3NjNdfQ==
+eyJoaXN0b3J5IjpbMTU5MjEzNTcwOSwxMTY2MjU0NTEyLC0xMj
+Y5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5
+NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NS
+wtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTcz
+OTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NT
+QxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcw
+OTY5Njc2M119
 -->
