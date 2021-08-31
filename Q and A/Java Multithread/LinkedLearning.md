@@ -521,27 +521,30 @@ public class Shopper extends Thread {
 ### What is deadlock
 - Each member is waiting for another member to take action
 - For example Dining Philosipher, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up the closet chopstick to us and waiting for the other to release one.
-### How to solve
+#### How to solve
 - we can prioritize the two chopstick so if the 1st/higher priority chopstick is taken/locked, the other thread cannot continue access and acquire the 2nd/lower priority chopstick
-### Lock Ordering
+#### Lock Ordering
 - Ensure locks are always taken in the same order by any thread
-### Lock Timeout
+#### Lock Timeout
 - Put a timeout on lock attempts
 - If a thread is not able to succesfully acquire all of the locks it needs within a certain amount of time, it would 
 	- back up, free all of the locks that it did take
 	- then wait for a random amount of time'
 	- try again!
-### Liveness
+#### Liveness
 - A set of properties that require concurrent programs to make progress
 - Some processes or threads may have to take turns in a critical section
-## Abandoned Lock
+### Abandoned Lock
 - For example, one of us grab the two chopstick without grabbing the sushe, he went away to do something else
 - If one thread or process acquires a lock, and then terminates **because of some unexpected reason**, it may not automatically release the lock before it disappears
 - That leaves other task stuck waiting for a lock that will never be released
-### How to fix
+#### How to fix
 - Put the **critical section in try block** and **release lock part in a finally block**
+### Starvation
+- Starvation occurs when a thread is unable to gain access to a necesssary resource
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTE3ODEzMDYsODE2Njk2OTc1LC0zNj
+eyJoaXN0b3J5IjpbLTExMzQyMjQxODYsODE2Njk2OTc1LC0zNj
 I5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0
 MzA5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LD
 ExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2
