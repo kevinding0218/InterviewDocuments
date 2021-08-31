@@ -828,13 +828,19 @@ public class ConditionVariableDemo {
 ```
 ## Producer-Consumer
 ### Pattern
-- One or more threads or processors act as producer, 
+- Producer
+	- One or more threads or processors act as producer
+	- Add elements to shared data structure
+- Consumer
+	- One or more threads or processors act as consumer
+	- Remove elements from shared data structure
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNj
-kzNjIwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0
-MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC
-0zNjI5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5
-ODY0MzA5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1ND
-E5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5
-Njk2NzYzXX0=
+eyJoaXN0b3J5IjpbLTYzMzI5NDQ4OCw3NDAyMzA1NDcsMTE2Nj
+I1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5
+MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOS
+w4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkz
+MTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3NjQ4OT
+YxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2MTMsLTQy
+OTU2MTQ5NV19
 -->
