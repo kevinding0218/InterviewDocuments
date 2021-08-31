@@ -667,17 +667,25 @@ public void run() {
 3. Unlike during a deadlock, the threads in a livelock scenario are  **actively executing without making useful progress**
 4. Only the lowest priority threads will be at risk of resource starvation. **FALSE**
 - If there is a large enough number of threads competing for resources (such as execution time), then some threads may still be starved even if they all have the same priority
-5. Starvation occurs when a thread is `_____`.
+5. Starvation occurs when a thread is **perpetually denied resources due to competition with other threads**
+6. Why should you use Java's try/catch/finally blocks when using a Lock to protect a critical section of code?
+- Putting the unlock() method within the finally-block guarantees the Lock will be unlocked even if the thread crashes.
+7. What happens when a thread terminates while still holding onto a Lock?
+- The Lock will be stuck in the locked state forever and no other threads will be able to acquire it.
+8. Which of these is a possible strategy to prevent deadlocks when multiple threads will need to acquire multiple locks?
 
 -
 -
 -
+-
+-
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzY0MzU4ODQsLTIwMzAyNDE2NzcsNT
-A1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5
-MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MS
-w5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0
-ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOS
-wtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1
-ODMwMDAxXX0=
+eyJoaXN0b3J5IjpbLTUzMDA5NTM0NCwtMjAzMDI0MTY3Nyw1MD
+U2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkx
+LC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLD
+kxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4
+NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC
+0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4
+MzAwMDFdfQ==
 -->
