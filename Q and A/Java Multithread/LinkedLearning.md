@@ -737,7 +737,7 @@ mutex.unlock();
 - unlock the thread so another mutex can proceed to use it.
 #### Important
 - If you only need to notify one of the waiting threads, and you don't care which one it is, then the basic signal method works fine
-- If you want a specific thread to wake up and see whether it's their turn, relying on the signal method to wake up the right thread, w
+- If you want a specific thread to wake up and see whether it's their turn, relying on the signal method to wake up the right thread, will lead the program getting stuck, then we need to use **signalAll** method
 ```
 mutex.lock();
 // do something that changes state for condition
@@ -745,11 +745,11 @@ conditionalVariable.signal();
 mutext.unlock()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NzU0ODQ3MSwtMTI2OTM2MjA2NiwtMj
-ExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMw
-MjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LD
-E5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEz
-NTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMD
-gxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4
-MTg4MjM1MTldfQ==
+eyJoaXN0b3J5IjpbLTE3NzE2MTAzMDYsLTEyNjkzNjIwNjYsLT
+IxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAz
+MDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4Ny
+wxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0x
+MzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMT
+A4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0x
+ODE4ODIzNTE5XX0=
 -->
