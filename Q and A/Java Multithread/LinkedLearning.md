@@ -711,14 +711,26 @@ public void run() {
 	- If a thread treis to take an item but the queue's empty, then it can wait on another condition **BufferNotEmpty**
 - These conditional variables enable threads to signal each other when the state of the queue changes.
 ### Using a Condition Variable
-- Creating a new condition method on tha that mutexlock object
+- Creating a new condition method on tha that mutex/lock object
 - For example
 ```
 private static Lock slowCookerLid = new ReentrantLock();
 private static Condition soupTaken = slowCookLid.newCondition();
 ```
+- Basic condition pattern invovles
+	- locking the mutex
+	- using a while loop to check if the condition we're looking for is true
+		- If not true, wai
+```
+mutex.lock();
+while(some condition is not true) {
+    conditionvariable.await();
+}
+// execute the critical section
+mutex.unlock();
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMDU1MTE2MSwtMjExNDY4NzY2NSwxMj
+eyJoaXN0b3J5IjpbMTg3Mzc2MDY5MywtMjExNDY4NzY2NSwxMj
 UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
 MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLT
 E3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3
