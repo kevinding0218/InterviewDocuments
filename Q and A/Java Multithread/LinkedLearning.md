@@ -546,12 +546,13 @@ public class Shopper extends Thread {
 #### How would it happend?
 - How different thread priorities get treated will depend on the operating system. But, generally higher priority threads will be scheduled to execute more often, and that can leave low priority thread feeling hungry
 - Having too many concurrent threads, 
+- For example, below Olivia would get more sushi because she only acuqire chopstick B and C
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NzMxMTk1MSw4MTY2OTY5NzUsLTM2Mj
-k0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQz
-MDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMT
-E2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3
-NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LD
-IxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAw
-ODExOTU1XX0=
+eyJoaXN0b3J5IjpbOTA4NTY5NjE4LDgxNjY5Njk3NSwtMzYyOT
+Q0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMw
+OSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMT
+Y1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2
+MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMj
+EwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4
+MTE5NTVdfQ==
 -->
