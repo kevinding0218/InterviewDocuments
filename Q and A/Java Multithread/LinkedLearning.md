@@ -519,13 +519,14 @@ public class Shopper extends Thread {
 10. A ReentrantLock can be locked **multiple times by the same thread**
 ## Deadlock
 - Each member is waiting for another member to take action
-- For example, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up t
+- For example, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up our chopstick and waiting for the other to release one.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQwMzgwOCwtMTc1OTMxNDA1OCwtMTczOT
-g2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NTQx
-OSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcwOT
-Y5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1
-MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLT
-E0MDA4MTE5NTUsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTgxMjgxNjI3LC0xNzU5MzE0MDU4LC0xNz
+M5ODY0MzA5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1
+NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNz
+A5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0
+NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNi
+wtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
 
 -->
