@@ -675,13 +675,15 @@ public void run() {
 8. Which of these is a possible strategy to prevent deadlocks when multiple threads will need to acquire multiple locks?
 - Prioritize the locks so that all threads will acquire them in the same relative order.
 9. The Dining Philosophers scenario demonstrates the deadlock situation that can occur when **multiple threads** need(s) to acquire **multiple locks**.
-
+## Synchronization
+### Condition variable
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNT
-A1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5
-MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MS
-w5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0
-ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOS
-wtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1
-ODMwMDAxXX0=
+eyJoaXN0b3J5IjpbMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMj
+AzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4
+NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC
+0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUx
+MTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC
+0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0
+NTYxOTk1XX0=
 -->
