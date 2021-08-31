@@ -626,7 +626,7 @@ new Philosopher("Steve", chopstickA, chopstickB).start();
 - If one or more processor thread takes action to resolve the deadlock, then those threads can end up being overly polite and stuck in a livelock, 
 #### How to fix
 - Ensure that only one process takes action, chosen by priority or some other mechanism like random selection.
-- For example, let thread to sleep at a random period
+- For example, implement a randomized mechanism to determine which thread goes first.
 ```
 public void run() {
         while(sushiCount > 0) { // eat sushi until it's all gone
@@ -661,14 +661,16 @@ public void run() {
 ```
 ## Quiz
 1. The threads in your program are clearly not making progress. How might you determine if it is due to a deadlock or a livelock?
-
+- Use the Resource Monitor to investigate the program's CPU usage to see if it is actively executing.
+2. Which of these is a possible strategy to resolve a livelock between multiple threads?
+- Implement a randomized mechanism to determine which thread goes first.
 -
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ3Njk0OTA2LC0yMDMwMjQxNjc3LDUwNT
-Y2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEs
-LTE3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOT
-E3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2
-MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLT
-E4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgz
-MDAwMV19
+eyJoaXN0b3J5IjpbMTIwNDA2MjczMSwtMjAzMDI0MTY3Nyw1MD
+U2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkx
+LC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLD
+kxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4
+NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC
+0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4
+MzAwMDFdfQ==
 -->
