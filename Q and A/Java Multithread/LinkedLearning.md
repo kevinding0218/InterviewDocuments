@@ -834,9 +834,12 @@ public class ConditionVariableDemo {
 - Consumer
 	- One or more threads or processors act as consumer
 	- Remove elements from shared data structure
-- 
+### First-In-First-Out (FIFO)
+- Items are removed in the same order that they're added to the queue
+### Multi-thread with Producer-Consumer
+- When multiple threads are operat
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMzI5NDQ4OCw3NDAyMzA1NDcsMTE2Nj
+eyJoaXN0b3J5IjpbMTg0NzYyNzg5OSw3NDAyMzA1NDcsMTE2Nj
 I1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5
 MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOS
 w4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkz
