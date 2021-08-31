@@ -698,16 +698,17 @@ public void run() {
 - Reacquire lock when woke up
 #### signal
 - Use the `signal` operation to wake up one thread from condition variable queue, so it can acquire the lock
-- Also see this operation called `notify or wake`
+- Also see this operation called `notify` or `wake`
 #### broadcast
-- 
-- 
+- Similar to `signal` operation except that it wakes up all of the threads in the waiting/condition variable queue
+- Also called `notify all` or `wake all`
+- A
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMT
-YyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2
-OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC
-0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5
-Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OT
-UsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3
-MzA0NzUxNV19
+eyJoaXN0b3J5IjpbOTM0NDY5NzcxLC0yMTE0Njg3NjY1LDEyNT
+EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
+OTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMT
+c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
+NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMy
+wtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3
+NTI4NzYyOF19
 -->
