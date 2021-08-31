@@ -502,12 +502,19 @@ public class Shopper extends Thread {
 	- both method returns a `Lock` oject which we can then call the lock and unlock methods on.
 ## Quiz
 1. How many threads can possess the ReadLock while another thread has a lock on the WriteLock? **0**
-2. 
+2. What is the maximum number of threads that can possess the WriteLock of a ReentrantReadWriteLock at the same time? **1**
+3. What is the maximum number of threads that can possess the ReadLock of a ReentrantReadWriteLock at the same time? **not limit**
+4. Which of these scenario describes the best use case for using a ReadWriteLock?
+- Lots of threads need to read the value of a shared variable, but only a few thread need to modify its value.
+5. What happens when a thread calls Java's tryLock() method on a Lock that is NOT currently locked by another thread?
+- 
+-
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ1ODk4MTc3LC0xNzM5ODY0MzA5LC0xMz
-U1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4
-MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xOD
-E4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYx
-OTk1LDEzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NS
-wtMTM0MTc3NzM2OSwtMTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTE1NDEyNDQ0OTAsLTE3Mzk4NjQzMDksLT
+EzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTEx
+MDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLT
+E4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1
+NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOT
+U1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
