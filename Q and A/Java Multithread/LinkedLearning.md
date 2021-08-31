@@ -710,12 +710,14 @@ public void run() {
 	- If a thread tries to add an item to the queue, which is already full, then it can wait on a condition variable to indicate when the **BufferNotFull**
 	- If a thread treis to take an item but the queue's empty, then it can wait on another condition **BufferNotEmpty**
 - These conditional variables enable threads to signal each other when the state of the queue changes.
+### Using a Condition Variable
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MzgwMjA3NSwtMjExNDY4NzY2NSwxMj
-UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
-MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLT
-E3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3
-NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2MT
-MsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4
-NzUyODc2MjhdfQ==
+eyJoaXN0b3J5IjpbODk4Nzc2NzQ0LC0yMTE0Njg3NjY1LDEyNT
+EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
+OTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMT
+c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
+NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMy
+wtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3
+NTI4NzYyOF19
 -->
