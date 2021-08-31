@@ -543,7 +543,7 @@ public class Shopper extends Thread {
 ### Starvation
 - Starvation occurs when a thread is unable to gain access to a necesssary resource therefore unable to make progress.
 - If another greedy thread is frequently holding a lock on the shared resource, then the starved thread won't get a chance to execute.
-#### How would it happend?
+#### How did it happe
 - How different thread priorities get treated will depend on the operating system. But, generally higher priority threads will be scheduled to execute more often, and that can leave low priority thread feeling hungry
 - Having too many concurrent threads. For example, a web server that created new threads to handle **a huge number of incoming requests, some of those requests may never get processed**, and that would lead to some impatient and angry user on the other end.
 - For example, below Olivia would get more sushi because she only acuqire chopstick B and C, while other two people both needs chopstick A
@@ -564,11 +564,13 @@ new Philosopher("Steve", chopstickA, chopstickB).start();
 ### Livelock
 - Similar as deadlock, that multiple threads or processes are actively responding to each other to resolve conflict, but that prevents them from making progress, the program will never reach to an end.
 - Difference is those threads are actively trying to resolve the problem.
-#### How did it happen?
+#### How did it happen
 - Often caused by argorithms that are intended to detect and recover from deadlock. 
-- If one or more processor thread takes action to resolve the deadlock
+- If one or more processor thread takes action to resolve the deadlock, then those threads can end up being overly polite and stuck in a livelock, 
+#### How to fix
+- Ensure that only one process takes action, chosen by priority or some other mechanism like random selection.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNTk4MDYyNCw4MTY2OTY5NzUsLTM2Mj
+eyJoaXN0b3J5IjpbMTkxNzU1MTcxOCw4MTY2OTY5NzUsLTM2Mj
 k0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQz
 MDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMT
 E2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3
