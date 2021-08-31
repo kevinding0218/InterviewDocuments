@@ -731,12 +731,20 @@ while(some condition is not true) {
 // execute the critical section
 mutex.unlock();
 ```
+### Signaling a Condition Variable
+- 
+```
+mutex.lock();
+// do something that changes state for condition
+conditionalVariable.signal();
+mutext.unlock()
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjY4NTUwODcsLTIxMTQ2ODc2NjUsMT
-I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
-NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC
-0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkx
-NzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4Nj
-EzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0x
-ODc1Mjg3NjI4XX0=
+eyJoaXN0b3J5IjpbLTI0ODM3MTc4OSwtMjExNDY4NzY2NSwxMj
+UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
+MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLT
+E3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3
+NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2MT
+MsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4
+NzUyODc2MjhdfQ==
 -->
