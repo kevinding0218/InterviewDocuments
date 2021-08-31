@@ -515,16 +515,15 @@ public class Shopper extends Thread {
 8. Which statement describes the relationship between Lock and ReentrantLock in Java?
 - ReentrantLock is a class that implements the Lock interface.
 9. How many times must a thread unlock a ReentrantLock before another thread can acquire it?
-- 
--
--
--
--
+- As many times as that thread locked it
+10. A ReentrantLock can be locked **multiple times by the same thread**
+## Deadlock
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMTU2NDA2OSwtMTczOTg2NDMwOSwtMT
-M1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEw
-ODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2MywtMT
-gxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2
-MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NT
-UsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTE3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLT
+EzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTEx
+MDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLT
+E4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1
+NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOT
+U1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
 -->
