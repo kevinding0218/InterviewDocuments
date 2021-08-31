@@ -677,13 +677,14 @@ public void run() {
 9. The Dining Philosophers scenario demonstrates the deadlock situation that can occur when **multiple threads** need(s) to acquire **multiple locks**.
 ## Synchronization
 ### Condition variable
-- 
+#### Busy waiting/Spinning
+- Repeatly acquiring and releasing the lock to check for a certain condition to continue.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMj
-AzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4
-NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC
-0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUx
-MTA4MSwxNTkyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC
-0xODE4ODIzNTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0
-NTYxOTk1XX0=
+eyJoaXN0b3J5IjpbMzk3NTI2NDg5LDEyNTEyODkzOTIsLTE2Mj
+I5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3
+NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMT
+czOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3
+NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LD
+cwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMw
+NDc1MTVdfQ==
 -->
