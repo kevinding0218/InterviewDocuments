@@ -136,7 +136,7 @@
 - Some thread may eventually reach a point where it needs to wait until one of its children threads has finished for me to continue on
 - When called with `join()`, my thread will enter a block state, waiting until another thread is done.
 - For example, below program shows we started both threads, and then use the `join()` method to wait until they're both done.
-```
+```java
 Thread barron = new Shopper();
 Thread olivia = new Shopper();
 barron.start();
@@ -177,20 +177,20 @@ olivia.join
 ### Creating Threads 
 #### Extend the Thread class 
 - By extending the Thread class, you can override its run method to provide your own custom code for the Thread to execute.
-```
+```java
 public class ChefOlivia extends Thread {
 	@Override
 	public void run() {}
 }
 ```
 - Then you can create instance of your subclass, and run them as threads.
-```
+```java
 Thread olivia = new ChefOlivia();
 ```
 #### Runnable interface
 - Interface for a class that will be executed by a thread
 	- The **Class Thread** implements the Runnable Interface
-```
+```java
 public class ChefOlivia implements Runnable {
 	public void run() {}
 }
@@ -198,7 +198,7 @@ public class ChefOlivia implements Runnable {
 - Defining a class that implements the Runnable interface simply requires you to have a `void run()` method
 	- Similar to the `run()` we override when extending the Thread class
 - Then you can create a instance of Thread by passing your subclass instance as the target for the Thread class constructor
-```
+```java
 Thread olivia = new Thread(new ChefOlivia());
 ```
 #### Thread vs Runnable
@@ -296,7 +296,7 @@ Thread olivia = new Thread(new ChefOlivia());
 	- Now, Thread II will wait to execute until Thread I finishes its `run()` method at 5 times.
 	- Totally the program takes about 500ms * 10 = 5 seconds to finish executing
 	- Since each thread does its thinking while holding onto the pencil, the other thread is waiting outside the critical section during that time, 
-```
+```java
 public class Shopper extends Thread {
 	static int garlicCount = 0;
 	static Lock pencil = new ReentrantLock();
@@ -316,7 +316,7 @@ public class Shopper extends Thread {
 - For another example, since above code the critical section is way bigger than it needs to be, I only really need to protect `garlicCount++`
 	- Now program will run twice as fast, because the threads aren't holding onto the pencil while they're busy thinking
 	- Thinking messages appear in paris, and only takes about 500ms * 5 = 2.5 seconds to finish
-```
+```java
 public class Shopper extends Thread {
 	static int garlicCount = 0;
 	static Lock pencil = new ReentrantLock();
@@ -338,7 +338,7 @@ public class Shopper extends Thread {
 - It's always executed as a single, indivisible action, relative to other threads
 - Appears to happen instantaneously, **cannot** be interrupted by other concurrent threads.
 - For example
-```
+```java
 public class Shopper extends Thread {
 	static AtomicInteger garlicCount = new AtomicInteger(0);
 	static Lock pencil = new ReentrantLock();
@@ -367,7 +367,7 @@ public class Shopper extends Thread {
 	- this method is associated with the shopper class, and not a specific instance of shopper.
 	- By doing so, when either thread invokes the synchonized addGarlic method, it will acquire the intrinstic lock that's associated with the class object
 	- If removed the static keyword, then each shopper instance will invoke their own instance of the `addGarlick()` method,  which associated with their own object's intrinstic lock, which would not be working as expected
-```
+```java
 public class Shopper extends Thread {
 	static int garlicCount = 0;
 	private synchronized void addGarlic() {
@@ -382,7 +382,7 @@ public class Shopper extends Thread {
 ```
 ### Sychronized Statement
 - Speicfy the object to provide the intrinsic lock 
-```
+```java
 synchronized (object) {
 	// protected code
 }
@@ -390,7 +390,7 @@ synchronized (object) {
 - Before a thread can execute the code contained within the synchronized statement, it must first acquire the intrinsic lock associated with the specific object
 - Then when the thread is done, it will release its hold on that lock.
 - For example, below both threads will be acquiring and releasing the same intrinsic locks assocaited witht the shopper class before and after they increment the garlicCount.
-```
+```java
 public class Shopper extends Thread {
 	static int garlicCount = 0;
 	public void run() {
@@ -405,7 +405,7 @@ public class Shopper extends Thread {
 - For another example, if I replace the synchonized object from `Shopper.class` with **this**,  I'll get incorrect result.
 	- Because each of the shopper threads is acquiring and releasing the intrinsic lock associated with their own instance.
 	- They are not synchronized to the same object now so the data race occurs.
-```
+```java
 public class Shopper extends Thread {
 	static int garlicCount = 0;
 	public void run() {
@@ -421,7 +421,7 @@ public class Shopper extends Thread {
 	- Because `Integer` object is **Immutable**, once you create an Integer instance, you cannot change its value 
 	- So that what happens is, every time a thread executes the `garlicCount++` operation, Java instantiate a new integer object which will have a different object ID.
 	- So each time the thread loops back around and executes that synchronized statement, they're actually be using a different object for the intrinsic lock, which are not synchronized at all.
-```
+```java
 public class Shopper extends Thread {
 	static Integer garlicCount = 0;
 	public void run() {
@@ -523,7 +523,7 @@ public class Shopper extends Thread {
 - For example Dining Philosipher, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up the closet chopstick to us and waiting for the other to release one.
 #### How to fix
 - we can prioritize the two chopstick so if the 1st/higher priority chopstick is taken/locked, the other thread cannot continue access and acquire the 2nd/lower priority chopstick
-```
+```java
 public void run() {
         while(sushiCount > 0) { // eat sushi until it's all gone
 
@@ -570,7 +570,7 @@ public static void main(String[] args) {
 #### How to fix
 - Put the **critical section in try block** and **release lock part in a finally block**
 - For example
-```
+```java
     public void run() {
         int sushiEaten = 0;
         while(sushiCount > 0) { // eat sushi until it's all gone
@@ -627,7 +627,7 @@ new Philosopher("Steve", chopstickA, chopstickB).start();
 #### How to fix
 - Ensure that only one process takes action, chosen by priority or some other mechanism like random selection.
 - For example, implement a randomized mechanism to determine which thread goes first.
-```
+```java
 public void run() {
         while(sushiCount > 0) { // eat sushi until it's all gone
 
@@ -713,7 +713,7 @@ public void run() {
 ### Using a Condition Variable
 - Creating a new condition method on tha that mutex/lock object
 - For example
-```
+```java
 private static Lock slowCookerLid = new ReentrantLock();
 private static Condition soupTaken = slowCookLid.newCondition();
 ```
@@ -723,7 +723,7 @@ private static Condition soupTaken = slowCookLid.newCondition();
 		- If not true, wait on the condition variable for another loop iteration
 		- if true, we'll continue pass the loop to execute the critical section of code
 	- finally release the lock
-```
+```java
 mutex.lock();
 while(some condition is not true) {
     conditionvariable.await();
@@ -826,13 +826,13 @@ public class ConditionVariableDemo {
     }
 }
 ```
-
+## Producer-Consumer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NzcwOTI2OSwxMTY2MjU0NTEyLC0xMj
-Y5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5
-NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NS
-wtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTcz
-OTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NT
-QxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcw
-OTY5Njc2M119
+eyJoaXN0b3J5IjpbLTExMDIyOTU5MDAsMTE2NjI1NDUxMiwtMT
+I2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIy
+OTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5Nz
+UsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3
+Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNz
+U0MTksMTE2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3
+MDk2OTY3NjNdfQ==
 -->
