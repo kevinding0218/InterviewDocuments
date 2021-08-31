@@ -561,9 +561,12 @@ new Philosopher("Barron", chopstickA, chopstickB).start();
 new Philosopher("Olivia", chopstickA, chopstickB).start();
 new Philosopher("Steve", chopstickA, chopstickB).start();
 ```
+### Livelock
+- Similar as deadlock, that multiple threads or processes are actively responding to each other to resolve conflict, but that prevents them from making progress
+- Difference is those threads are actively trying to resolve the problem.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1Njc3MDc4NCw4MTY2OTY5NzUsLTM2Mj
+eyJoaXN0b3J5IjpbLTQ3MzE5NzU0Niw4MTY2OTY5NzUsLTM2Mj
 k0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQz
 MDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMT
 E2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3
