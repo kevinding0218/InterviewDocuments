@@ -841,13 +841,13 @@ public class ConditionVariableDemo {
 	1. Queue is shared resource, so we'll need something to enforce mutual exclusion of producers and consumers
 	2. Make sure that only one thread can use it at a time to add or remove items.
 	3. Make sure to prevent producers from trying to add data to a full queue
-	4. Make sure
+	4. Make sure to prevent consumers from trying to remove data from an empty queue
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MDYxNzEzNCwtOTI2MTM5MDc5LDc0MD
-IzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3
-NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2Nz
-csNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIz
-Mjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5Nj
-I0MSw5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5
-Mjk0ODYxM119
+eyJoaXN0b3J5IjpbMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMj
+MwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2
+NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Ny
+w1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMy
+OTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2Mj
+QxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTky
+OTQ4NjEzXX0=
 -->
