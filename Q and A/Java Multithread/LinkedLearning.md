@@ -527,17 +527,21 @@ public class Shopper extends Thread {
 - Ensure locks are always taken in the same order by any thread
 ### Lock Timeout
 - Put a timeout on lock attempts
+- If a thread is not able to succesfully acquire all of the locks it needs within a certain amount of time, it would 
+	- back up, free all of the locks that it did take
+	- then wait for a random amount of time'
+	- try again!
 ### Liveness
 - A set of properties that require concurrent programs to make progress
 - Some processes or threads may have to take turns in a critical section
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjkzMjI2NzMsMTk0NjIzMjk5MSwtMT
-c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
-NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMy
-wtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3
-NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMD
-AxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjks
-LTE1NDE4MzM4NzJdfQ==
+eyJoaXN0b3J5IjpbLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NT
+kzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3NjQ4
+OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2MTMsLT
+QyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUy
+ODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMS
+wyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0x
+NTQxODMzODcyXX0=
 -->
