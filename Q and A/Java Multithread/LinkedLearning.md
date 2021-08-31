@@ -735,17 +735,58 @@ mutex.unlock();
 - Making sure you have a lock on the mutex
 - Do something to change the state of the condition
 - unlock the thread so another mutex can proceed to use it.
-#### Important
-- If you only need to notify one of the waiting threads, and you don't care which one it is, then the basic signal method works fine
-- If you want a specific thread to wake up and see whether it's their turn, relying on the signal method to wake up the right thread, will lead the program getting stuck, then we need to use **signalAll** method
 ```
 mutex.lock();
 // do something that changes state for condition
 conditionalVariable.signal();
 mutext.unlock()
 ```
+#### Important
+- If you only need to notify one of the waiting threads, and you don't care which one it is, then the basic signal method works fine
+- If you want a specific thread to wake up and see whether it's their turn, relying on the signal method to wake up the right thread, will lead the program getting stuck, then we need to use **signalAll** method
+```
+class HungryPerson extends Thread {
+
+    private int personID;
+    private static Lock slowCookerLid = new ReentrantLock();
+    private static int servings = 11;
+    private static Condition soupTaken = slowCookerLid.newCondition();
+
+    public HungryPerson(int personID) {
+        this.personID = personID;
+    }
+
+    public void run() {
+        while (servings > 0) {
+            slowCookerLid.lock();
+            try {
+                while ((personID != servings % 5) && servings > 0) { // check if it's not your turn
+                    System.out.format("Person %d checked... then put the lid back.\n", personID);
+                    soupTaken.await();
+                }
+                if (servings > 0) {
+                    servings--; // it's your turn - take some soup!
+                    System.out.format("Person %d took some soup! Servings left: %d\n", personID, servings);
+                    soupTaken.signalAll();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                    slowCookerLid.unlock();
+            }
+        }
+    }
+}
+
+public class ConditionVariableDemo {
+    public static void main(String args[]) {
+        for (int i=0; i<5; i++)
+            new HungryPerson(i).start();
+    }
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzE2MTAzMDYsLTEyNjkzNjIwNjYsLT
+eyJoaXN0b3J5IjpbLTE2NDY5Mzc2MzMsLTEyNjkzNjIwNjYsLT
 IxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAz
 MDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4Ny
 wxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0x
