@@ -511,14 +511,20 @@ public class Shopper extends Thread {
 6. What is the difference between the tryLock() and the regular lock() method in Java?
 - `tryLock()` is a **non-blocking version of the lock()** method
 7. Why is the tryLock() method useful?
-
+- It enables a thread to execute alternate operations if the lock it needs to acquire is already taken.
+8. Which statement describes the relationship between Lock and ReentrantLock in Java?
+- ReentrantLock is a class that implements the Lock interface.
+9. How many times must a thread unlock a ReentrantLock before another thread can acquire it?
+- 
+-
+-
 -
 -
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjI0NzE4MDYsLTE3Mzk4NjQzMDksLT
-EzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTEx
-MDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLT
-E4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1
-NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAwODExOT
-U1LC0xMzQxNzc3MzY5LC0xNTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbMTUyMTU2NDA2OSwtMTczOTg2NDMwOSwtMT
+M1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEw
+ODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2MywtMT
+gxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2
+MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NT
+UsLTEzNDE3NzczNjksLTE1NDE4MzM4NzJdfQ==
 -->
