@@ -687,14 +687,16 @@ public void run() {
 - The conditional variable is associated with a mutex, and work together to implement a higher level construct called a monitor.
 ### Monitor
 - Protects section of codes with mutual exclusion
-- Provide ability for threads to wait until 
+- Provide ability for threads to wait or block until a certain condition has become true
+- Along with mechanism to signal those waiting threads when their condition has been met.
+- 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNjU4MTYyMCwxMjUxMjg5MzkyLC0xNj
-IyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5
-NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLT
-E3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjky
-NzU0MTksMTE2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NS
-w3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzcz
-MDQ3NTE1XX0=
+eyJoaXN0b3J5IjpbMTgxNDM0Nzg4LDEyNTEyODkzOTIsLTE2Mj
+I5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3
+NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMT
+czOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3
+NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LD
+cwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMw
+NDc1MTVdfQ==
 -->
