@@ -518,10 +518,10 @@ public class Shopper extends Thread {
 - As many times as that thread locked it
 10. A ReentrantLock can be locked **multiple times by the same thread**
 ## Deadlock
-### What is deadlock
+### How did it happen
 - Each member is waiting for another member to take action
 - For example Dining Philosipher, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up the closet chopstick to us and waiting for the other to release one.
-#### How to solve
+#### How to fix
 - we can prioritize the two chopstick so if the 1st/higher priority chopstick is taken/locked, the other thread cannot continue access and acquire the 2nd/lower priority chopstick
 #### Lock Ordering
 - Ensure locks are always taken in the same order by any thread
@@ -571,11 +571,11 @@ new Philosopher("Steve", chopstickA, chopstickB).start();
 #### How to fix
 - Ensure that only one process takes action, chosen by priority or some other mechanism like random selection.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MDY5NTAzNCw4MTY2OTY5NzUsLTM2Mj
-k0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQz
-MDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMT
-E2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3
-NjMsLTE4MTg4MjM1MTksLTE4NzUyODc2MjgsNzczMDQ3NTE1LD
-IxMDQ1NjE5OTUsMTM0NTgzMDAwMSwyMTIyOTg5ODM2LC0xNDAw
-ODExOTU1XX0=
+eyJoaXN0b3J5IjpbNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOT
+Q0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMw
+OSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMT
+Y1MTEwODEsMTU5Mjk0ODYxMywtNDI5NTYxNDk1LDcwOTY5Njc2
+MywtMTgxODgyMzUxOSwtMTg3NTI4NzYyOCw3NzMwNDc1MTUsMj
+EwNDU2MTk5NSwxMzQ1ODMwMDAxLDIxMjI5ODk4MzYsLTE0MDA4
+MTE5NTVdfQ==
 -->
