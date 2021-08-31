@@ -534,14 +534,16 @@ public class Shopper extends Thread {
 ### Liveness
 - A set of properties that require concurrent programs to make progress
 - Some processes or threads may have to take turns in a critical section
-
+## Abandoned Lock
+- For example, one of us grab the two chopstick without grabbing the sushe, he went away to do something else
+- If one thread or process acquires a lock, and then terminates because of some unexpected reason, it may not automatically release the lock before it disappears
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NT
-kzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3NjQ4
-OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2MTMsLT
-QyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLTE4NzUy
-ODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgzMDAwMS
-wyMTIyOTg5ODM2LC0xNDAwODExOTU1LC0xMzQxNzc3MzY5LC0x
-NTQxODMzODcyXX0=
+eyJoaXN0b3J5IjpbNTMzNDA2NTU3LC0zNjI5NDQ4NywxOTQ2Mj
+MyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2
+MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNT
+kyOTQ4NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIz
+NTE5LC0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LD
+EzNDU4MzAwMDEsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0
+MTc3NzM2OV19
 -->
