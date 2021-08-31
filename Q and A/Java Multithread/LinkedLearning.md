@@ -523,6 +523,34 @@ public class Shopper extends Thread {
 - For example Dining Philosipher, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up the closet chopstick to us and waiting for the other to release one.
 #### How to fix
 - we can prioritize the two chopstick so if the 1st/higher priority chopstick is taken/locked, the other thread cannot continue access and acquire the 2nd/lower priority chopstick
+```
+public void run() {
+        while(sushiCount > 0) { // eat sushi until it's all gone
+
+            // pick up chopsticks
+            firstChopstick.lock();
+            secondChopstick.lock();
+
+            // take a piece of sushi
+            if (sushiCount > 0) {
+                sushiCount--;
+                System.out.println(this.getName() + " took a piece! Sushi remaining: " + sushiCount);
+            }
+
+            // put down chopsticks
+            secondChopstick.unlock();
+            firstChopstick.unlock();
+        }
+    }
+public static void main(String[] args) {
+        Lock chopstickA = new ReentrantLock();
+        Lock chopstickB = new ReentrantLock();
+        Lock chopstickC = new ReentrantLock();
+        new Philosopher("Barron", chopstickA, chopstickB).start();
+        new Philosopher("Olivia", chopstickB, chopstickC).start();
+        new Philosopher("Steve", chopstickA, chopstickC).start();
+    }
+```
 #### Lock Ordering
 - Ensure locks are always taken in the same order by any thread
 #### Lock Timeout
@@ -632,11 +660,11 @@ public void run() {
     }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc2NTk4Njg0LC0yMDMwMjQxNjc3LDUwNT
-Y2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEs
-LTE3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOT
-E3NjQ4OTYxLDIwNjkyNzU0MTksMTE2NTExMDgxLDE1OTI5NDg2
-MTMsLTQyOTU2MTQ5NSw3MDk2OTY3NjMsLTE4MTg4MjM1MTksLT
-E4NzUyODc2MjgsNzczMDQ3NTE1LDIxMDQ1NjE5OTUsMTM0NTgz
-MDAwMV19
+eyJoaXN0b3J5IjpbLTcyMDMyNzcxMiwtMjAzMDI0MTY3Nyw1MD
+U2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkx
+LC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLD
+kxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4
+NjEzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC
+0xODc1Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4
+MzAwMDFdfQ==
 -->
