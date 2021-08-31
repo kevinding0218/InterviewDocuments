@@ -676,7 +676,7 @@ public void run() {
 - Prioritize the locks so that all threads will acquire them in the same relative order.
 9. The Dining Philosophers scenario demonstrates the deadlock situation that can occur when **multiple threads** need(s) to acquire **multiple locks**.
 ## Condition Variable
-### Busy waiting/Spinning
+### Why need Condition Variable?
 - Repeatly acquiring and releasing the lock to check for a certain condition to continue.
 #### Limitation of using mutex
 - The mutex restrict multiple threads from taking soup at the same time, but the mutex alone doesn't give our threads a way to signal each other to synchronzie our action.
@@ -828,7 +828,7 @@ public class ConditionVariableDemo {
 ```
 ## Producer-Consumer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MjEzNTcwOSwxMTY2MjU0NTEyLC0xMj
+eyJoaXN0b3J5IjpbMTQxNjE0NjcwNiwxMTY2MjU0NTEyLC0xMj
 Y5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5
 NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NS
 wtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTcz
