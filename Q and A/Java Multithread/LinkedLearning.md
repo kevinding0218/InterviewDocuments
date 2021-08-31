@@ -523,18 +523,21 @@ public class Shopper extends Thread {
 - For example Dining Philosipher, you and I shared one order of sushi, and each of us only has one chopstick, at same time both of us wants to grab a sushi so we are picking up the closet chopstick to us and waiting for the other to release one.
 ### How to solve
 - we can prioritize the two chopstick so if the 1st/higher priority chopstick is taken/locked, the other thread cannot continue access and acquire the 2nd/lower priority chopstick
-### Lock 
+### Lock Ordering
+- Ensure locks are always taken in the same order by any thread
+### Lock Timeout
+- Put a timeout on lock attempts
 ### Liveness
 - A set of properties that require concurrent programs to make progress
 - Some processes or threads may have to take turns in a critical section
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMDU0NzA2NCwxOTQ2MjMyOTkxLC0xNz
-U5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkxNzY0
-ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4NjEzLC
-00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0xODc1
-Mjg3NjI4LDc3MzA0NzUxNSwyMTA0NTYxOTk1LDEzNDU4MzAwMD
-EsMjEyMjk4OTgzNiwtMTQwMDgxMTk1NSwtMTM0MTc3NzM2OSwt
-MTU0MTgzMzg3Ml19
+eyJoaXN0b3J5IjpbLTE3NjkzMjI2NzMsMTk0NjIzMjk5MSwtMT
+c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
+NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMy
+wtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3
+NTI4NzYyOCw3NzMwNDc1MTUsMjEwNDU2MTk5NSwxMzQ1ODMwMD
+AxLDIxMjI5ODk4MzYsLTE0MDA4MTE5NTUsLTEzNDE3NzczNjks
+LTE1NDE4MzM4NzJdfQ==
 -->
