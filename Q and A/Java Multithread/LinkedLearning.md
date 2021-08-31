@@ -743,7 +743,7 @@ mutext.unlock()
 ```
 #### Important
 - If you only need to notify one of the waiting threads, and you don't care which one it is, then the basic signal method works fine
-- ```
+```java
 class HungryPerson extends Thread {
 
     private int personID;
@@ -785,8 +785,7 @@ public class ConditionVariableDemo {
 }
 ```
 - If you want a specific thread to wake up and see whether it's their turn, relying on the signal method to wake up the right thread, will lead the program getting stuck, then we need to use **signalAll** method
-
-```
+```java
 class HungryPerson extends Thread {
 
     private int personID;
@@ -829,7 +828,7 @@ public class ConditionVariableDemo {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NDI4MTE2NCwxMTY2MjU0NTEyLC0xMj
+eyJoaXN0b3J5IjpbMTQ1NzcwOTI2OSwxMTY2MjU0NTEyLC0xMj
 Y5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5
 NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NS
 wtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTcz
