@@ -543,9 +543,11 @@ public class Shopper extends Thread {
 ### Starvation
 - Starvation occurs when a thread is unable to gain access to a necesssary resource therefore unable to make progress.
 - If another greedy thread is frequently holding a lock on the shared resource, then the starved thread won't get a chance to execute.
-- How different thread priorities get treated 
+#### How would it happend?
+- How different thread priorities get treated will depend on the operating system. But, generally higher priority threads will be scheduled to execute more often, and that can leave low priority thread feeling hungry
+- Having too many concurrent threads, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NzU4NDIzMiw4MTY2OTY5NzUsLTM2Mj
+eyJoaXN0b3J5IjpbLTk2NzMxMTk1MSw4MTY2OTY5NzUsLTM2Mj
 k0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQz
 MDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMT
 E2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3
