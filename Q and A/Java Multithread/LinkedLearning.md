@@ -535,6 +535,7 @@ public class Shopper extends Thread {
 - A set of properties that require concurrent programs to make progress
 - Some processes or threads may have to take turns in a critical section
 ### Abandoned Lock
+#### How did it happen
 - For example, one of us grab the two chopstick without grabbing the sushe, he went away to do something else
 - If one thread or process acquires a lock, and then terminates **because of some unexpected reason**, it may not automatically release the lock before it disappears
 - That leaves other task stuck waiting for a lock that will never be released
@@ -543,7 +544,7 @@ public class Shopper extends Thread {
 ### Starvation
 - Starvation occurs when a thread is unable to gain access to a necesssary resource therefore unable to make progress.
 - If another greedy thread is frequently holding a lock on the shared resource, then the starved thread won't get a chance to execute.
-#### How did it happe
+#### How did it happen
 - How different thread priorities get treated will depend on the operating system. But, generally higher priority threads will be scheduled to execute more often, and that can leave low priority thread feeling hungry
 - Having too many concurrent threads. For example, a web server that created new threads to handle **a huge number of incoming requests, some of those requests may never get processed**, and that would lead to some impatient and angry user on the other end.
 - For example, below Olivia would get more sushi because she only acuqire chopstick B and C, while other two people both needs chopstick A
@@ -570,7 +571,7 @@ new Philosopher("Steve", chopstickA, chopstickB).start();
 #### How to fix
 - Ensure that only one process takes action, chosen by priority or some other mechanism like random selection.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNzU1MTcxOCw4MTY2OTY5NzUsLTM2Mj
+eyJoaXN0b3J5IjpbMTM1MDY5NTAzNCw4MTY2OTY5NzUsLTM2Mj
 k0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQz
 MDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMT
 E2NTExMDgxLDE1OTI5NDg2MTMsLTQyOTU2MTQ5NSw3MDk2OTY3
