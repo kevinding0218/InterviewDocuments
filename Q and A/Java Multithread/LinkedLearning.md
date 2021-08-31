@@ -702,13 +702,16 @@ public void run() {
 #### broadcast
 - Similar to `signal` operation except that it wakes up all of the threads in the waiting/condition variable queue
 - Also called `notify all` or `wake all`
-- A
+### Use case
+- A more common use case that requires multiple condition variables, is implementing a shared queue or buffer.
+#### Shared Queue or Buffer
+- If multiple threads will be putting items in a queue and tak
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM0NDY5NzcxLC0yMTE0Njg3NjY1LDEyNT
-EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
-OTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMT
-c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
-NDg5NjEsMjA2OTI3NTQxOSwxMTY1MTEwODEsMTU5Mjk0ODYxMy
-wtNDI5NTYxNDk1LDcwOTY5Njc2MywtMTgxODgyMzUxOSwtMTg3
-NTI4NzYyOF19
+eyJoaXN0b3J5IjpbLTE0NzgwNTE1NjgsLTIxMTQ2ODc2NjUsMT
+I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
+NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC
+0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkx
+NzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTkyOTQ4Nj
+EzLC00Mjk1NjE0OTUsNzA5Njk2NzYzLC0xODE4ODIzNTE5LC0x
+ODc1Mjg3NjI4XX0=
 -->
