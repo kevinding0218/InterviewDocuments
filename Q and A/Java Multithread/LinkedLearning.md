@@ -840,9 +840,9 @@ public class ConditionVariableDemo {
 - When multiple threads are operating in this type of producer-consumer situation, it poses several challenge for synchronization
 	1. Queue is shared resource, so we'll need something to enforce mutual exclusion of producers and consumers
 	2. Make sure that only one thread can use it at a time to add or remove items.
-	3. Make sure to prevent producers from trying to add data 
+	3. Make sure to prevent producers from trying to add data to a full queue
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MjI3ODMxMyw3NDAyMzA1NDcsMTE2Nj
+eyJoaXN0b3J5IjpbLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2Nj
 I1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5
 MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOS
 w4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkz
