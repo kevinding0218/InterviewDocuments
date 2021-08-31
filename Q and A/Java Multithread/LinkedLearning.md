@@ -691,12 +691,15 @@ public void run() {
 - Along with mechanism to signal those waiting threads when their condition has been met.
 - For example, thinking of a interview room as a mutex, and multiple candidate waiting outside in the waiting room until condition met (name called)
 ### Three Operations
-- wait
-- si
+#### wait
+- Before using the conditional variable, I first need to acquire the mutex associated with it, check for my condition, see if it's not my turn for the condition, then becomes in **wait** operation
+- Automatically release lock on the mutex
+#### signal
+#### broadcast
 - 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNzQ4NDUxOCwxMjUxMjg5MzkyLC0xNj
+eyJoaXN0b3J5IjpbLTIzOTE4MTUwNiwxMjUxMjg5MzkyLC0xNj
 IyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5
 NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLT
 E3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjky
