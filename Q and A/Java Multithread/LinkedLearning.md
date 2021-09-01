@@ -851,13 +851,16 @@ public class ConditionVariableDemo {
 - For example, Scoop Soup -> Add Spice -> eat Soup
 - A series of producer-consumer pair with some buffer like a queue between each consecutive element, Produce -- Queue --> Consumer + Producer -- Queue --> Consumer
 #### Java ArrayBlockingQueue
-- A concrete class implements the blocking queue 
+- A concrete class implements the blocking queue interface.
+- It's a bounded queue that uses an array under the hood to hold a finite number of elements
+- It's**thread safe** since it implements the blocking queue interface
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM5NjMyOTEzLDIyODcwNjQ1NywtOTI2MT
-M5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2
-LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLT
-IwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0
-ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOS
-wtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMTY1
-MTEwODFdfQ==
+eyJoaXN0b3J5IjpbLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05Mj
+YxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIw
+NjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNy
+wtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5
+NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0Mz
+A5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDEx
+NjUxMTA4MV19
 -->
