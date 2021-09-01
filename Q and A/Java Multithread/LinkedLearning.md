@@ -842,12 +842,16 @@ public class ConditionVariableDemo {
 	2. Make sure that only one thread can use it at a time to add or remove items.
 	3. Make sure to prevent producers from trying to add data to a full queue
 	4. Make sure to prevent consumers from trying to remove data from an empty queue
+#### Unbounded Queue
+- Queue with an unlimited capacity
+- It is still limited by memory
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMj
-MwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2
-NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Ny
-w1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMy
-OTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2Mj
-QxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDExNjUxMTA4MSwxNTky
-OTQ4NjEzXX0=
+eyJoaXN0b3J5IjpbMTY4NjQ1NjgxNiwyMjg3MDY0NTcsLTkyNj
+EzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2
+NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC
+0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0
+NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQzMD
+ksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2
+NTExMDgxXX0=
 -->
