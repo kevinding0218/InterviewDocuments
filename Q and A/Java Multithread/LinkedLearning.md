@@ -848,14 +848,15 @@ public class ConditionVariableDemo {
 - It is still limited by memory
 #### Pipeline
 - A chain of processsing element arranged so that the output of each element is the input to the next one
-- Sc
+- For example, Scoop Soup -> Add Spice -> eat Soup
+- A series of producer-consumer pair with some buffer like a queue between each consecutive element, Produce -- Queue --> Consumer + Producer -- Queue --> Consumer
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM4NzczNjQ4LDIyODcwNjQ1NywtOTI2MT
-M5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2
-LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLT
-IwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0
-ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOS
-wtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMTY1
-MTEwODFdfQ==
+eyJoaXN0b3J5IjpbLTI2NzYzMTc5OCwyMjg3MDY0NTcsLTkyNj
+EzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2
+NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC
+0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0
+NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQzMD
+ksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2
+NTExMDgxXX0=
 -->
