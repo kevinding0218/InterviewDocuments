@@ -842,16 +842,20 @@ public class ConditionVariableDemo {
 	2. Make sure that only one thread can use it at a time to add or remove items.
 	3. Make sure to prevent producers from trying to add data to a full queue
 	4. Make sure to prevent consumers from trying to remove data from an empty queue
+- Consider Average rate of production < Average rate of consumption
 #### Unbounded Queue
 - Queue with an unlimited capacity
 - It is still limited by memory
+#### Pipeline
+- A chain of processsing element arranged so that the output of each element is the input to the next one
+- Sc
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NjQ1NjgxNiwyMjg3MDY0NTcsLTkyNj
-EzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2
-NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC
-0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0
-NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQzMD
-ksLTEzNTU2OTYyNDEsOTE3NjQ4OTYxLDIwNjkyNzU0MTksMTE2
-NTExMDgxXX0=
+eyJoaXN0b3J5IjpbNjM4NzczNjQ4LDIyODcwNjQ1NywtOTI2MT
+M5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2
+LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLT
+IwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0
+ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOS
+wtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2OTI3NTQxOSwxMTY1
+MTEwODFdfQ==
 -->
