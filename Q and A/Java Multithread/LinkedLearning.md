@@ -854,13 +854,65 @@ public class ConditionVariableDemo {
 - A concrete class implements the blocking queue interface.
 - It's a bounded queue that uses an array under the hood to hold a finite number of elements
 - It's**thread safe** since it implements the blocking queue interface
-- 
+#### Java Example
+```
+class SoupProducer extends Thread {
+
+    private BlockingQueue servingLine;
+
+    public SoupProducer(BlockingQueue servingLine) {
+        this.servingLine = servingLine;
+    }
+
+    public void run() {
+        for (int i=0; i<20; i++) { // serve 20 bowls of soup
+            try {
+                servingLine.add("Bowl #" + i);
+                System.out.format("Served Bowl #%d - remaining capacity: %d\n", i, servingLine.remainingCapacity());
+                Thread.sleep(200); // time to serve a bowl of soup
+            } catch (Exception e) { e.printStackTrace(); }
+        }
+        servingLine.add("no soup for you!");
+        servingLine.add("no soup for you!");
+    }
+}
+
+class SoupConsumer extends Thread {
+
+    private BlockingQueue servingLine;
+
+    public SoupConsumer(BlockingQueue servingLine) {
+        this.servingLine = servingLine;
+    }
+
+    public void run() {
+        while (true) {
+            try {
+                String bowl = (String)servingLine.take();
+                if (bowl == "no soup for you!")
+                    break;
+                System.out.format("Ate %s\n", bowl);
+                Thread.sleep(300); // time to eat a bowl of soup
+             } catch (Exception e) { e.printStackTrace(); }
+        }
+    }
+}
+
+public class ProducerConsumerDemo {
+    public static void main(String args[]) {
+        BlockingQueue servingLine = new ArrayBlockingQueue<String>(5);
+        new SoupConsumer(servingLine).start();
+        new SoupConsumer(servingLine).start();
+        new SoupProducer(servingLine).start();
+    }
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05Mj
-YxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIw
-NjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNy
-wtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5
-NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0Mz
-A5LC0xMzU1Njk2MjQxLDkxNzY0ODk2MSwyMDY5Mjc1NDE5LDEx
-NjUxMTA4MV19
+eyJoaXN0b3J5IjpbMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
+cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
+LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
+E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
+Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OC
+wtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2NDg5NjEsMjA2
+OTI3NTQxOV19
 -->
