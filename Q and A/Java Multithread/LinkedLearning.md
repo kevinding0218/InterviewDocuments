@@ -1028,16 +1028,26 @@ public class SemaphoreDemo {
 4. What does the semaphore's acquire() method do to the counter value?
 -   If the counter is positive, decrement its value.
 5. What is the difference between a binary semaphore and a mutex?
+-   The binary semaphore can be acquired and released by different threads.
+6. What happens if the producer puts elements into a fixed-length queue faster than the consumer removes them?
+-   The queue will fill up and cause an error.
+7. Which architecture consists of a chained-together series of producer-consumer pairs?
+-   pipeline
+8. How should the average rates of production and consumption be related in a producer-consumer architecture?
+-   The consumption rate should be greater than or equal to the production rate.-
+9. When should a thread typically signal a condition variable?
 
 -
 -
 -
+-
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1ODU3ODg4MSw4MDUxMjI5NywtMTY1MD
-M2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3
-LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNj
-kzNjIwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0
-MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC
-0zNjI5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5
-ODY0MzA5XX0=
+eyJoaXN0b3J5IjpbNjQ3MzU4NzE1LDgwNTEyMjk3LC0xNjUwMz
+YxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcs
+LTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OT
+M2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQz
+MjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLT
+M2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4
+NjQzMDldfQ==
 -->
