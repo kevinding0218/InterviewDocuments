@@ -909,12 +909,14 @@ public class ProducerConsumerDemo {
 ```
 ## Semaphore
 ### What is it
-- Another synchronization mechanism that can be used to control access to shared resources
-- Sort of like a mutex, but unlike a mutex.
+- Another synchronization mechanism that can be used to control access to shared resources, sort of like a mutex, but unlike a mutex.
 - A semaphore can allow multiple threads to access the resource at the same time
-- It includ
+- It includes a counter to track how many times it's been acquired or released
+#### acquire()
+- As long as the semophore's count value is positive, any thread can acquire the semaphore, which then decrements the counter value.
+- If counter reaches zero, then threads trying 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MTA3NTQxOCwxMDg3NjYxNTEsLTE0Mz
+eyJoaXN0b3J5IjpbLTMxMjgzNTI3OSwxMDg3NjYxNTEsLTE0Mz
 Y2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3
 LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMT
 I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
