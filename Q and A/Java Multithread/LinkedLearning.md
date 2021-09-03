@@ -909,7 +909,7 @@ public class ProducerConsumerDemo {
 ```
 ## Semaphore
 ### What is it
-- Another synchronization mechanism that can be used to control access to shared resources, sort of like a mutex, but unlike a mutex.
+- Another synchronization (signal) mechanism that can be used to control access to shared resources. Sort of like a mutex, but unlike a mutex
 - A semaphore can allow multiple threads to access the resource at the same time
 - It includes a counter to track how many times it's been acquired or released
 #### acquire()
@@ -937,11 +937,11 @@ public class ProducerConsumerDemo {
 - A semaphore can be acquired and released by different threads.
 	- Any thread can increment the semaphore's value by releasing it or attempt to decrement of value by acquiring it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MTU5MDk2NiwxMDg3NjYxNTEsLTE0Mz
-Y2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3
-LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMT
-I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
-NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC
-0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkx
-NzY0ODk2MV19
+eyJoaXN0b3J5IjpbNjQ0MDg5NjkzLDEwODc2NjE1MSwtMTQzNj
+YzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcs
+MTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMj
+UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
+MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLT
+E3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3
+NjQ4OTYxXX0=
 -->
