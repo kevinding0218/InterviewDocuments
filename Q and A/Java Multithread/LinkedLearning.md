@@ -1018,12 +1018,17 @@ public class SemaphoreDemo {
     }
 }
 ```
+## Quiz
+1. Which of these is a common use case for a counting semaphore?
+-   Track the availability of a limited resource.
+2. In addition to modifying the counter value, what else does calling the semaphore's release() method do?
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
-Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
-LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMT
-E0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAy
-NDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMT
-k0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1
-NTY5NjI0MV19
+eyJoaXN0b3J5IjpbLTE1OTQ1MzI0NDMsODA1MTIyOTcsLTE2NT
+AzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1
+NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMj
+Y5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5
+NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NS
+wtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTcz
+OTg2NDMwOV19
 -->
