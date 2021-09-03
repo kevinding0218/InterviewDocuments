@@ -1059,10 +1059,54 @@ public class SemaphoreDemo {
 	- Sometimes putting sleep statemtns at different places throughout your code can help to uncover potential race conditions by changing the timing and therefore order in which threads can execute it.
 ### Java Example
 ```java
+class Shopper extends Thread {
 
+    public static int bagsOfChips = 1; // start with one on the list
+    private static Lock pencil = new ReentrantLock();
+
+    public Shopper(String name) {
+        this.setName(name);
+    }
+
+    public void run() {
+        if (this.getName().contains("Olivia")) {
+            pencil.lock();
+            try {
+                bagsOfChips += 3;
+                System.out.println(this.getName() + " ADDED three bags of chips.");
+            } finally {
+                pencil.unlock();
+            }
+        } else { // "Barron"
+            pencil.lock();
+            try {
+                bagsOfChips *= 2;
+                System.out.println(this.getName() + " DOUBLED the bags of chips.");
+            } finally {
+                pencil.unlock();
+            }
+        }
+    }
+}
+
+public class RaceConditionDemo {
+    public static void main(String args[]) throws InterruptedException  {
+        // create 10 shoppers: Barron-0...4 and Olivia-0...4
+        Shopper[] shoppers = new Shopper[10];
+        for (int i=0; i<shoppers.length/2; i++) {
+            shoppers[2*i] = new Shopper("Barron-"+i);
+            shoppers[2*i+1] = new Shopper("Olivia-"+i);
+        }
+        for (Shopper s : shoppers)
+            s.start();
+        for (Shopper s : shoppers)
+            s.join();
+        System.out.println("We need to buy " + Shopper.bagsOfChips + " bags of chips.");
+    }
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3Nzk0NzQyNCwxMzgxNzE2Nzc0LDE0Nz
+eyJoaXN0b3J5IjpbMTA2NjMxNjAzOSwxMzgxNzE2Nzc0LDE0Nz
 A4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUx
 LC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MD
 IzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3
