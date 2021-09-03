@@ -1051,9 +1051,10 @@ public class SemaphoreDemo {
 #### Race Condition
 - A flaw in the timing or ordering of a program's execution that causes incorrect behavior. 
 - For example, even though we use a pencil as a mutex to protect against a data race, the potential of a race condition still exists, because the order in which the threads exeute is not deterministic.
-	- 
+	- Thread A runs before Thread B: (1 + 3) x 2 = 8
+	- Thread B runs before Thread A: (1 x 2) + 3 = 5
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTIwOTU0MTksMTM4MTcxNjc3NCwxND
+eyJoaXN0b3J5IjpbLTE4MzEzODYxNDUsMTM4MTcxNjc3NCwxND
 cwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1
 MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3ND
 AyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4
