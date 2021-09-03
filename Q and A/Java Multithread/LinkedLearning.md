@@ -1036,18 +1036,25 @@ public class SemaphoreDemo {
 8. How should the average rates of production and consumption be related in a producer-consumer architecture?
 -   The consumption rate should be greater than or equal to the production rate.-
 9. When should a thread typically signal a condition variable?
+-   after doing something to change the state associated with the condition variable but before unlocking the associated mutex
+10. Why would you use the condition variable's signal() method instead of signalAll()?
+-   You only need to wake up one waiting thread and it does not matter which one.
+11. Condition variables serve as a `holding place` for threads to `wait for a certain condition before continuing execution `.
+12. Condition variables work together with which other mechanism serving as a monitor?
 
 -
 -
 -
 -
 -
+-
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ3MzU4NzE1LDgwNTEyMjk3LC0xNjUwMz
-YxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcs
-LTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OT
-M2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQz
-MjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLT
-M2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4
-NjQzMDldfQ==
+eyJoaXN0b3J5IjpbMTUwOTQ3ODAzMyw4MDUxMjI5NywtMTY1MD
+M2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3
+LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNj
+kzNjIwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0
+MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC
+0zNjI5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5
+ODY0MzA5XX0=
 -->
