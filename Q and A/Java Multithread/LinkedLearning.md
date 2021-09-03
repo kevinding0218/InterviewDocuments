@@ -1045,9 +1045,11 @@ public class SemaphoreDemo {
 ## Barriers
 ### Race Condition
 #### Data Race
-- Can occur when two or more threads concurrently 
+- Can occur when two or more threads concurrently access the same memory location
+- If at least one of those threads is writing to or changing that memory value, that can cause the threads to overwrite each other or ead wrong values.
+- To prevent data race, we need to ensure mutual exclusion for the shared reousr
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg4NDY1NjIwLDE0NzA4NjQwMTMsODA1MT
+eyJoaXN0b3J5IjpbNzA2MDUyODE0LDE0NzA4NjQwMTMsODA1MT
 IyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgx
 LDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2Mj
 U0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkz
