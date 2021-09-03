@@ -1050,13 +1050,14 @@ public class SemaphoreDemo {
 - To prevent data race, we need to ensure mutual exclusion for the shared resource.
 #### Race Condition
 - A flaw in the timing or ordering of a program's execution that causes incorrect behavior. 
-- 
+- For example, even though we use a pencil as a mutex to protect against a data race, the potential of a race condition still exists, because the order in which the threads exeute is not deterministic.
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY3ODQzMjMzLDEzODE3MTY3NzQsMTQ3MD
-g2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEs
-LTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMj
-MwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2
-NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Ny
-w1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMy
-OTkxXX0=
+eyJoaXN0b3J5IjpbLTE4NTIwOTU0MTksMTM4MTcxNjc3NCwxND
+cwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1
+MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3ND
+AyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4
+NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNj
+c3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYy
+MzI5OTFdfQ==
 -->
