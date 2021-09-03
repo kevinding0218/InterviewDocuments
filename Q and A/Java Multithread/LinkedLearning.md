@@ -1053,12 +1053,14 @@ public class SemaphoreDemo {
 - For example, even though we use a pencil as a mutex to protect against a data race, the potential of a race condition still exists, because the order in which the threads exeute is not deterministic.
 	- Thread A runs before Thread B: (1 + 3) x 2 = 8
 	- Thread B runs before Thread A: (1 x 2) + 3 = 5
+- Unfortuantely, there is not a single catch all the way to detect race conditions.
+- Sometimes putting sleep statemtns at different places t
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzEzODYxNDUsMTM4MTcxNjc3NCwxND
-cwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1
-MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3ND
-AyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4
-NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNj
-c3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYy
-MzI5OTFdfQ==
+eyJoaXN0b3J5IjpbNTQ5Mjc5MDg1LDEzODE3MTY3NzQsMTQ3MD
+g2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEs
+LTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMj
+MwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2
+NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Ny
+w1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMy
+OTkxXX0=
 -->
