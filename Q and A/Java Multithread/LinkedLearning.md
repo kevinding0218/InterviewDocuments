@@ -1020,37 +1020,31 @@ public class SemaphoreDemo {
 ```
 ## Quiz
 1. Which of these is a common use case for a counting semaphore?
--   Track the availability of a limited resource.
+- Track the availability of a limited resource.
 2. In addition to modifying the counter value, what else does calling the semaphore's release() method do?
--   Signal another thread waiting to acquire the semaphore.
+- Signal another thread waiting to acquire the semaphore.
 3. What does the semaphore's release() method do to the counter value?
--   Always increment the counter's value.
+- Always increment the counter's value.
 4. What does the semaphore's acquire() method do to the counter value?
--   If the counter is positive, decrement its value.
+- If the counter is positive, decrement its value.
 5. What is the difference between a binary semaphore and a mutex?
--   The binary semaphore can be acquired and released by different threads.
+- The binary semaphore can be acquired and released by different threads.
 6. What happens if the producer puts elements into a fixed-length queue faster than the consumer removes them?
--   The queue will fill up and cause an error.
+- The queue will fill up and cause an error.
 7. Which architecture consists of a chained-together series of producer-consumer pairs?
--   pipeline
+- Pipeline
 8. How should the average rates of production and consumption be related in a producer-consumer architecture?
--   The consumption rate should be greater than or equal to the production rate.-
+- The consumption rate should be greater than or equal to the production rate.-
 9. When should a thread typically signal a condition variable?
--   after doing something to change the state associated with the condition variable but before unlocking the associated mutex
+- After doing something to change the state associated with the condition variable but before unlocking the associated mutex
 10. Why would you use the condition variable's signal() method instead of signalAll()?
--   You only need to wake up one waiting thread and it does not matter which one.
+- You only need to wake up one waiting thread and it does not matter which one.
 11. Condition variables serve as a `holding place` for threads to `wait for a certain condition before continuing execution `.
 12. Condition variables work together with which other mechanism serving as a monitor?
+- A mutex
 
--
--
--
--
--
--
--
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwOTQ3ODAzMyw4MDUxMjI5NywtMTY1MD
+eyJoaXN0b3J5IjpbMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MD
 M2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3
 LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNj
 kzNjIwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0
