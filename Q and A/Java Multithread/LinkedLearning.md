@@ -1054,13 +1054,17 @@ public class SemaphoreDemo {
 	- Thread A runs before Thread B: (1 + 3) x 2 = 8
 	- Thread B runs before Thread A: (1 x 2) + 3 = 5
 - Unfortuantely, there is not a single catch all the way to detect race conditions.
-- Sometimes putting sleep statemtns at different places t
+- Searching for Race Condition
+	- Sometimes putting sleep statemtns at different places throughout your code can help to uncover potential race conditions by changing the timing and therefore order in which threads can execute it.
+### Java Example
+```java
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ5Mjc5MDg1LDEzODE3MTY3NzQsMTQ3MD
-g2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEs
-LTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMj
-MwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2
-NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Ny
-w1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMy
-OTkxXX0=
+eyJoaXN0b3J5IjpbLTExNzAwMjk4MywxMzgxNzE2Nzc0LDE0Nz
+A4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUx
+LC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MD
+IzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3
+NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2Nz
+csNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIz
+Mjk5MV19
 -->
