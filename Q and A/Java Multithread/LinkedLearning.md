@@ -950,13 +950,14 @@ public class ProducerConsumerDemo {
 	2. Then it removes an item from the buffer
 	3. Finally increment the emptyCount from 5 to 6 by releasing it
 - Producer and Consumer each acquire a different semaphore as the first operation in their respective sequences,.
-- If the consumer tries to take an item when the buffer is empty, then when it tries to acquire that fillCount semaphore, it'll block and wait until producer adds an item 
+- If the consumer tries to take an item when the buffer is empty, then when it tries to acquire that fillCount semaphore, it'll block and wait until producer adds an item and releases fillCount
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYzMzUwMzYzLC0xNjUwMzYxNzU3LDEwOD
-c2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3
-OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMj
-ExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMw
-MjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LD
-E5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEz
-NTU2OTYyNDFdfQ==
+eyJoaXN0b3J5IjpbLTEzMzAzMTAyNjQsLTE2NTAzNjE3NTcsMT
+A4NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5
+MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC
+0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIw
+MzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0OD
+csMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwt
+MTM1NTY5NjI0MV19
 -->
