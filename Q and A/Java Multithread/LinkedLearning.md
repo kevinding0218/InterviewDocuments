@@ -1022,13 +1022,22 @@ public class SemaphoreDemo {
 1. Which of these is a common use case for a counting semaphore?
 -   Track the availability of a limited resource.
 2. In addition to modifying the counter value, what else does calling the semaphore's release() method do?
+-   Signal another thread waiting to acquire the semaphore.
+3. What does the semaphore's release() method do to the counter value?
+-   Always increment the counter's value.
+4. What does the semaphore's acquire() method do to the counter value?
+-   If the counter is positive, decrement its value.
+5. What is the difference between a binary semaphore and a mutex?
 
+-
+-
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTQ1MzI0NDMsODA1MTIyOTcsLTE2NT
-AzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1
-NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMj
-Y5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5
-NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NS
-wtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTcz
-OTg2NDMwOV19
+eyJoaXN0b3J5IjpbMTg1ODU3ODg4MSw4MDUxMjI5NywtMTY1MD
+M2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3
+LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNj
+kzNjIwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0
+MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC
+0zNjI5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5
+ODY0MzA5XX0=
 -->
