@@ -937,23 +937,23 @@ public class ProducerConsumerDemo {
 - A semaphore can be acquired and released by different threads.
 	- Any thread can increment the semaphore's value by releasing it or attempt to decrement of value by acquiring it.
 ### Product-Consumer Semaphore
-- A pair of semaphore can be used in a similar way to condition variables to synchronze producer and consumer threads. Adding or removing elements from a shared, finite queue or buffer.
-- One semaphore tracks the number of items in the buffer, shown here as fillCount as 0
-- Another semaphore tracks the number of free spaces as emptyCount as 6
+- A **pair of semaphore** can be used in a similar way to condition variables to synchronze producer and consumer threads. Adding or removing elements from **a shared, finite queue or buffer**.
+- One semaphore tracks the **number of items in the buffer**, shown here as `fillCount` as **0**
+- Another semaphore tracks the **number of free spaces** as `emptyCount` as **6**
 #### To add an element to the buffer
 - Producer 
-	1. First acquire the emptyCount, which decrement its value from 6 to 5, 
+	1. First **acquire** the `emptyCount`, which **decrement** its value from 6 to 5, 
 	2. Then it pushes the item into the buffer
-	3. Finally release the fillCount semaphore to increment its value from 0 to 1.
+	3. Finally **release** the `fillCount` semaphore to **increment** its value from 0 to 1.
 - Consumer
-	1. First acquire the fillCount to decrement its value from 1 to 0
+	1. First acquire the `fillCount` to decrement its value from 1 to 0
 	2. Then it removes an item from the buffer
-	3. Finally increment the emptyCount from 5 to 6 by releasing it
+	3. Finally increment the `emptyCount` from 5 to 6 by releasing it
 - Producer and Consumer each acquire a different semaphore as the first operation in their respective sequences,.
 - If the consumer tries to take an item when the buffer is empty, then when it tries to acquire that fillCount semaphore, it'll block and wait until producer adds an item and releases fillCount, which will then signal the consumer to continue.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MDI5OTk3NywtMTY1MDM2MTc1NywxMD
+eyJoaXN0b3J5IjpbLTM1NDk0NzE4MSwtMTY1MDM2MTc1NywxMD
 g3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkw
 NzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLT
 IxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAz
