@@ -1018,7 +1018,7 @@ public class SemaphoreDemo {
     }
 }
 ```
-## Quiz
+### Quiz
 1. Which of these is a common use case for a counting semaphore?
 - Track the availability of a limited resource.
 2. In addition to modifying the counter value, what else does calling the semaphore's release() method do?
@@ -1042,13 +1042,16 @@ public class SemaphoreDemo {
 11. Condition variables serve as a `holding place` for threads to `wait for a certain condition before continuing execution `.
 12. Condition variables work together with which other mechanism serving as a monitor?
 - A mutex
-
+## Barriers
+### Race Condition
+#### Data Race
+- Can occur when two or more threads concurrently 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MD
-M2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3
-LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNj
-kzNjIwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0
-MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC
-0zNjI5NDQ4NywxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5
-ODY0MzA5XX0=
+eyJoaXN0b3J5IjpbNTg4NDY1NjIwLDE0NzA4NjQwMTMsODA1MT
+IyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgx
+LDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2Mj
+U0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkz
+OTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LD
+gxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMx
+NDA1OF19
 -->
