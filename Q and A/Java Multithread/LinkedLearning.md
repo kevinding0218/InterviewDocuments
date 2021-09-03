@@ -914,13 +914,16 @@ public class ProducerConsumerDemo {
 - It includes a counter to track how many times it's been acquired or released
 #### acquire()
 - As long as the semophore's count value is positive, any thread can acquire the semaphore, which then decrements the counter value.
-- If counter reaches zero, then threads trying 
+- If counter reaches zero, then threads trying to acquire the semaphore will be blocked and placed in a queue to wait until it's available.
+#### release()
+- When a thread is done using the resource, it releases the semaphore which increasement the counter value
+- If there are any other threads waiting to acquire the semaphore, they'll be signal
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMjgzNTI3OSwxMDg3NjYxNTEsLTE0Mz
-Y2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3
-LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMT
-I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
-NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC
-0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkx
-NzY0ODk2MV19
+eyJoaXN0b3J5IjpbMjU3NjYyODksMTA4NzY2MTUxLC0xNDM2Nj
+M5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0Nywx
+MTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNT
+EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
+OTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMT
+c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
+NDg5NjFdfQ==
 -->
