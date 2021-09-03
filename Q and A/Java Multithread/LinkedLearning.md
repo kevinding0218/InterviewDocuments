@@ -941,14 +941,17 @@ public class ProducerConsumerDemo {
 - One semaphore tracks the number of items in the buffer, shown here as fillCount as 0
 - Another semaphore tracks the number of free spaces as emptyCount as 6
 #### To add an element to the buffer
-1. producer will first acquire the emptyCount, which decrement its value from 6 to 5, then it pushes the item into the buffer
-2. 
+##### Producer 
+1. first acquire the emptyCount, which decrement its value from 6 to 5, 
+2. then it pushes the item into the buffer
+3. finally release the fillCount semaphore to increment its value from 0 to 1.
+##### Consumer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzUxMzAxNTMsLTE2NTAzNjE3NTcsMT
-A4NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5
-MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC
-0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIw
-MzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0OD
-csMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwt
-MTM1NTY5NjI0MV19
+eyJoaXN0b3J5IjpbODQzNjMzMzI2LC0xNjUwMzYxNzU3LDEwOD
+c2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3
+OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMj
+ExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMw
+MjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LD
+E5NDYyMzI5OTEsLTE3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEz
+NTU2OTYyNDFdfQ==
 -->
