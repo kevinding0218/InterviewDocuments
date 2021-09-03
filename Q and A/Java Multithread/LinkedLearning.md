@@ -917,13 +917,16 @@ public class ProducerConsumerDemo {
 - If counter reaches zero, then threads trying to acquire the semaphore will be blocked and placed in a queue to wait until it's available.
 #### release()
 - When a thread is done using the resource, it releases the semaphore which increasement the counter value
-- If there are any other threads waiting to acquire the semaphore, they'll be signal
+- If there are any other threads waiting to acquire the semaphore, they'll be signaled to wake up and do so.
+#### Example
+- A phone charger has two ports, that you can think of the semaphore has a value of two.
+- When I acquire one of these ports by plugging my phone, the semaphore's value to o
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU3NjYyODksMTA4NzY2MTUxLC0xNDM2Nj
-M5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0Nywx
-MTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNT
-EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
-OTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMT
-c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
-NDg5NjFdfQ==
+eyJoaXN0b3J5IjpbNjU2Mjk5MTE5LDEwODc2NjE1MSwtMTQzNj
+YzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcs
+MTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMj
+UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
+MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLT
+E3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3
+NjQ4OTYxXX0=
 -->
