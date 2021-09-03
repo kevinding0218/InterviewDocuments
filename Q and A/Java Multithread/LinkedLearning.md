@@ -1049,7 +1049,7 @@ public class SemaphoreDemo {
 - If at least one of those threads is writing to or changing that memory value, that can cause the threads to overwrite each other or ead wrong values.
 - To prevent data race, we need to ensure mutual exclusion for the shared resource.
 #### Race Condition
-- A flaw in the timing or ordering of a program's execution that causes incorrect behavior. 
+- A flaw in the **timing or ordering of a program's execution** that causes incorrect behavior. 
 - For example, even though we use a pencil as a mutex to protect against a data race, the potential of a race condition still exists, because the order in which the threads exeute is not deterministic.
 	- Thread A runs before Thread B: (1 + 3) x 2 = 8
 	- Thread B runs before Thread A: (1 x 2) + 3 = 5
@@ -1058,9 +1058,10 @@ public class SemaphoreDemo {
 	- Sometimes putting sleep statemtns at different places throughout your code can help to uncover potential race conditions by changing the timing and therefore order in which threads can execute it.
 ### Java Example
 ```java
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzAwMjk4MywxMzgxNzE2Nzc0LDE0Nz
+eyJoaXN0b3J5IjpbMTEyNDk2OTUxNSwxMzgxNzE2Nzc0LDE0Nz
 A4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUx
 LC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MD
 IzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3
