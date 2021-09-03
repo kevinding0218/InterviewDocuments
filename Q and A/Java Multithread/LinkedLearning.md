@@ -956,11 +956,43 @@ public class ProducerConsumerDemo {
 #### Counting Semaphore
 - At most 4 phones will be in charing
 ```java
+class CellPhone extends Thread {
 
+    private static Semaphore charger = new Semaphore(4);
+
+    public CellPhone(String name) {
+        this.setName(name);
+    }
+
+    public void run() {
+        try {
+            charger.acquire();
+            System.out.println(this.getName() + " is charging...");
+            Thread.sleep(ThreadLocalRandom.current().nextInt(1000, 2000));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            System.out.println(this.getName() + " is DONE charging!");
+            charger.release();
+        }
+    }
+}
+
+public class SemaphoreDemo {
+    public static void main(String args[]) {
+        for (int i =0; i < 10; i++)
+            new CellPhone("Phone-"+i).start();
+    }
+}
+```
+#### Binary Semaphore
+- Only one thread/phone will be charing, basically acting like a mutex
+- Could replace with reentrant lock as well
 ```
 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMzc1MjAzMSwtMTY1MDM2MTc1NywxMD
+eyJoaXN0b3J5IjpbLTgxNDM5NTA4MywtMTY1MDM2MTc1NywxMD
 g3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkw
 NzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLT
 IxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAz
