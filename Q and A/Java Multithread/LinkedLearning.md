@@ -920,13 +920,14 @@ public class ProducerConsumerDemo {
 - If there are any other threads waiting to acquire the semaphore, they'll be signaled to wake up and do so.
 #### Example
 - A phone charger has two ports, that you can think of the semaphore has a value of two.
-- When I acquire one of these ports by plugging my phone, the semaphore's value to o
+- When 2 people acquire both of these ports by plugging their phones, it decrements the semaphore's value to 0, meaning there is no more available ports to be used.
+- A third person has to wait until one of the ports charging done and release the semaphore
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU2Mjk5MTE5LDEwODc2NjE1MSwtMTQzNj
-YzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcs
-MTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMj
-UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
-MTkyOSw4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLT
-E3NTkzMTQwNTgsLTE3Mzk4NjQzMDksLTEzNTU2OTYyNDEsOTE3
-NjQ4OTYxXX0=
+eyJoaXN0b3J5IjpbNjA4NzcxMTYsMTA4NzY2MTUxLC0xNDM2Nj
+M5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0Nywx
+MTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNT
+EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
+OTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMT
+c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
+NDg5NjFdfQ==
 -->
