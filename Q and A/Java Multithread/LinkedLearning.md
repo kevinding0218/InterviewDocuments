@@ -988,15 +988,42 @@ public class SemaphoreDemo {
 #### Binary Semaphore
 - Only one thread/phone will be charing, basically acting like a mutex
 - Could replace with reentrant lock as well
-```
+```java
+class CellPhone extends Thread {
 
+    private static Semaphore charger = new Semaphore(1);
+
+    public CellPhone(String name) {
+        this.setName(name);
+    }
+
+    public void run() {
+        try {
+            charger.acquire();
+            System.out.println(this.getName() + " is charging...");
+            Thread.sleep(ThreadLocalRandom.current().nextInt(1000, 2000));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            System.out.println(this.getName() + " is DONE charging!");
+            charger.release();
+        }
+    }
+}
+
+public class SemaphoreDemo {
+    public static void main(String args[]) {
+        for (int i =0; i < 10; i++)
+            new CellPhone("Phone-"+i).start();
+    }
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNDM5NTA4MywtMTY1MDM2MTc1NywxMD
-g3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkw
-NzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLT
-IxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAz
-MDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4Ny
-wxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0x
-MzU1Njk2MjQxXX0=
+eyJoaXN0b3J5IjpbODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
+Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
+LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMT
+E0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAy
+NDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMT
+k0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1
+NTY5NjI0MV19
 -->
