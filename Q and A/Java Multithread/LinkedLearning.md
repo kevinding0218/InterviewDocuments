@@ -938,12 +938,14 @@ public class ProducerConsumerDemo {
 	- Any thread can increment the semaphore's value by releasing it or attempt to decrement of value by acquiring it.
 ### Product-Consumer Semaphore
 - A pair of semaphore can be used in a similar way to condition variables to synchronze producer and consumer threads. Adding or removing elements from a shared, finite queue or buffer.
+- One semaphore tracks the number of items in teh buffer, shown here as fillCount
+- Another semap
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xND
-M2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0
-NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LD
-EyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1
-NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MS
-wtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5
-MTc2NDg5NjFdfQ==
+eyJoaXN0b3J5IjpbLTk4OTUxNjA5NiwtMTY1MDM2MTc1NywxMD
+g3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkw
+NzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLT
+IxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAz
+MDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4Ny
+wxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0x
+MzU1Njk2MjQxXX0=
 -->
