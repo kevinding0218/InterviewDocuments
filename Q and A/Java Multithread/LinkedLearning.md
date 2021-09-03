@@ -922,12 +922,22 @@ public class ProducerConsumerDemo {
 - A phone charger has two ports, that you can think of the semaphore has a value of two.
 - When 2 people acquire both of these ports by plugging their phones, it decrements the semaphore's value to 0, meaning there is no more available ports to be used.
 - A third person has to wait until one of the ports charging done and release the semaphore
+### Counting Semaphore
+- Value >= 0
+- Used to track limited resources
+	- Pool of connections
+	- Item in a queue
+### Binary Semaphore
+- Value = 1 or 0
+	- 0 represents locked
+	- 1 represents unlocked
+- U
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA4NzcxMTYsMTA4NzY2MTUxLC0xNDM2Nj
-M5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0Nywx
-MTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNT
-EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
-OTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMT
-c1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5MTc2
-NDg5NjFdfQ==
+eyJoaXN0b3J5IjpbMTMzNTE0MzIzMywxMDg3NjYxNTEsLTE0Mz
+Y2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3
+LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMT
+I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
+NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC
+0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkx
+NzY0ODk2MV19
 -->
