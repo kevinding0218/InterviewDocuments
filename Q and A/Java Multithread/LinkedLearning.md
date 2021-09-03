@@ -1043,17 +1043,19 @@ public class SemaphoreDemo {
 12. Condition variables work together with which other mechanism serving as a monitor?
 - A mutex
 ## Barriers
-### Race Condition
+### Race
 #### Data Race
 - Can occur when two or more threads concurrently access the same memory location
 - If at least one of those threads is writing to or changing that memory value, that can cause the threads to overwrite each other or ead wrong values.
-- To prevent data race, we need to ensure mutual exclusion for the shared reousr
+- To prevent data race, we need to ensure mutual exclusion for the shared resource.
+#### Race Condition
+- A flaw in the timing or ordering of a program's execution that causes incorrect behavior. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA2MDUyODE0LDE0NzA4NjQwMTMsODA1MT
-IyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgx
-LDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2Mj
-U0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkz
-OTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LD
-gxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MSwtMTc1OTMx
-NDA1OF19
+eyJoaXN0b3J5IjpbMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNT
+EyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4
+MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2Nj
+I1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5
+MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOS
+w4MTY2OTY5NzUsLTM2Mjk0NDg3LDE5NDYyMzI5OTEsLTE3NTkz
+MTQwNThdfQ==
 -->
