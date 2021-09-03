@@ -934,13 +934,14 @@ public class ProducerConsumerDemo {
 - Used similar to mutex by acquiring/releasing
 ### Mutex vs Semaphore
 - A mutex can **only be unlocked by the same thread that originally locked it.**
-- A semaph
+- A semaphore can be acquired and released by different threads.
+	- Any thread can increment the semaphore's value by releasing it or attempt to decrement of value by acquiring it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDU3MTM2NDUsMTA4NzY2MTUxLC0xND
-M2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0
-NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LD
-EyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1
-NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0ODcsMTk0NjIzMjk5MS
-wtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwtMTM1NTY5NjI0MSw5
-MTc2NDg5NjFdfQ==
+eyJoaXN0b3J5IjpbMTc5MTU5MDk2NiwxMDg3NjYxNTEsLTE0Mz
+Y2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3
+LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMT
+I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
+NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4NywxOTQ2MjMyOTkxLC
+0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0xMzU1Njk2MjQxLDkx
+NzY0ODk2MV19
 -->
