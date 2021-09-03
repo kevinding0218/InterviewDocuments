@@ -942,22 +942,23 @@ public class ProducerConsumerDemo {
 - Another semaphore tracks the **number of free spaces** as `emptyCount` as **6**
 #### To add an element to the buffer
 - Producer 
-	1. First **acquire** the `emptyCount`, which **decrement** its value from 6 to 5, 
-	2. Then it pushes the item into the buffer
-	3. Finally **release** the `fillCount` semaphore to **increment** its value from 0 to 1.
+	1. First **acquire** the `emptyCount`, which **decrement** its value from **6 to 5**
+	2. Then it **pushes** the item into the buffer
+	3. Finally **release** the `fillCount` semaphore to **increment** its value from **0 to 1.**
 - Consumer
-	1. First acquire the `fillCount` to decrement its value from 1 to 0
-	2. Then it removes an item from the buffer
-	3. Finally increment the `emptyCount` from 5 to 6 by releasing it
-- Producer and Consumer each acquire a different semaphore as the first operation in their respective sequences,.
-- If the consumer tries to take an item when the buffer is empty, then when it tries to acquire that fillCount semaphore, it'll block and wait until producer adds an item and releases fillCount, which will then signal the consumer to continue.
+	1. First **acquire** the `fillCount` to decrement its value from **1 to 0**
+	2. Then it **removes** an item from the buffer
+	3. Finally **increment** the `emptyCount` from **5 to 6** by **releasing** it
+- Producer and Consumer **each acquire a different semaphore** as the first operation in their respective sequences,.
+- If the Consumer tries to take an item when the buffer is empty, then when it tries to acquire that `fillCount` semaphore, **it'll block and wait until producer** adds an item and releases `fillCount`, which will then **signal the consumer to continue**.
+- If the Producer
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDk0NzE4MSwtMTY1MDM2MTc1NywxMD
-g3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkw
-NzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLT
-IxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAz
-MDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2OTc1LC0zNjI5NDQ4Ny
-wxOTQ2MjMyOTkxLC0xNzU5MzE0MDU4LC0xNzM5ODY0MzA5LC0x
-MzU1Njk2MjQxXX0=
+eyJoaXN0b3J5IjpbLTE1ODk1OTA2NDYsLTE2NTAzNjE3NTcsMT
+A4NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5
+MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC
+0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIw
+MzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5Njk3NSwtMzYyOTQ0OD
+csMTk0NjIzMjk5MSwtMTc1OTMxNDA1OCwtMTczOTg2NDMwOSwt
+MTM1NTY5NjI0MV19
 -->
