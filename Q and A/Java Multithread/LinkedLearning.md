@@ -946,11 +946,11 @@ public class ProducerConsumerDemo {
 	2. Then it pushes the item into the buffer
 	3. Finally release the fillCount semaphore to increment its value from 0 to 1.
 - Consumer
-	1. First acquire the fillCount to decrement its value
+	1. First acquire the fillCount to decrement its value from 1 to 0
 	2. Then it removes an item from the buffer
 	3. Finally increment the emptyCount from 5 to 6 by releasing it
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MDQ3NDIyOSwtMTY1MDM2MTc1NywxMD
+eyJoaXN0b3J5IjpbLTIzODY0NzU3OSwtMTY1MDM2MTc1NywxMD
 g3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkw
 NzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLT
 IxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAz
