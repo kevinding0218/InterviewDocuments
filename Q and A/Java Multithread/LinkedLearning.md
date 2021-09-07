@@ -1259,13 +1259,14 @@ public class CountDownLatchDemo {
 -   Multiple threads need to wait until after one other thread completes some action to continue
 2. What is true about Java's CountDownLatch?
 -   It releases when its counter value reaches zero.
-- 1
+3. A thread that needs to **execute a section of code before the barrier** should call the CyclicBarrier's **await()** method **after** executing the code.
+4. Barriers can be used to control `_____`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NT
-AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
-LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
-cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
-LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
-E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
-Njk3NV19
+eyJoaXN0b3J5IjpbLTQyNzIxMjgyMCwxNzg1ODUzMjYyLC0xND
+k4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAx
+Myw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0Mz
+Y2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3
+LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMT
+I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
+NjE5MjldfQ==
 -->
