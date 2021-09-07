@@ -1435,15 +1435,16 @@ public class DivideAndConquerDemo {
 - Break the problem down into discrete pieces of work
 ### Communication
 - Coordinate task execution and share information
+#### Synchronous Blocking Commun
 ### Agglomeration
 ### Mapping
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzkyMjY0MDIsMTc4MjYxMTcwNiwxNj
-g0OTg2ODE1LDI2NjY4MzY4NywtOTIwMjA4MzAsMjkwNzMwMTIs
-NTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1ODUzMjYyLC0xNDk4Mz
-k5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4
-MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2Mz
-kxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3XX0=
+eyJoaXN0b3J5IjpbLTI1NTE0ODI2OSwxNzgyNjExNzA2LDE2OD
+Q5ODY4MTUsMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3MzAxMiw1
+ODA0MjEwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OTgzOT
+k2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgw
+NTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOT
+E4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDddfQ==
 
 -->
