@@ -1318,13 +1318,32 @@ public class ThreadPoolDemoAfter {
 ### Java Example
 #### Callable<V> Interface
 - Represents a tasks that returns a result of type V, and may throw an exception
-- 
+```java
+class HowManyVegetables implements Callable {
+    public Integer call() throws Exception {
+        System.out.println("Olivia is counting vegetables...");
+        Thread.sleep(3000);
+        return 42;
+    }
+}
+
+public class FutureDemo {
+    public static void main(String args[]) throws ExecutionException, InterruptedException {
+        System.out.println("Barron asks Olivia how many vegetables are in the pantry.");
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        Future result = executor.submit(new HowManyVegetables());
+        System.out.println("Barron can do other things while he waits for the result...");
+        System.out.println("Olivia responded with " + result.get());
+        executor.shutdown();
+    }
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1OD
-UzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQs
-MTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3Nj
-YxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzks
-NzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMT
-Q2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0
-MTY3N119
+eyJoaXN0b3J5IjpbMjkwNzMwMTIsNTgwNDIxMDUyLC0zNTM2OT
+AzMCwxNzg1ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEz
+ODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MT
+c1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05
+MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNj
+IwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIy
+N119
 -->
