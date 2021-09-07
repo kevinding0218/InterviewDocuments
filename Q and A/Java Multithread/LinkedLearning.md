@@ -1193,7 +1193,7 @@ public class BarrierDemo {
 	- If initialize more than 5, the program will get stuck waiting at the latch because there are only 5 Olivia threads invoking the `countDown` method, so it never waits to zero
 - Common CountDownLatch Usage
 	- Initialize count to 1 as a simple on/off gate. Any number of threads can wait at that gate until the controlling thread executes the countDown method once, which unleashes those waiting threads to continue on.
-	- Initialize count to N can be used to make one thread wait until N other threads have completed some action and invoke the `countDown` method or wait for some action to complete N times.
+	- Initialize count to N can be used to make N threads to complete some action and invoke the `countDown` method or wait for some action to complete N times.
 ```java
 class Shopper extends Thread {
 
@@ -1251,7 +1251,7 @@ public class CountDownLatchDemo {
 ### Quiz
 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDgwNDkyNywtMTQ5ODM5OTY5OCw4NT
+eyJoaXN0b3J5IjpbLTE1ODYwNTAzOSwtMTQ5ODM5OTY5OCw4NT
 AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
 LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
 cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
