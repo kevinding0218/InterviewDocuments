@@ -1397,13 +1397,22 @@ public class DivideAndConquerDemo {
 -   The Callable interface's call() method returns a result object but the Runnable interface's run() method does not.
 4. What is the purpose of a future?
 -   It serves as a placeholder to access a result that may not been computed yet.
+5. When using a thread pool in Java, the **thread pool executor service** assigns submitted tasks to specific threads within the available pool to execute
+6. Why are thread pools useful?
+-   They reuse threads to reduce the overhead that would be required to create a new, separate thread for every concurrent task.
+7. What does a work-to-span ratio less than one indicate?
+-   The work-to-span ratio cannot be less than one.
+8. What is a program's "span"?
+-   sum of the time for all task nodes along the critical path
+9. 
 -
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjUzNzQwMzMsMjY2NjgzNjg3LC05Mj
-AyMDgzMCwyOTA3MzAxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3
-ODU4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNj
-c3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEw
-ODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOT
-A3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2Nl19
+eyJoaXN0b3J5IjpbMzcyNTkxOTE5LDI2NjY4MzY4NywtOTIwMj
+A4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1
+ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3Nz
+QsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3
+NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNz
+ksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjZdfQ==
 
 -->
