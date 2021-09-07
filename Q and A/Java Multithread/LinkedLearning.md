@@ -1288,14 +1288,20 @@ public class CountDownLatchDemo {
 - The executor maintain a queue of the tasks that get submitted to it and then it uses the existing threads in its thread pool to run those tasks asynchronously. 
 	- `newSingleThreadExecutor()`: creates an executor that uses a single thread to execute tasks
 	- `newFixedThreadPool(int nThreads)`: creates a thread pool that reuses a fixed number of threads to execute tasks.
+- `ThreadPoolDemoBefore`  will create 100 threads with 1 - 100, `ThreadPoolDemoAfter` will create 100 threads but only with 1 - 24 thread
 ```java
 class VegetableChopper extends Thread {
     public void run() {
         System.out.println(Thread.currentThread().getName() + " chopped a vegetable!");
     }
 }
-
-public class ThreadPoolDemo {
+public class ThreadPoolDemoBefore {
+    public static void main(String args[]) {
+        for (int i=0; i<100; i++)
+            new VegetableChopper().start();
+    }
+}
+public class ThreadPoolDemoAfter {
     public static void main(String args[]) {
         int numProcs = Runtime.getRuntime().availableProcessors();
         ExecutorService pool = Executors.newFixedThreadPool(numProcs);
@@ -1305,8 +1311,9 @@ public class ThreadPoolDemo {
     }
 }
 ```
+### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMTIzMjc5MywtMzUzNjkwMzAsMTc4NT
+eyJoaXN0b3J5IjpbMTY4ODc4NTA2MywtMzUzNjkwMzAsMTc4NT
 g1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0
 LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
 Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
