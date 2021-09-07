@@ -1273,6 +1273,9 @@ public class CountDownLatchDemo {
 	- Directed: each edge is directed from one node or vertex to another, 
 	- Acyclic: meaning it doesn't have any loop that cycle back on itself.
 ### work-to-span ratio
+- work: sum of the time for all task nodes in a computational graph
+- span: sum of the time for all task nodes along the critical path
+- work/span: result > 1 
 ### Thread Pool
 #### Why need it?
 - Although threads are considered to be lightweight, everytime we spawn a new thread, it does required some amount of overhead, in terms of processor time and memory
@@ -1422,7 +1425,7 @@ public class DivideAndConquerDemo {
 #### Throughput
 - # of tasks/time
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjI2MjA0NjEsMjY2NjgzNjg3LC05Mj
+eyJoaXN0b3J5IjpbLTEwNTEwNTEyNzEsMjY2NjgzNjg3LC05Mj
 AyMDgzMCwyOTA3MzAxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3
 ODU4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNj
 c3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEw
