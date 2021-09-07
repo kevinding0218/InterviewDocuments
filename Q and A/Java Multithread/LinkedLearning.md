@@ -1353,14 +1353,49 @@ public class FutureDemo {
 #### ForkJoinTask Subclasses
 - `RecursiveTask<V>`: Returns a result
 - `RecursiveAction`: Does not return a result
+```java
+class RecursiveSum extends RecursiveTask<Long> {
+
+    private long lo, hi;
+
+    public RecursiveSum(long lo, long hi) {
+        this.lo = lo;
+        this.hi = hi;
+    }
+
+    protected Long compute() {
+        if (hi-lo <= 100_000) { // base case threshold
+            long total = 0;
+            for (long i = lo; i <= hi; i++)
+                total += i;
+            return total;
+        } else {
+            long mid = (hi+lo)/2; // middle index for split
+            RecursiveSum left = new RecursiveSum(lo, mid);
+            RecursiveSum right = new RecursiveSum(mid+1, hi);
+            left.fork(); // forked thread computes left half
+            return right.compute() + left.join(); // current thread computes right half
+        }
+    }
+}
+
+public class DivideAndConquerDemo {
+    public static void main(String args[]) {
+        ForkJoinPool pool = ForkJoinPool.commonPool();
+        Long total = pool.invoke(new RecursiveSum(0, 1_000_000_000));
+        pool.shutdown();
+        System.out.println("Total sum is " + total);
+    }
+}
+```
 ### Quiz
 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjcwNzQzMTEsMjY2NjgzNjg3LC05Mj
-AyMDgzMCwyOTA3MzAxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3
-ODU4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNj
-c3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEw
-ODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOT
-A3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2Nl19
+eyJoaXN0b3J5IjpbLTExNjc2NTk2MywyNjY2ODM2ODcsLTkyMD
+IwODMwLDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4
+NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nz
+c0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4
+NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MD
+c5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2XX0=
 
 -->
