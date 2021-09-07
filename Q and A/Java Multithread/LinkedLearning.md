@@ -1283,14 +1283,15 @@ public class CountDownLatchDemo {
 #### ExecutorService Interface
 - Defined in `java.util.concurrent` package
 - Served as a higher level interface for launching new runnable tasks rather than working with threads directly
-- 
-- 
+- Included several features to manage the executor and task lifecycle
+- The executor service manages a pool of threads, so we don't have to create new threads manually.
+- The executor maintain a queue of the tasks that get submitted to it and then it uses the existing threads 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNDcxMjAyMSwtMzUzNjkwMzAsMTc4NT
-g1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0
-LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
-Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
-LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMT
-E0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAy
-NDE2NzddfQ==
+eyJoaXN0b3J5IjpbLTE5MzQ3MTAwMjcsLTM1MzY5MDMwLDE3OD
+U4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNjc3
+NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwOD
+c2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3
+OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMj
+ExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMw
+MjQxNjc3XX0=
 -->
