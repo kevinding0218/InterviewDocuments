@@ -1441,11 +1441,17 @@ public class DivideAndConquerDemo {
 #### Asynchronous Nonblocking Communication
 - Tasks do not wait for communication to complete
 - Can do other work while in progress
+#### Overhead
+- Compute time/resources spent on communication
+#### Latency
+- Time to send message from A to B
+#### Bandwidth
+- Amount to data communicated per seconds (GB/s)
 ### Agglomeration
 ### Mapping
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNDk1OTM0OSwxNzgyNjExNzA2LDE2OD
+eyJoaXN0b3J5IjpbLTc2MDQzOTQ2NywxNzgyNjExNzA2LDE2OD
 Q5ODY4MTUsMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3MzAxMiw1
 ODA0MjEwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OTgzOT
 k2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgw
