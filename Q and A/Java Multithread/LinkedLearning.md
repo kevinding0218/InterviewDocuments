@@ -1272,6 +1272,7 @@ public class CountDownLatchDemo {
 - Directed Ascyclic Graph (DAG)
 	- Directed: each edge is directed from one node or vertex to another, 
 	- Acyclic: meaning it doesn't have any loop that cycle back on itself.
+### work-to-span ratio
 ### Thread Pool
 #### Why need it?
 - Although threads are considered to be lightweight, everytime we spawn a new thread, it does required some amount of overhead, in terms of processor time and memory
@@ -1413,17 +1414,19 @@ public class DivideAndConquerDemo {
 ## Evaluating Parallel Performance
 ### Speedup, latency, and throughput
 #### Weak Scaling
-- Keeping the size of the problem for each processor constant, but bring in more processors to accomplish more work in the same time.
+- Keeping the size of the problem for each processor constant, but bring in more processors to **accomplish more work in the same time.**
 - For example, if one baker can make 10 cupcakes in 1 hour, bring in another baker can make 20 cupcakes in 1 hour
 #### Strong Scaling
-- Involves breaking down and spreading a problem across multiple processors to execute the program faster
+- Involves breaking down and spreading a problem across multiple processors to execute the program faster, **accomplish the same work in less time**
 - For example, if one baker can make 10 cupcakes in 1 hour, to achieve same 10 cakes by bring in another baker can decrease the time to 30 mins
+#### Throughput
+- # of tasks/time
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzNDg3MTY2LDI2NjY4MzY4NywtOTIwMj
-A4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1
-ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3Nz
-QsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3
-NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNz
-ksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjZdfQ==
+eyJoaXN0b3J5IjpbLTEzMjI2MjA0NjEsMjY2NjgzNjg3LC05Mj
+AyMDgzMCwyOTA3MzAxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3
+ODU4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNj
+c3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEw
+ODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOT
+A3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2Nl19
 
 -->
