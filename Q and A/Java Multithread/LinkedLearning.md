@@ -1278,13 +1278,19 @@ public class CountDownLatchDemo {
 #### What is it?
 - Rather than creating a new thread for every single task, it can be more efficient to use a thread pool, which creates and maintains a collection of worker threads.
 - As the program submits tasks to the thread pool, the thread pool reuses existing worker threads to execute tasks, submitting tasks to a thead pool is like adding them to a to-do list for the worker threads. After one worker thread finish executing current task, it'll take another one from the queue.
-- Reusing threads in thread pool addresses the overhead involved with creating new threads, it'll become a real advantage when the time it takes to execute the task is less than the time required to create a new thread. Since our threads already exists, when a new task arrives, we eliminate the delay of thread creation which make
+- Reusing threads in thread pool addresses the overhead involved with creating new threads, it'll become a real advantage when the time it takes to execute the task is less than the time required to create a new thread. Since our threads already exists, when a new task arrives, we eliminate the delay of thread creation which makes our program more responsive.
+### Java Example
+#### ExecutorService Interface
+- Defined in `java.util.concurrent` package
+- Served as a higher level interface for launching new runnable tasks rather than working with threads directly
+- 
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk4NDMzMjg0LC0zNTM2OTAzMCwxNzg1OD
-UzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQs
-MTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3Nj
-YxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzks
-NzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMT
-Q2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0
-MTY3N119
+eyJoaXN0b3J5IjpbLTcwNDcxMjAyMSwtMzUzNjkwMzAsMTc4NT
+g1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0
+LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
+Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
+LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMT
+E0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAy
+NDE2NzddfQ==
 -->
