@@ -1462,9 +1462,13 @@ public class DivideAndConquerDemo {
 - Does not Apply to
 	- Single-core processors
 	- Automated task scheduling
-
+#### Goal
+- Minumize the total execution time
+#### Strategies
+- Place tasks that can execute concurrently on different processors
+- Place tasks that communicate frequently on 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMzU3MTA0NCwxNTI1MTA4MTI1LDE3OD
+eyJoaXN0b3J5IjpbMTgzNjkyNjY3MCwxNTI1MTA4MTI1LDE3OD
 I2MTE3MDYsMTY4NDk4NjgxNSwyNjY2ODM2ODcsLTkyMDIwODMw
 LDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4NTg1Mz
 I2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0
