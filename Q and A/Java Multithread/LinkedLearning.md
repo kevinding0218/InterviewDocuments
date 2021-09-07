@@ -1448,14 +1448,15 @@ public class DivideAndConquerDemo {
 #### Bandwidth
 - Amount to data communicated per seconds (GB/s)
 ### Agglomeration
+- Combine tasks and replicate data/computation to increase efficiency
 ### Mapping
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MDQzOTQ2NywxNzgyNjExNzA2LDE2OD
-Q5ODY4MTUsMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3MzAxMiw1
-ODA0MjEwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OTgzOT
-k2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgw
-NTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOT
-E4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDddfQ==
+eyJoaXN0b3J5IjpbLTEwNTEyMDg1NDUsMTc4MjYxMTcwNiwxNj
+g0OTg2ODE1LDI2NjY4MzY4NywtOTIwMjA4MzAsMjkwNzMwMTIs
+NTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1ODUzMjYyLC0xNDk4Mz
+k5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4
+MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2Mz
+kxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3XX0=
 
 -->
