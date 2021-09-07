@@ -1109,15 +1109,16 @@ public class RaceConditionDemo {
 - To prevent our race condition from occurring, we need a way to synchronize our action so we execute our respective multiplication and addition operations in the correct order.
 - A barriers is a stopping point for a group of threads from proceeding until enough threads have reached the barrier
 #### Java Example
+##
 ```java
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MT
-cxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3
-LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNj
-EzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2
-NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC
-0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5NzUsLTM2Mjk0
-NDg3XX0=
+eyJoaXN0b3J5IjpbLTQyMzk0MDEwMCwtMTQ5ODM5OTY5OCw4NT
+AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
+LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
+cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
+LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
+E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
+Njk3NV19
 -->
