@@ -1288,13 +1288,17 @@ public class CountDownLatchDemo {
 - The executor maintain a queue of the tasks that get submitted to it and then it uses the existing threads in its thread pool to run those tasks asynchronously. 
 	- `newSingleThreadExecutor()`: creates an executor that uses a single thread to execute tasks
 	- `newFixedThreadPool(int nThreads)`: creates a thread pool that reuses a fixed number of threads to execute tasks.
-
+```java
+同步就是烧开水，要自己来看开没开；异步就是水开了，然后水壶响了通知你水开了。  
+阻塞是烧开水的过程中，你不能干其他事情（即你被阻塞住了）；非阻塞是烧开水的过程里可以干其他事情。  
+同步与异步说的是你获得水开了的方式不同。阻塞与非阻塞说的是你得到结果之前能不能干其他事情。两组概念描述的是不同的内容。
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIxNjE4Mjg4LC0zNTM2OTAzMCwxNzg1OD
-UzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQs
-MTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3Nj
-YxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzks
-NzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMT
-Q2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0
-MTY3N119
+eyJoaXN0b3J5IjpbLTkxMzI4NjI5NiwtMzUzNjkwMzAsMTc4NT
+g1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0
+LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
+Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
+LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMT
+E0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAy
+NDE2NzddfQ==
 -->
