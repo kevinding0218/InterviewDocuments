@@ -1390,7 +1390,7 @@ public class DivideAndConquerDemo {
 ```
 ### Quiz
 1. When implementing a recursive divide-and-conquer algorithm in Java, why should you use a ForkJoinPool instead of simply creating new threads to handle each subproblem?
--   The ForkJoinPool manages a thread pool to execute its ForkJoinTasks, which reduces the overhead of thread creation.
+- The ForkJoinPool manages a thread pool to execute its ForkJoinTasks, which reduces the overhead of thread creation.
 2. What does a divide-and-conquer algorithm do when it reaches the base case?
 - Stop subdividing the current problem and solve it.
 3. What is the difference between Java's Callable and Runnable interfaces?
@@ -1412,13 +1412,15 @@ public class DivideAndConquerDemo {
 - They help to identify opportunities for parallel execution.
 ## Evaluating Parallel Performance
 ### Speedup, latency, and throughput
-
+#### Weak Scaling
+- Keeping the size of the problem for each processor constant, but bring in more processors to accomplish more work in the same time.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU3MDA5NjA0LDI2NjY4MzY4NywtOTIwMj
-A4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1
-ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3Nz
-QsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3
-NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNz
-ksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjZdfQ==
+eyJoaXN0b3J5IjpbLTk0MTA1Njk3OCwyNjY2ODM2ODcsLTkyMD
+IwODMwLDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4
+NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nz
+c0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4
+NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MD
+c5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2XX0=
 
 -->
