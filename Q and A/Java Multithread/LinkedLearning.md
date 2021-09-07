@@ -1278,9 +1278,9 @@ public class CountDownLatchDemo {
 #### What is it?
 - Rather than creating a new thread for every single task, it can be more efficient to use a thread pool, which creates and maintains a collection of worker threads.
 - As the program submits tasks to the thread pool, the thread pool reuses existing worker threads to execute tasks, submitting tasks to a thead pool is like adding them to a to-do list for the worker threads. After one worker thread finish executing current task, it'll take another one from the queue.
-- Reusing threads in thread pool addresses the overhead involved with creating new threads. 
+- Reusing threads in thread pool addresses the overhead involved with creating new threads, it'll become a real advantage when the time it takes to execute the task is less than the time required to create a new thread. Since our threads already exists, when a new task arrives, we eliminate the delay of thread creation which make
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgzMzg3ODMzLC0zNTM2OTAzMCwxNzg1OD
+eyJoaXN0b3J5IjpbMzk4NDMzMjg0LC0zNTM2OTAzMCwxNzg1OD
 UzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQs
 MTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3Nj
 YxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzks
