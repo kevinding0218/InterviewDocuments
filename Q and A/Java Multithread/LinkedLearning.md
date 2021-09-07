@@ -1190,6 +1190,7 @@ public class BarrierDemo {
 	- `await()`: Wait for count value to reach zero, much like how threads are wait at CyclicBarrier
 	- `countDown()`: Decrement count value
 - Initialize value of 5 because there are 5 Olivia threads that needs to execute before other Barron threads.
+	- If initialize more than 5, the program will get stuck waiting at the latch because there are only 5 Olivia threads.
 ```java
 class Shopper extends Thread {
 
@@ -1244,12 +1245,14 @@ public class CountDownLatchDemo {
     }
 }
 ```
+### Quiz
+1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQyMzI2Nzk4LC0xNDk4Mzk5Njk4LDg1MD
-AzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5Nywt
-MTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4Nz
-A2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIs
-LTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMT
-YyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2
-OTc1XX0=
+eyJoaXN0b3J5IjpbMjA3NjYwNjcxNiwtMTQ5ODM5OTY5OCw4NT
+AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
+LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
+cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
+LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
+E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
+Njk3NV19
 -->
