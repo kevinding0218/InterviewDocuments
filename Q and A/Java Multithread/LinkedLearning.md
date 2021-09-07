@@ -1417,12 +1417,13 @@ public class DivideAndConquerDemo {
 - For example, if one baker can make 10 cupcakes in 1 hour, bring in another baker can make 20 cupcakes in 1 hour
 #### Strong Scaling
 - Involves breaking down and spreading a problem across multiple processors to execute the program faster
+- For example, if one baker can make 10 cupcakes in 1 hour, to achieve same 10 cakes by bring in another baker can decrease the time to 30 mins
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NjQ3NTE3MSwyNjY2ODM2ODcsLTkyMD
-IwODMwLDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4
-NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nz
-c0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4
-NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MD
-c5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2XX0=
+eyJoaXN0b3J5IjpbOTQzNDg3MTY2LDI2NjY4MzY4NywtOTIwMj
+A4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1
+ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3Nz
+QsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3
+NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNz
+ksNzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjZdfQ==
 
 -->
