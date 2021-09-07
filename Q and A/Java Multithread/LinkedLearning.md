@@ -1256,9 +1256,12 @@ public class CountDownLatchDemo {
 ```
 ### Quiz
 1. Which scenario describes a potential use case for a CountDownLatch initialized to a count value of 1?
-2. 
+-   Multiple threads need to wait until after one other thread completes some action to continue
+2. What is true about Java's CountDownLatch?
+-   It releases when its counter value reaches zero.
+- 1
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU1ODg1Mjc2LC0xNDk4Mzk5Njk4LDg1MD
+eyJoaXN0b3J5IjpbMzI5NTIyMTQzLC0xNDk4Mzk5Njk4LDg1MD
 AzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5Nywt
 MTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4Nz
 A2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIs
