@@ -1256,20 +1256,25 @@ public class CountDownLatchDemo {
 ```
 ### Quiz
 1. Which scenario describes a potential use case for a CountDownLatch initialized to a count value of 1?
--   Multiple threads need to wait until after one other thread completes some action to continue
+- Multiple threads need to wait until after one other thread completes some action to continue
 2. What is true about Java's CountDownLatch?
--   It releases when its counter value reaches zero.
+- It releases when its counter value reaches zero.
 3. A thread that needs to **execute a section of code before the barrier** should call the CyclicBarrier's **await()** method **after** executing the code.
 4. Barriers can be used to control **the relative order in which threads execute certain operations .**
 5. Which of these is responsible for causing a race condition?
--   the OS execution scheduler, The order in which the OS schedules threads to execute is non-deterministic.
-6. A **race condition** **can occur independently** of a **data race**.
+- the OS execution scheduler, The order in which the OS schedules threads to execute is non-deterministic.
+6. A **race condition** can **occur independently** of a **data race**.
+7. Which scenario creates the potential for a race condition to occur?
+- The order in which two threads execute their respective operations will change the output.
+## Asychronous Tasks
+### Computational Graph
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwOTE1MjE4NiwxNzg1ODUzMjYyLC0xND
-k4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAx
-Myw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0Mz
-Y2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3
-LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMT
-I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
-NjE5MjldfQ==
+eyJoaXN0b3J5IjpbNDgzMzExMzY4LDE3ODU4NTMyNjIsLTE0OT
+gzOTk2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEz
+LDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNj
+YzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcs
+MTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMj
+UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
+MTkyOV19
 -->
