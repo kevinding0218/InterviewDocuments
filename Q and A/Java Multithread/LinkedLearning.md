@@ -1423,13 +1423,13 @@ public class DivideAndConquerDemo {
 - Involves breaking down and spreading a problem across multiple processors to execute the program faster, **accomplish the same work in less time**
 - For example, if one baker can make 10 cupcakes in 1 hour, to achieve same 10 cakes by bring in another baker can decrease the time to 30 mins
 #### Throughput
-- = # of tasks/time
+- = (# of tasks)/time
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDI5NjUwNjAsMjY2NjgzNjg3LC05Mj
-AyMDgzMCwyOTA3MzAxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3
-ODU4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNj
-c3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEw
-ODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOT
-A3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2Nl19
+eyJoaXN0b3J5IjpbLTYzMDM3NDkxOSwyNjY2ODM2ODcsLTkyMD
+IwODMwLDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4
+NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nz
+c0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4
+NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MD
+c5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2XX0=
 
 -->
