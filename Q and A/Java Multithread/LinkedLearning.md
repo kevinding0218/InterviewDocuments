@@ -1289,12 +1289,24 @@ public class CountDownLatchDemo {
 	- `newSingleThreadExecutor()`: creates an executor that uses a single thread to execute tasks
 	- `newFixedThreadPool(int nThreads)`: creates a thread pool that reuses a fixed number of threads to execute tasks.
 ```java
-同步就是烧开水，要自己来看开没开；异步就是水开了，然后水壶响了通知你水开了。  
-阻塞是烧开水的过程中，你不能干其他事情（即你被阻塞住了）；非阻塞是烧开水的过程里可以干其他事情。  
-同步与异步说的是你获得水开了的方式不同。阻塞与非阻塞说的是你得到结果之前能不能干其他事情。两组概念描述的是不同的内容。
+class VegetableChopper extends Thread {
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + " chopped a vegetable!");
+    }
+}
+
+public class ThreadPoolDemo {
+    public static void main(String args[]) {
+        int numProcs = Runtime.getRuntime().availableProcessors();
+        ExecutorService pool = Executors.newFixedThreadPool(numProcs);
+        for (int i=0; i<100; i++)
+            pool.submit(new VegetableChopper());
+        pool.shutdown();
+    }
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMzI4NjI5NiwtMzUzNjkwMzAsMTc4NT
+eyJoaXN0b3J5IjpbMTAxMTIzMjc5MywtMzUzNjkwMzAsMTc4NT
 g1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0
 LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
 Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
