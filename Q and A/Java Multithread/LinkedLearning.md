@@ -1285,9 +1285,12 @@ public class CountDownLatchDemo {
 - Served as a higher level interface for launching new runnable tasks rather than working with threads directly
 - Included several features to manage the executor and task lifecycle
 - The executor service manages a pool of threads, so we don't have to create new threads manually.
-- The executor maintain a queue of the tasks that get submitted to it and then it uses the existing threads 
+- The executor maintain a queue of the tasks that get submitted to it and then it uses the existing threads in its thread pool to run those tasks asynchronously. 
+	- `newSingleThreadExecutor()`: creates an executor that uses a single thread to execute tasks
+- `newFixedThreadPool(int nThreads)`: creates a thread pool that reuses a fixed number of threads to execute tasks.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzQ3MTAwMjcsLTM1MzY5MDMwLDE3OD
+eyJoaXN0b3J5IjpbLTE4NDk1NTc1NDQsLTM1MzY5MDMwLDE3OD
 U4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNjc3
 NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwOD
 c2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3
