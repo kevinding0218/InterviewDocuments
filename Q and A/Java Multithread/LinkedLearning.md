@@ -1314,13 +1314,13 @@ public class ThreadPoolDemoAfter {
 ### Future
 - Acts as a place holder for a result that initially unknown, but will be available at some point in the future.
 - Provides a mechanism to access the result of an asynchronous operation
-- 
+- The feature is `read-only`, so while it's not ready yet, you can
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNTc3NjcyOCwtMzUzNjkwMzAsMTc4NT
-g1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0
-LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
-Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
-LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMT
-E0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAy
-NDE2NzddfQ==
+eyJoaXN0b3J5IjpbMTc0NTM5ODA5LC0zNTM2OTAzMCwxNzg1OD
+UzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQs
+MTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3Nj
+YxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzks
+NzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMT
+Q2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0
+MTY3N119
 -->
