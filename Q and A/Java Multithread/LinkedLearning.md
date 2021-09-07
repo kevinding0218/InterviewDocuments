@@ -1430,13 +1430,13 @@ public class DivideAndConquerDemo {
 ### Speed-up
 - Calculated as a ratio of (sequential execution time) / (parallel execution time with N workers)
 - For example, speed-up of two workers for the cupcake job would be 60 / 30 = 2, three workers would be 60/20 = 3
-- 
+### Quiz
+1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MjYxMTcwNiwxNjg0OTg2ODE1LDI2Nj
-Y4MzY4NywtOTIwMjA4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0z
-NTM2OTAzMCwxNzg1ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzND
-k4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1
-MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2ND
-U3LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTJdfQ==
-
+eyJoaXN0b3J5IjpbODI3NTcwOTUyLDE3ODI2MTE3MDYsMTY4ND
+k4NjgxNSwyNjY2ODM2ODcsLTkyMDIwODMwLDI5MDczMDEyLDU4
+MDQyMTA1MiwtMzUzNjkwMzAsMTc4NTg1MzI2MiwtMTQ5ODM5OT
+Y5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1
+MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MT
+gxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0N119
 -->
