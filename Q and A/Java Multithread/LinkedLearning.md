@@ -1112,6 +1112,7 @@ public class RaceConditionDemo {
 #### CyclicBarrier
 - It can be reused after the waiting threads are released
 - Releases when certain number of threads are waiting
+- Can be reset
 - Constructor 
 	- `new CyclicBarrier(value)`: takes an argument for the number of threads to wait on before the barrier releases.
 - Method
@@ -1181,19 +1182,21 @@ public class BarrierDemo {
 ```
 #### CountDownLatch
 - Allows one or more threads to wait until a set of operations being performed in other threads completes
+- Releases when count value reaches zero
+- Cannot be reset
 - Constructor 
 	- `new CountDownLatch(value)`: take an argument with initialize count down value.
 - Method
 	- `await()`: Wait for count value to reach zero, much like how threads are wait at CyclicBarrier
 	- `countDown()`: Decrement count value
-- Releases
+
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk0MTY3Mzk1LC0xNDk4Mzk5Njk4LDg1MD
-AzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5Nywt
-MTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4Nz
-A2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIs
-LTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMT
-YyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2
-OTc1XX0=
+eyJoaXN0b3J5IjpbLTE0ODU4OTQyMDcsLTE0OTgzOTk2OTgsOD
+UwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3
+LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMj
+g3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUx
+MiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC
+0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2
+OTY5NzVdfQ==
 -->
