@@ -1123,7 +1123,7 @@ public class RaceConditionDemo {
 - Use barriers to seperate those operations that 5 Olivia threads would execute before Barron threads start to execute
 	- The Olivia threads will execute before they wait at the barrier, whereas the Barron threads will go straight to waiting at the barrier.
 	- Once all 10 threads have arrived at the barrier and are waiting on it, then the Barrier will release and the Barron threads will all execute their multiplication operations.
-	- (1 + 3 + 3 + 3 + 3 + 3) * 2 * 2 * 2 * 2 * 2 = 512
+	- Result: (1 + 3 + 3 + 3 + 3 + 3) * 2 * 2 * 2 * 2 * 2 = 512
 ```java
 class Shopper extends Thread {
 
@@ -1257,11 +1257,11 @@ public class CountDownLatchDemo {
 ### Quiz
 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDQ4NzY5MTEsLTE0OTgzOTk2OTgsOD
-UwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3
-LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMj
-g3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUx
-MiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC
-0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2
-OTY5NzVdfQ==
+eyJoaXN0b3J5IjpbLTEwMzYzMzM1NiwtMTQ5ODM5OTY5OCw4NT
+AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
+LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
+cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
+LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
+E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
+Njk3NV19
 -->
