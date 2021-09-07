@@ -1346,10 +1346,11 @@ public class FutureDemo {
 #### Folk/Join Framework
 - Framwork designed for executing recursive, divide-and-conquer work with multiple processors.
 #### ForkJoinPool
-- ExecutorService that executes ForkJoinTasks which distributed tasks to its 
-- 
+- ExecutorService that executes ForkJoinTasks which distributed tasks to its worker threads.
+- `fork()` we use it when recursively breaking down a problem, to asynchronously execute tasks with the ForkJoinPool.
+- `join()` we use it during the combine stage, w
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMTQ5NjU1NiwtOTIwMjA4MzAsMjkwNz
+eyJoaXN0b3J5IjpbLTU4ODcyMTM3NiwtOTIwMjA4MzAsMjkwNz
 MwMTIsNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1ODUzMjYyLC0x
 NDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2ND
 AxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0
