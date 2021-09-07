@@ -1260,9 +1260,12 @@ public class CountDownLatchDemo {
 2. What is true about Java's CountDownLatch?
 -   It releases when its counter value reaches zero.
 3. A thread that needs to **execute a section of code before the barrier** should call the CyclicBarrier's **await()** method **after** executing the code.
-4. Barriers can be used to control `_____`.
+4. Barriers can be used to control **the relative order in which threads execute certain operations .**
+5. Which of these is responsible for causing a race condition?
+-   the OS execution scheduler, The order in which the OS schedules threads to execute is non-deterministic.
+6. A **race condition** **can occur independently** of a **data race**.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNzIxMjgyMCwxNzg1ODUzMjYyLC0xND
+eyJoaXN0b3J5IjpbLTcwOTE1MjE4NiwxNzg1ODUzMjYyLC0xND
 k4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAx
 Myw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0Mz
 Y2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3
