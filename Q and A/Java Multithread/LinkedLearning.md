@@ -1415,21 +1415,24 @@ public class DivideAndConquerDemo {
 11. Why are computational graphs useful?
 - They help to identify opportunities for parallel execution.
 ## Evaluating Parallel Performance
-### Speedup, latency, and throughput
-#### Weak Scaling
+### Weak Scaling
 - Keeping the size of the problem for each processor constant, but bring in more processors to **accomplish more work in the same time.**
 - For example, if one baker can make 10 cupcakes in 1 hour, bring in another baker can make 20 cupcakes in 1 hour
-#### Strong Scaling
+### Strong Scaling
 - Involves breaking down and spreading a problem across multiple processors to execute the program faster, **accomplish the same work in less time**
 - For example, if one baker can make 10 cupcakes in 1 hour, to achieve same 10 cakes by bring in another baker can decrease the time to 30 mins
-#### Throughput
-- = (# of tasks)/time: the number of tasks completed in a given time
+### Throughput
+- equals (# of tasks)/time: the number of tasks completed in a given time
+### Latency
+- equals time/task: the amount of time it takes to execute a task from beginning to end.
+- For eample, if it takes 6 mins to cook 1 cupcake, then latency is 6 minutes.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NDk4NjgxNSwyNjY2ODM2ODcsLTkyMD
-IwODMwLDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4
-NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nz
-c0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4
-NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MD
-c5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2XX0=
+eyJoaXN0b3J5IjpbMTkxNzkwMDk5MiwxNjg0OTg2ODE1LDI2Nj
+Y4MzY4NywtOTIwMjA4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0z
+NTM2OTAzMCwxNzg1ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzND
+k4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1
+MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2ND
+U3LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTJdfQ==
 
 -->
