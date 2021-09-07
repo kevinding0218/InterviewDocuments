@@ -1430,13 +1430,20 @@ public class DivideAndConquerDemo {
 ### Speed-up
 - Calculated as a ratio of (sequential execution time) / (parallel execution time with N workers)
 - For example, speed-up of two workers for the cupcake job would be 60 / 30 = 2, three workers would be 60/20 = 3
-### Quiz
-1. 
+## Design Parallel Program
+### Partitioning
+- Break the problem down into discrete pieces of work
+####
+### Communication
+### Agglomeration
+### Mapping
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI3NTcwOTUyLDE3ODI2MTE3MDYsMTY4ND
-k4NjgxNSwyNjY2ODM2ODcsLTkyMDIwODMwLDI5MDczMDEyLDU4
-MDQyMTA1MiwtMzUzNjkwMzAsMTc4NTg1MzI2MiwtMTQ5ODM5OT
-Y5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1
-MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MT
-gxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0N119
+eyJoaXN0b3J5IjpbLTczNjk4NTY5OCwxNzgyNjExNzA2LDE2OD
+Q5ODY4MTUsMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3MzAxMiw1
+ODA0MjEwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OTgzOT
+k2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgw
+NTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOT
+E4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDddfQ==
+
 -->
