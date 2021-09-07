@@ -1179,13 +1179,19 @@ public class BarrierDemo {
 ```
 #### CountDownLatch
 - Allows one or more threads to wait until a set of operations being performed in other threads completes
-- The constructor take an argument with initialize count down value.
+- Constructor 
+	- `new CountDownLatch(value)`: take an argument with initialize count down value.
+- Method
+	- `await()`: Wait for count value to reach zero, much like how threads are wait at CyclicBarrier
+	- `countDown()`: Decrement count value
+- 
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTM3Njg2MjIsLTE0OTgzOTk2OTgsOD
-UwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3
-LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMj
-g3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUx
-MiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC
-0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2
-OTY5NzVdfQ==
+eyJoaXN0b3J5IjpbMTIyNzgzNDM0NCwtMTQ5ODM5OTY5OCw4NT
+AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
+LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
+cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
+LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
+E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
+Njk3NV19
 -->
