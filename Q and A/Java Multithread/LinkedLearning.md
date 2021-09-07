@@ -1183,7 +1183,7 @@ public class BarrierDemo {
 #### CountDownLatch
 - Allows one or more threads to wait until a set of operations being performed in other threads completes
 - Releases when count value reaches zero
-- Cannot be reset
+- Cannot be reset, you have to create a new latch object if you need to reset the value
 - Constructor 
 	- `new CountDownLatch(value)`: take an argument with initialize count down value.
 - Method
@@ -1192,7 +1192,7 @@ public class BarrierDemo {
 
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODU4OTQyMDcsLTE0OTgzOTk2OTgsOD
+eyJoaXN0b3J5IjpbLTE4OTg0NzkxMTMsLTE0OTgzOTk2OTgsOD
 UwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3
 LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMj
 g3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUx
