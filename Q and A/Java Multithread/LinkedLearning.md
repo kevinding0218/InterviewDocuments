@@ -1268,17 +1268,18 @@ public class CountDownLatchDemo {
 - The order in which two threads execute their respective operations will change the output.
 ## Asychronous Tasks
 ### Computational Graph
+- The key to parallel programming is to determine which step within a program can be executed in parallel and then figureing out how to coordinate them.
 - Directed Ascyclic Graph (DAG)
 	- Directed: each edge is directed from one node or vertex to another, 
 	- Acyclic: meaning it doesn't have any loop that cycle back on itself.
 ### Thread Pool
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMTYxNDkzOSwxNzg1ODUzMjYyLC0xND
-k4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAx
-Myw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0Mz
-Y2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3
-LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMT
-I1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2
-NjE5MjldfQ==
+eyJoaXN0b3J5IjpbODE1NjUyMjMsMTc4NTg1MzI2MiwtMTQ5OD
+M5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMs
+ODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2Nj
+M5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0Nywx
+MTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNT
+EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
+OTI5XX0=
 -->
