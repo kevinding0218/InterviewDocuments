@@ -1189,14 +1189,66 @@ public class BarrierDemo {
 - Method
 	- `await()`: Wait for count value to reach zero, much like how threads are wait at CyclicBarrier
 	- `countDown()`: Decrement count value
+```java
+class Shopper extends Thread {
 
-	- 
+    public static int bagsOfChips = 1; // start with one on the list
+    private static Lock pencil = new ReentrantLock();
+    private static CountDownLatch fistBump = new CountDownLatch(5);
+
+    public Shopper(String name) {
+        this.setName(name);
+    }
+
+    public void run() {
+        if (this.getName().contains("Olivia")) {
+            pencil.lock();
+            try {
+                bagsOfChips += 3;
+                System.out.println(this.getName() + " ADDED three bags of chips.");
+            } finally {
+                pencil.unlock();
+            }
+            fistBump.countDown();
+        } else { // "Barron"
+            try {
+                fistBump.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            pencil.lock();
+            try {
+                bagsOfChips *= 2;
+                System.out.println(this.getName() + " DOUBLED the bags of chips.");
+            } finally {
+                pencil.unlock();
+            }
+        }
+    }
+}
+
+public class CountDownLatchDemo {
+    public static void main(String args[]) throws InterruptedException  {
+        // create 10 shoppers: Barron-0...4 and Olivia-0...4
+        Shopper[] shoppers = new Shopper[10];
+        for (int i=0; i<shoppers.length/2; i++) {
+            shoppers[2*i] = new Shopper("Barron-"+i);
+            shoppers[2*i+1] = new Shopper("Olivia-"+i);
+        }
+        for (Shopper s : shoppers)
+            s.start();
+        for (Shopper s : shoppers)
+            s.join();
+        System.out.println("We need to buy " + Shopper.bagsOfChips + " bags of chips.");
+    }
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTg0NzkxMTMsLTE0OTgzOTk2OTgsOD
-UwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3
-LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMj
-g3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUx
-MiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC
-0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2
-OTY5NzVdfQ==
+eyJoaXN0b3J5IjpbLTUzMzQ0ODQ1MCwtMTQ5ODM5OTY5OCw4NT
+AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
+LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
+cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
+LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
+E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
+Njk3NV19
 -->
