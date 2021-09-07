@@ -1435,12 +1435,17 @@ public class DivideAndConquerDemo {
 - Break the problem down into discrete pieces of work
 ### Communication
 - Coordinate task execution and share information
-#### Synchronous Blocking Commun
+#### Synchronous Blocking Communication
+- Tasks wait until entire communnication is complete
+- Cannot do other work while in progress but has to spent time in waiting
+#### Asynchronous Nonblocking Communication
+- Tasks do not wait for communication to complete
+- Can do other work while in progress
 ### Agglomeration
 ### Mapping
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NTE0ODI2OSwxNzgyNjExNzA2LDE2OD
+eyJoaXN0b3J5IjpbMjAzNDk1OTM0OSwxNzgyNjExNzA2LDE2OD
 Q5ODY4MTUsMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3MzAxMiw1
 ODA0MjEwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OTgzOT
 k2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgw
