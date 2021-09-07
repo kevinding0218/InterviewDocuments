@@ -1111,6 +1111,7 @@ public class RaceConditionDemo {
 ### Java Example
 #### CyclicBarrier
 - The constructor takes an argument for the number of threads to wait on before the barrier releases.
+- It can be reused after the waiting threads are released
 ```java
 class Shopper extends Thread {
 
@@ -1170,7 +1171,7 @@ public class BarrierDemo {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNDExNjAxMSwtMTQ5ODM5OTY5OCw4NT
+eyJoaXN0b3J5IjpbMTY2ODM5OTkwNCwtMTQ5ODM5OTY5OCw4NT
 AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
 LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
 cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
