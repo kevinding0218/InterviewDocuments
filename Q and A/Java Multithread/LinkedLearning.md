@@ -1191,6 +1191,9 @@ public class BarrierDemo {
 	- `countDown()`: Decrement count value
 - Initialize value of 5 because there are 5 Olivia threads that needs to execute before other Barron threads.
 	- If initialize more than 5, the program will get stuck waiting at the latch because there are only 5 Olivia threads invoking the `countDown` method, so it never waits to zero
+- Common CountDownLatch Usage
+	- Initialize count to 1 as a simple on/off gate
+	- Any number of threads can wait at that gate until the controlling thread executes the countDown method once, which unleashes those w
 ```java
 class Shopper extends Thread {
 
@@ -1248,7 +1251,7 @@ public class CountDownLatchDemo {
 ### Quiz
 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNjY4MTc4OCwtMTQ5ODM5OTY5OCw4NT
+eyJoaXN0b3J5IjpbMTIyMjc1MzAyMiwtMTQ5ODM5OTY5OCw4NT
 AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
 LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
 cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
