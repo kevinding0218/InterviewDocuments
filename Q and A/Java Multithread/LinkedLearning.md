@@ -1458,13 +1458,17 @@ public class DivideAndConquerDemo {
 - Pros: High computation-to-communication ratio
 - Cons: Inefficient load balancing
 ### Mapping
-- 
+- Specify where each task will execute
+- Does not Apply to
+	- Single-core processors
+	- Automated task scheduling
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNTEwODEyNSwxNzgyNjExNzA2LDE2OD
-Q5ODY4MTUsMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3MzAxMiw1
-ODA0MjEwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OTgzOT
-k2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgw
-NTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOT
-E4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDddfQ==
+eyJoaXN0b3J5IjpbMTkwMzU3MTA0NCwxNTI1MTA4MTI1LDE3OD
+I2MTE3MDYsMTY4NDk4NjgxNSwyNjY2ODM2ODcsLTkyMDIwODMw
+LDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4NTg1Mz
+I2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0
+NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MT
+UxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5XX0=
 
 -->
