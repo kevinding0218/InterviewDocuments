@@ -1453,14 +1453,18 @@ public class DivideAndConquerDemo {
 - Large number of smaller tasks
 - Pros: Good distribution of workload (load balancing)
 - Cons: Low computation-to-communication ratio
-####
+#### Coarse-Grained Parallelism
+- Small number of large tasks
+- Pros: High computation-to-communication ratio
+- Cons: Inefficient load balancing
 ### Mapping
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY5NzQwMDQ3LDE3ODI2MTE3MDYsMTY4ND
-k4NjgxNSwyNjY2ODM2ODcsLTkyMDIwODMwLDI5MDczMDEyLDU4
-MDQyMTA1MiwtMzUzNjkwMzAsMTc4NTg1MzI2MiwtMTQ5ODM5OT
-Y5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1
-MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MT
-gxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0N119
+eyJoaXN0b3J5IjpbMTUyNTEwODEyNSwxNzgyNjExNzA2LDE2OD
+Q5ODY4MTUsMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3MzAxMiw1
+ODA0MjEwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OTgzOT
+k2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgw
+NTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOT
+E4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDddfQ==
+
 -->
