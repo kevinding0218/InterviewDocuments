@@ -1342,13 +1342,18 @@ public class FutureDemo {
 1. Divide the problem into subproblems
 2. Conquer the subproblems by solving them recursively.
 3. Combine the solutions to the subproblems.
-### Folk/Join Framew
+### Java Example
+#### Folk/Join Framework
+- Framwork designed for executing recursive, divide-and-conquer work with multiple processors.
+#### ForkJoinPool
+- ExecutorService that executes ForkJoinTasks which distributed tasks to its 
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTcyODY5NDUsLTkyMDIwODMwLDI5MD
-czMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4NTg1MzI2Miwt
-MTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4Nj
-QwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0x
-NDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMD
-U0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1
-XX0=
+eyJoaXN0b3J5IjpbMTcyMTQ5NjU1NiwtOTIwMjA4MzAsMjkwNz
+MwMTIsNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1ODUzMjYyLC0x
+NDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2ND
+AxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0
+MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNT
+Q3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjVd
+fQ==
 -->
