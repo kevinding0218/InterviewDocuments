@@ -1449,14 +1449,18 @@ public class DivideAndConquerDemo {
 - Amount to data communicated per seconds (GB/s)
 ### Agglomeration
 - Combine tasks and replicate data/computation to increase efficiency
+#### Fine-Grained Parallelism
+- Large number of smaller tasks
+- Pros: Good distribution of workload (load balancing)
+- Cons: Low computation-to-communication ratio
+####
 ### Mapping
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTEyMDg1NDUsMTc4MjYxMTcwNiwxNj
-g0OTg2ODE1LDI2NjY4MzY4NywtOTIwMjA4MzAsMjkwNzMwMTIs
-NTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1ODUzMjYyLC0xNDk4Mz
-k5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4
-MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2Mz
-kxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3XX0=
-
+eyJoaXN0b3J5IjpbNjY5NzQwMDQ3LDE3ODI2MTE3MDYsMTY4ND
+k4NjgxNSwyNjY2ODM2ODcsLTkyMDIwODMwLDI5MDczMDEyLDU4
+MDQyMTA1MiwtMzUzNjkwMzAsMTc4NTg1MzI2MiwtMTQ5ODM5OT
+Y5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1
+MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MT
+gxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0N119
 -->
