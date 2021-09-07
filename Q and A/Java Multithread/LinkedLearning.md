@@ -1347,17 +1347,17 @@ public class FutureDemo {
 - Framwork designed for executing recursive, divide-and-conquer work with multiple processors.
 #### ForkJoinPool
 - ExecutorService that executes ForkJoinTasks which distributed tasks to its worker threads.
-- `fork()` we use it when recursively breaking down a problem, to asynchronously execute tasks with the ForkJoinPool.
+- `fork()` we use it when recursively breaking down a problem, to asynchronously execute tasks with the ForkJoinPool, this will be added to the ForkJoinPool to be executed,
 - `join()` we use it during the combine stage, which returns the result of the task when it'd done.
 #### ForkJoinTask Subclasses
 - `RecursiveTask<V>`: Returns a result
 - `RecursiveAction`: Does not return a result
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3Mz
-AxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0
-OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MD
-EzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQz
-NjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1ND
-csMTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NV19
+eyJoaXN0b3J5IjpbLTE5NDE0MjA3OTksMjY2NjgzNjg3LC05Mj
+AyMDgzMCwyOTA3MzAxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3
+ODU4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNj
+c3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEw
+ODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOT
+A3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2Nl19
 
 -->
