@@ -1266,7 +1266,7 @@ public class CountDownLatchDemo {
 6. A **race condition** can **occur independently** of a **data race**.
 7. Which scenario creates the potential for a race condition to occur?
 - The order in which two threads execute their respective operations will change the output.
-## Asychronous Tasks
+## Asychronous Tasks 异步
 ### Computational Graph
 - The key to parallel programming is to determine which step within a program can be executed in parallel and then figureing out how to coordinate them.
 - Directed Ascyclic Graph (DAG)
@@ -1275,11 +1275,11 @@ public class CountDownLatchDemo {
 ### Thread Pool
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE1NjUyMjMsMTc4NTg1MzI2MiwtMTQ5OD
-M5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMs
-ODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2Nj
-M5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0Nywx
-MTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNT
-EyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYx
-OTI5XX0=
+eyJoaXN0b3J5IjpbLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OT
+gzOTk2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEz
+LDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNj
+YzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcs
+MTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMj
+UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
+MTkyOV19
 -->
