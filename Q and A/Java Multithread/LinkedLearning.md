@@ -1422,17 +1422,18 @@ public class DivideAndConquerDemo {
 - Involves breaking down and spreading a problem across multiple processors to execute the program faster, **accomplish the same work in less time**
 - For example, if one baker can make 10 cupcakes in 1 hour, to achieve same 10 cakes by bring in another baker can decrease the time to 30 mins
 ### Throughput
-- equals (# of tasks)/time: the number of tasks completed in a given time
+- equals (# of tasks)/time: the number of tasks completed in a given time, expressed in actions per unit of time
+- For eample, if it takes 6 mins to cook 1 cupcake, then througput is 10 cupcake per Hour
 ### Latency
-- equals time/task: the amount of time it takes to execute a task from beginning to end.
+- equals time/task: the amount of time it takes to execute a task from beginning to end, expressed in unit of time
 - For eample, if it takes 6 mins to cook 1 cupcake, then latency is 6 minutes.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNzkwMDk5MiwxNjg0OTg2ODE1LDI2Nj
-Y4MzY4NywtOTIwMjA4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0z
-NTM2OTAzMCwxNzg1ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzND
-k4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1
-MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2ND
-U3LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTJdfQ==
+eyJoaXN0b3J5IjpbLTE5ODU4MzI1ODIsMTY4NDk4NjgxNSwyNj
+Y2ODM2ODcsLTkyMDIwODMwLDI5MDczMDEyLDU4MDQyMTA1Miwt
+MzUzNjkwMzAsMTc4NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMz
+Q5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2
+NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNj
+Q1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEyXX0=
 
 -->
