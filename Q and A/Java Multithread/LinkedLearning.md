@@ -1389,13 +1389,21 @@ public class DivideAndConquerDemo {
 }
 ```
 ### Quiz
-1. 
+1. When implementing a recursive divide-and-conquer algorithm in Java, why should you use a ForkJoinPool instead of simply creating new threads to handle each subproblem?
+-   The ForkJoinPool manages a thread pool to execute its ForkJoinTasks, which reduces the overhead of thread creation.
+2. What does a divide-and-conquer algorithm do when it reaches the base case?
+-   Stop subdividing the current problem and solve it.
+3. What is the difference between Java's Callable and Runnable interfaces?
+-   The Callable interface's call() method returns a result object but the Runnable interface's run() method does not.
+4. What is the purpose of a future?
+-   It serves as a placeholder to access a result that may not been computed yet.
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjc2NTk2MywyNjY2ODM2ODcsLTkyMD
-IwODMwLDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4
-NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nz
-c0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4
-NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MD
-c5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2XX0=
+eyJoaXN0b3J5IjpbLTEwNjUzNzQwMzMsMjY2NjgzNjg3LC05Mj
+AyMDgzMCwyOTA3MzAxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3
+ODU4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNj
+c3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEw
+ODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOT
+A3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2Nl19
 
 -->
