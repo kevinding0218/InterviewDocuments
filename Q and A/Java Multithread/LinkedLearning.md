@@ -1120,7 +1120,8 @@ public class RaceConditionDemo {
 	- `int getNumberWaiting()` - Current number of threads waiting on barrier
 	- `void reset` - Reset barrier to initial state
 	- `boolean isBroken()` - Has a thread broken out since last reset 
-- 5 Olivia threads would execute before Barron threads start to execute
+- Use barriers to seperate those operations that 5 Olivia threads would execute before Barron threads start to execute
+	- The Olivia threads will execute before they wait at the barrier, whereas the Barron threads will go straight to 
 	- (1 + 3 + 3 + 3 + 3 + 3) * 2 * 2 * 2 * 2 * 2 = 512
 ```java
 class Shopper extends Thread {
@@ -1255,11 +1256,11 @@ public class CountDownLatchDemo {
 ### Quiz
 1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY1MDkwMTUsLTE0OTgzOTk2OTgsODUwMD
-M0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0x
-NjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MD
-Y0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwt
-MTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNj
-IyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2OTY5
-NzVdfQ==
+eyJoaXN0b3J5IjpbLTU3NDIxNTIwNywtMTQ5ODM5OTY5OCw4NT
+AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
+LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
+cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
+LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
+E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
+Njk3NV19
 -->
