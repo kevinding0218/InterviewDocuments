@@ -1338,13 +1338,17 @@ public class FutureDemo {
     }
 }
 ```
+### Divide and Conquer
+1. Divide the problem into subproblems
+2. Conquer the subproblems by solving them recursively.
+3. Combine the solutions to the subproblems.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMDIwODMwLDI5MDczMDEyLDU4MDQyMT
-A1MiwtMzUzNjkwMzAsMTc4NTg1MzI2MiwtMTQ5ODM5OTY5OCw4
-NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOT
-csLTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIy
-ODcwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NT
-EyLC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTJd
+eyJoaXN0b3J5IjpbLTM5NzMwNzgxOSwtOTIwMjA4MzAsMjkwNz
+MwMTIsNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1ODUzMjYyLC0x
+NDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2ND
+AxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0
+MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzksNzQwMjMwNT
+Q3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjVd
 fQ==
 -->
