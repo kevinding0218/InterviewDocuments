@@ -1315,8 +1315,12 @@ public class ThreadPoolDemoAfter {
 - Acts as a place holder for a result that initially unknown, but will be available at some point in the future.
 - Provides a mechanism to access the result of an asynchronous operation
 - The feature is `read-only`, so while it's not ready yet, we can wait until at some point the result comes back and writes into that future, which is called resolving, or fulfilling the results to give an answer
+### Java Example
+#### Callable<V> Interface
+- Represents a tasks that returns a result of type V, and may throw an exception
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg1ODEwODU5LC0zNTM2OTAzMCwxNzg1OD
+eyJoaXN0b3J5IjpbNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1OD
 UzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQs
 MTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3Nj
 YxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzks
