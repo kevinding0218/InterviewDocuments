@@ -1277,13 +1277,14 @@ public class CountDownLatchDemo {
 - Although threads are considered to be lightweight, everytime we spawn a new thread, it does required some amount of overhead, in terms of processor time and memory
 #### What is it?
 - Rather than creating a new thread for every single task, it can be more efficient to use a thread pool, which creates and maintains a collection of worker threads.
-- As the program submits tasks to the thread pool, the thread pool reuses existing worker threads to execute tasks, submitting tasks to a thead pool is like adding them to a to-do list for the worker threads.
+- As the program submits tasks to the thread pool, the thread pool reuses existing worker threads to execute tasks, submitting tasks to a thead pool is like adding them to a to-do list for the worker threads. After one worker thread finish executing current task, it'll take another one from the queue.
+- Reusing threads in thread pool addresses the overhead involved with creating new threads. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MDQzMjA3OCwtMzUzNjkwMzAsMTc4NT
-g1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0
-LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
-Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
-LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMT
-E0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAy
-NDE2NzddfQ==
+eyJoaXN0b3J5IjpbNDgzMzg3ODMzLC0zNTM2OTAzMCwxNzg1OD
+UzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQs
+MTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3Nj
+YxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzks
+NzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMT
+Q2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0
+MTY3N119
 -->
