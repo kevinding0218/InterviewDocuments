@@ -1273,13 +1273,15 @@ public class CountDownLatchDemo {
 	- Directed: each edge is directed from one node or vertex to another, 
 	- Acyclic: meaning it doesn't have any loop that cycle back on itself.
 ### Thread Pool
+#### Why need it?
+- Although threads are considered to be lightweight, everytime we spawn a new thread, 
 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OT
-gzOTk2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEz
-LDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNj
-YzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcs
-MTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMj
-UxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2
-MTkyOV19
+eyJoaXN0b3J5IjpbLTgzMjAzNzIxOCwtMzUzNjkwMzAsMTc4NT
+g1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0
+LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4Nz
+Y2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5
+LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2LC0yMT
+E0Njg3NjY1LDEyNTEyODkzOTIsLTE2MjI5NDMyMjcsLTIwMzAy
+NDE2NzddfQ==
 -->
