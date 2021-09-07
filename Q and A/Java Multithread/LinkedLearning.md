@@ -1179,8 +1179,9 @@ public class BarrierDemo {
 ```
 #### CountDownLatch
 - Allows one or more threads to wait until a set of operations being performed in other threads completes
+- The constructor take an argument with initialize count down value.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDA5NDAyMDEsLTE0OTgzOTk2OTgsOD
+eyJoaXN0b3J5IjpbLTE0NTM3Njg2MjIsLTE0OTgzOTk2OTgsOD
 UwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3
 LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMj
 g3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUx
