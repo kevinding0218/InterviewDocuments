@@ -1392,23 +1392,29 @@ public class DivideAndConquerDemo {
 1. When implementing a recursive divide-and-conquer algorithm in Java, why should you use a ForkJoinPool instead of simply creating new threads to handle each subproblem?
 -   The ForkJoinPool manages a thread pool to execute its ForkJoinTasks, which reduces the overhead of thread creation.
 2. What does a divide-and-conquer algorithm do when it reaches the base case?
--   Stop subdividing the current problem and solve it.
+- Stop subdividing the current problem and solve it.
 3. What is the difference between Java's Callable and Runnable interfaces?
--   The Callable interface's call() method returns a result object but the Runnable interface's run() method does not.
+- The Callable interface's call() method returns a result object but the Runnable interface's run() method does not.
 4. What is the purpose of a future?
--   It serves as a placeholder to access a result that may not been computed yet.
+- It serves as a placeholder to access a result that may not been computed yet.
 5. When using a thread pool in Java, the **thread pool executor service** assigns submitted tasks to specific threads within the available pool to execute
 6. Why are thread pools useful?
--   They reuse threads to reduce the overhead that would be required to create a new, separate thread for every concurrent task.
+- They reuse threads to reduce the overhead that would be required to create a new, separate thread for every concurrent task.
 7. What does a work-to-span ratio less than one indicate?
--   The work-to-span ratio cannot be less than one.
+- The work-to-span ratio cannot be less than one.
 8. What is a program's "span"?
--   sum of the time for all task nodes along the critical path
-9. 
--
+- sum of the time for all task nodes along the critical path
+9. What is a program's "critical path"?
+- longest series of sequential operations through the program
+10. What is a program's "work"?
+- sum of the time for all task nodes in a computational graph
+11. Why are computational graphs useful?
+- They help to identify opportunities for parallel execution.
+## Evaluating Parallel Performance
+### Speedup, latency, and throughput
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcyNTkxOTE5LDI2NjY4MzY4NywtOTIwMj
+eyJoaXN0b3J5IjpbNDU3MDA5NjA0LDI2NjY4MzY4NywtOTIwMj
 A4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0zNTM2OTAzMCwxNzg1
 ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3Nz
 QsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3
