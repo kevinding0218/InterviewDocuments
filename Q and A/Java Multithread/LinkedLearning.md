@@ -1110,8 +1110,9 @@ public class RaceConditionDemo {
 - A barriers is a stopping point for a group of threads from proceeding until enough threads have reached the barrier
 ### Java Example
 #### CyclicBarrier
-- The constructor takes an argument for the number of threads to wait on before the barrier releases.
 - It can be reused after the waiting threads are released
+- The constructor takes an argument for the number of threads to wait on before the barrier releases.
+- 5 Olivia threads would execute before Barron threads start to execute
 - Some other method
 	- `int getParties()` - Total number of threads needed to trip barrier
 	- `int getNumberWaiting()` - Current number of threads waiting on barrier
@@ -1176,7 +1177,7 @@ public class BarrierDemo {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzMyMDIxNjgsLTE0OTgzOTk2OTgsOD
+eyJoaXN0b3J5IjpbLTIwOTIzMTczNDUsLTE0OTgzOTk2OTgsOD
 UwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3
 LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMj
 g3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUx
