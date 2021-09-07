@@ -1414,11 +1414,11 @@ public class DivideAndConquerDemo {
 ### Speedup, latency, and throughput
 #### Weak Scaling
 - Keeping the size of the problem for each processor constant, but bring in more processors to accomplish more work in the same time.
-- For example, if one baker can make 10 cupcakes in 1 hour, bring in another baker can
+- For example, if one baker can make 10 cupcakes in 1 hour, bring in another baker can make 20 cupcakes in 1 hour
 #### Strong Scaling
 - Involves breaking down and spreading a problem across multiple processors to execute the program faster
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NDIzNDYxMiwyNjY2ODM2ODcsLTkyMD
+eyJoaXN0b3J5IjpbLTY1NjQ3NTE3MSwyNjY2ODM2ODcsLTkyMD
 IwODMwLDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4
 NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nz
 c0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4
