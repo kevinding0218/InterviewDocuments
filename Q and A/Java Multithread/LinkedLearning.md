@@ -1466,13 +1466,13 @@ public class DivideAndConquerDemo {
 - Minumize the total execution time
 #### Strategies
 - Place tasks that can execute concurrently on different processors
-- Place tasks that communicate frequently on 
+- Place tasks that communicate frequently on the same processor
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNjkyNjY3MCwxNTI1MTA4MTI1LDE3OD
-I2MTE3MDYsMTY4NDk4NjgxNSwyNjY2ODM2ODcsLTkyMDIwODMw
-LDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4NTg1Mz
-I2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nzc0LDE0
-NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4NzY2MT
-UxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MDc5XX0=
+eyJoaXN0b3J5IjpbLTEwNzE4MDM1NzcsMTUyNTEwODEyNSwxNz
+gyNjExNzA2LDE2ODQ5ODY4MTUsMjY2NjgzNjg3LC05MjAyMDgz
+MCwyOTA3MzAxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3ODU4NT
+MyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNjc3NCwx
+NDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwODc2Nj
+E1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3OV19
 
 -->
