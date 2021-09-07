@@ -1121,7 +1121,7 @@ public class RaceConditionDemo {
 	- `void reset` - Reset barrier to initial state
 	- `boolean isBroken()` - Has a thread broken out since last reset 
 - Use barriers to seperate those operations that 5 Olivia threads would execute before Barron threads start to execute
-	- The Olivia threads will execute before they wait at the barrier, whereas the Barron threads will go straight to waiting at the barrier.
+	- The Olivia threads will **execute before they await at the barrier**, whereas the Barron threads will **go straight to waiting at the barrier.**
 	- Once all 10 threads have arrived at the barrier and are waiting on it, then the Barrier will release and the Barron threads will all execute their multiplication operations.
 	- Result: (1 + 3 + 3 + 3 + 3 + 3) * 2 * 2 * 2 * 2 * 2 = 512
 ```java
@@ -1255,13 +1255,14 @@ public class CountDownLatchDemo {
 }
 ```
 ### Quiz
-1. 
+1. Which scenario describes a potential use case for a CountDownLatch initialized to a count value of 1?
+2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzYzMzM1NiwtMTQ5ODM5OTY5OCw4NT
-AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
-LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
-cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
-LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
-E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
-Njk3NV19
+eyJoaXN0b3J5IjpbNjU1ODg1Mjc2LC0xNDk4Mzk5Njk4LDg1MD
+AzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5Nywt
+MTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4Nz
+A2NDU3LC05MjYxMzkwNzksNzQwMjMwNTQ3LDExNjYyNTQ1MTIs
+LTEyNjkzNjIwNjYsLTIxMTQ2ODc2NjUsMTI1MTI4OTM5MiwtMT
+YyMjk0MzIyNywtMjAzMDI0MTY3Nyw1MDU2NjE5MjksODE2Njk2
+OTc1XX0=
 -->
