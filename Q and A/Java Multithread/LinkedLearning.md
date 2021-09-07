@@ -1349,16 +1349,18 @@ public class FutureDemo {
 - ExecutorService that executes ForkJoinTasks which distributed tasks to its worker threads.
 - `fork()` we use it when recursively breaking down a problem, to asynchronously execute tasks with the ForkJoinPool, this will be **added to the ForkJoinPool to be executed by one of the pool's available threads.**
 - `join()` we use it during the combine stage, which **returns the result of the task when it'd done.**
-- `computer()`: to execute in current thread and get its result value.
+- `computer()`: to **execute in current thread and get its result value**.
 #### ForkJoinTask Subclasses
 - `RecursiveTask<V>`: Returns a result
 - `RecursiveAction`: Does not return a result
+### Quiz
+1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNDc0MjIyNiwyNjY2ODM2ODcsLTkyMD
-IwODMwLDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNjkwMzAsMTc4
-NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwxMzgxNzE2Nz
-c0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNjE3NTcsMTA4
-NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1NywtOTI2MTM5MD
-c5LDc0MDIzMDU0NywxMTY2MjU0NTEyLC0xMjY5MzYyMDY2XX0=
+eyJoaXN0b3J5IjpbLTEzMjcwNzQzMTEsMjY2NjgzNjg3LC05Mj
+AyMDgzMCwyOTA3MzAxMiw1ODA0MjEwNTIsLTM1MzY5MDMwLDE3
+ODU4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNj
+c3NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEw
+ODc2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOT
+A3OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2Nl19
 
 -->
