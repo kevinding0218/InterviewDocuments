@@ -1287,14 +1287,14 @@ public class CountDownLatchDemo {
 - The executor service manages a pool of threads, so we don't have to create new threads manually.
 - The executor maintain a queue of the tasks that get submitted to it and then it uses the existing threads in its thread pool to run those tasks asynchronously. 
 	- `newSingleThreadExecutor()`: creates an executor that uses a single thread to execute tasks
-- `newFixedThreadPool(int nThreads)`: creates a thread pool that reuses a fixed number of threads to execute tasks.
+	- `newFixedThreadPool(int nThreads)`: creates a thread pool that reuses a fixed number of threads to execute tasks.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDk1NTc1NDQsLTM1MzY5MDMwLDE3OD
-U4NTMyNjIsLTE0OTgzOTk2OTgsODUwMDM0OTgsMTM4MTcxNjc3
-NCwxNDcwODY0MDEzLDgwNTEyMjk3LC0xNjUwMzYxNzU3LDEwOD
-c2NjE1MSwtMTQzNjYzOTE4MSwyMjg3MDY0NTcsLTkyNjEzOTA3
-OSw3NDAyMzA1NDcsMTE2NjI1NDUxMiwtMTI2OTM2MjA2NiwtMj
-ExNDY4NzY2NSwxMjUxMjg5MzkyLC0xNjIyOTQzMjI3LC0yMDMw
-MjQxNjc3XX0=
+eyJoaXN0b3J5IjpbODIxNjE4Mjg4LC0zNTM2OTAzMCwxNzg1OD
+UzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEzODE3MTY3NzQs
+MTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MTc1NywxMDg3Nj
+YxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3LC05MjYxMzkwNzks
+NzQwMjMwNTQ3LDExNjYyNTQ1MTIsLTEyNjkzNjIwNjYsLTIxMT
+Q2ODc2NjUsMTI1MTI4OTM5MiwtMTYyMjk0MzIyNywtMjAzMDI0
+MTY3N119
 -->
