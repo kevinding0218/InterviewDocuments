@@ -1112,6 +1112,11 @@ public class RaceConditionDemo {
 #### CyclicBarrier
 - The constructor takes an argument for the number of threads to wait on before the barrier releases.
 - It can be reused after the waiting threads are released
+- Some other method
+	- `int getParties()` - Total number of threads needed to trip barrier
+	- `int getNumberWaiting()` - Current number of threads waiting on barrier
+	- `void reset` - Reset barrier to initial state
+	- `boolean isBroken()` - Has a thread broken out since last reset 
 ```java
 class Shopper extends Thread {
 
@@ -1171,11 +1176,11 @@ public class BarrierDemo {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2ODM5OTkwNCwtMTQ5ODM5OTY5OCw4NT
-AwMzQ5OCwxMzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcs
-LTE2NTAzNjE3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyOD
-cwNjQ1NywtOTI2MTM5MDc5LDc0MDIzMDU0NywxMTY2MjU0NTEy
-LC0xMjY5MzYyMDY2LC0yMTE0Njg3NjY1LDEyNTEyODkzOTIsLT
-E2MjI5NDMyMjcsLTIwMzAyNDE2NzcsNTA1NjYxOTI5LDgxNjY5
-Njk3NV19
+eyJoaXN0b3J5IjpbLTE2NzMyMDIxNjgsLTE0OTgzOTk2OTgsOD
+UwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMjk3
+LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MSwyMj
+g3MDY0NTcsLTkyNjEzOTA3OSw3NDAyMzA1NDcsMTE2NjI1NDUx
+MiwtMTI2OTM2MjA2NiwtMjExNDY4NzY2NSwxMjUxMjg5MzkyLC
+0xNjIyOTQzMjI3LC0yMDMwMjQxNjc3LDUwNTY2MTkyOSw4MTY2
+OTY5NzVdfQ==
 -->
