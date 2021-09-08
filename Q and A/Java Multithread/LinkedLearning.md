@@ -1474,9 +1474,9 @@ public class DivideAndConquerDemo {
 #### I/O Bound
 - Example: Download Image
 - The limiting factor in how fast we can download is not the number of processors, but our internet speed, even we add 100 more processors to the system but won't make any difference because our program barely even utilized one processor.
-- 
+- Creating several concurrent threads certainly improved the program performance, because they could respond and do work as the data they requested was downloaded and became available, but those threads did not benefit from having all those processros available, because they didn't need to execute in parallel
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNTY3NzMzMiw2NzY2OTk4NDQsLTEwNz
+eyJoaXN0b3J5IjpbLTQxMzI4ODkyNyw2NzY2OTk4NDQsLTEwNz
 E4MDM1NzcsMTUyNTEwODEyNSwxNzgyNjExNzA2LDE2ODQ5ODY4
 MTUsMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3MzAxMiw1ODA0Mj
 EwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OTgzOTk2OTgs
