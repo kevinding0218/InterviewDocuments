@@ -1467,16 +1467,19 @@ public class DivideAndConquerDemo {
 #### Strategies
 - Place tasks that can execute concurrently on different processors
 - Place tasks that communicate frequently on the same processor
-### Merge sort in Parallel
-```java
+### CPU Bound vs I/O Bound
+#### CPU Bound
+- Example: Matrix multiplication, Merge sort
+- As the parallel live code ran, the CPU usage spiked up towards 100% because all of the threads we created were running full-time on all of the processors to generate their solutions
+```jav
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc2Njk5ODQ0LC0xMDcxODAzNTc3LDE1Mj
-UxMDgxMjUsMTc4MjYxMTcwNiwxNjg0OTg2ODE1LDI2NjY4MzY4
-NywtOTIwMjA4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0zNTM2OT
-AzMCwxNzg1ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEz
-ODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MT
-c1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3XX0=
-
+eyJoaXN0b3J5IjpbLTEwNTA2MjM4NzMsNjc2Njk5ODQ0LC0xMD
+cxODAzNTc3LDE1MjUxMDgxMjUsMTc4MjYxMTcwNiwxNjg0OTg2
+ODE1LDI2NjY4MzY4NywtOTIwMjA4MzAsMjkwNzMwMTIsNTgwND
+IxMDUyLC0zNTM2OTAzMCwxNzg1ODUzMjYyLC0xNDk4Mzk5Njk4
+LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMj
+I5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODFd
+fQ==
 -->
