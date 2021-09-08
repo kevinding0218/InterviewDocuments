@@ -1467,13 +1467,13 @@ public class DivideAndConquerDemo {
 #### Strategies
 - Place tasks that can execute concurrently on different processors
 - Place tasks that communicate frequently on the same processor
-- 
+### Merge sort in Parallel
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNjI0ODg5OCwtMTA3MTgwMzU3NywxNT
-I1MTA4MTI1LDE3ODI2MTE3MDYsMTY4NDk4NjgxNSwyNjY2ODM2
-ODcsLTkyMDIwODMwLDI5MDczMDEyLDU4MDQyMTA1MiwtMzUzNj
-kwMzAsMTc4NTg1MzI2MiwtMTQ5ODM5OTY5OCw4NTAwMzQ5OCwx
-MzgxNzE2Nzc0LDE0NzA4NjQwMTMsODA1MTIyOTcsLTE2NTAzNj
-E3NTcsMTA4NzY2MTUxLC0xNDM2NjM5MTgxLDIyODcwNjQ1N119
+eyJoaXN0b3J5IjpbNDU3MDA3NTY4LC0xMDcxODAzNTc3LDE1Mj
+UxMDgxMjUsMTc4MjYxMTcwNiwxNjg0OTg2ODE1LDI2NjY4MzY4
+NywtOTIwMjA4MzAsMjkwNzMwMTIsNTgwNDIxMDUyLC0zNTM2OT
+AzMCwxNzg1ODUzMjYyLC0xNDk4Mzk5Njk4LDg1MDAzNDk4LDEz
+ODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMjI5NywtMTY1MDM2MT
+c1NywxMDg3NjYxNTEsLTE0MzY2MzkxODEsMjI4NzA2NDU3XX0=
 
 -->
