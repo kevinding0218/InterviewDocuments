@@ -1471,15 +1471,16 @@ public class DivideAndConquerDemo {
 #### CPU Bound
 - Example: Matrix multiplication, Merge sort
 - As the parallel live code ran, the CPU usage spiked up towards 100% because all of the threads we created were running full-time on all of the processors to generate their solutions
-```jav
-
-```
+#### I/O Bound
+- Example: Download Image
+- The limiting factor in how fast we can download is not the number of processors, but our internet speed, even we add 100 more processors to the system but won't make any difference because our program barely even utilized one processor.
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTA2MjM4NzMsNjc2Njk5ODQ0LC0xMD
-cxODAzNTc3LDE1MjUxMDgxMjUsMTc4MjYxMTcwNiwxNjg0OTg2
-ODE1LDI2NjY4MzY4NywtOTIwMjA4MzAsMjkwNzMwMTIsNTgwND
-IxMDUyLC0zNTM2OTAzMCwxNzg1ODUzMjYyLC0xNDk4Mzk5Njk4
-LDg1MDAzNDk4LDEzODE3MTY3NzQsMTQ3MDg2NDAxMyw4MDUxMj
-I5NywtMTY1MDM2MTc1NywxMDg3NjYxNTEsLTE0MzY2MzkxODFd
-fQ==
+eyJoaXN0b3J5IjpbLTIyNTY3NzMzMiw2NzY2OTk4NDQsLTEwNz
+E4MDM1NzcsMTUyNTEwODEyNSwxNzgyNjExNzA2LDE2ODQ5ODY4
+MTUsMjY2NjgzNjg3LC05MjAyMDgzMCwyOTA3MzAxMiw1ODA0Mj
+EwNTIsLTM1MzY5MDMwLDE3ODU4NTMyNjIsLTE0OTgzOTk2OTgs
+ODUwMDM0OTgsMTM4MTcxNjc3NCwxNDcwODY0MDEzLDgwNTEyMj
+k3LC0xNjUwMzYxNzU3LDEwODc2NjE1MSwtMTQzNjYzOTE4MV19
+
 -->
