@@ -7,7 +7,11 @@
 
 #### Local Spring Cloud Access
 > http://localhost:8888/application/default
+
+#### real time refresh without restarting service
+> spring-boot-starter-actuator
+- Provides an endpoint to tell current service that it's time to fetch all latest config again from config server
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTQzNzg5MTgsLTIwNjE4Mjc1NzJdfQ
-==
+eyJoaXN0b3J5IjpbLTE5MDYyMjQ2NzQsLTE3MTQzNzg5MTgsLT
+IwNjE4Mjc1NzJdfQ==
 -->
