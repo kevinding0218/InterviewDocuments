@@ -11,7 +11,9 @@
 #### real time refresh without restarting service
 > spring-boot-starter-actuator
 - Provides an endpoint to tell current service that it's time to fetch all latest config again from config server
+> @RefreshScrope
+- Tell all your dependencies to be refershed and the dependencies 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDYyMjQ2NzQsLTE3MTQzNzg5MTgsLT
+eyJoaXN0b3J5IjpbLTEwODE5ODA1NzEsLTE3MTQzNzg5MTgsLT
 IwNjE4Mjc1NzJdfQ==
 -->
