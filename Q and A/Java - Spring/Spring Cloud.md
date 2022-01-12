@@ -12,10 +12,10 @@
 > spring-boot-starter-actuator
 - Provides an endpoint to tell current service that it's time to fetch all latest config again from config server
 > @RefreshScrope
-- Tell your particular bean which has the annotation that its dependencies to be refershed and the dependencies 
+- Tell your particular bean which has the annotation that its dependencies(`@Value`) to be refershed
 > POST http://localhost:8080/actuator/refresh
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMTYwNDI5MCwtMTcxNDM3ODkxOCwtMj
-A2MTgyNzU3Ml19
+eyJoaXN0b3J5IjpbLTE0ODc5NjM5NDcsLTE3MTQzNzg5MTgsLT
+IwNjE4Mjc1NzJdfQ==
 -->
