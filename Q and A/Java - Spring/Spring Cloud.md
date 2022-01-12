@@ -13,7 +13,9 @@
 - Provides an endpoint to tell current service that it's time to fetch all latest config again from config server
 > @RefreshScrope
 - Tell all your dependencies to be refershed and the dependencies 
+> POST http://localhost:8080/actuator/refresh
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODE5ODA1NzEsLTE3MTQzNzg5MTgsLT
-IwNjE4Mjc1NzJdfQ==
+eyJoaXN0b3J5IjpbMTc1ODgwMzIwNiwtMTcxNDM3ODkxOCwtMj
+A2MTgyNzU3Ml19
 -->
