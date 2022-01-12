@@ -4,6 +4,8 @@
 - Consistent (All microservice instances needs to ensure receiving latest config)
 - Version history (meaningless if not consistent, you might see a change in the config but don't know if that change deployed to all instance)
 - Real-time management
+
+#
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjE4Mjc1NzJdfQ==
+eyJoaXN0b3J5IjpbMTAyODY2MTgwMSwtMjA2MTgyNzU3Ml19
 -->
