@@ -2,8 +2,8 @@
 - Externalized (property files)
 - Environment specific (Spring profiles)
 - Consistent (All microservice instances needs to ensure receiving latest config)
-- Version history (meaning less if not consistent, )
+- Version history (meaningless if not consistent, you might see a change in the config but don't know if that change deployed to all instance)
 - Real-time management (
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI5MDQ2NDFdfQ==
+eyJoaXN0b3J5IjpbLTE0NDE5Mjg5Ml19
 -->
