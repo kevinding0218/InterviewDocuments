@@ -13,7 +13,7 @@
 	// if you use above without initializing, 
 	it will throw UinitializedPropertyAccessException
 	```
-	- lazy: It initializes variable only when it is required for the first time.
+	- lazy: It initializes variable only when it is required for the first time. There are certain classes whose object initialization is very heavy and so much time taking that it results in the delay of the whole class creation process.
 	```
 	private val githubApiService : GithubApiService by lazy {
 		RetrofitClient.getGithubApiService()
@@ -169,5 +169,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDk0MDQwODMsMTUwMzU3MTM5XX0=
+eyJoaXN0b3J5IjpbLTIwNzE2MzAyODYsMTUwMzU3MTM5XX0=
 -->
