@@ -46,6 +46,21 @@ data class Person(val name: String) {
 - While two Person objects can have different ages, they will be **treated as equal** for above example
 ### Kotlin classes are final by default
 - If classes were **open** by default and we would forget to mark class as **final** — (troubles might happen), but when we forget to mark class as **open** and try to extend it — we will be notified (no trouble).
+### Difference between == operator and === operator?
+- The `==` operator is used to compare the values of variables but `===` operator is used to check whether references of the variable is equal or not.  
+- And in the case of primitive types, the `===` operator also checks for the value and not reference.  
+Please note both will result in same in case primitive data types.
+> val number = Integer(1)
+> val anotherNumber = Integer(1)
+> number == anotherNumber // true (structural equality)
+> number === anotherNumber // false (referential equality)
+### Access/Visibility Modifiers in Kotlin
+Four types of access modifiers
+-   **protected:**  visible inside that particular class or file and also in the subclass of that particular class where it is declared.
+-   **private:**  visible inside that particular class or file containing the declaration.
+-   **internal:**  visible everywhere in that particular module.
+-   **public:**  visible to everyone.
+Note: By default, the visibility modifier in Kotlin is  **public**.
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -196,5 +211,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MzE2MzM3MCwxNTAzNTcxMzldfQ==
+eyJoaXN0b3J5IjpbLTIzNzAwMTQ3LDE1MDM1NzEzOV19
 -->
