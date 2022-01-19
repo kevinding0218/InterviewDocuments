@@ -67,9 +67,7 @@ Class init method. Singleton variableName property : New Name
 New Name
 ```
 ##### Object extending a class
-```
-ou can use an object in Kotlin to extend some class or implement some interface just like a normal class. Let’s have an example of the same:
-
+- We can use an object in Kotlin to extend some class or implement some interface just like a normal class. Let’s have an example of the same:
 ```java
 fun main(args: Array<String>) {
     var a = A()
@@ -77,29 +75,33 @@ fun main(args: Array<String>) {
 }
 
 open class A {
-
     open fun printVarName() {
         print("I am in class printVarName")
     }
-
     init {
         println("I am in init of A")
     }
 }
 
 object Singleton : A() {
-
     init {
         println("Singleton class invoked.")
     }
-
     var variableName = "I am Var"
     override fun printVarName() {
         println(variableName)
     }
 }
 ```
+- And the output of the above code will be:
+```java
+I am in init of A
+I am in init of A
+Singleton class invoked.
+I am var
 ```
+#### Singleton class with Argument in Kotlin
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MjA3MjQyM119
+eyJoaXN0b3J5IjpbMjEyMjA3Njc4Nl19
 -->
