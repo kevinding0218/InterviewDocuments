@@ -42,8 +42,10 @@ data class Person(val name: String) {
 	var age: Int = 0
 }
 ```
-- Only the property name `name` will be used inside the **toString(), equals(), hashCode(), and copy()** implementations. 
+- Only the property name (e.g: `name`) will be used inside the **toString(), equals(), hashCode(), and copy()** implementations. 
 - While two Person objects can have different ages, they will be **treated as equal** for above example
+### Kotlin classes are final by default
+- If classes were **open** by default and we would forget to mark class as **final** — (troubles might happen), but when we forget to mark class as **open** and try to extend it — we will be notified (no trouble).
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -194,5 +196,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI3NzU2MDk3LDE1MDM1NzEzOV19
+eyJoaXN0b3J5IjpbMTg2MzE2MzM3MCwxNTAzNTcxMzldfQ==
 -->
