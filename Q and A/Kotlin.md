@@ -46,7 +46,7 @@ data class Person(val name: String) {
 - While two Person objects can have different ages, they will be **treated as equal** for above example
 ### Kotlin classes are final by default
 - If classes were **open** by default and we would forget to mark class as **final** — (troubles might happen), but when we forget to mark class as **open** and try to extend it — we will be notified (no trouble).
-### Difference between == operator and === operator?
+### Difference between `==` operator and `===` operator?
 - The `==` operator is used to compare the values of variables but `===` operator is used to check whether references of the variable is equal or not.  
 - And in the case of primitive types, the `===` operator also checks for the value and not reference.  
 Please note both will result in same in case primitive data types.
@@ -306,6 +306,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MDQyNjczMywtMTc4ODE5NDg0NCwxNT
+eyJoaXN0b3J5IjpbMjAxODc1NDU3OSwtMTc4ODE5NDg0NCwxNT
 AzNTcxMzldfQ==
 -->
