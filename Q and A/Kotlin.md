@@ -139,6 +139,33 @@ class Add {
 	}
 }
 ```
+### What are Higher Order Functions?
+- A higher-order function is a function that takes functions as parameters, or returns a function.
+```java
+// lambda expression which takes two int as arguments and returns a single int as sum of both
+
+var sum = {a: Int , b: Int -> a + b }
+
+fun higherOrderfun( summation: (Int, Int) -> Int) { // accepting lambda as argument
+
+// do some operation here
+
+// call function received in arguments. Note that "summation" is name of argument.
+
+var result = summation(2,4) // invokes the lambda expression from arguments
+
+println("The sum of two numbers is: $result")
+
+// do some more stuff here
+
+}
+
+fun main(args: Array<String>) {
+
+higherOrderfun(sum) //passing function/lambda as argument
+
+}
+```
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -289,6 +316,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzkwNTg0ODUsLTE3ODgxOTQ4NDQsMT
-UwMzU3MTM5XX0=
+eyJoaXN0b3J5IjpbMTM4ODU1ODg4MSwtMTc4ODE5NDg0NCwxNT
+AzNTcxMzldfQ==
 -->
