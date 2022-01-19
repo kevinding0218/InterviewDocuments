@@ -35,8 +35,15 @@ this::variableName.isInitialized
 > variable?.replace(“x”, “z”)
 Please note we have not initialized  _variable_ above, but it will not throw NullPointerException as Safe call operator is used.
 - in case of Non-Null Assertion, if you call any method on its reference it will throw KotlinNullPointerException.
-
 > variable!!.replace(“x”, “z”)
+### What are data classes in kotlin?
+```
+data class Person(val name: String) {
+
+var age: Int = 0
+
+}
+```
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -187,5 +194,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODUyMjk4NzcsMTUwMzU3MTM5XX0=
+eyJoaXN0b3J5IjpbMTcxNDE1MTU5NiwxNTAzNTcxMzldfQ==
 -->
