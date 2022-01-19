@@ -26,6 +26,8 @@ this::variableName.isInitialized
 ```
 ### What is Difference between setValue() and PostValue() in MutableLiveData?
 - `setValue()` method must be called from the main thread. But if you need set a value from a background thread, `postValue()` should be used.
+### What is difference between companion object and object?
+- _Companion Object_ is initialized when class is loaded. But _Object_ is initialized lazily by default — when accessed for the first time.
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -176,5 +178,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDAzMzE0ODYsMTUwMzU3MTM5XX0=
+eyJoaXN0b3J5IjpbODYxOTY1MzE2LDE1MDM1NzEzOV19
 -->
