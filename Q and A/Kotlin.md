@@ -8,7 +8,7 @@
 ### When to use lateinit and lazy keywords in kotlin?
 - Lateinit is used with mutable, while lazy is used with immutable
 	- lateinit: if you use below without initializing, it will throw UinitializedPropertyAccessException
-	```
+	```java
 	private lateinit var display : DisplayAdapter
 	// if you use above without initializing, 
 	it will throw UinitializedPropertyAccessException
@@ -289,6 +289,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNDc1NzU0NSwtMTc4ODE5NDg0NCwxNT
-AzNTcxMzldfQ==
+eyJoaXN0b3J5IjpbLTE5NzkwNTg0ODUsLTE3ODgxOTQ4NDQsMT
+UwMzU3MTM5XX0=
 -->
