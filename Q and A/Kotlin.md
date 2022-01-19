@@ -2,7 +2,11 @@
 - _var_ is like a general variable and can be assigned multiple times and is known as the mutable variable in Kotlin.
 - _val_ is a constant variable which can be Initialized only single time and is known as the immutable variable in Kotlin.
 ### What is the difference between val and const val?
-- 
+- _const_ and _val_ both represents the immutability and read only values and act as **final** keyword in java.
+- _val_ keyword must be used to declare for **run time** values
+- _const_ keyword must be used to declare **compile time** values.
+### When to use lateinit and lazy keywords in kotlin?
+
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -153,5 +157,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MDA5NjUwOSwxNTAzNTcxMzldfQ==
+eyJoaXN0b3J5IjpbNDM5MjM0OTM5LDE1MDM1NzEzOV19
 -->
