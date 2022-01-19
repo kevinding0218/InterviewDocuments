@@ -6,7 +6,21 @@
 - _val_ keyword must be used to declare for **run time** values
 - _const_ keyword must be used to declare **compile time** values.
 ### When to use lateinit and lazy keywords in kotlin?
+- Lateinit is used with mutable, while lazy is used with immutable
+	- lateinit: if you use below without initializing, it will throw UinitializedPropertyAccessException
+	```
+	private lateinit var display : DisplayAdapter
+	// if you use above without initializing, 
+	it will throw UinitializedPropertyAccessException
+	```
+	- lazy: It initializes variable only when it is required for the first time.
+	```
+	private val githubApiService : GithubApiService by lazy {
 
+RetrofitClient.getGithubApiService()
+
+}
+	```
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -157,5 +171,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM5MjM0OTM5LDE1MDM1NzEzOV19
+eyJoaXN0b3J5IjpbLTE1NTMzOTA2MDcsMTUwMzU3MTM5XX0=
 -->
