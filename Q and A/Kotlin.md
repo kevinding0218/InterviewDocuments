@@ -92,7 +92,7 @@ val y = 10 add 20 // infix function call
 ```
 ### What are advantages to  _when_  over  _switch_  in kotlin?
 - It is more concise and powerful than a traditional switch. when can be used either as an expression or as a statement.
-```
+```java
 when(number) {
 	1 -> println("A")
 	2 -> println("B")
@@ -106,7 +106,7 @@ when(number) {
 #### Primary Constructor
 - The primary constructor is initialized in the class header, goes after the class name, using the **constructor** keyword. The parameters are optional in the primary constructor.  
 - The primary constructor cannot contain any code, the initialization code can be placed in a separate initializer block prefixed with the **init** keyword.
-```
+```java
 class employee(emp_id : Int , emp_name: String) {
 	val id: Int
 	var name: String
@@ -121,22 +121,22 @@ class employee(emp_id : Int , emp_name: String) {
 ```
 #### Secondary Constructor
 - Kotlin may have one or more secondary constructors. Secondary constructors allow initialization of variables and allow to provide some logic to the class as well. They are prefixed with the **constructor** keyword.
-```
+```java
 class Add {
 
-constructor(a: Int, b: Int) {
-var c = a + b
-println("Sum of 5, 6 = ${c}")
-}
+	constructor(a: Int, b: Int) {
+		var c = a + b
+		println("Sum of 5, 6 = ${c}")
+	}
 
-constructor(a: Int, b: Int, c: Int) {
-var d = a + b + c
-println("Sum of 5, 6, 7 = ${d}")
-}
-constructor(a: Int, b: Int, c: Int, d: Int) {
-var e = a + b + c + d
-println("Sum of 5, 6, 7, 8 = ${e}")
-}
+	constructor(a: Int, b: Int, c: Int) {
+		var d = a + b + c
+		println("Sum of 5, 6, 7 = ${d}")
+	}
+	constructor(a: Int, b: Int, c: Int, d: Int) {
+		var e = a + b + c + d
+		println("Sum of 5, 6, 7, 8 = ${e}")
+	}
 }
 ```
 ### Singleton class
@@ -289,6 +289,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNDM3MTMwNSwtMTc4ODE5NDg0NCwxNT
-AzNTcxMzldfQ==
+eyJoaXN0b3J5IjpbMjg1MzYwNjE3LC0xNzg4MTk0ODQ0LDE1MD
+M1NzEzOV19
 -->
