@@ -71,6 +71,10 @@ Note: By default, the visibility modifier in Kotlin is  **public**.
 The scope functions differ by the result they return:
 -   `apply`  and  `also`  return the context object. So they can be used in chaining function calls on the same object after them. They also can be used in return statements of functions
 -   `let`,  `run`, and  `with`  return the lambda result.
+### What are sealed classes in kotlin?
+- Sealed classes are similar to `[enum](https://kotlinlang.org/docs/enum-classes.html)` classes: the set of values for an enum type is also restricted, but each enum constant exists only as a _single instance_, whereas a subclass of a sealed class can have _multiple_ instances, each with its own state.
+```
+``` 
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -221,5 +225,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODgxOTQ4NDQsMTUwMzU3MTM5XX0=
+eyJoaXN0b3J5IjpbLTIxMjczMDA5MDksLTE3ODgxOTQ4NDQsMT
+UwMzU3MTM5XX0=
 -->
