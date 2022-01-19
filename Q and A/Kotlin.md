@@ -102,6 +102,28 @@ when(number) {
 	else -> println("Out of Range") // default case
 }
 ```
+### What are primary and secondary constructors in Kotlin?
+- **Primary Constructor** is initialized in the class header, goes after the class name, using the **constructor** keyword. The parameters are optional in the primary constructor.  
+	- The primary constructor cannot contain any code, the initialization code can be placed in a separate initializer block prefixed with the **init** keyword.
+```
+class employee(emp_id : Int , emp_name: String) {
+
+val id: Int
+
+var name: String
+
+// initializer block
+
+init {
+
+id = emp_id
+
+name = emp_name
+println("Employee id is: $id")
+println("Employee name: $name")
+}
+}
+```
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -252,6 +274,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4OTQ2OTg1MCwtMTc4ODE5NDg0NCwxNT
+eyJoaXN0b3J5IjpbLTYyMzQ1NzY5MiwtMTc4ODE5NDg0NCwxNT
 AzNTcxMzldfQ==
 -->
