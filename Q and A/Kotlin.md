@@ -65,7 +65,12 @@ Note: By default, the visibility modifier in Kotlin is  **public**.
 - **Extension Function** provides an option to “add” methods to class without inheriting a class. 
 - The created extension functions are used as a regular function inside that class
 ### What are inline functions ?
-- Inline function instruct compiler to insert complete body of the function wherever that function got used in the code. To use an Inline function, all you need to do is just add an inline keyword at the beginning of the function declaration.
+- Inline function instruct compiler to insert complete body of the function wherever that function got used in the code. 
+### What are scope functions in Kotlin ?
+- Scoped functions are functions that execute a block of code within the context of an object. There are five scoped functions in kotlin :  **let**,  **run**,  **with**,  **also**  and  **apply.**
+The scope functions differ by the result they return:
+-   `apply`  and  `also`  return the context object. So they can be used in chaining function calls on the same object after them. They also can be used in return statements of functions
+-   `let`,  `run`, and  `with`  return the lambda result.
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -216,5 +221,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4ODY2MjE2MiwxNTAzNTcxMzldfQ==
+eyJoaXN0b3J5IjpbLTE3ODgxOTQ4NDQsMTUwMzU3MTM5XX0=
 -->
