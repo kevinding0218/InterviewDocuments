@@ -133,8 +133,20 @@ open class SingletonHolder<out T: Any, in A>(creator: (A) -> T) {
 ```
 
 The above code is the most efficient code for double-checked locking system and the code is somehow similar to the  **lazy()**  function in Kotlin and that’s why it is called lazy initialization. So, whenever you want a singleton class with arguments then you can use the  **SingletonHolder**  class.
+- Here, in the above code, in place of the  **creator**  function which is passed as an argument to the  **SingletonHolder**, a custom lambda can also be declared inline or we can pass a reference to the private constructor of the singleton class. So, the code will be:
+```java
+class YourManager private constructor(context: Context) {
+    init {
+        // do something with context
+    }
 
-Here, in the above code, in p
+    companion object : SingletonHolder<YourManager, Context>(::YourManager)
+}
+```
+Now, the singleton can be easily invoked and initialized by writing the below code and this is lazy as well as thread-safe :)
+```java
+YourManager.getInstance(context).doSomething()
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM1Mjg5MjQwXX0=
+eyJoaXN0b3J5IjpbMTUwMzU3MTM5XX0=
 -->
