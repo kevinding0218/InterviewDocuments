@@ -37,10 +37,19 @@ object Singleton
 ```
 #### Object
 - In Kotlin, we need to use the **object** keyword to use Singleton class. The **object** class can have functions, properties, and the **init** method. The constructor method is not allowed in an object so we can use the init method if some initialization is required and the object can be defined inside a class. The object gets instantiated when it is used for the first time.
+```java
+object Singleton{ 
+	init { println("Singleton class invoked.") 
+	} var variableName = "I am Var"  fun printVarName(){ println(variableName) } } fun main(args: Array<String>) { Singleton.printVarName() Singleton.variableName = "New Name" var a = A() } class  A { init { println("Class init method. Singleton variableName property : ${Singleton.variableName}") Singleton.printVarName() } }
 ```
-object Singleton{ init { println("Singleton class invoked.") } var variableName = "I am Var"  fun printVarName(){ println(variableName) } } fun main(args: Array<String>) { Singleton.printVarName() Singleton.variableName = "New Name" var a = A() } class  A { init { println("Class init method. Singleton variableName property : ${Singleton.variableName}") Singleton.printVarName() } }
-```
+Here, in the above example, we are having one function named  **printVarName()**  and one property named  **“variableName”.** When  **A** class is instantiated, then changes can be reflected in the  **object**  class. So, the output of the above code will be:
 
+```java
+Singleton class invoked.
+I am Var
+Class init method. Singleton variableName property : New Name
+New Name
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTM0ODM0MjNdfQ==
+eyJoaXN0b3J5IjpbLTM0Mzc0NTUzMl19
 -->
