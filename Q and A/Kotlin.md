@@ -74,7 +74,22 @@ The scope functions differ by the result they return:
 ### What are sealed classes in kotlin?
 - Sealed classes are similar to `[enum](https://kotlinlang.org/docs/enum-classes.html)` classes: the set of values for an enum type is also restricted, but each enum constant exists only as a _single instance_, whereas a subclass of a sealed class can have _multiple_ instances, each with its own state.
 ```
+sealed interface Error
+sealed class IOError(): Error
+class FileReadError(val f: File): IOError()
+class DatabaseError(val source: DataSource): IOError()
+object RuntimeError : Error
 ``` 
+### **What is significance of annotations : @JvmStatic, @JvmOverloads, and @JvmFiled in Kotlin?**  
+- **@JvmStatic**: This annotation is used to tell the compiler that the method is a static method and can be used in Java code.  
+- **@JvmOverloads**: To use the default values passed as an argument in Kotlin code from the Java code.  
+- **@JvmField**: To access the fields of a Kotlin class from Java code without using any getters and setters.
+### What are infix functions?
+- An infix function is used to call the function without using any bracket or parenthesis. You need to use the infix keyword to use the infix function.  
+```
+infix fun Int.add(b : Int) : Int = this + b
+val y = 10 add 20 // infix function call
+```
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -225,6 +240,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjczMDA5MDksLTE3ODgxOTQ4NDQsMT
+eyJoaXN0b3J5IjpbLTE5MjkyMDU1MzIsLTE3ODgxOTQ4NDQsMT
 UwMzU3MTM5XX0=
 -->
