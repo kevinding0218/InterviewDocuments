@@ -30,12 +30,11 @@ public class Singleton {
     }
 }
 ```
-#### Kotlin
-Following is the example of Singleton class in Kotlin:
+#### Singleton class in Kotlin:
 ```
 object Singleton
 ```
-#### Object
+##### Object
 - In Kotlin, we need to use the **object** keyword to use Singleton class. The **object** class can have functions, properties, and the **init** method. The constructor method is not allowed in an object so we can use the init method if some initialization is required and the object can be defined inside a class. The object gets instantiated when it is used for the first time.
 ```java
 object Singleton{ 
@@ -67,6 +66,40 @@ I am Var
 Class init method. Singleton variableName property : New Name
 New Name
 ```
+##### Object extending a class
+```
+ou can use an object in Kotlin to extend some class or implement some interface just like a normal class. Let’s have an example of the same:
+
+```java
+fun main(args: Array<String>) {
+    var a = A()
+    Singleton.printVarName()
+}
+
+open class A {
+
+    open fun printVarName() {
+        print("I am in class printVarName")
+    }
+
+    init {
+        println("I am in init of A")
+    }
+}
+
+object Singleton : A() {
+
+    init {
+        println("Singleton class invoked.")
+    }
+
+    var variableName = "I am Var"
+    override fun printVarName() {
+        println(variableName)
+    }
+}
+```
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQyODc5MDBdfQ==
+eyJoaXN0b3J5IjpbLTc4MjA3MjQyM119
 -->
