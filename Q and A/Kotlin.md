@@ -94,19 +94,12 @@ val y = 10 add 20 // infix function call
 - It is more concise and powerful than a traditional switch. when can be used either as an expression or as a statement.
 ```
 when(number) {
-
-1 -> println("A")
-
-2 -> println("B")
-
-3 -> println("C")
-
-in 4..7 -> println("Number between 4 to 7")
-
-!in 8..10 -> println("Number is not in range of 8 to 10")
-
-else -> println("Out of Range") // default case
-
+	1 -> println("A")
+	2 -> println("B")
+	3 -> println("C")
+	in 4..7 -> println("Number between 4 to 7")
+	!in 8..10 -> println("Number is not in range of 8 to 10")
+	else -> println("Out of Range") // default case
 }
 ```
 ### Singleton class
@@ -259,6 +252,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMzIyMzMwNCwtMTc4ODE5NDg0NCwxNT
+eyJoaXN0b3J5IjpbMTg4OTQ2OTg1MCwtMTc4ODE5NDg0NCwxNT
 AzNTcxMzldfQ==
 -->
