@@ -16,10 +16,8 @@
 	- lazy: It initializes variable only when it is required for the first time.
 	```
 	private val githubApiService : GithubApiService by lazy {
-
-RetrofitClient.getGithubApiService()
-
-}
+		RetrofitClient.getGithubApiService()
+	}
 	```
 ### Singleton class
 #### Rules for making a class Singleton
@@ -171,5 +169,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTMzOTA2MDcsMTUwMzU3MTM5XX0=
+eyJoaXN0b3J5IjpbLTE4MDk0MDQwODMsMTUwMzU3MTM5XX0=
 -->
