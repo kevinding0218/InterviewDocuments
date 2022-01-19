@@ -19,6 +19,11 @@
 		RetrofitClient.getGithubApiService()
 	}
 	```
+### How to check if lateinit property is initialized or not?
+- You can check if the lateinit variable has been initialized or not before using it with the help of  **isInitialized()** method. It returns  **true**  if the lateinit property has been initialized otherwise  **false**.
+```
+this::variableName.isInitialized
+```
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -169,5 +174,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzE2MzAyODYsMTUwMzU3MTM5XX0=
+eyJoaXN0b3J5IjpbLTE3MDk1MjIyNDksMTUwMzU3MTM5XX0=
 -->
