@@ -68,38 +68,28 @@ Note: By default, the visibility modifier in Kotlin is  **public**.
 - Inline function instruct compiler to insert complete body of the function wherever that function got used in the code. 
 - https://stackoverflow.com/questions/44471284/when-to-use-an-inline-function-in-kotlin
 - Let's say you create a higher order function that takes a lambda of type  `() -> Unit`  (no parameters, no return value), and executes it like so:
-
 ```kotlin
 fun nonInlined(block: () -> Unit) {
     println("before")
     block()
     println("after")
 }
-
 ```
-
-In Java parlance, this will translate to something like this (simplified!):
-
+- In Java parlance, this will translate to something like this (simplified!):
 ```kotlin
 public void nonInlined(Function block) {
     System.out.println("before");
     block.invoke();
     System.out.println("after");
 }
-
 ```
-
-And when you call it from Kotlin...
-
+- And when you call it from Kotlin...
 ```kotlin
 nonInlined {
     println("do something here")
 }
-
 ```
-
-Under the hood, an instance of  `Function`  will be created here, that wraps the code inside the lambda (again, this is simplified):
-
+- Under the hood, an instance of  `Function`  will be created here, that wraps the code inside the lambda (again, this is simplified):
 ```kotlin
 nonInlined(new Function() {
     @Override
@@ -107,42 +97,29 @@ nonInlined(new Function() {
         System.out.println("do something here");
     }
 });
-
 ```
-
-So basically, calling this function and passing a lambda to it will always create an instance of a  `Function`  object.
-
+- So basically, **calling this function and passing a lambda to it will always create an instance** of a  `Function`  object.
 ----------
-
 On the other hand, if you use the  `inline`  keyword:
-
 ```kotlin
 inline fun inlined(block: () -> Unit) {
     println("before")
     block()
     println("after")
 }
-
 ```
-
 When you call it like this:
-
 ```kotlin
 inlined {
     println("do something here")
 }
-
 ```
-
 No  `Function`  instance will be created, instead, the code around the invocation of  `block`  inside the inlined function will be copied to the call site, so you'll get something like this in the bytecode:
-
 ```kotlin
 System.out.println("before");
 System.out.println("do something here");
 System.out.println("after");
-
 ```
-
 In this case, no new instances are created.
 ### What are scope functions in Kotlin ?
 - Scoped functions are functions that execute a block of code within the context of an object. There are five scoped functions in kotlin :  **let**,  **run**,  **with**,  **also**  and  **apply.**
@@ -384,6 +361,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNzYwNzcyNSwyMDE4NzU0NTc5LC0xNz
+eyJoaXN0b3J5IjpbLTc0MDcxMzg5OSwyMDE4NzU0NTc5LC0xNz
 g4MTk0ODQ0LDE1MDM1NzEzOV19
 -->
