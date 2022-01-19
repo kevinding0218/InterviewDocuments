@@ -103,24 +103,39 @@ when(number) {
 }
 ```
 ### What are primary and secondary constructors in Kotlin?
-- **Primary Constructor** is initialized in the class header, goes after the class name, using the **constructor** keyword. The parameters are optional in the primary constructor.  
-	- The primary constructor cannot contain any code, the initialization code can be placed in a separate initializer block prefixed with the **init** keyword.
+#### Primary Constructor
+- The primary constructor is initialized in the class header, goes after the class name, using the **constructor** keyword. The parameters are optional in the primary constructor.  
+- The primary constructor cannot contain any code, the initialization code can be placed in a separate initializer block prefixed with the **init** keyword.
 ```
 class employee(emp_id : Int , emp_name: String) {
+	val id: Int
+	var name: String
+	// initializer block
+	init {
+		id = emp_id
+		name = emp_name
+		println("Employee id is: $id")
+		println("Employee name: $name")
+	}
+}
+```
+#### Secondary Constructor
+- Kotlin may have one or more secondary constructors. Secondary constructors allow initialization of variables and allow to provide some logic to the class as well. They are prefixed with the **constructor** keyword.
+```
+class Add {
 
-val id: Int
+constructor(a: Int, b: Int) {
+var c = a + b
+println("Sum of 5, 6 = ${c}")
+}
 
-var name: String
-
-// initializer block
-
-init {
-
-id = emp_id
-
-name = emp_name
-println("Employee id is: $id")
-println("Employee name: $name")
+constructor(a: Int, b: Int, c: Int) {
+var d = a + b + c
+println("Sum of 5, 6, 7 = ${d}")
+}
+constructor(a: Int, b: Int, c: Int, d: Int) {
+var e = a + b + c + d
+println("Sum of 5, 6, 7, 8 = ${e}")
 }
 }
 ```
@@ -274,6 +289,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMzQ1NzY5MiwtMTc4ODE5NDg0NCwxNT
+eyJoaXN0b3J5IjpbLTYyNDM3MTMwNSwtMTc4ODE5NDg0NCwxNT
 AzNTcxMzldfQ==
 -->
