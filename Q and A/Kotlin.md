@@ -56,11 +56,16 @@ Please note both will result in same in case primitive data types.
 > number === anotherNumber // false (referential equality)
 ### Access/Visibility Modifiers in Kotlin
 Four types of access modifiers
--   **protected:**  visible inside that particular class or file and also in the subclass of that particular class where it is declared.
--   **private:**  visible inside that particular class or file containing the declaration.
--   **internal:**  visible everywhere in that particular module.
--   **public:**  visible to everyone.
+-   **protected:**  visible inside that **particular class or file** and also in the **subclass** of that particular class where it is declared.
+-   **private:**  visible inside that **particular class or file** containing the declaration.
+-   **internal:**  visible everywhere in that **particular module.**
+-   **public:**  visible to **everyone**.
 Note: By default, the visibility modifier in Kotlin is  **public**.
+### What are extension functions in Kotlin?
+- **Extension Function** provides an option to “add” methods to class without inheriting a class. 
+- The created extension functions are used as a regular function inside that class
+### What are inline functions ?
+- Inline function instruct compiler to insert complete body of the function wherever that function got used in the code. To use an Inline function, all you need to do is just add an inline keyword at the beginning of the function declaration.
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -211,5 +216,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNzAwMTQ3LDE1MDM1NzEzOV19
+eyJoaXN0b3J5IjpbLTI4ODY2MjE2MiwxNTAzNTcxMzldfQ==
 -->
