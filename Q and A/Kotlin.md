@@ -101,7 +101,9 @@ Singleton class invoked.
 I am var
 ```
 #### Singleton class with Argument in Kotlin
-- If we particularly talk about Android, we know that in Android we generally need to pass a  **context**  instance to  **init**  block of a singleton. This can be done using  **Early initialization**  and  **Lazy initialization**. In early initialization, all the components are initialized in the  **Application.onCreate()**  using the  **init()**  functions. But this results in slowing down the application startup by blocking the main thread. So, it is generally advised to use the  **lazy initialization**  way. In lazy initialization, we use the context as an argument to a function returning the instance of the singleton. We can achieve this by using a  **SingletonHolder**  class. Also, to make it thread-safe, we need to have a way of 
+- If we particularly talk about Android, we know that in Android we generally need to pass a  **context**  instance to  **init**  block of a singleton. This can be done using  **Early initialization**  and  **Lazy initialization**. 
+	- In early initialization, all the components are initialized in the  **Application.onCreate()**  using the  **init()**  functions. But this results in slowing down the application startup by blocking the main thread. So, it is generally advised to use the  **lazy initialization**  way. 
+	- In lazy initialization, we use the context as an argument to a function returning the instance of the singleton. We can achieve this by using a  **SingletonHolder**  class. Also, to make it thread-safe, we need to have a way of 
 synchronization and double-checked locking.
 
 ```java
@@ -134,5 +136,5 @@ The above code is the most efficient code for double-checked locking system and 
 
 Here, in the above code, in p
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI0NjM2OTU4XX0=
+eyJoaXN0b3J5IjpbMjM1Mjg5MjQwXX0=
 -->
