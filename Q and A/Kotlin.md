@@ -99,8 +99,7 @@ nonInlined(new Function() {
 });
 ```
 - So basically, **calling this function and passing a lambda to it will always create an instance** of a  `Function`  object.
-----------
-On the other hand, if you use the  `inline`  keyword:
+- On the other hand, if you use the  `inline`  keyword:
 ```kotlin
 inline fun inlined(block: () -> Unit) {
     println("before")
@@ -108,19 +107,19 @@ inline fun inlined(block: () -> Unit) {
     println("after")
 }
 ```
-When you call it like this:
+- When you call it like this:
 ```kotlin
 inlined {
     println("do something here")
 }
 ```
-No  `Function`  instance will be created, instead, the code around the invocation of  `block`  inside the inlined function will be copied to the call site, so you'll get something like this in the bytecode:
+- No  `Function`  instance will be created, instead, the code around the invocation of  `block`  inside the inlined function will be copied to the call site, so you'll get something like this in the bytecode:
 ```kotlin
 System.out.println("before");
 System.out.println("do something here");
 System.out.println("after");
 ```
-In this case, no new instances are created.
+- In this case, no new instances are created.
 ### What are scope functions in Kotlin ?
 - Scoped functions are functions that execute a block of code within the context of an object. There are five scoped functions in kotlin :  **let**,  **run**,  **with**,  **also**  and  **apply.**
 The scope functions differ by the result they return:
@@ -361,6 +360,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MDcxMzg5OSwyMDE4NzU0NTc5LC0xNz
+eyJoaXN0b3J5IjpbMTQ0MDA5MTAxNSwyMDE4NzU0NTc5LC0xNz
 g4MTk0ODQ0LDE1MDM1NzEzOV19
 -->
