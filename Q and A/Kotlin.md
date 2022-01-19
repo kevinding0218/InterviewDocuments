@@ -73,7 +73,7 @@ The scope functions differ by the result they return:
 -   `let`,  `run`, and  `with`  return the lambda result.
 ### What are sealed classes in kotlin?
 - Sealed classes are similar to `[enum](https://kotlinlang.org/docs/enum-classes.html)` classes: the set of values for an enum type is also restricted, but each enum constant exists only as a _single instance_, whereas a subclass of a sealed class can have _multiple_ instances, each with its own state.
-```
+```java
 sealed interface Error
 sealed class IOError(): Error
 class FileReadError(val f: File): IOError()
@@ -289,6 +289,6 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg1MzYwNjE3LC0xNzg4MTk0ODQ0LDE1MD
-M1NzEzOV19
+eyJoaXN0b3J5IjpbLTUxODIxNTE2MSwtMTc4ODE5NDg0NCwxNT
+AzNTcxMzldfQ==
 -->
