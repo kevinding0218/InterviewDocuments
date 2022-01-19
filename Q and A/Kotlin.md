@@ -1,3 +1,8 @@
+### What is  the difference between val and var?  
+- _var_ is like a general variable and can be assigned multiple times and is known as the mutable variable in Kotlin.
+- _val_ is a constant variable which can be Initialized only single time and is known as the immutable variable in Kotlin.
+### What is the difference between val and const val?
+- 
 ### Singleton class
 #### Rules for making a class Singleton
 The following rules are followed to make a Singleton class:
@@ -148,5 +153,5 @@ Now, the singleton can be easily invoked and initialized by writing the below co
 YourManager.getInstance(context).doSomething()
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMzU3MTM5XX0=
+eyJoaXN0b3J5IjpbLTI1MDA5NjUwOSwxNTAzNTcxMzldfQ==
 -->
