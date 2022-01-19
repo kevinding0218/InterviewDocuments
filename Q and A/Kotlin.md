@@ -101,7 +101,38 @@ Singleton class invoked.
 I am var
 ```
 #### Singleton class with Argument in Kotlin
+- If we particularly talk about Android, we know that in Android we generally need to pass a  **context**  instance to  **init**  block of a singleton. This can be done using  **Early initialization**  and  **Lazy initialization**. In early initialization, all the components are initialized in the  **Application.onCreate()**  using the  **init()**  functions. But this results in slowing down the application startup by blocking the main thread. So, it is generally advised to use the  **lazy initialization**  way. In lazy initialization, we use the context as an argument to a function returning the instance of the singleton. We can achieve this by using a  **SingletonHolder**  class. Also, to make it thread-safe, we need to have a way of 
+synchronization and double-checked locking.
 
+```java
+open class SingletonHolder<out T: Any, in A>(creator: (A) -> T) {
+    private var creator: ((A) -> T)? = creator
+    @Volatile private var instance: T? = null
+
+    fun getInstance(arg: A): T {
+        val checkInstance = instance
+        if (checkInstance != null) {
+            return checkInstance
+        }
+
+        return synchronized(this) {
+            val checkInstanceAgain = instance
+            if (checkInstanceAgain != null) {
+                checkInstanceAgain
+            } else {
+                val created = creator!!(arg)
+                instance = created
+                creator = null
+                created
+            }
+        }
+    }
+}
+```
+
+The above code is the most efficient code for double-checked locking system and the code is somehow similar to the  **lazy()**  function in Kotlin and that’s why it is called lazy initialization. So, whenever you want a singleton class with arguments then you can use the  **SingletonHolder**  class.
+
+Here, in the above code, in p
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMjA3Njc4Nl19
+eyJoaXN0b3J5IjpbNTI0NjM2OTU4XX0=
 -->
