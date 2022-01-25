@@ -10,6 +10,7 @@
 - [Docker](#docker)
 
 ## MicroServices
+### https://medium.com/@madhukaudantha/microservice-architecture-and-design-patterns-for-microservices-e0e5013fd58a
 ### **Definition**
 - microservices as an **architectural pattern** for creating applications. Under this pattern, applications are structured as **a collection of loosely coupled services**.
 - This is distinct from **traditional applications** that are structured as **single self-contained artifacts**
@@ -242,9 +243,10 @@ docker push {username}/{repository_name}
 - **docker run**: create a new container of an image, and execute the container. You can create N clones of the same image. The command is:  `docker run IMAGE_ID`  **and not**  `docker run CONTAINER_ID`
 - **docker start**: Launch a container previously stopped. For example, if you had stopped a database with the command  `docker stop CONTAINER_ID`, you can relaunch the same container with the command  `docker start CONTAINER_ID`, and the data and settings will be the same.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODUxMzk4MjUsLTEwNDA0Njk0OCwtMT
-gzODM4MTQyOSwxMjI5MTg5NjgwLC05OTAzNzQwNzYsMTI3MjYx
-OTU2NCwzOTI3NjgyOSwxNDY5Nzg5NDcxLDYxODg2MjIxNiw1Mj
-k5MTQzMjAsLTEwMjcxODczMjIsNDMzNTM5MzQyLDgxNTMyNzk3
-OSwxMDU0MzkyNDUwLC0xNTU0ODA4MjE1XX0=
+eyJoaXN0b3J5IjpbMTE4MzE3NTk1OCwtMTU4NTEzOTgyNSwtMT
+A0MDQ2OTQ4LC0xODM4MzgxNDI5LDEyMjkxODk2ODAsLTk5MDM3
+NDA3NiwxMjcyNjE5NTY0LDM5Mjc2ODI5LDE0Njk3ODk0NzEsNj
+E4ODYyMjE2LDUyOTkxNDMyMCwtMTAyNzE4NzMyMiw0MzM1Mzkz
+NDIsODE1MzI3OTc5LDEwNTQzOTI0NTAsLTE1NTQ4MDgyMTVdfQ
+==
 -->
