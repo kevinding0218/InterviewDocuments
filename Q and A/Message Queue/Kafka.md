@@ -3,7 +3,8 @@
 #### Cluster
 = Contains a group of brokers for storing huge amount of data
 ### Topic Replication
-- Store multiple copies of partition in id
+- Store multiple copies of partition in different machines
+- Usually with 3 copies by default, as service failure is a very common scenario in data center, with 2 copies it is considered less, more than
 ### Fault Tolenrance
 - 
 ### Difference between topic and Queue
@@ -13,5 +14,6 @@
 - Queue will delete the data as soon as it is consumed by one of the consumers
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTczMzU4MiwtMTI1MTM4MjM3NV19
+eyJoaXN0b3J5IjpbLTE5NDI2Njg4MDIsLTEyNTEzODIzNzVdfQ
+==
 -->
