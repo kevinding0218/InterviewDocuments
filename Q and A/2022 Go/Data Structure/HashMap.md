@@ -14,7 +14,7 @@
 - If we make sure that the height of the tree remains O(log n) after every insertion and deletion, then we can guarantee an upper bound of O(log n) for all these Search, Insert and Delete operations. 
 	- The height of a Red-Black tree is always O(log n) where n is the number of nodes in the tree.
 ### How does HashMap PUT work
-1. Call the `hashCode()` method to calculate hash code of **Key** as in K/V set, then calculate the array index to be inserted based on hashing value and length of the array
+1. Call the `hashCode()` method to calculate hash code of **Key** as in K/V set, then calculate the array index/bucket based on hashing value and length of the array
 2. Adjust length of the array (if element count of container is greater than capacity * loadfactor, would resize it to be 2*n)
 3. Insert K/V into HashMap
 	- If hash code of Key doesn't existed in current HashMap
@@ -24,7 +24,9 @@
 			- Before JDK 1.7 LinkedList was using Head Insertion, on or after JDK 1.8 using Tail Insertion
 			- When hash collision results in LinkedList length > 8, turn the LinkedList into Red-Black Tree
 ### How does HashMap GET work
-1. Call the `hashCode()` method to calculate hash code of Key, then calculate the array index based on hashing value and length of the array
+1. Call the `hashCode()` method to calculate hash code of Key, then calculate the array index/bucket based on hashing value and length of the array
+2. Traverse the node of either LinkedList or Red-Black Tree, and use `equals()` method to find entry
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NTgyNTc4OV19
+eyJoaXN0b3J5IjpbMTc0ODUxMDc3Ml19
 -->
