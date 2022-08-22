@@ -23,11 +23,11 @@
 		- Otherwise, insert at the end of the bucket (tail insertion as in LinkedList or tree insertion as in Red-Black Tree)
 			- Before JDK 1.7 LinkedList was using Head Insertion, on or after JDK 1.8 using Tail Insertion
 			- When hash collision results in LinkedList length > 8, turn the LinkedList into Red-Black Tree
-** hashCode() is used for locating bucket of storage while `equals() is used for locating actual node inside bucket**
+** hashCode() is used for locating bucket of storage while equals() is used for locating actual node inside the bucket**
 ### How does HashMap GET work
 1. Call the `hashCode()` method to calculate hash code of Key, then calculate the array index/bucket based on hashing value and length of the array
 2. Traverse the node of either LinkedList or Red-Black Tree, and use `equals()` method to find entry
-`hashCode()` is used for locating bucket of storage while `equals()` is used for locating actual node inside bucket
+** hashCode() is used for locating bucket of storage while equals() is used for locating actual node inside bucket**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk0MzkxNjM0XX0=
+eyJoaXN0b3J5IjpbNDgyNDIyOTUzXX0=
 -->
