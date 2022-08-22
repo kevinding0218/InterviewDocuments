@@ -59,6 +59,9 @@
 	- ConcurrentHashMap allows concurrent threads to read the value without locking at all.
 	- In JDK 1.7 uses ReentrantLock + Segment + HashEntry, it's like turn one HashMap into multiple segments, and **each segmenet may contain several Map.Entry, the scope of Lock is on segment to allow multiple threads to visit**
 	- In JDK 1.8 uses CAS + synchronized + Node + Red-Black Tree, **it decreases the scope of lock from segment which contains multiple bucket node into each single node**
+		- Scope of Lock decreases
+		- still uses `synchronized` that based on JVM which has more space for performant
+		- Replace of using `ReentrantLock
 	- **Default max thread count** to update ConcurrentHashMap is **16** in order to **avoid generating Race Lock**
 #### Null Key
 - HashMap allows at most one Key as null, also allows value to be null while ConcurrentHashMap doesn't allow
@@ -66,5 +69,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NjEzNDgzOF19
+eyJoaXN0b3J5IjpbLTg0MjY0MjkxOF19
 -->
