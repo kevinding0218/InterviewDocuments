@@ -32,8 +32,9 @@
 - Collisions happen when 2 distinct keys generate the same `hashCode()` value.
 - There are many collision-resolution strategies – chaining, double-hashing, clustering. However, java has chosen chaining strategy for hashMap, so in case of collisions, items are chained together just like in a linkedList.
 ### How does HashMap RESIZE work
-- 
+- Create a new array where its capacity is double as existed one then re-calculate storage index of node in old array.
+- New position of node entry can only be either original index or orginal index + length of array (e.g: if length is 5 orginally and index is 3, after resizing, index would either still be 3 or be 3 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5OTc3MTU4OV19
+eyJoaXN0b3J5IjpbLTc5MDU3OTYwMl19
 -->
