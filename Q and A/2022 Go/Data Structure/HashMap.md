@@ -36,7 +36,7 @@
 	- The **initial capacity** of hashmap is **16**
 	- The **default load factor** of hashmap is **0.75**
 	- e.g: According to the formula as mentioned above: 16*0.75=12, It represents that 12th  key-value pair of hashmap will keep its size to 16. As soon as 13th element (key-value pair) will come into the Hashmap, it will increase its size from default  **16**  buckets to  **2*16  = 32**  buckets.
-### How does HashMap RESIZE work
+### How does HashMap RESIZE/TRANSFER work
 - Create a new array where its capacity is double as existed one then re-calculate storage index of node in old array.
 - New position of node entry can only be either original index or orginal index + length of array (e.g: if length is 5 orginally and index is 3, after resizing, index would either still be 3 or be 3 + 5 = 8)
 ### HashMap vs HashTable
@@ -59,11 +59,12 @@
 	- ConcurrentHashMap allows concurrent threads to read the value without locking at all.
 	- In JDK 1.7 uses ReentrantLock + Segment + HashEntry, it's like turn one HashMap into multiple segments, and **each segmenet may contain several Map.Entry, the scope of Lock is on segment to allow multiple threads to visit**
 	- In JDK 1.8 uses CAS + synchronized + Node + Red-Black Tree, **it decreases the scope of lock from segment which contains multiple bucket node into each single node**
+	- **Default max thread count** to update ConcurrentHashMap is **16** in order to **avoid generating Race Lock**
 #### Null Key
 - HashMap allows at most one Key as null, also allows value to be null while ConcurrentHashMap doesn't allow
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA1MTM1MTc0XX0=
+eyJoaXN0b3J5IjpbMTA3NjEzNDgzOF19
 -->
