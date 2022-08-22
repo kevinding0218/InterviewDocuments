@@ -15,8 +15,9 @@ HashMap internally is implemented by Array and LinkedList, when the LinkedList l
 ### How does HashMap work
 Since we know behind the scene HashMap is implemented with hashed Array, where each element of the Array node is Singe  Direction LinkedList, which represents the `Map.Entry` Interface
 #### PUT
-1. Call the `hashCode()` method to calculate Hashing value, then calculate array index based on hashing value and length of the array
-2. 
+1. Call the `hashCode()` method to calculate hashing value of Key in (K/V set, then calculate array index based on hashing value and length of the array
+2. Adjust length of the array (if element count of container is greater than capacity * loadfactor, would resize it to be 2*n)
+3. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODc4MTc1NDFdfQ==
+eyJoaXN0b3J5IjpbLTExMTAyNjc3OF19
 -->
