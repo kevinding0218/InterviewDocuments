@@ -19,7 +19,7 @@ Since we know behind the scene HashMap is implemented with hashed Array, where e
 2. Adjust length of the array (if element count of container is greater than capacity * loadfactor, would resize it to be 2*n)
 3. Insert K/V into HashMap
 	- If hash code of Key doesn't existed in current HashMap
-	- otherwise, the `equals()` method comes to rescue, Since bucket is one and we have two objects with the same hashcode. The bucket is the linked list effectively. So we traverse through linked list , comparing keys in each entries using keys.equals() until it return true. Then the corresponding entry object Value is returned .
+	- otherwise, the `equals()` method comes to rescue, since bucket is either LinkedList or Red Black Tree, we traverse through the bucket, comparing keys in each entries using keys.equals(),
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDE2Mzk4NTZdfQ==
+eyJoaXN0b3J5IjpbLTMyMjQ1ODc3Nl19
 -->
