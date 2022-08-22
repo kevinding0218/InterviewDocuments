@@ -19,7 +19,7 @@
 3. Insert K/V into HashMap
 	- If hash code of Key doesn't existed in current HashMap
 	- otherwise, the `equals()` method comes to rescue, since bucket is either LinkedList or Red-Black Tree, we **traverse through the bucket, comparing keys in each entries using keys.equals().**
-		- If we found there is a entry of in the bucket where `equals()` is true, replace that node with new Value as from K/V set
+		- If we found there is a entry of in the bucket where `equals()` is true, **replace that node with new Value** as from K/V set
 		- Otherwise, **insert at the end of the bucket** (tail insertion as in LinkedList or tree insertion as in Red-Black Tree)
 			- Before JDK 1.7 LinkedList was using Head Insertion, on or after JDK 1.8 using Tail Insertion
 			- When hash collision results in LinkedList length > 8, turn the LinkedList into Red-Black Tree
@@ -39,7 +39,15 @@
 ### How does HashMap RESIZE work
 - Create a new array where its capacity is double as existed one then re-calculate storage index of node in old array.
 - New position of node entry can only be either original index or orginal index + length of array (e.g: if length is 5 orginally and index is 3, after resizing, index would either still be 3 or be 3 + 5 = 8)
+### HashTable vs HashMap 
+- HashTable for multi thread, that it's safe to visit HashTable across multi thread
+- HashMap for single thread
+### HashMap vs LinkedHashMap vs TreeMap
+1.  **HashMap**  :-  `HashMap`  never preserves your Insertion Order. It Internally Use a hashing Concept by which it generate a  `HashCode`  to the Corresponding  `key`  and add it to the  `HashMap`.
+2.  **LinkedHashMap**  :-  `LinkedHashMap`  It preserves your Insertion Order. and  `keys`  will be found as same order you Insert into this  `LinkedHashMap`.
+3.  **TreeMap**  :- The  `TreeMap`  class implements the  `Map`  **interface**  by using a  **Tree**. A  `TreeMap`  provides an efficient means of storing  **key/value**  pairs in sorted order, and allows rapid retrieval.
+	- unlike a `HashMap`, a tree map guaran
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5OTk3ODEzNF19
+eyJoaXN0b3J5IjpbMTM0ODI3MzcwOF19
 -->
