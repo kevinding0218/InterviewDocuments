@@ -1,6 +1,6 @@
 ### How is HashMap implemented
 - HashMap internally is implemented by **Array** and **LinkedList**, where each element of the Array node is Singe  Direction LinkedList, which represents the `Map.Entry` Interface
-- When the LinkedList length is greater than 8, JDK replaced LinkedList with RedBlack Tree
+- When there is hash collision makes the node LinkedList length greater than **8**, JDK replaced LinkedList with **Red-Black Tree**
 #### What is Red-Black Tree
 1. A self-balancing Binary Search Tree 
 2. Every node has a color either red or black.
@@ -13,10 +13,8 @@
 	- The cost of these operations may become O(n) for a skewed Binary tree. 
 - If we make sure that the height of the tree remains O(log n) after every insertion and deletion, then we can guarantee an upper bound of O(log n) for all these Search, Insert and Delete operations. 
 	- The height of a Red-Black tree is always O(log n) where n is the number of nodes in the tree.
-### How does HashMap work
-Since we know behind the scene HashMap is implemented with hashed Array, 
-#### PUT
-1. Call the `hashCode()` method to calculate hash code of **Key** as in K/V set, then calculate the array index based on hashing value and length of the array
+### How does HashMap PUT work
+1. Call the `hashCode()` method to calculate hash code of **Key** as in K/V set, then calculate the array index to be inserted based on hashing value and length of the array
 2. Adjust length of the array (if element count of container is greater than capacity * loadfactor, would resize it to be 2*n)
 3. Insert K/V into HashMap
 	- If hash code of Key doesn't existed in current HashMap
@@ -25,8 +23,8 @@ Since we know behind the scene HashMap is implemented with hashed Array,
 		- Otherwise, insert at the end of the bucket (tail insertion as in LinkedList or tree insertion as in Red-Black Tree)
 			- Before JDK 1.7 LinkedList was using Head Insertion, on or after JDK 1.8 using Tail Insertion
 			- When hash collision results in LinkedList length > 8, turn the LinkedList into Red-Black Tree
-#### GET
-1. Call the `hashCode()` method to calculate hash code of Key
+### How does HashMap GET work
+1. Call the `hashCode()` method to calculate hash code of Key, then calculate the array index based on hashing value and length of the array
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDI0ODA5OTBdfQ==
+eyJoaXN0b3J5IjpbLTc5NTgyNTc4OV19
 -->
