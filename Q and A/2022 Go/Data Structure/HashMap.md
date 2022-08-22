@@ -47,8 +47,7 @@
 - HashMap allows at most one Key as null, also allows value to be null while HashTable doesn't allow
 #### Initial Capacity and Resize
 - The default capacity is 16 of a HashMap while only 11 of a HashTable
-- When resize happen, H
-- Hash
+- When resize happen, HashMap would increase to 2 times while HashTable increases as 2 times + 1
 ### HashMap vs LinkedHashMap vs TreeMap
 1.  **HashMap**  :-  `HashMap`  never preserves your Insertion Order. It Internally Use a hashing Concept by which it generate a  `HashCode`  to the Corresponding  `key`  and add it to the  `HashMap`.
 2.  **LinkedHashMap**  :-  `LinkedHashMap`  It preserves your Insertion Order. and  `keys`  will be found as same order you Insert into this  `LinkedHashMap`.
@@ -56,5 +55,5 @@
 	- unlike a `HashMap`, a tree map guaran
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzUyNDY5OV19
+eyJoaXN0b3J5IjpbNDQ4NzQ2Mzk0XX0=
 -->
