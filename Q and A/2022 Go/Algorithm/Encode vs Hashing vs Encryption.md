@@ -1,9 +1,9 @@
 
 |  | Encoding | Hashing  | Encryption |
 |--|--|--|--|
-| What | In the Encoding method, data is transformed from one form to another |
+| What | In Encoding, data is transformed from one form to another | In hashing, data is converted to the hash using some hashing function, which can be any number generated from string or text. | In Encryption, message is encoded by using encryption algorithm in such a way that only authorized personnel can access the message or information.  |
 | Usage | transform data into a form that is readable by most of the systems or that can be used by any external process. | | |
-| Reverse | No. It can’t be used for securing data, various publicly available algorithms are used for encoding. | | |
+| Reverse | Yes, can’t be used for securing data, various publicly available algorithms are used for encoding. | No, data once hashed is non-reversible. | |
 | Example | | | |
 
 ### Encoding :
@@ -19,5 +19,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTA3MjY3NDldfQ==
+eyJoaXN0b3J5IjpbMTk3NzYxNzEyOV19
 -->
