@@ -28,6 +28,12 @@
 1. Call the `hashCode()` method to calculate hash code of Key, then calculate the array index/bucket based on hashing value and length of the array
 2. Traverse the node of either LinkedList or Red-Black Tree, and use `equals()` method to find entry
 ** hashCode() is used for locating bucket of storage while equals() is used for locating actual node inside bucket**
+### Hash Collision
+- Collisions happen when 2 distinct keys generate the same `hashCode()` value.
+- There are many collision-resolution strategies – chaining, double-hashing, clustering. However, java has chosen chaining strategy for hashMap, so in case of collisions, items are chained together just like in a linkedList.
+### How does HashMap RESIZE work
+- 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyNDIyOTUzXX0=
+eyJoaXN0b3J5IjpbLTM5OTc3MTU4OV19
 -->
