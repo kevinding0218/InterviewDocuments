@@ -13,7 +13,9 @@ HashMap internally is implemented by Array and LinkedList, when the LinkedList l
 - If we make sure that the height of the tree remains O(log n) after every insertion and deletion, then we can guarantee an upper bound of O(log n) for all these Search, Insert and Delete operations. 
 	- The height of a Red-Black tree is always O(log n) where n is the number of nodes in the tree.
 ### How does HashMap work
-Since we know behind the scene HashMap is implemented with hashed Array Singe LinkedList, where each element of the Array node
+Since we know behind the scene HashMap is implemented with hashed Array, where each element of the Array node is Singe  Direction LinkedList, which represents the `Map.Entry` Interface
+#### PUT
+1. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NDAxMzUwMV19
+eyJoaXN0b3J5IjpbMjY2OTcxNTk4XX0=
 -->
