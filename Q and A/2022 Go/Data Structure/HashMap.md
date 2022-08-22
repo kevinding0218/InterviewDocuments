@@ -40,8 +40,11 @@
 - Create a new array where its capacity is double as existed one then re-calculate storage index of node in old array.
 - New position of node entry can only be either original index or orginal index + length of array (e.g: if length is 5 orginally and index is 3, after resizing, index would either still be 3 or be 3 + 5 = 8)
 ### HashTable vs HashMap 
-- HashTable for multi thread, that it's safe to visit HashTable across multi thread
-- HashMap for single thread
+#### Thread Safe
+- HashTable is thread safe while HashMap is not
+	- performance of HashTable is less than HashMap
+#### Null Key
+- HashMap allows at most one Key as null, also allows value to be null while HashTable doesn't allow
 ### HashMap vs LinkedHashMap vs TreeMap
 1.  **HashMap**  :-  `HashMap`  never preserves your Insertion Order. It Internally Use a hashing Concept by which it generate a  `HashCode`  to the Corresponding  `key`  and add it to the  `HashMap`.
 2.  **LinkedHashMap**  :-  `LinkedHashMap`  It preserves your Insertion Order. and  `keys`  will be found as same order you Insert into this  `LinkedHashMap`.
@@ -49,5 +52,5 @@
 	- unlike a `HashMap`, a tree map guaran
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0ODI3MzcwOF19
+eyJoaXN0b3J5IjpbNDExMTM1MjIzXX0=
 -->
