@@ -1,7 +1,10 @@
 
 |  | Encoding | Hashing  | Encryption |
 |--|--|--|--|
-| What |  |
+| What | In the Encoding method, data is transformed from one form to another |
+| Usage | transform data into a form that is readable by most of the systems or that can be used by any external process. | | |
+| Reverse | No. It can’t be used for securing data, various publicly available algorithms are used for encoding. | | |
+| Example | | | |
 
 ### Encoding :
 - In the Encoding method, data is transformed from one form to another. 
@@ -16,5 +19,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMTA3NzkwM119
+eyJoaXN0b3J5IjpbLTEwMTA3MjY3NDldfQ==
 -->
