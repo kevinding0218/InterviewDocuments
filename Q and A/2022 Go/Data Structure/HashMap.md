@@ -42,10 +42,12 @@
 ### HashMap vs HashTable
 #### Thread Safe
 - HashMap is not thread safe while HashTable is thread safe
-	- In order to make HashTable thread safe, it uses a lock for entire linkedlist in performance of HashTable is less than HashMap
+	- In order to make HashTable thread safe, it uses a lock for entire linkedlist in bucket node while it may create block when multiple threads trying to acess same buckcet, therefore the performance of HashTable is worse than HashMap
 #### Null Key
 - HashMap allows at most one Key as null, also allows value to be null while HashTable doesn't allow
 #### Initial Capacity and Resize
+- The default capacity is 16 of a HashMap while only 11 of a HashTable
+- When resize happen, H
 - Hash
 ### HashMap vs LinkedHashMap vs TreeMap
 1.  **HashMap**  :-  `HashMap`  never preserves your Insertion Order. It Internally Use a hashing Concept by which it generate a  `HashCode`  to the Corresponding  `key`  and add it to the  `HashMap`.
@@ -54,5 +56,5 @@
 	- unlike a `HashMap`, a tree map guaran
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4OTEwNjQ4OF19
+eyJoaXN0b3J5IjpbLTEyNzUyNDY5OV19
 -->
