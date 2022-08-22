@@ -8,11 +8,11 @@ HashMap internally is implemented by Array and LinkedList, when the LinkedList l
 5. Every path from a node (including root) to any of its descendants NULL nodes has the same number of black nodes.
 6. All leaf nodes are black nodes.
 #### Why Red-Black Tree
-- Most of the BST operations (e.g., search, max, min, insert, delete.. etc) take O(h) time where h is the height of the BST. 
+- Most of the BST operations (e.g., Search, Max, Min, Insert, Delete.. etc) take O(h) time where h is the height of the BST. 
 	- The cost of these operations may become O(n) for a skewed Binary tree. 
-- If we make sure that the height of the tree remains O(log n) after every insertion and deletion, then we can guarantee an upper bound of O(log n) for all these Search I operations. 
+- If we make sure that the height of the tree remains O(log n) after every insertion and deletion, then we can guarantee an upper bound of O(log n) for all these Search, Insert and Delete operations. 
 	- The height of a Red-Black tree is always O(log n) where n is the number of nodes in the tree.
-7. 
+### How does HashMap work
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU5MDQxNjQzXX0=
+eyJoaXN0b3J5IjpbLTQ0MjIwODY5N119
 -->
