@@ -32,12 +32,13 @@ single server.
 website/app goes down with it completely.
 ### Horizontal Scaling Server
 - Horizontal scaling, referred to as "scale out", allows you to scale by adding more servers into your pool of resources
-- Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling, e.g:
+- Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling like failover
 	- the web server is down
 	- if many requests need to access theweb server simultaneously and it reaches the web server’s load limit,
 - How to handle Horizontal Scalling Servers? Load Balancer
 ### Load Balancer
 - A load balancer evenly distributes incoming traffic among web servers that are defined in a load-balanced set
+- This is to resolve issue such as failover and redundancy
 - users connect to the public IP of the load balancer directly. 
 - With this setup, web servers are unreachable directly by clients anymore. 
 #### Private IP
@@ -53,6 +54,6 @@ website/app goes down with it completely.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUzOTI2NzA2LDc4NTkxODYzMCw1OTIwOT
-A3NjYsMTkzNjQ5MjY3LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMTc2MTEzMTQ3MSw3ODU5MTg2MzAsNTkyMD
+kwNzY2LDE5MzY0OTI2Nyw3MzA5OTgxMTZdfQ==
 -->
