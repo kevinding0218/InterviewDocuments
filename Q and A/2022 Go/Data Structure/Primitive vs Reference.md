@@ -59,12 +59,14 @@ website/app goes down with it completely.
 - **High availability**: By r**eplicating data across different locations**, your website remains in operation even if a database is offline as **you can access data stored in another database server**.
 #### What if a Slave Database goes down
 - If only one slave database is available and it goes offline, **read operations will be directed to the master database temporarily**. 
-	- In case multiple slave databases are available, read operations are redirected to other healthy slave databases.
+	- In case multiple slave databases are available, **read operations are redirected to other healthy slave databases**.
 - As soon as the issue is found, **a new slave database will replace the old one**. 
-
-
+#### What if a Master Database goes down
+- If the master database goes offline, a slave database will be promoted to be the new master. All the database operations will be temporarily executed on the new master database.
+- A new slave database will replace the old one for data replication immediately.
+	- In production systems, promoting a new master is more complicated as **the data in a slave database might not be up to date**. The missing data needs to be updated by **running data recovery scripts**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUyMzIzODQ4LDQ2MzkwODE1LDE3NjExMz
-E0NzEsNzg1OTE4NjMwLDU5MjA5MDc2NiwxOTM2NDkyNjcsNzMw
-OTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTkyODg4MzI0MSw0NjM5MDgxNSwxNzYxMT
+MxNDcxLDc4NTkxODYzMCw1OTIwOTA3NjYsMTkzNjQ5MjY3LDcz
+MDk5ODExNl19
 -->
