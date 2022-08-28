@@ -20,10 +20,7 @@
 **Step 6** - The intermediate server encrypts the session key using the public key from the actual server and then sends it there. The legitimate server decrypts the session key with the private key.  
 **Steps 7 and 8** - Now, the client and the server can communicate using the session key (symmetric encryption.) The encrypted data is transmitted in a secure bi-directional channel. The intermediate server can always decrypt the data.
 
-
-
-
-### Vertical scaling
+### Vertical Scaling Server
 -  Vertical scaling, referred to as "scale up", means the process of adding more power (CPU, RAM, etc) to your server/instance resource
 #### Pros
 - Simplicity
@@ -33,14 +30,25 @@
 single server.
 -  Vertical scaling does not have failover and redundancy. If one server goes down, the
 website/app goes down with it completely.
-### Horizontal scaling
+### Horizontal Scaling Server
 - Horizontal scaling, referred to as "scale out", allows you to scale by adding more servers into your pool of resources
 - Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling, e.g:
 	- the web server is down
 	- if many requests need to access theweb server simultaneously and it reaches the web server’s load limit,
+- How to handle Horizontal Scalling Servers? Load Balancer
+### Load Balancer
+- 
+
+
+### Database
+#### When to use use Non-relational databases
+- Your application requires super-low latency
+- Your data are unstructured, or you do not have any relational data
+- You only need to serialize and deserialize data (JSON, XML, YAML, etc)
+- You need to store a massive amount of data
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNjIzMjA5Miw3ODU5MTg2MzAsNTkyMD
+eyJoaXN0b3J5IjpbMTY5MDU3NzQ2OSw3ODU5MTg2MzAsNTkyMD
 kwNzY2LDE5MzY0OTI2Nyw3MzA5OTgxMTZdfQ==
 -->
