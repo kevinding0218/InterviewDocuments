@@ -39,9 +39,9 @@ single server.
 website/app goes down with it completely.
 ### Horizontal scaling
 - Horizontal scaling, referred to as "scale out", allows you to scale by adding more servers into your pool of resources
-- Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling
+- Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling,
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg1OTE4NjMwLDU5MjA5MDc2NiwxOTM2ND
-kyNjcsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTEwNDE1NTEyNjYsNzg1OTE4NjMwLDU5Mj
+A5MDc2NiwxOTM2NDkyNjcsNzMwOTk4MTE2XX0=
 -->
