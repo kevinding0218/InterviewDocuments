@@ -27,12 +27,19 @@
 - You only need to serialize and deserialize data (JSON, XML, YAML, etc)
 - You need to store a massive amount of data
 
-### Vertical vs Horizontal scaling
+### Vertical scaling
 -  Vertical scaling, referred to as "scale up", means the process of adding more power (CPU, RAM, etc) to your server/instance resource
 #### Pros
+- Simplicity
+- When traffic is low, vertical scaling is a great option
 #### Cons
+- Vertical scaling has a hard limit. It is impossible to add unlimited CPU and memory to a
+single server.
+-  Vertical scaling does not have failover and redundancy. If one server goes down, the
+website/app goes down with it completely.
+### Horizontal scaling
 - Horizontal scaling, referred to as "scale out", allows you to scale by adding more servers into your pool of resources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4ODczMTk2Myw1OTIwOTA3NjYsMTkzNj
+eyJoaXN0b3J5IjpbMTg5ODMwMDc3OCw1OTIwOTA3NjYsMTkzNj
 Q5MjY3LDczMDk5ODExNl19
 -->
