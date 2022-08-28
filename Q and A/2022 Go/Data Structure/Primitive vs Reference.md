@@ -10,10 +10,16 @@
 #### TSL
 - TLS uses a technology called  **public key cryptography**, there are two  keys, a public key and a private key, and the public key is shared with client devices via the server's SSL certificate. When a client opens a connection with a server, the two devices use the public and private key to agree on new keys, called  session keys, to encrypt further communications between them
 - All HTTP requests and responses are then encrypted with these session keys, so that anyone who intercepts communications can only see a random string of characters, not the plaintext.
-#### How Fiddler capture network packets sent via HTTPS?
+#### How Fiddler capture network packets sent via HTTPS ([Link](https://blog.bytebytego.com/p/ep21-is-https-safe-also?utm_source=substack&utm_medium=email))
 - Prerequisite: root certificate of the intermediate server is present in the trust-store
-- 
+**Step 1** - The client requests to establish a TCP connection with the server. The request is maliciously routed to an intermediate server, instead of the real backend server. Then, a TCP connection is established between the client and the intermediate server.  
+**Step 2** - The intermediate server establishes a TCP connection with the actual server.  
+**Step 3** - The intermediate server sends the SSL certificate to the client. The certificate contains the public key, hostname, expiry dates, etc. The client validates the certificate.  
+**Step 4** - The legitimate server sends its certificate to the intermediate server. The intermediate server validates the certificate.  
+**Step 5** - The client generates a session key and encrypts it using the public key from the intermediate server. The intermediate server receives the encrypted session key and decrypts it with the private key.  
+**Step 6** - The intermediate server encrypts the session key using the public key from the actual server and then sends it there. The legitimate server decrypts the session key with the private key.  
+**Steps 7 and 8** - Now, the client and the server can communicate using the session key (symmetric encryption.) The encrypted data is transmitted in a secure bi-directional channel. The intermediate server can always decrypt the data.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxODczODY2LDU5MjA5MDc2NiwxOTM2ND
-kyNjcsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTgzNTE3ODU2Miw1OTIwOTA3NjYsMTkzNj
+Q5MjY3LDczMDk5ODExNl19
 -->
