@@ -6,8 +6,11 @@
 4. The web server returns HTML pages or JSON response for rendering
 #### HTTPS Request Flow
 - The S in HTTPS stands for "secure". HTTPS uses TLS(or SSL) to encrypt HTTP requests and responses
+##### TSL
+TLS uses a technology called  [public key cryptography](https://www.cloudflare.com/learning/ssl/how-does-public-key-encryption-work/): there are two  [keys](https://www.cloudflare.com/learning/ssl/what-is-a-cryptographic-key/), a public key and a private key, and the public key is shared with client devices via the server's SSL certificate. When a client opens a connection with a server, the two devices use the public and private key to agree on new keys, called  [session keys](https://www.cloudflare.com/learning/ssl/what-is-a-session-key/), to encrypt further communications between them.
 
+All HTTP requests and responses are then encrypted with these session keys, so that anyone who intercepts communications can only see a random string of characters, not the plaintext.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNjA4NDMwOCw1OTIwOTA3NjYsMTkzNj
+eyJoaXN0b3J5IjpbMTIzMTQ5ODIzMyw1OTIwOTA3NjYsMTkzNj
 Q5MjY3LDczMDk5ODExNl19
 -->
