@@ -28,8 +28,11 @@
 - You need to store a massive amount of data
 
 ### Vertical vs Horizontal scaling
-- Vertical scaling, referred to as "scale up", means the process of adding more power (CPU, RAM, 
+-  Vertical scaling, referred to as "scale up", means the process of adding more power (CPU, RAM, etc) to your server/instance resource
+#### Pros
+#### Cons
+- Horizontal scaling, referred to as "scale out", allows you to scale by adding more servers into your pool of resources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5MzA1NDMzNiw1OTIwOTA3NjYsMTkzNj
+eyJoaXN0b3J5IjpbMTM4ODczMTk2Myw1OTIwOTA3NjYsMTkzNj
 Q5MjY3LDczMDk5ODExNl19
 -->
