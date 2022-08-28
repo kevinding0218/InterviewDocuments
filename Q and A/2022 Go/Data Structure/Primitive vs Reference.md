@@ -44,18 +44,21 @@ website/app goes down with it completely.
 - For better security, private IPs are used for communication between servers. **A private IP is an IP address reachable only between servers in the same network; however, it is unreachable over the internet**. The load balancer communicates with web servers through private IPs.
 
 
-### Database
-#### When to use use Non-relational databases
+### When to use use Non-relational databases
 - Your application requires super-low latency
 - Your data are unstructured, or you do not have any relational data
 - You only need to serialize and deserialize data (JSON, XML, YAML, etc)
 - You need to store a massive amount of data
-#### Replication
-
+### Replication/Master-Slave
+- A master database generally only supports write operations. 
+- A slave database gets copies of the data from the master database and only supports read operations
+- Most applications require a much higher ratio of reads to writes; thus, the number of slave databases in a system is usually larger than the number of master databases
+#### Pros
+- 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM2NDA4OTg5LDE3NjExMzE0NzEsNzg1OT
+eyJoaXN0b3J5IjpbMzM0NjkxNTE0LDE3NjExMzE0NzEsNzg1OT
 E4NjMwLDU5MjA5MDc2NiwxOTM2NDkyNjcsNzMwOTk4MTE2XX0=
 
 -->
