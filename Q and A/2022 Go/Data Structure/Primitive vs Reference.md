@@ -1,4 +1,4 @@
-### Server
+### HTTP
 #### HTTP Request Flow
 1. Users/Client access websites through domain nammes. such as api.ebay.com. Usually the Domain Name System (DNS) is a paid service provided by 3rd parties and not hosted by our server
 2. Internet Protocal (IP) address is returned to the browser or mobile app.  For example, IP address 15.125.23.234 is returned from DNS
@@ -19,7 +19,11 @@
 **Step 5** - The client generates a session key and encrypts it using the public key from the intermediate server. The intermediate server receives the encrypted session key and decrypts it with the private key.  
 **Step 6** - The intermediate server encrypts the session key using the public key from the actual server and then sends it there. The legitimate server decrypts the session key with the private key.  
 **Steps 7 and 8** - Now, the client and the server can communicate using the session key (symmetric encryption.) The encrypted data is transmitted in a secure bi-directional channel. The intermediate server can always decrypt the data.
+
+### Database
+#### When to use use Non-relational databases
+- Your application requires super-low latency
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNTE3ODU2Miw1OTIwOTA3NjYsMTkzNj
-Q5MjY3LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbNzc2NzQ0NDA5LDU5MjA5MDc2NiwxOTM2ND
+kyNjcsNzMwOTk4MTE2XX0=
 -->
