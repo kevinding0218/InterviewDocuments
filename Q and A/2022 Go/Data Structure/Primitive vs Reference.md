@@ -37,12 +37,11 @@ website/app goes down with it completely.
 	- if many requests need to access theweb server simultaneously and it reaches the web server’s load limit,
 - How to handle Horizontal Scalling Servers? Load Balancer
 ### Load Balancer
-- A load balancer evenly distributes incoming traffic among web servers that are defined in a load-balanced set
-- This is to resolve issue such as failover and redundancy
-- users connect to the public IP of the load balancer directly. 
-- With this setup, web servers are unreachable directly by clients anymore. 
+- A load balancer **evenly distributes incoming traffic among web servers** that are defined in a load-balanced set
+- This is to **resolve issue such as failover and redundancy**
+- Clients/Users **connect to the public IP of the load balancer directly.** With this setup, web servers are unreachable directly by clients anymore. 
 #### Private IP
-- For better security, private IPs are used for communication between servers. A private IP is an IP address reachable only between servers in the same network; however, it is unreachable over the internet. The load balancer communicates with web servers through private IPs.
+- For better security, private IPs are used for communication between servers. **A private IP is an IP address reachable only between servers in the same network; however, it is unreachable over the internet**. The load balancer communicates with web servers through private IPs.
 
 
 ### Database
@@ -51,9 +50,12 @@ website/app goes down with it completely.
 - Your data are unstructured, or you do not have any relational data
 - You only need to serialize and deserialize data (JSON, XML, YAML, etc)
 - You need to store a massive amount of data
+#### Replication
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MTEzMTQ3MSw3ODU5MTg2MzAsNTkyMD
-kwNzY2LDE5MzY0OTI2Nyw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbOTM2NDA4OTg5LDE3NjExMzE0NzEsNzg1OT
+E4NjMwLDU5MjA5MDc2NiwxOTM2NDkyNjcsNzMwOTk4MTE2XX0=
+
 -->
