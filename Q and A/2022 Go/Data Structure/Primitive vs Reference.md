@@ -1,5 +1,6 @@
-### HTTP vs HTTPS
+### Ser
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNjQ5MjY3LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTE0OTMzNjkyOTMsMTkzNjQ5MjY3LDczMD
+k5ODExNl19
 -->
