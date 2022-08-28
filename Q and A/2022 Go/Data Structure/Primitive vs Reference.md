@@ -37,7 +37,11 @@ website/app goes down with it completely.
 	- if many requests need to access theweb server simultaneously and it reaches the web server’s load limit,
 - How to handle Horizontal Scalling Servers? Load Balancer
 ### Load Balancer
-- 
+- A load balancer evenly distributes incoming traffic among web servers that are defined in a load-balanced set
+- users connect to the public IP of the load balancer directly. 
+- With this setup, web servers are unreachable directly by clients anymore. 
+#### Private IP
+- For better security, private IPs are used for communication between servers. A private IP is an IP address reachable only between servers in the same network; however, it is unreachable over the internet. The load balancer communicates with web servers through private IPs.
 
 
 ### Database
@@ -49,6 +53,6 @@ website/app goes down with it completely.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MDU3NzQ2OSw3ODU5MTg2MzAsNTkyMD
-kwNzY2LDE5MzY0OTI2Nyw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbMjUzOTI2NzA2LDc4NTkxODYzMCw1OTIwOT
+A3NjYsMTkzNjQ5MjY3LDczMDk5ODExNl19
 -->
