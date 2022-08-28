@@ -58,12 +58,13 @@ website/app goes down with it completely.
 - **Reliability**: If one of your database servers is **destroyed by a natural disaster,** such as a typhoon or an earthquake, data is still preserved. You do not need to worry about data loss **because data is replicated across multiple locations.**
 - **High availability**: By r**eplicating data across different locations**, your website remains in operation even if a database is offline as **you can access data stored in another database server**.
 #### What if a Slave Database goes down
-- If only one slave database is available and it goes offline, **read operations will be directed to the master database temporarily**.
-- As soon as the issue is found, **a new slave database will replace the old one**. In case multiple slave databases are available, read operations are redirected to other healthy slave databases.
+- If only one slave database is available and it goes offline, **read operations will be directed to the master database temporarily**. 
+	- In case multiple slave databases are available, read operations are redirected to other healthy slave databases.
+- As soon as the issue is found, **a new slave database will replace the old one**. 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODk3OTMzNTMsNDYzOTA4MTUsMTc2MT
-EzMTQ3MSw3ODU5MTg2MzAsNTkyMDkwNzY2LDE5MzY0OTI2Nyw3
-MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbOTUyMzIzODQ4LDQ2MzkwODE1LDE3NjExMz
+E0NzEsNzg1OTE4NjMwLDU5MjA5MDc2NiwxOTM2NDkyNjcsNzMw
+OTk4MTE2XX0=
 -->
