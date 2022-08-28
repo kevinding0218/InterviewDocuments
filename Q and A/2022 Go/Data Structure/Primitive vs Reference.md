@@ -23,7 +23,13 @@
 ### Database
 #### When to use use Non-relational databases
 - Your application requires super-low latency
+- Your data are unstructured, or you do not have any relational data
+- You only need to serialize and deserialize data (JSON, XML, YAML, etc)
+- You need to store a massive amount of data
+
+### Vertical vs Horizontal scaling
+- Vertical scaling, referred to as "scale up", means the process of adding more power (CPU, RAM, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc2NzQ0NDA5LDU5MjA5MDc2NiwxOTM2ND
-kyNjcsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTk5MzA1NDMzNiw1OTIwOTA3NjYsMTkzNj
+Q5MjY3LDczMDk5ODExNl19
 -->
