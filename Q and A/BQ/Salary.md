@@ -7,6 +7,7 @@
 - At the moment, to give you any kind of estimate would be uneducated on my part. 
 - I am sure XXX will be **offering a competitve salary within the industry standards,** 
 - "At this point, I don't feel equipped to throw out a number because I'd like to find out more about the opportunity first - right now, I simply don't have the data to be able to say something concrete. If you end up making me an offer, I'd be more than happy to iterate on it if needed and figure out something that works. I also promise not to accept other offers until I have a chance to discuss them with you"
+- "I would very much appreciate having a bit more time. I'm very excited about Company X. At the same time, choosing where I work is extremely important to me. Of course, I will not drag things out, and I will continue to keep you in the loop, but I hope you can understand my desire to make as informed of a decision as possible. How about I make a decision by .
 #### How does the salary range sound to you? Do you like this number?
 - That's a really good start
 #### When got the job offer
@@ -93,8 +94,8 @@ Kind regards,
 (Your Name)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjYyNjMwNjAsMjIyODUzMjYyLDEyOT
-gwNjA2MiwxNTA4NTMzNTg3LDIyMTAyOTg2NiwxMTcxMzAwNDEs
-MjE5MzQ5NTAsNjE5NTUxMjcwLC0xNDk3NzE3MzY3LC0yMTIwNj
-Y2NjEwLC00MDM3MzQ3MDldfQ==
+eyJoaXN0b3J5IjpbNDY1ODE3Nzk2LDIyMjg1MzI2MiwxMjk4MD
+YwNjIsMTUwODUzMzU4NywyMjEwMjk4NjYsMTE3MTMwMDQxLDIx
+OTM0OTUwLDYxOTU1MTI3MCwtMTQ5NzcxNzM2NywtMjEyMDY2Nj
+YxMCwtNDAzNzM0NzA5XX0=
 -->
