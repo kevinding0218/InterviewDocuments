@@ -6,6 +6,7 @@
 - Compensation is important to me, **I really want to look at the entire value of working at your company**, what I get to do, who I get to do with, the training opportunities, the career advancement opportunities, the benefit, vacation and all of the things that's going along with the company. 
 - At the moment, to give you any kind of estimate would be uneducated on my part. 
 - I am sure XXX will be **offering a competitve salary within the industry standards,** 
+- "At this point, I don't feel equipped to throw out a number because I'd like to find out more about the opportunity first - right now, I simply don't have the data to be able to say something concrete. If you end up making me an offer, I'd be more than happy to iterate on it if needed and figure out something that works. I also promise not to accept other offers until I have a chance to discuss them with you"
 #### How does the salary range sound to you? Do you like this number?
 - That's a really good start
 #### When got the job offer
@@ -92,8 +93,8 @@ Kind regards,
 (Your Name)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIyODUzMjYyLDEyOTgwNjA2MiwxNTA4NT
-MzNTg3LDIyMTAyOTg2NiwxMTcxMzAwNDEsMjE5MzQ5NTAsNjE5
-NTUxMjcwLC0xNDk3NzE3MzY3LC0yMTIwNjY2NjEwLC00MDM3Mz
-Q3MDldfQ==
+eyJoaXN0b3J5IjpbLTE2NjYyNjMwNjAsMjIyODUzMjYyLDEyOT
+gwNjA2MiwxNTA4NTMzNTg3LDIyMTAyOTg2NiwxMTcxMzAwNDEs
+MjE5MzQ5NTAsNjE5NTUxMjcwLC0xNDk3NzE3MzY3LC0yMTIwNj
+Y2NjEwLC00MDM3MzQ3MDldfQ==
 -->
