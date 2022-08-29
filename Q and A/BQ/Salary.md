@@ -7,7 +7,7 @@
 - At the moment, to give you any kind of estimate would be uneducated on my part. 
 - I am sure XXX will be **offering a competitve salary within the industry standards,** 
 - "At this point, I don't feel equipped to throw out a number because I'd like to find out more about the opportunity first - right now, I simply don't have the data to be able to say something concrete. If you end up making me an offer, I'd be more than happy to iterate on it if needed and figure out something that works. I also promise not to accept other offers until I have a chance to discuss them with you"
-- "I would very much appreciate having a bit more time. I'm very excited about Company X. At the same time, choosing where I work is extremely important to me. Of course, I will not drag things out, and I will continue to keep you in the loop, but I hope you can understand my desire to make as informed of a decision as possible. How about I make a decision by .
+- "I would very much appreciate having a bit more time. I'm very excited about Company X. At the same time, choosing where I work is extremely important to me. Of course, I will not drag things out, and I will continue to keep you in the loop, but I hope you can understand my desire to make as informed of a decision as possible. How about I make a decision by ...?"
 #### How does the salary range sound to you? Do you like this number?
 - That's a really good start
 #### When got the job offer
@@ -26,6 +26,7 @@
 - I've seen that the range in the market is X to Y salary, could we make up the difference
 - Upon reflection of thinking through my next career step, I realized my desired salary is X, I appreciated your understanding. 
 - I've been dreaming about working for you guys since I started interviewing here, so I just want to ask one more time, is there any possible way that we can make up a bit of the gap?
+- Thank you so much for this opportunity. I'm very grateful and excited. My plan is to sit down with my family and consider my options and get back to you with an update as soon a
 
 ### Example
 _**Recruiter:** “May I ask how much you make at your current company? We're trying to gauge if you're in the right range.”_
@@ -94,8 +95,8 @@ Kind regards,
 (Your Name)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY1ODE3Nzk2LDIyMjg1MzI2MiwxMjk4MD
-YwNjIsMTUwODUzMzU4NywyMjEwMjk4NjYsMTE3MTMwMDQxLDIx
-OTM0OTUwLDYxOTU1MTI3MCwtMTQ5NzcxNzM2NywtMjEyMDY2Nj
-YxMCwtNDAzNzM0NzA5XX0=
+eyJoaXN0b3J5IjpbMTM3NDA0NDk1MCwyMjI4NTMyNjIsMTI5OD
+A2MDYyLDE1MDg1MzM1ODcsMjIxMDI5ODY2LDExNzEzMDA0MSwy
+MTkzNDk1MCw2MTk1NTEyNzAsLTE0OTc3MTczNjcsLTIxMjA2Nj
+Y2MTAsLTQwMzczNDcwOV19
 -->
