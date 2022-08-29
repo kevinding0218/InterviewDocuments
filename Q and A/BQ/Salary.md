@@ -26,7 +26,9 @@
 - I've seen that the range in the market is X to Y salary, could we make up the difference
 - Upon reflection of thinking through my next career step, I realized my desired salary is X, I appreciated your understanding. 
 - I've been dreaming about working for you guys since I started interviewing here, so I just want to ask one more time, is there any possible way that we can make up a bit of the gap?
-- Thank you so much for this opportunity. I'm very grateful and excited. My plan is to sit down with my family and consider my options and get back to you with an update as soon a
+- Thank you so much for this opportunity. I'm very grateful and excited. My plan is to sit down with my family and consider my options and get back to you with an update as soon as I can
+- "I have the following offers, and I'm still interviewing at Company X and Company Y, but I'm really excited about this opportunity and will drop my other stuff and sign today if...(Equity, Salary, Signing/relocation bonus"
+- 
 
 ### Example
 _**Recruiter:** “May I ask how much you make at your current company? We're trying to gauge if you're in the right range.”_
@@ -95,7 +97,7 @@ Kind regards,
 (Your Name)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NDA0NDk1MCwyMjI4NTMyNjIsMTI5OD
+eyJoaXN0b3J5IjpbMjAyOTU1ODQ5NSwyMjI4NTMyNjIsMTI5OD
 A2MDYyLDE1MDg1MzM1ODcsMjIxMDI5ODY2LDExNzEzMDA0MSwy
 MTkzNDk1MCw2MTk1NTEyNzAsLTE0OTc3MTczNjcsLTIxMjA2Nj
 Y2MTAsLTQwMzczNDcwOV19
