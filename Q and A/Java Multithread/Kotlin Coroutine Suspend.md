@@ -85,8 +85,12 @@ Think about when we write code in Main Thread, we need to be extremely careful, 
 For the caller, things are very simple, it will only receive a reminder - you need to put me in the coroutine, and don't care about the rest
 In this way, suspend forms a mechanism as a reminder, a mechanism that allows all time-consuming tasks to be executed in the background automatically. When these tasks are called reasonably, the main thread will not be stuck, 
 Actually, compiler would provide a warning of "Redundant suspend modifer" if the method we defined as suspend does not contain any suspend action, Then our keyword has only one effect, that is, restricting this function to be called only in the coroutine, which is unnecessary
+How to customize suspend function
+- when do we need to customize
+The answer could be simple, whenver your method is time-consuming, make it suspend
+- how to code customization
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk4ODE3MjI5LC0xOTc3MTkzMDAwLC0xOD
-Q0MDg2MjQ1LC0xMTU5MjUxMTg2LDIyNzkxNjkyNywtNTA2NDgy
-OTA3LDE3NTAzNDk1MTJdfQ==
+eyJoaXN0b3J5IjpbLTk1ODA2MTMzOSwtMTk3NzE5MzAwMCwtMT
+g0NDA4NjI0NSwtMTE1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4
+MjkwNywxNzUwMzQ5NTEyXX0=
 -->
