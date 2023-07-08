@@ -67,10 +67,17 @@ launch(Dispatchers.Main) {
 output:
 System.out: Thread: main
 ```
-We found out that our suspend function still executes inside Main Thread, it's not been switched to a different Thread. Why? Because the function itself did not know which Thread that it should switch to, bec
-
+We found out that our suspend function still executes inside Main Thread, it's not been switched to a different Thread. Why? Because the function itself did not know which Thread that it should switch to, because we didn't tell Coroutine which Thread we need our function to execute with.
+Compared to our previous example, we have "withContext" which itself is also a suspend function, 
+```
+suspend fun suspendingGetImage(imageId: String) {
+  withContext(Dispatchers.IO) {
+    getImage(imageId)
+  }
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjUyMzQ0MDUsLTE4NDQwODYyNDUsLT
+eyJoaXN0b3J5IjpbLTE4MDU1NDE1NDUsLTE4NDQwODYyNDUsLT
 ExNTkyNTExODYsMjI3OTE2OTI3LC01MDY0ODI5MDcsMTc1MDM0
 OTUxMl19
 -->
