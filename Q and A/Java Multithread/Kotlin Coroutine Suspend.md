@@ -26,7 +26,8 @@ If current thread is a foreground thread (e.g. using Dispatchers.Main) like in A
 So what happened to the rest of code after suspend function as part of coroutine, they have not been executed right? Let's take a look at what happened to Coroutine once we reached to suspend function and it's been detached from current Thread
 The rest of code will continue executing in specified Thread, 
 Who determines its execution Thread? The suspend function
-in below example, it is the IO Thread which specified inside our suspend function
+in below example, the IO Thread which specified inside our suspend function in "withContext". 
+Wait a minute, what did we learn about "withContext" in last blog? Yes "withContext()" would automatically help us switch to original Thread once 
 ```
 suspend fun suspendingGetImage(imageId: String) {
   withContext(Dispatchers.IO) {
@@ -38,6 +39,6 @@ suspend fun suspendingGetImage(imageId: String) {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MzU2NzI1MSwtMTE1OTI1MTE4NiwyMj
+eyJoaXN0b3J5IjpbLTg3Mjk1OTg2NiwtMTE1OTI1MTE4NiwyMj
 c5MTY5MjcsLTUwNjQ4MjkwNywxNzUwMzQ5NTEyXX0=
 -->
