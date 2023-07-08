@@ -79,9 +79,11 @@ suspend fun suspendingGetImage(imageId: String) {
   }
 }
 ```
-Now we mig
+Now we might have another question, if the "suspend" keyword won't do actual suspend work, why we need it and what was it used for? Why Kotlin provide this keyword for us?
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MzU2OTE3MiwtMTg0NDA4NjI0NSwtMT
+eyJoaXN0b3J5IjpbLTIyNDUxMDg3MywtMTg0NDA4NjI0NSwtMT
 E1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4MjkwNywxNzUwMzQ5
 NTEyXX0=
 -->
