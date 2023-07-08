@@ -5,14 +5,17 @@ Given below example, which part of our code has been suspended with?
 launch(Dispatchers.Main) {
   ...
   val image = suspendingGetImage(imageId)
-  avatarImg.setImage
+  avatarImg.setImageBitmap(image)
 }
 ```
 [] Thread
 [] Function
 [x] Coroutine
+Do we remember what "Coroutine" refers here? 
+(Expand) Yes, the "Coroutine" refers to all lines of code inside our "launch()" block
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNDYwMTI2OV19
+eyJoaXN0b3J5IjpbMTc1MDM0OTUxMl19
 -->
