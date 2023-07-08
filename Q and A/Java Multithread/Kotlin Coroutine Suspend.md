@@ -13,9 +13,9 @@ launch(Dispatchers.Main) {
 [x] Coroutine
 Do we remember what "Coroutine" refers here? 
 (Expand) Yes, the "Coroutine" refers to all lines of code inside our "launch()" block
-
+(Expand) Except "launch", there is another function called "async" that also is used for creating a co
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MDM0OTUxMl19
+eyJoaXN0b3J5IjpbMjMzNDUyOTUsMTc1MDM0OTUxMl19
 -->
