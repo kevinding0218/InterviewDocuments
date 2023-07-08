@@ -36,6 +36,7 @@ suspend fun suspendingGetImage(imageId: String) {
 }
 ```
 Wait a minute, what did we learn about "withContext" in last blog? Yes "withContext()" would automatically help us switch to original Thread once the suspend function has completed, which means line 6 will be executed back inside our Main Thread. 
+Just imagine this is what happened in behind, after suspend function has been completed, "Coroutine" will help us post a new job to let code after suspend function execute back in Main Th
 ```
 1 launch(Dispatchers.Main) {
 2    ...
@@ -47,6 +48,6 @@ Wait a minute, what did we learn about "withContext" in last blog? Yes "withCont
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NDUzNDYzLC0xMTU5MjUxMTg2LDIyNz
-kxNjkyNywtNTA2NDgyOTA3LDE3NTAzNDk1MTJdfQ==
+eyJoaXN0b3J5IjpbMTk0NjEwMDkyNiwtMTE1OTI1MTE4NiwyMj
+c5MTY5MjcsLTUwNjQ4MjkwNywxNzUwMzQ5NTEyXX0=
 -->
