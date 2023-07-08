@@ -50,9 +50,12 @@ Well, we can also customize our own Dispatcher to make Coroutine not swtiching b
 Now we can summarize what suspend means
 Switch off thread for temporarily while switch back after 
 When the code reaches at suspend function, that function will be suspended, the so-caled suspended in fact is just switching that function into a different thread, the specialy here is when such function completes, Coroutine will automatically switch code back to original Thread
+btw, the action of switch back to original Thread is called "resume" in Coroutine (https://stackoverflow.com/questions/47871868/what-does-the-suspend-function-mean-in-a-kotlin-coroutine)
+So back to the error why suspend functio should ....
+First, a function 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NjkxMTgxMywtMTg0NDA4NjI0NSwtMT
-E1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4MjkwNywxNzUwMzQ5
-NTEyXX0=
+eyJoaXN0b3J5IjpbMzU2Mzk0MzYsLTE4NDQwODYyNDUsLTExNT
+kyNTExODYsMjI3OTE2OTI3LC01MDY0ODI5MDcsMTc1MDM0OTUx
+Ml19
 -->
