@@ -20,11 +20,12 @@ When the line of code executes at any suspend function, current coroutine will b
 
 What happened to Thread that coroutine sits in
 When the program execute at line 5 which is a suspend function, code from line 5 and continue to the end of launch block would be considered as "completed", what would Thread do here?
-Just like any thread in Java executor, it's either recycled or switched to another
-If current thread is a backgroud thread (e.g using Dispatchers.IO), next it may not have anything to do or 
+Just like any thread lifetcycle in Java executor service, it's either recycled or re-used
+If current thread is a backgroud thread (e.g using Dispatchers.IO), next it may not have anything to do or start to execute any background task.
+If current thread is a foreground thread (e.g. using Dispatchers.Main) like in Android, 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMzIxNDA2NiwyMjc5MTY5MjcsLTUwNj
-Q4MjkwNywxNzUwMzQ5NTEyXX0=
+eyJoaXN0b3J5IjpbLTE1MTYxODU1MDcsMjI3OTE2OTI3LC01MD
+Y0ODI5MDcsMTc1MDM0OTUxMl19
 -->
