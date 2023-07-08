@@ -15,12 +15,12 @@ Do we remember what "Coroutine" refers here?
 (Expand) Yes, the "Coroutine" refers to all lines of code inside our "launch()" block
 (Expand) Except "launch", there is another function called "async" that also is used for creating a coroutine, async is.... for now let's focus on "launch()"
 
-When the line of code executes at any suspend function, current coroutine will be suspended from current Thread, in another way, our coroutine is detached from the thread that was executing it. Note this does not indicate our coroutine paused 
+When the line of code executes at any suspend function, current coroutine will be suspended from current Thread, in another way, our coroutine is detached from the thread that was executing it. Note though the word "suspension" might mean some process paused in the middle,  our coroutine has paused
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzQ1MTEwMzIsLTUwNjQ4MjkwNywxNz
-UwMzQ5NTEyXX0=
+eyJoaXN0b3J5IjpbMTQ0NTYyNzM4NiwtNTA2NDgyOTA3LDE3NT
+AzNDk1MTJdfQ==
 -->
