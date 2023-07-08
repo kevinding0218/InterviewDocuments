@@ -91,9 +91,11 @@ The answer could be simple, whenver your method is time-consuming, make it suspe
 - how to write customization
 add suspend to function, wrap with withContext inside
 Why withContext() here?
-this is the most common way to pick up, as it's 
+this is the most common way to pick up, as it's the easiet and most starightforward way
+there are also other suspend function as "delay", what it does is to wait for a period of time then execute the code after, 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzE5OTU4MzEsLTE5NzcxOTMwMDAsLT
-E4NDQwODYyNDUsLTExNTkyNTExODYsMjI3OTE2OTI3LC01MDY0
-ODI5MDcsMTc1MDM0OTUxMl19
+eyJoaXN0b3J5IjpbLTgwODY5Njc4MiwtMTk3NzE5MzAwMCwtMT
+g0NDA4NjI0NSwtMTE1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4
+MjkwNywxNzUwMzQ5NTEyXX0=
 -->
