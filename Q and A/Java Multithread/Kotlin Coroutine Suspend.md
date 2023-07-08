@@ -94,9 +94,10 @@ Why withContext() here?
 this is the most common way to pick up, as it's the easiet and most starightforward way
 there are also other suspend function as "delay", what it does is to wait for a period of time then execute the code after, 
 What is suspend
-Similar to Coroutine, it works with thread switch, but it can be automatically switch back to original thread
+In fact, it is the same as the coroutine, it is thread Switch , but it is a thread Switch that can be automatically switched back
+Next we will continue to talk about what is Async in coroutine and some intersting topic comparing Coroutine vs Thread
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MDIyNDIxNCwtMTk3NzE5MzAwMCwtMT
+eyJoaXN0b3J5IjpbLTQ0OTkwMzgzNiwtMTk3NzE5MzAwMCwtMT
 g0NDA4NjI0NSwtMTE1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4
 MjkwNywxNzUwMzQ5NTEyXX0=
 -->
