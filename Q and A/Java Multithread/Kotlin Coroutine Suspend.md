@@ -93,9 +93,10 @@ add suspend to function, wrap with withContext inside
 Why withContext() here?
 this is the most common way to pick up, as it's the easiet and most starightforward way
 there are also other suspend function as "delay", what it does is to wait for a period of time then execute the code after, 
-
+What is suspend
+Similar to Coroutine, it works with thread switch, but it can be automatically switch back to original thread
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwODY5Njc4MiwtMTk3NzE5MzAwMCwtMT
+eyJoaXN0b3J5IjpbMTQ2MDIyNDIxNCwtMTk3NzE5MzAwMCwtMT
 g0NDA4NjI0NSwtMTE1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4
 MjkwNywxNzUwMzQ5NTEyXX0=
 -->
