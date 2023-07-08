@@ -23,10 +23,11 @@ When the program execute at line 5 which is a suspend function, code from line 5
 Just like any thread lifetcycle in Java executor service, it's either recycled or re-used
 If current thread is a backgroud thread (e.g using Dispatchers.IO), next it may not have anything to do or start to execute any background task.
 If current thread is a foreground thread (e.g. using Dispatchers.Main) like in Android, it might just work on refreshing UI related tasks
-So what happened to the rest of code after suspend function as part of coroutine, they have not been executed right? 
+So what happened to the rest of code after suspend function as part of coroutine, they have not been executed right? Let's take a look at what Coroutine does after it's been detached from current Thread
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTE0MDk4MjksMjI3OTE2OTI3LC01MD
-Y0ODI5MDcsMTc1MDM0OTUxMl19
+eyJoaXN0b3J5IjpbMTczNjQ0ODQ4OSwyMjc5MTY5MjcsLTUwNj
+Q4MjkwNywxNzUwMzQ5NTEyXX0=
 -->
