@@ -65,11 +65,12 @@ launch(Dispatchers.Main) {
 }
 
 output:
-S
+System.out: Thread: main
 ```
+We found out that our suspend function still executes inside Main Thread, it's not been switched to a different Thread. Why? Because the function itself did not know which Thread that it should switch to, bec
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjY3OTQ2MzMsLTE4NDQwODYyNDUsLT
+eyJoaXN0b3J5IjpbLTExNjUyMzQ0MDUsLTE4NDQwODYyNDUsLT
 ExNTkyNTExODYsMjI3OTE2OTI3LC01MDY0ODI5MDcsMTc1MDM0
 OTUxMl19
 -->
