@@ -70,7 +70,7 @@ System.out: Thread: main
 We found out that our suspend function still executes inside Main Thread, it's not been switched to a different Thread. Why? Because the function itself did not know which Thread that it should switch to, because we didn't tell Coroutine which Thread we need our function to execute with.
 Compared to our previous example, we have "withContext" which itself is also a suspend function that received a Dispatcher parameter, with the help of this specified Dispatcher, Coroutine knows which thread it should switch to in order to execute function. Therefore, the declartion of suspend Thread does not happen when we call suspend function, but when we define the suspend function
 If we go a little deep inside, we would find the "withContext" is not the real point for thread switch, but some line of code implemented inside "withContext", but that's not in our discussion today
-What I try to express is, the keyword "suspend" would not do the magic of suspend any Coroutine or arrange the work of thread switch, the real thread switching task would be determined inside another suspend function (withContext) of your suspend function (suspendingGetImage)
+What I try to express is, the keyword "suspend" would not do the magic of suspend any Coroutine or arrange the work of thread switch, The suspend operation relies on the actual code inside the suspend function, the real thread switching task would be determined inside another suspend function (withContext) of your suspend function (suspendingGetImage)
 Of course there are other API like "withContext" that can do the suspend  work, and we can also customize our suspend API
 ```
 suspend fun suspendingGetImage(imageId: String) {
@@ -84,9 +84,9 @@ Usage of suspend: Reminder, it provides a reminder from a method creator to meth
 Think about when we write code in Main Thread, we need to be extremely careful, whenever we make a call to a time-consuming function in Main Thread, the UI will get blocked, the user would also freeze during that time, Coroutines actually hand over the work of time-consuming task switching threads to the creator of the function instead of the caller through the hang-up function.
 For the caller, things are very simple, it will only receive a reminder - you need to put me in the coroutine, and don't care about the rest
 In this way, suspend forms a mechanism as a reminder, a mechanism that allows all time-consuming tasks to be executed in the background automatically. When these tasks are called reasonably, the main thread will not be stuck, 
-
+Actually, compiler would provide a warning of "Redundant suspend modifer" if the method we defined as suspend does not contain any suspend action
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzUwMjI3NjAsLTE5NzcxOTMwMDAsLT
+eyJoaXN0b3J5IjpbLTExMjg5MzgxODcsLTE5NzcxOTMwMDAsLT
 E4NDQwODYyNDUsLTExNTkyNTExODYsMjI3OTE2OTI3LC01MDY0
 ODI5MDcsMTc1MDM0OTUxMl19
 -->
