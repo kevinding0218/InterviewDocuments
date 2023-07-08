@@ -4,9 +4,10 @@ Given below example, which part of our code has been suspended with?
 ```
 1 launch(Dispatchers.Main) {
 2    ...
-  val image = suspendingGetImage(imageId)
-  avatarImg.setImageBitmap(image)
-}
+5    val image = suspendingGetImage(imageId)
+6    avatarImg.setImageBitmap(image)
+7    ...
+9 }
 ```
 [] Thread
 [] Function
@@ -18,11 +19,10 @@ Do we remember what "Coroutine" refers here?
 When the line of code executes at any suspend function, current coroutine will be suspended from current Thread, in another way, our coroutine is detached from the thread that was executing it. Note though the word "suspension" might mean some process paused in the middle,  our coroutine has not paused, it means from that line of code, the Thread that our conroutine sits in would not execute it, in above example, the "Main" thread. Alright, now we may wonder, what would happen to our "Main Thread" and "Coroutine" here, let's continue
 
 What happened to Thread that coroutine sits in
-
-
+When the program execute at line 5 which is a suspend function, code from line 5 and continue to the end of launch block would be considered as 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI2NzY3NTQwLDIyNzkxNjkyNywtNTA2ND
-gyOTA3LDE3NTAzNDk1MTJdfQ==
+eyJoaXN0b3J5IjpbLTU3ODYxODIwNywyMjc5MTY5MjcsLTUwNj
+Q4MjkwNywxNzUwMzQ5NTEyXX0=
 -->
