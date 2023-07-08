@@ -70,8 +70,8 @@ System.out: Thread: main
 We found out that our suspend function still executes inside Main Thread, it's not been switched to a different Thread. Why? Because the function itself did not know which Thread that it should switch to, because we didn't tell Coroutine which Thread we need our function to execute with.
 Compared to our previous example, we have "withContext" which itself is also a suspend function that received a Dispatcher parameter, with the help of this specified Dispatcher, Coroutine knows which thread it should switch to in order to execute function. Therefore, the declartion of suspend Thread does not happen when we call suspend function, but when we define the suspend function
 If we go a little deep inside, we would find the "withContext" is not the real point for thread switch, but some line of code implemented inside "withContext", but that's not in our discussion today
-What I try to express is, the keyword "suspend" would not suspend any Coroutine or arrange the work of thread switch, the real thread switching task would be determined inside another suspend function (withContext) of your suspend function (suspendingGetImage)
-Of course there are other API like "withContext" but evetually whatever we would pick, would always have a 
+What I try to express is, the keyword "suspend" would not do the magic of suspend any Coroutine or arrange the work of thread switch, the real thread switching task would be determined inside another suspend function (withContext) of your suspend function (suspendingGetImage)
+Of course there are other API like "withContext" that can do the suspend  work, and we can also customize our suspend API
 ```
 suspend fun suspendingGetImage(imageId: String) {
   withContext(Dispatchers.IO) {
@@ -79,8 +79,9 @@ suspend fun suspendingGetImage(imageId: String) {
   }
 }
 ```
+Now we mig
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNDAzMzkzOSwtMTg0NDA4NjI0NSwtMT
+eyJoaXN0b3J5IjpbMTA4MzU2OTE3MiwtMTg0NDA4NjI0NSwtMT
 E1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4MjkwNywxNzUwMzQ5
 NTEyXX0=
 -->
