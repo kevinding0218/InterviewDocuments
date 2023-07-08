@@ -49,9 +49,10 @@ Well, we can also customize our own Dispatcher to make Coroutine not swtiching b
 ```
 Now we can summarize what suspend means
 Switch off thread for temporarily while switch back after 
-
+When the code reaches at suspend function, that function will be suspended, the so-caled suspended is just similar as o
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDQwODYyNDUsLTExNTkyNTExODYsMj
-I3OTE2OTI3LC01MDY0ODI5MDcsMTc1MDM0OTUxMl19
+eyJoaXN0b3J5IjpbMzUyNDkwMDQwLC0xODQ0MDg2MjQ1LC0xMT
+U5MjUxMTg2LDIyNzkxNjkyNywtNTA2NDgyOTA3LDE3NTAzNDk1
+MTJdfQ==
 -->
