@@ -84,9 +84,9 @@ Usage of suspend: Reminder, it provides a reminder from a method creator to meth
 Think about when we write code in Main Thread, we need to be extremely careful, whenever we make a call to a time-consuming function in Main Thread, the UI will get blocked, the user would also freeze during that time, Coroutines actually hand over the work of time-consuming task switching threads to the creator of the function instead of the caller through the hang-up function.
 For the caller, things are very simple, it will only receive a reminder - you need to put me in the coroutine, and don't care about the rest
 In this way, suspend forms a mechanism as a reminder, a mechanism that allows all time-consuming tasks to be executed in the background automatically. When these tasks are called reasonably, the main thread will not be stuck, 
-Actually, compiler would provide a warning of "Redundant suspend modifer" if the method we defined as suspend does not contain any suspend action
+Actually, compiler would provide a warning of "Redundant suspend modifer" if the method we defined as suspend does not contain any suspend action, Then our keyword has only one effect, that is, restricting this function to be called only in the coroutine, which is unnecessary
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjg5MzgxODcsLTE5NzcxOTMwMDAsLT
-E4NDQwODYyNDUsLTExNTkyNTExODYsMjI3OTE2OTI3LC01MDY0
-ODI5MDcsMTc1MDM0OTUxMl19
+eyJoaXN0b3J5IjpbNTk4ODE3MjI5LC0xOTc3MTkzMDAwLC0xOD
+Q0MDg2MjQ1LC0xMTU5MjUxMTg2LDIyNzkxNjkyNywtNTA2NDgy
+OTA3LDE3NTAzNDk1MTJdfQ==
 -->
