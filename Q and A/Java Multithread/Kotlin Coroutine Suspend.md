@@ -87,10 +87,10 @@ In this way, suspend forms a mechanism as a reminder, a mechanism that allows al
 Actually, compiler would provide a warning of "Redundant suspend modifer" if the method we defined as suspend does not contain any suspend action, Then our keyword has only one effect, that is, restricting this function to be called only in the coroutine, which is unnecessary
 How to customize suspend function
 - when do we need to customize
-The answer could be simple, whenver your method is time-consuming, make it suspend, what kinda of operation might be considered time-consuming, I/O operation or complex computation, such as file read/write operation, http request
+The answer could be simple, whenver your method is time-consuming, make it suspend, what kinda of operation might be considered time-consuming, I/O operation or complex computation, in addition to some use case that the function may not take long, but it needs to wait then start after a period of time. Example, do XY after 5 seconds
 - how to code customization
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3OTQ0ODg0OCwtMTk3NzE5MzAwMCwtMT
-g0NDA4NjI0NSwtMTE1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4
-MjkwNywxNzUwMzQ5NTEyXX0=
+eyJoaXN0b3J5IjpbMTMxOTc2NDc1LC0xOTc3MTkzMDAwLC0xOD
+Q0MDg2MjQ1LC0xMTU5MjUxMTg2LDIyNzkxNjkyNywtNTA2NDgy
+OTA3LDE3NTAzNDk1MTJdfQ==
 -->
