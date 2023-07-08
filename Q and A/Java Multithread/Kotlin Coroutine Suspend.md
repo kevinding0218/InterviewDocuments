@@ -80,10 +80,10 @@ suspend fun suspendingGetImage(imageId: String) {
 }
 ```
 Now we might have another question, if the "suspend" keyword won't do actual suspend work, why we need it and what was it used for? Why Kotlin provide this keyword for us?
-Usage of suspend: Reminder, it provides a reminder from a method creator to method caller, indicatating "I am a time-consuming function, so that I was planned to execute in backgrou
+Usage of suspend: Reminder, it provides a reminder from a method creator to method caller, indicatating "I am a time-consuming function, so that I was planned to be executed in backgroud thread by my creator, so whenver you are readlly to call me, please call with Coroutine", such remind
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNjI1MzE5MCwtMTg0NDA4NjI0NSwtMT
+eyJoaXN0b3J5IjpbLTkyOTQwODIyOCwtMTg0NDA4NjI0NSwtMT
 E1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4MjkwNywxNzUwMzQ5
 NTEyXX0=
 -->
