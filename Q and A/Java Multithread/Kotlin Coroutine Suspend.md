@@ -27,7 +27,7 @@ So what happened to the rest of code after suspend function as part of coroutine
 The rest of code will continue executing in specified Thread, 
 Who determines its execution Thread? The suspend function
 in below example, the IO Thread which specified inside our suspend function in "withContext". 
-Wait a minute, what did we learn about "withContext" in last blog? Yes "withContext()" would automatically help us switch to original Thread once 
+
 ```
 suspend fun suspendingGetImage(imageId: String) {
   withContext(Dispatchers.IO) {
@@ -35,10 +35,18 @@ suspend fun suspendingGetImage(imageId: String) {
   }
 }
 ```
-
+Wait a minute, what did we learn about "withContext" in last blog? Yes "withContext()" would automatically help us switch to original Thread once the suspend function has completed, which means line 6 will be executed back inside our Main Thread. 
+```
+1 launch(Dispatchers.Main) {
+2    ...
+5    val image = suspendingGetImage(imageId)
+6    avatarImg.setImageBitmap(image)
+7    ...
+9 }
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3Mjk1OTg2NiwtMTE1OTI1MTE4NiwyMj
-c5MTY5MjcsLTUwNjQ4MjkwNywxNzUwMzQ5NTEyXX0=
+eyJoaXN0b3J5IjpbLTM5NDUzNDYzLC0xMTU5MjUxMTg2LDIyNz
+kxNjkyNywtNTA2NDgyOTA3LDE3NTAzNDk1MTJdfQ==
 -->
