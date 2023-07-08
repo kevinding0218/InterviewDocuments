@@ -2,8 +2,8 @@ In the last wiki, we introduced what is Kotlin Coroutine, why we need Kotlin Cor
 
 Given below example, which part of our code has been suspended with?
 ```
-launch(Dispatchers.Main) {
-  ...
+1 launch(Dispatchers.Main) {
+2    ...
   val image = suspendingGetImage(imageId)
   avatarImg.setImageBitmap(image)
 }
@@ -23,6 +23,6 @@ What happened to Thread that coroutine sits in
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI3OTE2OTI3LC01MDY0ODI5MDcsMTc1MD
-M0OTUxMl19
+eyJoaXN0b3J5IjpbOTI2NzY3NTQwLDIyNzkxNjkyNywtNTA2ND
+gyOTA3LDE3NTAzNDk1MTJdfQ==
 -->
