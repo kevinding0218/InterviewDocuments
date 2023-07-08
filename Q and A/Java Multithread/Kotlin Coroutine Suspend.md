@@ -53,9 +53,23 @@ When the code reaches at suspend function, that function will be suspended, the 
 btw, the action of switch back to original Thread is called "resume" in Coroutine (https://stackoverflow.com/questions/47871868/what-does-the-suspend-function-mean-in-a-kotlin-coroutine)
 So back to the error why suspend functio should ....
 First, a function gets suspended still needs to resume, to switch back. the "resume" is a job or function inside Coroutine, if our suspend function was not called inside Coroutine, then there is no way to "resume" our function, the error message indicate a suspend function will have to be either directly or indirectly executed inside Coroutine, in a way it is able to switch back from specified Thread during suspend function executes.
+How did "suspend" work
+Let's start with a simple example
+```
+suspend fun suspendingPrint() {
+  println("Thread: ${Thread.currentThread().name}")
+}
+
+launch(Dispatchers.Main) {
+  suspendingPrint()
+}
+
+output:
+S
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk3NDE4MjYyLC0xODQ0MDg2MjQ1LC0xMT
-U5MjUxMTg2LDIyNzkxNjkyNywtNTA2NDgyOTA3LDE3NTAzNDk1
-MTJdfQ==
+eyJoaXN0b3J5IjpbLTE3NjY3OTQ2MzMsLTE4NDQwODYyNDUsLT
+ExNTkyNTExODYsMjI3OTE2OTI3LC01MDY0ODI5MDcsMTc1MDM0
+OTUxMl19
 -->
