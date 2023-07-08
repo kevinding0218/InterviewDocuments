@@ -48,10 +48,10 @@ Well, we can also customize our own Dispatcher to make Coroutine not swtiching b
 9 }
 ```
 Now we can summarize what suspend means
-Switch off thread for temporarily while switch back 
+Switch off thread for temporarily while switch back after 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjcxNzY5MjksLTExNTkyNTExODYsMj
+eyJoaXN0b3J5IjpbLTE4NDQwODYyNDUsLTExNTkyNTExODYsMj
 I3OTE2OTI3LC01MDY0ODI5MDcsMTc1MDM0OTUxMl19
 -->
