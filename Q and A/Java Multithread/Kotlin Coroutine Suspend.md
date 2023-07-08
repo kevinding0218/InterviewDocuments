@@ -69,7 +69,8 @@ System.out: Thread: main
 ```
 We found out that our suspend function still executes inside Main Thread, it's not been switched to a different Thread. Why? Because the function itself did not know which Thread that it should switch to, because we didn't tell Coroutine which Thread we need our function to execute with.
 Compared to our previous example, we have "withContext" which itself is also a suspend function that received a Dispatcher parameter, with the help of this specified Dispatcher, Coroutine knows which thread it should switch to in order to execute function. Therefore, the declartion of suspend Thread does not happen when we call suspend function, but when we define the suspend function
-If we go a little deep inside, we would find the "withContext" is not the real p
+If we go a little deep inside, we would find the "withContext" is not the real point for thread switch, but some line of code implemented inside "withContext", but that's not in our discussion today
+What I try to express is, the keyword "suspend" would not suspend any Coroutine or start the work of thread switch, 
 ```
 suspend fun suspendingGetImage(imageId: String) {
   withContext(Dispatchers.IO) {
@@ -78,7 +79,7 @@ suspend fun suspendingGetImage(imageId: String) {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU5OTU3MzkzLC0xODQ0MDg2MjQ1LC0xMT
-U5MjUxMTg2LDIyNzkxNjkyNywtNTA2NDgyOTA3LDE3NTAzNDk1
-MTJdfQ==
+eyJoaXN0b3J5IjpbLTIxMDI1NDIzMDYsLTE4NDQwODYyNDUsLT
+ExNTkyNTExODYsMjI3OTE2OTI3LC01MDY0ODI5MDcsMTc1MDM0
+OTUxMl19
 -->
