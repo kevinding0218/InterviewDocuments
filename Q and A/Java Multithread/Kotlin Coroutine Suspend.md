@@ -102,8 +102,9 @@ Next we will continue to talk about what is Async in coroutine and some intersti
 在语法代码上，kt协程还是简洁一点易读。然后场景上他们两个其实并不是同一个概念。虚拟线程适用于CPU密集型的计算任务，但是协程的话，它其实更适合io型的任务。虚拟线程其实可以理解为了代替线程，对线程进行更好的优化，而携程它只是一种编程模式，它实际上与线程是没什么关系的，它只是对任务的线程所属进行一个调度的管理。底层上虚拟线程其实还是gvm中的一种新线程，但是协程程的话它并与jvm没什么关系，它是由kt编译器进行管理的。像kt和Java是完全可以混写的，你完全也可以把携程和虚拟线程混起来一起用，不过当他们两个功能差不多的时候，协程程更简洁更易读，其实学kt也不必担心，虚拟线程会把kt的协程优势给压下去。这kt的优势不只是协程这一点。
 
 https://stackoverflow.com/questions/48106252/why-threads-are-showing-better-performance-than-coroutines
+https://medium.com/sampingan-tech/coroutine-fundamental-2f50d5f26284
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg4MjM1NjM0LC0yMDY2MDExNzEzLC00ND
+eyJoaXN0b3J5IjpbODIwNjkxMzczLC0yMDY2MDExNzEzLC00ND
 k5MDM4MzYsLTE5NzcxOTMwMDAsLTE4NDQwODYyNDUsLTExNTky
 NTExODYsMjI3OTE2OTI3LC01MDY0ODI5MDcsMTc1MDM0OTUxMl
 19
