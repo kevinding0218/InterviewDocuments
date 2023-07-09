@@ -103,9 +103,11 @@ Next we will continue to talk about what is Async in coroutine and some intersti
 
 https://stackoverflow.com/questions/48106252/why-threads-are-showing-better-performance-than-coroutines
 https://medium.com/sampingan-tech/coroutine-fundamental-2f50d5f26284
+https://medium.com/androiddevelopers/bridging-the-gap-between-coroutines-jvm-threads-and-concurrency-problems-864e563bd7c
+https://medium.com/mobilepeople/jvm-threads-and-kotlin-coroutines-5b17e417bc0
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIwNjkxMzczLC0yMDY2MDExNzEzLC00ND
-k5MDM4MzYsLTE5NzcxOTMwMDAsLTE4NDQwODYyNDUsLTExNTky
-NTExODYsMjI3OTE2OTI3LC01MDY0ODI5MDcsMTc1MDM0OTUxMl
-19
+eyJoaXN0b3J5IjpbLTEzMjczMTUzNzQsODIwNjkxMzczLC0yMD
+Y2MDExNzEzLC00NDk5MDM4MzYsLTE5NzcxOTMwMDAsLTE4NDQw
+ODYyNDUsLTExNTkyNTExODYsMjI3OTE2OTI3LC01MDY0ODI5MD
+csMTc1MDM0OTUxMl19
 -->
