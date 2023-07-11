@@ -92,11 +92,11 @@ How to customize suspend function
 The answer could be simple, whenver your method is time-consuming, make it suspend, what kinda of operation might be considered time-consuming, I/O operation or complex computation, in addition to some use case that the function may not take long, but it needs to wait then start after a period of time. Example, do XY after 5 seconds
 
 what does async suspend mean
-async means the current thread will not be blockingonce the method has been suspended, our current thread become non-blocking, why? because our method execution moved away from current thread. Some might think, we can also use Java executor pool to manually switch thread execution, in a way to mimic non-blocking thread
+async means the current thread will not be blocking. once the method has been suspended, our current thread become non-blocking, why? because our method execution moved away from current thread. Some might think, we can also use Java executor pool to manually switch thread execution, in a way to mimic non-blocking thread, would that also be considered as non-blocking thread? Yes, it's the same effect. Wait, isn't non blocking suspension a specific 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDAxMDA0MTMsNDY1Mzk4OTU5LC0xMj
-g5MDIzNjQ3LC0xMzI3MzE1Mzc0LDgyMDY5MTM3MywtMjA2NjAx
-MTcxMywtNDQ5OTAzODM2LC0xOTc3MTkzMDAwLC0xODQ0MDg2Mj
-Q1LC0xMTU5MjUxMTg2LDIyNzkxNjkyNywtNTA2NDgyOTA3LDE3
-NTAzNDk1MTJdfQ==
+eyJoaXN0b3J5IjpbMTYyMTgwMTE0Myw0NjUzOTg5NTksLTEyOD
+kwMjM2NDcsLTEzMjczMTUzNzQsODIwNjkxMzczLC0yMDY2MDEx
+NzEzLC00NDk5MDM4MzYsLTE5NzcxOTMwMDAsLTE4NDQwODYyND
+UsLTExNTkyNTExODYsMjI3OTE2OTI3LC01MDY0ODI5MDcsMTc1
+MDM0OTUxMl19
 -->
