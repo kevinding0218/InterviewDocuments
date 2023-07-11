@@ -91,11 +91,12 @@ How to customize suspend function
 - when do we need to customize  
 The answer could be simple, whenver your method is time-consuming, make it suspend, what kinda of operation might be considered time-consuming, I/O operation or complex computation, in addition to some use case that the function may not take long, but it needs to wait then start after a period of time. Example, do XY after 5 seconds
 
-
+what does async suspend mean
+once the method has been suspended, our original thread become non-blocking, why? because our method execution move
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY1Mzk4OTU5LC0xMjg5MDIzNjQ3LC0xMz
-I3MzE1Mzc0LDgyMDY5MTM3MywtMjA2NjAxMTcxMywtNDQ5OTAz
-ODM2LC0xOTc3MTkzMDAwLC0xODQ0MDg2MjQ1LC0xMTU5MjUxMT
-g2LDIyNzkxNjkyNywtNTA2NDgyOTA3LDE3NTAzNDk1MTJdfQ==
-
+eyJoaXN0b3J5IjpbNTQ5MjMyMTg1LDQ2NTM5ODk1OSwtMTI4OT
+AyMzY0NywtMTMyNzMxNTM3NCw4MjA2OTEzNzMsLTIwNjYwMTE3
+MTMsLTQ0OTkwMzgzNiwtMTk3NzE5MzAwMCwtMTg0NDA4NjI0NS
+wtMTE1OTI1MTE4NiwyMjc5MTY5MjcsLTUwNjQ4MjkwNywxNzUw
+MzQ5NTEyXX0=
 -->
