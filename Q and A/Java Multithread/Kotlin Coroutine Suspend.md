@@ -93,11 +93,12 @@ The answer could be simple, whenver your method is time-consuming, make it suspe
 
 what does async suspend mean
 async means the current thread will not be blocking. once the method has been suspended, our current thread become non-blocking, why? because our method execution moved away from current thread. Some might think, we can also use Java executor pool to manually switch thread execution, in a way to mimic non-blocking thread, would that also be considered as non-blocking thread? Yes, it's the same effect. Wait, isn't non blocking suspension a specific character of Coroutine? Why would Thread have the same functionality
+In practical, when we talk about thread blocking we usually refer to single thread execution, but in Coroutine, a single coroutine can also be non-blocking
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjk0NzcwOTUsMTYyMTgwMTE0Myw0Nj
-UzOTg5NTksLTEyODkwMjM2NDcsLTEzMjczMTUzNzQsODIwNjkx
-MzczLC0yMDY2MDExNzEzLC00NDk5MDM4MzYsLTE5NzcxOTMwMD
-AsLTE4NDQwODYyNDUsLTExNTkyNTExODYsMjI3OTE2OTI3LC01
-MDY0ODI5MDcsMTc1MDM0OTUxMl19
+eyJoaXN0b3J5IjpbLTY2Njk2ODY0NywxNjIxODAxMTQzLDQ2NT
+M5ODk1OSwtMTI4OTAyMzY0NywtMTMyNzMxNTM3NCw4MjA2OTEz
+NzMsLTIwNjYwMTE3MTMsLTQ0OTkwMzgzNiwtMTk3NzE5MzAwMC
+wtMTg0NDA4NjI0NSwtMTE1OTI1MTE4NiwyMjc5MTY5MjcsLTUw
+NjQ4MjkwNywxNzUwMzQ5NTEyXX0=
 -->
