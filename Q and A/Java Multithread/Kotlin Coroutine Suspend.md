@@ -3,16 +3,14 @@
 
 In the last wiki, we introduced what is "_Kotlin Coroutine_", what "Kotlin Coroutine" can help and how we get started with "_Kotlin Coroutine_".
 
-At the end of Part I, we get the chance to meet a new component in "_Kotlin Coroutine_" -"_Suspend Function_", which claims it can help us "_suspend_" our method execution in an "_asynchorous_" way without blocking our original thread, let's take a deeper look of what it means.
+At the end of Part I, we get the chance to meet aour new component in "_Kotlin Coutine_d -"_Suspend Function_", which claims it can help us "_suspend_" our method execution is "_asynchorous_" way without blocking our original thread, let's take a deeper look of what it means.
 
-### Warm Up
+### Warm Upsyn
 
 Given below example, which part of our code has been suspended with?
 
-1 launch(Dispatchers.Main) {
-2    ...
-5    val image = suspendingGetImage(imageId)
-6    avatarImg.setImageBitmap(image)
+1 launch(Dispatchers.Main) { val image = suspendingGetImage(imageId)
+6 avatarImg.setImageBitmap(image)
 7    ...
 9 }
 
@@ -32,7 +30,7 @@ in below example, the IO Thread which specified inside our suspend function in "
 
 ```  
 suspend fun suspendingGetImage(imageId: String) {  
-withContext(Dispatchers.IO) {  
+withContext(Dispatchers.IO) { 
 getImage(imageId)  
 }  
 }  
@@ -44,8 +42,10 @@ Well, we can also customize our own Dispatcher to make Coroutine not swtiching b
 ```  
 1 launch(Dispatchers.Main) {  
 2 ...  
-5 val image = suspendingGetImage(imageId)  
-6 avatarImg.setImageBitmap(image)  
+5
+2    ...
+5    val image = suspendingGetImage(imageId)  
+6    avatarImg.setImageBitmap(image)  
 7 ...  
 9 }  
 ```  
@@ -76,8 +76,7 @@ What I try to express is, the keyword "suspend" would not do the magic of suspen
 Of course there are other API like "withContext" that can do the suspend work, and we can also customize our suspend API  
 ```  
 suspend fun suspendingGetImage(imageId: String) {  
-withContext(Dispatchers.IO) {  
-getImage(imageId)  
+withContext(Dispatchers.IO) {  getImage(imageId)  
 }  
 }  
 ```  
@@ -90,10 +89,17 @@ Actually, compiler would provide a warning of "Redundant suspend modifer" if the
 How to customize suspend function  
 - when do we need to customize  
 The answer could be simple, whenver your method is time-consuming, make it suspend, what kinda of operation might be considered time-consuming, I/O operation or complex computation, in addition to some use case that the function may not take long, but it needs to wait then start after a period of time. Example, do XY after 5 seconds
-
+tine 
 what does async suspend mean
 async means the current thread will not be blocking. once the method has been suspended, our current thread become non-blocking, why? because our method execution moved away from current thread. Some might think, we can also use Java executor pool to manually switch thread execution, in a way to mimic non-blocking thread, would that also be considered as non-blocking thread? Yes, it's the same effect. Wait, isn't non blocking suspension a specific character of Coroutine? Why would Thread have the same functionality
-In practical, when we talk about thread blocking we usually refer to single thread execution, but in Coroutine, a single coroutine can also be non-blocking
+In practical, when we talk about thread blocking we usually refer to single thread execution, but in Coroutine, a single corou- how to write customization
+add suspend to function, wrap with withContext inside
+Why withContext() here?
+this is the most common way to pick up, as it's the easiet and most starightforward way
+there are also other suspend function as "delay", what it does is to wait for a period of time then execute the code after, 
+What is suspend
+In fact, it is the same as the coroutine, it is thread Switch , but it is a thread Switch that can be automatically switched back
+Next we will continue can also be non-blocking
 java thread switch and kotlin coroutine are both a way to implement non-blocking, just that kotlin coroutine provides a coding style that read like blocking but execute non-blocking in behind. 
 
 
@@ -115,12 +121,23 @@ Some people say that the user mode of the coroutineer does not need to interact 
 in conclusion
 Coroutine is thread cutting
 Suspend is a cut thread that can be automatically switched back
-Non-blocking means that coroutines can write non-blocking operations with seemingly blocking code
+Non-blocking means that coroutines can write non-blocking operations with seemingly blocking codeto talk about what is Async in coroutine and some intersting topic comparing Coroutine vs Thread
+
+
+
+在语法代码上，kt协程还是简洁一点易读。然后场景上他们两个其实并不是同一个概念。虚拟线程适用于CPU密集型的计算任务，但是协程的话，它其实更适合io型的任务。虚拟线程其实可以理解为了代替线程，对线程进行更好的优化，而携程它只是一种编程模式，它实际上与线程是没什么关系的，它只是对任务的线程所属进行一个调度的管理。底层上虚拟线程其实还是gvm中的一种新线程，但是协程程的话它并与jvm没什么关系，它是由kt编译器进行管理的。像kt和Java是完全可以混写的，你完全也可以把携程和虚拟线程混起来一起用，不过当他们两个功能差不多的时候，协程程更简洁更易读，其实学kt也不必担心，虚拟线程会把kt的协程优势给压下去。这kt的优势不只是协程这一点。
+
+https://stackoverflow.com/questions/48106252/why-threads-are-showing-better-performance-than-coroutines
+https://medium.com/sampingan-tech/coroutine-fundamental-2f50d5f26284
+https://medium.com/androiddevelopers/bridging-the-gap-between-coroutines-jvm-threads-and-concurrency-problems-864e563bd7c
+https://medium.com/mobilepeople/jvm-threads-and-kotlin-coroutines-5b17e417bc0
+https://manuelvivo.dev/suspend-modifier
+https://medium.com/@itIsMadhavan/concurrency-vs-parallelism-a-brief-review-b337c8dac350s
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MzI2NDQwMSwtMTgwODg0MDkyMCwtNj
-Y2OTY4NjQ3LDE2MjE4MDExNDMsNDY1Mzk4OTU5LC0xMjg5MDIz
-NjQ3LC0xMzI3MzE1Mzc0LDgyMDY5MTM3MywtMjA2NjAxMTcxMy
-wtNDQ5OTAzODM2LC0xOTc3MTkzMDAwLC0xODQ0MDg2MjQ1LC0x
-MTU5MjUxMTg2LDIyNzkxNjkyNywtNTA2NDgyOTA3LDE3NTAzND
-k1MTJdfQ==
+eyJoaXN0b3J5IjpbLTEyNDM1MDgyNTgsLTg1MzI2NDQwMSwtMT
+gwODg0MDkyMCwtNjY2OTY4NjQ3LDE2MjE4MDExNDMsNDY1Mzk4
+OTU5LC0xMjg5MDIzNjQ3LC0xMzI3MzE1Mzc0LDgyMDY5MTM3My
+wtMjA2NjAxMTcxMywtNDQ5OTAzODM2LC0xOTc3MTkzMDAwLC0x
+ODQ0MDg2MjQ1LC0xMTU5MjUxMTg2LDIyNzkxNjkyNywtNTA2ND
+gyOTA3LDE3NTAzNDk1MTJdfQ==
 -->
