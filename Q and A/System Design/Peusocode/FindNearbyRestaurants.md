@@ -8,7 +8,9 @@ fun findNearbyRestaurants(latitude, longitude, radius): List<BusinessObject> {
   val geohash_collection = geohashCache.get(geohash_level)
   // with cache
   // return [32aej1, 32aej2, 32aej3, ...]
-  val geohash_neighbors: List<String> = geohash_collection.keys.filter(k -> 	k.contains(currentLocationGeohash))  
+  val geohash_neighbors: List<String> = 
+    geohash_collection.keys
+      .filter(k -> k.contains(currentLocationGeohash))  
   
   /*
    * with DB
@@ -18,15 +20,16 @@ fun findNearbyRestaurants(latitude, longitude, radius): List<BusinessObject> {
    * 
    */
   // return [bizId1, bizId2, ... ]
-  val geohash_neighbor_businessIds: List<String> = geohash_neighbors.reduce(
-    geohash -> geohash_collection.get(geohash).values
-  )
-  val neighbor_businesses: List<BusinessObject> = geohash_neighbor_businessIds.map(
-    bizId -> businessCache.get(bizId)
-  ).filter(businessObject -> businessObject.type == BUS
+  val geohash_neighbor_businessIds: List<String> = 
+    geohash_neighbors
+      .reduce(geohash -> geohash_collection.get(geohash).values)
+  val neighbor_businesses: List<BusinessObject> = 
+  geohash_neighbor_businessIds
+      .map(bizId -> businessCache.get(bizId))
+      .filter(businessObject -> businessObject.type.equals(BUSINESSTYPE.RESTAURANT))
   return neighbor_businesses
 }
 ````
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA2OTUxMTgyXX0=
+eyJoaXN0b3J5IjpbLTE5MDU1NTk1NzRdfQ==
 -->
