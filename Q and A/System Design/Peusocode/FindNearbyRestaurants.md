@@ -23,7 +23,8 @@ fun findNearbyRestaurants(latitude, longitude, radius): List<BusinessObject> {
   val geohash_neighbor_businessIds: List<String> = 
     geohash_neighbors
       .map(geohash -> geohash_collection_byLevel.get(geohash).values)
-      .flat
+      .flatMap()
+      .collect(this::toList())
   val neighbor_restaurants: List<BusinessObject> = 
   geohash_neighbor_businessIds
       .map(bizId -> businessCache.get(bizId))
@@ -32,5 +33,5 @@ fun findNearbyRestaurants(latitude, longitude, radius): List<BusinessObject> {
 }
 ````
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEwOTg5MDEzLDY3MDk1NjI5OF19
+eyJoaXN0b3J5IjpbLTIxMzQ3NTk1NDMsNjcwOTU2Mjk4XX0=
 -->
