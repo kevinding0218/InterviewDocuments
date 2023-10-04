@@ -1,10 +1,13 @@
-````Kotlin
+````Java
 fun findNearbyRestaurants(latitude, longitude, radius): List<BusinessObject> {
+  // return 32aej
   val currentLocationGeohash: String = computeGeohashcode(latitude, longitude)
+  // return 6
   val geohash_level: Int = computeGeohashLenghth(radius)
+  // return Map({32aej1
   val geohash_collection = geohashCache.get(geohash_level)
   // with cache
-  val geohash_neighbors: List<String> = geohash_collection.keys.filter(k -> k.contains(geohash_location))  
+  val geohash_neighbors: List<String> = geohash_collection.keys.filter(k -> 	k.contains(currentLocationGeohash))  
   
   /*
    * with DB
@@ -23,5 +26,5 @@ fun findNearbyRestaurants(latitude, longitude, radius): List<BusinessObject> {
 }
 ````
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzMyMDg1ODFdfQ==
+eyJoaXN0b3J5IjpbLTE4NTk1MTI3NzRdfQ==
 -->
