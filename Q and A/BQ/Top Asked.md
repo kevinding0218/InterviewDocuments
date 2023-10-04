@@ -1,3 +1,6 @@
+### Distributed System Pain
+Managing microservices is a pain, observability is a pain, data consistency is a pain, state management is a pain, fault tolerance is a pain, high availability is more than a pain, consensus is a pain, and failovers are a pain.
+
 #### Why Should We Hire You
 - Reiterate what you know about the role
 - Describe how your experience can address those challenges
@@ -26,6 +29,6 @@
 - Then I was direct about how he was affecting me, so I said, and I wanted to discuss the past three deadlines that we set that you weren't able to meet. When you don't get me the reports on time, it delays the entire production process and leads the rest of us to take several hours to readjust the schedule.
 - How can we ensure this doesn't happen in the future? And then finally you explain the result. I was nervous about the conversation but he opened up to me about how he has always tried to chase down the information for the report and so we came up with a streamlined solution where we now submit a form with every report request and he now he stopped putting off the task and from then on we have been getting the report on time. And that's it.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI0MjM3MzQ3LDE2NjE5NDYwMDEsMTY2ND
-IwNjMxN119
+eyJoaXN0b3J5IjpbMzQ0MTUzMzE0LDIyNDIzNzM0NywxNjYxOT
+Q2MDAxLDE2NjQyMDYzMTddfQ==
 -->
