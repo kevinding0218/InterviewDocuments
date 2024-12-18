@@ -33,6 +33,23 @@ Here’s why being technology-agnostic matters:
   
 🔹 Cost and efficiency: Sometimes, the best solution isn’t the flashiest or newest; it’s the one that balances functionality, cost, and maintainability. Architects need to balance tech-savvy decisions with business impact.  
 The journey to technology agnosticism starts with one simple but profound habit: always ask “Why is this the best tool for this problem?” instead of defaulting to what you already know.
+
+  
+While I hit the timing jackpot - right org, explosive growth phase, and a manager who saw something in me before I saw it myself - there were six key principles that shaped my journey:  
+  
+1. Speed as a multiplier - Mastering core work quickly creates bandwidth for growth  
+  
+2. Operating above your level - Using extra time to think and work like someone a level up  
+  
+3. Embracing uncertainty - Realizing no one has all the answers freed me to contribute boldly  
+  
+4. Focusing on simple solutions - Sometimes the clearest path beats technical sophistication  
+  
+5. Building a favor economy - Early goodwill compounds as careers progress  
+  
+6. Staying positive - A genuine enthusiasm for the work becomes a powerful accelerant  
+  
+The full post dives deep into each principle, sharing real examples from my time working on projects like counter-terrorism and suicide prevention at Meta.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNDQzNzUwMV19
+eyJoaXN0b3J5IjpbLTUxNzkwMzIyNF19
 -->
